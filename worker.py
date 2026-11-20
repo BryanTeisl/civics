@@ -41,13 +41,10 @@ class MinutesExtraction(BaseModel):
 
 
 def call_ollama_structured(raw_text: str, roster: list) -> MinutesExtraction:
-    roster_str = "
-".join(f"- {r['name']}: {r['ocd_person_id']}" for r in roster)
+    roster_str = "\n".join(f"- {r['name']}: {r['ocd_person_id']}" for r in roster)    
     schema_json = json.dumps(MinutesExtraction.model_json_schema())
-
     # Truncate very long packets to keep RTX 2060 6GB VRAM from spilling heavily into CPU RAM
     trimmed_text = raw_text[:14000]
-
     prompt = f"""You are a strictly factual municipal clerk assistant.
 Extract all roll-call vote items from the official meeting minutes below.
 Use ONLY these exact entity_id values:
