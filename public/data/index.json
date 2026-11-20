@@ -1,0 +1,12 @@
+{
+  "jurisdictions": [
+    {
+      "id": "ocd-division-country-us-state-co-place-fort_collins",
+      "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "name": "Fort Collins City Council",
+      "level": "municipal",
+      "lat": 40.5853,
+      "lng": -105.0844
+    }
+  ]
+}

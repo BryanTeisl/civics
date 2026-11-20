@@ -1,0 +1,113 @@
+{
+  "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+  "jurisdiction_name": "Fort Collins City Council",
+  "last_updated": "2026-11-20",
+  "councilors": [
+    {
+      "id": "ocd-person/foco-emily-francis",
+      "name": "Emily Francis",
+      "entity_type": "legislator",
+      "role": "Mayor",
+      "district": "At-Large",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-chris-conway",
+      "name": "Chris Conway",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 1",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-julie-pignataro",
+      "name": "Julie Pignataro",
+      "entity_type": "legislator",
+      "role": "Mayor Pro Tem",
+      "district": "District 2",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-josh-fudge",
+      "name": "Josh Fudge",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 3",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-melanie-potyondy",
+      "name": "Melanie Potyondy",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 4",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-amy-hoeven",
+      "name": "Amy Hoeven",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 5",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/foco-anne-nelsen",
+      "name": "Anne Nelsen",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 6",
+      "website": "https://www.fortcollins.gov/Government/City-Council",
+      "metrics": {
+        "total_votes": 0,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    }
+  ],
+  "agenda_items": []
+}

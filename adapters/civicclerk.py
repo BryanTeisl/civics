@@ -3,7 +3,7 @@ CivicClerk Platform Adapter (Fort Collins Pilot + ~13% of mid-sized US cities).
 Targets Agendas and Minutes PDFs/plain-text streams first; transcripts are secondary.
 """
 import io
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import List
 import requests
 from pypdf import PdfReader
@@ -18,21 +18,24 @@ class CivicClerkAdapter(BaseAdapter):
     def _extract_pdf_text(self, pdf_bytes: bytes) -> str:
         reader = PdfReader(io.BytesIO(pdf_bytes))
         pages = [page.extract_text() or "" for page in reader.pages]
-        return "
-".join(pages).strip()
+        return "\n".join(pages).strip()
 
-    def fetch_recent_documents(self, days_back: int = 30) -> List[NormalizedDocument]:
-        since_iso = (datetime.utcnow() - timedelta(days=days_back)).strftime("%Y-%m-%dT00:00:00Z")
+    def fetch_recent_documents(self, days_back: int = 45) -> List[NormalizedDocument]:
+        now = datetime.now(timezone.utc)
+        since_iso = (now - timedelta(days=days_back)).strftime("%Y-%m-%dT00:00:00Z")
+        until_iso = (now + timedelta(days=7)).strftime("%Y-%m-%dT23:59:59Z")
+
         url = f"{self.portal_url}/Events"
         params = {
-            "$filter": f"startDateTime ge {since_iso}",
+            "$filter": f"startDateTime ge {since_iso} and startDateTime le {until_iso}",
             "$orderby": "startDateTime desc",
-            "$top": 20,
+            "$top": 25,
         }
 
         resp = requests.get(url, params=params, headers=self.HEADERS, timeout=20)
         resp.raise_for_status()
         events = resp.json().get("value", [])
+        print(f"  -> Found {len(events)} Fort Collins events in window.")
 
         docs: List[NormalizedDocument] = []
         for ev in events:
@@ -40,15 +43,18 @@ class CivicClerkAdapter(BaseAdapter):
             event_name = ev.get("eventName", "Council Meeting")
             meeting_date = (ev.get("startDateTime") or "")[:10]
 
-            # Look for published Agenda and Minutes files attached to the event
             for pub_file in ev.get("publishedFiles", []):
-                file_type = (pub_file.get("type") or "").lower()
-                if "minute" in file_type:
+                label = f"{pub_file.get('type', '')} {pub_file.get('name', '')}".lower()
+                if "packet" in label:
+                    continue  # Skip massive 300+ page agenda packets
+                if "minute" in label or "summary" in label:
                     doc_type = "minutes"
-                elif "agenda" in file_type:
+                elif "agenda" in label:
                     doc_type = "agenda"
                 else:
                     continue
+
+                print(f"    Downloading {meeting_date} {doc_type}: {pub_file.get('name', '')}...")
 
                 file_id = pub_file.get("fileId")
                 if not file_id:
@@ -61,7 +67,7 @@ class CivicClerkAdapter(BaseAdapter):
 
                 raw_text = self._extract_pdf_text(file_resp.content)
                 if len(raw_text) < 50:
-                    continue  # Skip empty or un-OCR'd image-only stubs for now
+                    continue
 
                 docs.append(
                     NormalizedDocument(
