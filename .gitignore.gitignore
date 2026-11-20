@@ -1,0 +1,17 @@
+# Never commit live SQLite DB or WAL files to Git (prevents corruption & bloat)
+*.db
+*.db-wal
+*.db-shm
+backups/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# OS & OneDrive temp files
+.DS_Store
+Thumbs.db
+desktop.ini
