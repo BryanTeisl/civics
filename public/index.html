@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Civic Core Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans p-6">
+  <div class="max-w-6xl mx-auto">
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold tracking-tight">Civic Core Explorer</h1>
+      <p class="text-sm text-slate-500 mt-1">Search or navigate the US map to inspect local voting records, official websites, and Vote Impactfulness metrics.</p>
+      <div class="relative mt-4">
+        <input id="search-input" type="text" placeholder="Search city, county, or state (e.g., Fort Collins)..."
+               class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <div id="search-results" class="absolute w-full bg-white border border-slate-200 shadow-lg mt-1 hidden z-[1000] rounded-lg"></div>
+      </div>
+      <div id="us-map" class="h-64 w-full rounded-lg border border-slate-300 shadow-sm mt-4 z-0"></div>
+    </header>
+
+    <div id="dashboard" class="hidden">
+      <div class="border-b pb-3 mb-6 flex justify-between items-end">
+        <div>
+          <h2 id="jurisdiction-title" class="text-2xl font-bold"></h2>
+          <p id="last-updated" class="text-xs text-slate-500 mt-1"></p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-lg border shadow-sm">
+          <h3 class="font-semibold text-slate-700 mb-3 border-b pb-2">Elected Roster</h3>
+          <div id="roster-list" class="space-y-2"></div>
+        </div>
+
+        <div class="md:col-span-2">
+          <div id="profile-header" class="hidden bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4 flex justify-between items-center">
+            <div>
+              <h3 id="selected-name" class="text-xl font-bold text-blue-950"></h3>
+              <p id="selected-role" class="text-sm text-blue-700"></p>
+              <p id="selected-metrics" class="text-xs text-slate-600 mt-1"></p>
+            </div>
+            <a id="selected-website" href="#" target="_blank" rel="noopener"
+               class="hidden px-3 py-2 bg-blue-600 text-white text-xs font-semibold rounded hover:bg-blue-700">
+              Official Website &rarr;
+            </a>
+          </div>
+
+          <div id="vote-feed" class="space-y-4">
+            <p class="text-slate-500 italic text-sm">Select an official from the roster to inspect their votes and impact metrics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let jurisdictions = [];
+    let activeData = null;
+
+    const map = L.map('us-map').setView([39.8283, -98.5795], 4);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap &copy; CARTO'
+    }).addTo(map);
+
+    fetch('data/index.json')
+      .then(r => r.json())
+      .then(idx => {
+        jurisdictions = idx.jurisdictions || [];
+        jurisdictions.forEach(j => {
+          const m = L.marker([j.lat, j.lng]).addTo(map);
+          m.bindTooltip(`<b>${j.name}</b><br>${j.level}`);
+          m.on('click', () => {
+            map.flyTo([j.lat, j.lng], 10, { duration: 1.2 });
+            loadJurisdiction(j.id);
+          });
+        });
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('j')) loadJurisdiction(params.get('j'));
+      });
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    searchInput.addEventListener('input', e => {
+      const q = e.target.value.toLowerCase();
+      searchResults.innerHTML = '';
+      if (q.length < 2) { searchResults.classList.add('hidden'); return; }
+      const matches = jurisdictions.filter(j => j.name.toLowerCase().includes(q));
+      if (!matches.length) { searchResults.classList.add('hidden'); return; }
+      searchResults.classList.remove('hidden');
+      matches.forEach(m => {
+        const div = document.createElement('div');
+        div.className = 'p-3 hover:bg-slate-100 cursor-pointer border-b last:border-0 text-sm';
+        div.innerHTML = `<b>${m.name}</b> <span class="text-slate-500">(${m.level})</span>`;
+        div.onclick = () => {
+          searchInput.value = m.name;
+          searchResults.classList.add('hidden');
+          map.flyTo([m.lat, m.lng], 10, { duration: 1.2 });
+          loadJurisdiction(m.id);
+        };
+        searchResults.appendChild(div);
+      });
+    });
+
+    function loadJurisdiction(id) {
+      fetch(`data/${id}.json`)
+        .then(r => r.json())
+        .then(data => {
+          activeData = data;
+          document.getElementById('dashboard').classList.remove('hidden');
+          document.getElementById('jurisdiction-title').innerText = data.jurisdiction_name;
+          document.getElementById('last-updated').innerText = `Last updated: ${data.last_updated}`;
+          const roster = document.getElementById('roster-list');
+          roster.innerHTML = '';
+          data.councilors.forEach(c => {
+            const btn = document.createElement('button');
+            btn.className = 'w-full text-left p-3 rounded border border-slate-100 hover:bg-blue-50 hover:border-blue-200 transition';
+            btn.innerHTML = `<div class="font-semibold text-sm">${c.name}</div><div class="text-xs text-slate-500">${c.role} • ${c.district || ''}</div>`;
+            btn.onclick = () => selectOfficial(c);
+            roster.appendChild(btn);
+          });
+          window.history.pushState({}, '', `?j=${id}`);
+        });
+    }
+
+    function selectOfficial(c) {
+      document.getElementById('profile-header').classList.remove('hidden');
+      document.getElementById('selected-name').innerText = c.name;
+      document.getElementById('selected-role').innerText = `${c.role} • ${c.district || ''}`;
+      const m = c.metrics || {};
+      document.getElementById('selected-metrics').innerText =
+        `Votes: ${m.total_votes || 0} | Attendance: ${m.attendance_rate || 0}% | Pivotal Votes: ${m.pivotal_votes || 0} (${m.pivotal_vote_rate || 0}%)`;
+
+      const webBtn = document.getElementById('selected-website');
+      if (c.website) { webBtn.href = c.website; webBtn.classList.remove('hidden'); }
+      else { webBtn.classList.add('hidden'); }
+
+      const feed = document.getElementById('vote-feed');
+      feed.innerHTML = '';
+      if (!activeData.agenda_items.length) {
+        feed.innerHTML = '<p class="text-sm text-slate-500">No roll-call votes extracted yet. Run watcher.py and worker.py to populate.</p>';
+        return;
+      }
+
+      activeData.agenda_items.forEach(item => {
+        const v = item.votes[c.id];
+        if (!v) return;
+        const badge = v.vote === 'Yes' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
+        const pivotalTag = v.is_pivotal ? '<span class="ml-2 px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-semibold">Pivotal Vote</span>' : '';
+        const card = document.createElement('div');
+        card.className = 'bg-white p-4 rounded-lg border shadow-sm';
+        card.innerHTML = `
+          <div class="flex justify-between items-start gap-4">
+            <div>
+              <span class="text-xs font-semibold uppercase text-blue-600">${item.topic} • Impact Score: ${item.impact_score}/100</span>
+              <h4 class="font-bold text-slate-900 mt-1">${item.title}</h4>
+              <div class="text-xs text-slate-500 mt-1">${item.date} • ${item.outcome} ${item.source_url ? `• <a href="${item.source_url}" target="_blank" class="underline text-blue-600">Official Source</a>` : ''}</div>
+            </div>
+            <div class="text-right whitespace-nowrap">
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold ${badge}">Voted ${v.vote}</span>
+              ${pivotalTag}
+            </div>
+          </div>
+          <div class="mt-3 bg-slate-50 p-3 rounded text-sm text-slate-700">
+            <p>${v.summary || ''}</p>
+            ${v.quote ? `<blockquote class="mt-2 border-l-2 border-blue-400 pl-2 italic text-slate-600">"${v.quote}"</blockquote>` : ''}
+          </div>
+        `;
+        feed.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
