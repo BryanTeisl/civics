@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
   <style>
-    #map { height: 460px; z-index: 1; }
+    #map { height: 480px; z-index: 1; }
     .badge-yes { background-color: #dcfce7; color: #166534; }
     .badge-no { background-color: #fee2e2; color: #991b1b; }
     .badge-abstain { background-color: #fef9c3; color: #854d0e; }
@@ -73,14 +74,18 @@
     <!-- VIEW 1: MAP & CONSTITUENCY EXPLORER -->
     <section id="viewMap" class="space-y-6">
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
           <div>
             <h1 class="text-xl font-bold text-slate-900">Explore Constituencies</h1>
             <p class="text-sm text-slate-600">
-              Click any pin or area on the map to select your municipal or county governing body, or search any bill above.
+              Click any neighborhood, city, or county boundary on the map to identify overlapping governing bodies and council districts.
             </p>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-3">
+            <label class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-700 cursor-pointer">
+              <input id="toggleDistrictsCheckbox" type="checkbox" checked onchange="toggleDistrictLayer(this.checked)" class="rounded text-blue-600" />
+              Show Council Districts
+            </label>
             <select
               id="quickJumpSelect"
               onchange="if(this.value) openJurisdiction(this.value)"
@@ -91,6 +96,12 @@
           </div>
         </div>
         <div id="map"></div>
+        <div class="px-4 py-2.5 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center gap-4 text-xs text-slate-600">
+          <span class="font-semibold text-slate-700">Boundary Legend:</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-amber-400/30 border border-amber-600"></span> County Boundary</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-blue-500/20 border border-blue-600"></span> Municipal Limits</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-xs bg-indigo-500/20 border border-dashed border-indigo-600"></span> Council District</span>
+        </div>
       </div>
 
       <!-- Indexed Jurisdictions Directory Cards -->
@@ -111,6 +122,17 @@
           <span id="overlapText"></span>
         </div>
         <div id="overlapButtons" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Selected District Highlight Banner -->
+      <div id="selectedDistrictBanner" class="hidden bg-indigo-50 border border-indigo-200 rounded-xl p-3.5 flex items-center justify-between gap-2">
+        <div class="text-sm text-indigo-950">
+          <span class="font-semibold">Map Pin Location:</span>
+          <span id="selectedDistrictText"></span>
+        </div>
+        <button onclick="clearDistrictHighlight()" class="text-xs font-semibold text-indigo-700 hover:underline">
+          Show All Districts
+        </button>
       </div>
 
       <!-- Jurisdiction Header Card -->
@@ -339,7 +361,7 @@
         <div>
           <span class="text-xs font-semibold uppercase tracking-wider text-blue-600">Multiple Constituencies Found</span>
           <h3 class="text-lg font-bold text-slate-900 mt-0.5">Select Governing Body</h3>
-          <p class="text-xs text-slate-600 mt-1">
+          <p id="disambiguateSubtitle" class="text-xs text-slate-600 mt-1">
             This location falls within overlapping local boundaries. Choose which body you want to inspect:
           </p>
         </div>
@@ -352,18 +374,27 @@
   <script>
     // Application State
     let indexData = { jurisdictions: [], search_index: [] };
+    let boundariesGeoJson = null;
+    let districtLayerGroup = null;
     let fuseSearch = null;
     let mapInstance = null;
     let currentJurisdictionData = null;
     let currentLegislator = null;
     let currentBill = null;
+    let highlightedDistrict = null;
     const jurisdictionCache = {};
 
     // Initialize App
     async function initApp() {
       try {
-        const res = await fetch(`data/index.json?v=${Date.now()}`);
-        indexData = await res.json();
+        const [idxRes, geoRes] = await Promise.all([
+          fetch(`data/index.json?v=${Date.now()}`),
+          fetch(`geo/boundaries.geojson?v=${Date.now()}`).catch(() => null)
+        ]);
+        indexData = await idxRes.json();
+        if (geoRes && geoRes.ok) {
+          boundariesGeoJson = await geoRes.json();
+        }
         document.getElementById("lastUpdatedBadge").textContent = `Updated: ${indexData.last_updated || "Recently"}`;
 
         if (window.Fuse && indexData.search_index) {
@@ -415,6 +446,7 @@
       currentJurisdictionData = null;
       currentLegislator = null;
       currentBill = null;
+      highlightedDistrict = null;
       showView("viewMap");
       updateBreadcrumbs([{ label: "Map & Search", action: "navigateHome()" }]);
       if (mapInstance) {
@@ -422,7 +454,7 @@
       }
     }
 
-    // Distance helper (Haversine in km) for overlapping/nearby boundary prompt
+    // Point-in-Polygon spatial lookup via Turf.js with Haversine fallback
     function haversineKm(lat1, lon1, lat2, lon2) {
       const R = 6371;
       const dLat = ((lat2 - lat1) * Math.PI) / 180;
@@ -435,54 +467,108 @@
       return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 
-    function findMatchingJurisdictionsAtPoint(lat, lng) {
-      const matches = [];
-      for (const j of indexData.jurisdictions) {
-        const radiusKm = j.level === "county" ? 55 : 22;
-        const dist = haversineKm(lat, lng, j.lat, j.lng);
-        if (dist <= radiusKm) {
-          matches.push({ ...j, dist });
+    function resolveConstituenciesAtPoint(lat, lng) {
+      const matchedMap = new Map();
+      let matchedDistrict = null;
+
+      // 1. Exact GeoJSON polygon check via Turf.js
+      if (window.turf && boundariesGeoJson && Array.isArray(boundariesGeoJson.features)) {
+        const pt = turf.point([lng, lat]);
+        for (const feat of boundariesGeoJson.features) {
+          try {
+            if (turf.booleanPointInPolygon(pt, feat)) {
+              const props = feat.properties || {};
+              const divId = props.ocd_division_id;
+              if (props.level === "district" && props.district) {
+                matchedDistrict = props.district;
+              }
+              if (divId) {
+                const jurMeta = indexData.jurisdictions.find(j => j.ocd_division_id === divId);
+                if (jurMeta && !matchedMap.has(divId)) {
+                  matchedMap.set(divId, {
+                    ...jurMeta,
+                    matchedDistrict: props.level === "district" ? props.district : null
+                  });
+                } else if (jurMeta && props.level === "district" && props.district) {
+                  matchedMap.get(divId).matchedDistrict = props.district;
+                }
+              }
+            }
+          } catch (_) {}
         }
       }
-      // Also include parent/child linked jurisdictions if one matched
-      const matchedIds = new Set(matches.map(m => m.ocd_division_id));
-      for (const m of [...matches]) {
-        if (m.parent_division_id && !matchedIds.has(m.parent_division_id)) {
-          const parent = indexData.jurisdictions.find(x => x.ocd_division_id === m.parent_division_id);
-          if (parent) {
-            matches.push({ ...parent, dist: m.dist + 1 });
-            matchedIds.add(parent.ocd_division_id);
+
+      // 2. Fallback proximity check for cities without GeoJSON polygons yet
+      if (matchedMap.size === 0) {
+        for (const j of indexData.jurisdictions) {
+          const radiusKm = j.level === "county" ? 45 : 18;
+          if (haversineKm(lat, lng, j.lat, j.lng) <= radiusKm) {
+            matchedMap.set(j.ocd_division_id, { ...j, matchedDistrict: null });
           }
         }
       }
-      return matches.sort((a, b) => (a.level === "municipal" ? -1 : 1));
+
+      // 3. Ensure parent/child linked jurisdictions are included when overlapping
+      for (const item of [...matchedMap.values()]) {
+        if (item.parent_division_id && !matchedMap.has(item.parent_division_id)) {
+          const parent = indexData.jurisdictions.find(x => x.ocd_division_id === item.parent_division_id);
+          if (parent) {
+            matchedMap.set(parent.ocd_division_id, { ...parent, matchedDistrict: null });
+          }
+        }
+      }
+
+      const results = [...matchedMap.values()].sort((a, b) => (a.level === "municipal" ? -1 : 1));
+      if (matchedDistrict) {
+        results.forEach(r => {
+          if (r.level === "municipal" && !r.matchedDistrict) {
+            r.matchedDistrict = matchedDistrict;
+          }
+        });
+      }
+      return results;
     }
 
     function openDisambiguateModal(candidates) {
       const container = document.getElementById("disambiguateOptions");
+      const distNote = candidates.find(c => c.matchedDistrict)?.matchedDistrict;
+      document.getElementById("disambiguateSubtitle").textContent = distNote
+        ? `Pin is inside ${distNote} and overlaps multiple local governing bodies. Choose which body to inspect:`
+        : "This location falls within overlapping local boundaries. Choose which body you want to inspect:";
+
       container.innerHTML = candidates
-        .map(
-          c => `
-          <button
-            onclick="closeDisambiguateModal(); openJurisdiction('${c.ocd_division_id}')"
-            class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/50 transition flex items-center justify-between"
-          >
-            <div>
-              <div class="font-bold text-slate-900">${escapeHtml(c.name)}</div>
-              <div class="text-xs text-slate-500 capitalize mt-0.5">
-                ${escapeHtml(c.level)} • ${c.entity_count} Representatives • ${c.event_count} Recorded Items
+        .map(c => {
+          const distArg = c.matchedDistrict ? `'${escapeHtml(c.matchedDistrict)}'` : "null";
+          return `
+            <button
+              onclick="closeDisambiguateModal(); openJurisdiction('${c.ocd_division_id}', 'reps', ${distArg})"
+              class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-blue-500 hover:bg-blue-50/50 transition flex items-center justify-between"
+            >
+              <div>
+                <div class="font-bold text-slate-900">${escapeHtml(c.name)}</div>
+                <div class="text-xs text-slate-500 capitalize mt-0.5">
+                  ${escapeHtml(c.level)}${c.matchedDistrict ? ` • ${escapeHtml(c.matchedDistrict)}` : ""} • ${c.entity_count} Reps
+                </div>
               </div>
-            </div>
-            <span class="text-blue-600 font-bold text-sm">Select →</span>
-          </button>
-        `
-        )
+              <span class="text-blue-600 font-bold text-sm">Select →</span>
+            </button>
+          `;
+        })
         .join("");
       document.getElementById("disambiguateModal").classList.remove("hidden");
     }
 
     function closeDisambiguateModal() {
       document.getElementById("disambiguateModal").classList.add("hidden");
+    }
+
+    function toggleDistrictLayer(show) {
+      if (!mapInstance || !districtLayerGroup) return;
+      if (show) {
+        districtLayerGroup.addTo(mapInstance);
+      } else {
+        mapInstance.removeLayer(districtLayerGroup);
+      }
     }
 
     // Render Map & Jurisdiction Cards
@@ -524,40 +610,86 @@
         .join("");
 
       if (!mapInstance) {
-        mapInstance = L.map("map").setView([40.15, -105.1], 8);
+        mapInstance = L.map("map").setView([40.35, -105.12], 9);
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "&copy; OpenStreetMap contributors"
         }).addTo(mapInstance);
 
-        indexData.jurisdictions.forEach(j => {
-          const isCounty = j.level === "county";
-          L.circle([j.lat, j.lng], {
-            radius: isCounty ? 38000 : 12000,
-            color: isCounty ? "#d97706" : "#2563eb",
-            fillColor: isCounty ? "#f59e0b" : "#3b82f6",
-            fillOpacity: isCounty ? 0.08 : 0.16,
-            weight: 1.5
+        // Render GeoJSON polygons if available
+        const polygonCoveredDivs = new Set();
+        if (boundariesGeoJson && Array.isArray(boundariesGeoJson.features)) {
+          const nonDistrictFeatures = boundariesGeoJson.features.filter(f => f.properties?.level !== "district");
+          const districtFeatures = boundariesGeoJson.features.filter(f => f.properties?.level === "district");
+
+          L.geoJSON(nonDistrictFeatures, {
+            style: feat => {
+              const isCounty = feat.properties?.level === "county";
+              return {
+                color: isCounty ? "#d97706" : "#2563eb",
+                weight: isCounty ? 2 : 2.5,
+                fillColor: isCounty ? "#f59e0b" : "#3b82f6",
+                fillOpacity: isCounty ? 0.08 : 0.14
+              };
+            },
+            onEachFeature: (feat, layer) => {
+              if (feat.properties?.ocd_division_id) {
+                polygonCoveredDivs.add(feat.properties.ocd_division_id);
+              }
+              layer.on("click", e => {
+                L.DomEvent.stopPropagation(e);
+                handleMapCoordinateClick(e.latlng.lat, e.latlng.lng);
+              });
+            }
           }).addTo(mapInstance);
 
-          const marker = L.marker([j.lat, j.lng]).addTo(mapInstance);
-          marker.on("click", () => {
-            const overlapping = findMatchingJurisdictionsAtPoint(j.lat, j.lng);
-            if (overlapping.length > 1) {
-              openDisambiguateModal(overlapping);
-            } else {
-              openJurisdiction(j.ocd_division_id);
+          districtLayerGroup = L.geoJSON(districtFeatures, {
+            style: () => ({
+              color: "#4f46e5",
+              weight: 1.5,
+              dashArray: "4 4",
+              fillColor: "#6366f1",
+              fillOpacity: 0.08
+            }),
+            onEachFeature: (feat, layer) => {
+              if (feat.properties?.district) {
+                layer.bindTooltip(`Fort Collins ${feat.properties.district}`, { sticky: true });
+              }
+              layer.on("mouseover", () => layer.setStyle({ fillOpacity: 0.25, weight: 2.5 }));
+              layer.on("mouseout", () => layer.setStyle({ fillOpacity: 0.08, weight: 1.5 }));
+              layer.on("click", e => {
+                L.DomEvent.stopPropagation(e);
+                handleMapCoordinateClick(e.latlng.lat, e.latlng.lng);
+              });
             }
-          });
+          }).addTo(mapInstance);
+        }
+
+        // Add markers for jurisdictions (and fallback circles for cities without polygons yet)
+        indexData.jurisdictions.forEach(j => {
+          if (!polygonCoveredDivs.has(j.ocd_division_id)) {
+            L.circle([j.lat, j.lng], {
+              radius: j.level === "county" ? 35000 : 12000,
+              color: j.level === "county" ? "#d97706" : "#2563eb",
+              fillOpacity: 0.1,
+              weight: 1.5
+            }).addTo(mapInstance);
+          }
+
+          const marker = L.marker([j.lat, j.lng]).addTo(mapInstance);
+          marker.bindTooltip(j.name);
+          marker.on("click", () => handleMapCoordinateClick(j.lat, j.lng));
         });
 
-        mapInstance.on("click", e => {
-          const matches = findMatchingJurisdictionsAtPoint(e.latlng.lat, e.latlng.lng);
-          if (matches.length > 1) {
-            openDisambiguateModal(matches);
-          } else if (matches.length === 1) {
-            openJurisdiction(matches[0].ocd_division_id);
-          }
-        });
+        mapInstance.on("click", e => handleMapCoordinateClick(e.latlng.lat, e.latlng.lng));
+      }
+    }
+
+    function handleMapCoordinateClick(lat, lng) {
+      const matches = resolveConstituenciesAtPoint(lat, lng);
+      if (matches.length > 1) {
+        openDisambiguateModal(matches);
+      } else if (matches.length === 1) {
+        openJurisdiction(matches[0].ocd_division_id, "reps", matches[0].matchedDistrict || null);
       }
     }
 
@@ -574,9 +706,10 @@
       return data;
     }
 
-    async function openJurisdiction(divisionId, defaultTab = "reps") {
+    async function openJurisdiction(divisionId, defaultTab = "reps", districtHighlight = null) {
       const data = await fetchJurisdictionData(divisionId);
       currentJurisdictionData = data;
+      highlightedDistrict = districtHighlight;
       const jur = data.jurisdiction;
 
       document.getElementById("jurTitle").textContent = jur.name;
@@ -586,6 +719,16 @@
 
       document.getElementById("tabCountReps").textContent = data.entities.length;
       document.getElementById("tabCountBills").textContent = data.events.length;
+
+      // District Highlight Banner
+      const distBanner = document.getElementById("selectedDistrictBanner");
+      if (highlightedDistrict) {
+        distBanner.classList.remove("hidden");
+        document.getElementById("selectedDistrictText").textContent =
+          `Your map pin is inside ${highlightedDistrict} (highlighting your District Representative and At-Large Mayor).`;
+      } else {
+        distBanner.classList.add("hidden");
+      }
 
       // Check overlapping parent or child jurisdictions
       const related = indexData.jurisdictions.filter(
@@ -624,6 +767,12 @@
       ]);
     }
 
+    function clearDistrictHighlight() {
+      highlightedDistrict = null;
+      document.getElementById("selectedDistrictBanner").classList.add("hidden");
+      renderJurisdictionReps();
+    }
+
     function switchJurTab(tab) {
       const tabs = {
         reps: ["tabBtnReps", "jurTabReps"],
@@ -643,23 +792,41 @@
 
     function renderJurisdictionReps() {
       const container = document.getElementById("jurTabReps");
-      const entities = currentJurisdictionData.entities || [];
+      let entities = [...(currentJurisdictionData.entities || [])];
       if (!entities.length) {
         container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-xl border border-slate-200 text-sm text-slate-500">No representatives seeded yet for this jurisdiction.</div>`;
         return;
       }
+
+      // Sort highlighted district rep & At-Large Mayor to the top when a district pin was clicked
+      if (highlightedDistrict) {
+        entities.sort((a, b) => {
+          const aMatch = a.district === highlightedDistrict || a.district === "At-Large" ? 0 : 1;
+          const bMatch = b.district === highlightedDistrict || b.district === "At-Large" ? 0 : 1;
+          return aMatch - bMatch;
+        });
+      }
+
       container.innerHTML = entities
         .map(ent => {
           const m = ent.metrics || {};
+          const isYourRep =
+            highlightedDistrict &&
+            (ent.district === highlightedDistrict || ent.district === "At-Large");
           return `
             <button
               onclick="openLegislator('${ent.ocd_person_id}')"
-              class="text-left bg-white rounded-xl border border-slate-200 p-4 hover:border-blue-500 hover:shadow-md transition flex flex-col justify-between gap-3"
+              class="text-left bg-white rounded-xl border ${
+                isYourRep ? "border-indigo-500 ring-2 ring-indigo-500/20" : "border-slate-200"
+              } p-4 hover:border-blue-500 hover:shadow-md transition flex flex-col justify-between gap-3"
             >
               <div>
                 <div class="flex items-center justify-between gap-2">
                   <span class="text-xs font-semibold text-blue-600">${escapeHtml(ent.district || "At-Large")}</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 text-slate-600">${escapeHtml(ent.party || "Nonpartisan")}</span>
+                  <div class="flex items-center gap-1.5">
+                    ${isYourRep ? `<span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-600 text-white font-bold">Your Rep</span>` : ""}
+                    <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 text-slate-600">${escapeHtml(ent.party || "Nonpartisan")}</span>
+                  </div>
                 </div>
                 <h3 class="text-base font-bold text-slate-900 mt-1">${escapeHtml(ent.name)}</h3>
                 <p class="text-xs text-slate-500">${escapeHtml(ent.role || "Representative")}</p>
