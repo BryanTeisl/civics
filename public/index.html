@@ -140,8 +140,8 @@
         jurisdictionNameEl.textContent = data.name || j.name;
         lastUpdatedEl.textContent = data.last_updated ? `Last updated: ${data.last_updated}` : '';
 
-        const officials = data.officials || data.entities || [];
-
+        const officials = data.officials || data.entities || data.roster || data.legislators || data.people || data.members || [];
+        
         if (officials.length === 0) {
           rosterListEl.innerHTML = '<p class="text-sm text-slate-500 py-2">No officials indexed yet.</p>';
           officialDetailEl.innerHTML = `
