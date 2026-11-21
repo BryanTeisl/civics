@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import uuid
@@ -9,30 +10,31 @@ from pydantic import BaseModel, Field, ValidationError
 
 from db import get_connection
 
-try:
-    from metrics import calculate_impact_score, is_pivotal_vote
-except ImportError:
-    def calculate_impact_score(event_type: str, yes_count: int, no_count: int) -> float:
-        base = {"ordinance": 40.0, "budget": 50.0, "zoning": 40.0, "resolution": 25.0}.get(
-            (event_type or "").lower(), 20.0
-        )
-        total = yes_count + no_count
-        if total == 0:
-            return base
-        margin = abs(yes_count - no_count) / total
-        closeness_bonus = (1.0 - margin) * 50.0
-        return round(min(100.0, base + closeness_bonus), 1)
-
-    def is_pivotal_vote(vote: str, yes_count: int, no_count: int) -> bool:
-        if vote not in ("Yes", "No"):
-            return False
-        return abs(yes_count - no_count) <= 1 and (yes_count + no_count) > 0
-
-
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 MAX_RETRIES = 3
 MAX_CHARS = 12000
+
+
+def calculate_impact_score(event_type: str, yes_count: int, no_count: int) -> float:
+    base = {
+        "ordinance": 40.0,
+        "budget": 50.0,
+        "zoning": 40.0,
+        "resolution": 25.0,
+    }.get((event_type or "").lower(), 20.0)
+    total = yes_count + no_count
+    if total == 0:
+        return base
+    margin = abs(yes_count - no_count) / total
+    closeness_bonus = (1.0 - margin) * 50.0
+    return round(min(100.0, base + closeness_bonus), 1)
+
+
+def is_pivotal_vote(vote: str, yes_count: int, no_count: int) -> bool:
+    if vote not in ("Yes", "No"):
+        return False
+    return abs(yes_count - no_count) <= 1 and (yes_count + no_count) > 0
 
 
 class ExtractedVote(BaseModel):
@@ -52,6 +54,27 @@ class ExtractedEvent(BaseModel):
 
 class MinutesExtraction(BaseModel):
     events: List[ExtractedEvent] = Field(default_factory=list)
+
+
+def reset_failed_documents() -> int:
+    """Reset all failed or retried documents back to pending."""
+    conn = get_connection()
+    try:
+        cursor = conn.execute(
+            """
+            UPDATE documents
+            SET status = 'pending',
+                retry_count = 0,
+                error_message = NULL
+            WHERE status = 'failed' OR retry_count > 0
+            """
+        )
+        conn.commit()
+        count = cursor.rowcount
+        print(f"[WORKER] Reset {count} failed/retried document(s) back to 'pending'.")
+        return count
+    finally:
+        conn.close()
 
 
 def normalize_vote(raw_vote: str) -> str:
@@ -213,29 +236,37 @@ def process_next_pending_document() -> bool:
 
             yes_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "Yes")
             no_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "No")
+            abstain_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "Abstain")
+            absent_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "Absent")
+            vote_margin = abs(yes_count - no_count)
             impact = calculate_impact_score(ev.event_type, yes_count, no_count)
             outcome_str = f"{ev.outcome} ({yes_count}-{no_count})"
-            item_id = f"doc-{doc['doc_id']}-{uuid.uuid4().hex[:8]}"
+            event_id = f"doc-{doc['doc_id']}-{uuid.uuid4().hex[:8]}"
+            meeting_date = doc["meeting_date"] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
             conn.execute(
                 """
-                INSERT INTO vote_events (
-                    item_id, doc_id, jurisdiction_id, meeting_date,
+                INSERT INTO events (
+                    event_id, jurisdiction_id, doc_id, meeting_date,
                     title, event_type, topic, outcome,
-                    yes_count, no_count, impact_score, source_url
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    yes_count, no_count, abstain_count, absent_count,
+                    vote_margin, impact_score, source_url
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
-                    item_id,
-                    doc["doc_id"],
+                    event_id,
                     doc["jurisdiction_id"],
-                    doc["meeting_date"],
+                    doc["doc_id"],
+                    meeting_date,
                     ev.title,
                     ev.event_type,
                     ev.topic or "General",
                     outcome_str,
                     yes_count,
                     no_count,
+                    abstain_count,
+                    absent_count,
+                    vote_margin,
                     impact,
                     doc["source_url"],
                 ),
@@ -245,11 +276,12 @@ def process_next_pending_document() -> bool:
                 pivotal = 1 if is_pivotal_vote(v_val, yes_count, no_count) else 0
                 conn.execute(
                     """
-                    INSERT INTO votes (
-                        item_id, ocd_person_id, vote, is_pivotal, summary, quote
-                    ) VALUES (?, ?, ?, ?, ?, ?)
+                    INSERT OR IGNORE INTO entity_actions (
+                        event_id, entity_id, action_type, value,
+                        is_pivotal, rationale_summary, verbatim_quote
+                    ) VALUES (?, ?, 'vote', ?, ?, ?, ?)
                     """,
-                    (item_id, person_id, v_val, pivotal, summary, quote),
+                    (event_id, person_id, v_val, pivotal, summary, quote),
                 )
 
             inserted_events += 1
@@ -292,13 +324,49 @@ def process_next_pending_document() -> bool:
     return True
 
 
-def run_worker():
-    processed_any = False
-    while process_next_pending_document():
-        processed_any = True
-    if not processed_any:
+def run_worker(limit: Optional[int] = None):
+    processed_count = 0
+    while True:
+        if limit is not None and processed_count >= limit:
+            print(f"[WORKER] Reached limit of {limit} document(s). Stopping.")
+            break
+        if not process_next_pending_document():
+            break
+        processed_count += 1
+
+    if processed_count == 0:
         print("Worker queue empty.")
 
 
+def main():
+    parser = argparse.ArgumentParser(description="Local LLM vote extraction worker.")
+    parser.add_argument(
+        "--reset-failed",
+        action="store_true",
+        help="Reset failed/retried documents back to pending before running.",
+    )
+    parser.add_argument(
+        "--reset-only",
+        action="store_true",
+        help="Reset failed/retried documents back to pending and exit.",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Maximum number of documents to process in this run.",
+    )
+    args = parser.parse_args()
+
+    if args.reset_only:
+        reset_failed_documents()
+        return
+
+    if args.reset_failed:
+        reset_failed_documents()
+
+    run_worker(limit=args.limit)
+
+
 if __name__ == "__main__":
-    run_worker()
+    main()
