@@ -14,11 +14,21 @@
 <body class="bg-slate-50 text-slate-900 min-h-screen">
   <div class="max-w-6xl mx-auto px-4 py-8">
     <!-- Header -->
-    <header class="mb-6">
-      <h1 class="text-3xl font-bold tracking-tight text-slate-900">Civic Core Explorer</h1>
-      <p class="text-slate-600 mt-1">
-        Search or navigate the US map to inspect local voting records, official websites, and Vote Impactfulness metrics.
-      </p>
+    <header class="mb-6 flex flex-wrap items-start justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900">Civic Core Explorer</h1>
+        <p class="text-slate-600 mt-1">
+          Search or navigate the US map to inspect local voting records, official websites, and Vote Impactfulness metrics.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs text-slate-600">
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+          <strong class="text-slate-800">Last updated:</strong> <span id="site-last-updated">--</span>
+        </span>
+        <span class="px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+          <strong class="text-slate-800">Latest build:</strong> <span id="site-latest-build">--</span>
+        </span>
+      </div>
     </header>
 
     <!-- Search Bar -->
@@ -85,18 +95,30 @@
     const lastUpdatedEl = document.getElementById('last-updated');
     const rosterListEl = document.getElementById('roster-list');
     const officialDetailEl = document.getElementById('official-detail');
+    const siteLastUpdatedEl = document.getElementById('site-last-updated');
+    const siteLatestBuildEl = document.getElementById('site-latest-build');
 
     async function init() {
       try {
         const res = await fetch('data/index.json');
         if (!res.ok) throw new Error('Could not load data/index.json');
         const indexData = await res.json();
+
+        // Populate site-wide Last updated & Latest build badges
+        const buildTime = document.lastModified
+          ? new Date(document.lastModified).toLocaleString()
+          : 'Unknown';
+        siteLatestBuildEl.textContent = indexData.latest_build || buildTime;
+        siteLastUpdatedEl.textContent =
+          indexData.last_updated || new Date().toISOString().slice(0, 10);
+
         jurisdictions = Array.isArray(indexData) ? indexData : (indexData.jurisdictions || []);
 
         jurisdictions.forEach((j) => {
+          const displayName = j.name || j.jurisdiction_name || 'Unknown Jurisdiction';
           if (typeof j.lat === 'number' && typeof j.lng === 'number') {
             const marker = L.marker([j.lat, j.lng]).addTo(map);
-            marker.bindPopup(`<strong>${j.name}</strong>`);
+            marker.bindPopup(`<strong>${displayName}</strong>`);
             marker.on('click', () => loadJurisdiction(j));
           }
         });
@@ -113,8 +135,10 @@
     }
 
     async function loadJurisdiction(j) {
+      const fallbackName = j.name || j.jurisdiction_name || 'Jurisdiction';
+
       // Immediately clear previous jurisdiction's selected official so stale data never persists
-      jurisdictionNameEl.textContent = j.name;
+      jurisdictionNameEl.textContent = fallbackName;
       lastUpdatedEl.textContent = 'Loading...';
       rosterListEl.innerHTML = '<p class="text-sm text-slate-500">Loading roster...</p>';
       officialDetailEl.innerHTML = '';
@@ -132,21 +156,34 @@
           `${(j.id || j.ocd_division_id || '').replace(/[/:]/g, '-')}.json`;
         const cleanFile = rawFile.replace(/^\.?\//, '').replace(/^public\//, '');
         const filePath = cleanFile.startsWith('data/') ? cleanFile : `data/${cleanFile}`;
+
         const res = await fetch(filePath);
         if (!res.ok) throw new Error(`Failed to load ${filePath}`);
         const data = await res.json();
         currentData = data;
 
-        jurisdictionNameEl.textContent = data.name || j.name;
+        const jName = data.jurisdiction_name || data.name || fallbackName;
+        jurisdictionNameEl.textContent = jName;
         lastUpdatedEl.textContent = data.last_updated ? `Last updated: ${data.last_updated}` : '';
+        if (data.last_updated) {
+          siteLastUpdatedEl.textContent = data.last_updated;
+        }
 
-        const officials = data.officials || data.entities || data.roster || data.legislators || data.people || data.members || [];
-        
+        const officials =
+          data.councilors ||
+          data.officials ||
+          data.entities ||
+          data.roster ||
+          data.legislators ||
+          data.people ||
+          data.members ||
+          [];
+
         if (officials.length === 0) {
           rosterListEl.innerHTML = '<p class="text-sm text-slate-500 py-2">No officials indexed yet.</p>';
           officialDetailEl.innerHTML = `
             <div class="p-6 bg-white rounded-xl border border-slate-200 text-slate-500 text-sm">
-              No elected roster or roll-call votes have been ingested for <strong>${data.name || j.name}</strong> yet.
+              No elected roster or roll-call votes have been ingested for <strong>${jName}</strong> yet.
             </div>
           `;
           return;
@@ -156,10 +193,10 @@
         renderOfficial(officials[0]);
       } catch (err) {
         console.error(err);
-        rosterListEl.innerHTML = `<p class="text-sm text-red-600">Error loading jurisdiction data.</p>`;
+        rosterListEl.innerHTML = '<p class="text-sm text-red-600">Error loading jurisdiction data.</p>';
         officialDetailEl.innerHTML = `
           <div class="p-6 bg-white rounded-xl border border-red-200 text-red-600 text-sm">
-            Could not load data for ${j.name}.
+            Could not load data for ${fallbackName}.
           </div>
         `;
       }
@@ -167,7 +204,7 @@
 
     function renderRoster(officials) {
       rosterListEl.innerHTML = '';
-      officials.forEach((person, idx) => {
+      officials.forEach((person) => {
         const btn = document.createElement('button');
         btn.className =
           'w-full text-left p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:bg-blue-50/40 transition focus:outline-none';
@@ -182,21 +219,22 @@
     }
 
     function renderOfficial(person) {
-      const stats = person.stats || {};
-      const totalVotes = stats.total_votes ?? (person.votes ? person.votes.length : 0);
-      const attendance = stats.attendance_pct ?? 0;
+      const stats = person.metrics || person.stats || {};
+      const votes = person.votes || person.recent_votes || person.actions || [];
+      const totalVotes = stats.total_votes ?? votes.length;
+      const attendance = stats.attendance_rate ?? stats.attendance_pct ?? 0;
       const pivotalCount = stats.pivotal_votes ?? 0;
-      const pivotalPct = stats.pivotal_pct ?? 0;
+      const pivotalPct = stats.pivotal_vote_rate ?? stats.pivotal_pct ?? 0;
       const subtitle = [person.role, person.district].filter(Boolean).join(' • ');
 
-      const websiteBtn = person.official_website
-        ? `<a href="${person.official_website}" target="_blank" rel="noopener noreferrer"
+      const websiteUrl = person.website || person.official_website;
+      const websiteBtn = websiteUrl
+        ? `<a href="${websiteUrl}" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition">
               Official Website &rarr;
            </a>`
         : '';
 
-      const votes = person.votes || [];
       let votesHtml = '';
 
       if (votes.length === 0) {
@@ -208,10 +246,11 @@
       } else {
         votesHtml = votes
           .map((v) => {
+            const voteVal = v.vote || v.value || 'Recorded';
             const voteColor =
-              v.vote === 'Yes'
+              voteVal === 'Yes'
                 ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                : v.vote === 'No'
+                : voteVal === 'No'
                 ? 'bg-rose-50 text-rose-700 border-rose-200'
                 : 'bg-slate-100 text-slate-700 border-slate-200';
 
@@ -236,10 +275,10 @@
                     ${pivotalBadge}
                   </div>
                   <span class="shrink-0 px-3 py-1 rounded-full text-xs font-semibold border ${voteColor}">
-                    Voted ${v.vote}
+                    Voted ${voteVal}
                   </span>
                 </div>
-                <h4 class="text-base font-semibold text-slate-900 mt-2">${v.title}</h4>
+                <h4 class="text-base font-semibold text-slate-900 mt-2">${v.title || 'Untitled Item'}</h4>
                 <div class="text-xs text-slate-500 mt-1">
                   ${v.meeting_date || ''} &bull; ${v.outcome || ''}${tally}${sourceLink}
                 </div>
@@ -278,20 +317,22 @@
         searchResults.classList.add('hidden');
         return;
       }
-      const matches = jurisdictions.filter((j) => j.name.toLowerCase().includes(q));
+      const matches = jurisdictions.filter((j) =>
+        (j.name || j.jurisdiction_name || '').toLowerCase().includes(q)
+      );
       if (matches.length === 0) {
         searchResults.innerHTML = '<div class="px-4 py-3 text-sm text-slate-500">No matching jurisdictions</div>';
       } else {
         searchResults.innerHTML = matches
           .map(
             (j, idx) =>
-              `<button data-idx="${idx}" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 border-b border-slate-100 last:border-0">${j.name}</button>`
+              `<button data-idx="${idx}" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 border-b border-slate-100 last:border-0">${j.name || j.jurisdiction_name}</button>`
           )
           .join('');
         searchResults.querySelectorAll('button').forEach((btn, idx) => {
           btn.addEventListener('click', () => {
             loadJurisdiction(matches[idx]);
-            searchInput.value = matches[idx].name;
+            searchInput.value = matches[idx].name || matches[idx].jurisdiction_name;
             searchResults.classList.add('hidden');
           });
         });
