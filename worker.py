@@ -14,7 +14,7 @@ from metrics import compute_vote_impactfulness, is_vote_pivotal
 
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 # Default to 4-bit Llama 3.1 8B (fits 6GB RTX 2060 VRAM); swap to 'qwen2.5:3b' for faster speed
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b-instruct-q4_K_M")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
 MAX_RETRIES = 2
 
 
