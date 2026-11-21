@@ -1,0 +1,390 @@
+{
+  "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+  "jurisdiction_name": "Denver City Council",
+  "last_updated": "2026-11-21",
+  "councilors": [
+    {
+      "id": "ocd-person/denver-flor-alvidrez",
+      "name": "Flor Alvidrez",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 3,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-kevin-flynn",
+      "name": "Kevin Flynn",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 4,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-stacie-gilmore",
+      "name": "Stacie Gilmore",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 4,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-chris-hinds",
+      "name": "Chris Hinds",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 3,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-amanda-sandoval",
+      "name": "Amanda Sandoval",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 3,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-shontel-lewis",
+      "name": "Shontel Lewis",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 3,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-diana-romero-campbell",
+      "name": "Diana Romero Campbell",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 4,
+        "attendance_rate": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-serena-gonzales-gutierrez",
+      "name": "Serena Gonzales-Gutierrez",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 1,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-amanda-sawyer",
+      "name": "Amanda Sawyer",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 1,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-jamie-torres",
+      "name": "Jamie Torres",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 1,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    },
+    {
+      "id": "ocd-person/denver-darrell-watson",
+      "name": "Darrell Watson",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": null,
+      "website": null,
+      "metrics": {
+        "total_votes": 1,
+        "attendance_rate": 100.0,
+        "pivotal_votes": 0,
+        "pivotal_vote_rate": 0.0,
+        "motions_made": 0
+      }
+    }
+  ],
+  "agenda_items": [
+    {
+      "item_id": "legistar-13053-240459",
+      "date": "2026-11-18",
+      "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+      "event_type": "ordinance",
+      "topic": "Bill",
+      "outcome": "Passed (4-0)",
+      "impact_score": 36.0,
+      "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf",
+      "votes": {
+        "ocd-person/denver-amanda-sandoval": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-chris-hinds": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-diana-romero-campbell": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-flor-alvidrez": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-kevin-flynn": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-shontel-lewis": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-stacie-gilmore": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        }
+      }
+    },
+    {
+      "item_id": "legistar-13053-240460",
+      "date": "2026-11-18",
+      "title": "To amend, restate and supersede Ordinance No. 0868, Series of 2021, as previously amended, restated and superseded by Ordinance No. 0276, Series of 2024, designating the projects to be undertaken and funded with the proc",
+      "event_type": "ordinance",
+      "topic": "Bill",
+      "outcome": "Passed (4-0)",
+      "impact_score": 36.0,
+      "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf",
+      "votes": {
+        "ocd-person/denver-amanda-sandoval": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-chris-hinds": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-diana-romero-campbell": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-flor-alvidrez": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-kevin-flynn": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-shontel-lewis": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-stacie-gilmore": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        }
+      }
+    },
+    {
+      "item_id": "legistar-13053-240461",
+      "date": "2026-11-18",
+      "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+      "event_type": "resolution",
+      "topic": "Resolution",
+      "outcome": "Passed (4-0)",
+      "impact_score": 26.0,
+      "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf",
+      "votes": {
+        "ocd-person/denver-amanda-sandoval": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-chris-hinds": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-diana-romero-campbell": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-flor-alvidrez": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-kevin-flynn": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-shontel-lewis": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-stacie-gilmore": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        }
+      }
+    },
+    {
+      "item_id": "legistar-13051-240569",
+      "date": "2026-11-17",
+      "title": "For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e",
+      "event_type": "ordinance",
+      "topic": "Bill",
+      "outcome": "Passed (5-0)",
+      "impact_score": 36.0,
+      "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf",
+      "votes": {
+        "ocd-person/denver-amanda-sawyer": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-darrell-watson": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-diana-romero-campbell": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-jamie-torres": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-kevin-flynn": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-serena-gonzales-gutierrez": {
+          "vote": "Yes",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        },
+        "ocd-person/denver-stacie-gilmore": {
+          "vote": "Absent",
+          "is_pivotal": false,
+          "summary": "Recorded via structured municipal API.",
+          "quote": null
+        }
+      }
+    }
+  ]
+}
