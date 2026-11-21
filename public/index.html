@@ -124,7 +124,14 @@
       }
 
       try {
-        const filePath = j.file.startsWith('data/') ? j.file : `data/${j.file}`;
+        const rawFile =
+          j.file ||
+          j.data_file ||
+          j.filename ||
+          j.path ||
+          `${(j.id || j.ocd_division_id || '').replace(/[/:]/g, '-')}.json`;
+        const cleanFile = rawFile.replace(/^\.?\//, '').replace(/^public\//, '');
+        const filePath = cleanFile.startsWith('data/') ? cleanFile : `data/${cleanFile}`;
         const res = await fetch(filePath);
         if (!res.ok) throw new Error(`Failed to load ${filePath}`);
         const data = await res.json();
