@@ -1,87 +1,171 @@
-"""
-RTX 2060 + Ollama Sequential Extraction Worker.
-Processes pending 'minutes' documents one at a time, enforces Pydantic JSON,
-computes Vote Impactfulness, and writes normalized rows to SQLite.
-"""
 import json
 import os
-from datetime import datetime
-from typing import List, Literal, Optional
+import uuid
+from datetime import datetime, timezone
+from typing import List, Optional
+
 import requests
 from pydantic import BaseModel, Field, ValidationError
+
 from db import get_connection
-from metrics import compute_vote_impactfulness, is_vote_pivotal
+
+try:
+    from metrics import calculate_impact_score, is_pivotal_vote
+except ImportError:
+    def calculate_impact_score(event_type: str, yes_count: int, no_count: int) -> float:
+        base = {"ordinance": 40.0, "budget": 50.0, "zoning": 40.0, "resolution": 25.0}.get(
+            (event_type or "").lower(), 20.0
+        )
+        total = yes_count + no_count
+        if total == 0:
+            return base
+        margin = abs(yes_count - no_count) / total
+        closeness_bonus = (1.0 - margin) * 50.0
+        return round(min(100.0, base + closeness_bonus), 1)
+
+    def is_pivotal_vote(vote: str, yes_count: int, no_count: int) -> bool:
+        if vote not in ("Yes", "No"):
+            return False
+        return abs(yes_count - no_count) <= 1 and (yes_count + no_count) > 0
+
 
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
-# Default to 4-bit Llama 3.1 8B (fits 6GB RTX 2060 VRAM); swap to 'qwen2.5:3b' for faster speed
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
-MAX_RETRIES = 2
+MAX_RETRIES = 3
+MAX_CHARS = 12000
 
 
 class ExtractedVote(BaseModel):
-    entity_id: str
-    vote: Literal["Yes", "No", "Abstain", "Absent"]
-    made_motion: bool = False
-    seconded_motion: bool = False
-    rationale_summary: str = Field(default="Recorded via official minutes.")
-    verbatim_quote: Optional[str] = None
+    ocd_person_id: str = Field(..., description="Exact ocd_person_id from the roster, or councilor name")
+    vote: str = Field(..., description="Yes, No, Abstain, or Absent")
+    summary: Optional[str] = Field(None, description="Short neutral rationale if stated in minutes")
+    quote: Optional[str] = Field(None, description="Direct quote if present")
 
 
 class ExtractedEvent(BaseModel):
-    item_code: str
-    title: str
-    event_type: Literal["ordinance", "resolution", "budget", "motion", "consent"] = "ordinance"
-    topic: str = "General"
-    outcome: Literal["Passed", "Failed", "Tabled"]
-    votes: List[ExtractedVote]
+    title: str = Field(..., description="Short title of the ordinance, resolution, or motion")
+    event_type: str = Field("motion", description="ordinance, resolution, budget, zoning, or motion")
+    topic: Optional[str] = Field("General", description="Short topic label")
+    outcome: str = Field(..., description="Passed, Adopted, Failed, or Tabled")
+    votes: List[ExtractedVote] = Field(default_factory=list)
 
 
 class MinutesExtraction(BaseModel):
-    events: List[ExtractedEvent]
+    events: List[ExtractedEvent] = Field(default_factory=list)
 
 
-def call_ollama_structured(raw_text: str, roster: list) -> MinutesExtraction:
-    roster_str = "\n".join(f"- {r['name']}: {r['ocd_person_id']}" for r in roster)    
-    schema_json = json.dumps(MinutesExtraction.model_json_schema())
-    # Truncate very long packets to keep RTX 2060 6GB VRAM from spilling heavily into CPU RAM
-    trimmed_text = raw_text[:14000]
-    prompt = f"""You are a strictly factual municipal clerk assistant.
-Extract all roll-call vote items from the official meeting minutes below.
-Use ONLY these exact entity_id values:
-{roster_str}
+def normalize_vote(raw_vote: str) -> str:
+    val = (raw_vote or "").strip().lower()
+    if val in ("yes", "aye", "yea", "for", "approve", "approved", "in favor"):
+        return "Yes"
+    if val in ("no", "nay", "against", "opposed"):
+        return "No"
+    if val in ("abstain", "abstained", "recused", "present"):
+        return "Abstain"
+    return "Absent"
 
-Rules:
-- Only include items with an explicit roll-call or recorded vote.
-- Do not invent quotes. Set verbatim_quote to null if no direct quote is in the minutes.
-- Return ONLY valid JSON matching this schema: {schema_json}
 
-Official Minutes Text:
-{trimmed_text}
-"""
+def trim_for_voting_context(raw_text: str, max_chars: int = MAX_CHARS) -> str:
+    """Keep paragraphs around motions/votes so long minutes don't time out on CPU."""
+    text = (raw_text or "").strip()
+    if len(text) <= max_chars:
+        return text
 
-    resp = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": OLLAMA_MODEL,
-            "prompt": prompt,
-            "format": "json",
-            "stream": False,
-            "options": {"temperature": 0.0, "num_ctx": 4096},
-        },
-        timeout=180,
+    keywords = (
+        "motion", "vote", "aye", "nay", "yea", "adopted", "passed",
+        "failed", "roll call", "unanimous", "ordinance", "resolution",
+        "consent", "seconded", "carried", "absent", "abstain",
     )
+    lines = text.splitlines()
+    kept = []
+    for i, line in enumerate(lines):
+        window = "\n".join(lines[max(0, i - 2) : i + 3]).lower()
+        if any(k in window for k in keywords):
+            kept.append(line)
+
+    filtered = "\n".join(kept).strip()
+    return filtered[:max_chars] if filtered else text[:max_chars]
+
+
+def build_person_resolver(roster):
+    valid_ids = {row["ocd_person_id"] for row in roster}
+    name_to_id = {}
+    for row in roster:
+        full_name = row["name"].strip().lower()
+        name_to_id[full_name] = row["ocd_person_id"]
+        parts = full_name.split()
+        if parts:
+            name_to_id[parts[-1]] = row["ocd_person_id"]
+
+    def resolve(raw_id_or_name: str) -> Optional[str]:
+        if not raw_id_or_name:
+            return None
+        val = raw_id_or_name.strip()
+        if val in valid_ids:
+            return val
+        lower = val.lower()
+        if lower in name_to_id:
+            return name_to_id[lower]
+        tokens = lower.replace("-", " ").replace("/", " ").replace(",", " ").split()
+        if tokens and tokens[-1] in name_to_id:
+            return name_to_id[tokens[-1]]
+        return None
+
+    return resolve
+
+
+def extract_votes_with_ollama(raw_text: str, roster_lines: str) -> MinutesExtraction:
+    schema_json = json.dumps(MinutesExtraction.model_json_schema())
+    trimmed_text = trim_for_voting_context(raw_text)
+
+    prompt = (
+        "You are a municipal legislative data extractor. Extract all formal roll-call "
+        "and recorded votes from the meeting text below.\n\n"
+        "RULES:\n"
+        "1. Use ONLY the exact ocd_person_id values from the Official Roster below.\n"
+        "2. For unanimous votes (e.g., 'Adopted 7-0' or 'Passed unanimously'), record 'Yes' for every present councilor.\n"
+        "3. For shorthand like 'Adopted 6-1 (Nay: Name)', record 'No' for the named dissenter and 'Yes' for the other councilors.\n"
+        "4. If no votes occurred (e.g., work session or pure discussion), return {\"events\": []}.\n"
+        "5. Output ONLY valid JSON matching this schema:\n"
+        f"{schema_json}\n\n"
+        f"OFFICIAL ROSTER:\n{roster_lines}\n\n"
+        f"MEETING TEXT:\n{trimmed_text}\n"
+    )
+
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "format": "json",
+        "stream": False,
+        "options": {
+            "num_thread": 4,
+            "num_ctx": 4096,
+            "temperature": 0.0,
+        },
+    }
+
+    resp = requests.post(OLLAMA_URL, json=payload, timeout=600)
     resp.raise_for_status()
-    raw_json = resp.json()["response"]
+    raw_json = resp.json().get("response", "{}")
     return MinutesExtraction.model_validate_json(raw_json)
 
 
 def process_next_pending_document() -> bool:
     conn = get_connection()
-    doc = conn.execute("""
+    doc = conn.execute(
+        """
         SELECT * FROM documents
-        WHERE status = 'pending' AND doc_type = 'minutes' AND retry_count < ?
+        WHERE status = 'pending'
+          AND retry_count < ?
+          AND (
+              LOWER(doc_type) IN ('minutes', 'action_agenda')
+              OR LOWER(title) LIKE '%action%'
+              OR LOWER(title) LIKE '%minute%'
+          )
         ORDER BY created_at ASC LIMIT 1
-    """, (MAX_RETRIES,)).fetchone()
+        """,
+        (MAX_RETRIES,),
+    ).fetchone()
 
     if not doc:
         conn.close()
@@ -92,68 +176,129 @@ def process_next_pending_document() -> bool:
         (doc["jurisdiction_id"],),
     ).fetchall()
 
-    print(f"[WORKER] Processing doc #{doc['doc_id']}: {doc['title']}...")
-    try:
-        extracted = call_ollama_structured(doc["raw_text"], roster)
-        cur = conn.cursor()
+    print(f"[WORKER] Processing doc #{doc['doc_id']}: {doc['title']} ({doc['doc_type']})...")
 
-        for ev in extracted.events:
-            event_id = f"{doc['meeting_date']}-{ev.item_code}".lower().replace(" ", "-")
-            yes_c = sum(1 for v in ev.votes if v.vote == "Yes")
-            no_c = sum(1 for v in ev.votes if v.vote == "No")
-            abs_c = sum(1 for v in ev.votes if v.vote == "Abstain")
-            absent_c = sum(1 for v in ev.votes if v.vote == "Absent")
-
-            impact_score, margin, _ = compute_vote_impactfulness(yes_c, no_c, ev.event_type)
-
-            cur.execute("""
-                INSERT OR REPLACE INTO events
-                (event_id, jurisdiction_id, doc_id, meeting_date, title, event_type, topic,
-                 outcome, yes_count, no_count, abstain_count, absent_count, vote_margin, impact_score, source_url)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                event_id, doc["jurisdiction_id"], doc["doc_id"], doc["meeting_date"],
-                ev.title, ev.event_type, ev.topic, ev.outcome,
-                yes_c, no_c, abs_c, absent_c, margin, impact_score, doc["source_url"],
-            ))
-
-            for v in ev.votes:
-                pivotal = is_vote_pivotal(v.vote, yes_c, no_c)
-                cur.execute("""
-                    INSERT OR REPLACE INTO entity_actions
-                    (event_id, entity_id, action_type, value, is_pivotal, rationale_summary, verbatim_quote)
-                    VALUES (?, ?, 'vote', ?, ?, ?, ?)
-                """, (event_id, v.entity_id, v.vote, pivotal, v.rationale_summary, v.verbatim_quote))
-
-                if v.made_motion:
-                    cur.execute("""
-                        INSERT OR IGNORE INTO entity_actions (event_id, entity_id, action_type, value)
-                        VALUES (?, ?, 'motion', 'Mover')
-                    """, (event_id, v.entity_id))
-
-        cur.execute(
-            "UPDATE documents SET status = 'processed', processed_at = ? WHERE doc_id = ?",
-            (datetime.utcnow().isoformat(), doc["doc_id"]),
+    if not roster:
+        print(f"  ! No roster found for {doc['jurisdiction_id']}; skipping doc #{doc['doc_id']}.")
+        conn.execute(
+            "UPDATE documents SET status = 'failed', error_message = ? WHERE doc_id = ?",
+            ("No roster entities found for jurisdiction", doc["doc_id"]),
         )
         conn.commit()
-        print(f"  + Extracted {len(extracted.events)} vote events.")
+        conn.close()
+        return True
+
+    roster_lines = "\n".join(f"- {r['ocd_person_id']}: {r['name']}" for r in roster)
+    resolve_person_id = build_person_resolver(roster)
+
+    try:
+        extracted = extract_votes_with_ollama(doc["raw_text"] or "", roster_lines)
+
+        inserted_events = 0
+        for ev in extracted.events:
+            resolved_votes = []
+            seen_ids = set()
+            for v in ev.votes:
+                person_id = resolve_person_id(v.ocd_person_id)
+                if not person_id:
+                    print(f"    - Skipping unmatched voter: {v.ocd_person_id}")
+                    continue
+                if person_id in seen_ids:
+                    continue
+                seen_ids.add(person_id)
+                resolved_votes.append((person_id, normalize_vote(v.vote), v.summary, v.quote))
+
+            if not resolved_votes:
+                continue
+
+            yes_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "Yes")
+            no_count = sum(1 for _, v_val, _, _ in resolved_votes if v_val == "No")
+            impact = calculate_impact_score(ev.event_type, yes_count, no_count)
+            outcome_str = f"{ev.outcome} ({yes_count}-{no_count})"
+            item_id = f"doc-{doc['doc_id']}-{uuid.uuid4().hex[:8]}"
+
+            conn.execute(
+                """
+                INSERT INTO vote_events (
+                    item_id, doc_id, jurisdiction_id, meeting_date,
+                    title, event_type, topic, outcome,
+                    yes_count, no_count, impact_score, source_url
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    item_id,
+                    doc["doc_id"],
+                    doc["jurisdiction_id"],
+                    doc["meeting_date"],
+                    ev.title,
+                    ev.event_type,
+                    ev.topic or "General",
+                    outcome_str,
+                    yes_count,
+                    no_count,
+                    impact,
+                    doc["source_url"],
+                ),
+            )
+
+            for person_id, v_val, summary, quote in resolved_votes:
+                pivotal = 1 if is_pivotal_vote(v_val, yes_count, no_count) else 0
+                conn.execute(
+                    """
+                    INSERT INTO votes (
+                        item_id, ocd_person_id, vote, is_pivotal, summary, quote
+                    ) VALUES (?, ?, ?, ?, ?, ?)
+                    """,
+                    (item_id, person_id, v_val, pivotal, summary, quote),
+                )
+
+            inserted_events += 1
+
+        conn.execute(
+            "UPDATE documents SET status = 'processed', processed_at = ? WHERE doc_id = ?",
+            (datetime.now(timezone.utc).isoformat(), doc["doc_id"]),
+        )
+        conn.commit()
+        print(f"  + Extracted {inserted_events} vote events.")
+
+    except requests.RequestException as exc:
+        conn.rollback()
+        print(f"  ! Ollama connection/API error on doc #{doc['doc_id']}: {exc}")
+        print("  ! Leaving document 'pending' (retry_count unchanged) and stopping worker.")
+        conn.close()
+        raise SystemExit(1)
+
     except (ValidationError, Exception) as exc:
-        conn.execute("""
+        conn.rollback()
+        conn.execute(
+            """
             UPDATE documents
             SET retry_count = retry_count + 1,
                 status = CASE WHEN retry_count + 1 >= ? THEN 'failed' ELSE 'pending' END,
                 error_message = ?
             WHERE doc_id = ?
-        """, (MAX_RETRIES, str(exc), doc["doc_id"]))
+            """,
+            (MAX_RETRIES, str(exc), doc["doc_id"]),
+        )
         conn.commit()
         print(f"  ! Failed doc #{doc['doc_id']}: {exc}")
+
     finally:
-        conn.close()
+        try:
+            conn.close()
+        except Exception:
+            pass
 
     return True
 
 
-if __name__ == "__main__":
+def run_worker():
+    processed_any = False
     while process_next_pending_document():
-        pass
-    print("GPU worker queue empty.")
+        processed_any = True
+    if not processed_any:
+        print("Worker queue empty.")
+
+
+if __name__ == "__main__":
+    run_worker()
