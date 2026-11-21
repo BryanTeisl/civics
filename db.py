@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import sqlite3
@@ -118,9 +119,102 @@ def init_db(db_path: str = DB_PATH) -> None:
         conn.close()
 
 
+def queue_document(
+    jurisdiction_id: str,
+    doc_type: str,
+    title: str,
+    source_url: str,
+    raw_text: str,
+    meeting_date: Optional[str] = None,
+    external_id: Optional[str] = None,
+    content_hash: Optional[str] = None,
+    db_path: str = DB_PATH,
+) -> Optional[int]:
+    """Insert a document into the extraction queue if its content_hash is new."""
+    if not content_hash:
+        digest_source = f"{jurisdiction_id}|{doc_type}|{source_url}|{raw_text or ''}"
+        content_hash = hashlib.sha256(digest_source.encode("utf-8")).hexdigest()
+
+    conn = get_connection(db_path)
+    try:
+        cursor = conn.execute(
+            """
+            INSERT OR IGNORE INTO documents (
+                jurisdiction_id, external_id, meeting_date, doc_type,
+                title, source_url, content_hash, raw_text, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending')
+            """,
+            (
+                jurisdiction_id,
+                external_id,
+                meeting_date,
+                doc_type,
+                title,
+                source_url,
+                content_hash,
+                raw_text,
+            ),
+        )
+        conn.commit()
+        return cursor.lastrowid if cursor.rowcount > 0 else None
+    finally:
+        conn.close()
+
+
+def seed_fort_collins(db_path: str = DB_PATH) -> None:
+    """Seed the Fort Collins jurisdiction and City Council roster."""
+    init_db(db_path)
+    conn = get_connection(db_path)
+    try:
+        foco_div = "ocd-division/country:us/state:co/place:fort_collins"
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO jurisdictions (
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                foco_div,
+                "Fort Collins City Council",
+                "municipal",
+                40.5853,
+                -105.0844,
+                "civicclerk",
+                "https://fortcollinsco.portal.civicclerk.com/",
+                "fast",
+                "ocd-division/country:us/state:co/county:larimer",
+            ),
+        )
+
+        council = [
+            ("ocd-person/foco-emily-francis", "Emily Francis", "Mayor", "At-Large"),
+            ("ocd-person/foco-chris-conway", "Chris Conway", "Councilmember", "District 1"),
+            ("ocd-person/foco-julie-pignataro", "Julie Pignataro", "Mayor Pro Tem", "District 2"),
+            ("ocd-person/foco-josh-fudge", "Josh Fudge", "Councilmember", "District 3"),
+            ("ocd-person/foco-melanie-potyondy", "Melanie Potyondy", "Councilmember", "District 4"),
+            ("ocd-person/foco-amy-hoeven", "Amy Hoeven", "Councilmember", "District 5"),
+            ("ocd-person/foco-anne-nelsen", "Anne Nelsen", "Councilmember", "District 6"),
+        ]
+
+        for pid, name, role, district in council:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO entities (
+                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, website_url
+                ) VALUES (?, ?, ?, 'legislator', ?, ?, 'https://www.fcgov.com/council/')
+                """,
+                (pid, foco_div, name, role, district),
+            )
+
+        conn.commit()
+    finally:
+        conn.close()
+
+
 def seed_public_profiles(db_path: str = DB_PATH) -> None:
     """Populate public contact info, official portals, and hierarchy links for existing rosters."""
     init_db(db_path)
+    seed_fort_collins(db_path)
     conn = get_connection(db_path)
     try:
         # Ensure Larimer County exists as parent jurisdiction for Fort Collins
