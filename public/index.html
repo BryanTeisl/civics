@@ -7,171 +7,298 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    #map { height: 340px; width: 100%; z-index: 1; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans p-6">
-  <div class="max-w-6xl mx-auto">
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Header -->
     <header class="mb-6">
-      <h1 class="text-3xl font-bold tracking-tight">Civic Core Explorer</h1>
-      <p class="text-sm text-slate-500 mt-1">Search or navigate the US map to inspect local voting records, official websites, and Vote Impactfulness metrics.</p>
-      <div class="relative mt-4">
-        <input id="search-input" type="text" placeholder="Search city, county, or state (e.g., Fort Collins)..."
-               class="w-full p-3 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <div id="search-results" class="absolute w-full bg-white border border-slate-200 shadow-lg mt-1 hidden z-[1000] rounded-lg"></div>
-      </div>
-      <div id="us-map" class="h-64 w-full rounded-lg border border-slate-300 shadow-sm mt-4 z-0"></div>
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">Civic Core Explorer</h1>
+      <p class="text-slate-600 mt-1">
+        Search or navigate the US map to inspect local voting records, official websites, and Vote Impactfulness metrics.
+      </p>
     </header>
 
-    <div id="dashboard" class="hidden">
-      <div class="border-b pb-3 mb-6 flex justify-between items-end">
-        <div>
-          <h2 id="jurisdiction-title" class="text-2xl font-bold"></h2>
-          <p id="last-updated" class="text-xs text-slate-500 mt-1"></p>
-        </div>
-      </div>
+    <!-- Search Bar -->
+    <div class="mb-4 relative">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search city, county, or state (e.g., Fort Collins, Denver)..."
+        class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <div
+        id="search-results"
+        class="hidden absolute left-0 right-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-lg z-50 max-h-60 overflow-y-auto"
+      ></div>
+    </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-4 rounded-lg border shadow-sm">
-          <h3 class="font-semibold text-slate-700 mb-3 border-b pb-2">Elected Roster</h3>
-          <div id="roster-list" class="space-y-2"></div>
-        </div>
+    <!-- Interactive Map -->
+    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-8">
+      <div id="map"></div>
+    </div>
 
-        <div class="md:col-span-2">
-          <div id="profile-header" class="hidden bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4 flex justify-between items-center">
-            <div>
-              <h3 id="selected-name" class="text-xl font-bold text-blue-950"></h3>
-              <p id="selected-role" class="text-sm text-blue-700"></p>
-              <p id="selected-metrics" class="text-xs text-slate-600 mt-1"></p>
-            </div>
-            <a id="selected-website" href="#" target="_blank" rel="noopener"
-               class="hidden px-3 py-2 bg-blue-600 text-white text-xs font-semibold rounded hover:bg-blue-700">
-              Official Website &rarr;
-            </a>
-          </div>
+    <!-- Jurisdiction Header -->
+    <div class="mb-6 border-b border-slate-200 pb-4">
+      <h2 id="jurisdiction-name" class="text-2xl font-bold text-slate-900">Select a jurisdiction</h2>
+      <p id="last-updated" class="text-sm text-slate-500 mt-1"></p>
+    </div>
 
-          <div id="vote-feed" class="space-y-4">
-            <p class="text-slate-500 italic text-sm">Select an official from the roster to inspect their votes and impact metrics.</p>
-          </div>
+    <!-- Main Two-Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Left: Elected Roster -->
+      <aside class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 h-fit">
+        <h3 class="text-base font-semibold text-slate-800 pb-3 mb-3 border-b border-slate-100">
+          Elected Roster
+        </h3>
+        <div id="roster-list" class="space-y-2">
+          <p class="text-sm text-slate-500">Loading jurisdictions...</p>
         </div>
-      </div>
+      </aside>
+
+      <!-- Right: Selected Official & Voting Record -->
+      <main id="official-detail" class="md:col-span-2 space-y-4">
+        <div class="p-6 bg-white rounded-xl border border-slate-200 text-slate-500 text-sm">
+          Select a pin on the map or choose an official from the roster to inspect their voting record.
+        </div>
+      </main>
     </div>
   </div>
 
   <script>
-    let jurisdictions = [];
-    let activeData = null;
+    const map = L.map('map').setView([39.5, -98.35], 4);
 
-    const map = L.map('us-map').setView([39.8283, -98.5795], 4);
+    // Keyless OpenStreetMap tiles
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    fetch('data/index.json')
-      .then(r => r.json())
-      .then(idx => {
-        jurisdictions = idx.jurisdictions || [];
-        jurisdictions.forEach(j => {
-          const m = L.marker([j.lat, j.lng]).addTo(map);
-          m.bindTooltip(`<b>${j.name}</b><br>${j.level}`);
-          m.on('click', () => {
-            map.flyTo([j.lat, j.lng], 10, { duration: 1.2 });
-            loadJurisdiction(j.id);
-          });
-        });
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('j')) loadJurisdiction(params.get('j'));
-      });
+    let jurisdictions = [];
+    let currentData = null;
 
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
-    searchInput.addEventListener('input', e => {
-      const q = e.target.value.toLowerCase();
-      searchResults.innerHTML = '';
-      if (q.length < 2) { searchResults.classList.add('hidden'); return; }
-      const matches = jurisdictions.filter(j => j.name.toLowerCase().includes(q));
-      if (!matches.length) { searchResults.classList.add('hidden'); return; }
-      searchResults.classList.remove('hidden');
-      matches.forEach(m => {
-        const div = document.createElement('div');
-        div.className = 'p-3 hover:bg-slate-100 cursor-pointer border-b last:border-0 text-sm';
-        div.innerHTML = `<b>${m.name}</b> <span class="text-slate-500">(${m.level})</span>`;
-        div.onclick = () => {
-          searchInput.value = m.name;
-          searchResults.classList.add('hidden');
-          map.flyTo([m.lat, m.lng], 10, { duration: 1.2 });
-          loadJurisdiction(m.id);
-        };
-        searchResults.appendChild(div);
-      });
-    });
+    const jurisdictionNameEl = document.getElementById('jurisdiction-name');
+    const lastUpdatedEl = document.getElementById('last-updated');
+    const rosterListEl = document.getElementById('roster-list');
+    const officialDetailEl = document.getElementById('official-detail');
 
-    function loadJurisdiction(id) {
-      fetch(`data/${id}.json`)
-        .then(r => r.json())
-        .then(data => {
-          activeData = data;
-          document.getElementById('dashboard').classList.remove('hidden');
-          document.getElementById('jurisdiction-title').innerText = data.jurisdiction_name;
-          document.getElementById('last-updated').innerText = `Last updated: ${data.last_updated}`;
-          const roster = document.getElementById('roster-list');
-          roster.innerHTML = '';
-          data.councilors.forEach(c => {
-            const btn = document.createElement('button');
-            btn.className = 'w-full text-left p-3 rounded border border-slate-100 hover:bg-blue-50 hover:border-blue-200 transition';
-            btn.innerHTML = `<div class="font-semibold text-sm">${c.name}</div><div class="text-xs text-slate-500">${c.role} • ${c.district || ''}</div>`;
-            btn.onclick = () => selectOfficial(c);
-            roster.appendChild(btn);
-          });
-          window.history.pushState({}, '', `?j=${id}`);
+    async function init() {
+      try {
+        const res = await fetch('data/index.json');
+        if (!res.ok) throw new Error('Could not load data/index.json');
+        const indexData = await res.json();
+        jurisdictions = Array.isArray(indexData) ? indexData : (indexData.jurisdictions || []);
+
+        jurisdictions.forEach((j) => {
+          if (typeof j.lat === 'number' && typeof j.lng === 'number') {
+            const marker = L.marker([j.lat, j.lng]).addTo(map);
+            marker.bindPopup(`<strong>${j.name}</strong>`);
+            marker.on('click', () => loadJurisdiction(j));
+          }
         });
+
+        if (jurisdictions.length > 0) {
+          loadJurisdiction(jurisdictions[0]);
+        } else {
+          rosterListEl.innerHTML = '<p class="text-sm text-slate-500">No jurisdictions found.</p>';
+        }
+      } catch (err) {
+        console.error(err);
+        rosterListEl.innerHTML = `<p class="text-sm text-red-600">Error loading index: ${err.message}</p>`;
+      }
     }
 
-    function selectOfficial(c) {
-      document.getElementById('profile-header').classList.remove('hidden');
-      document.getElementById('selected-name').innerText = c.name;
-      document.getElementById('selected-role').innerText = `${c.role} • ${c.district || ''}`;
-      const m = c.metrics || {};
-      document.getElementById('selected-metrics').innerText =
-        `Votes: ${m.total_votes || 0} | Attendance: ${m.attendance_rate || 0}% | Pivotal Votes: ${m.pivotal_votes || 0} (${m.pivotal_vote_rate || 0}%)`;
+    async function loadJurisdiction(j) {
+      // Immediately clear previous jurisdiction's selected official so stale data never persists
+      jurisdictionNameEl.textContent = j.name;
+      lastUpdatedEl.textContent = 'Loading...';
+      rosterListEl.innerHTML = '<p class="text-sm text-slate-500">Loading roster...</p>';
+      officialDetailEl.innerHTML = '';
 
-      const webBtn = document.getElementById('selected-website');
-      if (c.website) { webBtn.href = c.website; webBtn.classList.remove('hidden'); }
-      else { webBtn.classList.add('hidden'); }
-
-      const feed = document.getElementById('vote-feed');
-      feed.innerHTML = '';
-      if (!activeData.agenda_items.length) {
-        feed.innerHTML = '<p class="text-sm text-slate-500">No roll-call votes extracted yet. Run watcher.py and worker.py to populate.</p>';
-        return;
+      if (typeof j.lat === 'number' && typeof j.lng === 'number') {
+        map.flyTo([j.lat, j.lng], 6, { duration: 0.6 });
       }
 
-      activeData.agenda_items.forEach(item => {
-        const v = item.votes[c.id];
-        if (!v) return;
-        const badge = v.vote === 'Yes' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
-        const pivotalTag = v.is_pivotal ? '<span class="ml-2 px-2 py-0.5 bg-amber-100 text-amber-800 rounded text-xs font-semibold">Pivotal Vote</span>' : '';
-        const card = document.createElement('div');
-        card.className = 'bg-white p-4 rounded-lg border shadow-sm';
-        card.innerHTML = `
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <span class="text-xs font-semibold uppercase text-blue-600">${item.topic} • Impact Score: ${item.impact_score}/100</span>
-              <h4 class="font-bold text-slate-900 mt-1">${item.title}</h4>
-              <div class="text-xs text-slate-500 mt-1">${item.date} • ${item.outcome} ${item.source_url ? `• <a href="${item.source_url}" target="_blank" class="underline text-blue-600">Official Source</a>` : ''}</div>
+      try {
+        const filePath = j.file.startsWith('data/') ? j.file : `data/${j.file}`;
+        const res = await fetch(filePath);
+        if (!res.ok) throw new Error(`Failed to load ${filePath}`);
+        const data = await res.json();
+        currentData = data;
+
+        jurisdictionNameEl.textContent = data.name || j.name;
+        lastUpdatedEl.textContent = data.last_updated ? `Last updated: ${data.last_updated}` : '';
+
+        const officials = data.officials || data.entities || [];
+
+        if (officials.length === 0) {
+          rosterListEl.innerHTML = '<p class="text-sm text-slate-500 py-2">No officials indexed yet.</p>';
+          officialDetailEl.innerHTML = `
+            <div class="p-6 bg-white rounded-xl border border-slate-200 text-slate-500 text-sm">
+              No elected roster or roll-call votes have been ingested for <strong>${data.name || j.name}</strong> yet.
             </div>
-            <div class="text-right whitespace-nowrap">
-              <span class="px-2.5 py-1 rounded-full text-xs font-bold ${badge}">Voted ${v.vote}</span>
-              ${pivotalTag}
-            </div>
-          </div>
-          <div class="mt-3 bg-slate-50 p-3 rounded text-sm text-slate-700">
-            <p>${v.summary || ''}</p>
-            ${v.quote ? `<blockquote class="mt-2 border-l-2 border-blue-400 pl-2 italic text-slate-600">"${v.quote}"</blockquote>` : ''}
+          `;
+          return;
+        }
+
+        renderRoster(officials);
+        renderOfficial(officials[0]);
+      } catch (err) {
+        console.error(err);
+        rosterListEl.innerHTML = `<p class="text-sm text-red-600">Error loading jurisdiction data.</p>`;
+        officialDetailEl.innerHTML = `
+          <div class="p-6 bg-white rounded-xl border border-red-200 text-red-600 text-sm">
+            Could not load data for ${j.name}.
           </div>
         `;
-        feed.appendChild(card);
+      }
+    }
+
+    function renderRoster(officials) {
+      rosterListEl.innerHTML = '';
+      officials.forEach((person, idx) => {
+        const btn = document.createElement('button');
+        btn.className =
+          'w-full text-left p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:bg-blue-50/40 transition focus:outline-none';
+        const subtitle = [person.role, person.district].filter(Boolean).join(' • ');
+        btn.innerHTML = `
+          <div class="font-semibold text-slate-900">${person.name}</div>
+          <div class="text-xs text-slate-500 mt-0.5">${subtitle}</div>
+        `;
+        btn.addEventListener('click', () => renderOfficial(person));
+        rosterListEl.appendChild(btn);
       });
     }
+
+    function renderOfficial(person) {
+      const stats = person.stats || {};
+      const totalVotes = stats.total_votes ?? (person.votes ? person.votes.length : 0);
+      const attendance = stats.attendance_pct ?? 0;
+      const pivotalCount = stats.pivotal_votes ?? 0;
+      const pivotalPct = stats.pivotal_pct ?? 0;
+      const subtitle = [person.role, person.district].filter(Boolean).join(' • ');
+
+      const websiteBtn = person.official_website
+        ? `<a href="${person.official_website}" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition">
+              Official Website &rarr;
+           </a>`
+        : '';
+
+      const votes = person.votes || [];
+      let votesHtml = '';
+
+      if (votes.length === 0) {
+        votesHtml = `
+          <div class="p-6 bg-white rounded-xl border border-slate-200 text-slate-500 text-sm">
+            No roll-call votes extracted yet. Run watcher.py and worker.py to populate.
+          </div>
+        `;
+      } else {
+        votesHtml = votes
+          .map((v) => {
+            const voteColor =
+              v.vote === 'Yes'
+                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                : v.vote === 'No'
+                ? 'bg-rose-50 text-rose-700 border-rose-200'
+                : 'bg-slate-100 text-slate-700 border-slate-200';
+
+            const pivotalBadge = v.is_pivotal
+              ? `<span class="ml-2 px-2 py-0.5 text-xs font-semibold rounded-full bg-amber-100 text-amber-800">Pivotal Vote</span>`
+              : '';
+
+            const sourceLink = v.source_url
+              ? ` • <a href="${v.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Official Source</a>`
+              : '';
+
+            const tally =
+              v.yes_count !== undefined && v.no_count !== undefined
+                ? ` (${v.yes_count}-${v.no_count})`
+                : '';
+
+            return `
+              <article class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="text-xs font-semibold uppercase tracking-wide text-blue-600">
+                    ${v.topic || v.event_type || 'VOTE'} &bull; IMPACT SCORE: ${v.impact_score ?? 0}/100
+                    ${pivotalBadge}
+                  </div>
+                  <span class="shrink-0 px-3 py-1 rounded-full text-xs font-semibold border ${voteColor}">
+                    Voted ${v.vote}
+                  </span>
+                </div>
+                <h4 class="text-base font-semibold text-slate-900 mt-2">${v.title}</h4>
+                <div class="text-xs text-slate-500 mt-1">
+                  ${v.meeting_date || ''} &bull; ${v.outcome || ''}${tally}${sourceLink}
+                </div>
+                ${
+                  v.rationale_summary
+                    ? `<p class="mt-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700 border border-slate-100">${v.rationale_summary}</p>`
+                    : ''
+                }
+              </article>
+            `;
+          })
+          .join('');
+      }
+
+      officialDetailEl.innerHTML = `
+        <section class="p-5 bg-blue-50/40 rounded-xl border border-blue-200 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">${person.name}</h3>
+            <p class="text-sm text-blue-700 font-medium">${subtitle}</p>
+            <p class="text-xs text-slate-600 mt-2">
+              Votes: ${totalVotes} | Attendance: ${attendance}% | Pivotal Votes: ${pivotalCount} (${pivotalPct}%)
+            </p>
+          </div>
+          ${websiteBtn}
+        </section>
+        <div class="space-y-3">
+          ${votesHtml}
+        </div>
+      `;
+    }
+
+    // Search filtering
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      if (!q) {
+        searchResults.classList.add('hidden');
+        return;
+      }
+      const matches = jurisdictions.filter((j) => j.name.toLowerCase().includes(q));
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<div class="px-4 py-3 text-sm text-slate-500">No matching jurisdictions</div>';
+      } else {
+        searchResults.innerHTML = matches
+          .map(
+            (j, idx) =>
+              `<button data-idx="${idx}" class="w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 border-b border-slate-100 last:border-0">${j.name}</button>`
+          )
+          .join('');
+        searchResults.querySelectorAll('button').forEach((btn, idx) => {
+          btn.addEventListener('click', () => {
+            loadJurisdiction(matches[idx]);
+            searchInput.value = matches[idx].name;
+            searchResults.classList.add('hidden');
+          });
+        });
+      }
+      searchResults.classList.remove('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.classList.add('hidden');
+      }
+    });
+
+    init();
   </script>
 </body>
 </html>

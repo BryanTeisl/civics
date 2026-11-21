@@ -3,13 +3,13 @@ Granicus Legistar OData REST API Adapter (GPU-Bypass).
 Fetches structured roll-call votes directly from /events -> /eventitems -> /votes.
 """
 from datetime import datetime, timedelta, timezone
-from typing import List
+from typing import List, Literal
 import requests
 from adapters.base import BaseAdapter, IngestionResult, NormalizedEvent, NormalizedVote
 
 
 class LegistarAdapter(BaseAdapter):
-    def _normalize_vote(self, raw_val: str) -> str:
+    def _normalize_vote(self, raw_val: str) -> Literal["Yes", "No", "Abstain", "Absent"]:
         val = (raw_val or "").strip().lower()
         if val in ("aye", "yes", "yea", "approve", "for"):
             return "Yes"
@@ -19,7 +19,7 @@ class LegistarAdapter(BaseAdapter):
             return "Abstain"
         return "Absent"
 
-    def _classify_type(self, title: str, matter_type: str) -> str:
+    def _classify_type(self, title: str, matter_type: str) -> Literal["ordinance", "resolution", "budget", "motion", "consent"]:
         text = f"{title} {matter_type}".lower()
         if "budget" in text or "appropriat" in text:
             return "budget"
