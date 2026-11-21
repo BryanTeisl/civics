@@ -1,0 +1,812 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
+    "name": "Fort Collins City Council",
+    "level": "municipal",
+    "lat": 40.5853,
+    "lng": -105.0844,
+    "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
+    "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+    "last_updated": "2026-11-21"
+  },
+  "entities": [
+    {
+      "ocd_person_id": "ocd-person/foco-emily-francis",
+      "name": "Emily Francis",
+      "entity_type": "legislator",
+      "role": "Mayor",
+      "district": "At-Large",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "efrancis@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {
+        "website": "https://www.fcgov.com/council/"
+      },
+      "bio_extra": {
+        "office": "Mayor",
+        "term_type": "2-Year At-Large"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-chris-conway",
+      "name": "Chris Conway",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 1",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "cconway@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Councilmember",
+        "area": "Northeast Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-julie-pignataro",
+      "name": "Julie Pignataro",
+      "entity_type": "legislator",
+      "role": "Mayor Pro Tem",
+      "district": "District 2",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "jpignataro@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Mayor Pro Tem",
+        "area": "East Central Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-josh-fudge",
+      "name": "Josh Fudge",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 3",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "jfudge@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Councilmember",
+        "area": "Southeast Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-melanie-potyondy",
+      "name": "Melanie Potyondy",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 4",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "mpotyondy@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Councilmember",
+        "area": "Southwest Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-amy-hoeven",
+      "name": "Amy Hoeven",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 5",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "ahoeven@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Councilmember",
+        "area": "West Central Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/foco-anne-nelsen",
+      "name": "Anne Nelsen",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 6",
+      "party": "Nonpartisan",
+      "phone": "(970) 221-6505",
+      "email": "anelsen@fcgov.com",
+      "website_url": "https://www.fortcollins.gov/Government/City-Council",
+      "portal_url": "https://www.fcgov.com/council/",
+      "social_links": {},
+      "bio_extra": {
+        "office": "Councilmember",
+        "area": "Northwest Fort Collins"
+      },
+      "metrics": {
+        "total_votes": 3,
+        "present_votes": 3,
+        "attendance_rate": 100.0,
+        "avg_impact_score": 33.3,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0.0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-1-4db9d8ce",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "event_type": "motion",
+          "topic": "Annual Evaluations",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-416b3e38",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+          "event_type": "Ordinance",
+          "topic": "Downtown Development Authority Budget",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        },
+        {
+          "event_id": "doc-2-e95c2e3b",
+          "meeting_date": "2026-11-17",
+          "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+          "event_type": "Ordinance",
+          "topic": "City Budget for Fiscal Years 2027-2028",
+          "outcome": "Passed (7-0)",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": null,
+          "verbatim_quote": null,
+          "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "doc-1-4db9d8ce",
+      "meeting_date": "2026-11-24",
+      "title": "Motion to go into Executive Session for Annual Evaluations",
+      "event_type": "motion",
+      "topic": "Annual Evaluations",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 20.0,
+      "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)",
+      "attendance_count": 7,
+      "roster_size": 7,
+      "attendance_rate": 100.0,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "role": "Mayor",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "District 2",
+          "role": "Mayor Pro Tem",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        }
+      ],
+      "quotes": []
+    },
+    {
+      "event_id": "2026-11-24-1",
+      "meeting_date": "2026-11-24",
+      "title": "Consideration of a motion to go into Executive Session to conduct the annual evaluations of the City Attorney, Chief Judge, and City Manager",
+      "event_type": "motion",
+      "topic": "Annual Performance Reviews",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 6,
+      "impact_score": 20.0,
+      "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)",
+      "attendance_count": 0,
+      "roster_size": 7,
+      "attendance_rate": null,
+      "sponsors": [],
+      "votes": [],
+      "quotes": []
+    },
+    {
+      "event_id": "doc-2-e95c2e3b",
+      "meeting_date": "2026-11-17",
+      "title": "Ordinance No. 162, 2026, Annual Appropriation and Budget Ordinance for Fiscal Years 2027-2028",
+      "event_type": "Ordinance",
+      "topic": "City Budget for Fiscal Years 2027-2028",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)",
+      "attendance_count": 7,
+      "roster_size": 7,
+      "attendance_rate": 100.0,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "role": "Mayor",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "District 2",
+          "role": "Mayor Pro Tem",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        }
+      ],
+      "quotes": []
+    },
+    {
+      "event_id": "doc-2-416b3e38",
+      "meeting_date": "2026-11-17",
+      "title": "Ordinance No. 149, 2026, Annual Appropriation Ordinance for the Fort Collins Downtown Development Authority",
+      "event_type": "Ordinance",
+      "topic": "Downtown Development Authority Budget",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)",
+      "attendance_count": 7,
+      "roster_size": 7,
+      "attendance_rate": 100.0,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "role": "Mayor",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "District 2",
+          "role": "Mayor Pro Tem",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "role": "Councilmember",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": null,
+          "verbatim_quote": null
+        }
+      ],
+      "quotes": []
+    }
+  ]
+}

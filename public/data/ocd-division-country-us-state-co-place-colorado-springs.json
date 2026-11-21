@@ -1,0 +1,14 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "name": "Colorado Springs City Council",
+    "level": "municipal",
+    "lat": 38.8339,
+    "lng": -104.8214,
+    "portal_url": "https://coloradosprings.granicus.com/ViewPublisher.php?view_id=4",
+    "parent_division_id": null,
+    "last_updated": "2026-11-21"
+  },
+  "entities": [],
+  "events": []
+}
