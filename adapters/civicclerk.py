@@ -7,8 +7,7 @@ from datetime import datetime, timedelta, timezone
 from typing import List
 import requests
 from pypdf import PdfReader
-from adapters.base import BaseAdapter, NormalizedDocument
-
+from adapters.base import BaseAdapter, IngestionResult, NormalizedDocument
 
 class CivicClerkAdapter(BaseAdapter):
     HEADERS = {
@@ -20,7 +19,7 @@ class CivicClerkAdapter(BaseAdapter):
         pages = [page.extract_text() or "" for page in reader.pages]
         return "\n".join(pages).strip()
 
-    def fetch_recent_documents(self, days_back: int = 45) -> List[NormalizedDocument]:
+    def fetch_recent(self, days_back: int = 45) -> IngestionResult:
         now = datetime.now(timezone.utc)
         since_iso = (now - timedelta(days=days_back)).strftime("%Y-%m-%dT00:00:00Z")
         until_iso = (now + timedelta(days=7)).strftime("%Y-%m-%dT23:59:59Z")
@@ -80,4 +79,4 @@ class CivicClerkAdapter(BaseAdapter):
                     )
                 )
 
-        return docs
+        return IngestionResult(documents=docs)
