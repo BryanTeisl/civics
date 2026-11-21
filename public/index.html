@@ -220,7 +220,28 @@
 
     function renderOfficial(person) {
       const stats = person.metrics || person.stats || {};
-      const votes = person.votes || person.recent_votes || person.actions || [];
+
+      // Extract this councilor's votes from top-level agenda_items
+      const agendaItems = (currentData && currentData.agenda_items) || [];
+      const votes = agendaItems
+        .filter((item) => item.votes && item.votes[person.id])
+        .map((item) => {
+          const rec = item.votes[person.id];
+          return {
+            title: item.title,
+            meeting_date: item.date || item.meeting_date || '',
+            event_type: item.event_type,
+            topic: item.topic,
+            outcome: item.outcome || '',
+            impact_score: item.impact_score ?? 0,
+            source_url: item.source_url,
+            vote: rec.vote,
+            is_pivotal: rec.is_pivotal,
+            summary: rec.summary,
+            quote: rec.quote
+          };
+        });
+
       const totalVotes = stats.total_votes ?? votes.length;
       const attendance = stats.attendance_rate ?? stats.attendance_pct ?? 0;
       const pivotalCount = stats.pivotal_votes ?? 0;
@@ -246,7 +267,7 @@
       } else {
         votesHtml = votes
           .map((v) => {
-            const voteVal = v.vote || v.value || 'Recorded';
+            const voteVal = v.vote || 'Recorded';
             const voteColor =
               voteVal === 'Yes'
                 ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -259,19 +280,16 @@
               : '';
 
             const sourceLink = v.source_url
-              ? ` • <a href="${v.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Official Source</a>`
+              ? ` &bull; <a href="${v.source_url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Official Source</a>`
               : '';
 
-            const tally =
-              v.yes_count !== undefined && v.no_count !== undefined
-                ? ` (${v.yes_count}-${v.no_count})`
-                : '';
+            const scoreDisplay = Math.round(v.impact_score);
 
             return `
               <article class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm">
                 <div class="flex items-start justify-between gap-4">
                   <div class="text-xs font-semibold uppercase tracking-wide text-blue-600">
-                    ${v.topic || v.event_type || 'VOTE'} &bull; IMPACT SCORE: ${v.impact_score ?? 0}/100
+                    ${v.topic || v.event_type || 'VOTE'} &bull; IMPACT SCORE: ${scoreDisplay}/100
                     ${pivotalBadge}
                   </div>
                   <span class="shrink-0 px-3 py-1 rounded-full text-xs font-semibold border ${voteColor}">
@@ -280,11 +298,16 @@
                 </div>
                 <h4 class="text-base font-semibold text-slate-900 mt-2">${v.title || 'Untitled Item'}</h4>
                 <div class="text-xs text-slate-500 mt-1">
-                  ${v.meeting_date || ''} &bull; ${v.outcome || ''}${tally}${sourceLink}
+                  ${v.meeting_date} &bull; ${v.outcome}${sourceLink}
                 </div>
                 ${
-                  v.rationale_summary
-                    ? `<p class="mt-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700 border border-slate-100">${v.rationale_summary}</p>`
+                  v.summary
+                    ? `<p class="mt-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700 border border-slate-100">${v.summary}</p>`
+                    : ''
+                }
+                ${
+                  v.quote
+                    ? `<blockquote class="mt-2 pl-3 border-l-2 border-blue-300 text-xs italic text-slate-600">"${v.quote}"</blockquote>`
                     : ''
                 }
               </article>
