@@ -667,6 +667,7 @@
     let currentLegislator = null;
     let currentBill = null;
     let highlightedDistrict = null;
+    let lastMapClickContext = null; // Stores { lat, lng, districtsByDiv: { [divId]: districtName } }
     const jurisdictionCache = {};
 
     // Initialize App
@@ -736,6 +737,7 @@
       currentLegislator = null;
       currentBill = null;
       highlightedDistrict = null;
+      lastMapClickContext = null;
       showView("viewMap");
       updateBreadcrumbs([{ label: "Map & Search", action: "navigateHome()" }]);
       if (mapInstance) {
@@ -802,7 +804,7 @@ Please send us the voluntary contribution link or invoice details.`
 
     function resolveConstituenciesAtPoint(lat, lng) {
       const matchedMap = new Map();
-      let matchedDistrict = null;
+      const districtsByDiv = {};
       let matchedFederal = null;
 
       if (window.turf && boundariesGeoJson && Array.isArray(boundariesGeoJson.features)) {
@@ -824,18 +826,16 @@ Please send us the voluntary contribution link or invoice details.`
                 };
                 continue;
               }
-              if (props.level === "district" && props.district) {
-                matchedDistrict = props.district;
+              if (props.level === "district" && props.district && divId) {
+                districtsByDiv[divId] = props.district;
               }
               if (divId) {
                 const jurMeta = indexData.jurisdictions.find(j => j.ocd_division_id === divId);
                 if (jurMeta && !matchedMap.has(divId)) {
                   matchedMap.set(divId, {
                     ...jurMeta,
-                    matchedDistrict: props.level === "district" ? props.district : null
+                    matchedDistrict: districtsByDiv[divId] || null
                   });
-                } else if (jurMeta && props.level === "district" && props.district) {
-                  matchedMap.get(divId).matchedDistrict = props.district;
                 }
               }
             }
@@ -843,33 +843,45 @@ Please send us the voluntary contribution link or invoice details.`
         }
       }
 
-      if (matchedMap.size === 0) {
-        for (const j of indexData.jurisdictions) {
-          const radiusKm = j.level === "county" ? 45 : 18;
-          if (haversineKm(lat, lng, j.lat, j.lng) <= radiusKm) {
-            matchedMap.set(j.ocd_division_id, { ...j, matchedDistrict: null });
-          }
+      // Always check municipal proximity (within 13 km of city center) even if a county polygon already matched,
+      // so clicking any neighborhood inside a city reliably surfaces that City Council alongside the County.
+      for (const j of indexData.jurisdictions) {
+        if (matchedMap.has(j.ocd_division_id)) continue;
+        const radiusKm = j.level === "county" ? 40 : 13;
+        if (haversineKm(lat, lng, j.lat, j.lng) <= radiusKm) {
+          matchedMap.set(j.ocd_division_id, {
+            ...j,
+            matchedDistrict: districtsByDiv[j.ocd_division_id] || null
+          });
         }
       }
 
+      // Ensure parent county is included whenever a municipality matches
       for (const item of [...matchedMap.values()]) {
         if (item.parent_division_id && !matchedMap.has(item.parent_division_id)) {
           const parent = indexData.jurisdictions.find(x => x.ocd_division_id === item.parent_division_id);
           if (parent) {
-            matchedMap.set(parent.ocd_division_id, { ...parent, matchedDistrict: null });
+            matchedMap.set(parent.ocd_division_id, {
+              ...parent,
+              matchedDistrict: districtsByDiv[parent.ocd_division_id] || null
+            });
           }
         }
       }
 
-      const localMatches = [...matchedMap.values()].sort((a, b) => (a.level === "municipal" ? -1 : 1));
-      if (matchedDistrict) {
-        localMatches.forEach(r => {
-          if (r.level === "municipal" && !r.matchedDistrict) {
-            r.matchedDistrict = matchedDistrict;
-          }
-        });
+      // Attach any resolved district names back onto matched jurisdictions
+      for (const [divId, entry] of matchedMap.entries()) {
+        if (districtsByDiv[divId]) {
+          entry.matchedDistrict = districtsByDiv[divId];
+        }
       }
-      return { localMatches, matchedFederal };
+
+      const localMatches = [...matchedMap.values()].sort((a, b) => {
+        if (a.level !== b.level) return a.level === "municipal" ? -1 : 1;
+        return (a.status === "active" ? -1 : 1);
+      });
+
+      return { localMatches, matchedFederal, districtsByDiv };
     }
 
     function renderFederalCardHtml(fed) {
@@ -986,14 +998,10 @@ Please send us the voluntary contribution link or invoice details.`
       if (!mapInstance) {
         mapInstance = L.map("map").setView([40.35, -105.12], 9);
 
-        // Free, zero-API-key gazetteer-style light gray basemap + crisp place labels
-        L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-          attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ",
-          maxZoom: 16
-        }).addTo(mapInstance);
-
-        L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
-          maxZoom: 16
+        // High-contrast, zero-API-key OpenStreetMap basemap for easy neighborhood & street readability
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 19
         }).addTo(mapInstance);
 
         // Drop clean pins ONLY for active jurisdictions; boundaries remain completely invisible
@@ -1009,8 +1017,10 @@ Please send us the voluntary contribution link or invoice details.`
     }
 
     function handleMapCoordinateClick(lat, lng) {
-      const { localMatches, matchedFederal } = resolveConstituenciesAtPoint(lat, lng);
-      if (localMatches.length > 1) {
+      const { localMatches, matchedFederal, districtsByDiv } = resolveConstituenciesAtPoint(lat, lng);
+      lastMapClickContext = { lat, lng, districtsByDiv };
+
+      if (localMatches.length > 1 || (localMatches.length === 1 && matchedFederal)) {
         openDisambiguateModal(localMatches, matchedFederal);
       } else if (localMatches.length === 1) {
         const only = localMatches[0];
@@ -1100,7 +1110,11 @@ Timeline: `
       }
       const data = await fetchJurisdictionData(divisionId);
       currentJurisdictionData = data;
-      highlightedDistrict = districtHighlight;
+      const rememberedDistrict =
+        lastMapClickContext && lastMapClickContext.districtsByDiv
+          ? lastMapClickContext.districtsByDiv[divisionId] || null
+          : null;
+      highlightedDistrict = districtHighlight || rememberedDistrict;
       const jur = data.jurisdiction;
       const docsSince = jur.docs_since || jur.last_updated || "N/A";
 

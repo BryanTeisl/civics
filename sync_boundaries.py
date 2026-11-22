@@ -101,22 +101,22 @@ def build_fallback_features() -> List[Dict[str, Any]]:
         "geometry": {
             "type": "Polygon",
             "coordinates": [[
-                [-105.148, 40.505],
-                [-105.002, 40.505],
-                [-105.002, 40.635],
-                [-105.148, 40.635],
-                [-105.148, 40.505],
+                [-105.165, 40.485],
+                [-104.985, 40.485],
+                [-104.985, 40.665],
+                [-105.165, 40.665],
+                [-105.165, 40.485],
             ]],
         },
     }
 
     district_boxes = [
-        ("District 1", [-105.075, 40.585, -105.002, 40.635]),
-        ("District 2", [-105.075, 40.545, -105.002, 40.585]),
-        ("District 3", [-105.075, 40.505, -105.002, 40.545]),
-        ("District 4", [-105.148, 40.505, -105.075, 40.545]),
-        ("District 5", [-105.148, 40.545, -105.075, 40.585]),
-        ("District 6", [-105.148, 40.585, -105.075, 40.635]),
+        ("District 1", [-105.075, 40.595, -104.985, 40.665]),
+        ("District 2", [-105.075, 40.545, -104.985, 40.595]),
+        ("District 3", [-105.075, 40.485, -104.985, 40.545]),
+        ("District 4", [-105.165, 40.485, -105.075, 40.545]),
+        ("District 5", [-105.165, 40.545, -105.075, 40.595]),
+        ("District 6", [-105.165, 40.595, -105.075, 40.665]),
     ]
     districts = []
     for label, (min_x, min_y, max_x, max_y) in district_boxes:
@@ -234,8 +234,14 @@ def sync_boundaries() -> None:
             raise ValueError("Empty district feature list")
         for f in raw_feats:
             props = f.get("properties", {})
-            dist_num = props.get("DISTRICT") or props.get("District") or props.get("DIST_NUM") or ""
-            label = f"District {dist_num}".strip()
+            raw_dist = str(
+                props.get("DISTRICT")
+                or props.get("District")
+                or props.get("DIST_NUM")
+                or props.get("DIST")
+                or ""
+            ).strip()
+            label = raw_dist if raw_dist.lower().startswith("district") else f"District {raw_dist}".strip()
             features.append({
                 "type": "Feature",
                 "properties": {
