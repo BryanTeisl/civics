@@ -13,6 +13,7 @@
       "file": "ocd-division-country-us-state-co-county-larimer.json",
       "entity_count": 3,
       "event_count": 0,
+      "docs_since": "2026-11-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -27,6 +28,7 @@
       "file": "ocd-division-country-us-state-co-place-colorado-springs.json",
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": "2026-11-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -41,6 +43,7 @@
       "file": "ocd-division-country-us-state-co-place-denver.json",
       "entity_count": 11,
       "event_count": 4,
+      "docs_since": "2026-11-17",
       "last_updated": "2026-11-22"
     },
     {
@@ -54,7 +57,8 @@
       "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
       "file": "ocd-division-country-us-state-co-place-fort-collins.json",
       "entity_count": 7,
-      "event_count": 4,
+      "event_count": 11,
+      "docs_since": "2026-10-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -69,6 +73,7 @@
       "file": "ocd-division-country-us-state-co-place-loveland.json",
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": "2026-11-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -83,6 +88,7 @@
       "file": "ocd-division-country-us-state-co-sd-poudre.json",
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": "2026-11-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -97,6 +103,7 @@
       "file": "ocd-division-country-us-state-ca-place-san-jose.json",
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": "2026-11-22",
       "last_updated": "2026-11-22"
     },
     {
@@ -111,6 +118,7 @@
       "file": null,
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": null,
       "last_updated": "2026-11-22"
     },
     {
@@ -125,6 +133,7 @@
       "file": null,
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": null,
       "last_updated": "2026-11-22"
     },
     {
@@ -139,6 +148,7 @@
       "file": null,
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": null,
       "last_updated": "2026-11-22"
     },
     {
@@ -153,6 +163,7 @@
       "file": null,
       "entity_count": 0,
       "event_count": 0,
+      "docs_since": null,
       "last_updated": "2026-11-22"
     }
   ],
@@ -222,6 +233,22 @@
       "voters_text": "Kevin Flynn:Yes Stacie Gilmore:Absent Serena Gonzales-Gutierrez:Yes Diana Romero Campbell:Absent Amanda Sawyer:Yes Jamie Torres:Yes Darrell Watson:Yes"
     },
     {
+      "event_id": "doc-19-7f27b029",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-24",
+      "title": "Consideration of a motion to go into Executive Session",
+      "event_type": "motion",
+      "topic": "Annual evaluations of the City Attorney and City Manager",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 20.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
       "event_id": "doc-1-4db9d8ce",
       "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
       "jurisdiction_name": "Fort Collins City Council",
@@ -254,6 +281,38 @@
       "voters_text": ""
     },
     {
+      "event_id": "doc-5-ff36d12f",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-17",
+      "title": "Second Reading of Ordinance No. 020",
+      "event_type": "ordinance",
+      "topic": "Budget",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 40.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
+      "event_id": "doc-5-3accb3aa",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-17",
+      "title": "Consideration and Approval of the Minutes",
+      "event_type": "resolution",
+      "topic": "Minutes",
+      "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 25.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
       "event_id": "doc-2-e95c2e3b",
       "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
       "jurisdiction_name": "Fort Collins City Council",
@@ -279,6 +338,70 @@
       "event_type": "Ordinance",
       "topic": "Downtown Development Authority Budget",
       "outcome": "Passed (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 40.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
+      "event_id": "doc-9-f3c94061",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-03",
+      "title": "Ordinance No. 146, 2026, Authorizing the Extension of the Contract Term with Felsburg Holt and Ullevig, Inc., for the West Elizabeth Corridor Concept Design Project for Up to Five Additional Years",
+      "event_type": "Ordinance",
+      "topic": "Contract Extension",
+      "outcome": "Adopted 7-0 (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 40.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
+      "event_id": "doc-9-ebf6ea3d",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-03",
+      "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
+      "event_type": "Ordinance",
+      "topic": "Philanthropic Revenue",
+      "outcome": "Adopted 7-0 (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 40.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
+      "event_id": "doc-9-ca351ff0",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-03",
+      "title": "Ordinance No. 139, 2026, Making a Supplemental Appropriation of Anticipated Grant Revenue and Prior Year Reserves for the Southeast Community Center",
+      "event_type": "Ordinance",
+      "topic": "Grant Revenue and Reserves",
+      "outcome": "Adopted 7-0 (7-0)",
+      "yes_count": 7,
+      "no_count": 0,
+      "impact_score": 40.0,
+      "quotes_text": "",
+      "voters_text": "Emily Francis:Yes Chris Conway:Yes Julie Pignataro:Yes Josh Fudge:Yes Melanie Potyondy:Yes Amy Hoeven:Yes Anne Nelsen:Yes"
+    },
+    {
+      "event_id": "doc-13-1f39dc4d",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-fort-collins.json",
+      "meeting_date": "2026-11-03",
+      "title": "Ordinance No. 020",
+      "event_type": "ordinance",
+      "topic": "2027 Budget and Mill Levy",
+      "outcome": "Adopted 6-0 (7-0)",
       "yes_count": 7,
       "no_count": 0,
       "impact_score": 40.0,

@@ -129,8 +129,9 @@
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <div class="flex items-center gap-2 mb-1">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
               <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-slate-100 text-slate-700"></span>
+              <span id="jurDocsSinceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700"></span>
               <span id="jurUpdatedText" class="text-xs text-slate-500"></span>
             </div>
             <h1 id="jurTitle" class="text-2xl font-bold text-slate-900"></h1>
@@ -190,20 +191,24 @@
       </div>
 
       <!-- Tab Content: Accountability Metrics -->
-      <div id="jurTabMetrics" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
-        <table class="w-full text-left border-collapse text-sm">
-          <thead>
-            <tr class="bg-slate-50 border-b border-slate-200 text-xs uppercase text-slate-500">
-              <th class="py-3 px-4">Representative</th>
-              <th class="py-3 px-4">District</th>
-              <th class="py-3 px-4">Attendance</th>
-              <th class="py-3 px-4">Avg Impact Score</th>
-              <th class="py-3 px-4">Pivotal Votes</th>
-              <th class="py-3 px-4">Sponsored / Motions</th>
-            </tr>
-          </thead>
-          <tbody id="jurMetricsTableBody" class="divide-y divide-slate-100"></tbody>
-        </table>
+      <div id="jurTabMetrics" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div id="jurMetricsProvenanceBar" class="px-4 py-2.5 bg-slate-50 border-b border-slate-200 text-xs text-slate-600 flex flex-wrap items-center justify-between gap-2"></div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-50 border-b border-slate-200 text-xs uppercase text-slate-500">
+                <th class="py-3 px-4">Representative</th>
+                <th class="py-3 px-4">District</th>
+                <th class="py-3 px-4">Elected</th>
+                <th class="py-3 px-4">Attendance</th>
+                <th class="py-3 px-4">Avg Impact Score</th>
+                <th class="py-3 px-4">Pivotal Votes</th>
+                <th class="py-3 px-4">Sponsored / Motions</th>
+              </tr>
+            </thead>
+            <tbody id="jurMetricsTableBody" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -215,6 +220,7 @@
             <div class="flex flex-wrap items-center gap-2 mb-1.5">
               <span id="legRoleDistrict" class="text-sm font-semibold text-blue-600"></span>
               <span id="legPartyBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700"></span>
+              <span id="legElectedBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200"></span>
             </div>
             <h1 id="legName" class="text-2xl sm:text-3xl font-bold text-slate-900"></h1>
             <p id="legJurisdictionSubtitle" class="text-sm text-slate-500 mt-0.5"></p>
@@ -224,8 +230,14 @@
           <div id="legContactButtons" class="flex flex-wrap gap-2"></div>
         </div>
 
+        <!-- Provenance Banner above Scorecard -->
+        <div class="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+          <span id="legMetricsProvenance" class="font-medium text-slate-600"></span>
+          <span id="legElectedProvenance"></span>
+        </div>
+
         <!-- Legislator Accountability Scorecard -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-slate-100">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70">
             <div class="text-xs text-slate-500 font-medium">Attendance Rate</div>
             <div id="legMetricAttendance" class="text-2xl font-bold text-slate-900 mt-1">—</div>
@@ -268,7 +280,10 @@
       <!-- Voting Record Section -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <h2 class="text-base font-bold text-slate-900">Recorded Roll-Call Votes</h2>
+          <div>
+            <h2 class="text-base font-bold text-slate-900">Recorded Roll-Call Votes</h2>
+            <p id="legVotesProvenanceSub" class="text-xs text-slate-500 mt-0.5"></p>
+          </div>
           <div class="flex gap-2">
             <select id="legVoteFilter" onchange="renderLegislatorVotes()" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs bg-white">
               <option value="ALL">All Votes</option>
@@ -307,8 +322,14 @@
           </a>
         </div>
 
+        <!-- Provenance Strip -->
+        <div class="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
+          <span id="billMetricsProvenance" class="font-medium text-slate-600"></span>
+          <span>Calculated from official roll-call record</span>
+        </div>
+
         <!-- Item-Level Metrics Strip -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-5 border-t border-slate-100">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
           <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/70">
             <div class="text-xs text-slate-500">Session Attendance</div>
             <div id="billMetricAttendance" class="text-lg font-bold text-slate-900 mt-0.5">—</div>
@@ -511,7 +532,6 @@
       const matchedMap = new Map();
       let matchedDistrict = null;
 
-      // 1. Exact GeoJSON polygon check via Turf.js (completely invisible on map)
       if (window.turf && boundariesGeoJson && Array.isArray(boundariesGeoJson.features)) {
         const pt = turf.point([lng, lat]);
         for (const feat of boundariesGeoJson.features) {
@@ -538,7 +558,6 @@
         }
       }
 
-      // 2. Fallback proximity check for cities without GeoJSON polygons yet
       if (matchedMap.size === 0) {
         for (const j of indexData.jurisdictions) {
           const radiusKm = j.level === "county" ? 45 : 18;
@@ -548,7 +567,6 @@
         }
       }
 
-      // 3. Ensure parent/child linked jurisdictions are included when overlapping
       for (const item of [...matchedMap.values()]) {
         if (item.parent_division_id && !matchedMap.has(item.parent_division_id)) {
           const parent = indexData.jurisdictions.find(x => x.ocd_division_id === item.parent_division_id);
@@ -638,12 +656,12 @@
                 <span class="px-2 py-0.5 rounded text-[11px] font-semibold uppercase ${
                   j.level === "county" ? "bg-amber-100 text-amber-800" : "bg-blue-100 text-blue-800"
                 }">${escapeHtml(j.level)}</span>
-                <span class="text-xs text-slate-400">${escapeHtml(j.last_updated || "")}</span>
+                <span class="text-xs text-slate-400">Docs since ${escapeHtml(j.docs_since || j.last_updated || "")}</span>
               </div>
               <h3 class="font-bold text-slate-900 text-base">${escapeHtml(j.name)}</h3>
             </div>
             <div class="flex items-center justify-between text-xs text-slate-600 pt-2 border-t border-slate-100">
-              <span><strong>${j.entity_count}</strong> Representatives</span>
+              <span><strong>${j.entity_count}</strong> Reps</span>
               <span><strong>${j.event_count}</strong> Vote Events</span>
               <span class="text-blue-600 font-semibold">Explore →</span>
             </div>
@@ -676,6 +694,7 @@
         mapInstance.on("click", e => handleMapCoordinateClick(e.latlng.lat, e.latlng.lng));
       }
     }
+
     function handleMapCoordinateClick(lat, lng) {
       const matches = resolveConstituenciesAtPoint(lat, lng);
       if (matches.length > 1) {
@@ -705,13 +724,18 @@
 
       const reqSubject = encodeURIComponent(`City Tracking Request: ${meta.name}`);
       const reqBody = encodeURIComponent(
-        `Please add ${meta.name} (${meta.ocd_division_id}) to CivicPulse.\n\nOrganization / Role (optional): `
+        `Please add ${meta.name} (${meta.ocd_division_id}) to CivicPulse.
+
+Organization / Role (optional): `
       );
       document.getElementById("unclaimedRequestMailto").href = `mailto:bryanateisl@gmail.com?subject=${reqSubject}&body=${reqBody}`;
 
       const spSubject = encodeURIComponent(`Priority Onboarding Sponsorship: ${meta.name}`);
       const spBody = encodeURIComponent(
-        `We are interested in sponsoring priority data onboarding for ${meta.name} (${meta.ocd_division_id}).\n\nOrganization: \nTimeline: `
+        `We are interested in sponsoring priority data onboarding for ${meta.name} (${meta.ocd_division_id}).
+
+Organization: 
+Timeline: `
       );
       document.getElementById("unclaimedSponsorMailto").href = `mailto:bryanateisl@gmail.com?subject=${spSubject}&body=${spBody}`;
 
@@ -743,14 +767,20 @@
       currentJurisdictionData = data;
       highlightedDistrict = districtHighlight;
       const jur = data.jurisdiction;
+      const docsSince = jur.docs_since || jur.last_updated || "N/A";
 
       document.getElementById("jurTitle").textContent = jur.name;
       document.getElementById("jurLevelBadge").textContent = jur.level;
-      document.getElementById("jurUpdatedText").textContent = `Last updated: ${jur.last_updated || ""}`;
+      document.getElementById("jurDocsSinceBadge").textContent = `Metrics based on docs since ${docsSince}`;
+      document.getElementById("jurUpdatedText").textContent = `Updated: ${jur.last_updated || ""}`;
       document.getElementById("jurPortalLink").href = jur.portal_url || "#";
 
       document.getElementById("tabCountReps").textContent = data.entities.length;
       document.getElementById("tabCountBills").textContent = data.events.length;
+
+      document.getElementById("jurMetricsProvenanceBar").innerHTML =
+        `<span><strong>Provenance:</strong> Metrics based on ingested official documents since <strong>${escapeHtml(docsSince)}</strong>.</span>` +
+        `<span>Scores reflect recorded roll-call votes since each member's election date.</span>`;
 
       // District Highlight Banner
       const distBanner = document.getElementById("selectedDistrictBanner");
@@ -824,6 +854,8 @@
 
     function renderJurisdictionReps() {
       const container = document.getElementById("jurTabReps");
+      const jur = currentJurisdictionData.jurisdiction;
+      const docsSince = jur.docs_since || jur.last_updated || "N/A";
       let entities = [...(currentJurisdictionData.entities || [])];
       if (!entities.length) {
         container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-xl border border-slate-200 text-sm text-slate-500">No representatives seeded yet for this jurisdiction.</div>`;
@@ -860,20 +892,25 @@
                   </div>
                 </div>
                 <h3 class="text-base font-bold text-slate-900 mt-1">${escapeHtml(ent.name)}</h3>
-                <p class="text-xs text-slate-500">${escapeHtml(ent.role || "Representative")}</p>
+                <p class="text-xs text-slate-500">${escapeHtml(ent.role || "Representative")} • Elected ${escapeHtml(ent.elected_date || "Active Term")}</p>
               </div>
-              <div class="grid grid-cols-3 gap-2 pt-3 border-t border-slate-100 text-center">
-                <div>
-                  <div class="text-xs font-bold text-slate-900">${m.attendance_rate ?? 0}%</div>
-                  <div class="text-[10px] text-slate-500">Attendance</div>
+              <div class="space-y-2 pt-3 border-t border-slate-100">
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">${m.attendance_rate ?? 0}%</div>
+                    <div class="text-[10px] text-slate-500">Attendance</div>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-blue-600">${m.avg_impact_score ?? 0}</div>
+                    <div class="text-[10px] text-slate-500">Impact Avg</div>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-amber-600">${m.pivotal_votes ?? 0}</div>
+                    <div class="text-[10px] text-slate-500">Pivotal</div>
+                  </div>
                 </div>
-                <div>
-                  <div class="text-xs font-bold text-blue-600">${m.avg_impact_score ?? 0}</div>
-                  <div class="text-[10px] text-slate-500">Impact Avg</div>
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-amber-600">${m.pivotal_votes ?? 0}</div>
-                  <div class="text-[10px] text-slate-500">Pivotal</div>
+                <div class="text-[10px] text-slate-400 text-center">
+                  Metrics based on docs since ${escapeHtml(docsSince)}
                 </div>
               </div>
             </button>
@@ -949,6 +986,7 @@
             <tr class="hover:bg-slate-50 cursor-pointer" onclick="openLegislator('${ent.ocd_person_id}')">
               <td class="py-3 px-4 font-semibold text-blue-600 hover:underline">${escapeHtml(ent.name)}</td>
               <td class="py-3 px-4 text-slate-600">${escapeHtml(ent.district || "At-Large")}</td>
+              <td class="py-3 px-4 text-slate-600 text-xs font-medium">${escapeHtml(ent.elected_date || "Active Term")}</td>
               <td class="py-3 px-4 font-medium">${m.attendance_rate ?? 0}% (${m.present_votes ?? 0}/${m.total_votes ?? 0})</td>
               <td class="py-3 px-4 font-bold text-slate-900">${m.avg_impact_score ?? 0}</td>
               <td class="py-3 px-4 text-amber-700 font-semibold">${m.pivotal_votes ?? 0} (${m.pivotal_rate ?? 0}%)</td>
@@ -965,16 +1003,22 @@
         currentJurisdictionData = await fetchJurisdictionData(divisionId);
       }
       const jur = currentJurisdictionData.jurisdiction;
+      const docsSince = jur.docs_since || jur.last_updated || "N/A";
       const ent = currentJurisdictionData.entities.find(e => e.ocd_person_id === personId);
       if (!ent) return;
       currentLegislator = ent;
 
       document.getElementById("legRoleDistrict").textContent = `${ent.role || "Representative"} • ${ent.district || "At-Large"}`;
       document.getElementById("legPartyBadge").textContent = ent.party || "Nonpartisan";
+      document.getElementById("legElectedBadge").textContent = `Elected ${ent.elected_date || "Active Term"}`;
       document.getElementById("legName").textContent = ent.name;
       document.getElementById("legJurisdictionSubtitle").textContent = jur.name;
 
-      // Contact & Social Buttons
+      document.getElementById("legMetricsProvenance").textContent = `Metrics based on docs since ${docsSince}`;
+      document.getElementById("legElectedProvenance").textContent = `Elected ${ent.elected_date || "Active Term"}`;
+      document.getElementById("legVotesProvenanceSub").textContent = `Showing roll-call items from official records ingested since ${docsSince}`;
+
+      // Contact & Social Buttons with Platform Badges
       const btns = [];
       if (ent.phone) {
         btns.push(`<a href="tel:${escapeHtml(ent.phone)}" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">📞 ${escapeHtml(ent.phone)}</a>`);
@@ -988,10 +1032,21 @@
       if (ent.portal_url && ent.portal_url !== ent.website_url) {
         btns.push(`<a href="${escapeHtml(ent.portal_url)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800">Official Portal ↗</a>`);
       }
+      const socialBadges = {
+        x: "𝕏 X",
+        twitter: "𝕏 X",
+        facebook: "f Facebook",
+        linkedin: "in LinkedIn",
+        instagram: "📷 Instagram",
+        youtube: "▶ YouTube",
+        ballotpedia: "🗳️ Ballotpedia",
+        campaign_finance: "💰 Campaign Finance"
+      };
       const socials = ent.social_links || {};
       Object.entries(socials).forEach(([platform, url]) => {
         if (url && platform !== "website") {
-          btns.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold capitalize text-slate-700 hover:bg-slate-50">${escapeHtml(platform)} ↗</a>`);
+          const label = socialBadges[platform.toLowerCase()] || platform;
+          btns.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">${escapeHtml(label)} ↗</a>`);
         }
       });
       document.getElementById("legContactButtons").innerHTML = btns.join("");
@@ -1009,6 +1064,7 @@
       const extraRows = [
         ["Identifier", ent.ocd_person_id],
         ["Entity Type", ent.entity_type],
+        ["Elected", ent.elected_date || "Active Term"],
         ...Object.entries(extra).map(([k, v]) => [k.replace(/_/g, " ").toUpperCase(), String(v)])
       ];
       document.getElementById("legExtraDetailsBody").innerHTML = extraRows
@@ -1089,6 +1145,7 @@
         currentJurisdictionData = await fetchJurisdictionData(divisionId);
       }
       const jur = currentJurisdictionData.jurisdiction;
+      const docsSince = jur.docs_since || jur.last_updated || "N/A";
       const ev = currentJurisdictionData.events.find(e => e.event_id === eventId);
       if (!ev) return;
       currentBill = ev;
@@ -1099,6 +1156,8 @@
       document.getElementById("billOutcomeBadge").textContent = ev.outcome || "Recorded";
       document.getElementById("billTitle").textContent = ev.title;
       document.getElementById("billSourceLink").href = ev.source_url || jur.portal_url || "#";
+
+      document.getElementById("billMetricsProvenance").textContent = `${jur.name} metrics based on docs since ${docsSince}`;
 
       document.getElementById("billMetricAttendance").textContent =
         ev.attendance_rate !== null ? `${ev.attendance_count}/${ev.roster_size} (${ev.attendance_rate}%)` : `${ev.attendance_count}/${ev.roster_size}`;
@@ -1121,7 +1180,7 @@
                     <button onclick="openLegislator('${v.entity_id}')" class="font-bold text-slate-900 hover:text-blue-600 text-sm">
                       ${escapeHtml(v.name)}
                     </button>
-                    <span class="text-xs text-slate-500">${escapeHtml(v.district || "")}</span>
+                    <span class="text-xs text-slate-500">${escapeHtml(v.district || "")} • Elected ${escapeHtml(v.elected_date || "Active Term")}</span>
                     ${v.is_pivotal ? `<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[11px] font-bold">★ Pivotal</span>` : ""}
                   </div>
                   ${v.rationale_summary ? `<p class="text-xs text-slate-600">${escapeHtml(v.rationale_summary)}</p>` : ""}

@@ -7,6 +7,7 @@
     "lng": -105.4606,
     "portal_url": "https://larimerco.portal.civicclerk.com/",
     "parent_division_id": null,
+    "docs_since": "2026-11-22",
     "last_updated": "2026-11-22"
   },
   "entities": [
@@ -16,6 +17,7 @@
       "entity_type": "legislator",
       "role": "Commissioner",
       "district": "District 1",
+      "elected_date": "Nov 2022",
       "party": "Democratic",
       "phone": "(970) 498-7010",
       "email": "jkefalas@larimer.org",
@@ -41,6 +43,7 @@
       "entity_type": "legislator",
       "role": "Commissioner",
       "district": "District 2",
+      "elected_date": "Nov 2024",
       "party": "Democratic",
       "phone": "(970) 498-7010",
       "email": "kstephens@larimer.org",
@@ -66,6 +69,7 @@
       "entity_type": "legislator",
       "role": "Commissioner",
       "district": "District 3",
+      "elected_date": "Nov 2024",
       "party": "Democratic",
       "phone": "(970) 498-7010",
       "email": "jshadduckmcnally@larimer.org",
