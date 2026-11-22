@@ -1,0 +1,41 @@
+name: Monthly Profile & Boundary Enrichment
+
+on:
+  schedule:
+    - cron: "0 14 1 * *"  # 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Enrich Ballotpedia/socials & sync boundaries
+        run: |
+          python enrich_socials.py
+          python sync_boundaries.py
+          python exporter.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "CivicPulse Bot"
+          git config user.email "actions@github.com"
+          git add core_civic.db public/data/ public/geo/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(bot): monthly Ballotpedia, social links & boundary sync"
+            git push
+          fi
