@@ -1004,13 +1004,6 @@ Please send us the voluntary contribution link or invoice details.`
           maxZoom: 19
         }).addTo(mapInstance);
 
-        // Drop clean pins ONLY for active jurisdictions; boundaries remain completely invisible
-        activeJurs.forEach(j => {
-          const marker = L.marker([j.lat, j.lng]).addTo(mapInstance);
-          marker.bindTooltip(j.name);
-          marker.on("click", () => handleMapCoordinateClick(j.lat, j.lng));
-        });
-
         // Clicking anywhere runs invisible point-in-polygon + radius lookup
         mapInstance.on("click", e => handleMapCoordinateClick(e.latlng.lat, e.latlng.lng));
       }
