@@ -20,6 +20,10 @@ ENDPOINTS = {
         "https://gisweb.fcgov.com/arcgis/rest/services/FCMaps/MapServer/10/query"
         "?where=1=1&outFields=*&outSR=4326&f=geojson"
     ),
+    "co_congressional_districts": (
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0/query"
+        "?where=STATE='08'&outFields=GEOID,STATE,BASENAME,NAME&outSR=4326&f=geojson"
+    ),
 }
 
 
@@ -65,7 +69,7 @@ def simplify_geometry(geom: Dict[str, Any], tolerance: float = 0.0012) -> Dict[s
 
 
 def build_fallback_features() -> List[Dict[str, Any]]:
-    """Accurate simplified bounding polygons for Larimer County, Fort Collins, and Districts 1-6."""
+    """Accurate simplified bounding polygons for Larimer County, Fort Collins, Districts 1-6, and CO CD-2."""
     larimer = {
         "type": "Feature",
         "properties": {
@@ -106,7 +110,6 @@ def build_fallback_features() -> List[Dict[str, Any]]:
         },
     }
 
-    # Council Districts 1-6 grid approximation inside Fort Collins city limits
     district_boxes = [
         ("District 1", [-105.075, 40.585, -105.002, 40.635]),
         ("District 2", [-105.075, 40.545, -105.002, 40.585]),
@@ -137,12 +140,47 @@ def build_fallback_features() -> List[Dict[str, Any]]:
             },
         })
 
-    return [larimer, foco_city] + districts
+    co_cd2 = {
+        "type": "Feature",
+        "properties": {
+            "ocd_division_id": "ocd-division/country:us/state:co/cd:2",
+            "name": "U.S. House — Colorado District 2",
+            "level": "federal",
+            "district": "CO-02",
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [[
+                [-106.300, 39.900],
+                [-104.940, 39.900],
+                [-104.940, 41.000],
+                [-106.300, 41.000],
+                [-106.300, 39.900],
+            ]],
+        },
+    }
+
+    return [larimer, foco_city] + districts + [co_cd2]
 
 
 def sync_boundaries() -> None:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     features: List[Dict[str, Any]] = []
+
+    # Preserve any previously imported unclaimed municipal polygons
+    if OUTPUT_PATH.exists():
+        try:
+            old_data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+            managed_ids = {
+                "ocd-division/country:us/state:co/county:larimer",
+                "ocd-division/country:us/state:co/place:fort_collins",
+            }
+            for f in old_data.get("features", []):
+                div_id = f.get("properties", {}).get("ocd_division_id", "")
+                if div_id and div_id not in managed_ids and "/cd:" not in div_id:
+                    features.append(f)
+        except Exception:
+            pass
 
     # 1. Larimer County
     try:
@@ -211,7 +249,36 @@ def sync_boundaries() -> None:
         print(f"Fetched {len(raw_feats)} live Fort Collins Council Districts.")
     except Exception as exc:
         print(f"Using fallback Fort Collins Council Districts ({exc})")
-        features.extend(build_fallback_features()[2:])
+        features.extend(build_fallback_features()[2:8])
+
+    # 4. Federal U.S. Congressional Districts (Colorado)
+    try:
+        r = requests.get(ENDPOINTS["co_congressional_districts"], timeout=25)
+        r.raise_for_status()
+        data = r.json()
+        cd_feats = data.get("features", [])
+        if not cd_feats:
+            raise ValueError("Empty congressional district feature list")
+        for f in cd_feats:
+            props = f.get("properties", {})
+            raw_cd = str(props.get("BASENAME") or "").strip()
+            cd_slug = "at-large" if raw_cd in ("00", "0", "") else str(int(raw_cd))
+            cd_label = "At-Large" if cd_slug == "at-large" else f"District {cd_slug}"
+            ocd_id = f"ocd-division/country:us/state:co/cd:{cd_slug}"
+            features.append({
+                "type": "Feature",
+                "properties": {
+                    "ocd_division_id": ocd_id,
+                    "name": f"U.S. House — Colorado {cd_label}",
+                    "level": "federal",
+                    "district": f"CO-{raw_cd.zfill(2) if raw_cd.isdigit() else cd_slug}",
+                },
+                "geometry": simplify_geometry(f["geometry"], tolerance=0.0025),
+            })
+        print(f"Fetched {len(cd_feats)} live Colorado Congressional Districts from Census TIGERweb.")
+    except Exception as exc:
+        print(f"Using fallback Federal Congressional District ({exc})")
+        features.append(build_fallback_features()[-1])
 
     fc = {"type": "FeatureCollection", "features": features}
     OUTPUT_PATH.write_text(json.dumps(fc, separators=(",", ":")), encoding="utf-8")
