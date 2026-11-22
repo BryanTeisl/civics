@@ -8,8 +8,8 @@ echo ========================================================
 echo.
 
 REM Optional flags:
-REM   run_pipeline.bat --enrich    (also runs Ballotpedia/socials & boundary sync)
-REM   run_pipeline.bat --push      (commits and pushes core_civic.db & public/ to Git)
+REM   run_pipeline.bat --enrich    (also runs Ballotpedia/socials ^& boundary sync)
+REM   run_pipeline.bat --push      (commits and pushes core_civic.db ^& public/ to Git)
 set DO_ENRICH=0
 set DO_PUSH=0
 
@@ -23,7 +23,7 @@ python db.py
 if errorlevel 1 goto :error
 
 echo.
-echo [2/4] Polling structured municipal APIs ^& queuing new documents (watcher.py)...
+echo [2/4] Polling active municipal APIs ^& queuing new documents (watcher.py)...
 python watcher.py
 if errorlevel 1 goto :error
 
@@ -34,7 +34,7 @@ if errorlevel 1 goto :error
 
 if %DO_ENRICH%==1 (
     echo.
-    echo [Optional] Enriching Ballotpedia/social links & syncing boundaries...
+    echo [Optional] Enriching Ballotpedia/social links ^& syncing boundaries...
     if exist enrich_socials.py python enrich_socials.py
     if exist sync_boundaries.py python sync_boundaries.py
     if exist import_us_jurisdictions.py python import_us_jurisdictions.py

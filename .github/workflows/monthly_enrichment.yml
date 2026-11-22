@@ -1,4 +1,4 @@
-name: Monthly Profile & Boundary Enrichment
+name: Monthly Profile Enrichment (Ballotpedia & Socials)
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  enrich:
+  enrich-profiles:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,21 +21,21 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4
 
-      - name: Enrich Ballotpedia/socials & sync boundaries
+      - name: Enrich Ballotpedia & official social links
         run: |
           python enrich_socials.py
-          python sync_boundaries.py
           python exporter.py
 
       - name: Commit and push updates
         run: |
           git config user.name "CivicPulse Bot"
           git config user.email "actions@github.com"
-          git add core_civic.db public/data/ public/geo/
+          git add core_civic.db public/data/
           if ! git diff --staged --quiet; then
-            git commit -m "chore(bot): monthly Ballotpedia, social links & boundary sync"
+            git commit -m "chore(bot): monthly Ballotpedia & social link enrichment"
             git push
+          else
+            echo "No profile link changes detected."
           fi
