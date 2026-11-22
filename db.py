@@ -301,6 +301,124 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
                 (edate, pid),
             )
 
+
+        # --- EXPANSION: Colorado Springs (Legistar) & Greeley (CivicClerk) ---
+        cos_div = "ocd-division/country:us/state:co/place:colorado_springs"
+        greeley_div = "ocd-division/country:us/state:co/place:greeley"
+        elpaso_div = "ocd-division/country:us/state:co/county:el_paso"
+        weld_div = "ocd-division/country:us/state:co/county:weld"
+
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO jurisdictions (
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
+            """,
+            (
+                cos_div,
+                "Colorado Springs City Council",
+                "municipal",
+                38.8339,
+                -104.8214,
+                "legistar",
+                "https://coloradosprings.legistar.com/",
+                "fast",
+                elpaso_div,
+            ),
+        )
+        # Ensure Colorado Springs is marked active even if an older legacy row existed
+        conn.execute(
+            """
+            UPDATE jurisdictions
+            SET status = 'active', adapter_type = 'legistar', portal_url = 'https://coloradosprings.legistar.com/', parent_division_id = ?
+            WHERE ocd_division_id = ?
+            """,
+            (elpaso_div, cos_div),
+        )
+
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO jurisdictions (
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
+            """,
+            (
+                greeley_div,
+                "Greeley City Council",
+                "municipal",
+                40.4233,
+                -104.7091,
+                "civicclerk",
+                "https://greeleyco.portal.civicclerk.com/",
+                "fast",
+                weld_div,
+            ),
+        )
+        conn.execute(
+            """
+            UPDATE jurisdictions
+            SET status = 'active', adapter_type = 'civicclerk', portal_url = 'https://greeleyco.portal.civicclerk.com/', parent_division_id = ?
+            WHERE ocd_division_id = ?
+            """,
+            (weld_div, greeley_div),
+        )
+
+        # Parent counties as unclaimed demand-capture targets until ingested
+        for c_div, c_name, c_lat, c_lng, c_portal in [
+            (elpaso_div, "El Paso County Board of Commissioners", 38.8322, -104.5256, "https://www.agendasuite.org/iip/elpaso"),
+            (weld_div, "Weld County Board of Commissioners", 40.5547, -104.3924, "https://www.weld.gov/Government/Departments/Commissioners"),
+        ]:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO jurisdictions (
+                    ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, status
+                ) VALUES (?, ?, 'county', ?, ?, 'unclaimed', ?, 'slow', 'unclaimed')
+                """,
+                (c_div, c_name, c_lat, c_lng, c_portal),
+            )
+
+        # Colorado Springs 9-member City Council (6 Districts + 3 At-Large)
+        cos_council = [
+            ("ocd-person/cos-dave-donelson", "Dave Donelson", "Councilmember", "District 1", "Apr 2021"),
+            ("ocd-person/cos-ken-casey", "Ken Casey", "Councilmember", "District 2", "Apr 2026"),
+            ("ocd-person/cos-brandy-williams", "Brandy Williams", "Councilmember", "District 3", "Apr 2025"),
+            ("ocd-person/cos-kimberly-gold", "Kimberly Gold", "Councilmember", "District 4", "Apr 2025"),
+            ("ocd-person/cos-nancy-henjum", "Nancy Henjum", "Councilmember", "District 5", "Apr 2021"),
+            ("ocd-person/cos-roland-rainey", "Roland Rainey Jr.", "Councilmember", "District 6", "Apr 2025"),
+            ("ocd-person/cos-lynette-crow-iverson", "Lynette Crow-Iverson", "Council President", "At-Large", "Apr 2021"),
+            ("ocd-person/cos-brian-risley", "Brian Risley", "President Pro Tem", "At-Large", "Apr 2023"),
+            ("ocd-person/cos-david-leinweber", "David Leinweber", "Councilmember", "At-Large", "Apr 2023"),
+        ]
+        for pid, name, role, dist, edate in cos_council:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO entities (
+                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, elected_date, website_url, portal_url, party
+                ) VALUES (?, ?, ?, 'legislator', ?, ?, ?, 'https://coloradosprings.gov/city-council', 'https://coloradosprings.legistar.com/', 'Nonpartisan')
+                """,
+                (pid, cos_div, name, role, dist, edate),
+            )
+
+        # Greeley 7-member City Council (Mayor + 4 Wards + 2 At-Large)
+        greeley_council = [
+            ("ocd-person/greeley-dale-hall", "Dale Hall", "Mayor", "At-Large", "Nov 2025", "970-657-0310", "Dale.Hall@greeleygov.com"),
+            ("ocd-person/greeley-craig-huddleston", "Craig Huddleston", "Councilmember", "Ward I", "May 2026", "970-381-7918", "Craig.Huddleston@greeleygov.com"),
+            ("ocd-person/greeley-deb-deboutez", "Deb DeBoutez", "Councilmember", "Ward II", "Nov 2025", "970-336-4296", "Deb.Deboutez@greeleygov.com"),
+            ("ocd-person/greeley-johnny-olson", "Johnny Olson", "Councilmember", "Ward III", "Nov 2025", "970-336-4293", "Johnny.Olson@greeleygov.com"),
+            ("ocd-person/greeley-brian-rudy", "Brian Rudy", "Councilmember", "Ward IV", "Nov 2025", "970-888-1885", "Brian.Rudy@greeleygov.com"),
+            ("ocd-person/greeley-ryan-roth", "Ryan Roth", "Councilmember", "At-Large", "Nov 2025", "970-888-1191", "Ryan.Roth@greeleygov.com"),
+            ("ocd-person/greeley-melissa-mcdonald", "Melissa McDonald", "Councilmember", "At-Large", "Nov 2023", "970-657-7821", "Melissa.McDonald@Greeleygov.com"),
+        ]
+        for pid, name, role, ward, edate, phone, email in greeley_council:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO entities (
+                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, elected_date, website_url, portal_url, party, phone, email
+                ) VALUES (?, ?, ?, 'legislator', ?, ?, ?, 'https://greeleyco.gov/city-council/', 'https://greeleyco.portal.civicclerk.com/', 'Nonpartisan', ?, ?)
+                """,
+                (pid, greeley_div, name, role, ward, edate, phone, email),
+            )
+
         conn.commit()
     finally:
         conn.close()

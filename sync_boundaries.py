@@ -24,6 +24,14 @@ ENDPOINTS = {
         "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Legislative/MapServer/0/query"
         "?where=STATE='08'&outFields=GEOID,STATE,BASENAME,NAME&outSR=4326&f=geojson"
     ),
+    "colorado_springs_city": (
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query"
+        "?where=STATE='08'+AND+PLACE='16000'&outFields=NAME,GEOID&outSR=4326&f=geojson"
+    ),
+    "greeley_city": (
+        "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer/4/query"
+        "?where=STATE='08'+AND+PLACE='32155'&outFields=NAME,GEOID&outSR=4326&f=geojson"
+    ),
 }
 
 
@@ -285,6 +293,31 @@ def sync_boundaries() -> None:
     except Exception as exc:
         print(f"Using fallback Federal Congressional District ({exc})")
         features.append(build_fallback_features()[-1])
+
+
+    # 5. Additional Active Cities (Colorado Springs & Greeley) from Census TIGERweb
+    extra_cities = [
+        ("colorado_springs_city", "ocd-division/country:us/state:co/place:colorado_springs", "Colorado Springs City Council"),
+        ("greeley_city", "ocd-division/country:us/state:co/place:greeley", "Greeley City Council"),
+    ]
+    for ep_key, div_id, label in extra_cities:
+        try:
+            r = requests.get(ENDPOINTS[ep_key], timeout=20)
+            r.raise_for_status()
+            for f in r.json().get("features", []):
+                features.append({
+                    "type": "Feature",
+                    "properties": {
+                        "ocd_division_id": div_id,
+                        "name": label,
+                        "level": "municipal",
+                        "district": None,
+                    },
+                    "geometry": simplify_geometry(f["geometry"], tolerance=0.0012),
+                })
+            print(f"Fetched live boundary for {label} from TIGERweb.")
+        except Exception as exc:
+            print(f"Skipping live boundary for {label} ({exc})")
 
     fc = {"type": "FeatureCollection", "features": features}
     OUTPUT_PATH.write_text(json.dumps(fc, separators=(",", ":")), encoding="utf-8")
