@@ -1,10 +1,11 @@
 {
-  "last_updated": "2026-11-21",
+  "last_updated": "2026-11-22",
   "jurisdictions": [
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
       "name": "Larimer County Board of Commissioners",
       "level": "county",
+      "status": "active",
       "lat": 40.6662,
       "lng": -105.4606,
       "portal_url": "https://larimerco.portal.civicclerk.com/",
@@ -12,12 +13,13 @@
       "file": "ocd-division-country-us-state-co-county-larimer.json",
       "entity_count": 3,
       "event_count": 0,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
       "name": "Colorado Springs City Council",
       "level": "municipal",
+      "status": "active",
       "lat": 38.8339,
       "lng": -104.8214,
       "portal_url": "https://coloradosprings.granicus.com/ViewPublisher.php?view_id=4",
@@ -25,12 +27,13 @@
       "file": "ocd-division-country-us-state-co-place-colorado-springs.json",
       "entity_count": 0,
       "event_count": 0,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
       "name": "Denver City Council",
       "level": "municipal",
+      "status": "active",
       "lat": 39.7392,
       "lng": -104.9903,
       "portal_url": "https://webapi.legistar.com/v1/denver",
@@ -38,12 +41,13 @@
       "file": "ocd-division-country-us-state-co-place-denver.json",
       "entity_count": 11,
       "event_count": 4,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
       "name": "Fort Collins City Council",
       "level": "municipal",
+      "status": "active",
       "lat": 40.5853,
       "lng": -105.0844,
       "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
@@ -51,12 +55,13 @@
       "file": "ocd-division-country-us-state-co-place-fort-collins.json",
       "entity_count": 7,
       "event_count": 4,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
       "name": "Loveland City Council",
       "level": "municipal",
+      "status": "active",
       "lat": 40.3978,
       "lng": -105.075,
       "portal_url": "https://www.lovgov.org/AgendaCenter",
@@ -64,12 +69,13 @@
       "file": "ocd-division-country-us-state-co-place-loveland.json",
       "entity_count": 0,
       "event_count": 0,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/sd:poudre",
       "name": "Poudre School District Board",
       "level": "municipal",
+      "status": "active",
       "lat": 40.5592,
       "lng": -105.0781,
       "portal_url": "https://go.boarddocs.com/co/psdschools/Board.nsf",
@@ -77,12 +83,13 @@
       "file": "ocd-division-country-us-state-co-sd-poudre.json",
       "entity_count": 0,
       "event_count": 0,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
       "name": "San Jose City Council",
       "level": "municipal",
+      "status": "active",
       "lat": 37.3382,
       "lng": -121.8863,
       "portal_url": "https://sanjose.primegov.com",
@@ -90,7 +97,63 @@
       "file": "ocd-division-country-us-state-ca-place-san-jose.json",
       "entity_count": 0,
       "event_count": 0,
-      "last_updated": "2026-11-21"
+      "last_updated": "2026-11-22"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
+      "name": "Boulder City Council",
+      "level": "municipal",
+      "status": "unclaimed",
+      "lat": 40.015,
+      "lng": -105.2705,
+      "portal_url": "https://bouldercolorado.gov/government/city-council",
+      "parent_division_id": null,
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "last_updated": "2026-11-22"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
+      "name": "Greeley City Council",
+      "level": "municipal",
+      "status": "unclaimed",
+      "lat": 40.4233,
+      "lng": -104.7091,
+      "portal_url": "https://greeleyco.portal.civicclerk.com/",
+      "parent_division_id": null,
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "last_updated": "2026-11-22"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
+      "name": "Longmont City Council",
+      "level": "municipal",
+      "status": "unclaimed",
+      "lat": 40.1672,
+      "lng": -105.1019,
+      "portal_url": "https://longmontco.portal.civicclerk.com/",
+      "parent_division_id": null,
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "last_updated": "2026-11-22"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
+      "name": "Windsor Town Board",
+      "level": "municipal",
+      "status": "unclaimed",
+      "lat": 40.4775,
+      "lng": -104.9014,
+      "portal_url": "https://www.windsorgov.com/",
+      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "last_updated": "2026-11-22"
     }
   ],
   "search_index": [
