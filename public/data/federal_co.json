@@ -1,0 +1,76 @@
+{
+  "districts": {
+    "ocd-division/country:us/state:co/cd:1": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:1",
+      "district_label": "Colorado Congressional District 1",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:2": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:2",
+      "district_label": "Colorado Congressional District 2",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:3": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:3",
+      "district_label": "Colorado Congressional District 3",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:4": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:4",
+      "district_label": "Colorado Congressional District 4",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:5": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:5",
+      "district_label": "Colorado Congressional District 5",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:6": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:6",
+      "district_label": "Colorado Congressional District 6",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:7": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:7",
+      "district_label": "Colorado Congressional District 7",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    },
+    "ocd-division/country:us/state:co/cd:8": {
+      "ocd_division_id": "ocd-division/country:us/state:co/cd:8",
+      "district_label": "Colorado Congressional District 8",
+      "representative_name": "",
+      "party": "",
+      "bioguide_id": "",
+      "congress_url": "https://www.house.gov/representatives/find-your-representative",
+      "image_url": ""
+    }
+  }
+}

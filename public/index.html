@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CivicPulse — Municipal & County Legislative Intelligence</title>
+  <title>CivicPulse — Plain-English Local Government & Voting Records</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
   <style>
-    #map { height: 480px; z-index: 1; background: #f8fafc; }
+    #map { height: 460px; z-index: 1; background: #f8fafc; }
     .badge-yes { background-color: #dcfce7; color: #166534; }
     .badge-no { background-color: #fee2e2; color: #991b1b; }
     .badge-abstain { background-color: #fef9c3; color: #854d0e; }
     .badge-absent { background-color: #f1f5f9; color: #475569; }
+    .help-tip { position: relative; display: inline-flex; align-items: center; cursor: help; }
+    .help-tip .help-bubble {
+      visibility: hidden; opacity: 0; transition: opacity 0.15s ease;
+      position: absolute; bottom: 125%; left: 50%; transform: translateX(-50%);
+      width: 230px; z-index: 60; pointer-events: none;
+    }
+    .help-tip:hover .help-bubble, .help-tip:focus .help-bubble { visibility: visible; opacity: 1; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
@@ -27,8 +34,14 @@
           <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 font-bold text-white">CP</span>
           <div>
             <span class="font-bold text-lg tracking-tight group-hover:text-blue-300 transition">CivicPulse</span>
-            <span class="hidden sm:inline-block ml-2 text-xs text-slate-400">Auditable Local Legislative Records</span>
+            <span class="hidden sm:inline-block ml-2 text-xs text-slate-400">Free, Auditable Local Government Records</span>
           </div>
+        </button>
+        <button
+          onclick="openSupportModal()"
+          class="md:hidden px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition"
+        >
+          ♥ Support
         </button>
       </div>
 
@@ -37,7 +50,7 @@
         <input
           id="globalSearchInput"
           type="text"
-          placeholder="Search bills, topics, quotes, or representatives across all cities..."
+          placeholder="Search local issues (housing, water, parks), bills, or representatives..."
           class="w-full rounded-lg bg-slate-800 border border-slate-700 px-3.5 py-2 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-blue-500"
           oninput="handleGlobalSearch(this.value)"
           onfocus="handleGlobalSearch(this.value)"
@@ -48,8 +61,14 @@
         ></div>
       </div>
 
-      <div class="flex items-center gap-2 text-xs text-slate-300">
-        <span id="lastUpdatedBadge">Loading index...</span>
+      <div class="hidden md:flex items-center gap-3 text-xs">
+        <span id="lastUpdatedBadge" class="text-slate-300">Loading index...</span>
+        <button
+          onclick="openSupportModal()"
+          class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition flex items-center gap-1.5"
+        >
+          <span>♥</span> Support / Business Patron
+        </button>
       </div>
     </div>
 
@@ -57,13 +76,18 @@
     <div class="bg-slate-800/90 border-t border-slate-700/80">
       <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-xs">
         <nav id="breadcrumbNav" class="flex items-center flex-wrap gap-1.5 text-slate-300"></nav>
-        <button
-          onclick="navigateHome()"
-          id="backToMapBtn"
-          class="hidden text-blue-300 hover:text-white font-medium"
-        >
-          ← Back to Map
-        </button>
+        <div class="flex items-center gap-3">
+          <button onclick="openGlossaryModal()" class="text-slate-300 hover:text-white underline decoration-slate-500">
+            ? New to Local Gov?
+          </button>
+          <button
+            onclick="navigateHome()"
+            id="backToMapBtn"
+            class="hidden text-blue-300 hover:text-white font-medium"
+          >
+            ← Back to Map
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -73,31 +97,52 @@
 
     <!-- VIEW 1: MAP & CONSTITUENCY EXPLORER -->
     <section id="viewMap" class="space-y-6">
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="p-4 sm:p-5 border-b border-slate-100 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-          <div>
-            <h1 class="text-xl font-bold text-slate-900">Explore Constituencies</h1>
-            <p class="text-sm text-slate-600">
-              Click any pin or city/county on the gazetteer map to select your governing body, or search any bill above.
-            </p>
+
+      <!-- Friendly 3-Step Quick-Start Strip for Newcomers -->
+      <div class="bg-gradient-to-r from-blue-50 via-white to-emerald-50 rounded-2xl border border-slate-200 p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold text-blue-700 uppercase tracking-wide">
+            <span>Free for Residents</span>
+            <span class="text-slate-300">•</span>
+            <span>No Login Required</span>
           </div>
-          <div class="flex flex-wrap items-center gap-3">
-            <select
-              id="quickJumpSelect"
-              onchange="if(this.value) openJurisdiction(this.value)"
-              class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 focus:outline-none focus:border-blue-500"
-            >
-              <option value="">Jump directly to jurisdiction...</option>
-            </select>
-          </div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-900">See how your local leaders actually vote.</h1>
+          <p class="text-sm text-slate-600">
+            <strong>1.</strong> Click your town on the map &nbsp;→&nbsp; <strong>2.</strong> Pick City, County, or Federal &nbsp;→&nbsp; <strong>3.</strong> Read plain-English votes &amp; contact your reps.
+          </p>
         </div>
+        <div class="flex flex-wrap items-center gap-2 shrink-0">
+          <button
+            onclick="openGlossaryModal()"
+            class="px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition"
+          >
+            📖 Local Measures 101
+          </button>
+          <select
+            id="quickJumpSelect"
+            onchange="if(this.value) openJurisdiction(this.value)"
+            class="rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 focus:outline-none focus:border-blue-500"
+          >
+            <option value="">Jump directly to a city or county...</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clean Gazetteer Map Card -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
         <div id="map"></div>
+        <div class="px-4 py-2.5 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
+          <span>Tip: Click <strong>any</strong> Colorado town — active cities open voting records; untracked towns let you see your Federal District &amp; request local coverage.</span>
+          <button onclick="openSupportModal()" class="text-emerald-700 font-semibold hover:underline">
+            Using CivicPulse for your business? Voluntary Patron options →
+          </button>
+        </div>
       </div>
 
       <!-- Indexed Jurisdictions Directory Cards -->
       <div>
         <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">
-          Active Jurisdictions (<span id="jurisdictionCount">0</span>)
+          Active Local Governments (<span id="jurisdictionCount">0</span>)
         </h2>
         <div id="jurisdictionCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
@@ -108,7 +153,7 @@
       <!-- Overlapping Jurisdiction Switcher Banner -->
       <div id="overlapBanner" class="hidden bg-blue-50 border border-blue-200 rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div class="text-sm text-blue-900">
-          <span class="font-semibold">Overlapping Constituency:</span>
+          <span class="font-semibold">Overlapping Government:</span>
           <span id="overlapText"></span>
         </div>
         <div id="overlapButtons" class="flex flex-wrap gap-2"></div>
@@ -150,15 +195,15 @@
         </div>
 
         <!-- Drill-Down Tabs -->
-        <div class="mt-6 border-b border-slate-200 flex gap-6 text-sm font-medium">
-          <button onclick="switchJurTab('reps')" id="tabBtnReps" class="pb-3 border-b-2 border-blue-600 text-blue-600">
+        <div class="mt-6 border-b border-slate-200 flex gap-6 text-sm font-medium overflow-x-auto">
+          <button onclick="switchJurTab('reps')" id="tabBtnReps" class="pb-3 border-b-2 border-blue-600 text-blue-600 whitespace-nowrap">
             Representatives (<span id="tabCountReps">0</span>)
           </button>
-          <button onclick="switchJurTab('bills')" id="tabBtnBills" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
-            Agendas & Bills (<span id="tabCountBills">0</span>)
+          <button onclick="switchJurTab('bills')" id="tabBtnBills" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap">
+            Local Measures &amp; Votes (<span id="tabCountBills">0</span>)
           </button>
-          <button onclick="switchJurTab('metrics')" id="tabBtnMetrics" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800">
-            Accountability Metrics
+          <button onclick="switchJurTab('metrics')" id="tabBtnMetrics" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-800 whitespace-nowrap">
+            Accountability Scorecard
           </button>
         </div>
       </div>
@@ -172,7 +217,7 @@
           <input
             id="jurBillFilterInput"
             type="text"
-            placeholder="Filter bills & agenda items in this jurisdiction..."
+            placeholder="Filter measures by keyword (e.g., zoning, budget, transit)..."
             oninput="renderJurisdictionBills()"
             class="flex-1 rounded-lg border border-slate-300 px-3 py-1.5 text-sm focus:outline-none focus:border-blue-500"
           />
@@ -184,7 +229,7 @@
             <option value="ALL">All Outcomes</option>
             <option value="PASSED">Passed / Adopted</option>
             <option value="FAILED">Failed</option>
-            <option value="CLOSE">Close Votes (Margin ≤ 1)</option>
+            <option value="CLOSE">Close Votes (Decided by 1 vote)</option>
           </select>
         </div>
         <div id="jurBillsList" class="space-y-3"></div>
@@ -236,25 +281,53 @@
           <span id="legElectedProvenance"></span>
         </div>
 
-        <!-- Legislator Accountability Scorecard -->
+        <!-- Legislator Accountability Scorecard with Plain-English Tooltips -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70">
-            <div class="text-xs text-slate-500 font-medium">Attendance Rate</div>
+            <div class="text-xs text-slate-500 font-medium flex items-center gap-1">
+              Attendance Rate
+              <span class="help-tip text-slate-400" tabindex="0">ⓘ
+                <span class="help-bubble bg-slate-900 text-white text-[11px] rounded-lg p-2.5 shadow-xl font-normal">
+                  Percentage of recorded roll-call votes where this official was present and cast a vote.
+                </span>
+              </span>
+            </div>
             <div id="legMetricAttendance" class="text-2xl font-bold text-slate-900 mt-1">—</div>
             <div id="legMetricAttendanceSub" class="text-xs text-slate-500 mt-0.5"></div>
           </div>
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70">
-            <div class="text-xs text-slate-500 font-medium">Vote Impactfulness</div>
+            <div class="text-xs text-slate-500 font-medium flex items-center gap-1">
+              Vote Impactfulness
+              <span class="help-tip text-slate-400" tabindex="0">ⓘ
+                <span class="help-bubble bg-slate-900 text-white text-[11px] rounded-lg p-2.5 shadow-xl font-normal">
+                  0–100 score weighting binding laws (ordinances) and close, contested votes higher than routine ceremonial items.
+                </span>
+              </span>
+            </div>
             <div id="legMetricImpact" class="text-2xl font-bold text-blue-600 mt-1">—</div>
             <div class="text-xs text-slate-500 mt-0.5">Weighted avg (0–100)</div>
           </div>
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70">
-            <div class="text-xs text-slate-500 font-medium">Pivotal Votes</div>
+            <div class="text-xs text-slate-500 font-medium flex items-center gap-1">
+              Pivotal Votes
+              <span class="help-tip text-slate-400" tabindex="0">ⓘ
+                <span class="help-bubble bg-slate-900 text-white text-[11px] rounded-lg p-2.5 shadow-xl font-normal">
+                  Times this official's vote was on the winning side of a razor-thin decision (decided by 1 vote).
+                </span>
+              </span>
+            </div>
             <div id="legMetricPivotal" class="text-2xl font-bold text-amber-600 mt-1">—</div>
             <div id="legMetricPivotalSub" class="text-xs text-slate-500 mt-0.5">Deciding margin votes</div>
           </div>
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/70">
-            <div class="text-xs text-slate-500 font-medium">Sponsored / Motions</div>
+            <div class="text-xs text-slate-500 font-medium flex items-center gap-1">
+              Sponsored / Motions
+              <span class="help-tip text-slate-400" tabindex="0">ⓘ
+                <span class="help-bubble bg-slate-900 text-white text-[11px] rounded-lg p-2.5 shadow-xl font-normal">
+                  Number of local measures this representative formally introduced, moved, or seconded.
+                </span>
+              </span>
+            </div>
             <div id="legMetricSponsored" class="text-2xl font-bold text-emerald-600 mt-1">—</div>
             <div class="text-xs text-slate-500 mt-0.5">Recorded actions</div>
           </div>
@@ -263,7 +336,7 @@
         <!-- Expandable Extra Profile Details Accordion -->
         <details class="mt-5 group border border-slate-200 rounded-xl bg-slate-50/60">
           <summary class="cursor-pointer px-4 py-3 text-sm font-semibold text-slate-700 flex items-center justify-between">
-            <span>More Representative Details (Identifiers, Office & Bio Metadata)</span>
+            <span>More Representative Details (Identifiers, Office &amp; Bio Metadata)</span>
             <span class="text-xs text-blue-600 group-open:hidden">Expand +</span>
             <span class="text-xs text-slate-500 hidden group-open:inline">Collapse −</span>
           </summary>
@@ -273,7 +346,7 @@
 
       <!-- Sponsored Bills / Motions Section -->
       <div id="legSponsoredSection" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
-        <h2 class="text-base font-bold text-slate-900 mb-3">Sponsored Bills & Recorded Motions</h2>
+        <h2 class="text-base font-bold text-slate-900 mb-3">Sponsored Measures &amp; Recorded Motions</h2>
         <div id="legSponsoredList" class="space-y-2.5"></div>
       </div>
 
@@ -310,6 +383,7 @@
               <span id="billOutcomeBadge" class="px-2.5 py-0.5 rounded-full font-semibold bg-emerald-100 text-emerald-800"></span>
             </div>
             <h1 id="billTitle" class="text-xl sm:text-2xl font-bold text-slate-900"></h1>
+            <p id="billPlainEnglishExplainer" class="text-xs text-slate-600 bg-blue-50/70 border border-blue-100 rounded-lg px-3 py-2"></p>
           </div>
           <a
             id="billSourceLink"
@@ -353,9 +427,9 @@
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
-            <h2 class="text-base font-bold text-slate-900">Legislator Breakdown & Key Quotes</h2>
+            <h2 class="text-base font-bold text-slate-900">How Each Representative Voted &amp; Key Quotes</h2>
             <p class="text-xs text-slate-500">
-              Click any representative to inspect their full profile. Quotes extracted from official meeting records.
+              Click any representative to inspect their full profile and contact info.
             </p>
           </div>
         </div>
@@ -365,40 +439,58 @@
 
   </main>
 
-  <!-- Overlapping Constituency Selection Modal -->
+  <!-- Clean Footer with Open Data Attribution & Support Link -->
+  <footer class="bg-white border-t border-slate-200 mt-10">
+    <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div>
+        <strong>CivicPulse</strong> — Free, independent local government accountability.
+        Boundaries powered by U.S. Census TIGER/Line &amp; <code>us_jurisdictions</code>.
+      </div>
+      <div class="flex items-center gap-4">
+        <button onclick="openGlossaryModal()" class="hover:text-slate-800 underline">Local Measures 101</button>
+        <button onclick="openSupportModal()" class="text-emerald-700 font-semibold hover:underline">♥ Support / Business Patrons</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Overlapping Constituency Selection Modal (Includes Federal District Top-of-Funnel) -->
   <div id="disambiguateModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-md w-full p-6 space-y-4">
       <div class="flex items-start justify-between gap-3">
         <div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-blue-600">Multiple Constituencies Found</span>
-          <h3 class="text-lg font-bold text-slate-900 mt-0.5">Select Governing Body</h3>
+          <span class="text-xs font-semibold uppercase tracking-wider text-blue-600">Who Represents This Location?</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-0.5">Choose a Level of Government</h3>
           <p id="disambiguateSubtitle" class="text-xs text-slate-600 mt-1">
-            This location falls within overlapping local boundaries. Choose which body you want to inspect:
+            Most addresses are served by a City Council, a County Board, and a U.S. Congressional District. Pick one to explore:
           </p>
         </div>
         <button onclick="closeDisambiguateModal()" class="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
       </div>
       <div id="disambiguateOptions" class="space-y-2.5"></div>
+      <div id="disambiguateFederalBox" class="hidden pt-2 border-t border-slate-100"></div>
     </div>
   </div>
 
-  <!-- Unclaimed Jurisdiction Request / Sponsor Modal -->
+  <!-- Unclaimed Jurisdiction Request / Sponsor Modal (Includes Federal District Hook) -->
   <div id="unclaimedModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-md w-full p-6 space-y-4">
       <div class="flex items-start justify-between gap-3">
         <div>
-          <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[11px] font-bold uppercase">Unclaimed Constituency</span>
+          <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[11px] font-bold uppercase">Local Council Not Yet Tracked</span>
           <h3 id="unclaimedTitle" class="text-lg font-bold text-slate-900 mt-1">Jurisdiction Not Yet Tracked</h3>
           <p class="text-xs text-slate-600 mt-1">
-            We haven't connected this city's agenda & roll-call vote feed yet. Request coverage to prioritize it in our ingestion queue, or sponsor immediate onboarding.
+            We haven't connected this town's local meeting feed yet. Request it for free to move it up our waitlist, or help fund priority onboarding.
           </p>
         </div>
         <button onclick="closeUnclaimedModal()" class="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
       </div>
 
-      <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 text-xs space-y-1">
-        <div class="text-slate-500">Division ID</div>
-        <div id="unclaimedDivId" class="font-mono text-slate-800 break-all"></div>
+      <!-- Federal Top-of-Funnel Hook inside Unclaimed Modal -->
+      <div id="unclaimedFederalBox" class="hidden bg-blue-50 border border-blue-200 rounded-xl p-3.5 text-xs space-y-1.5"></div>
+
+      <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/80 text-xs flex items-center justify-between gap-2">
+        <span class="text-slate-500">Division ID:</span>
+        <span id="unclaimedDivId" class="font-mono text-slate-800 truncate"></span>
       </div>
 
       <div class="space-y-2.5 pt-1">
@@ -408,14 +500,14 @@
           onclick="recordLocalVote()"
           class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
         >
-          🗳️ Request Tracking for This City
+          🗳️ Request Free Tracking for This Town
         </a>
         <a
           id="unclaimedSponsorMailto"
           href="#"
           class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 text-sm font-semibold hover:bg-slate-50 transition"
         >
-          ⚡ Sponsor Priority Onboarding
+          ⚡ Sponsor Priority Onboarding (Business / Group)
         </a>
         <a
           id="unclaimedPortalLink"
@@ -428,7 +520,122 @@
         </a>
       </div>
       <p id="unclaimedThanksMsg" class="hidden text-xs text-emerald-700 font-semibold text-center">
-        ✓ Demand signal logged! Opening your email client to confirm your request.
+        ✓ Request prepared! Send the pre-filled email to log your vote.
+      </p>
+    </div>
+  </div>
+
+  <!-- Plain-English "Local Measures 101" Glossary Modal -->
+  <div id="glossaryModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-lg w-full p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-blue-600">Plain-English Guide</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-0.5">Local Government Measures 101</h3>
+        </div>
+        <button onclick="closeGlossaryModal()" class="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
+      </div>
+      <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900">📜 Ordinance (Binding Local Law)</div>
+          <p class="mt-0.5 text-slate-600">A permanent city or county law — such as zoning rules, local taxes, speed limits, or housing regulations. Usually requires two readings and a public hearing.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900">📝 Resolution (Policy or Funding Action)</div>
+          <p class="mt-0.5 text-slate-600">A formal decision approving contracts, budgets, grants, or official policy statements without permanently rewriting the municipal code.</p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900">🏙️ City Council vs. County Commissioners</div>
+          <p class="mt-0.5 text-slate-600"><strong>City Councils</strong> govern local services inside city limits (zoning, city roads, police, parks). <strong>County Commissioners</strong> govern county-wide services (elections, sheriff, property assessments, public health, and unincorporated areas).</p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900">⚖️ Vote Impactfulness &amp; Pivotal Votes</div>
+          <p class="mt-0.5 text-slate-600"><strong>Impactfulness (0–100)</strong> highlights binding laws and close, contested votes over routine consent items. A <strong>Pivotal Vote</strong> means that official was on the winning side of a 1-vote margin.</p>
+        </div>
+      </div>
+      <button onclick="closeGlossaryModal()" class="w-full py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition">
+        Got it — Back to Exploring
+      </button>
+    </div>
+  </div>
+
+  <!-- Voluntary Donation & Business Patron Support Modal -->
+  <div id="supportModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-lg w-full p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[11px] font-bold uppercase">Voluntary Support Model</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1">Keep CivicPulse Free &amp; Independent</h3>
+          <p class="text-xs text-slate-600 mt-1">
+            CivicPulse is always <strong>free for individual residents</strong>. Voluntary contributions from readers and local businesses keep our data open and fund new Colorado cities.
+          </p>
+        </div>
+        <button onclick="closeSupportModal()" class="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
+      </div>
+
+      <!-- Mode Switcher: Individual vs. Business -->
+      <div class="grid grid-cols-2 gap-2 p-1 bg-slate-100 rounded-xl text-xs font-semibold">
+        <button id="supportTabIndiv" onclick="switchSupportTab('indiv')" class="py-2 rounded-lg bg-white text-slate-900 shadow-xs transition">
+          👤 Individual Supporter
+        </button>
+        <button id="supportTabBiz" onclick="switchSupportTab('biz')" class="py-2 rounded-lg text-slate-600 hover:text-slate-900 transition">
+          🏢 Business / Org Patron
+        </button>
+      </div>
+
+      <!-- Panel A: Individual Supporter -->
+      <div id="supportPanelIndiv" class="space-y-3">
+        <div class="p-3.5 rounded-xl bg-blue-50/70 border border-blue-100 text-xs text-slate-700">
+          Individuals never have to pay to use CivicPulse. If this tool helped you understand a local vote or contact your councilmember, you can optionally pitch in to help cover domain &amp; city onboarding costs.
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%245)&body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%245%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 font-bold text-slate-900 transition">
+            $5<span class="block font-normal text-[11px] text-slate-500">Coffee</span>
+          </a>
+          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%2415)&body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%2415%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50/40 hover:bg-emerald-50 font-bold text-slate-900 transition">
+            $15<span class="block font-normal text-[11px] text-emerald-700">Supporter</span>
+          </a>
+          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%2450)&body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%2450%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-3 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 font-bold text-slate-900 transition">
+            $50<span class="block font-normal text-[11px] text-slate-500">Champion</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Panel B: Business / Organization Self-Identification -->
+      <div id="supportPanelBiz" class="hidden space-y-3">
+        <div class="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200 text-xs text-slate-700">
+          <strong>Using CivicPulse for your business, newsroom, or civic group?</strong> Identify your organization below to voluntarily support open local data or sponsor a new city.
+        </div>
+        <div class="space-y-2.5 text-xs">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Business or Organization Name</label>
+            <input id="bizNameInput" type="text" placeholder="e.g., Front Range Housing Partners" class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-emerald-500" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Voluntary Patron Tier</label>
+            <select id="bizTierSelect" class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm bg-white">
+              <option value="Community Patron ($25/mo voluntary)">Community Patron — $25/mo voluntary</option>
+              <option value="Civic Partner ($100/mo voluntary)">Civic Partner — $100/mo voluntary</option>
+              <option value="Priority City Sponsor ($500 one-time)">Priority City Sponsor — $500 (Fast-track a city)</option>
+              <option value="Custom Voluntary Contribution">Custom Voluntary Contribution</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Cities or Topics You Care About (Optional)</label>
+            <input id="bizFocusInput" type="text" placeholder="e.g., Loveland zoning, Fort Collins transit" class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-emerald-500" />
+          </div>
+          <button
+            onclick="submitBusinessPatron()"
+            class="w-full py-2.5 rounded-xl bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition"
+          >
+            Identify Business &amp; Request Voluntary Patron Link →
+          </button>
+        </div>
+      </div>
+
+      <!-- Legal / Tax Transparency Notice -->
+      <p class="text-[11px] text-slate-400 border-t border-slate-100 pt-3 leading-relaxed">
+        <strong>Transparency Notice:</strong> CivicPulse is an independent civic technology project, not a registered 501(c)(3) nonprofit. Voluntary contributions are not tax-deductible as charitable donations.
       </p>
     </div>
   </div>
@@ -437,6 +644,7 @@
     // Application State
     let indexData = { jurisdictions: [], search_index: [] };
     let boundariesGeoJson = null;
+    let federalData = { districts: {} };
     let fuseSearch = null;
     let mapInstance = null;
     let currentJurisdictionData = null;
@@ -448,13 +656,17 @@
     // Initialize App
     async function initApp() {
       try {
-        const [idxRes, geoRes] = await Promise.all([
+        const [idxRes, geoRes, fedRes] = await Promise.all([
           fetch(`data/index.json?v=${Date.now()}`),
-          fetch(`geo/boundaries.geojson?v=${Date.now()}`).catch(() => null)
+          fetch(`geo/boundaries.geojson?v=${Date.now()}`).catch(() => null),
+          fetch(`data/federal_co.json?v=${Date.now()}`).catch(() => null)
         ]);
         indexData = await idxRes.json();
         if (geoRes && geoRes.ok) {
           boundariesGeoJson = await geoRes.json();
+        }
+        if (fedRes && fedRes.ok) {
+          federalData = await fedRes.json();
         }
         document.getElementById("lastUpdatedBadge").textContent = `Updated: ${indexData.last_updated || "Recently"}`;
 
@@ -515,7 +727,51 @@
       }
     }
 
-    // Invisible Point-in-Polygon spatial lookup via Turf.js with Haversine fallback
+    // Modals: Glossary & Support
+    function openGlossaryModal() {
+      document.getElementById("glossaryModal").classList.remove("hidden");
+    }
+    function closeGlossaryModal() {
+      document.getElementById("glossaryModal").classList.add("hidden");
+    }
+    function openSupportModal(tab = "indiv") {
+      switchSupportTab(tab);
+      document.getElementById("supportModal").classList.remove("hidden");
+    }
+    function closeSupportModal() {
+      document.getElementById("supportModal").classList.add("hidden");
+    }
+    function switchSupportTab(tab) {
+      const isIndiv = tab === "indiv";
+      document.getElementById("supportPanelIndiv").classList.toggle("hidden", !isIndiv);
+      document.getElementById("supportPanelBiz").classList.toggle("hidden", isIndiv);
+      document.getElementById("supportTabIndiv").className = isIndiv
+        ? "py-2 rounded-lg bg-white text-slate-900 shadow-xs transition"
+        : "py-2 rounded-lg text-slate-600 hover:text-slate-900 transition";
+      document.getElementById("supportTabBiz").className = !isIndiv
+        ? "py-2 rounded-lg bg-white text-slate-900 shadow-xs transition"
+        : "py-2 rounded-lg text-slate-600 hover:text-slate-900 transition";
+    }
+    function submitBusinessPatron() {
+      const name = (document.getElementById("bizNameInput").value || "").trim() || "(Business Name)";
+      const tier = document.getElementById("bizTierSelect").value;
+      const focus = (document.getElementById("bizFocusInput").value || "").trim() || "General Colorado local coverage";
+      const subject = encodeURIComponent(`CivicPulse Business Patron: ${name}`);
+      const body = encodeURIComponent(
+        `Hi Bryan,
+
+We'd like to identify as a voluntary Business Patron for CivicPulse.
+
+Organization: ${name}
+Selected Tier: ${tier}
+Cities / Topics of Interest: ${focus}
+
+Please send us the voluntary contribution link or invoice details.`
+      );
+      window.location.href = `mailto:bryanateisl@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Invisible Point-in-Polygon spatial lookup via Turf.js (Local + County + Federal)
     function haversineKm(lat1, lon1, lat2, lon2) {
       const R = 6371;
       const dLat = ((lat2 - lat1) * Math.PI) / 180;
@@ -531,6 +787,7 @@
     function resolveConstituenciesAtPoint(lat, lng) {
       const matchedMap = new Map();
       let matchedDistrict = null;
+      let matchedFederal = null;
 
       if (window.turf && boundariesGeoJson && Array.isArray(boundariesGeoJson.features)) {
         const pt = turf.point([lng, lat]);
@@ -539,6 +796,18 @@
             if (turf.booleanPointInPolygon(pt, feat)) {
               const props = feat.properties || {};
               const divId = props.ocd_division_id;
+              if (props.level === "federal") {
+                const fedMeta = (federalData.districts || {})[divId] || {};
+                matchedFederal = {
+                  ocd_division_id: divId,
+                  name: props.name || fedMeta.district_label || "U.S. Congressional District",
+                  district: props.district || "",
+                  representative_name: fedMeta.representative_name || "",
+                  party: fedMeta.party || "",
+                  congress_url: fedMeta.congress_url || "https://www.house.gov/representatives/find-your-representative"
+                };
+                continue;
+              }
               if (props.level === "district" && props.district) {
                 matchedDistrict = props.district;
               }
@@ -576,23 +845,42 @@
         }
       }
 
-      const results = [...matchedMap.values()].sort((a, b) => (a.level === "municipal" ? -1 : 1));
+      const localMatches = [...matchedMap.values()].sort((a, b) => (a.level === "municipal" ? -1 : 1));
       if (matchedDistrict) {
-        results.forEach(r => {
+        localMatches.forEach(r => {
           if (r.level === "municipal" && !r.matchedDistrict) {
             r.matchedDistrict = matchedDistrict;
           }
         });
       }
-      return results;
+      return { localMatches, matchedFederal };
     }
 
-    function openDisambiguateModal(candidates) {
+    function renderFederalCardHtml(fed) {
+      if (!fed) return "";
+      const repLine = fed.representative_name
+        ? `<div class="text-slate-700 font-semibold">${escapeHtml(fed.representative_name)}${fed.party ? ` (${escapeHtml(fed.party)})` : ""}</div>`
+        : `<div class="text-slate-600">Look up your current U.S. House Representative &amp; federal bills</div>`;
+      return `
+        <div class="flex items-center justify-between gap-3">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700">Federal District</span>
+            <div class="font-bold text-slate-900 text-xs sm:text-sm">${escapeHtml(fed.name)}</div>
+            ${repLine}
+          </div>
+          <a href="${escapeHtml(fed.congress_url)}" target="_blank" rel="noopener noreferrer" class="shrink-0 px-3 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 transition">
+            Congress.gov ↗
+          </a>
+        </div>
+      `;
+    }
+
+    function openDisambiguateModal(candidates, matchedFederal = null) {
       const container = document.getElementById("disambiguateOptions");
       const distNote = candidates.find(c => c.matchedDistrict)?.matchedDistrict;
       document.getElementById("disambiguateSubtitle").textContent = distNote
         ? `Location is inside ${distNote} and overlaps multiple local governing bodies. Choose which body to inspect:`
-        : "This location falls within overlapping local boundaries. Choose which body you want to inspect:";
+        : "Most addresses are served by a City Council, a County Board, and a U.S. Congressional District. Pick one to explore:";
 
       container.innerHTML = candidates
         .map(c => {
@@ -613,6 +901,15 @@
           `;
         })
         .join("");
+
+      const fedBox = document.getElementById("disambiguateFederalBox");
+      if (matchedFederal) {
+        fedBox.innerHTML = renderFederalCardHtml(matchedFederal);
+        fedBox.classList.remove("hidden");
+      } else {
+        fedBox.classList.add("hidden");
+      }
+
       document.getElementById("disambiguateModal").classList.remove("hidden");
     }
 
@@ -630,14 +927,14 @@
       document.getElementById("jurisdictionCount").textContent = activeJurs.length;
 
       select.innerHTML =
-        `<option value="">Jump directly to jurisdiction...</option>` +
-        `<optgroup label="Active Tracked Jurisdictions">` +
+        `<option value="">Jump directly to a city or county...</option>` +
+        `<optgroup label="Active Tracked Governments">` +
         activeJurs
           .map(j => `<option value="${j.ocd_division_id}">${escapeHtml(j.name)} (${j.level})</option>`)
           .join("") +
         `</optgroup>` +
         (unclaimedJurs.length
-          ? `<optgroup label="Unclaimed (Request Coverage)">` +
+          ? `<optgroup label="Unclaimed (Request Free Tracking)">` +
             unclaimedJurs
               .map(j => `<option value="${j.ocd_division_id}">${escapeHtml(j.name)} — Request Tracking</option>`)
               .join("") +
@@ -696,11 +993,25 @@
     }
 
     function handleMapCoordinateClick(lat, lng) {
-      const matches = resolveConstituenciesAtPoint(lat, lng);
-      if (matches.length > 1) {
-        openDisambiguateModal(matches);
-      } else if (matches.length === 1) {
-        openJurisdiction(matches[0].ocd_division_id, "reps", matches[0].matchedDistrict || null);
+      const { localMatches, matchedFederal } = resolveConstituenciesAtPoint(lat, lng);
+      if (localMatches.length > 1) {
+        openDisambiguateModal(localMatches, matchedFederal);
+      } else if (localMatches.length === 1) {
+        const only = localMatches[0];
+        if (only.status === "unclaimed") {
+          openUnclaimedModal(only, matchedFederal);
+        } else {
+          openJurisdiction(only.ocd_division_id, "reps", only.matchedDistrict || null);
+        }
+      } else if (matchedFederal) {
+        openUnclaimedModal(
+          {
+            name: "Local Town / County Here",
+            ocd_division_id: matchedFederal.ocd_division_id,
+            portal_url: ""
+          },
+          matchedFederal
+        );
       }
     }
 
@@ -717,22 +1028,30 @@
       return data;
     }
 
-    function openUnclaimedModal(meta) {
+    function openUnclaimedModal(meta, matchedFederal = null) {
       document.getElementById("unclaimedTitle").textContent = meta.name;
       document.getElementById("unclaimedDivId").textContent = meta.ocd_division_id;
       document.getElementById("unclaimedThanksMsg").classList.add("hidden");
+
+      const fedBox = document.getElementById("unclaimedFederalBox");
+      if (matchedFederal) {
+        fedBox.innerHTML = renderFederalCardHtml(matchedFederal);
+        fedBox.classList.remove("hidden");
+      } else {
+        fedBox.classList.add("hidden");
+      }
 
       const reqSubject = encodeURIComponent(`City Tracking Request: ${meta.name}`);
       const reqBody = encodeURIComponent(
         `Please add ${meta.name} (${meta.ocd_division_id}) to CivicPulse.
 
-Organization / Role (optional): `
+Resident or Organization (optional): `
       );
       document.getElementById("unclaimedRequestMailto").href = `mailto:bryanateisl@gmail.com?subject=${reqSubject}&body=${reqBody}`;
 
       const spSubject = encodeURIComponent(`Priority Onboarding Sponsorship: ${meta.name}`);
       const spBody = encodeURIComponent(
-        `We are interested in sponsoring priority data onboarding for ${meta.name} (${meta.ocd_division_id}).
+        `We are interested in voluntarily sponsoring priority data onboarding for ${meta.name} (${meta.ocd_division_id}).
 
 Organization: 
 Timeline: `
@@ -782,7 +1101,6 @@ Timeline: `
         `<span><strong>Provenance:</strong> Metrics based on ingested official documents since <strong>${escapeHtml(docsSince)}</strong>.</span>` +
         `<span>Scores reflect recorded roll-call votes since each member's election date.</span>`;
 
-      // District Highlight Banner
       const distBanner = document.getElementById("selectedDistrictBanner");
       if (highlightedDistrict) {
         distBanner.classList.remove("hidden");
@@ -792,7 +1110,6 @@ Timeline: `
         distBanner.classList.add("hidden");
       }
 
-      // Check overlapping parent or child jurisdictions
       const related = indexData.jurisdictions.filter(
         x =>
           x.ocd_division_id === jur.parent_division_id ||
@@ -801,7 +1118,7 @@ Timeline: `
       const overlapBanner = document.getElementById("overlapBanner");
       if (related.length > 0) {
         overlapBanner.classList.remove("hidden");
-        document.getElementById("overlapText").textContent = "Switch between overlapping jurisdictions for this area:";
+        document.getElementById("overlapText").textContent = "Switch between overlapping local governments for this area:";
         document.getElementById("overlapButtons").innerHTML = related
           .map(
             r => `
@@ -937,7 +1254,7 @@ Timeline: `
       });
 
       if (!filtered.length) {
-        container.innerHTML = `<div class="bg-white p-6 rounded-xl border border-slate-200 text-sm text-slate-500">No agenda items or bills match your current filter.</div>`;
+        container.innerHTML = `<div class="bg-white p-6 rounded-xl border border-slate-200 text-sm text-slate-500">No measures match your current filter.</div>`;
         return;
       }
 
@@ -1018,7 +1335,6 @@ Timeline: `
       document.getElementById("legElectedProvenance").textContent = `Elected ${ent.elected_date || "Active Term"}`;
       document.getElementById("legVotesProvenanceSub").textContent = `Showing roll-call items from official records ingested since ${docsSince}`;
 
-      // Contact & Social Buttons with Platform Badges
       const btns = [];
       if (ent.phone) {
         btns.push(`<a href="tel:${escapeHtml(ent.phone)}" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">📞 ${escapeHtml(ent.phone)}</a>`);
@@ -1051,7 +1367,6 @@ Timeline: `
       });
       document.getElementById("legContactButtons").innerHTML = btns.join("");
 
-      // Scorecard Metrics
       const m = ent.metrics || {};
       document.getElementById("legMetricAttendance").textContent = `${m.attendance_rate ?? 0}%`;
       document.getElementById("legMetricAttendanceSub").textContent = `${m.present_votes ?? 0} of ${m.total_votes ?? 0} recorded items`;
@@ -1059,7 +1374,6 @@ Timeline: `
       document.getElementById("legMetricPivotal").textContent = `${m.pivotal_votes ?? 0} (${m.pivotal_rate ?? 0}%)`;
       document.getElementById("legMetricSponsored").textContent = m.sponsored_count ?? 0;
 
-      // Expandable Extra Metadata
       const extra = ent.bio_extra || {};
       const extraRows = [
         ["Identifier", ent.ocd_person_id],
@@ -1071,7 +1385,6 @@ Timeline: `
         .map(([k, v]) => `<div><span class="text-xs font-semibold text-slate-500 block">${escapeHtml(k)}</span><span class="font-mono text-xs text-slate-800">${escapeHtml(v)}</span></div>`)
         .join("");
 
-      // Sponsored Items
       const spSection = document.getElementById("legSponsoredSection");
       const spItems = ent.sponsored_items || [];
       if (spItems.length > 0) {
@@ -1140,6 +1453,20 @@ Timeline: `
     }
 
     // View 4: By-Bill / Agenda Item Breakdown
+    function getPlainEnglishTypeExplainer(eventType) {
+      const t = (eventType || "").toLowerCase();
+      if (t.includes("ordinance")) {
+        return "What is an Ordinance? A binding local law (such as zoning, housing rules, or municipal code changes) that carries the force of law once adopted.";
+      }
+      if (t.includes("resolution")) {
+        return "What is a Resolution? A formal council decision approving funding, contracts, or official policy direction without rewriting permanent city code.";
+      }
+      if (t.includes("budget") || t.includes("appropriation")) {
+        return "What is a Budget Measure? A binding vote authorizing how taxpayer funds are allocated across local departments and public projects.";
+      }
+      return "What is this measure? An official item voted on by your local representatives during a public meeting. Click the Official Source button to inspect the original record.";
+    }
+
     async function openBill(eventId, divisionId = null) {
       if (divisionId && (!currentJurisdictionData || currentJurisdictionData.jurisdiction.ocd_division_id !== divisionId)) {
         currentJurisdictionData = await fetchJurisdictionData(divisionId);
@@ -1155,6 +1482,7 @@ Timeline: `
       document.getElementById("billTopicBadge").textContent = ev.topic || "General";
       document.getElementById("billOutcomeBadge").textContent = ev.outcome || "Recorded";
       document.getElementById("billTitle").textContent = ev.title;
+      document.getElementById("billPlainEnglishExplainer").textContent = getPlainEnglishTypeExplainer(ev.event_type);
       document.getElementById("billSourceLink").href = ev.source_url || jur.portal_url || "#";
 
       document.getElementById("billMetricsProvenance").textContent = `${jur.name} metrics based on docs since ${docsSince}`;
@@ -1214,7 +1542,7 @@ Timeline: `
 
       const results = fuseSearch.search(q).slice(0, 8);
       if (!results.length) {
-        dropdown.innerHTML = `<div class="p-4 text-xs text-slate-500">No matching bills, votes, or quotes found for “${escapeHtml(q)}”.</div>`;
+        dropdown.innerHTML = `<div class="p-4 text-xs text-slate-500">No matching measures, votes, or quotes found for “${escapeHtml(q)}”.</div>`;
         dropdown.classList.remove("hidden");
         return;
       }
