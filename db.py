@@ -35,7 +35,8 @@ def init_db(db_path: str = DB_PATH) -> None:
                 portal_url TEXT NOT NULL,
                 poll_tier TEXT DEFAULT 'fast',
                 last_polled_at TEXT,
-                parent_division_id TEXT
+                parent_division_id TEXT,
+                status TEXT DEFAULT 'active'
             );
 
             CREATE TABLE IF NOT EXISTS entities (
@@ -105,8 +106,8 @@ def init_db(db_path: str = DB_PATH) -> None:
             """
         )
 
-        # Safe non-destructive migrations for existing databases
         _add_column_if_missing(conn, "jurisdictions", "parent_division_id", "TEXT")
+        _add_column_if_missing(conn, "jurisdictions", "status", "TEXT DEFAULT 'active'")
         _add_column_if_missing(conn, "entities", "portal_url", "TEXT")
         _add_column_if_missing(conn, "entities", "party", "TEXT")
         _add_column_if_missing(conn, "entities", "phone", "TEXT")
@@ -130,7 +131,6 @@ def queue_document(
     content_hash: Optional[str] = None,
     db_path: str = DB_PATH,
 ) -> Optional[int]:
-    """Insert a document into the extraction queue if its content_hash is new."""
     if not content_hash:
         digest_source = f"{jurisdiction_id}|{doc_type}|{source_url}|{raw_text or ''}"
         content_hash = hashlib.sha256(digest_source.encode("utf-8")).hexdigest()
@@ -162,7 +162,6 @@ def queue_document(
 
 
 def seed_fort_collins(db_path: str = DB_PATH) -> None:
-    """Seed the Fort Collins jurisdiction and City Council roster."""
     init_db(db_path)
     conn = get_connection(db_path)
     try:
@@ -170,8 +169,8 @@ def seed_fort_collins(db_path: str = DB_PATH) -> None:
         conn.execute(
             """
             INSERT OR IGNORE INTO jurisdictions (
-                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
             """,
             (
                 foco_div,
@@ -212,17 +211,15 @@ def seed_fort_collins(db_path: str = DB_PATH) -> None:
 
 
 def seed_public_profiles(db_path: str = DB_PATH) -> None:
-    """Populate public contact info, official portals, and hierarchy links for existing rosters."""
     init_db(db_path)
     seed_fort_collins(db_path)
     conn = get_connection(db_path)
     try:
-        # Ensure Larimer County exists as parent jurisdiction for Fort Collins
         conn.execute(
             """
             INSERT OR IGNORE INTO jurisdictions (
-                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active')
             """,
             (
                 "ocd-division/country:us/state:co/county:larimer",
@@ -244,103 +241,28 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
             """
         )
 
-        # Public municipal contact profiles for Fort Collins City Council (Nonpartisan)
         foco_profiles = [
-            {
-                "id": "ocd-person/foco-emily-francis",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "efrancis@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {"website": "https://www.fcgov.com/council/"},
-                "extra": {"office": "Mayor", "term_type": "2-Year At-Large"},
-            },
-            {
-                "id": "ocd-person/foco-chris-conway",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "cconway@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Councilmember", "area": "Northeast Fort Collins"},
-            },
-            {
-                "id": "ocd-person/foco-julie-pignataro",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "jpignataro@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Mayor Pro Tem", "area": "East Central Fort Collins"},
-            },
-            {
-                "id": "ocd-person/foco-josh-fudge",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "jfudge@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Councilmember", "area": "Southeast Fort Collins"},
-            },
-            {
-                "id": "ocd-person/foco-melanie-potyondy",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "mpotyondy@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Councilmember", "area": "Southwest Fort Collins"},
-            },
-            {
-                "id": "ocd-person/foco-amy-hoeven",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "ahoeven@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Councilmember", "area": "West Central Fort Collins"},
-            },
-            {
-                "id": "ocd-person/foco-anne-nelsen",
-                "party": "Nonpartisan",
-                "phone": "(970) 221-6505",
-                "email": "anelsen@fcgov.com",
-                "portal_url": "https://www.fcgov.com/council/",
-                "socials": {},
-                "extra": {"office": "Councilmember", "area": "Northwest Fort Collins"},
-            },
+            ("ocd-person/foco-emily-francis", "Nonpartisan", "(970) 221-6505", "efrancis@fcgov.com"),
+            ("ocd-person/foco-chris-conway", "Nonpartisan", "(970) 221-6505", "cconway@fcgov.com"),
+            ("ocd-person/foco-julie-pignataro", "Nonpartisan", "(970) 221-6505", "jpignataro@fcgov.com"),
+            ("ocd-person/foco-josh-fudge", "Nonpartisan", "(970) 221-6505", "jfudge@fcgov.com"),
+            ("ocd-person/foco-melanie-potyondy", "Nonpartisan", "(970) 221-6505", "mpotyondy@fcgov.com"),
+            ("ocd-person/foco-amy-hoeven", "Nonpartisan", "(970) 221-6505", "ahoeven@fcgov.com"),
+            ("ocd-person/foco-anne-nelsen", "Nonpartisan", "(970) 221-6505", "anelsen@fcgov.com"),
         ]
-
-        for p in foco_profiles:
+        for pid, party, phone, email in foco_profiles:
             conn.execute(
                 """
                 UPDATE entities
                 SET party = COALESCE(NULLIF(party, ''), ?),
                     phone = COALESCE(NULLIF(phone, ''), ?),
                     email = COALESCE(NULLIF(email, ''), ?),
-                    portal_url = COALESCE(NULLIF(portal_url, ''), ?),
-                    social_links_json = CASE
-                        WHEN social_links_json IS NULL OR social_links_json = '{}' THEN ?
-                        ELSE social_links_json
-                    END,
-                    bio_extra_json = CASE
-                        WHEN bio_extra_json IS NULL OR bio_extra_json = '{}' THEN ?
-                        ELSE bio_extra_json
-                    END
+                    portal_url = COALESCE(NULLIF(portal_url, ''), 'https://www.fcgov.com/council/')
                 WHERE ocd_person_id = ?
                 """,
-                (
-                    p["party"],
-                    p["phone"],
-                    p["email"],
-                    p["portal_url"],
-                    json.dumps(p["socials"]),
-                    json.dumps(p["extra"]),
-                    p["id"],
-                ),
+                (party, phone, email, pid),
             )
 
-        # Mark Denver City Council entities as Nonpartisan & set official council portal
         conn.execute(
             """
             UPDATE entities
@@ -351,58 +273,20 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
             """
         )
 
-        # Seed public Larimer County Commissioners so overlapping map selection works immediately
         larimer_commissioners = [
-            (
-                "ocd-person/larimer-john-kefalas",
-                "ocd-division/country:us/state:co/county:larimer",
-                "John Kefalas",
-                "legislator",
-                "Commissioner",
-                "District 1",
-                "https://www.larimer.gov/bocc",
-                "https://www.larimer.gov/bocc",
-                "Democratic",
-                "(970) 498-7010",
-                "jkefalas@larimer.org",
-            ),
-            (
-                "ocd-person/larimer-kristin-stephens",
-                "ocd-division/country:us/state:co/county:larimer",
-                "Kristin Stephens",
-                "legislator",
-                "Commissioner",
-                "District 2",
-                "https://www.larimer.gov/bocc",
-                "https://www.larimer.gov/bocc",
-                "Democratic",
-                "(970) 498-7010",
-                "kstephens@larimer.org",
-            ),
-            (
-                "ocd-person/larimer-jody-shadduck-mcnally",
-                "ocd-division/country:us/state:co/county:larimer",
-                "Jody Shadduck-McNally",
-                "legislator",
-                "Commissioner",
-                "District 3",
-                "https://www.larimer.gov/bocc",
-                "https://www.larimer.gov/bocc",
-                "Democratic",
-                "(970) 498-7010",
-                "jshadduckmcnally@larimer.org",
-            ),
+            ("ocd-person/larimer-john-kefalas", "John Kefalas", "District 1", "jkefalas@larimer.org"),
+            ("ocd-person/larimer-kristin-stephens", "Kristin Stephens", "District 2", "kstephens@larimer.org"),
+            ("ocd-person/larimer-jody-shadduck-mcnally", "Jody Shadduck-McNally", "District 3", "jshadduckmcnally@larimer.org"),
         ]
-
-        for row in larimer_commissioners:
+        for pid, name, dist, email in larimer_commissioners:
             conn.execute(
                 """
                 INSERT OR IGNORE INTO entities (
                     ocd_person_id, jurisdiction_id, name, entity_type, role,
                     district, website_url, portal_url, party, phone, email
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, 'ocd-division/country:us/state:co/county:larimer', ?, 'legislator', 'Commissioner', ?, 'https://www.larimer.gov/bocc', 'https://www.larimer.gov/bocc', 'Democratic', '(970) 498-7010', ?)
                 """,
-                row,
+                (pid, name, dist, email),
             )
 
         conn.commit()

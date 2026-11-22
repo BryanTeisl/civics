@@ -36,7 +36,7 @@ def export_all() -> None:
 
     try:
         jurisdictions = conn.execute(
-            "SELECT * FROM jurisdictions ORDER BY level ASC, name ASC"
+            "SELECT * FROM jurisdictions ORDER BY status ASC, level ASC, name ASC"
         ).fetchall()
 
         index_jurisdictions: List[Dict[str, Any]] = []
@@ -44,7 +44,27 @@ def export_all() -> None:
 
         for j in jurisdictions:
             div_id = j["ocd_division_id"]
+            status = j["status"] or "active"
             file_name = slugify_division_id(div_id)
+
+            if status == "unclaimed":
+                index_jurisdictions.append(
+                    {
+                        "ocd_division_id": div_id,
+                        "name": j["name"],
+                        "level": j["level"],
+                        "status": "unclaimed",
+                        "lat": j["lat"],
+                        "lng": j["lng"],
+                        "portal_url": j["portal_url"],
+                        "parent_division_id": j["parent_division_id"],
+                        "file": None,
+                        "entity_count": 0,
+                        "event_count": 0,
+                        "last_updated": now_iso,
+                    }
+                )
+                continue
 
             entities = conn.execute(
                 """
@@ -75,7 +95,6 @@ def export_all() -> None:
                 (div_id,),
             ).fetchall()
 
-            # Group actions by event_id and by entity_id
             actions_by_event: Dict[str, List[Dict[str, Any]]] = {}
             actions_by_entity: Dict[str, List[Dict[str, Any]]] = {}
             for a in actions:
@@ -86,7 +105,6 @@ def export_all() -> None:
             events_by_id = {ev["event_id"]: dict(ev) for ev in events}
             roster_size = len(entities)
 
-            # Build enriched events list
             exported_events: List[Dict[str, Any]] = []
             for ev in events:
                 ev_id = ev["event_id"]
@@ -158,7 +176,6 @@ def export_all() -> None:
                 }
                 exported_events.append(ev_payload)
 
-                # Add to global search index
                 global_search_index.append(
                     {
                         "event_id": ev_id,
@@ -180,7 +197,6 @@ def export_all() -> None:
                     }
                 )
 
-            # Build enriched legislator profiles with accountability metrics
             exported_entities: List[Dict[str, Any]] = []
             for ent in entities:
                 pid = ent["ocd_person_id"]
@@ -305,6 +321,7 @@ def export_all() -> None:
                     "ocd_division_id": div_id,
                     "name": j["name"],
                     "level": j["level"],
+                    "status": "active",
                     "lat": j["lat"],
                     "lng": j["lng"],
                     "portal_url": j["portal_url"],
@@ -326,7 +343,7 @@ def export_all() -> None:
         )
 
         print(
-            f"Exported {len(index_jurisdictions)} jurisdiction file(s) and "
+            f"Exported {len(index_jurisdictions)} jurisdiction entries and "
             f"{len(global_search_index)} searchable event(s) to {OUTPUT_DIR}/"
         )
     finally:

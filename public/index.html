@@ -547,7 +547,7 @@
               <div>
                 <div class="font-bold text-slate-900">${escapeHtml(c.name)}</div>
                 <div class="text-xs text-slate-500 capitalize mt-0.5">
-                  ${escapeHtml(c.level)}${c.matchedDistrict ? ` • ${escapeHtml(c.matchedDistrict)}` : ""} • ${c.entity_count} Reps
+                  ${escapeHtml(c.level)}${c.matchedDistrict ? ` • ${escapeHtml(c.matchedDistrict)}` : ""} • ${c.status === 'unclaimed' ? 'Unclaimed — Request Tracking' : c.entity_count + ' Reps'}
                 </div>
               </div>
               <span class="text-blue-600 font-bold text-sm">Select →</span>
@@ -577,13 +577,26 @@
       const grid = document.getElementById("jurisdictionCardsGrid");
       document.getElementById("jurisdictionCount").textContent = indexData.jurisdictions.length;
 
+      const activeJurs = indexData.jurisdictions.filter(j => (j.status || "active") === "active");
+      const unclaimedJurs = indexData.jurisdictions.filter(j => j.status === "unclaimed");
+      document.getElementById("jurisdictionCount").textContent = activeJurs.length;
+
       select.innerHTML =
         `<option value="">Jump directly to jurisdiction...</option>` +
-        indexData.jurisdictions
+        `<optgroup label="Active Tracked Jurisdictions">` +
+        activeJurs
           .map(j => `<option value="${j.ocd_division_id}">${escapeHtml(j.name)} (${j.level})</option>`)
-          .join("");
+          .join("") +
+        `</optgroup>` +
+        (unclaimedJurs.length
+          ? `<optgroup label="Unclaimed (Request Coverage)">` +
+            unclaimedJurs
+              .map(j => `<option value="${j.ocd_division_id}">${escapeHtml(j.name)} — Request Tracking</option>`)
+              .join("") +
+            `</optgroup>`
+          : "");
 
-      grid.innerHTML = indexData.jurisdictions
+      grid.innerHTML = activeJurs
         .map(
           j => `
           <button
@@ -706,7 +719,47 @@
       return data;
     }
 
+    function openUnclaimedModal(meta) {
+      document.getElementById("unclaimedTitle").textContent = meta.name;
+      document.getElementById("unclaimedDivId").textContent = meta.ocd_division_id;
+      document.getElementById("unclaimedThanksMsg").classList.add("hidden");
+
+      const reqSubject = encodeURIComponent(`City Tracking Request: ${meta.name}`);
+      const reqBody = encodeURIComponent(
+        `Please add ${meta.name} (${meta.ocd_division_id}) to CivicPulse.\n\nOrganization / Role (optional): `
+      );
+      document.getElementById("unclaimedRequestMailto").href = `mailto:requests@civicpulse.local?subject=${reqSubject}&body=${reqBody}`;
+
+      const spSubject = encodeURIComponent(`Priority Onboarding Sponsorship: ${meta.name}`);
+      const spBody = encodeURIComponent(
+        `We are interested in sponsoring priority data onboarding for ${meta.name} (${meta.ocd_division_id}).\n\nOrganization: \nTimeline: `
+      );
+      document.getElementById("unclaimedSponsorMailto").href = `mailto:sponsor@civicpulse.local?subject=${spSubject}&body=${spBody}`;
+
+      const portalEl = document.getElementById("unclaimedPortalLink");
+      if (meta.portal_url) {
+        portalEl.href = meta.portal_url;
+        portalEl.classList.remove("hidden");
+      } else {
+        portalEl.classList.add("hidden");
+      }
+      document.getElementById("unclaimedModal").classList.remove("hidden");
+    }
+
+    function closeUnclaimedModal() {
+      document.getElementById("unclaimedModal").classList.add("hidden");
+    }
+
+    function recordLocalVote() {
+      document.getElementById("unclaimedThanksMsg").classList.remove("hidden");
+    }
+
     async function openJurisdiction(divisionId, defaultTab = "reps", districtHighlight = null) {
+      const meta = indexData.jurisdictions.find(j => j.ocd_division_id === divisionId);
+      if (meta && meta.status === "unclaimed") {
+        openUnclaimedModal(meta);
+        return;
+      }
       const data = await fetchJurisdictionData(divisionId);
       currentJurisdictionData = data;
       highlightedDistrict = districtHighlight;
@@ -1167,5 +1220,55 @@
 
     initApp();
   </script>
+  <!-- Unclaimed Jurisdiction Request / Sponsor Modal -->
+  <div id="unclaimedModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-md w-full p-6 space-y-4">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[11px] font-bold uppercase">Unclaimed Constituency</span>
+          <h3 id="unclaimedTitle" class="text-lg font-bold text-slate-900 mt-1">Jurisdiction Not Yet Tracked</h3>
+          <p class="text-xs text-slate-600 mt-1">
+            We haven't connected this city's agenda & roll-call vote feed yet. Request coverage to prioritize it in our ingestion queue, or sponsor immediate onboarding.
+          </p>
+        </div>
+        <button onclick="closeUnclaimedModal()" class="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 text-xs space-y-1">
+        <div class="text-slate-500">Division ID</div>
+        <div id="unclaimedDivId" class="font-mono text-slate-800 break-all"></div>
+      </div>
+
+      <div class="space-y-2.5 pt-1">
+        <a
+          id="unclaimedRequestMailto"
+          href="#"
+          onclick="recordLocalVote()"
+          class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+        >
+          🗳️ Request Tracking for This City
+        </a>
+        <a
+          id="unclaimedSponsorMailto"
+          href="#"
+          class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 text-sm font-semibold hover:bg-slate-50 transition"
+        >
+          ⚡ Sponsor Priority Onboarding
+        </a>
+        <a
+          id="unclaimedPortalLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden w-full text-center text-xs text-blue-600 hover:underline pt-1 block"
+        >
+          Visit Official Municipal Portal ↗
+        </a>
+      </div>
+      <p id="unclaimedThanksMsg" class="hidden text-xs text-emerald-700 font-semibold text-center">
+        ✓ Demand signal logged! Opening your email client to confirm your request.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
