@@ -61,6 +61,7 @@ def export_all() -> None:
                         "file": None,
                         "entity_count": 0,
                         "event_count": 0,
+                        "docs_since": None,
                         "last_updated": now_iso,
                     }
                 )
@@ -84,9 +85,28 @@ def export_all() -> None:
                 (div_id,),
             ).fetchall()
 
+            earliest_row = conn.execute(
+                """
+                SELECT MIN(dt) AS min_dt FROM (
+                    SELECT MIN(meeting_date) AS dt FROM events
+                    WHERE jurisdiction_id = ? AND meeting_date IS NOT NULL AND meeting_date != ''
+                    UNION ALL
+                    SELECT MIN(meeting_date) AS dt FROM documents
+                    WHERE jurisdiction_id = ? AND meeting_date IS NOT NULL AND meeting_date != ''
+                )
+                """,
+                (div_id, div_id),
+            ).fetchone()
+            docs_since = (
+                earliest_row["min_dt"]
+                if earliest_row and earliest_row["min_dt"]
+                else now_iso
+            )
+
             actions = conn.execute(
                 """
-                SELECT ea.*, e.name AS entity_name, e.district AS entity_district, e.role AS entity_role
+                SELECT ea.*, e.name AS entity_name, e.district AS entity_district,
+                       e.role AS entity_role, e.elected_date AS entity_elected_date
                 FROM entity_actions ea
                 JOIN events ev ON ea.event_id = ev.event_id
                 JOIN entities e ON ea.entity_id = e.ocd_person_id
@@ -122,6 +142,7 @@ def export_all() -> None:
                                 "name": act["entity_name"],
                                 "district": act["entity_district"],
                                 "role": act["entity_role"],
+                                "elected_date": act["entity_elected_date"] or "Active Term",
                                 "vote": act["value"],
                                 "is_pivotal": bool(act["is_pivotal"]),
                                 "rationale_summary": act["rationale_summary"],
@@ -277,6 +298,7 @@ def export_all() -> None:
                         "entity_type": ent["entity_type"],
                         "role": ent["role"],
                         "district": ent["district"],
+                        "elected_date": ent["elected_date"] or "Active Term",
                         "party": ent["party"] or "Nonpartisan",
                         "phone": ent["phone"],
                         "email": ent["email"],
@@ -307,6 +329,7 @@ def export_all() -> None:
                     "lng": j["lng"],
                     "portal_url": j["portal_url"],
                     "parent_division_id": j["parent_division_id"],
+                    "docs_since": docs_since,
                     "last_updated": now_iso,
                 },
                 "entities": exported_entities,
@@ -329,6 +352,7 @@ def export_all() -> None:
                     "file": file_name,
                     "entity_count": len(exported_entities),
                     "event_count": len(exported_events),
+                    "docs_since": docs_since,
                     "last_updated": now_iso,
                 }
             )

@@ -46,6 +46,7 @@ def init_db(db_path: str = DB_PATH) -> None:
                 entity_type TEXT DEFAULT 'legislator',
                 role TEXT,
                 district TEXT,
+                elected_date TEXT,
                 website_url TEXT,
                 portal_url TEXT,
                 party TEXT,
@@ -108,6 +109,7 @@ def init_db(db_path: str = DB_PATH) -> None:
 
         _add_column_if_missing(conn, "jurisdictions", "parent_division_id", "TEXT")
         _add_column_if_missing(conn, "jurisdictions", "status", "TEXT DEFAULT 'active'")
+        _add_column_if_missing(conn, "entities", "elected_date", "TEXT")
         _add_column_if_missing(conn, "entities", "portal_url", "TEXT")
         _add_column_if_missing(conn, "entities", "party", "TEXT")
         _add_column_if_missing(conn, "entities", "phone", "TEXT")
@@ -186,23 +188,23 @@ def seed_fort_collins(db_path: str = DB_PATH) -> None:
         )
 
         council = [
-            ("ocd-person/foco-emily-francis", "Emily Francis", "Mayor", "At-Large"),
-            ("ocd-person/foco-chris-conway", "Chris Conway", "Councilmember", "District 1"),
-            ("ocd-person/foco-julie-pignataro", "Julie Pignataro", "Mayor Pro Tem", "District 2"),
-            ("ocd-person/foco-josh-fudge", "Josh Fudge", "Councilmember", "District 3"),
-            ("ocd-person/foco-melanie-potyondy", "Melanie Potyondy", "Councilmember", "District 4"),
-            ("ocd-person/foco-amy-hoeven", "Amy Hoeven", "Councilmember", "District 5"),
-            ("ocd-person/foco-anne-nelsen", "Anne Nelsen", "Councilmember", "District 6"),
+            ("ocd-person/foco-emily-francis", "Emily Francis", "Mayor", "At-Large", "Nov 2023"),
+            ("ocd-person/foco-chris-conway", "Chris Conway", "Councilmember", "District 1", "Nov 2025"),
+            ("ocd-person/foco-julie-pignataro", "Julie Pignataro", "Mayor Pro Tem", "District 2", "Nov 2023"),
+            ("ocd-person/foco-josh-fudge", "Josh Fudge", "Councilmember", "District 3", "Nov 2025"),
+            ("ocd-person/foco-melanie-potyondy", "Melanie Potyondy", "Councilmember", "District 4", "Nov 2023"),
+            ("ocd-person/foco-amy-hoeven", "Amy Hoeven", "Councilmember", "District 5", "Nov 2025"),
+            ("ocd-person/foco-anne-nelsen", "Anne Nelsen", "Councilmember", "District 6", "Nov 2025"),
         ]
 
-        for pid, name, role, district in council:
+        for pid, name, role, district, edate in council:
             conn.execute(
                 """
                 INSERT OR IGNORE INTO entities (
-                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, website_url
-                ) VALUES (?, ?, ?, 'legislator', ?, ?, 'https://www.fcgov.com/council/')
+                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, elected_date, website_url
+                ) VALUES (?, ?, ?, 'legislator', ?, ?, ?, 'https://www.fcgov.com/council/')
                 """,
-                (pid, foco_div, name, role, district),
+                (pid, foco_div, name, role, district, edate),
             )
 
         conn.commit()
@@ -242,25 +244,26 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
         )
 
         foco_profiles = [
-            ("ocd-person/foco-emily-francis", "Nonpartisan", "(970) 221-6505", "efrancis@fcgov.com"),
-            ("ocd-person/foco-chris-conway", "Nonpartisan", "(970) 221-6505", "cconway@fcgov.com"),
-            ("ocd-person/foco-julie-pignataro", "Nonpartisan", "(970) 221-6505", "jpignataro@fcgov.com"),
-            ("ocd-person/foco-josh-fudge", "Nonpartisan", "(970) 221-6505", "jfudge@fcgov.com"),
-            ("ocd-person/foco-melanie-potyondy", "Nonpartisan", "(970) 221-6505", "mpotyondy@fcgov.com"),
-            ("ocd-person/foco-amy-hoeven", "Nonpartisan", "(970) 221-6505", "ahoeven@fcgov.com"),
-            ("ocd-person/foco-anne-nelsen", "Nonpartisan", "(970) 221-6505", "anelsen@fcgov.com"),
+            ("ocd-person/foco-emily-francis", "Nonpartisan", "(970) 221-6505", "efrancis@fcgov.com", "Nov 2023"),
+            ("ocd-person/foco-chris-conway", "Nonpartisan", "(970) 221-6505", "cconway@fcgov.com", "Nov 2025"),
+            ("ocd-person/foco-julie-pignataro", "Nonpartisan", "(970) 221-6505", "jpignataro@fcgov.com", "Nov 2023"),
+            ("ocd-person/foco-josh-fudge", "Nonpartisan", "(970) 221-6505", "jfudge@fcgov.com", "Nov 2025"),
+            ("ocd-person/foco-melanie-potyondy", "Nonpartisan", "(970) 221-6505", "mpotyondy@fcgov.com", "Nov 2023"),
+            ("ocd-person/foco-amy-hoeven", "Nonpartisan", "(970) 221-6505", "ahoeven@fcgov.com", "Nov 2025"),
+            ("ocd-person/foco-anne-nelsen", "Nonpartisan", "(970) 221-6505", "anelsen@fcgov.com", "Nov 2025"),
         ]
-        for pid, party, phone, email in foco_profiles:
+        for pid, party, phone, email, edate in foco_profiles:
             conn.execute(
                 """
                 UPDATE entities
                 SET party = COALESCE(NULLIF(party, ''), ?),
                     phone = COALESCE(NULLIF(phone, ''), ?),
                     email = COALESCE(NULLIF(email, ''), ?),
+                    elected_date = COALESCE(NULLIF(elected_date, ''), ?),
                     portal_url = COALESCE(NULLIF(portal_url, ''), 'https://www.fcgov.com/council/')
                 WHERE ocd_person_id = ?
                 """,
-                (party, phone, email, pid),
+                (party, phone, email, edate, pid),
             )
 
         conn.execute(
@@ -268,25 +271,34 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
             UPDATE entities
             SET party = COALESCE(NULLIF(party, ''), 'Nonpartisan'),
                 phone = COALESCE(NULLIF(phone, ''), '(720) 337-2000'),
+                elected_date = COALESCE(NULLIF(elected_date, ''), 'Jul 2023'),
                 portal_url = COALESCE(NULLIF(portal_url, ''), 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-City-Council')
             WHERE jurisdiction_id = 'ocd-division/country:us/state:co/place:denver'
             """
         )
 
         larimer_commissioners = [
-            ("ocd-person/larimer-john-kefalas", "John Kefalas", "District 1", "jkefalas@larimer.org"),
-            ("ocd-person/larimer-kristin-stephens", "Kristin Stephens", "District 2", "kstephens@larimer.org"),
-            ("ocd-person/larimer-jody-shadduck-mcnally", "Jody Shadduck-McNally", "District 3", "jshadduckmcnally@larimer.org"),
+            ("ocd-person/larimer-john-kefalas", "John Kefalas", "District 1", "jkefalas@larimer.org", "Nov 2022"),
+            ("ocd-person/larimer-kristin-stephens", "Kristin Stephens", "District 2", "kstephens@larimer.org", "Nov 2024"),
+            ("ocd-person/larimer-jody-shadduck-mcnally", "Jody Shadduck-McNally", "District 3", "jshadduckmcnally@larimer.org", "Nov 2024"),
         ]
-        for pid, name, dist, email in larimer_commissioners:
+        for pid, name, dist, email, edate in larimer_commissioners:
             conn.execute(
                 """
                 INSERT OR IGNORE INTO entities (
                     ocd_person_id, jurisdiction_id, name, entity_type, role,
-                    district, website_url, portal_url, party, phone, email
-                ) VALUES (?, 'ocd-division/country:us/state:co/county:larimer', ?, 'legislator', 'Commissioner', ?, 'https://www.larimer.gov/bocc', 'https://www.larimer.gov/bocc', 'Democratic', '(970) 498-7010', ?)
+                    district, elected_date, website_url, portal_url, party, phone, email
+                ) VALUES (?, 'ocd-division/country:us/state:co/county:larimer', ?, 'legislator', 'Commissioner', ?, ?, 'https://www.larimer.gov/bocc', 'https://www.larimer.gov/bocc', 'Democratic', '(970) 498-7010', ?)
                 """,
-                (pid, name, dist, email),
+                (pid, name, dist, edate, email),
+            )
+            conn.execute(
+                """
+                UPDATE entities
+                SET elected_date = COALESCE(NULLIF(elected_date, ''), ?)
+                WHERE ocd_person_id = ?
+                """,
+                (edate, pid),
             )
 
         conn.commit()
