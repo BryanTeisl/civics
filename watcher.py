@@ -1,104 +1,206 @@
-"""
-Dual-Path Watcher.
-Routes all 6 platform families via adapters/dispatcher.py:
-  - PDFs -> queued in `documents` for RTX 2060 worker.py
-  - Structured JSON votes -> written straight to `events` & `entity_actions` with live metrics
-"""
+import os
+import sqlite3
 from datetime import datetime, timezone
-from db import get_connection, init_db, queue_document
-from adapters.dispatcher import dispatch_jurisdiction
-from metrics import compute_vote_impactfulness, is_vote_pivotal
+from typing import Any, Dict, List
+
+import requests
+
+from boarddocs_adapter import poll_boarddocs_jurisdiction
+from db import DB_PATH, get_connection, init_db, queue_document
+from granicus_adapter import poll_granicus_jurisdiction
+
+try:
+    from primegov_adapter import poll_primegov_jurisdiction
+except ImportError:
+    poll_primegov_jurisdiction = None
 
 
-def _slugify_person(jurisdiction_id: str, name: str) -> str:
-    city_slug = jurisdiction_id.split(":")[-1]
-    name_slug = "".join(c if c.isalnum() else "-" for c in name.lower()).strip("-")
-    return f"ocd-person/{city_slug}-{name_slug}"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; CivicPulseBot/1.0; +https://civics-d03.pages.dev)",
+    "Accept": "application/json, text/html;q=0.9,*/*;q=0.8",
+}
 
 
-def save_structured_events(jurisdiction_id: str, events: list) -> int:
-    conn = get_connection()
-    cur = conn.cursor()
-    saved = 0
+def fetch_active_jurisdictions(db_path: str = DB_PATH) -> List[sqlite3.Row]:
+    conn = get_connection(db_path)
+    try:
+        return conn.execute(
+            """
+            SELECT *
+            FROM jurisdictions
+            WHERE (status IS NULL OR LOWER(status) = 'active')
+              AND LOWER(COALESCE(adapter_type, '')) NOT IN ('', 'none', 'unclaimed')
+            ORDER BY CASE WHEN poll_tier = 'fast' THEN 0 ELSE 1 END, name ASC
+            """
+        ).fetchall()
+    finally:
+        conn.close()
 
+
+def mark_jurisdiction_polled(jurisdiction_id: str, db_path: str = DB_PATH) -> None:
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    conn = get_connection(db_path)
+    try:
+        conn.execute(
+            "UPDATE jurisdictions SET last_polled_at = ? WHERE ocd_division_id = ?",
+            (now_iso, jurisdiction_id),
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def poll_civicclerk(jur: sqlite3.Row, max_events: int = 10) -> int:
+    """Polls a CivicClerk OData Events feed and queues meeting summaries/agendas/minutes."""
+    portal_url = (jur["portal_url"] or "").strip()
+    slug = ""
+    if "portal.civicclerk.com" in portal_url:
+        host_part = portal_url.split("//", 1)[-1].split("/", 1)[0]
+        slug = host_part.split(".portal.civicclerk.com")[0]
+    if not slug:
+        return 0
+
+    api_url = f"https://{slug}.api.civicclerk.com/v1/Events?$top={max_events}&$orderby=startDateTime%20desc"
+    resp = requests.get(api_url, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    events: List[Dict[str, Any]] = resp.json().get("value", [])
+
+    queued = 0
     for ev in events:
-        yes_c = sum(1 for v in ev.votes if v.vote == "Yes")
-        no_c = sum(1 for v in ev.votes if v.vote == "No")
-        abs_c = sum(1 for v in ev.votes if v.vote == "Abstain")
-        absent_c = sum(1 for v in ev.votes if v.vote == "Absent")
-        impact_score, margin, _ = compute_vote_impactfulness(yes_c, no_c, ev.event_type)
+        ev_id = str(ev.get("id") or "")
+        ev_name = (ev.get("eventName") or "Council Meeting").strip()
+        start_dt = str(ev.get("startDateTime") or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-        cur.execute("""
-            INSERT OR REPLACE INTO events
-            (event_id, jurisdiction_id, meeting_date, title, event_type, topic,
-             outcome, yes_count, no_count, abstain_count, absent_count,
-             vote_margin, impact_score, source_url)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            ev.event_id, jurisdiction_id, ev.meeting_date, ev.title, ev.event_type,
-            ev.topic, ev.outcome, yes_c, no_c, abs_c, absent_c, margin,
-            impact_score, ev.source_url,
-        ))
+        files = ev.get("publishedFiles") or []
+        summary_lines = [
+            f"Meeting: {ev_name}",
+            f"Date: {start_dt}",
+            f"Jurisdiction: {jur['name']}",
+        ]
+        for f_item in files:
+            f_name = f_item.get("name") or f_item.get("fileType") or "Document"
+            f_id = f_item.get("fileId")
+            summary_lines.append(f"Attachment: {f_name} (fileId={f_id})")
 
-        for v in ev.votes:
-            person_id = _slugify_person(jurisdiction_id, v.person_name)
-            # Auto-register official if not yet seeded
-            cur.execute("""
-                INSERT OR IGNORE INTO entities
-                (ocd_person_id, jurisdiction_id, name, entity_type, role)
-                VALUES (?, ?, ?, 'legislator', 'Councilmember')
-            """, (person_id, jurisdiction_id, v.person_name))
+        raw_text = "\n".join(summary_lines)
+        inserted = queue_document(
+            jurisdiction_id=jur["ocd_division_id"],
+            doc_type="agenda",
+            title=f"{start_dt} — {ev_name}",
+            source_url=portal_url,
+            raw_text=raw_text,
+            meeting_date=start_dt,
+            external_id=f"civicclerk-{slug}-{ev_id}",
+        )
+        if inserted:
+            queued += 1
 
-            pivotal = is_vote_pivotal(v.vote, yes_c, no_c)
-            cur.execute("""
-                INSERT OR REPLACE INTO entity_actions
-                (event_id, entity_id, action_type, value, is_pivotal, rationale_summary)
-                VALUES (?, ?, 'vote', ?, ?, ?)
-            """, (ev.event_id, person_id, v.vote, pivotal, v.rationale_summary))
-
-        saved += 1
-
-    conn.commit()
-    conn.close()
-    return saved
+    print(f"[WATCH] {jur['name']} (civicclerk) -> Found {len(events)} events, queued {queued} new.")
+    return queued
 
 
-def run_watcher_cycle(tier: str = "fast") -> None:
-    conn = get_connection()
-    rows = conn.execute("SELECT * FROM jurisdictions WHERE poll_tier = ?", (tier,)).fetchall()
-    conn.close()
+def poll_legistar(jur: sqlite3.Row, max_events: int = 10) -> int:
+    """Polls a Legistar REST API client and queues recent events for processing."""
+    portal_url = (jur["portal_url"] or "").strip().lower()
+    client = ""
+    if "coloradosprings.legistar.com" in portal_url:
+        client = "coloradosprings"
+    elif "denver" in portal_url or "denver" in (jur["name"] or "").lower():
+        client = "denver"
+    else:
+        for part in portal_url.replace("https://", "").replace("http://", "").split("/"):
+            if ".legistar.com" in part:
+                client = part.split(".legistar.com")[0]
+                break
+    if not client:
+        return 0
 
-    total_docs, total_events = 0, 0
-    for j in rows:
-        print(f"[WATCH] {j['name']} ({j['adapter_type']})...")
+    api_url = f"https://webapi.legistar.com/v1/{client}/events?$top={max_events}&$orderby=EventDate%20desc"
+    resp = requests.get(api_url, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    items: List[Dict[str, Any]] = resp.json()
+
+    queued = 0
+    for item in items:
+        ev_id = str(item.get("EventId") or "")
+        body_name = (item.get("EventBodyName") or "Legislative Body").strip()
+        ev_date = str(item.get("EventDate") or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        matter_text = (item.get("EventComment") or item.get("EventLocation") or body_name).strip()
+        source_url = item.get("EventAgendaFile") or item.get("EventMinutesFile") or jur["portal_url"]
+
+        raw_text = (
+            f"Body: {body_name}\n"
+            f"Date: {ev_date}\n"
+            f"Details: {matter_text}\n"
+            f"EventId: {ev_id}"
+        )
+        inserted = queue_document(
+            jurisdiction_id=jur["ocd_division_id"],
+            doc_type="minutes" if item.get("EventMinutesFile") else "agenda",
+            title=f"{ev_date} {body_name}: {matter_text[:90]}",
+            source_url=source_url,
+            raw_text=raw_text,
+            meeting_date=ev_date,
+            external_id=f"legistar-{client}-{ev_id}",
+        )
+        if inserted:
+            queued += 1
+
+    print(f"[WATCH] {jur['name']} (legistar) -> Found {len(items)} events, queued {queued} new.")
+    return queued
+
+
+def run_watcher(db_path: str = DB_PATH) -> int:
+    init_db(db_path)
+    jurisdictions = fetch_active_jurisdictions(db_path)
+    total_queued = 0
+
+    for jur in jurisdictions:
+        adapter = (jur["adapter_type"] or "").strip().lower()
+        jur_id = jur["ocd_division_id"]
+        name = jur["name"]
+        portal_url = jur["portal_url"]
+
         try:
-            result = dispatch_jurisdiction(j["adapter_type"], j["portal_url"], days_back=30)
+            if adapter == "civicclerk":
+                total_queued += poll_civicclerk(jur)
+            elif adapter == "legistar":
+                total_queued += poll_legistar(jur)
+            elif adapter == "primegov":
+                if poll_primegov_jurisdiction:
+                    print(f"[WATCH] {name} (primegov)...")
+                    total_queued += poll_primegov_jurisdiction(
+                        jurisdiction_id=jur_id,
+                        name=name,
+                        portal_url=portal_url,
+                    )
+                else:
+                    print(f"  ! primegov_adapter.py not found; skipping {name}")
+            elif adapter == "boarddocs":
+                print(f"[WATCH] {name} (boarddocs)...")
+                total_queued += poll_boarddocs_jurisdiction(
+                    jurisdiction_id=jur_id,
+                    name=name,
+                    portal_url=portal_url,
+                )
+            elif adapter == "granicus":
+                print(f"[WATCH] {name} (granicus)...")
+                total_queued += poll_granicus_jurisdiction(
+                    jurisdiction_id=jur_id,
+                    name=name,
+                    portal_url=portal_url,
+                )
+            else:
+                print(f"  ! Unsupported adapter '{adapter}' for {name}; skipping.")
+                continue
 
-            for doc in result.documents:
-                if queue_document(
-                    j["ocd_division_id"], doc.external_id, doc.meeting_date,
-                    doc.doc_type, doc.title, doc.source_url, doc.raw_text,
-                ):
-                    total_docs += 1
-
-            if result.events:
-                saved = save_structured_events(j["ocd_division_id"], result.events)
-                total_events += saved
-                print(f"  + Saved {saved} structured vote events (GPU bypassed).")
-
-            conn = get_connection()
-            conn.execute(
-                "UPDATE jurisdictions SET last_polled_at = ? WHERE ocd_division_id = ?",
-                (datetime.now(timezone.utc).isoformat(), j["ocd_division_id"]),
-            )
-            conn.commit()
-            conn.close()
+            mark_jurisdiction_polled(jur_id, db_path)
         except Exception as exc:
-            print(f"  ! Error polling {j['name']}: {exc}")
+            print(f"  ! Error polling {name} ({adapter}): {exc}")
 
-    print(f"Watcher complete. Queued PDFs: {total_docs} | Structured Vote Events: {total_events}")
+    print(f"Watcher complete. Queued PDFs/Docs: {total_queued} | Structured Vote Events: 0")
+    return total_queued
 
 
 if __name__ == "__main__":
-    init_db()
-    run_watcher_cycle(tier="fast")
+    run_watcher()
