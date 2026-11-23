@@ -160,9 +160,17 @@
 
       <!-- Indexed Jurisdictions Directory Cards -->
       <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-3">
-          Active Local Governments (<span id="jurisdictionCount">0</span>)
-        </h2>
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500">
+            Active Local Governments (<span id="jurisdictionCount">0</span>)
+          </h2>
+          <div class="flex flex-wrap items-center gap-1.5 text-xs" id="jurLevelFilterBar">
+            <button onclick="setJurLevelFilter('ALL')" data-lvl="ALL" class="jur-lvl-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-semibold">All</button>
+            <button onclick="setJurLevelFilter('municipal')" data-lvl="municipal" class="jur-lvl-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">Cities</button>
+            <button onclick="setJurLevelFilter('county')" data-lvl="county" class="jur-lvl-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">Counties</button>
+            <button onclick="setJurLevelFilter('school_board')" data-lvl="school_board" class="jur-lvl-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">School Boards</button>
+          </div>
+        </div>
         <div id="jurisdictionCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
     </section>
@@ -411,6 +419,11 @@
               <span id="billOutcomeBadge" class="px-2.5 py-0.5 rounded-full font-semibold bg-emerald-100 text-emerald-800"></span>
             </div>
             <h1 id="billTitle" class="text-xl sm:text-2xl font-bold text-slate-900"></h1>
+            <div id="billAgentSummaryBox" class="hidden p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200 text-xs sm:text-sm text-slate-800 space-y-1">
+              <div class="font-bold text-emerald-900 text-xs uppercase tracking-wide">Plain-English Summary</div>
+              <p id="billAgentPlainSummary"></p>
+              <p id="billAgentDiffSummary" class="hidden text-xs text-blue-900 bg-blue-50 border border-blue-200 rounded-lg px-2.5 py-1.5 mt-1.5"></p>
+            </div>
             <p id="billPlainEnglishExplainer" class="text-xs text-slate-600 bg-blue-50/70 border border-blue-100 rounded-lg px-3 py-2"></p>
           </div>
           <a
@@ -687,6 +700,7 @@
     let currentBill = null;
     let highlightedDistrict = null;
     let lastMapClickContext = null; // Stores { lat, lng, districtsByDiv: { [divId]: districtName } }
+    let activeJurLevelFilter = 'ALL';
     const jurisdictionCache = {};
 
     // Initialize App
@@ -1051,12 +1065,25 @@ Please send us the voluntary contribution link or invoice details.`
       document.getElementById("disambiguateModal").classList.add("hidden");
     }
 
+    function setJurLevelFilter(lvl) {
+      activeJurLevelFilter = lvl;
+      document.querySelectorAll(".jur-lvl-btn").forEach(btn => {
+        const isSel = btn.getAttribute("data-lvl") === lvl;
+        btn.className = isSel
+          ? "jur-lvl-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-semibold"
+          : "jur-lvl-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100";
+      });
+      renderMapAndDirectory();
+    }
+
     // Render Gazetteer Map & Jurisdiction Cards (Zero visible polygons or circles)
     function renderMapAndDirectory() {
       const select = document.getElementById("quickJumpSelect");
       const grid = document.getElementById("jurisdictionCardsGrid");
 
-      const activeJurs = indexData.jurisdictions.filter(j => (j.status || "active") === "active");
+      const activeJurs = indexData.jurisdictions.filter(
+        j => (j.status || "active") === "active" && (activeJurLevelFilter === "ALL" || j.level === activeJurLevelFilter)
+      );
       const unclaimedJurs = indexData.jurisdictions.filter(j => j.status === "unclaimed");
       document.getElementById("jurisdictionCount").textContent = activeJurs.length;
 
@@ -1663,6 +1690,21 @@ Timeline: `
       document.getElementById("billTopicBadge").textContent = ev.topic || "General";
       document.getElementById("billOutcomeBadge").textContent = ev.outcome || "Recorded";
       document.getElementById("billTitle").textContent = ev.title;
+      const summaryBox = document.getElementById("billAgentSummaryBox");
+      const plainEl = document.getElementById("billAgentPlainSummary");
+      const diffEl = document.getElementById("billAgentDiffSummary");
+      if (ev.plain_summary || ev.diff_summary) {
+        summaryBox.classList.remove("hidden");
+        plainEl.textContent = ev.plain_summary || "";
+        if (ev.diff_summary) {
+          diffEl.textContent = `What Changed / Prior Context: ${ev.diff_summary}`;
+          diffEl.classList.remove("hidden");
+        } else {
+          diffEl.classList.add("hidden");
+        }
+      } else {
+        summaryBox.classList.add("hidden");
+      }
       document.getElementById("billPlainEnglishExplainer").textContent = getPlainEnglishTypeExplainer(ev.event_type);
       document.getElementById("billSourceLink").href = ev.source_url || jur.portal_url || "#";
 
