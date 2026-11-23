@@ -116,6 +116,10 @@ def init_db(db_path: str = DB_PATH) -> None:
         _add_column_if_missing(conn, "entities", "email", "TEXT")
         _add_column_if_missing(conn, "entities", "social_links_json", "TEXT DEFAULT '{}'")
         _add_column_if_missing(conn, "entities", "bio_extra_json", "TEXT DEFAULT '{}'")
+        _add_column_if_missing(conn, "events", "plain_summary", "TEXT")
+        _add_column_if_missing(conn, "events", "diff_summary", "TEXT")
+        _add_column_if_missing(conn, "events", "qa_status", "TEXT DEFAULT 'verified'")
+
 
         conn.commit()
     finally:
@@ -417,6 +421,121 @@ def seed_public_profiles(db_path: str = DB_PATH) -> None:
                 ) VALUES (?, ?, ?, 'legislator', ?, ?, ?, 'https://greeleyco.gov/city-council/', 'https://greeleyco.portal.civicclerk.com/', 'Nonpartisan', ?, ?)
                 """,
                 (pid, greeley_div, name, role, ward, edate, phone, email),
+            )
+
+
+        # --- EXPANSION: Boulder City Council (PrimeGov) + Boulder County ---
+        boulder_div = "ocd-division/country:us/state:co/place:boulder"
+        boulder_county_div = "ocd-division/country:us/state:co/county:boulder"
+
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO jurisdictions (
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id, status
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active')
+            """,
+            (
+                boulder_div,
+                "Boulder City Council",
+                "municipal",
+                40.0150,
+                -105.2705,
+                "primegov",
+                "https://bouldercolorado.primegov.com/",
+                "fast",
+                boulder_county_div,
+            ),
+        )
+        conn.execute(
+            """
+            UPDATE jurisdictions
+            SET status = 'active', adapter_type = 'primegov', portal_url = 'https://bouldercolorado.primegov.com/', parent_division_id = ?
+            WHERE ocd_division_id = ?
+            """,
+            (boulder_county_div, boulder_div),
+        )
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO jurisdictions (
+                ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, status
+            ) VALUES (?, 'Boulder County Board of Commissioners', 'county', 40.0925, -105.3577, 'unclaimed', 'https://bouldercounty.gov/government/elected-officials/commissioners/', 'slow', 'unclaimed')
+            """,
+            (boulder_county_div,),
+        )
+
+        boulder_council = [
+            ("ocd-person/boulder-aaron-brockett", "Aaron Brockett", "Mayor", "At-Large", "Nov 2023"),
+            ("ocd-person/boulder-nicole-speer", "Nicole Speer", "Mayor Pro Tem", "At-Large", "Nov 2021"),
+            ("ocd-person/boulder-matt-benjamin", "Matt Benjamin", "Councilmember", "At-Large", "Nov 2021"),
+            ("ocd-person/boulder-lauren-folkerts", "Lauren Folkerts", "Councilmember", "At-Large", "Nov 2021"),
+            ("ocd-person/boulder-tina-marquis", "Tina Marquis", "Councilmember", "At-Large", "Nov 2023"),
+            ("ocd-person/boulder-ryan-schuchard", "Ryan Schuchard", "Councilmember", "At-Large", "Nov 2023"),
+            ("ocd-person/boulder-tara-winer", "Tara Winer", "Councilmember", "At-Large", "Nov 2021"),
+            ("ocd-person/boulder-taishya-adams", "Taishya Adams", "Councilmember", "At-Large", "Nov 2023"),
+            ("ocd-person/boulder-mark-wallach", "Mark Wallach", "Councilmember", "At-Large", "Nov 2023"),
+        ]
+        for pid, name, role, dist, edate in boulder_council:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO entities (
+                    ocd_person_id, jurisdiction_id, name, entity_type, role, district, elected_date, website_url, portal_url, party
+                ) VALUES (?, ?, ?, 'legislator', ?, ?, ?, 'https://bouldercolorado.gov/government/city-council', 'https://bouldercolorado.primegov.com/', 'Nonpartisan')
+                """,
+                (pid, boulder_div, name, role, dist, edate),
+            )
+
+
+        # --- EXPANSION: School Boards & Counties ---
+        psd_div = "ocd-division/country:us/state:co/school_district:poudre_r1"
+        bvsd_div = "ocd-division/country:us/state:co/school_district:boulder_valley_re2"
+        d11_div = "ocd-division/country:us/state:co/school_district:colorado_springs_11"
+
+        school_boards = [
+            (
+                psd_div,
+                "Poudre School District Board of Education",
+                "school_board",
+                40.5853,
+                -105.0844,
+                "civicclerk",
+                "https://poudreschools.portal.civicclerk.com/",
+                "slow",
+                "ocd-division/country:us/state:co/county:larimer",
+                "unclaimed",
+            ),
+            (
+                bvsd_div,
+                "Boulder Valley School District Board of Education",
+                "school_board",
+                40.0150,
+                -105.2705,
+                "primegov",
+                "https://bvsd.primegov.com/",
+                "slow",
+                "ocd-division/country:us/state:co/county:boulder",
+                "unclaimed",
+            ),
+            (
+                d11_div,
+                "Colorado Springs School District 11 Board",
+                "school_board",
+                38.8339,
+                -104.8214,
+                "unclaimed",
+                "https://www.d11.org/board-of-education",
+                "slow",
+                "ocd-division/country:us/state:co/county:el_paso",
+                "unclaimed",
+            ),
+        ]
+        for s_div, s_name, s_level, s_lat, s_lng, s_adapter, s_portal, s_tier, s_parent, s_status in school_boards:
+            conn.execute(
+                """
+                INSERT OR IGNORE INTO jurisdictions (
+                    ocd_division_id, name, level, lat, lng, adapter_type, portal_url, poll_tier, parent_division_id, status
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (s_div, s_name, s_level, s_lat, s_lng, s_adapter, s_portal, s_tier, s_parent, s_status),
             )
 
         conn.commit()
