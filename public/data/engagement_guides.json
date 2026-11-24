@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 19:43:24 UTC",
+  "generated_at": "2026-11-24 19:55:42 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -51,71 +51,71 @@
           "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         },
         {
-          "name": "Lauren Folkerts",
-          "role": "Councilmember",
-          "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
-        },
-        {
-          "name": "Mark Wallach",
-          "role": "Councilmember",
-          "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
-        },
-        {
-          "name": "Matt Benjamin",
-          "role": "Councilmember",
-          "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
-        },
-        {
-          "name": "Nicole Speer",
+          "name": "Tara Winer",
           "role": "Mayor Pro Tem",
           "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Mark Wallach",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Matt Benjamin",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Nicole Speer",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Rob Kaplan",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         },
         {
           "name": "Ryan Schuchard",
-          "role": "Councilmember",
-          "district": "At-Large",
+          "role": "Council Member",
+          "district": "Ward 1",
           "email": null,
           "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         },
         {
           "name": "Taishya Adams",
-          "role": "Councilmember",
-          "district": "At-Large",
+          "role": "Council Member",
+          "district": "Ward 1",
           "email": null,
           "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
-        },
-        {
-          "name": "Tara Winer",
-          "role": "Councilmember",
-          "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         },
         {
           "name": "Tina Marquis",
-          "role": "Councilmember",
-          "district": "At-Large",
+          "role": "Council Member",
+          "district": "Ward 1",
           "email": null,
           "phone": null,
-          "website_url": "https://bouldercolorado.gov/government/city-council"
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         }
       ]
     },
@@ -184,12 +184,28 @@
       ],
       "representatives": [
         {
+          "name": "Brandy Williams",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://coloradosprings.legistar.com/"
+        },
+        {
           "name": "Brian Risley",
           "role": "President Pro Tem",
           "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "name": "Dave Donelson",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://coloradosprings.legistar.com/"
         },
         {
           "name": "David Leinweber",
@@ -197,63 +213,47 @@
           "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
-        },
-        {
-          "name": "Lynette Crow-Iverson",
-          "role": "Council President",
-          "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
-        },
-        {
-          "name": "Dave Donelson",
-          "role": "Councilmember",
-          "district": "District 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
         },
         {
           "name": "Ken Casey",
           "role": "Councilmember",
-          "district": "District 2",
+          "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
-        },
-        {
-          "name": "Brandy Williams",
-          "role": "Councilmember",
-          "district": "District 3",
-          "email": null,
-          "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
         },
         {
           "name": "Kimberly Gold",
           "role": "Councilmember",
-          "district": "District 4",
+          "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "name": "Lynette Crow-Iverson",
+          "role": "President",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://coloradosprings.legistar.com/"
         },
         {
           "name": "Nancy Henjum",
           "role": "Councilmember",
-          "district": "District 5",
+          "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
         },
         {
           "name": "Roland Rainey Jr.",
           "role": "Councilmember",
-          "district": "District 6",
+          "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": "https://coloradosprings.gov/city-council"
+          "website_url": "https://coloradosprings.legistar.com/"
         }
       ]
     },
@@ -297,92 +297,108 @@
       "recent_agendas_and_docs": [],
       "representatives": [
         {
-          "name": "Amanda Sandoval",
-          "role": "Councilmember",
-          "district": null,
+          "name": "Sarah Parady",
+          "role": "Council member",
+          "district": "At-Large",
           "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Amanda Sawyer",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Chris Hinds",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Darrell Watson",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Diana Romero Campbell",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Flor Alvidrez",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Jamie Torres",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
-        },
-        {
-          "name": "Kevin Flynn",
-          "role": "Councilmember",
-          "district": null,
-          "email": null,
-          "phone": "(720) 337-2000",
-          "website_url": null
+          "phone": null,
+          "website_url": "https://denver.legistar.com/"
         },
         {
           "name": "Serena Gonzales-Gutierrez",
-          "role": "Councilmember",
-          "district": null,
+          "role": "Council member",
+          "district": "At-Large",
           "email": null,
           "phone": "(720) 337-2000",
-          "website_url": null
+          "website_url": "https://denver.legistar.com/"
         },
         {
-          "name": "Shontel Lewis",
-          "role": "Councilmember",
-          "district": null,
+          "name": "Chris Hinds",
+          "role": "Council member",
+          "district": "District 10",
           "email": null,
           "phone": "(720) 337-2000",
-          "website_url": null
+          "website_url": "https://denver.legistar.com/"
         },
         {
           "name": "Stacie Gilmore",
-          "role": "Councilmember",
-          "district": null,
+          "role": "Council member",
+          "district": "District 11",
           "email": null,
           "phone": "(720) 337-2000",
-          "website_url": null
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Kevin Flynn",
+          "role": "Council member",
+          "district": "District 2",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Jamie Torres",
+          "role": "Council member",
+          "district": "District 3",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Diana Romero Campbell",
+          "role": "Chair",
+          "district": "District 4",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Amanda Sawyer",
+          "role": "Council member",
+          "district": "District 5",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Paul Kashmann",
+          "role": "Council member",
+          "district": "District 6",
+          "email": null,
+          "phone": null,
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Flor Alvidrez",
+          "role": "Council member",
+          "district": "District 7",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Shontel Lewis",
+          "role": "Council member",
+          "district": "District 8",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Darrell Watson",
+          "role": "Council member",
+          "district": "District 9",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
+        },
+        {
+          "name": "Amanda Sandoval",
+          "role": "Council member",
+          "district": "District1",
+          "email": null,
+          "phone": "(720) 337-2000",
+          "website_url": "https://denver.legistar.com/"
         }
       ]
     },
@@ -429,7 +445,64 @@
           "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2958_A_Airport_Economic_Development_Advisory_Board_26-07-16_Meeting_Agenda.pdf"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Andrew Moore",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "Anil Pesaramelli",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "Brandon Bell",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "Brian O'Connor",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "Dan Hoback",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "Emily Baer",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        },
+        {
+          "name": "John Mortellaro",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://erie.legistar.com/"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:fort_collins": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
@@ -476,55 +549,55 @@
           "district": "At-Large",
           "email": "efrancis@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
-        },
-        {
-          "name": "Chris Conway",
-          "role": "Councilmember",
-          "district": "District 1",
-          "email": "cconway@fcgov.com",
-          "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         },
         {
           "name": "Julie Pignataro",
           "role": "Mayor Pro Tem",
-          "district": "District 2",
+          "district": "At-Large",
           "email": "jpignataro@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+        },
+        {
+          "name": "Chris Conway",
+          "role": "Council Member",
+          "district": "District 1",
+          "email": "cconway@fcgov.com",
+          "phone": "(970) 221-6505",
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         },
         {
           "name": "Josh Fudge",
-          "role": "Councilmember",
+          "role": "Council Member",
           "district": "District 3",
           "email": "jfudge@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         },
         {
           "name": "Melanie Potyondy",
-          "role": "Councilmember",
+          "role": "Council Member",
           "district": "District 4",
           "email": "mpotyondy@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         },
         {
           "name": "Amy Hoeven",
-          "role": "Councilmember",
+          "role": "Council Member",
           "district": "District 5",
           "email": "ahoeven@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         },
         {
           "name": "Anne Nelsen",
-          "role": "Councilmember",
+          "role": "Council Member",
           "district": "District 6",
           "email": "anelsen@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://www.fortcollins.gov/Government/City-Council"
+          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
         }
       ]
     },
@@ -568,57 +641,57 @@
       "recent_agendas_and_docs": [],
       "representatives": [
         {
-          "name": "Dale Hall",
-          "role": "Mayor",
-          "district": "At-Large",
-          "email": "Dale.Hall@greeleygov.com",
-          "phone": "970-657-0310",
-          "website_url": "https://greeleyco.gov/city-council/"
-        },
-        {
-          "name": "Melissa McDonald",
-          "role": "Councilmember",
-          "district": "At-Large",
-          "email": "Melissa.McDonald@Greeleygov.com",
-          "phone": "970-657-7821",
-          "website_url": "https://greeleyco.gov/city-council/"
-        },
-        {
           "name": "Ryan Roth",
-          "role": "Councilmember",
-          "district": "At-Large",
+          "role": "Council Member",
+          "district": "At Large - Term: 2025-2029",
           "email": "Ryan.Roth@greeleygov.com",
           "phone": "970-888-1191",
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
+          "name": "Melissa McDonald",
+          "role": "Mayor Pro Tem",
+          "district": "Term: 2023-2027",
+          "email": "Melissa.McDonald@Greeleygov.com",
+          "phone": "970-657-7821",
+          "website_url": "https://greeleyco.gov/city-council/"
+        },
+        {
+          "name": "Dale Hall",
+          "role": "Mayor",
+          "district": "Term: 2025-2027",
+          "email": "Dale.Hall@greeleygov.com",
+          "phone": "970-657-0310",
+          "website_url": "https://greeleyco.gov/city-council/"
+        },
+        {
           "name": "Craig Huddleston",
-          "role": "Councilmember",
-          "district": "Ward I",
+          "role": "Council Member",
+          "district": "Ward I - May 19, 2026-2027",
           "email": "Craig.Huddleston@greeleygov.com",
           "phone": "970-381-7918",
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
           "name": "Deb DeBoutez",
-          "role": "Councilmember",
-          "district": "Ward II",
+          "role": "Council Member",
+          "district": "Ward II - Term: 2025-2029",
           "email": "Deb.Deboutez@greeleygov.com",
           "phone": "970-336-4296",
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
           "name": "Johnny Olson",
-          "role": "Councilmember",
-          "district": "Ward III",
+          "role": "Council Member",
+          "district": "Ward III - Term: 2025-2029",
           "email": "Johnny.Olson@greeleygov.com",
           "phone": "970-336-4293",
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
           "name": "Brian Rudy",
-          "role": "Councilmember",
-          "district": "Ward IV",
+          "role": "Council Member",
+          "district": "Ward IV - Term: 2025-2027",
           "email": "Brian.Rudy@greeleygov.com",
           "phone": "970-888-1885",
           "website_url": "https://greeleyco.gov/city-council/"
@@ -668,7 +741,64 @@
           "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15506&meetingId=3435"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Crystal Prieto",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Jake Marsing",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Sean McCoy",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Susie Hidalgo-Fahring",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Diane Crist",
+          "role": "Ward 1 Representative",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Matthew Popkin",
+          "role": "Ward 2 Representative",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        },
+        {
+          "name": "Alex Kalkhofer",
+          "role": "Ward 3 Representative",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:thornton": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
@@ -713,7 +843,80 @@
           "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17856"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Jan Kulmann",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Cherish Salazar",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Justin Martinez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "John Alge",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Roberta Ayala",
+          "role": "Mayor Pro Tem",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "David Acu\u00f1a",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Devin Byrd",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Chris Russell",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        },
+        {
+          "name": "Drew Morris",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.thorntonco.gov/government/mayor-council"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:westminster": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:westminster",
@@ -758,7 +961,64 @@
           "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10413"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Claire Carmelia",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Sarah Nurmela",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Obi Ezeadi",
+          "role": "City Councillor",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Amber Hott",
+          "role": "City Councillor",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Kristine Ireland",
+          "role": "City Councillor",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Jack Johnson",
+          "role": "City Councillor",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Adam Barajas",
+          "role": "City Councillor",
+          "district": "Ward 5",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:windsor": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
@@ -798,7 +1058,64 @@
         }
       ],
       "recent_agendas_and_docs": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Julie Cline",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Ron Steinbach",
+          "role": "Council Member",
+          "district": "District 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Brian Jones",
+          "role": "Council Member",
+          "district": "District 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Lainie Peltz",
+          "role": "Council Member",
+          "district": "District 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Ken Symsack",
+          "role": "Council Member",
+          "district": "District 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Rick Klimek",
+          "role": "Council Member",
+          "district": "District 5",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        },
+        {
+          "name": "Jason Hallett",
+          "role": "Council Member",
+          "district": "District 6",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
+        }
+      ]
     }
   }
 }
