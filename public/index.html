@@ -15,16 +15,16 @@
     .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   </style>
 </head>
-<body class="bg-[#90b3b0] text-black min-h-screen flex flex-col">
+<body class="bg-[#8e89a0] text-black min-h-screen flex flex-col">
 
   <!-- Top Navigation -->
-  <header class="bg-[#6a7635] text-white border-b border-[#845d23] sticky top-0 z-30">
+  <header class="bg-[#10201a] text-white border-b border-[#142f31] sticky top-0 z-30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
       <button onclick="navigateHome()" class="flex items-center gap-2.5 text-left group">
-        <span class="w-8 h-8 rounded-lg bg-[#5a815e] text-black border border-black/25 font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
+        <span class="w-8 h-8 rounded-lg bg-[#264461] text-white border border-white/20 font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
         <div>
-          <span class="font-bold text-white tracking-tight text-lg group-hover:text-[#90b3b0] transition">CivicPulse</span>
-          <span class="hidden sm:inline-block ml-2 text-[11px] font-medium px-2 py-0.5 rounded-full bg-[#845d23] text-white border border-white/15">Public Record Explorer</span>
+          <span class="font-bold text-white tracking-tight text-lg group-hover:text-[#8e89a0] transition">CivicPulse</span>
+          <span class="hidden sm:inline-block ml-2 text-[11px] font-medium px-2 py-0.5 rounded-full bg-[#142f31] text-white border border-white/15">Public Record Explorer</span>
         </div>
       </button>
 
@@ -34,21 +34,21 @@
           id="globalSearchInput"
           type="search"
           placeholder="Search measures, ordinances, councilmembers, quotes..."
-          class="w-full rounded-xl border border-black/25 bg-[#c7d8d6] px-3.5 py-1.5 text-sm text-black placeholder:text-black/60 focus:bg-white focus:border-black focus:outline-none"
+          class="w-full rounded-xl border border-[#626784] bg-[#cbc8d4] px-3.5 py-1.5 text-sm text-black placeholder:text-black/60 focus:bg-white focus:border-[#264461] focus:outline-none"
         />
-        <div id="globalSearchResults" class="hidden absolute left-0 right-0 mt-1.5 bg-[#c7d8d6] rounded-xl border border-black/25 shadow-xl text-black max-h-96 overflow-y-auto z-40 divide-y divide-slate-100"></div>
+        <div id="globalSearchResults" class="hidden absolute left-0 right-0 mt-1.5 bg-[#cbc8d4] rounded-xl border border-[#142f31]/30 shadow-xl text-black max-h-96 overflow-y-auto z-40 divide-y divide-slate-100"></div>
       </div>
 
       <div class="flex items-center gap-2">
         <button
           onclick="openModal('measures101Modal')"
-          class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-white/20 bg-[#845d23] text-xs font-semibold text-white hover:bg-[#5a815e] hover:text-black transition"
+          class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-white/20 bg-[#142f31] text-xs font-semibold text-white hover:bg-[#264461] transition"
         >
           📘 Local Measures 101
         </button>
         <button
           onclick="openModal('patronModal')"
-          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#5a815e] text-black border border-black/25 text-xs font-semibold hover:bg-[#68947c] transition shadow-sm"
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#264461] text-white border border-white/25 text-xs font-semibold hover:bg-[#142f31] transition shadow-sm"
         >
           🤝 Support / Patron
         </button>
@@ -61,8 +61,8 @@
 
     <!-- HOME VIEW: Map + Address Lookup + Multi-Tier Directory -->
     <section id="homeView" class="space-y-6">
-      <div class="bg-[#c7d8d6] rounded-2xl border border-black/20 shadow-sm overflow-hidden">
-        <div class="p-4 sm:p-5 border-b border-black/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 shadow-sm overflow-hidden">
+        <div class="p-4 sm:p-5 border-b border-[#10201a]/20 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <h1 class="text-xl sm:text-2xl font-bold text-black">Explore Your Local Governments</h1>
             <p class="text-sm text-black/75 mt-0.5">Click anywhere on the map or enter a street address to check city, county, school board, and federal representation.</p>
@@ -78,7 +78,7 @@
             <button
               type="submit"
               id="addressLookupBtn"
-              class="px-4 py-2 rounded-xl bg-[#5a815e] text-black border border-black/25 text-sm font-semibold hover:bg-[#68947c] transition whitespace-nowrap"
+              class="px-4 py-2 rounded-xl bg-[#142f31] text-white text-sm font-semibold hover:bg-[#10201a] transition whitespace-nowrap"
             >
               Find My Districts
             </button>
@@ -88,7 +88,7 @@
         <!-- Pin-Free OpenStreetMap / Esri Light Gray Gazetteer -->
         <div class="relative">
           <div id="map"></div>
-          <div class="bg-[#68947c]/55 px-4 py-2 border-t border-black/15 text-black flex flex-wrap items-center justify-between gap-2 text-xs text-black/65">
+          <div class="bg-[#b8b4c4] px-4 py-2 border-t border-[#10201a]/20 text-black flex flex-wrap items-center justify-between gap-2 text-xs text-black/65">
             <span>Tip: Click anywhere on the map to resolve overlapping city, county, school district, and congressional boundaries.</span>
             <span id="lastUpdatedBadge">Loading index...</span>
           </div>
@@ -96,10 +96,10 @@
       </div>
 
       <!-- Overlapping Constituency Selector Banner (shown on map click / address match) -->
-      <div id="overlapBanner" class="hidden bg-[#68947c]/45 border border-black/20 rounded-2xl p-4 sm:p-5 space-y-3">
+      <div id="overlapBanner" class="hidden bg-[#b8b4c4] border border-[#10201a]/30 rounded-2xl p-4 sm:p-5 space-y-3">
         <div class="flex items-start justify-between gap-3">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-black">Resolved Location & Overlapping Governments</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-[#10201a]">Resolved Location & Overlapping Governments</div>
             <h2 id="overlapLocationTitle" class="text-base font-bold text-black mt-0.5">Selected Location</h2>
           </div>
           <button onclick="document.getElementById('overlapBanner').classList.add('hidden')" class="text-xs text-black/65 hover:text-black">Dismiss ✕</button>
@@ -110,21 +110,21 @@
       <!-- Multi-Tier Filter Pills + Quick Jump -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div class="flex flex-wrap items-center gap-2" id="levelFilterPills">
-          <button onclick="setLevelFilter('all')" data-level="all" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#5a815e] text-black border border-black/25 shadow-sm">
+          <button onclick="setLevelFilter('all')" data-level="all" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#142f31] text-white shadow-sm">
             All (<span id="countAll">0</span>)
           </button>
-          <button onclick="setLevelFilter('municipality')" data-level="municipality" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#c7d8d6] border border-black/20 text-black hover:bg-[#68947c]/55">
+          <button onclick="setLevelFilter('municipality')" data-level="municipality" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#cbc8d4] border border-[#10201a]/25 text-black hover:bg-[#b8b4c4]">
             Cities & Towns (<span id="countCity">0</span>)
           </button>
-          <button onclick="setLevelFilter('county')" data-level="county" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#c7d8d6] border border-black/20 text-black hover:bg-[#68947c]/55">
+          <button onclick="setLevelFilter('county')" data-level="county" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#cbc8d4] border border-[#10201a]/25 text-black hover:bg-[#b8b4c4]">
             Counties (<span id="countCounty">0</span>)
           </button>
-          <button onclick="setLevelFilter('school_district')" data-level="school_district" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#c7d8d6] border border-black/20 text-black hover:bg-[#68947c]/55">
+          <button onclick="setLevelFilter('school_district')" data-level="school_district" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#cbc8d4] border border-[#10201a]/25 text-black hover:bg-[#b8b4c4]">
             School Boards (<span id="countSchool">0</span>)
           </button>
         </div>
 
-        <select id="quickJumpSelect" onchange="if(this.value) openJurisdiction(this.value)" class="rounded-xl border border-black/25 bg-[#c7d8d6] px-3 py-1.5 text-xs font-medium text-black focus:border-blue-500 focus:outline-none">
+        <select id="quickJumpSelect" onchange="if(this.value) openJurisdiction(this.value)" class="rounded-xl border border-[#10201a]/30 bg-[#cbc8d4] px-3 py-1.5 text-xs font-medium text-black focus:border-blue-500 focus:outline-none">
           <option value="">Jump directly to jurisdiction...</option>
         </select>
       </div>
@@ -139,7 +139,7 @@
       </div>
 
       <!-- Unclaimed Demand-Capture Funnel -->
-      <div id="unclaimedSection" class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 space-y-3">
+      <div id="unclaimedSection" class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 space-y-3">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 class="text-base font-bold text-black">Unclaimed Jurisdictions & Community Requests</h2>
@@ -154,16 +154,16 @@
     <!-- JURISDICTION HUB VIEW (#/jur/...) -->
     <section id="jurisdictionView" class="hidden space-y-6">
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <button onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 font-semibold hover:underline">← Back to Map & Directory</button>
+        <button onclick="navigateHome()" class="text-xs font-semibold text-[#10201a] underline decoration-black/40 font-semibold hover:underline">← Back to Map & Directory</button>
         <div id="jurBreadcrumbs" class="text-xs text-black/65"></div>
       </div>
 
       <!-- Jurisdiction Header Card -->
-      <div class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-4">
+      <div class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 shadow-sm space-y-4">
         <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
           <div class="space-y-1.5">
             <div class="flex flex-wrap items-center gap-2">
-              <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-[#5a815e] text-black border border-black/20">City</span>
+              <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-[#264461] text-white">City</span>
               <span id="jurDocsSinceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-black/85">Docs since —</span>
             </div>
             <h1 id="jurTitle" class="text-2xl font-bold text-black">Jurisdiction Name</h1>
@@ -173,7 +173,7 @@
             <a id="jurPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 bg-white text-xs font-semibold text-black hover:bg-slate-50 transition">
               Official Portal ↗
             </a>
-            <button onclick="scrollToEngagementGuide()" class="px-3.5 py-2 rounded-xl bg-[#5a815e] text-black border border-black/25 text-xs font-semibold hover:bg-[#68947c] transition">
+            <button onclick="scrollToEngagementGuide()" class="px-3.5 py-2 rounded-xl bg-[#142f31] text-white text-xs font-semibold hover:bg-[#10201a] transition">
               📣 How to Engage
             </button>
           </div>
@@ -181,32 +181,32 @@
       </div>
 
       <!-- AGENT 3: Civic Literacy & "How to Engage" Guide Card -->
-      <div id="engagementGuideCard" class="bg-[#68947c]/45 border border-black/20 rounded-2xl p-5 sm:p-6 space-y-4">
+      <div id="engagementGuideCard" class="bg-[#b8b4c4] border border-[#10201a]/30 rounded-2xl p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-black">Civic Literacy & Participation Guide</span>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#10201a]">Civic Literacy & Participation Guide</span>
             <h2 class="text-lg font-bold text-black">How to Engage & Upcoming / Recent Meetings</h2>
           </div>
-          <a id="engageOfficialPortalBtn" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-black hover:underline">
+          <a id="engageOfficialPortalBtn" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-[#10201a] hover:underline">
             Verify Schedule & Public Comment Rules ↗
           </a>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <!-- Column 1: Neutral Participation Checklist -->
-          <div class="bg-[#c7d8d6] rounded-xl border border-black/20 p-4 space-y-2.5">
+          <div class="bg-[#cbc8d4] rounded-xl border border-[#10201a]/20 p-4 space-y-2.5">
             <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">Resident Action Checklist</h3>
             <ol id="engageChecklist" class="list-decimal list-inside space-y-2 text-xs text-black/85 leading-relaxed"></ol>
           </div>
 
           <!-- Column 2: Upcoming Meetings & Recent Agendas -->
-          <div class="bg-[#c7d8d6] rounded-xl border border-black/20 p-4 space-y-2.5">
+          <div class="bg-[#cbc8d4] rounded-xl border border-[#10201a]/20 p-4 space-y-2.5">
             <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">Upcoming & Recent Agendas</h3>
             <div id="engageMeetingsList" class="space-y-2 text-xs"></div>
           </div>
 
           <!-- Column 3: Official Contact Channels -->
-          <div class="bg-[#c7d8d6] rounded-xl border border-black/20 p-4 space-y-2.5">
+          <div class="bg-[#cbc8d4] rounded-xl border border-[#10201a]/20 p-4 space-y-2.5">
             <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">All Representative Contact Channels</h3>
             <div id="engageContactsList" class="space-y-2 text-xs"></div>
           </div>
@@ -218,20 +218,20 @@
       </div>
 
       <!-- AGENT 4: Cross-Meeting Bill Lifecycles (shown when multi-stage items exist) -->
-      <div id="jurLifecyclesCard" class="hidden bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 space-y-4">
+      <div id="jurLifecyclesCard" class="hidden bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 space-y-4">
         <div class="flex items-center justify-between">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-black">Cross-Meeting Tracker</span>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#10201a]">Cross-Meeting Tracker</span>
             <h2 class="text-lg font-bold text-black">Multi-Meeting Bill & Measure Lifecycles</h2>
             <p class="text-xs text-stone-600 mt-0.5">Connects related agenda items, readings, and follow-up votes across meetings so residents can see how a proposal progressed.</p>
           </div>
-          <span id="jurLifecyclesCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-black">0 chains</span>
+          <span id="jurLifecyclesCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-[#10201a]">0 chains</span>
         </div>
         <div id="jurLifecyclesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
       </div>
 
       <!-- Representatives Roster -->
-      <div class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 space-y-4">
+      <div class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 class="text-lg font-bold text-black">Elected Representatives & Voting Metrics</h2>
@@ -242,7 +242,7 @@
       </div>
 
       <!-- Recorded Measures & Votes -->
-      <div class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 space-y-4">
+      <div class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 class="text-lg font-bold text-black">Measures, Ordinances & Roll-Call Votes</h2>
@@ -250,7 +250,7 @@
           </div>
           <div class="flex items-center gap-2">
             <label for="eventSortSelect" class="text-xs text-black/65">Sort:</label>
-            <select id="eventSortSelect" onchange="renderJurisdictionEvents()" class="rounded-xl border border-black/25 bg-[#c7d8d6] px-3 py-1.5 text-xs font-medium text-black">
+            <select id="eventSortSelect" onchange="renderJurisdictionEvents()" class="rounded-xl border border-[#10201a]/30 bg-[#cbc8d4] px-3 py-1.5 text-xs font-medium text-black">
               <option value="date_desc">Newest First</option>
               <option value="impact_desc">Highest Impact Score</option>
               <option value="closest_margin">Closest Vote Margin</option>
@@ -263,21 +263,21 @@
 
     <!-- REPRESENTATIVE PROFILE VIEW (#/rep/...) -->
     <section id="repView" class="hidden space-y-6">
-      <button id="repBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 font-semibold hover:underline">← Back to Jurisdiction</button>
-      <div id="repProfileContent" class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
+      <button id="repBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-[#10201a] underline decoration-black/40 font-semibold hover:underline">← Back to Jurisdiction</button>
+      <div id="repProfileContent" class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 shadow-sm space-y-5"></div>
     </section>
 
     <!-- BILL / MEASURE DETAIL VIEW (#/bill/...) -->
     <section id="billView" class="hidden space-y-6">
-      <button id="billBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 font-semibold hover:underline">← Back to Jurisdiction</button>
-      <div id="billDetailContent" class="bg-[#c7d8d6] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
+      <button id="billBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-[#10201a] underline decoration-black/40 font-semibold hover:underline">← Back to Jurisdiction</button>
+      <div id="billDetailContent" class="bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-5 sm:p-6 shadow-sm space-y-5"></div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#6a7635] text-white border-t border-[#845d23] mt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/85">
+  <footer class="bg-[#10201a] text-white border-t border-[#142f31] mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/80">
       <div>
         <strong class="text-white">CivicPulse</strong> — Free public-record navigation for residents & newcomers.
       </div>
@@ -302,7 +302,7 @@
         <p><strong>Impact Score (0–100):</strong> A transparent, auditable score weighing fiscal/budget scope, citywide vs. localized reach, contested vote margins, and structural policy change—never partisan ideology.</p>
       </div>
       <div class="pt-2 text-right">
-        <button onclick="closeModal('measures101Modal')" class="px-4 py-2 rounded-xl bg-[#5a815e] text-black border border-black/25 text-xs font-semibold">Got It</button>
+        <button onclick="closeModal('measures101Modal')" class="px-4 py-2 rounded-xl bg-[#142f31] text-white text-xs font-semibold">Got It</button>
       </div>
     </div>
   </div>
@@ -348,13 +348,13 @@
         <div id="unclaimedDivId" class="font-mono text-black break-all"></div>
       </div>
       <div class="space-y-2.5 pt-1">
-        <a id="unclaimedRequestMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#5a815e] text-black border border-black/25 text-sm font-semibold hover:bg-blue-700 transition">
+        <a id="unclaimedRequestMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#142f31] text-white text-sm font-semibold hover:bg-blue-700 transition">
           🗳️ Request Tracking for This Jurisdiction
         </a>
         <a id="unclaimedSponsorMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-black text-sm font-semibold hover:bg-slate-50 transition">
           ⚡ Sponsor Priority Onboarding
         </a>
-        <a id="unclaimedPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full text-center text-xs text-black underline decoration-black/40 font-semibold hover:underline pt-1 block">
+        <a id="unclaimedPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full text-center text-xs text-[#10201a] underline decoration-black/40 font-semibold hover:underline pt-1 block">
           Visit Official Portal ↗
         </a>
       </div>
@@ -464,7 +464,7 @@
               onclick="selectSearchHit('${item.type}', '${escapeHtml(item.id)}', '${escapeHtml(item.jurId || "")}')"
               class="w-full text-left px-3.5 py-2.5 hover:bg-slate-50 transition block"
             >
-              <div class="text-[10px] font-bold uppercase tracking-wider text-black underline decoration-black/40 font-semibold">${escapeHtml(item.type)}</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-[#10201a] underline decoration-black/40 font-semibold">${escapeHtml(item.type)}</div>
               <div class="text-xs font-semibold text-black line-clamp-2">${escapeHtml(item.title)}</div>
               <div class="text-[11px] text-black/65 mt-0.5">${escapeHtml(item.subtitle)}</div>
             </button>
@@ -494,8 +494,8 @@
       document.querySelectorAll(".level-pill").forEach(btn => {
         const active = btn.dataset.level === level;
         btn.className = active
-          ? "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#5a815e] text-black border border-black/25 shadow-sm"
-          : "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#c7d8d6] border border-black/20 text-black hover:bg-[#68947c]/55";
+          ? "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#142f31] text-white shadow-sm"
+          : "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#cbc8d4] border border-[#10201a]/25 text-black hover:bg-[#b8b4c4]";
       });
       renderMapAndDirectory();
     }
@@ -540,14 +540,14 @@
           return `
             <button
               onclick="openJurisdiction('${escapeHtml(j.ocd_division_id)}')"
-              class="text-left bg-[#c7d8d6] rounded-2xl border border-black/20 p-4 hover:border-black hover:bg-[#68947c]/45 hover:shadow-sm transition flex flex-col justify-between gap-3"
+              class="text-left bg-[#cbc8d4] rounded-2xl border border-[#10201a]/25 p-4 hover:border-[#10201a] hover:bg-[#b8b4c4] hover:shadow-sm transition flex flex-col justify-between gap-3"
             >
               <div>
                 <div class="flex items-center justify-between gap-2 mb-1.5">
                   <span class="px-2 py-0.5 rounded text-[11px] font-semibold uppercase ${
-                    j.level === "county" ? "bg-[#845d23] text-white" :
-                    j.level === "school_district" ? "bg-[#6a7635] text-white" :
-                    "bg-[#5a815e] text-black border border-black/20"
+                    j.level === "county" ? "bg-[#142f31] text-white" :
+                    j.level === "school_district" ? "bg-[#10201a] text-white" :
+                    "bg-[#264461] text-white"
                   }">${escapeHtml(j.level.replace("_", " "))}</span>
                   <span class="text-[11px] text-black/65">Docs since ${escapeHtml(j.docs_since || "2026")}</span>
                 </div>
@@ -555,8 +555,8 @@
               </div>
               <div class="flex items-center justify-between text-xs text-black/75 pt-2.5 border-t border-slate-100">
                 <span><strong>${j.entity_count || 0}</strong> Reps</span>
-                <span>${hasVotes ? `<strong>${j.event_count}</strong> Vote Events` : `<span class="px-2 py-0.5 rounded bg-[#68947c] text-black border border-black/20 font-medium">Pending ingestion</span>`}</span>
-                <span class="text-black underline decoration-black/40 font-semibold font-semibold">Open →</span>
+                <span>${hasVotes ? `<strong>${j.event_count}</strong> Vote Events` : `<span class="px-2 py-0.5 rounded bg-[#626784] text-white font-medium">Pending ingestion</span>`}</span>
+                <span class="text-[#10201a] underline decoration-black/40 font-semibold font-semibold">Open →</span>
               </div>
             </button>
           `;
@@ -568,11 +568,11 @@
       unclaimedGrid.innerHTML = unclaimedAll.map(j => `
         <button
           onclick="openUnclaimedModal('${escapeHtml(j.ocd_division_id)}')"
-          class="text-left rounded-xl border border-slate-200 bg-[#c7d8d6] p-3 hover:border-blue-400 hover:bg-white transition"
+          class="text-left rounded-xl border border-slate-200 bg-[#b8b4c4] p-3 hover:border-blue-400 hover:bg-white transition"
         >
           <div class="text-[10px] font-bold uppercase text-black/65">${escapeHtml(j.level.replace("_", " "))}</div>
           <div class="text-xs font-bold text-black mt-0.5">${escapeHtml(j.name)}</div>
-          <div class="text-[11px] text-black underline decoration-black/40 font-semibold font-semibold mt-1.5">+ Request Tracking</div>
+          <div class="text-[11px] text-[#10201a] underline decoration-black/40 font-semibold font-semibold mt-1.5">+ Request Tracking</div>
         </button>
       `).join("");
 
@@ -651,11 +651,11 @@
         cardsList.innerHTML = matchedJurs.map(j => `
           <button
             onclick="openJurisdiction('${escapeHtml(j.ocd_division_id)}')"
-            class="text-left bg-[#c7d8d6] rounded-xl border border-black/20 p-3 hover:border-blue-700 transition shadow-sm"
+            class="text-left bg-[#b8b4c4] rounded-xl border border-[#10201a]/25 p-3 hover:border-blue-700 transition shadow-sm"
           >
-            <div class="text-[10px] font-bold uppercase text-black">${escapeHtml(j.level.replace("_", " "))} • ${escapeHtml(j.status)}</div>
+            <div class="text-[10px] font-bold uppercase text-[#10201a]">${escapeHtml(j.level.replace("_", " "))} • ${escapeHtml(j.status)}</div>
             <div class="text-xs font-bold text-black mt-0.5">${escapeHtml(j.name)}</div>
-            <div class="text-[11px] text-black underline decoration-black/40 font-semibold font-semibold mt-1">${j.status === "active" ? "Inspect Votes & Guide →" : "Request Tracking →"}</div>
+            <div class="text-[11px] text-[#10201a] underline decoration-black/40 font-semibold font-semibold mt-1">${j.status === "active" ? "Inspect Votes & Guide →" : "Request Tracking →"}</div>
           </button>
         `).join("");
       }
@@ -769,16 +769,16 @@
             safeUrl = portalHref;
           }
           return `
-            <div class="p-2.5 rounded-lg bg-[#90b3b0]/55 border border-black/20 min-w-0 overflow-hidden">
+            <div class="p-2.5 rounded-lg bg-[#8e89a0]/45 border border-[#10201a]/20 min-w-0 overflow-hidden">
               <div class="text-[11px] font-semibold text-stone-600">${escapeHtml(d.meeting_date || "")} • ${escapeHtml((d.doc_type || "agenda").toUpperCase())}</div>
-              <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" class="text-stone-900 hover:text-black underline decoration-black/40 font-semibold font-medium truncate block mt-0.5" title="${friendlyTitle}">
+              <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" class="text-stone-900 hover:text-[#10201a] underline decoration-black/40 font-semibold font-medium truncate block mt-0.5" title="${friendlyTitle}">
                 ${friendlyTitle} ↗
               </a>
             </div>
           `;
         }).join("");
       } else {
-        meetingsBox.innerHTML = `<div class="text-black/65">Check the <a href="${escapeHtml(portalHref)}" target="_blank" rel="noopener noreferrer" class="text-black underline decoration-black/40 font-semibold underline">official portal</a> for upcoming meeting dates and public comment registration.</div>`;
+        meetingsBox.innerHTML = `<div class="text-black/65">Check the <a href="${escapeHtml(portalHref)}" target="_blank" rel="noopener noreferrer" class="text-[#10201a] underline decoration-black/40 font-semibold underline">official portal</a> for upcoming meeting dates and public comment registration.</div>`;
       }
 
       const contactsBox = document.getElementById("engageContactsList");
@@ -787,13 +787,13 @@
         contactsBox.innerHTML = `<div class="text-black/65">Representative directory pending ingestion.</div>`;
       } else {
         contactsBox.innerHTML = reps.map(r => `
-          <div class="p-2 rounded-lg bg-[#90b3b0]/50 border border-black/20 flex items-center justify-between gap-2">
+          <div class="p-2 rounded-lg bg-[#8e89a0]/40 border border-[#10201a]/20 flex items-center justify-between gap-2">
             <div>
               <div class="font-bold text-black">${escapeHtml(r.name)}</div>
               <div class="text-[11px] text-black/65">${escapeHtml(r.district || r.role || "")}</div>
             </div>
             <div class="flex items-center gap-2 text-[11px] font-semibold">
-              ${r.email ? `<a href="mailto:${escapeHtml(r.email)}" class="text-black underline decoration-black/40 font-semibold hover:underline">Email</a>` : ""}
+              ${r.email ? `<a href="mailto:${escapeHtml(r.email)}" class="text-[#10201a] underline decoration-black/40 font-semibold hover:underline">Email</a>` : ""}
               ${r.phone ? `<a href="tel:${escapeHtml(r.phone)}" class="text-black/85 hover:underline">Call</a>` : ""}
             </div>
           </div>
@@ -812,9 +812,9 @@
       card.classList.remove("hidden");
       document.getElementById("jurLifecyclesCount").textContent = `${chains.length} multi-stage item(s)`;
       document.getElementById("jurLifecyclesList").innerHTML = chains.map(ch => `
-        <div class="rounded-xl border border-black/20 bg-[#68947c]/40 p-4 space-y-2.5">
+        <div class="rounded-xl border border-[#10201a]/25 bg-[#b8b4c4] p-4 space-y-2.5">
           <div class="flex items-center justify-between gap-2">
-            <span class="text-[11px] font-bold uppercase text-black">${escapeHtml(ch.match_basis)}</span>
+            <span class="text-[11px] font-bold uppercase text-[#10201a]">${escapeHtml(ch.match_basis)}</span>
             <span class="text-[11px] text-black/65">${escapeHtml(ch.first_date)} → ${escapeHtml(ch.latest_date)}</span>
           </div>
           <div class="space-y-1.5 border-l-2 border-indigo-300 pl-3">
@@ -849,7 +849,7 @@
           >
             <div>
               <div class="flex items-center justify-between gap-2">
-                <span class="text-[11px] font-bold uppercase text-black">${escapeHtml(ent.district || "At-Large")}</span>
+                <span class="text-[11px] font-bold uppercase text-[#10201a]">${escapeHtml(ent.district || "At-Large")}</span>
                 <span class="text-[11px] text-slate-400">Elected ${escapeHtml(ent.elected_date || "Active")}</span>
               </div>
               <div class="font-bold text-black text-sm mt-1">${escapeHtml(ent.name)}</div>
@@ -859,7 +859,7 @@
               ${hasVotes
                 ? `<span>Attendance: <strong>${m.attendance_rate}%</strong> (${m.present_votes}/${m.total_votes})</span>
                    <span>Impact: <strong>${m.avg_impact_score}</strong></span>`
-                : `<span class="px-2 py-0.5 rounded bg-[#68947c] text-black border border-black/20 font-medium">Pending ingestion</span>`}
+                : `<span class="px-2 py-0.5 rounded bg-[#626784] text-white font-medium">Pending ingestion</span>`}
             </div>
           </button>
         `;
@@ -894,9 +894,9 @@
             <div class="flex items-center gap-2">
               <span class="font-semibold text-black/75">${escapeHtml(ev.meeting_date)}</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 text-black/85 font-medium">${escapeHtml(ev.topic || "General")}</span>
-              <span class="px-2 py-0.5 rounded font-semibold ${/^(passed|adopted)/i.test(String(ev.outcome || "")) ? "bg-[#5a815e] text-black border border-black/20" : "bg-stone-200/80 text-stone-800"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
+              <span class="px-2 py-0.5 rounded font-semibold ${/^(passed|adopted)/i.test(String(ev.outcome || "")) ? "bg-[#142f31] text-white" : "bg-stone-200/80 text-stone-800"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-[#5a815e] text-black border border-black/20 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-[#264461] text-white font-bold">Impact ${ev.impact_score ?? 0}/100</span>
           </div>
           <div class="font-bold text-black text-sm">${escapeHtml(ev.title)}</div>
           ${ev.plain_summary ? `<p class="text-xs text-black/75 leading-relaxed">${escapeHtml(ev.plain_summary)}</p>` : ""}
@@ -921,29 +921,29 @@
       document.getElementById("repProfileContent").innerHTML = `
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-slate-100 pb-4">
           <div>
-            <div class="text-xs font-bold uppercase text-black">${escapeHtml(ent.district || "At-Large")} • Elected ${escapeHtml(ent.elected_date || "Active")}</div>
+            <div class="text-xs font-bold uppercase text-[#10201a]">${escapeHtml(ent.district || "At-Large")} • Elected ${escapeHtml(ent.elected_date || "Active")}</div>
             <h1 class="text-2xl font-bold text-black mt-1">${escapeHtml(ent.name)}</h1>
             <p class="text-xs text-black/65 mt-0.5">${escapeHtml(ent.role)} • ${escapeHtml(currentJurData.jurisdiction.name)}</p>
           </div>
           <div class="flex flex-wrap gap-2 text-xs">
-            ${ent.email ? `<a href="mailto:${escapeHtml(ent.email)}" class="px-3 py-1.5 rounded-xl bg-[#5a815e] text-black border border-black/25 font-semibold">Email Representative</a>` : ""}
+            ${ent.email ? `<a href="mailto:${escapeHtml(ent.email)}" class="px-3 py-1.5 rounded-xl bg-[#142f31] text-white font-semibold">Email Representative</a>` : ""}
             ${ent.website_url ? `<a href="${escapeHtml(ent.website_url)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl border border-slate-300 font-semibold">Official Bio ↗</a>` : ""}
           </div>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-          <div class="p-3 rounded-xl bg-[#90b3b0]/55 border border-black/20">
+          <div class="p-3 rounded-xl bg-[#8e89a0]/45 border border-[#10201a]/20">
             <div class="text-black/65">Attendance</div>
             <div class="text-base font-bold text-black mt-0.5">${hasVotes ? `${m.attendance_rate}%` : "Pending ingestion"}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#90b3b0]/55 border border-black/20">
+          <div class="p-3 rounded-xl bg-[#8e89a0]/45 border border-[#10201a]/20">
             <div class="text-black/65">Recorded Votes</div>
             <div class="text-base font-bold text-black mt-0.5">${m.total_votes || 0}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#90b3b0]/55 border border-black/20">
+          <div class="p-3 rounded-xl bg-[#8e89a0]/45 border border-[#10201a]/20">
             <div class="text-black/65">Avg Impact Score</div>
             <div class="text-base font-bold text-black mt-0.5">${hasVotes ? m.avg_impact_score : "—"}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#90b3b0]/55 border border-black/20">
+          <div class="p-3 rounded-xl bg-[#8e89a0]/45 border border-[#10201a]/20">
             <div class="text-black/65">Pivotal Votes</div>
             <div class="text-base font-bold text-black mt-0.5">${m.pivotal_votes || 0}</div>
           </div>
@@ -955,7 +955,7 @@
               <button onclick="openBill('${escapeHtml(divId)}', '${escapeHtml(v.event_id)}')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-blue-700 transition block">
                 <div class="flex items-center justify-between text-xs">
                   <span class="text-black/65">${escapeHtml(v.meeting_date)}</span>
-                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#5a815e] text-black border border-black/20" : v.vote === "No" ? "bg-[#845d23] text-white" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
+                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#142f31] text-white" : v.vote === "No" ? "bg-[#626784] text-white" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
                 </div>
                 <div class="text-xs font-bold text-black mt-1">${escapeHtml(v.title)}</div>
               </button>
@@ -988,26 +988,26 @@
             <div class="flex flex-wrap items-center gap-2">
               <span class="font-semibold text-black/75">${escapeHtml(ev.meeting_date)}</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 text-black/85 font-medium">${escapeHtml(ev.topic || "General")}</span>
-              <span class="px-2 py-0.5 rounded font-semibold ${ev.outcome === "Passed" ? "bg-[#5a815e] text-black border border-black/20" : "bg-slate-100 text-black"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
-              <span class="px-2 py-0.5 rounded bg-[#5a815e] text-black border border-black/20 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
+              <span class="px-2 py-0.5 rounded font-semibold ${ev.outcome === "Passed" ? "bg-[#142f31] text-white" : "bg-slate-100 text-black"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
+              <span class="px-2 py-0.5 rounded bg-[#264461] text-white font-bold">Impact ${ev.impact_score ?? 0}/100</span>
             </div>
-            <a href="${escapeHtml(ev.source_url)}" target="_blank" rel="noopener noreferrer" class="text-black underline decoration-black/40 font-semibold font-semibold hover:underline">Official Record ↗</a>
+            <a href="${escapeHtml(ev.source_url)}" target="_blank" rel="noopener noreferrer" class="text-[#10201a] underline decoration-black/40 font-semibold font-semibold hover:underline">Official Record ↗</a>
           </div>
           <h1 class="text-xl font-bold text-black">${escapeHtml(ev.title)}</h1>
           ${ev.plain_summary ? `
-            <div class="p-3.5 rounded-xl bg-[#68947c]/45 border border-black/20 text-xs text-black space-y-1">
+            <div class="p-3.5 rounded-xl bg-[#b8b4c4] border border-[#10201a]/25 text-xs text-black space-y-1">
               <div class="font-bold text-blue-900">Plain-English Summary</div>
               <p class="leading-relaxed">${escapeHtml(ev.plain_summary)}</p>
             </div>` : ""}
           ${ev.diff_summary ? `
-            <div class="p-3.5 rounded-xl bg-[#68947c]/55 border border-black/20 text-xs text-black space-y-1">
+            <div class="p-3.5 rounded-xl bg-[#8e89a0]/55 border border-[#10201a]/25 text-xs text-black space-y-1">
               <div class="font-bold text-amber-900">What Changed?</div>
               <p class="leading-relaxed">${escapeHtml(ev.diff_summary)}</p>
             </div>` : ""}
         </div>
 
         ${matchingChain ? `
-          <div class="p-4 rounded-xl bg-[#68947c]/45 border border-black/20 space-y-2">
+          <div class="p-4 rounded-xl bg-[#b8b4c4] border border-[#10201a]/25 space-y-2">
             <div class="text-xs font-bold text-indigo-900">Cross-Meeting Bill Lifecycle (${escapeHtml(matchingChain.match_basis)})</div>
             <div class="space-y-1.5 border-l-2 border-indigo-300 pl-3">
               ${matchingChain.stages.map(st => `
@@ -1018,12 +1018,12 @@
             </div>
           </div>` : ""}
 
-        <div class="p-3.5 rounded-xl bg-[#68947c]/45 border border-black/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+        <div class="p-3.5 rounded-xl bg-[#b8b4c4] border border-[#10201a]/25 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
           <div>
             <strong class="text-emerald-950">Want to weigh in on related council or board items?</strong>
             <span class="text-black/75 block sm:inline sm:ml-1">View upcoming meetings, public comment rules, and representative contacts.</span>
           </div>
-          <button onclick="openJurisdiction('${escapeHtml(divId)}').then(() => scrollToEngagementGuide())" class="px-3 py-1.5 rounded-lg bg-[#5a815e] text-black border border-black/25 font-semibold hover:bg-emerald-700 transition self-start">
+          <button onclick="openJurisdiction('${escapeHtml(divId)}').then(() => scrollToEngagementGuide())" class="px-3 py-1.5 rounded-lg bg-[#142f31] text-white font-semibold hover:bg-emerald-700 transition self-start">
             Open Engagement Guide →
           </button>
         </div>
@@ -1038,7 +1038,7 @@
                     <div class="font-bold text-black">${escapeHtml(v.name)}</div>
                     <div class="text-[11px] text-black/65">${escapeHtml(v.district || "")}</div>
                   </div>
-                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#5a815e] text-black border border-black/20" : v.vote === "No" ? "bg-[#845d23] text-white" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
+                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#142f31] text-white" : v.vote === "No" ? "bg-[#626784] text-white" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
                 </button>
               `).join("") + `</div>`
             : `<div class="text-xs text-black/65">Individual roll-call breakdown not recorded for this summary item.</div>`}
