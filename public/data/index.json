@@ -42,7 +42,7 @@
       "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
       "file": "ocd-division-country-us-state-co-place-colorado-springs.json",
       "entity_count": 9,
-      "event_count": 0,
+      "event_count": 1,
       "docs_since": "2026-11-03",
       "last_updated": "2026-11-24"
     },
@@ -258,6 +258,22 @@
     }
   ],
   "search_index": [
+    {
+      "event_id": "doc-120-94dbb302",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-colorado-springs.json",
+      "meeting_date": "2026-11-20",
+      "title": "Adopted 7-0",
+      "event_type": "resolution",
+      "topic": "Liquor and Beer License Hearings",
+      "outcome": "Passed (9-0)",
+      "yes_count": 9,
+      "no_count": 0,
+      "impact_score": 25.0,
+      "quotes_text": "",
+      "voters_text": "Dave Donelson:Yes Ken Casey:Yes Brandy Williams:Yes Kimberly Gold:Yes Nancy Henjum:Yes Roland Rainey Jr.:Yes Lynette Crow-Iverson:Yes Brian Risley:Yes David Leinweber:Yes"
+    },
     {
       "event_id": "legistar-13053-240461",
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
