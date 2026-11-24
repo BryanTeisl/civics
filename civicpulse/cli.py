@@ -38,8 +38,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_watch.add_argument("--limit", type=int, default=25)
     p_watch.add_argument("--jurisdiction", default=None)
 
-    p_work = sub.add_parser("work", help="Extract structured votes & summaries from pending documents via local Ollama.")
+    p_work = sub.add_parser("work", help="Fetch document text and extract votes & summaries via local Ollama.")
     p_work.add_argument("--limit", type=int, default=10)
+    p_work.add_argument("--jurisdiction", default=None, help="Filter to a single OCD division ID")
+    p_work.add_argument("--doc-type", choices=["minutes", "agenda"], default=None, help="Filter by document type")
+    p_work.add_argument("--fetch-only", action="store_true", help="Download and cache raw_text without calling Ollama")
+    p_work.add_argument("--requeue-skipped", action="store_true", help="Reset previously skipped documents back to pending")
 
     p_exp = sub.add_parser("export", help="Export sharded JSON, directory.json, search_index.json, and agent outputs.")
     p_exp.add_argument("--out-dir", type=Path, default=SETTINGS.public_data_dir)
@@ -98,7 +102,14 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 0
 
     if args.command == "work":
-        stats = run_worker(db_path=db_path, limit=args.limit)
+        stats = run_worker(
+            db_path=db_path,
+            limit=args.limit,
+            jurisdiction_id=args.jurisdiction,
+            doc_type=args.doc_type,
+            fetch_only=args.fetch_only,
+            requeue_skipped=args.requeue_skipped,
+        )
         print(f"[WORK] Done: {stats}")
         return 0
 
