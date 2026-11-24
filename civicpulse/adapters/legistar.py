@@ -9,7 +9,14 @@ from .base import BaseAdapter, DocumentRecord, ProbeResult, register_adapter
 
 
 def _extract_client(portal_url: str) -> str:
-    host = urlparse(portal_url).netloc.lower()
+    parsed = urlparse((portal_url or "").strip())
+    host = parsed.netloc.lower()
+    if host == "webapi.legistar.com":
+        parts = [p for p in parsed.path.split("/") if p]
+        if len(parts) >= 2 and parts[0].lower() == "v1":
+            return parts[1].lower()
+        if parts:
+            return parts[0].lower()
     if ".legistar.com" in host:
         return host.split(".legistar.com")[0]
     return host.split(".")[0]

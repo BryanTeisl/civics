@@ -5,11 +5,11 @@
     "level": "municipal",
     "lat": 39.7392,
     "lng": -104.9903,
-    "portal_url": "https://webapi.legistar.com/v1/denver",
+    "portal_url": "https://denver.legistar.com/",
     "parent_division_id": null,
     "status": "active",
-    "docs_since": "2026-11-18",
-    "last_updated": "2026-11-24 10:46:48 UTC"
+    "docs_since": "2026-11-10",
+    "last_updated": "2026-11-24 10:56:26 UTC"
   },
   "entities": [
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 10:46:48 UTC",
+  "generated_at": "2026-11-24 10:56:26 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -14,34 +14,34 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-04-23",
+          "meeting_date": "2026-08-13",
           "doc_type": "agenda",
-          "title": "City Council Study Session \u2014 Agenda",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+          "title": "City Council Special Meeting",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1889"
         },
         {
-          "meeting_date": "2026-04-23",
+          "meeting_date": "2026-08-13",
           "doc_type": "agenda",
-          "title": "City Council Study Session \u2014 HTML Agenda",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=1453"
+          "title": "City Council Special Meeting",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1886"
         },
         {
-          "meeting_date": "2026-04-16",
+          "meeting_date": "2026-08-13",
           "doc_type": "agenda",
-          "title": "City Council Regular Meeting \u2014 Agenda",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=924&meetingId=161"
+          "title": "City Council Special Meeting",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1885"
         },
         {
-          "meeting_date": "2026-04-16",
+          "meeting_date": "2026-08-06",
           "doc_type": "agenda",
-          "title": "City Council Regular Meeting \u2014 HTML Agenda",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=1447"
+          "title": "City Council Regular Meeting",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1877"
         },
         {
-          "meeting_date": "2026-04-09",
+          "meeting_date": "2026-08-06",
           "doc_type": "agenda",
-          "title": "City Council Study Session \u2014 Agenda",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=918&meetingId=160"
+          "title": "City Council Regular Meeting",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1797"
         }
       ],
       "representatives": [
@@ -132,6 +132,11 @@
       "upcoming_meetings": [
         {
           "date": "2026-12-07",
+          "title": "City Council",
+          "portal_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2918&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
+        },
+        {
+          "date": "2026-12-07",
           "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
           "portal_url": "https://coloradosprings.legistar.com/"
         },
@@ -142,8 +147,8 @@
         },
         {
           "date": "2026-11-24",
-          "title": "2026-11-24 City Council: Meeting has been cancelled.",
-          "portal_url": "https://coloradosprings.legistar.com/"
+          "title": "City Council",
+          "portal_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2809&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
         },
         {
           "date": "2026-11-24",
@@ -155,6 +160,18 @@
         {
           "meeting_date": "2026-11-23",
           "doc_type": "agenda",
+          "title": "Executive Session",
+          "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2916&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
+        },
+        {
+          "meeting_date": "2026-11-23",
+          "doc_type": "agenda",
+          "title": "City Council Work Session",
+          "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2810&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
+        },
+        {
+          "meeting_date": "2026-11-23",
+          "doc_type": "agenda",
           "title": "2026-11-23 Executive Session: Meeting has been cancelled.",
           "source_url": "https://coloradosprings.legistar.com/"
         },
@@ -163,24 +180,6 @@
           "doc_type": "agenda",
           "title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
           "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-23",
-          "doc_type": "agenda",
-          "title": "2026-11-23 Executive Session: Meeting has been cancelled.",
-          "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-23",
-          "doc_type": "agenda",
-          "title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
-          "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-20",
-          "doc_type": "minutes",
-          "title": "2026-11-20 Liquor and Beer License Hearings: Division 2, Municipal Court Building",
-          "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf"
         }
       ],
       "representatives": [
@@ -261,7 +260,7 @@
     "ocd-division/country:us/state:co/place:denver": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
       "name": "Denver City Council",
-      "portal_url": "https://webapi.legistar.com/v1/denver",
+      "portal_url": "https://denver.legistar.com/",
       "checklist": [
         "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
@@ -271,17 +270,17 @@
       "upcoming_meetings": [
         {
           "date": "2026-11-25",
-          "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
+          "title": "Transportation and Infrastructure Agenda",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
         },
         {
           "date": "2026-11-25",
-          "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
+          "title": "South Platte River Committee Agenda",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
         },
         {
           "date": "2026-11-25",
-          "title": "2026-11-25 Health and Safety: Committee canceled. Consent agenda included.",
+          "title": "Health and Safety Agenda",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf"
         },
         {
@@ -402,8 +401,20 @@
         {
           "meeting_date": "2026-07-27",
           "doc_type": "agenda",
+          "title": "Historic Preservation Advisory Board Agenda",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2944_A_Historic_Preservation_Advisory_Board_26-07-27_Meeting_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-07-27",
+          "doc_type": "agenda",
           "title": "2026-07-27 Historic Preservation Advisory Board: In Person",
           "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2944_A_Historic_Preservation_Advisory_Board_26-07-27_Meeting_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-07-21",
+          "doc_type": "agenda",
+          "title": "Liquor License Authority Agenda",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/3095_A_Liquor_License_Authority_26-07-21_Meeting_Agenda.pdf"
         },
         {
           "meeting_date": "2026-07-21",
@@ -414,20 +425,8 @@
         {
           "meeting_date": "2026-07-16",
           "doc_type": "agenda",
-          "title": "2026-07-16 Airport Economic Development Advisory Board: In Person\r\nDoors close @ 6:45 p.m.",
+          "title": "Airport Economic Development Advisory Board Agenda",
           "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2958_A_Airport_Economic_Development_Advisory_Board_26-07-16_Meeting_Agenda.pdf"
-        },
-        {
-          "meeting_date": "2026-07-15",
-          "doc_type": "agenda",
-          "title": "2026-07-15 Planning Commission: In-Person Meeting\r\nLink to Watch or Comment Virtually: https://bit.ly/15July26PCMtg\r\nTo Si",
-          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/3080_A_Planning_Commission_26-07-15_Meeting_Agenda.pdf"
-        },
-        {
-          "meeting_date": "2026-07-13",
-          "doc_type": "agenda",
-          "title": "2026-07-13 Open Space and Trails Advisory Board: In Person\r\nDoors close @ 6:45 p.m.",
-          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2969_A_Open_Space_and_Trails_Advisory_Board_26-07-13_Meeting_Agenda.pdf"
         }
       ],
       "representatives": []
@@ -542,6 +541,11 @@
       "upcoming_meetings": [
         {
           "date": "2027-06-16",
+          "title": "Water & Sewer Board",
+          "portal_url": "https://greeleyco.portal.civicclerk.com/event/3648/files"
+        },
+        {
+          "date": "2027-06-16",
           "title": "2027-06-16 \u2014 Water & Sewer Board",
           "portal_url": "https://greeleyco.portal.civicclerk.com/"
         },
@@ -552,17 +556,12 @@
         },
         {
           "date": "2027-05-19",
-          "title": "2027-05-19 \u2014 Water & Sewer Board",
-          "portal_url": "https://greeleyco.portal.civicclerk.com/"
+          "title": "Water & Sewer Board",
+          "portal_url": "https://greeleyco.portal.civicclerk.com/event/3647/files"
         },
         {
           "date": "2027-05-19",
           "title": "2027-05-19 \u2014 Water & Sewer Board",
-          "portal_url": "https://greeleyco.portal.civicclerk.com/"
-        },
-        {
-          "date": "2027-04-21",
-          "title": "2027-04-21 \u2014 Water & Sewer Board",
           "portal_url": "https://greeleyco.portal.civicclerk.com/"
         }
       ],
@@ -682,7 +681,38 @@
         "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-02-18",
+          "doc_type": "minutes",
+          "title": "2/18/26 Local Licensing Authority Meeting",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18327"
+        },
+        {
+          "meeting_date": "2026-02-18",
+          "doc_type": "agenda",
+          "title": "2/18/26 Local Licensing Authority Meeting",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17862"
+        },
+        {
+          "meeting_date": "2026-02-18",
+          "doc_type": "agenda",
+          "title": "BTAC Special Meeting",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17910"
+        },
+        {
+          "meeting_date": "2026-02-17",
+          "doc_type": "agenda",
+          "title": "2/17/26 Special Council Meeting",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17859"
+        },
+        {
+          "meeting_date": "2026-02-17",
+          "doc_type": "agenda",
+          "title": "2/17/26 Special Council Meeting",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17856"
+        }
+      ],
       "representatives": []
     },
     "ocd-division/country:us/state:co/place:westminster": {
@@ -696,7 +726,38 @@
         "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-03-23",
+          "doc_type": "agenda",
+          "title": "City Council Meeting",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10977"
+        },
+        {
+          "meeting_date": "2026-03-23",
+          "doc_type": "agenda",
+          "title": "City Council Meeting",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10976"
+        },
+        {
+          "meeting_date": "2026-03-23",
+          "doc_type": "agenda",
+          "title": "City Council Pre/Post-Meeting Study Session",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10419"
+        },
+        {
+          "meeting_date": "2026-03-23",
+          "doc_type": "agenda",
+          "title": "City Council Pre/Post-Meeting Study Session",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10418"
+        },
+        {
+          "meeting_date": "2026-03-16",
+          "doc_type": "agenda",
+          "title": "Weekly Legislative Affairs Call",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10413"
+        }
+      ],
       "representatives": []
     },
     "ocd-division/country:us/state:co/place:windsor": {
@@ -712,8 +773,18 @@
       "upcoming_meetings": [
         {
           "date": "2028-10-24",
+          "title": "Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/event/4064/files"
+        },
+        {
+          "date": "2028-10-24",
           "title": "2028-10-24 \u2014 Tree Board",
           "portal_url": "https://windsorco.portal.civicclerk.com/"
+        },
+        {
+          "date": "2028-09-26",
+          "title": "Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/event/4063/files"
         },
         {
           "date": "2028-09-26",
@@ -722,18 +793,8 @@
         },
         {
           "date": "2028-08-22",
-          "title": "2028-08-22 \u2014 Tree Board",
-          "portal_url": "https://windsorco.portal.civicclerk.com/"
-        },
-        {
-          "date": "2028-07-25",
-          "title": "2028-07-25 \u2014 Tree Board",
-          "portal_url": "https://windsorco.portal.civicclerk.com/"
-        },
-        {
-          "date": "2028-06-27",
-          "title": "2028-06-27 \u2014 Tree Board",
-          "portal_url": "https://windsorco.portal.civicclerk.com/"
+          "title": "Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/event/4062/files"
         }
       ],
       "recent_agendas_and_docs": [],
