@@ -504,14 +504,19 @@
       const activeAll = allJurs.filter(j => (j.status || "active") === "active");
       const unclaimedAll = allJurs.filter(j => j.status === "unclaimed");
 
+      const isCityLevel = lvl => lvl === "municipality" || lvl === "city";
       document.getElementById("countAll").textContent = activeAll.length;
-      document.getElementById("countCity").textContent = activeAll.filter(j => j.level === "municipality").length;
+      document.getElementById("countCity").textContent = activeAll.filter(j => isCityLevel(j.level)).length;
       document.getElementById("countCounty").textContent = activeAll.filter(j => j.level === "county").length;
-      document.getElementById("countSchool").textContent = activeAll.filter(j => j.level === "school_district").length;
+      document.getElementById("countSchool").textContent = activeAll.filter(j => j.level === "school_district" || j.level === "school").length;
 
       const filteredActive = currentLevelFilter === "all"
         ? activeAll
-        : activeAll.filter(j => j.level === currentLevelFilter);
+        : currentLevelFilter === "municipality"
+          ? activeAll.filter(j => isCityLevel(j.level))
+          : currentLevelFilter === "school_district"
+            ? activeAll.filter(j => j.level === "school_district" || j.level === "school")
+            : activeAll.filter(j => j.level === currentLevelFilter);
 
       const select = document.getElementById("quickJumpSelect");
       select.innerHTML =
@@ -570,15 +575,12 @@
         </button>
       `).join("");
 
-      // Initialize Pin-Free Esri Light Gray Gazetteer Map
+      // Initialize Pin-Free Colorful OpenStreetMap Street/Neighborhood Map
       if (!mapInstance) {
         mapInstance = L.map("map", { scrollWheelZoom: false }).setView([40.05, -105.05], 8);
-        L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-          attribution: "Tiles &copy; Esri",
-          maxZoom: 16
-        }).addTo(mapInstance);
-        L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {
-          maxZoom: 16
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "&copy; OpenStreetMap contributors",
+          maxZoom: 19
         }).addTo(mapInstance);
 
         mapInstance.on("click", e => handleCoordinateLookup(e.latlng.lat, e.latlng.lng, "Map Location"));
