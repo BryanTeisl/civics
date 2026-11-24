@@ -1,18 +1,25 @@
-import os
 import sqlite3
 from datetime import datetime, timezone
 from typing import Any, Dict, List
 
 import requests
 
-from boarddocs_adapter import poll_boarddocs_jurisdiction
 from db import DB_PATH, get_connection, init_db, queue_document
-from granicus_adapter import poll_granicus_jurisdiction
 
 try:
     from primegov_adapter import poll_primegov_jurisdiction
 except ImportError:
     poll_primegov_jurisdiction = None
+
+try:
+    from boarddocs_adapter import poll_boarddocs_jurisdiction
+except ImportError:
+    poll_boarddocs_jurisdiction = None
+
+try:
+    from granicus_adapter import poll_granicus_jurisdiction
+except ImportError:
+    poll_granicus_jurisdiction = None
 
 
 HEADERS = {
@@ -50,13 +57,17 @@ def mark_jurisdiction_polled(jurisdiction_id: str, db_path: str = DB_PATH) -> No
         conn.close()
 
 
-def poll_civicclerk(jur: sqlite3.Row, max_events: int = 10) -> int:
-    """Polls a CivicClerk OData Events feed and queues meeting summaries/agendas/minutes."""
-    portal_url = (jur["portal_url"] or "").strip()
-    slug = ""
+def _extract_civicclerk_slug(portal_url: str) -> str:
+    if not portal_url:
+        return ""
     if "portal.civicclerk.com" in portal_url:
-        host_part = portal_url.split("//", 1)[-1].split("/", 1)[0]
-        slug = host_part.split(".portal.civicclerk.com")[0]
+        host = portal_url.split("//", 1)[-1].split("/", 1)[0]
+        return host.split(".portal.civicclerk.com")[0].strip()
+    return ""
+
+
+def poll_civicclerk(jur: sqlite3.Row, max_events: int = 10) -> int:
+    slug = _extract_civicclerk_slug((jur["portal_url"] or "").strip())
     if not slug:
         return 0
 
@@ -72,22 +83,22 @@ def poll_civicclerk(jur: sqlite3.Row, max_events: int = 10) -> int:
         start_dt = str(ev.get("startDateTime") or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
         files = ev.get("publishedFiles") or []
-        summary_lines = [
+        lines = [
+            f"Jurisdiction: {jur['name']}",
             f"Meeting: {ev_name}",
             f"Date: {start_dt}",
-            f"Jurisdiction: {jur['name']}",
         ]
         for f_item in files:
             f_name = f_item.get("name") or f_item.get("fileType") or "Document"
             f_id = f_item.get("fileId")
-            summary_lines.append(f"Attachment: {f_name} (fileId={f_id})")
+            lines.append(f"- {f_name} (fileId={f_id})")
 
-        raw_text = "\n".join(summary_lines)
+        raw_text = "\n".join(lines)
         inserted = queue_document(
             jurisdiction_id=jur["ocd_division_id"],
             doc_type="agenda",
             title=f"{start_dt} — {ev_name}",
-            source_url=portal_url,
+            source_url=jur["portal_url"],
             raw_text=raw_text,
             meeting_date=start_dt,
             external_id=f"civicclerk-{slug}-{ev_id}",
@@ -99,19 +110,21 @@ def poll_civicclerk(jur: sqlite3.Row, max_events: int = 10) -> int:
     return queued
 
 
-def poll_legistar(jur: sqlite3.Row, max_events: int = 10) -> int:
-    """Polls a Legistar REST API client and queues recent events for processing."""
+def _extract_legistar_client(jur: sqlite3.Row) -> str:
     portal_url = (jur["portal_url"] or "").strip().lower()
-    client = ""
-    if "coloradosprings.legistar.com" in portal_url:
-        client = "coloradosprings"
-    elif "denver" in portal_url or "denver" in (jur["name"] or "").lower():
-        client = "denver"
-    else:
-        for part in portal_url.replace("https://", "").replace("http://", "").split("/"):
-            if ".legistar.com" in part:
-                client = part.split(".legistar.com")[0]
-                break
+    jur_name = (jur["name"] or "").lower()
+    if "coloradosprings" in portal_url or "colorado springs" in jur_name:
+        return "coloradosprings"
+    if "denver" in portal_url or "denver" in jur_name:
+        return "denver"
+    for part in portal_url.replace("https://", "").replace("http://", "").split("/"):
+        if ".legistar.com" in part:
+            return part.split(".legistar.com")[0].strip()
+    return ""
+
+
+def poll_legistar(jur: sqlite3.Row, max_events: int = 10) -> int:
+    client = _extract_legistar_client(jur)
     if not client:
         return 0
 
@@ -125,19 +138,21 @@ def poll_legistar(jur: sqlite3.Row, max_events: int = 10) -> int:
         ev_id = str(item.get("EventId") or "")
         body_name = (item.get("EventBodyName") or "Legislative Body").strip()
         ev_date = str(item.get("EventDate") or "")[:10] or datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        matter_text = (item.get("EventComment") or item.get("EventLocation") or body_name).strip()
+        comment = (item.get("EventComment") or item.get("EventLocation") or "").strip()
+        detail_label = comment if comment else body_name
         source_url = item.get("EventAgendaFile") or item.get("EventMinutesFile") or jur["portal_url"]
 
         raw_text = (
+            f"Jurisdiction: {jur['name']}\n"
             f"Body: {body_name}\n"
             f"Date: {ev_date}\n"
-            f"Details: {matter_text}\n"
+            f"Summary: {detail_label}\n"
             f"EventId: {ev_id}"
         )
         inserted = queue_document(
             jurisdiction_id=jur["ocd_division_id"],
             doc_type="minutes" if item.get("EventMinutesFile") else "agenda",
-            title=f"{ev_date} {body_name}: {matter_text[:90]}",
+            title=f"{ev_date} {body_name}: {detail_label[:90]}",
             source_url=source_url,
             raw_text=raw_text,
             meeting_date=ev_date,
@@ -176,14 +191,14 @@ def run_watcher(db_path: str = DB_PATH) -> int:
                     )
                 else:
                     print(f"  ! primegov_adapter.py not found; skipping {name}")
-            elif adapter == "boarddocs":
+            elif adapter == "boarddocs" and poll_boarddocs_jurisdiction:
                 print(f"[WATCH] {name} (boarddocs)...")
                 total_queued += poll_boarddocs_jurisdiction(
                     jurisdiction_id=jur_id,
                     name=name,
                     portal_url=portal_url,
                 )
-            elif adapter == "granicus":
+            elif adapter == "granicus" and poll_granicus_jurisdiction:
                 print(f"[WATCH] {name} (granicus)...")
                 total_queued += poll_granicus_jurisdiction(
                     jurisdiction_id=jur_id,
@@ -191,14 +206,14 @@ def run_watcher(db_path: str = DB_PATH) -> int:
                     portal_url=portal_url,
                 )
             else:
-                print(f"  ! Unsupported adapter '{adapter}' for {name}; skipping.")
+                print(f"  ! Unsupported or unavailable adapter '{adapter}' for {name}; skipping.")
                 continue
 
             mark_jurisdiction_polled(jur_id, db_path)
         except Exception as exc:
             print(f"  ! Error polling {name} ({adapter}): {exc}")
 
-    print(f"Watcher complete. Queued PDFs/Docs: {total_queued} | Structured Vote Events: 0")
+    print(f"Watcher complete. Queued PDFs/Docs: {total_queued}")
     return total_queued
 
 

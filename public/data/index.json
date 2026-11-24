@@ -2,21 +2,6 @@
   "last_updated": "2026-11-24",
   "jurisdictions": [
     {
-      "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
-      "name": "Larimer County Board of Commissioners",
-      "level": "county",
-      "status": "active",
-      "lat": 40.6662,
-      "lng": -105.4606,
-      "portal_url": "https://larimerco.portal.civicclerk.com/",
-      "parent_division_id": null,
-      "file": "ocd-division-country-us-state-co-county-larimer.json",
-      "entity_count": 3,
-      "event_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24"
-    },
-    {
       "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
       "name": "Boulder City Council",
       "level": "municipal",
@@ -28,7 +13,7 @@
       "file": "ocd-division-country-us-state-co-place-boulder.json",
       "entity_count": 9,
       "event_count": 0,
-      "docs_since": "2026-11-24",
+      "docs_since": "2026-01-08",
       "last_updated": "2026-11-24"
     },
     {
@@ -42,7 +27,7 @@
       "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
       "file": "ocd-division-country-us-state-co-place-colorado-springs.json",
       "entity_count": 9,
-      "event_count": 1,
+      "event_count": 2,
       "docs_since": "2026-11-03",
       "last_updated": "2026-11-24"
     },
@@ -114,6 +99,21 @@
       "lat": 38.8322,
       "lng": -104.5256,
       "portal_url": "https://www.agendasuite.org/iip/elpaso",
+      "parent_division_id": null,
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "docs_since": null,
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "name": "Larimer County Board of Commissioners",
+      "level": "county",
+      "status": "unclaimed",
+      "lat": 40.6662,
+      "lng": -105.4606,
+      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
       "parent_division_id": null,
       "file": null,
       "entity_count": 0,
@@ -258,6 +258,22 @@
     }
   ],
   "search_index": [
+    {
+      "event_id": "doc-354-e39a00a0",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "jurisdiction_file": "ocd-division-country-us-state-co-place-colorado-springs.json",
+      "meeting_date": "2026-11-20",
+      "title": "Adopted Resolution 2026-001",
+      "event_type": "resolution",
+      "topic": "Municipal Court Building",
+      "outcome": "Passed (9-0)",
+      "yes_count": 9,
+      "no_count": 0,
+      "impact_score": 25.0,
+      "quotes_text": "",
+      "voters_text": "Dave Donelson:Yes Ken Casey:Yes Brandy Williams:Yes Kimberly Gold:Yes Nancy Henjum:Yes Roland Rainey Jr.:Yes Lynette Crow-Iverson:Yes Brian Risley:Yes David Leinweber:Yes"
+    },
     {
       "event_id": "doc-120-94dbb302",
       "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
