@@ -5,6 +5,7 @@ import io
 import json
 import os
 import re
+import threading
 import time
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
@@ -17,11 +18,18 @@ from civicpulse.pipeline.metrics import compute_impact_score
 
 MAX_PDF_PAGES = 40
 MAX_RAW_TEXT_CHARS = 50_000
-LLM_PROMPT_CHARS = 12_000
-OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "300"))
+LLM_PROMPT_CHARS = int(os.getenv("OLLAMA_PROMPT_CHARS", "8000"))
+OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "600"))
+OLLAMA_NUM_CTX = int(os.getenv("OLLAMA_NUM_CTX", "4096"))
+OLLAMA_NUM_PREDICT = int(os.getenv("OLLAMA_NUM_PREDICT", "2048"))
+OLLAMA_HEARTBEAT_SEC = int(os.getenv("OLLAMA_HEARTBEAT_SEC", "30"))
 
 CIVICCLERK_EVENT_RE = re.compile(
     r"https?://([a-z0-9-]+)\.portal\.civicclerk\.com/event/(\d+)",
+    re.IGNORECASE,
+)
+PRIMEGOV_MEETING_RE = re.compile(
+    r"(https?://[a-z0-9-]+\.primegov\.com)/Portal/Meeting\?.*?\bmeetingTemplateId=(\d+)",
     re.IGNORECASE,
 )
 
@@ -31,6 +39,26 @@ def _format_duration(seconds: float) -> str:
         return f"{seconds:.1f}s"
     mins, rem = divmod(seconds, 60)
     return f"{int(mins)}m {rem:.1f}s"
+
+
+def _start_heartbeat(
+    doc_id: int,
+    doc_start: float,
+    interval: int = OLLAMA_HEARTBEAT_SEC,
+) -> Tuple[threading.Event, Optional[threading.Thread]]:
+    """Logs periodic elapsed-time updates while Ollama is running."""
+    stop_event = threading.Event()
+    if interval <= 0:
+        return stop_event, None
+
+    def _beat() -> None:
+        while not stop_event.wait(interval):
+            elapsed = _format_duration(time.perf_counter() - doc_start)
+            print(f"[WORK]   ... doc_id={doc_id} still extracting ({elapsed} elapsed)", flush=True)
+
+    thread = threading.Thread(target=_beat, daemon=True)
+    thread.start()
+    return stop_event, thread
 
 
 def _extract_pdf_text(content: bytes, max_pages: int = MAX_PDF_PAGES) -> str:
@@ -103,7 +131,21 @@ def fetch_document_text(source_url: str, doc_type: str = "agenda") -> str:
         slug, event_id = cc_match.group(1), cc_match.group(2)
         text = _fetch_civicclerk_event_text(slug, event_id, doc_type)
         return text[:MAX_RAW_TEXT_CHARS]
-
+    pg_match = PRIMEGOV_MEETING_RE.match(url)
+    
+    if pg_match:
+        base_url, template_id = pg_match.group(1), pg_match.group(2)
+        compiled_url = f"{base_url}/Public/CompiledDocument/{template_id}"
+        pg_resp = requests.get(
+            compiled_url,
+            headers=SETTINGS.headers,
+            timeout=max(30, SETTINGS.request_timeout),
+            allow_redirects=True,
+        )
+        pg_ctype = (pg_resp.headers.get("Content-Type") or "").lower()
+        if pg_resp.ok and ("application/pdf" in pg_ctype or pg_resp.content[:5] == b"%PDF-"):
+            return _extract_pdf_text(pg_resp.content)[:MAX_RAW_TEXT_CHARS]
+        
     resp = requests.get(
         url,
         headers=SETTINGS.headers,
@@ -198,7 +240,12 @@ def _call_ollama_extract(
             "stream": False,
             "format": "json",
             "keep_alive": "15m",
-            "options": {"temperature": 0.1, "num_ctx": 8192},
+            "options": {
+                "temperature": 0.1,
+                "num_ctx": OLLAMA_NUM_CTX,
+                "num_predict": OLLAMA_NUM_PREDICT,
+                "repeat_penalty": 1.1,
+            },
         },
         timeout=OLLAMA_TIMEOUT,
     )
@@ -258,16 +305,25 @@ def run_worker(
             LIMIT ?
         """
         docs = conn.execute(query, params).fetchall()
+        total_docs = len(docs)
+        if total_docs == 0:
+            print("[WORK] No pending documents matched.", flush=True)
 
         roster_cache: Dict[str, List[Dict[str, str]]] = {}
 
-        for doc in docs:
+        for doc_idx, doc in enumerate(docs, start=1):
             doc_id = doc["doc_id"]
             div_id = doc["jurisdiction_id"]
+            jur_short = div_id.split(":")[-1] if div_id else "unknown"
             raw_text = (doc["raw_text"] or "").strip()
 
             # Step 1: Fetch & cache raw_text if not already downloaded
             if not raw_text:
+                print(
+                    f"[WORK] [{doc_idx}/{total_docs}] Fetching doc_id={doc_id} "
+                    f"({jur_short}, {doc['doc_type']})...",
+                    flush=True,
+                )
                 try:
                     raw_text = fetch_document_text(doc["source_url"] or "", doc["doc_type"] or "agenda")
                     if raw_text:
@@ -286,7 +342,7 @@ def run_worker(
                     )
                     conn.commit()
                     stats["failed"] += 1
-                    print(f"[WORK][WARN] doc_id={doc_id} fetch failed: {exc}")
+                    print(f"[WORK][WARN] doc_id={doc_id} fetch failed: {exc}", flush=True)
                     continue
 
             if len(raw_text) < 120:
@@ -296,10 +352,18 @@ def run_worker(
                 )
                 conn.commit()
                 stats["skipped"] += 1
+                print(
+                    f"[WORK] [{doc_idx}/{total_docs}] Skipped doc_id={doc_id} (insufficient text: {len(raw_text)} chars)",
+                    flush=True,
+                )
                 continue
 
             if fetch_only:
-                print(f"[WORK][FETCH] doc_id={doc_id} ({doc['doc_type']}): cached {len(raw_text):,} chars")
+                print(
+                    f"[WORK][FETCH] [{doc_idx}/{total_docs}] doc_id={doc_id} ({jur_short}, {doc['doc_type']}): "
+                    f"cached {len(raw_text):,} chars",
+                    flush=True,
+                )
                 continue
 
             # Step 2: Load jurisdiction roster once for roll-call matching
@@ -314,12 +378,26 @@ def run_worker(
             # Step 3: Extract events & roll-call votes via local Ollama
             doc_start = time.perf_counter()
             doc_votes_added = 0
+            prompt_chars = min(len(raw_text), LLM_PROMPT_CHARS)
+            print(
+                f"[WORK] [{doc_idx}/{total_docs}] Initiated doc_id={doc_id} "
+                f"({jur_short}, {doc['meeting_date']}, {prompt_chars:,}/{len(raw_text):,} chars) "
+                f"via {SETTINGS.ollama_model}...",
+                flush=True,
+            )
+            stop_hb, hb_thread = _start_heartbeat(doc_id, doc_start)
             try:
-                extracted = _call_ollama_extract(
-                    raw_text=raw_text,
-                    title=doc["title"] or "",
-                    roster_names=[r["name"] for r in roster],
-                )
+                try:
+                    extracted = _call_ollama_extract(
+                        raw_text=raw_text,
+                        title=doc["title"] or "",
+                        roster_names=[r["name"] for r in roster],
+                    )
+                finally:
+                    stop_hb.set()
+                    if hb_thread:
+                        hb_thread.join(timeout=1.0)
+
                 for idx, ev in enumerate(extracted):
                     ev_title = (ev.get("title") or "").strip()
                     if not ev_title:
@@ -405,8 +483,9 @@ def run_worker(
                 stats["processed"] += 1
                 doc_elapsed = _format_duration(time.perf_counter() - doc_start)
                 print(
-                    f"[WORK] doc_id={doc_id} ({doc['meeting_date']}): "
-                    f"extracted {len(extracted)} event(s), {doc_votes_added} vote(s) in {doc_elapsed}"
+                    f"[WORK] [{doc_idx}/{total_docs}] Completed doc_id={doc_id} ({doc['meeting_date']}): "
+                    f"extracted {len(extracted)} event(s), {doc_votes_added} vote(s) in {doc_elapsed}",
+                    flush=True,
                 )
             except Exception as exc:
                 retries = int(doc["retry_count"] or 0) + 1
@@ -418,11 +497,14 @@ def run_worker(
                 conn.commit()
                 stats["failed"] += 1
                 doc_elapsed = _format_duration(time.perf_counter() - doc_start)
-                print(f"[WORK][WARN] doc_id={doc_id} LLM extraction failed after {doc_elapsed}: {exc}")
+                print(
+                    f"[WORK][WARN] [{doc_idx}/{total_docs}] doc_id={doc_id} LLM extraction failed after {doc_elapsed}: {exc}",
+                    flush=True,
+                )
 
         total_elapsed = _format_duration(time.perf_counter() - run_start)
         stats["elapsed"] = total_elapsed
-        print(f"[WORK] Total run time: {total_elapsed}")
+        print(f"[WORK] Total run time: {total_elapsed}", flush=True)
         return stats
     finally:
         conn.close()

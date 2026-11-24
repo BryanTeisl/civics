@@ -68,3 +68,23 @@ def test_worker_fetches_text_and_inserts_events_and_votes(sample_db):
     assert stats["processed"] == 1
     assert stats["events_created"] == 1
     assert stats["votes_created"] == 2
+
+def test_primegov_compiled_document_pdf_resolver():
+    from unittest.mock import MagicMock, patch
+    from civicpulse.pipeline.worker import fetch_document_text
+
+    fake_resp = MagicMock()
+    fake_resp.ok = True
+    fake_resp.headers = {"Content-Type": "application/pdf"}
+    fake_resp.content = b"%PDF-1.4 fake pdf bytes"
+
+    url = "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17512"
+    with patch("civicpulse.pipeline.worker.requests.get", return_value=fake_resp) as mock_get, patch(
+        "civicpulse.pipeline.worker._extract_pdf_text", return_value="Longmont City Council Minutes Passed 7-0."
+    ) as mock_pdf:
+        text = fetch_document_text(url, doc_type="minutes")
+
+    mock_get.assert_called_once()
+    assert mock_get.call_args[0][0] == "https://longmont.primegov.com/Public/CompiledDocument/17512"
+    mock_pdf.assert_called_once_with(b"%PDF-1.4 fake pdf bytes")
+    assert "Longmont City Council Minutes" in text

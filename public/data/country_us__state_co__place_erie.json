@@ -9,8 +9,57 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-05-06",
-    "last_updated": "2026-11-24 16:59:32 UTC"
+    "last_updated": "2026-11-24 19:43:24 UTC"
   },
   "entities": [],
-  "events": []
+  "events": [
+    {
+      "event_id": "ev_8db8e996619142",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:erie",
+      "meeting_date": "2026-06-03",
+      "title": "Discussion of Annual Report to Town Council",
+      "plain_summary": "The Planning Commission discussed and agreed to draft an annual report to the Town Council.",
+      "diff_summary": "The discussion focused on the need to report bi-annually or annually to the Town Council, and the creation of bylaws to establish the roles of Chair, Vice Chair, and Secretary.",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Annual Report to Town Council",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 35.0,
+      "source_url": "https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planning_Commission_26-06-03_Meeting_Minutes.pdf",
+      "roster_size": 0,
+      "attendance_count": 7,
+      "attendance_rate": null,
+      "sponsors": [],
+      "votes": []
+    },
+    {
+      "event_id": "ev_8b56e7bdfaec44",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:erie",
+      "meeting_date": "2026-06-03",
+      "title": "Election of Chair and Vice Chair of the Planning Commission",
+      "plain_summary": "The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Planning Commission Leadership",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 35.0,
+      "source_url": "https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planning_Commission_26-06-03_Meeting_Minutes.pdf",
+      "roster_size": 0,
+      "attendance_count": 7,
+      "attendance_rate": null,
+      "sponsors": [],
+      "votes": []
+    }
+  ]
 }
