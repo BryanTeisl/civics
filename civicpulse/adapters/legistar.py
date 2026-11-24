@@ -1,11 +1,11 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from typing import List
 from urllib.parse import urlparse
 
 import requests
 
-from .base import BaseAdapter, DocumentRecord, ProbeResult, register_adapter
+from .base import BaseAdapter, DocumentRecord, ProbeResult, is_elected_council_meeting, register_adapter
 
 
 def _extract_client(portal_url: str) -> str:
@@ -49,15 +49,23 @@ class LegistarAdapter(BaseAdapter):
     ) -> List[DocumentRecord]:
         client = _extract_client(portal_url)
         norm_url = self.normalize_portal_url(portal_url)
-        api_url = f"https://webapi.legistar.com/v1/{client}/events?$top={limit}&$orderby=EventDate%20desc"
+        fetch_top = max(limit * 4, 100)
+        api_url = f"https://webapi.legistar.com/v1/{client}/events?$top={fetch_top}&$orderby=EventDate%20desc"
         r = requests.get(api_url, headers=self.headers, timeout=self.timeout)
         r.raise_for_status()
         events = r.json() if isinstance(r.json(), list) else []
 
         docs: List[DocumentRecord] = []
+        matched_meetings = 0
         for ev in events:
+            if matched_meetings >= limit:
+                break
+            body = (ev.get("EventBodyName") or "").strip()
+            if not is_elected_council_meeting(body):
+                continue
+
+            matched_meetings += 1
             eid = str(ev.get("EventId") or "")
-            body = (ev.get("EventBodyName") or "Council Meeting").strip()
             mdate = str(ev.get("EventDate") or "")[:10]
             minutes_url = ev.get("EventMinutesFile")
             agenda_url = ev.get("EventAgendaFile")

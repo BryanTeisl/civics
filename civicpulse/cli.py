@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import json
@@ -11,6 +11,7 @@ from civicpulse.db import backup_database, init_db
 from civicpulse.maintenance import probe_config, seed_from_config
 from civicpulse.pipeline.exporter import export_all
 from civicpulse.pipeline.metrics import recalculate_all_metrics
+from civicpulse.pipeline.roster_sync import sync_rosters
 from civicpulse.pipeline.watcher import run_watcher
 from civicpulse.pipeline.worker import run_worker
 
@@ -45,6 +46,19 @@ def build_parser() -> argparse.ArgumentParser:
     p_work.add_argument("--fetch-only", action="store_true", help="Download and cache raw_text without calling Ollama")
     p_work.add_argument("--requeue-skipped", action="store_true", help="Reset previously skipped documents back to pending")
 
+    p_roster = sub.add_parser(
+        "sync-rosters",
+        help="Automatically sync elected council rosters (Legistar API, saved roster_url, or doc headers).",
+    )
+    p_roster.add_argument("--jurisdiction", default=None, help="Filter to a single OCD division ID")
+    p_roster.add_argument(
+        "--roster-url",
+        default=None,
+        help="Official council webpage URL (saved to DB when --jurisdiction is set)",
+    )
+    p_roster.add_argument("--deactivate-missing", action="store_true", help="Mark departed councilmembers active=0")
+    p_roster.add_argument("--dry-run", action="store_true", help="Preview roster changes without writing to SQLite")
+
     p_exp = sub.add_parser("export", help="Export sharded JSON, directory.json, search_index.json, and agent outputs.")
     p_exp.add_argument("--out-dir", type=Path, default=SETTINGS.public_data_dir)
     p_exp.add_argument("--no-backup", action="store_true")
@@ -65,6 +79,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_all = sub.add_parser("run-all", help="Run full watch -> work -> export pipeline.")
     p_all.add_argument("--work-limit", type=int, default=10)
     p_all.add_argument("--skip-work", action="store_true")
+    p_all.add_argument("--sync-rosters", action="store_true", help="Also run automated roster sync before watch/work")
 
     return parser
 
@@ -111,6 +126,17 @@ def main(argv: Optional[List[str]] = None) -> int:
             requeue_skipped=args.requeue_skipped,
         )
         print(f"[WORK] Done: {stats}")
+        return 0
+
+    if args.command == "sync-rosters":
+        stats = sync_rosters(
+            db_path=db_path,
+            jurisdiction_id=args.jurisdiction,
+            roster_url=args.roster_url,
+            deactivate_missing=args.deactivate_missing,
+            dry_run=args.dry_run,
+        )
+        print(f"[ROSTER] Done: {stats}")
         return 0
 
     if args.command == "export":
@@ -161,6 +187,8 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     if args.command == "run-all":
         init_db(db_path)
+        if args.sync_rosters:
+            sync_rosters(db_path=db_path, deactivate_missing=True)
         run_watcher(db_path=db_path)
         if not args.skip_work:
             run_worker(db_path=db_path, limit=args.work_limit)

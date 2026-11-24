@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import json
@@ -32,6 +32,13 @@ def _slugify(text: str) -> str:
 def _extract_state_code(jurisdiction_id: str) -> str:
     m = re.search(r"state:([a-z]{2})", jurisdiction_id or "", re.IGNORECASE)
     return m.group(1).lower() if m else "us"
+
+
+def _ensure_roster_url_column(conn: Any) -> None:
+    cols = {row[1] for row in conn.execute("PRAGMA table_info(jurisdictions)").fetchall()}
+    if "roster_url" not in cols:
+        conn.execute("ALTER TABLE jurisdictions ADD COLUMN roster_url TEXT")
+        conn.commit()
 
 
 def _extract_legistar_client(portal_url: str) -> str:
@@ -242,13 +249,21 @@ def sync_rosters(
     deactivate_missing: bool = False,
     dry_run: bool = False,
 ) -> Dict[str, int]:
-    """Automatically syncs elected rosters for active jurisdictions (API-first, then web/doc LLM fallback)."""
+    """Automatically syncs elected rosters for active jurisdictions (Legistar API -> saved roster_url -> doc header)."""
     init_db(db_path)
     conn = get_connection(db_path)
+    _ensure_roster_url_column(conn)
     totals = {"synced": 0, "added": 0, "updated": 0, "deactivated": 0, "skipped": 0}
 
     try:
-        query = "SELECT ocd_division_id, name, adapter_type, portal_url FROM jurisdictions WHERE status = 'active'"
+        if roster_url and jurisdiction_id and not dry_run:
+            conn.execute(
+                "UPDATE jurisdictions SET roster_url = ? WHERE ocd_division_id = ?",
+                (roster_url.strip(), jurisdiction_id),
+            )
+            conn.commit()
+
+        query = "SELECT ocd_division_id, name, adapter_type, portal_url, roster_url FROM jurisdictions WHERE status = 'active'"
         params: List[Any] = []
         if jurisdiction_id:
             query += " AND ocd_division_id = ?"
@@ -260,16 +275,21 @@ def sync_rosters(
             jname = j["name"]
             adapter = (j["adapter_type"] or "").lower()
             portal_url = j["portal_url"] or ""
+            saved_roster_url = (j["roster_url"] or "").strip()
+            effective_roster_url = (roster_url or "").strip() or saved_roster_url
             members: List[Dict[str, str]] = []
             source_used = "none"
 
             try:
                 if roster_url:
-                    members = fetch_web_roster(roster_url, jname)
+                    members = fetch_web_roster(effective_roster_url, jname)
                     source_used = "roster_url (LLM)"
                 elif adapter == "legistar":
                     members = fetch_legistar_roster(portal_url)
                     source_used = "legistar API"
+                elif saved_roster_url:
+                    members = fetch_web_roster(saved_roster_url, jname)
+                    source_used = "saved roster_url (LLM)"
                 else:
                     members = fetch_doc_header_roster(conn, jid, jname)
                     source_used = "council doc header (LLM)"

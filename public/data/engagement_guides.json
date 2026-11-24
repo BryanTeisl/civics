@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 19:55:42 UTC",
+  "generated_at": "2026-11-24 21:28:53 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -14,34 +14,34 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-08-13",
+          "meeting_date": "2026-11-19",
           "doc_type": "agenda",
-          "title": "City Council Special Meeting",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1889"
+          "title": "City Council Regular Meeting \u2014 Agenda",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=2252"
         },
         {
-          "meeting_date": "2026-08-13",
+          "meeting_date": "2026-11-19",
           "doc_type": "agenda",
-          "title": "City Council Special Meeting",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1886"
+          "title": "City Council Regular Meeting \u2014 HTML Agenda",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=2251"
         },
         {
-          "meeting_date": "2026-08-13",
+          "meeting_date": "2026-11-19",
           "doc_type": "agenda",
-          "title": "City Council Special Meeting",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1885"
+          "title": "City Council Special Meeting \u2014 Agenda",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=2248"
         },
         {
-          "meeting_date": "2026-08-06",
+          "meeting_date": "2026-11-19",
           "doc_type": "agenda",
-          "title": "City Council Regular Meeting",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1877"
+          "title": "City Council Special Meeting \u2014 HTML Agenda",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=2247"
         },
         {
-          "meeting_date": "2026-08-06",
+          "meeting_date": "2026-11-12",
           "doc_type": "agenda",
-          "title": "City Council Regular Meeting",
-          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=1797"
+          "title": "City Council Special Meeting \u2014 Agenda",
+          "source_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=2191"
         }
       ],
       "representatives": [
@@ -711,34 +711,34 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-03-10",
+          "meeting_date": "2026-11-17",
           "doc_type": "agenda",
           "title": "City Council Regular Session \u2014 Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15653&meetingId=3465"
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19093"
         },
         {
-          "meeting_date": "2026-03-10",
+          "meeting_date": "2026-11-17",
           "doc_type": "agenda",
           "title": "City Council Regular Session \u2014 HTML Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=17672"
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19092"
         },
         {
-          "meeting_date": "2026-03-03",
+          "meeting_date": "2026-11-10",
           "doc_type": "agenda",
-          "title": "City Council Study Session \u2014 Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15649&meetingId=3464"
+          "title": "Special LHA Board of Commissioners Meeting \u2014 Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19066"
         },
         {
-          "meeting_date": "2026-03-03",
+          "meeting_date": "2026-11-10",
           "doc_type": "agenda",
-          "title": "City Council Study Session \u2014 HTML Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=17600"
+          "title": "Special LHA Board of Commissioners Meeting \u2014 HTML Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19067"
         },
         {
-          "meeting_date": "2026-02-24",
+          "meeting_date": "2026-11-03",
           "doc_type": "agenda",
           "title": "City Council Regular Session \u2014 Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15506&meetingId=3435"
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19023"
         }
       ],
       "representatives": [
@@ -813,34 +813,34 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-02-18",
-          "doc_type": "minutes",
-          "title": "2/18/26 Local Licensing Authority Meeting",
-          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18327"
+          "meeting_date": "2026-11-10",
+          "doc_type": "agenda",
+          "title": "11/10/26 Council Meeting \u2014 HTML Agenda",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21432"
         },
         {
-          "meeting_date": "2026-02-18",
+          "meeting_date": "2026-11-10",
           "doc_type": "agenda",
-          "title": "2/18/26 Local Licensing Authority Meeting",
-          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17862"
+          "title": "11/10/26 Special Council Meeting \u2014 HTML Agenda",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21456"
         },
         {
-          "meeting_date": "2026-02-18",
+          "meeting_date": "2026-10-27",
           "doc_type": "agenda",
-          "title": "BTAC Special Meeting",
-          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17910"
+          "title": "10/27/26 Council Meeting \u2014 HTML Agenda",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21339"
         },
         {
-          "meeting_date": "2026-02-17",
+          "meeting_date": "2026-10-20",
           "doc_type": "agenda",
-          "title": "2/17/26 Special Council Meeting",
-          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17859"
+          "title": "10/20/26 Special Council Meeting \u2014 HTML Agenda",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21237"
         },
         {
-          "meeting_date": "2026-02-17",
+          "meeting_date": "2026-10-13",
           "doc_type": "agenda",
-          "title": "2/17/26 Special Council Meeting",
-          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17856"
+          "title": "10/13/26 Council Meeting \u2014 HTML Agenda",
+          "source_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=20999"
         }
       ],
       "representatives": [

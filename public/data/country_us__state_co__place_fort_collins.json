@@ -8,8 +8,8 @@
     "portal_url": "https://fortcollinsco.portal.civicclerk.com/",
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
-    "docs_since": "2026-10-22",
-    "last_updated": "2026-11-24 19:55:42 UTC"
+    "docs_since": "2026-10-20",
+    "last_updated": "2026-11-24 21:28:53 UTC"
   },
   "entities": [
     {
@@ -39,9 +39,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 17,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -70,6 +70,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Mayor's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -121,6 +133,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor's support for updated traffic safety measures.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor's support for transparent and protective surveillance policies.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -166,6 +238,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Supported the Housing Action Plan as a guiding document for housing strategy.",
           "verbatim_quote": ""
         }
       ]
@@ -196,9 +280,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 17,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -227,6 +311,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Mayor Pro Tem's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -278,6 +374,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor Pro Tem's endorsement of updated traffic safety policies.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "Mayor Pro Tem's endorsement of a transparent and protective policy for surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -323,6 +479,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Acknowledged challenges for developers producing units affordable to households at 50% AMI and below.",
           "verbatim_quote": ""
         }
       ]
@@ -353,9 +521,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 17,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -384,6 +552,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "District 1 representative's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -435,6 +615,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 1 representative supports improved traffic monitoring and enforcement.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 1 representative supports clear guidelines on the use of surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -480,6 +720,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Agreed with the need to continue focusing on housing supply and incorporating activities from the Affordable and Sustainable Growth Initiative (Ad Hoc Committee).",
           "verbatim_quote": ""
         }
       ]
@@ -510,9 +762,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 17,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -541,6 +793,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "District 3 representative's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -592,6 +856,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 3 representative agrees with the council's recommendations for improved traffic safety.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 3 representative agrees with the council's new guidelines on surveillance technology use.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -637,6 +961,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Supported the development of strategies that support structured affordable housing products, specifically those projects filling the largest affordability gaps (under 50% AMI for rentals and under 100% AMI for homeownership).",
           "verbatim_quote": ""
         }
       ]
@@ -667,9 +1003,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 17,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -698,6 +1034,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "District 4 representative's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -749,6 +1097,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 4 representative supports enhanced traffic monitoring and enforcement measures.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 4 representative supports clear and protective policies for surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -794,6 +1202,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Agreed with the need to maintain existing affordable housing stock and support development of natural affordable housing.",
           "verbatim_quote": ""
         }
       ]
@@ -823,10 +1243,10 @@
         "area": "West Central Fort Collins"
       },
       "metrics": {
-        "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "attendance_rate": 94,
+        "present_votes": 16,
+        "total_votes": 17,
+        "avg_impact_score": 45.4,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -855,6 +1275,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "District 5 representative's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -906,6 +1338,66 @@
           "verbatim_quote": ""
         },
         {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 5 representative endorses the council's recommendations for improved traffic safety.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 5 representative endorses the council's new guidelines on surveillance technology use.",
+          "verbatim_quote": ""
+        },
+        {
           "event_id": "doc-9-ebf6ea3d",
           "meeting_date": "2026-11-03",
           "title": "Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give",
@@ -951,6 +1443,18 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_7ebbbf1c019882",
+          "meeting_date": "2026-10-27",
+          "title": "Housing Action Plan Discussion",
+          "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+          "event_type": "resolution",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "impact_score": 52.0,
+          "rationale_summary": "Was absent from the discussion, but supported the Housing Action Plan as a guiding document for housing strategy.",
           "verbatim_quote": ""
         }
       ]
@@ -981,9 +1485,9 @@
       },
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 10,
-        "total_votes": 10,
-        "avg_impact_score": 50.0,
+        "present_votes": 16,
+        "total_votes": 16,
+        "avg_impact_score": 45.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -1012,6 +1516,18 @@
           "is_pivotal": false,
           "impact_score": 35.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0bce6b4189f1de",
+          "meeting_date": "2026-11-24",
+          "title": "Motion to go into Executive Session for Annual Evaluations",
+          "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "District 6 representative's support for the motion.",
           "verbatim_quote": ""
         },
         {
@@ -1060,6 +1576,66 @@
           "is_pivotal": false,
           "impact_score": 55.0,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c76cbf03a2f7f7",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 18, 2026 as GIS Day",
+          "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_c679a58f48dfe5",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+          "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2c6fdfc7c1b843",
+          "meeting_date": "2026-11-17",
+          "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+          "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_6dc662f288200b",
+          "meeting_date": "2026-11-10",
+          "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+          "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 6 representative agrees with the council's updated traffic safety measures.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_21d5b9d639a50c",
+          "meeting_date": "2026-11-10",
+          "title": "Surveillance Technology Governance Policy Update",
+          "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 40.0,
+          "rationale_summary": "District 6 representative agrees with the council's transparent and protective policy for surveillance technology.",
           "verbatim_quote": ""
         },
         {
@@ -1114,6 +1690,101 @@
     }
   ],
   "events": [
+    {
+      "event_id": "ev_0bce6b4189f1de",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-24",
+      "title": "Motion to go into Executive Session for Annual Evaluations",
+      "plain_summary": "The City Council voted to conduct annual performance reviews of the City Attorney and City Manager in executive session.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Housing",
+      "outcome": "Passed",
+      "yes_count": 8,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 8,
+      "impact_score": 20.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 8,
+      "attendance_rate": 114,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative's support for the motion.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's support for the motion.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
     {
       "event_id": "doc-19-7f27b029",
       "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
@@ -1327,6 +1998,291 @@
       "attendance_rate": 86,
       "sponsors": [],
       "votes": []
+    },
+    {
+      "event_id": "ev_c76cbf03a2f7f7",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-17",
+      "title": "Resolution Declaring November 18, 2026 as GIS Day",
+      "plain_summary": "The City Council declared November 18, 2026 as GIS Day.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Technology and Innovation",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/35/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_c679a58f48dfe5",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-17",
+      "title": "Resolution Declaring November 20, 2026 as Transgender Day of Remembrance",
+      "plain_summary": "The City Council declared November 20, 2026 as Transgender Day of Remembrance.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Social Justice and Equality",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/35/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_2c6fdfc7c1b843",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-17",
+      "title": "Resolution Declaring November 27, 2026 and the Holiday Season as Small Business Season",
+      "plain_summary": "The City Council declared November 27, 2026 and the Holiday Season as Small Business Season.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Economic Development",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/35/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's support for the initiative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "event_id": "doc-5-ff36d12f",
@@ -1704,6 +2660,196 @@
           "vote": "Yes",
           "is_pivotal": false,
           "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_6dc662f288200b",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-10",
+      "title": "AVIS Speed and Red Light Cameras and Designation of Speed Corridors",
+      "plain_summary": "The council approved recommendations to update the AVIS speed corridors and related city codes.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Traffic Safety",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 6,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/48/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for updated traffic safety measures.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative supports improved traffic monitoring and enforcement.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's endorsement of updated traffic safety policies.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative agrees with the council's recommendations for improved traffic safety.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative supports enhanced traffic monitoring and enforcement measures.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative endorses the council's recommendations for improved traffic safety.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative agrees with the council's updated traffic safety measures.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_21d5b9d639a50c",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-11-10",
+      "title": "Surveillance Technology Governance Policy Update",
+      "plain_summary": "The council approved a new policy to govern the use of surveillance technology in the city.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Privacy and Surveillance",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 6,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/48/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor's support for transparent and protective surveillance policies.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 1 representative supports clear guidelines on the use of surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Mayor Pro Tem's endorsement of a transparent and protective policy for surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 3 representative agrees with the council's new guidelines on surveillance technology use.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 4 representative supports clear and protective policies for surveillance technology.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 5 representative endorses the council's new guidelines on surveillance technology use.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-anne-nelsen",
+          "name": "Anne Nelsen",
+          "district": "District 6",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "District 6 representative agrees with the council's transparent and protective policy for surveillance technology.",
           "verbatim_quote": ""
         }
       ]
@@ -2087,6 +3233,163 @@
           "verbatim_quote": ""
         }
       ]
+    },
+    {
+      "event_id": "ev_7ebbbf1c019882",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-10-27",
+      "title": "Housing Action Plan Discussion",
+      "plain_summary": "The City Council discussed and approved the Housing Action Plan, which will replace the 2021 Housing Strategic Plan.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Housing Policy",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 1,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 52.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/60/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/foco-emily-francis",
+          "name": "Emily Francis",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Supported the Housing Action Plan as a guiding document for housing strategy.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-chris-conway",
+          "name": "Chris Conway",
+          "district": "District 1",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Agreed with the need to continue focusing on housing supply and incorporating activities from the Affordable and Sustainable Growth Initiative (Ad Hoc Committee).",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-julie-pignataro",
+          "name": "Julie Pignataro",
+          "district": "At-Large",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Acknowledged challenges for developers producing units affordable to households at 50% AMI and below.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-josh-fudge",
+          "name": "Josh Fudge",
+          "district": "District 3",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Supported the development of strategies that support structured affordable housing products, specifically those projects filling the largest affordability gaps (under 50% AMI for rentals and under 100% AMI for homeownership).",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-melanie-potyondy",
+          "name": "Melanie Potyondy",
+          "district": "District 4",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Agreed with the need to maintain existing affordable housing stock and support development of natural affordable housing.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/foco-amy-hoeven",
+          "name": "Amy Hoeven",
+          "district": "District 5",
+          "elected_date": "Nov 2025",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Was absent from the discussion, but supported the Housing Action Plan as a guiding document for housing strategy.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_efb181c31bb8af",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-10-20",
+      "title": "Resolution Declaring the Month of October 2026 as Domestic Violence Awareness Month",
+      "plain_summary": "The City Council passed a resolution declaring October as Domestic Violence Awareness Month.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Domestic Violence",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/2258/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": []
+    },
+    {
+      "event_id": "ev_e9c9f90c4a77ac",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-10-20",
+      "title": "Resolution Declaring the Day of October 20, 2026 as Community Media Day",
+      "plain_summary": "The City Council passed a resolution declaring October 20, 2026 as Community Media Day.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Community Media",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/2258/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": []
+    },
+    {
+      "event_id": "ev_6d76e14b6937d6",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "meeting_date": "2026-10-20",
+      "title": "Resolution Declaring the Month of October 2026 as Arts and Humanities Month",
+      "plain_summary": "The City Council passed a resolution declaring October as Arts and Humanities Month.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Arts & Humanities",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 7,
+      "impact_score": 40.0,
+      "source_url": "https://fortcollinsco.portal.civicclerk.com/event/2258/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": []
     }
   ]
 }

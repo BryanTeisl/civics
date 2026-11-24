@@ -8,8 +8,8 @@
     "portal_url": "https://windsorco.portal.civicclerk.com/",
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
-    "docs_since": "2027-12-23",
-    "last_updated": "2026-11-24 19:55:42 UTC"
+    "docs_since": "2026-11-09",
+    "last_updated": "2026-11-24 21:28:53 UTC"
   },
   "entities": [
     {
@@ -55,16 +55,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-brian-jones",
@@ -82,16 +107,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-lainie-peltz",
@@ -109,16 +159,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-ken-symsack",
@@ -136,16 +211,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-rick-klimek",
@@ -163,16 +263,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-jason-hallett",
@@ -190,17 +315,213 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 27.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_fea45410539949",
+          "meeting_date": "2026-11-09",
+          "title": "Roll Call Vote",
+          "plain_summary": "The Town Board voted to approve the agenda as presented.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 20.0,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5ab64d3e5d1aca",
+          "meeting_date": "2026-11-09",
+          "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+          "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 35.0,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
     }
   ],
-  "events": []
+  "events": [
+    {
+      "event_id": "ev_fea45410539949",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-11-09",
+      "title": "Roll Call Vote",
+      "plain_summary": "The Town Board voted to approve the agenda as presented.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Town Board Business",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 20.0,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3684/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-lainie-peltz",
+          "name": "Lainie Peltz",
+          "district": "District 3",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_5ab64d3e5d1aca",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-11-09",
+      "title": "Proclamation for Colorado Law Enforcement Records Personnel Week",
+      "plain_summary": "Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "ordinance",
+      "topic": "Public Recognition",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 35.0,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3684/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-lainie-peltz",
+          "name": "Lainie Peltz",
+          "district": "District 3",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
+    }
+  ]
 }

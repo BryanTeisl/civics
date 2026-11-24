@@ -1,3 +1,4 @@
+from civicpulse.db.migrations import MIGRATIONS
 import sqlite3
 
 from civicpulse.db import get_connection, init_db
@@ -6,7 +7,7 @@ from civicpulse.db import get_connection, init_db
 def test_migrations_are_idempotent(tmp_path):
     db_file = str(tmp_path / "mig.db")
     first = init_db(db_file)
-    assert len(first) == 3
+    assert len(first) == len(MIGRATIONS)
 
     second = init_db(db_file)
     assert second == []

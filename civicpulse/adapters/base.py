@@ -1,4 +1,5 @@
 from __future__ import annotations
+import re
 
 import hashlib
 from abc import ABC, abstractmethod
@@ -78,3 +79,38 @@ def get_adapter(name: str) -> Optional[BaseAdapter]:
 
 def list_adapters() -> List[str]:
     return sorted(_REGISTRY.keys())
+
+
+COUNCIL_INCLUDE_RE = re.compile(
+    r"\b("
+    r"city council|town council|town board|board of trustees|"
+    r"board of commissioners|board of county commissioners|"
+    r"board of education|school board|"
+    r"regular council|special council|council meeting|council regular|council special|"
+    r"council study"
+    r")\b",
+    re.IGNORECASE,
+)
+
+ADVISORY_EXCLUDE_RE = re.compile(
+    r"\b("
+    r"advisory|planning commission|planning & zoning|planning and zoning|zoning board|"
+    r"historic preservation|preservation commission|tree board|water & sewer|water and sewer|"
+    r"parks|recreation|library|arts|cultural|housing authority|urban renewal|"
+    r"liquor|beer license|licensing authority|callahan house|youth council|"
+    r"golf|airport|museum|cemetery|senior|sustainability|transportation advisory|"
+    r"environmental|human relations|open space|citizens|citizen|committee|commission|"
+    r"general improvement district|gid\b|gid#|authority|board of adjustment|appeals"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+def is_elected_council_meeting(title: str) -> bool:
+    """Returns True only for primary elected governing bodies (excludes advisory boards & commissions)."""
+    t = (title or "").strip()
+    if not t:
+        return False
+    if ADVISORY_EXCLUDE_RE.search(t):
+        return False
+    return bool(COUNCIL_INCLUDE_RE.search(t))

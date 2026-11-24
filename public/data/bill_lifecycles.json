@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 19:55:42 UTC",
+  "generated_at": "2026-11-24 21:28:53 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:thornton": [
       {
@@ -249,31 +249,6 @@
         ]
       }
     ],
-    "ocd-division/country:us/state:co/place:fort_collins": [
-      {
-        "chain_key": "id:ordinance_020",
-        "match_basis": "Measure ID #020",
-        "first_date": "2026-11-03",
-        "latest_date": "2026-11-17",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "doc-13-1f39dc4d",
-            "meeting_date": "2026-11-03",
-            "title": "Ordinance No. 020",
-            "outcome": "Adopted 6-0 (7-0)",
-            "tally": "7-0"
-          },
-          {
-            "event_id": "doc-5-ff36d12f",
-            "meeting_date": "2026-11-17",
-            "title": "Second Reading of Ordinance No. 020",
-            "outcome": "Passed (7-0)",
-            "tally": "7-0"
-          }
-        ]
-      }
-    ],
     "ocd-division/country:us/state:co/place:denver": [
       {
         "chain_key": "id:ordinance_0819",
@@ -364,6 +339,174 @@
             "title": "For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e",
             "outcome": "Passed",
             "tally": "5-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:mayor proposed 2027 budget amendments",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-11-02",
+        "latest_date": "2026-11-02",
+        "stage_count": 6,
+        "stages": [
+          {
+            "event_id": "ev_0feab3acabdc1c",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Passed",
+            "tally": "11-1"
+          },
+          {
+            "event_id": "ev_17d89a9a7661c7",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Failed",
+            "tally": "5-8"
+          },
+          {
+            "event_id": "ev_5eeaf9e19ef9e4",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Passed",
+            "tally": "8-5"
+          },
+          {
+            "event_id": "ev_8afbd4dbfcad0f",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Failed",
+            "tally": "5-7"
+          },
+          {
+            "event_id": "ev_9b51a3aded38ef",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Passed",
+            "tally": "7-5"
+          },
+          {
+            "event_id": "ev_cc948fe949acab",
+            "meeting_date": "2026-11-02",
+            "title": "Mayor's Proposed 2027 Budget Amendments",
+            "outcome": "Failed",
+            "tally": "6-6"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval amendatory agreement with slalom",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-10-05",
+        "latest_date": "2026-10-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_989ccedf683513",
+            "meeting_date": "2026-10-05",
+            "title": "Approval of Amendatory Agreement with Slalom, Inc.",
+            "outcome": "Passed",
+            "tally": "11-0"
+          },
+          {
+            "event_id": "ev_cfa38f3babd18a",
+            "meeting_date": "2026-10-13",
+            "title": "Approval of Amendatory Agreement with Slalom, Inc. for On-Call Professional Services",
+            "outcome": "Failed to carry",
+            "tally": "2-10"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval amendatory agreement with citibot",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-10-05",
+        "latest_date": "2026-10-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_dbf2c8051ba664",
+            "meeting_date": "2026-10-05",
+            "title": "Approval of Amendatory Agreement with Citibot, Inc.",
+            "outcome": "Passed",
+            "tally": "12-0"
+          },
+          {
+            "event_id": "ev_668b9a409813c9",
+            "meeting_date": "2026-10-13",
+            "title": "Approval of Amendatory Agreement with Citibot, Inc. for AI Chatbot Use and Support",
+            "outcome": "Failed to carry",
+            "tally": "3-9"
+          }
+        ]
+      }
+    ],
+    "ocd-division/country:us/state:co/place:fort_collins": [
+      {
+        "chain_key": "topic:into executive session annual evaluations",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-11-24",
+        "latest_date": "2026-11-24",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "doc-1-4db9d8ce",
+            "meeting_date": "2026-11-24",
+            "title": "Motion to go into Executive Session for Annual Evaluations",
+            "outcome": "Passed (7-0)",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_0bce6b4189f1de",
+            "meeting_date": "2026-11-24",
+            "title": "Motion to go into Executive Session for Annual Evaluations",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:ordinance_020",
+        "match_basis": "Measure ID #020",
+        "first_date": "2026-11-03",
+        "latest_date": "2026-11-17",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "doc-13-1f39dc4d",
+            "meeting_date": "2026-11-03",
+            "title": "Ordinance No. 020",
+            "outcome": "Adopted 6-0 (7-0)",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "doc-5-ff36d12f",
+            "meeting_date": "2026-11-17",
+            "title": "Second Reading of Ordinance No. 020",
+            "outcome": "Passed (7-0)",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:resolution declaring month october 2026",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-10-20",
+        "latest_date": "2026-10-20",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_6d76e14b6937d6",
+            "meeting_date": "2026-10-20",
+            "title": "Resolution Declaring the Month of October 2026 as Arts and Humanities Month",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_efb181c31bb8af",
+            "meeting_date": "2026-10-20",
+            "title": "Resolution Declaring the Month of October 2026 as Domestic Violence Awareness Month",
+            "outcome": "Passed",
+            "tally": "7-0"
           }
         ]
       }
