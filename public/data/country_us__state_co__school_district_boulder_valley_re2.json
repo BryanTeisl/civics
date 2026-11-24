@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+    "name": "Boulder Valley School District Board of Education",
+    "level": "school_board",
+    "lat": 40.015,
+    "lng": -105.2705,
+    "portal_url": "https://bvsd.primegov.com/",
+    "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [],
+  "events": []
+}

@@ -1,0 +1,716 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "name": "Colorado Springs City Council",
+    "level": "municipal",
+    "lat": 38.8339,
+    "lng": -104.8214,
+    "portal_url": "https://coloradosprings.legistar.com/",
+    "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
+    "status": "active",
+    "docs_since": "2026-11-03",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [
+    {
+      "ocd_person_id": "ocd-person/cos-brian-risley",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Brian Risley",
+      "entity_type": "legislator",
+      "role": "President Pro Tem",
+      "district": "At-Large",
+      "elected_date": "Apr 2023",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-david-leinweber",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "David Leinweber",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "At-Large",
+      "elected_date": "Apr 2023",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-lynette-crow-iverson",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Lynette Crow-Iverson",
+      "entity_type": "legislator",
+      "role": "Council President",
+      "district": "At-Large",
+      "elected_date": "Apr 2021",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-dave-donelson",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Dave Donelson",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 1",
+      "elected_date": "Apr 2021",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-ken-casey",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Ken Casey",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 2",
+      "elected_date": "Apr 2026",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-brandy-williams",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Brandy Williams",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 3",
+      "elected_date": "Apr 2025",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-kimberly-gold",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Kimberly Gold",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 4",
+      "elected_date": "Apr 2025",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-nancy-henjum",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Nancy Henjum",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 5",
+      "elected_date": "Apr 2021",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "ocd_person_id": "ocd-person/cos-roland-rainey",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Roland Rainey Jr.",
+      "entity_type": "legislator",
+      "role": "Councilmember",
+      "district": "District 6",
+      "elected_date": "Apr 2025",
+      "website_url": "https://coloradosprings.gov/city-council",
+      "portal_url": "https://coloradosprings.legistar.com/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 25.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": [
+        {
+          "event_id": "doc-354-e39a00a0",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted Resolution 2026-001",
+          "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "doc-120-94dbb302",
+          "meeting_date": "2026-11-20",
+          "title": "Adopted 7-0",
+          "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 25.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "doc-354-e39a00a0",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "meeting_date": "2026-11-20",
+      "title": "Adopted Resolution 2026-001",
+      "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Municipal Court Building",
+      "outcome": "Passed (9-0)",
+      "yes_count": 9,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 9,
+      "impact_score": 25.0,
+      "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf",
+      "roster_size": 9,
+      "attendance_count": 9,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/cos-brandy-williams",
+          "name": "Brandy Williams",
+          "district": "District 3",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-brian-risley",
+          "name": "Brian Risley",
+          "district": "At-Large",
+          "elected_date": "Apr 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-dave-donelson",
+          "name": "Dave Donelson",
+          "district": "District 1",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-david-leinweber",
+          "name": "David Leinweber",
+          "district": "At-Large",
+          "elected_date": "Apr 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-ken-casey",
+          "name": "Ken Casey",
+          "district": "District 2",
+          "elected_date": "Apr 2026",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-kimberly-gold",
+          "name": "Kimberly Gold",
+          "district": "District 4",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-lynette-crow-iverson",
+          "name": "Lynette Crow-Iverson",
+          "district": "At-Large",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-nancy-henjum",
+          "name": "Nancy Henjum",
+          "district": "District 5",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-roland-rainey",
+          "name": "Roland Rainey Jr.",
+          "district": "District 6",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "doc-120-94dbb302",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "meeting_date": "2026-11-20",
+      "title": "Adopted 7-0",
+      "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Liquor and Beer License Hearings",
+      "outcome": "Passed (9-0)",
+      "yes_count": 9,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 9,
+      "impact_score": 25.0,
+      "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf",
+      "roster_size": 9,
+      "attendance_count": 9,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/cos-brandy-williams",
+          "name": "Brandy Williams",
+          "district": "District 3",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-brian-risley",
+          "name": "Brian Risley",
+          "district": "At-Large",
+          "elected_date": "Apr 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-dave-donelson",
+          "name": "Dave Donelson",
+          "district": "District 1",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-david-leinweber",
+          "name": "David Leinweber",
+          "district": "At-Large",
+          "elected_date": "Apr 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-ken-casey",
+          "name": "Ken Casey",
+          "district": "District 2",
+          "elected_date": "Apr 2026",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-kimberly-gold",
+          "name": "Kimberly Gold",
+          "district": "District 4",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-lynette-crow-iverson",
+          "name": "Lynette Crow-Iverson",
+          "district": "At-Large",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-nancy-henjum",
+          "name": "Nancy Henjum",
+          "district": "District 5",
+          "elected_date": "Apr 2021",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/cos-roland-rainey",
+          "name": "Roland Rainey Jr.",
+          "district": "District 6",
+          "elected_date": "Apr 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    }
+  ]
+}

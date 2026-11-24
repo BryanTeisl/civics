@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
+    "name": "Loveland City Council",
+    "level": "municipal",
+    "lat": 40.3978,
+    "lng": -105.075,
+    "portal_url": "https://www.lovgov.org/AgendaCenter",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [],
+  "events": []
+}

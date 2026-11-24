@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
+    "name": "Windsor Town Board",
+    "level": "municipal",
+    "lat": 40.4775,
+    "lng": -104.9014,
+    "portal_url": "https://www.windsorgov.com/",
+    "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [],
+  "events": []
+}

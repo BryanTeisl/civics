@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
+    "name": "San Jose City Council",
+    "level": "municipal",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "portal_url": "https://sanjose.primegov.com",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [],
+  "events": []
+}

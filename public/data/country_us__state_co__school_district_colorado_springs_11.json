@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
+    "name": "Colorado Springs School District 11 Board",
+    "level": "school_board",
+    "lat": 38.8339,
+    "lng": -104.8214,
+    "portal_url": "https://www.d11.org/board-of-education",
+    "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 02:14:05 UTC"
+  },
+  "entities": [],
+  "events": []
+}
