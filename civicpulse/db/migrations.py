@@ -139,11 +139,18 @@ def _migration_003_indexes(conn: sqlite3.Connection) -> None:
 def _m_add_jurisdiction_roster_url(conn: sqlite3.Connection) -> None:
     _add_column_if_missing(conn, "jurisdictions", "roster_url", "TEXT")
 
+
+
+def _m_add_last_roster_synced_at(conn: sqlite3.Connection) -> None:
+    _add_column_if_missing(conn, "jurisdictions", "last_roster_synced_at", "TEXT")
+
+
 MIGRATIONS: List[Tuple[str, Callable[[sqlite3.Connection], None]]] = [
     ("001_initial_schema", _migration_001_initial_schema),
     ("002_ensure_extended_columns", _migration_002_ensure_extended_columns),
     ("003_indexes", _migration_003_indexes),
     ("add_jurisdiction_roster_url", _m_add_jurisdiction_roster_url),
+    ("add_last_roster_synced_at", _m_add_last_roster_synced_at),
 ]
 
 

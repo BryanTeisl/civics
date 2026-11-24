@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 
 from civicpulse.config import SETTINGS
 from civicpulse.db import get_connection, init_db
+from civicpulse.pipeline.cadence import is_due
 
 OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "600"))
 COUNCIL_BODY_RE = re.compile(
@@ -34,10 +35,16 @@ def _extract_state_code(jurisdiction_id: str) -> str:
     return m.group(1).lower() if m else "us"
 
 
-def _ensure_roster_url_column(conn: Any) -> None:
+def _ensure_roster_columns(conn: Any) -> None:
     cols = {row[1] for row in conn.execute("PRAGMA table_info(jurisdictions)").fetchall()}
+    changed = False
     if "roster_url" not in cols:
         conn.execute("ALTER TABLE jurisdictions ADD COLUMN roster_url TEXT")
+        changed = True
+    if "last_roster_synced_at" not in cols:
+        conn.execute("ALTER TABLE jurisdictions ADD COLUMN last_roster_synced_at TEXT")
+        changed = True
+    if changed:
         conn.commit()
 
 
@@ -248,12 +255,14 @@ def sync_rosters(
     roster_url: Optional[str] = None,
     deactivate_missing: bool = False,
     dry_run: bool = False,
+    max_age_days: int = 90,
+    force: bool = False,
 ) -> Dict[str, int]:
-    """Automatically syncs elected rosters for active jurisdictions (Legistar API -> saved roster_url -> doc header)."""
+    """Automatically syncs elected rosters for active jurisdictions with quarterly cadence gating."""
     init_db(db_path)
     conn = get_connection(db_path)
-    _ensure_roster_url_column(conn)
-    totals = {"synced": 0, "added": 0, "updated": 0, "deactivated": 0, "skipped": 0}
+    _ensure_roster_columns(conn)
+    totals = {"synced": 0, "added": 0, "updated": 0, "deactivated": 0, "skipped": 0, "skipped_recent": 0}
 
     try:
         if roster_url and jurisdiction_id and not dry_run:
@@ -263,7 +272,10 @@ def sync_rosters(
             )
             conn.commit()
 
-        query = "SELECT ocd_division_id, name, adapter_type, portal_url, roster_url FROM jurisdictions WHERE status = 'active'"
+        query = (
+            "SELECT ocd_division_id, name, adapter_type, portal_url, roster_url, last_roster_synced_at "
+            "FROM jurisdictions WHERE status = 'active'"
+        )
         params: List[Any] = []
         if jurisdiction_id:
             query += " AND ocd_division_id = ?"
@@ -273,6 +285,11 @@ def sync_rosters(
         for j in jurisdictions:
             jid = j["ocd_division_id"]
             jname = j["name"]
+            if not force and not roster_url and max_age_days > 0 and not is_due(j["last_roster_synced_at"], max_age_days):
+                print(f"[ROSTER] {jname}: synced within last {max_age_days}d (skipping)", flush=True)
+                totals["skipped_recent"] += 1
+                continue
+
             adapter = (j["adapter_type"] or "").lower()
             portal_url = j["portal_url"] or ""
             saved_roster_url = (j["roster_url"] or "").strip()
@@ -304,6 +321,12 @@ def sync_rosters(
                 continue
 
             res = upsert_roster(conn, jid, members, deactivate_missing=deactivate_missing, dry_run=dry_run)
+            if not dry_run:
+                conn.execute(
+                    "UPDATE jurisdictions SET last_roster_synced_at = ? WHERE ocd_division_id = ?",
+                    (datetime.now(timezone.utc).isoformat(), jid),
+                )
+                conn.commit()
             totals["synced"] += 1
             totals["added"] += res["added"]
             totals["updated"] += res["updated"]
@@ -326,12 +349,16 @@ def main() -> None:
     parser.add_argument("--roster-url", default=None, help="Optional official council webpage URL")
     parser.add_argument("--deactivate-missing", action="store_true", help="Mark departed members active=0")
     parser.add_argument("--dry-run", action="store_true", help="Preview changes without writing to SQLite")
+    parser.add_argument("--max-age-days", type=int, default=90, help="Skip rosters synced within N days (default: 90)")
+    parser.add_argument("--force", action="store_true", help="Ignore max-age-days and sync immediately")
     args = parser.parse_args()
     stats = sync_rosters(
         jurisdiction_id=args.jurisdiction,
         roster_url=args.roster_url,
         deactivate_missing=args.deactivate_missing,
         dry_run=args.dry_run,
+        max_age_days=args.max_age_days,
+        force=args.force,
     )
     print(f"[ROSTER] Done: {stats}")
 
