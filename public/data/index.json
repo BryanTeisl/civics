@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-22",
+  "last_updated": "2026-11-24",
   "jurisdictions": [
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
@@ -13,8 +13,23 @@
       "file": "ocd-division-country-us-state-co-county-larimer.json",
       "entity_count": 3,
       "event_count": 0,
-      "docs_since": "2026-11-22",
-      "last_updated": "2026-11-22"
+      "docs_since": "2026-11-24",
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
+      "name": "Boulder City Council",
+      "level": "municipal",
+      "status": "active",
+      "lat": 40.015,
+      "lng": -105.2705,
+      "portal_url": "https://bouldercolorado.primegov.com/",
+      "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "file": "ocd-division-country-us-state-co-place-boulder.json",
+      "entity_count": 9,
+      "event_count": 0,
+      "docs_since": "2026-11-24",
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
@@ -28,8 +43,8 @@
       "file": "ocd-division-country-us-state-co-place-colorado-springs.json",
       "entity_count": 9,
       "event_count": 0,
-      "docs_since": "2026-11-22",
-      "last_updated": "2026-11-22"
+      "docs_since": "2026-11-03",
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
@@ -44,7 +59,7 @@
       "entity_count": 11,
       "event_count": 4,
       "docs_since": "2026-11-17",
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
@@ -59,7 +74,7 @@
       "entity_count": 7,
       "event_count": 11,
       "docs_since": "2026-10-22",
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
@@ -73,8 +88,23 @@
       "file": "ocd-division-country-us-state-co-place-greeley.json",
       "entity_count": 7,
       "event_count": 0,
-      "docs_since": "2026-11-22",
-      "last_updated": "2026-11-22"
+      "docs_since": "2026-12-22",
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "level": "county",
+      "status": "unclaimed",
+      "lat": 40.0925,
+      "lng": -105.3577,
+      "portal_url": "https://bouldercounty.gov/government/elected-officials/commissioners/",
+      "parent_division_id": null,
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "docs_since": null,
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:el_paso",
@@ -89,7 +119,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:weld",
@@ -104,22 +134,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
-      "name": "Boulder City Council",
-      "level": "municipal",
-      "status": "unclaimed",
-      "lat": 40.015,
-      "lng": -105.2705,
-      "portal_url": "https://bouldercolorado.gov/government/city-council",
-      "parent_division_id": null,
-      "file": null,
-      "entity_count": 0,
-      "event_count": 0,
-      "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
@@ -134,7 +149,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
@@ -149,7 +164,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/sd:poudre",
@@ -164,7 +179,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
@@ -179,7 +194,7 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
@@ -194,7 +209,52 @@
       "entity_count": 0,
       "event_count": 0,
       "docs_since": null,
-      "last_updated": "2026-11-22"
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "name": "Boulder Valley School District Board of Education",
+      "level": "school_board",
+      "status": "unclaimed",
+      "lat": 40.015,
+      "lng": -105.2705,
+      "portal_url": "https://bvsd.primegov.com/",
+      "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "docs_since": null,
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
+      "name": "Colorado Springs School District 11 Board",
+      "level": "school_board",
+      "status": "unclaimed",
+      "lat": 38.8339,
+      "lng": -104.8214,
+      "portal_url": "https://www.d11.org/board-of-education",
+      "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "docs_since": null,
+      "last_updated": "2026-11-24"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "level": "school_board",
+      "status": "unclaimed",
+      "lat": 40.5853,
+      "lng": -105.0844,
+      "portal_url": "https://poudreschools.portal.civicclerk.com/",
+      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "file": null,
+      "entity_count": 0,
+      "event_count": 0,
+      "docs_since": null,
+      "last_updated": "2026-11-24"
     }
   ],
   "search_index": [
