@@ -5,11 +5,11 @@
     "level": "city",
     "lat": 39.8855,
     "lng": -104.9811,
-    "portal_url": "https://www.northglenn.org/government/city_council/agendas_and_minutes.php",
+    "portal_url": "https://webdocs.northglenn.org/",
     "parent_division_id": null,
     "status": "unclaimed",
     "docs_since": "2026-11-24",
-    "last_updated": "2026-11-24 03:52:21 UTC"
+    "last_updated": "2026-11-24 10:46:48 UTC"
   },
   "entities": [],
   "events": []

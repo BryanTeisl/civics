@@ -1,41 +1,50 @@
-# Civic Core Aggregator (Starter Kit)
+# CivicPulse (v2 — Scalable Architecture)
 
-A lightweight, zero-hosting-cost civic data pipeline designed to run on a local PC (RTX 2060 + Ollama) and publish sharded Open Civic Data (OCD) JSON to **Cloudflare Pages**.
+A zero-hosting-cost ($0/month) civic data pipeline and static public-record explorer for municipal, county, and school board governments. Polls structured legislative portals, extracts roll-call votes and plain-English summaries via local Ollama (`qwen2.5:3b`), and publishes sharded Open Civic Data (OCD) JSON to **Cloudflare Pages**.
 
-## Important: OneDrive + Git + SQLite Setup
-**Do NOT place your active `.git` folder or live `core_civic.db` directly inside a live-syncing OneDrive folder.** OneDrive's continuous file-syncing can lock SQLite during writes and corrupt `.git` index files.
+## Safe Local Setup (Outside OneDrive)
 
-Instead, use this safe pattern:
-1. Unzip this folder to a local directory on your PC, e.g.: `C:\Projects\civic-core`
-2. Set an environment variable pointing to your OneDrive backup folder:
-   ```powershell
-   setx ONEDRIVE_BACKUP_DIR "C:\Users\YOUR_NAME\OneDrive\CivicCoreBackups"
-   ```
-3. Every time `exporter.py` runs, it uses SQLite's safe online backup API to copy a clean, timestamped snapshot of `core_civic.db` into your OneDrive folder automatically.
+Do **not** keep your active `.git` folder or `core_civic.db` inside a live-syncing OneDrive directory. Clone or extract this repo to a local folder (e.g., `C:\Projects\civics`) and point `ONEDRIVE_BACKUP_DIR` to OneDrive for safe SQLite online backups:
 
-## Quick Start (Windows PowerShell)
 ```powershell
-cd C:\Projects\civic-core
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-
-# 1. Initialize SQLite DB & seed Fort Collins City Council
-python db.py
-
-# 2. Poll Fort Collins CivicClerk for recent Agendas & Minutes (CPU)
-python watcher.py
-
-# 3. Extract roll-call votes & compute Vote Impactfulness (RTX 2060 + Ollama)
-#    (Make sure Ollama is running: `ollama run llama3.1:8b-instruct-q4_K_M`)
-python worker.py
-
-# 4. Export static JSON to public/data/ & backup DB to OneDrive
-python exporter.py
+setx ONEDRIVE_BACKUP_DIR "C:\Users\YOUR_NAME\OneDrive\CivicCoreBackups"
 ```
 
-## Deploying to Cloudflare Pages (Commercial-Friendly Free Tier)
-1. Push this repo to GitHub (private or public).
-2. In Cloudflare Dashboard -> **Workers & Pages** -> **Create** -> **Pages** -> **Connect to Git**.
-3. Set **Build output directory** to `public` (no build command needed).
-4. Uncomment `git_publish_if_changed()` in `exporter.py` and schedule `watcher.py` -> `worker.py` -> `exporter.py` via Windows Task Scheduler (e.g., 8:00 AM and 8:00 PM daily, keeping you well under Cloudflare's 500 free builds/month).
+## Quick Start
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e ".[dev]"
+
+# 1. Initialize or migrate SQLite schema (idempotent)
+civicpulse init
+
+# 2. Seed all 21 Front Range corridor cities & activate verified structured APIs
+civicpulse seed --file config/jurisdictions/colorado_front_range.json --activate-structured
+
+# 3. Run full pipeline: watch -> work (local Ollama) -> unified export
+civicpulse run-all
+
+# 4. Run unit & integration test suite
+pytest -v
+```
+
+## Unified CLI Commands
+
+| Command | Purpose |
+| :--- | :--- |
+| `civicpulse init` | Applies versioned SQL migrations (`schema_migrations`) cleanly |
+| `civicpulse seed --file <json> [--activate-structured]` | Seeds jurisdictions from declarative config |
+| `civicpulse probe --file <json>` | Runs live HTTP health checks across all configured portals |
+| `civicpulse watch` | Polls active jurisdictions via the plugin adapter registry |
+| `civicpulse work --limit 10` | Extracts votes & summaries via local Ollama (`qwen2.5:3b`) |
+| `civicpulse export` | Exports sharded JSON, `directory.json`, lazy `search_index.json`, engagement guides & lifecycles |
+| `civicpulse onboard --name "City" --state CO --run-pipeline` | Auto-discovers platform, geocodes, and ingests a new city |
+| `civicpulse maintain recalculate-impact` | Recomputes impact scores & vote margins across all events |
+| `civicpulse run-all` | Runs `init` → `watch` → `work` → `export` end-to-end |
+
+## Deploying to Cloudflare Pages
+
+* **Build command:** *(leave blank — zero build step, native ES modules)*
+* **Build output directory:** `public`

@@ -1,32 +1,26 @@
-# Python
+# Python bytecode & virtual environments
 __pycache__/
 *.py[cod]
 *$py.class
 .venv/
 venv/
 env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
 
-# Temporary archives & staging folders
+# Local SQLite database & WAL/SHM sidecar files (never commit binary DBs!)
+core_civic.db
+core_civic.db-wal
+core_civic.db-shm
+*.db
+*.sqlite
+*.sqlite3
+
+# Archives, backups & OS artifacts
 *.zip
-*.tar.gz
-provenance_update/
-federal_sync_update/
-suggested_edits/
-v2_release/
-impact_update/
-fix_overlap_selector/
-multiplatform_expansion/
-primegov_and_discovery/
-sprint4_core_polish/
-
-# SQLite journals & local backups
-*.db-journal
-*.db-wal
-*.db-shm
-*.bak
-
-# OS / Editor
+backups/
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
+.env

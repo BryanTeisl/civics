@@ -9,7 +9,7 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-11-18",
-    "last_updated": "2026-11-24 03:52:21 UTC"
+    "last_updated": "2026-11-24 10:46:48 UTC"
   },
   "entities": [
     {
@@ -39,14 +39,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -63,14 +63,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         }
@@ -143,14 +143,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -167,14 +167,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         }
@@ -247,14 +247,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -271,14 +271,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -323,14 +323,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -347,14 +347,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         }
@@ -427,14 +427,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -451,14 +451,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -543,14 +543,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -567,14 +567,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         }
@@ -607,14 +607,14 @@
       "sponsored_items": [],
       "votes": [
         {
-          "event_id": "legistar-13053-240461",
+          "event_id": "legistar-13053-240459",
           "meeting_date": "2026-11-18",
-          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
-          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
-          "event_type": "resolution",
+          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
+          "event_type": "ordinance",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 26.0,
+          "impact_score": 36.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -631,14 +631,14 @@
           "verbatim_quote": ""
         },
         {
-          "event_id": "legistar-13053-240459",
+          "event_id": "legistar-13053-240461",
           "meeting_date": "2026-11-18",
-          "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
-          "plain_summary": "This ordinance amends and replaces previous local laws related to project designations, affecting any projects that were previously regulated by those earlier ordinances. It impacts all entities involved in projects subject to these designations, including developers, property owners, and regulatory agencies.",
-          "event_type": "ordinance",
+          "title": "Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI-",
+          "plain_summary": "The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.",
+          "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 36.0,
+          "impact_score": 26.0,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""
         },
@@ -682,36 +682,6 @@
       "sponsors": [],
       "votes": [
         {
-          "entity_id": "ocd-person/denver-amanda-sandoval",
-          "name": "Amanda Sandoval",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-chris-hinds",
-          "name": "Chris Hinds",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-diana-romero-campbell",
-          "name": "Diana Romero Campbell",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
           "entity_id": "ocd-person/denver-flor-alvidrez",
           "name": "Flor Alvidrez",
           "district": "At-Large",
@@ -732,6 +702,36 @@
           "verbatim_quote": ""
         },
         {
+          "entity_id": "ocd-person/denver-stacie-gilmore",
+          "name": "Stacie Gilmore",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-chris-hinds",
+          "name": "Chris Hinds",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-amanda-sandoval",
+          "name": "Amanda Sandoval",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
           "entity_id": "ocd-person/denver-shontel-lewis",
           "name": "Shontel Lewis",
           "district": "At-Large",
@@ -742,8 +742,8 @@
           "verbatim_quote": ""
         },
         {
-          "entity_id": "ocd-person/denver-stacie-gilmore",
-          "name": "Stacie Gilmore",
+          "entity_id": "ocd-person/denver-diana-romero-campbell",
+          "name": "Diana Romero Campbell",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Absent",
@@ -777,36 +777,6 @@
       "sponsors": [],
       "votes": [
         {
-          "entity_id": "ocd-person/denver-amanda-sandoval",
-          "name": "Amanda Sandoval",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-chris-hinds",
-          "name": "Chris Hinds",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-diana-romero-campbell",
-          "name": "Diana Romero Campbell",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
           "entity_id": "ocd-person/denver-flor-alvidrez",
           "name": "Flor Alvidrez",
           "district": "At-Large",
@@ -827,6 +797,36 @@
           "verbatim_quote": ""
         },
         {
+          "entity_id": "ocd-person/denver-stacie-gilmore",
+          "name": "Stacie Gilmore",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-chris-hinds",
+          "name": "Chris Hinds",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-amanda-sandoval",
+          "name": "Amanda Sandoval",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
           "entity_id": "ocd-person/denver-shontel-lewis",
           "name": "Shontel Lewis",
           "district": "At-Large",
@@ -837,8 +837,8 @@
           "verbatim_quote": ""
         },
         {
-          "entity_id": "ocd-person/denver-stacie-gilmore",
-          "name": "Stacie Gilmore",
+          "entity_id": "ocd-person/denver-diana-romero-campbell",
+          "name": "Diana Romero Campbell",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Absent",
@@ -872,36 +872,6 @@
       "sponsors": [],
       "votes": [
         {
-          "entity_id": "ocd-person/denver-amanda-sandoval",
-          "name": "Amanda Sandoval",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-chris-hinds",
-          "name": "Chris Hinds",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-diana-romero-campbell",
-          "name": "Diana Romero Campbell",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
           "entity_id": "ocd-person/denver-flor-alvidrez",
           "name": "Flor Alvidrez",
           "district": "At-Large",
@@ -922,6 +892,36 @@
           "verbatim_quote": ""
         },
         {
+          "entity_id": "ocd-person/denver-stacie-gilmore",
+          "name": "Stacie Gilmore",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-chris-hinds",
+          "name": "Chris Hinds",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-amanda-sandoval",
+          "name": "Amanda Sandoval",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
           "entity_id": "ocd-person/denver-shontel-lewis",
           "name": "Shontel Lewis",
           "district": "At-Large",
@@ -932,8 +932,8 @@
           "verbatim_quote": ""
         },
         {
-          "entity_id": "ocd-person/denver-stacie-gilmore",
-          "name": "Stacie Gilmore",
+          "entity_id": "ocd-person/denver-diana-romero-campbell",
+          "name": "Diana Romero Campbell",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Absent",
@@ -967,8 +967,8 @@
       "sponsors": [],
       "votes": [
         {
-          "entity_id": "ocd-person/denver-amanda-sawyer",
-          "name": "Amanda Sawyer",
+          "entity_id": "ocd-person/denver-kevin-flynn",
+          "name": "Kevin Flynn",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Yes",
@@ -977,8 +977,18 @@
           "verbatim_quote": ""
         },
         {
-          "entity_id": "ocd-person/denver-darrell-watson",
-          "name": "Darrell Watson",
+          "entity_id": "ocd-person/denver-stacie-gilmore",
+          "name": "Stacie Gilmore",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/denver-serena-gonzales-gutierrez",
+          "name": "Serena Gonzales-Gutierrez",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Yes",
@@ -997,6 +1007,16 @@
           "verbatim_quote": ""
         },
         {
+          "entity_id": "ocd-person/denver-amanda-sawyer",
+          "name": "Amanda Sawyer",
+          "district": "At-Large",
+          "elected_date": "Jul 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Recorded via structured municipal API.",
+          "verbatim_quote": ""
+        },
+        {
           "entity_id": "ocd-person/denver-jamie-torres",
           "name": "Jamie Torres",
           "district": "At-Large",
@@ -1007,31 +1027,11 @@
           "verbatim_quote": ""
         },
         {
-          "entity_id": "ocd-person/denver-kevin-flynn",
-          "name": "Kevin Flynn",
+          "entity_id": "ocd-person/denver-darrell-watson",
+          "name": "Darrell Watson",
           "district": "At-Large",
           "elected_date": "Jul 2023",
           "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-serena-gonzales-gutierrez",
-          "name": "Serena Gonzales-Gutierrez",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-stacie-gilmore",
-          "name": "Stacie Gilmore",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Absent",
           "is_pivotal": false,
           "rationale_summary": "Recorded via structured municipal API.",
           "verbatim_quote": ""

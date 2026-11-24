@@ -1,17 +1,15 @@
 {
-  "generated_at": "2026-11-24 03:52:23 UTC",
-  "guide_count": 9,
+  "generated_at": "2026-11-24 10:46:48 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
-      "jurisdiction_name": "Boulder City Council",
-      "level": "municipal",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
+      "name": "Boulder City Council",
       "portal_url": "https://bouldercolorado.primegov.com/",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
@@ -48,124 +46,122 @@
       ],
       "representatives": [
         {
-          "ocd_person_id": "ocd-person/boulder-aaron-brockett",
           "name": "Aaron Brockett",
           "role": "Mayor",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-lauren-folkerts",
           "name": "Lauren Folkerts",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-mark-wallach",
           "name": "Mark Wallach",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-matt-benjamin",
           "name": "Matt Benjamin",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-nicole-speer",
           "name": "Nicole Speer",
           "role": "Mayor Pro Tem",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-ryan-schuchard",
           "name": "Ryan Schuchard",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-taishya-adams",
           "name": "Taishya Adams",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-tara-winer",
           "name": "Tara Winer",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/boulder-tina-marquis",
           "name": "Tina Marquis",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://bouldercolorado.gov/government/city-council"
         }
-      ],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      ]
     },
     "ocd-division/country:us/state:co/place:colorado_springs": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
-      "jurisdiction_name": "Colorado Springs City Council",
-      "level": "municipal",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "name": "Colorado Springs City Council",
       "portal_url": "https://coloradosprings.legistar.com/",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
-      "upcoming_meetings": [],
+      "upcoming_meetings": [
+        {
+          "date": "2026-12-07",
+          "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
+          "portal_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "date": "2026-12-07",
+          "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
+          "portal_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "2026-11-24 City Council: Meeting has been cancelled.",
+          "portal_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "date": "2026-11-24",
+          "title": "2026-11-24 City Council: Meeting has been cancelled.",
+          "portal_url": "https://coloradosprings.legistar.com/"
+        }
+      ],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-12-07",
+          "meeting_date": "2026-11-23",
           "doc_type": "agenda",
-          "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
+          "title": "2026-11-23 Executive Session: Meeting has been cancelled.",
           "source_url": "https://coloradosprings.legistar.com/"
         },
         {
-          "meeting_date": "2026-12-07",
+          "meeting_date": "2026-11-23",
           "doc_type": "agenda",
-          "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
-          "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-24",
-          "doc_type": "agenda",
-          "title": "2026-11-24 City Council: Meeting has been cancelled.",
-          "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-24",
-          "doc_type": "agenda",
-          "title": "2026-11-24 City Council: Meeting has been cancelled.",
+          "title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
           "source_url": "https://coloradosprings.legistar.com/"
         },
         {
@@ -173,303 +169,309 @@
           "doc_type": "agenda",
           "title": "2026-11-23 Executive Session: Meeting has been cancelled.",
           "source_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "meeting_date": "2026-11-23",
+          "doc_type": "agenda",
+          "title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
+          "source_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "meeting_date": "2026-11-20",
+          "doc_type": "minutes",
+          "title": "2026-11-20 Liquor and Beer License Hearings: Division 2, Municipal Court Building",
+          "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf"
         }
       ],
       "representatives": [
         {
-          "ocd_person_id": "ocd-person/cos-brian-risley",
           "name": "Brian Risley",
           "role": "President Pro Tem",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-david-leinweber",
           "name": "David Leinweber",
           "role": "Councilmember",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-lynette-crow-iverson",
           "name": "Lynette Crow-Iverson",
           "role": "Council President",
           "district": "At-Large",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-dave-donelson",
           "name": "Dave Donelson",
           "role": "Councilmember",
           "district": "District 1",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-ken-casey",
           "name": "Ken Casey",
           "role": "Councilmember",
           "district": "District 2",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-brandy-williams",
           "name": "Brandy Williams",
           "role": "Councilmember",
           "district": "District 3",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-kimberly-gold",
           "name": "Kimberly Gold",
           "role": "Councilmember",
           "district": "District 4",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-nancy-henjum",
           "name": "Nancy Henjum",
           "role": "Councilmember",
           "district": "District 5",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         },
         {
-          "ocd_person_id": "ocd-person/cos-roland-rainey",
           "name": "Roland Rainey Jr.",
           "role": "Councilmember",
           "district": "District 6",
-          "email": "",
-          "phone": "",
+          "email": null,
+          "phone": null,
           "website_url": "https://coloradosprings.gov/city-council"
         }
-      ],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      ]
     },
     "ocd-division/country:us/state:co/place:denver": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "municipal",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+      "name": "Denver City Council",
       "portal_url": "https://webapi.legistar.com/v1/denver",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [
+      "upcoming_meetings": [
         {
-          "meeting_date": "2026-11-25",
-          "doc_type": "agenda",
+          "date": "2026-11-25",
           "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
         },
         {
-          "meeting_date": "2026-11-25",
-          "doc_type": "agenda",
+          "date": "2026-11-25",
           "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
         },
         {
-          "meeting_date": "2026-11-25",
-          "doc_type": "agenda",
+          "date": "2026-11-25",
           "title": "2026-11-25 Health and Safety: Committee canceled. Consent agenda included.",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf"
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf"
         },
         {
-          "meeting_date": "2026-11-25",
-          "doc_type": "agenda",
+          "date": "2026-11-25",
           "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
         },
         {
-          "meeting_date": "2026-11-25",
-          "doc_type": "agenda",
+          "date": "2026-11-25",
           "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
         }
       ],
+      "recent_agendas_and_docs": [],
       "representatives": [
         {
-          "ocd_person_id": "ocd-person/denver-amanda-sandoval",
           "name": "Amanda Sandoval",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-amanda-sawyer",
           "name": "Amanda Sawyer",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-chris-hinds",
           "name": "Chris Hinds",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-darrell-watson",
           "name": "Darrell Watson",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-diana-romero-campbell",
           "name": "Diana Romero Campbell",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-flor-alvidrez",
           "name": "Flor Alvidrez",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-jamie-torres",
           "name": "Jamie Torres",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-kevin-flynn",
           "name": "Kevin Flynn",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-serena-gonzales-gutierrez",
           "name": "Serena Gonzales-Gutierrez",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-shontel-lewis",
           "name": "Shontel Lewis",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         },
         {
-          "ocd_person_id": "ocd-person/denver-stacie-gilmore",
           "name": "Stacie Gilmore",
           "role": "Councilmember",
-          "district": "At-Large",
-          "email": "",
+          "district": null,
+          "email": null,
           "phone": "(720) 337-2000",
-          "website_url": "https://webapi.legistar.com/v1/denver"
+          "website_url": null
         }
-      ],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      ]
     },
     "ocd-division/country:us/state:co/place:erie": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
-      "jurisdiction_name": "Erie Town Council",
-      "level": "city",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:erie",
+      "name": "Erie Town Council",
       "portal_url": "https://erie.legistar.com/",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
-      ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
-      "representatives": [],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
-    },
-    "ocd-division/country:us/state:co/place:fort_collins": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
-      "jurisdiction_name": "Fort Collins City Council",
-      "level": "municipal",
-      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
-      "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
-        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)",
-          "doc_type": "61-2421",
-          "title": "2026-11-24",
-          "source_url": "minutes"
+          "meeting_date": "2026-07-27",
+          "doc_type": "agenda",
+          "title": "2026-07-27 Historic Preservation Advisory Board: In Person",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2944_A_Historic_Preservation_Advisory_Board_26-07-27_Meeting_Agenda.pdf"
         },
         {
-          "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2403,plainText=false)",
-          "doc_type": "2584-2403",
-          "title": "2026-11-17",
-          "source_url": "agenda"
+          "meeting_date": "2026-07-21",
+          "doc_type": "agenda",
+          "title": "2026-07-21 Liquor License Authority: In Person",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/3095_A_Liquor_License_Authority_26-07-21_Meeting_Agenda.pdf"
         },
         {
-          "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2402,plainText=false)",
-          "doc_type": "2583-2402",
-          "title": "2026-11-17",
-          "source_url": "agenda"
+          "meeting_date": "2026-07-16",
+          "doc_type": "agenda",
+          "title": "2026-07-16 Airport Economic Development Advisory Board: In Person\r\nDoors close @ 6:45 p.m.",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2958_A_Airport_Economic_Development_Advisory_Board_26-07-16_Meeting_Agenda.pdf"
         },
         {
-          "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)",
-          "doc_type": "35-2389",
-          "title": "2026-11-17",
-          "source_url": "minutes"
+          "meeting_date": "2026-07-15",
+          "doc_type": "agenda",
+          "title": "2026-07-15 Planning Commission: In-Person Meeting\r\nLink to Watch or Comment Virtually: https://bit.ly/15July26PCMtg\r\nTo Si",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/3080_A_Planning_Commission_26-07-15_Meeting_Agenda.pdf"
         },
         {
-          "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)",
-          "doc_type": "2584-2384",
-          "title": "2026-11-17",
-          "source_url": "minutes"
+          "meeting_date": "2026-07-13",
+          "doc_type": "agenda",
+          "title": "2026-07-13 Open Space and Trails Advisory Board: In Person\r\nDoors close @ 6:45 p.m.",
+          "source_url": "https://erie.legistar1.com/erie/meetings/2026/7/2969_A_Open_Space_and_Trails_Advisory_Board_26-07-13_Meeting_Agenda.pdf"
         }
       ],
+      "representatives": []
+    },
+    "ocd-division/country:us/state:co/place:fort_collins": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "name": "Fort Collins City Council",
+      "portal_url": "https://fortcollinsco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [
+        {
+          "date": "https://fo",
+          "title": "2026-11-24",
+          "portal_url": "minutes"
+        },
+        {
+          "date": "https://fo",
+          "title": "2026-11-17",
+          "portal_url": "agenda"
+        },
+        {
+          "date": "https://fo",
+          "title": "2026-11-17",
+          "portal_url": "agenda"
+        },
+        {
+          "date": "https://fo",
+          "title": "2026-11-17",
+          "portal_url": "minutes"
+        },
+        {
+          "date": "https://fo",
+          "title": "2026-11-17",
+          "portal_url": "minutes"
+        }
+      ],
+      "recent_agendas_and_docs": [],
       "representatives": [
         {
-          "ocd_person_id": "ocd-person/foco-emily-francis",
           "name": "Emily Francis",
           "role": "Mayor",
           "district": "At-Large",
@@ -478,7 +480,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-chris-conway",
           "name": "Chris Conway",
           "role": "Councilmember",
           "district": "District 1",
@@ -487,7 +488,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-julie-pignataro",
           "name": "Julie Pignataro",
           "role": "Mayor Pro Tem",
           "district": "District 2",
@@ -496,7 +496,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-josh-fudge",
           "name": "Josh Fudge",
           "role": "Councilmember",
           "district": "District 3",
@@ -505,7 +504,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-melanie-potyondy",
           "name": "Melanie Potyondy",
           "role": "Councilmember",
           "district": "District 4",
@@ -514,7 +512,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-amy-hoeven",
           "name": "Amy Hoeven",
           "role": "Councilmember",
           "district": "District 5",
@@ -523,7 +520,6 @@
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         },
         {
-          "ocd_person_id": "ocd-person/foco-anne-nelsen",
           "name": "Anne Nelsen",
           "role": "Councilmember",
           "district": "District 6",
@@ -531,56 +527,48 @@
           "phone": "(970) 221-6505",
           "website_url": "https://www.fortcollins.gov/Government/City-Council"
         }
-      ],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      ]
     },
     "ocd-division/country:us/state:co/place:greeley": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
-      "jurisdiction_name": "Greeley City Council",
-      "level": "municipal",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "name": "Greeley City Council",
       "portal_url": "https://greeleyco.portal.civicclerk.com/",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [
+      "upcoming_meetings": [
         {
-          "meeting_date": "2027-06-16",
-          "doc_type": "agenda",
+          "date": "2027-06-16",
           "title": "2027-06-16 \u2014 Water & Sewer Board",
-          "source_url": "https://greeleyco.portal.civicclerk.com/"
+          "portal_url": "https://greeleyco.portal.civicclerk.com/"
         },
         {
-          "meeting_date": "2027-06-16",
-          "doc_type": "agenda",
+          "date": "2027-06-16",
           "title": "2027-06-16 \u2014 Water & Sewer Board",
-          "source_url": "https://greeleyco.portal.civicclerk.com/"
+          "portal_url": "https://greeleyco.portal.civicclerk.com/"
         },
         {
-          "meeting_date": "2027-05-19",
-          "doc_type": "agenda",
+          "date": "2027-05-19",
           "title": "2027-05-19 \u2014 Water & Sewer Board",
-          "source_url": "https://greeleyco.portal.civicclerk.com/"
+          "portal_url": "https://greeleyco.portal.civicclerk.com/"
         },
         {
-          "meeting_date": "2027-05-19",
-          "doc_type": "agenda",
+          "date": "2027-05-19",
           "title": "2027-05-19 \u2014 Water & Sewer Board",
-          "source_url": "https://greeleyco.portal.civicclerk.com/"
+          "portal_url": "https://greeleyco.portal.civicclerk.com/"
         },
         {
-          "meeting_date": "2027-04-21",
-          "doc_type": "agenda",
+          "date": "2027-04-21",
           "title": "2027-04-21 \u2014 Water & Sewer Board",
-          "source_url": "https://greeleyco.portal.civicclerk.com/"
+          "portal_url": "https://greeleyco.portal.civicclerk.com/"
         }
       ],
+      "recent_agendas_and_docs": [],
       "representatives": [
         {
-          "ocd_person_id": "ocd-person/greeley-dale-hall",
           "name": "Dale Hall",
           "role": "Mayor",
           "district": "At-Large",
@@ -589,7 +577,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-melissa-mcdonald",
           "name": "Melissa McDonald",
           "role": "Councilmember",
           "district": "At-Large",
@@ -598,7 +585,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-ryan-roth",
           "name": "Ryan Roth",
           "role": "Councilmember",
           "district": "At-Large",
@@ -607,7 +593,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-craig-huddleston",
           "name": "Craig Huddleston",
           "role": "Councilmember",
           "district": "Ward I",
@@ -616,7 +601,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-deb-deboutez",
           "name": "Deb DeBoutez",
           "role": "Councilmember",
           "district": "Ward II",
@@ -625,7 +609,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-johnny-olson",
           "name": "Johnny Olson",
           "role": "Councilmember",
           "district": "Ward III",
@@ -634,7 +617,6 @@
           "website_url": "https://greeleyco.gov/city-council/"
         },
         {
-          "ocd_person_id": "ocd-person/greeley-brian-rudy",
           "name": "Brian Rudy",
           "role": "Councilmember",
           "district": "Ward IV",
@@ -642,78 +624,120 @@
           "phone": "970-888-1885",
           "website_url": "https://greeleyco.gov/city-council/"
         }
-      ],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      ]
     },
     "ocd-division/country:us/state:co/place:longmont": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
-      "jurisdiction_name": "Longmont City Council",
-      "level": "municipal",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "name": "Longmont City Council",
       "portal_url": "https://longmont.primegov.com/public/portal",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
-      "upcoming_meetings": [
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
         {
-          "title": "City Council Meeting *CANCELLED**",
-          "date": "2026-11-24T19:01",
-          "portal_url": "https://longmont.primegov.com/public/portal"
+          "meeting_date": "2026-03-10",
+          "doc_type": "agenda",
+          "title": "City Council Regular Session \u2014 Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15653&meetingId=3465"
         },
         {
-          "title": "CANCELED - Museum Advisory Board",
-          "date": "2026-12-21T16:30",
-          "portal_url": "https://longmont.primegov.com/public/portal"
-        }
-      ],
-      "recent_agendas_and_docs": [],
-      "representatives": [],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
-    },
-    "ocd-division/country:us/state:co/place:westminster": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
-      "jurisdiction_name": "Westminster City Council",
-      "level": "city",
-      "portal_url": "https://cityofwestminster.primegov.com/public/portal",
-      "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
-        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
-      ],
-      "upcoming_meetings": [
-        {
-          "title": "City Council Post-Meeting Study Session",
-          "date": "2026-11-23T18:30",
-          "portal_url": "https://cityofwestminster.primegov.com/public/portal"
+          "meeting_date": "2026-03-10",
+          "doc_type": "agenda",
+          "title": "City Council Regular Session \u2014 HTML Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=17672"
         },
         {
-          "title": "City Council Meeting",
-          "date": "2026-11-23T18:30",
-          "portal_url": "https://cityofwestminster.primegov.com/public/portal"
+          "meeting_date": "2026-03-03",
+          "doc_type": "agenda",
+          "title": "City Council Study Session \u2014 Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15649&meetingId=3464"
+        },
+        {
+          "meeting_date": "2026-03-03",
+          "doc_type": "agenda",
+          "title": "City Council Study Session \u2014 HTML Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?compiledMeetingDocumentFileId=17600"
+        },
+        {
+          "meeting_date": "2026-02-24",
+          "doc_type": "agenda",
+          "title": "City Council Regular Session \u2014 Agenda",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=15506&meetingId=3435"
         }
       ],
-      "recent_agendas_and_docs": [],
-      "representatives": [],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      "representatives": []
     },
-    "ocd-division/country:us/state:co/place:windsor": {
-      "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
-      "jurisdiction_name": "Windsor Town Board",
-      "level": "municipal",
-      "portal_url": "https://windsorco.portal.civicclerk.com/",
+    "ocd-division/country:us/state:co/place:thornton": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
+      "name": "Thornton City Council",
+      "portal_url": "https://thorntonco.primegov.com/public/portal",
       "checklist": [
-        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [],
-      "representatives": [],
-      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+      "representatives": []
+    },
+    "ocd-division/country:us/state:co/place:westminster": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:westminster",
+      "name": "Westminster City Council",
+      "portal_url": "https://cityofwestminster.primegov.com/public/portal",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": []
+    },
+    "ocd-division/country:us/state:co/place:windsor": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "name": "Windsor Town Board",
+      "portal_url": "https://windsorco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [
+        {
+          "date": "2028-10-24",
+          "title": "2028-10-24 \u2014 Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/"
+        },
+        {
+          "date": "2028-09-26",
+          "title": "2028-09-26 \u2014 Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/"
+        },
+        {
+          "date": "2028-08-22",
+          "title": "2028-08-22 \u2014 Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/"
+        },
+        {
+          "date": "2028-07-25",
+          "title": "2028-07-25 \u2014 Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/"
+        },
+        {
+          "date": "2028-06-27",
+          "title": "2028-06-27 \u2014 Tree Board",
+          "portal_url": "https://windsorco.portal.civicclerk.com/"
+        }
+      ],
+      "recent_agendas_and_docs": [],
+      "representatives": []
     }
   }
 }
