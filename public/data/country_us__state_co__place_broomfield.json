@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:broomfield",
+    "name": "Broomfield City Council",
+    "level": "city",
+    "lat": 39.9205,
+    "lng": -105.0867,
+    "portal_url": "https://www.broomfield.org/1231/Council-Agendas-and-Minutes",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

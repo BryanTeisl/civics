@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:wellington",
+    "name": "Wellington Board of Trustees",
+    "level": "city",
+    "lat": 40.7039,
+    "lng": -105.0086,
+    "portal_url": "https://www.wellingtoncolorado.gov/AgendaCenter",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

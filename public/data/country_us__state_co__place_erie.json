@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
+    "name": "Erie Town Council",
+    "level": "city",
+    "lat": 40.0503,
+    "lng": -105.0499,
+    "portal_url": "https://erie.legistar.com/",
+    "parent_division_id": null,
+    "status": "active",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:firestone",
+    "name": "Firestone Board of Trustees",
+    "level": "city",
+    "lat": 40.1125,
+    "lng": -104.9366,
+    "portal_url": "https://www.firestoneco.gov/129/Agendas-Minutes",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

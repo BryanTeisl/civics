@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:lafayette",
+    "name": "Lafayette City Council",
+    "level": "city",
+    "lat": 39.9936,
+    "lng": -105.0897,
+    "portal_url": "https://www.lafayetteco.gov/AgendaCenter",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

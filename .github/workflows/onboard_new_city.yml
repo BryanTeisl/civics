@@ -1,0 +1,62 @@
+name: Onboard New Jurisdiction
+
+on:
+  workflow_dispatch:
+    inputs:
+      jurisdiction_name:
+        description: "Jurisdiction Name (e.g. Longmont City Council)"
+        required: true
+        type: string
+      state:
+        description: "Two-letter State Code (e.g. CO)"
+        required: true
+        default: "CO"
+        type: string
+      level:
+        description: "Government Tier"
+        required: true
+        default: "city"
+        type: choice
+        options:
+          - city
+          - county
+          - school_district
+      portal_url:
+        description: "Optional Portal URL (leave blank to auto-discover)"
+        required: false
+        type: string
+
+jobs:
+  scout-and-onboard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || pip install requests beautifulsoup4
+
+      - name: Run Autonomous Site Scout & Onboarding Agent
+        run: |
+          python onboard_city.py \
+            --name "${{ inputs.jurisdiction_name }}" \
+            --state "${{ inputs.state }}" \
+            --level "${{ inputs.level }}" \
+            ${{ inputs.portal_url != '' && format('--portal-url "{0}"', inputs.portal_url) || '' }} \
+            --run-pipeline
+
+      - name: Commit & Push Updated Static Data
+        run: |
+          git config user.name "civicpulse-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/
+          git diff --cached --quiet || git commit -m "feat(onboard): auto-ingest ${{ inputs.jurisdiction_name }} (${{ inputs.state }})"
+          git push

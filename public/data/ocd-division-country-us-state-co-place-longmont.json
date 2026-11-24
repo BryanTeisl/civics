@@ -1,0 +1,15 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
+    "name": "Longmont City Council",
+    "level": "municipal",
+    "lat": 40.1672,
+    "lng": -105.1019,
+    "portal_url": "https://longmont.primegov.com/public/portal",
+    "parent_division_id": null,
+    "docs_since": "2026-01-13",
+    "last_updated": "2026-11-24"
+  },
+  "entities": [],
+  "events": []
+}

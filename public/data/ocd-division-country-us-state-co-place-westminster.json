@@ -1,0 +1,15 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
+    "name": "Westminster City Council",
+    "level": "city",
+    "lat": 39.8367,
+    "lng": -105.0372,
+    "portal_url": "https://cityofwestminster.primegov.com/public/portal",
+    "parent_division_id": null,
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24"
+  },
+  "entities": [],
+  "events": []
+}

@@ -5,11 +5,11 @@
     "level": "municipal",
     "lat": 40.3978,
     "lng": -105.075,
-    "portal_url": "https://www.lovgov.org/AgendaCenter",
+    "portal_url": "https://cilovelandco.civicweb.net/Portal/",
     "parent_division_id": null,
     "status": "unclaimed",
     "docs_since": "2026-11-24",
-    "last_updated": "2026-11-24 02:20:25 UTC"
+    "last_updated": "2026-11-24 03:52:21 UTC"
   },
   "entities": [],
   "events": []

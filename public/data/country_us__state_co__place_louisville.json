@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:louisville",
+    "name": "Louisville City Council",
+    "level": "city",
+    "lat": 39.9778,
+    "lng": -105.1319,
+    "portal_url": "https://www.louisvilleco.gov/departments/city-council/council-meetings-agendas-and-minutes/",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:timnath",
+    "name": "Timnath Town Council",
+    "level": "city",
+    "lat": 40.5292,
+    "lng": -104.9853,
+    "portal_url": "https://timnath.org/town-council/",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

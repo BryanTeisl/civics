@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24 02:20:26 UTC",
-  "guide_count": 5,
+  "generated_at": "2026-11-24 03:52:23 UTC",
+  "guide_count": 9,
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
@@ -407,6 +407,22 @@
       ],
       "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
     },
+    "ocd-division/country:us/state:co/place:erie": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
+      "jurisdiction_name": "Erie Town Council",
+      "level": "city",
+      "portal_url": "https://erie.legistar.com/",
+      "checklist": [
+        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [],
+      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+    },
     "ocd-division/country:us/state:co/place:fort_collins": {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
       "jurisdiction_name": "Fort Collins City Council",
@@ -627,6 +643,76 @@
           "website_url": "https://greeleyco.gov/city-council/"
         }
       ],
+      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+    },
+    "ocd-division/country:us/state:co/place:longmont": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "level": "municipal",
+      "portal_url": "https://longmont.primegov.com/public/portal",
+      "checklist": [
+        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+      ],
+      "upcoming_meetings": [
+        {
+          "title": "City Council Meeting *CANCELLED**",
+          "date": "2026-11-24T19:01",
+          "portal_url": "https://longmont.primegov.com/public/portal"
+        },
+        {
+          "title": "CANCELED - Museum Advisory Board",
+          "date": "2026-12-21T16:30",
+          "portal_url": "https://longmont.primegov.com/public/portal"
+        }
+      ],
+      "recent_agendas_and_docs": [],
+      "representatives": [],
+      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+    },
+    "ocd-division/country:us/state:co/place:westminster": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
+      "jurisdiction_name": "Westminster City Council",
+      "level": "city",
+      "portal_url": "https://cityofwestminster.primegov.com/public/portal",
+      "checklist": [
+        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+      ],
+      "upcoming_meetings": [
+        {
+          "title": "City Council Post-Meeting Study Session",
+          "date": "2026-11-23T18:30",
+          "portal_url": "https://cityofwestminster.primegov.com/public/portal"
+        },
+        {
+          "title": "City Council Meeting",
+          "date": "2026-11-23T18:30",
+          "portal_url": "https://cityofwestminster.primegov.com/public/portal"
+        }
+      ],
+      "recent_agendas_and_docs": [],
+      "representatives": [],
+      "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
+    },
+    "ocd-division/country:us/state:co/place:windsor": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
+      "jurisdiction_name": "Windsor Town Board",
+      "level": "municipal",
+      "portal_url": "https://windsorco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda and staff memo before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points\u2014such as how a proposal affects housing, traffic, school/county services, or local budgets\u2014with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call, ordinance number, and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [],
       "disclaimer": "Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending."
     }
   }

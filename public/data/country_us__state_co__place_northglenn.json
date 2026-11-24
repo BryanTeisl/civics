@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:northglenn",
+    "name": "Northglenn City Council",
+    "level": "city",
+    "lat": 39.8855,
+    "lng": -104.9811,
+    "portal_url": "https://www.northglenn.org/government/city_council/agendas_and_minutes.php",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}

@@ -1,0 +1,16 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:frederick",
+    "name": "Frederick Board of Trustees",
+    "level": "city",
+    "lat": 40.0992,
+    "lng": -104.9372,
+    "portal_url": "https://www.frederickco.gov/1100/Agenda-Portal",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-24",
+    "last_updated": "2026-11-24 03:52:21 UTC"
+  },
+  "entities": [],
+  "events": []
+}
