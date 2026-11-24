@@ -15,16 +15,16 @@
     .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   </style>
 </head>
-<body class="bg-stone-100 text-stone-900 min-h-screen flex flex-col">
+<body class="bg-[#ffe5df] text-black min-h-screen flex flex-col">
 
   <!-- Top Navigation -->
-  <header class="bg-[#f6f4ef] border-b border-stone-300 sticky top-0 z-30">
+  <header class="bg-[#b4d3e9] border-b border-black/20 sticky top-0 z-30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
       <button onclick="navigateHome()" class="flex items-center gap-2.5 text-left group">
-        <span class="w-8 h-8 rounded-lg bg-blue-800 text-stone-50 font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
+        <span class="w-8 h-8 rounded-lg bg-[#8fbdda] text-black border border-black/30 font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
         <div>
-          <span class="font-bold text-stone-900 tracking-tight text-lg group-hover:text-blue-800 transition">CivicPulse</span>
-          <span class="hidden sm:inline-block ml-2 text-[11px] font-medium px-2 py-0.5 rounded-full bg-stone-200/80 text-stone-700">Public Record Explorer</span>
+          <span class="font-bold text-black tracking-tight text-lg group-hover:opacity-80 transition">CivicPulse</span>
+          <span class="hidden sm:inline-block ml-2 text-[11px] font-medium px-2 py-0.5 rounded-full bg-[#ffe5df] text-black border border-black/15">Public Record Explorer</span>
         </div>
       </button>
 
@@ -34,21 +34,21 @@
           id="globalSearchInput"
           type="search"
           placeholder="Search measures, ordinances, councilmembers, quotes..."
-          class="w-full rounded-xl border border-stone-300 bg-[#fbfaf7] px-3.5 py-1.5 text-sm text-stone-900 placeholder:text-stone-500 focus:bg-white focus:border-blue-700 focus:outline-none"
+          class="w-full rounded-xl border border-black/25 bg-[#fff9f7] px-3.5 py-1.5 text-sm text-black placeholder:text-black/60 focus:bg-white focus:border-black focus:outline-none"
         />
-        <div id="globalSearchResults" class="hidden absolute left-0 right-0 mt-1.5 bg-[#faf9f5] rounded-xl border border-stone-300 shadow-xl max-h-96 overflow-y-auto z-40 divide-y divide-slate-100"></div>
+        <div id="globalSearchResults" class="hidden absolute left-0 right-0 mt-1.5 bg-[#fff9f7] rounded-xl border border-black/25 shadow-xl max-h-96 overflow-y-auto z-40 divide-y divide-slate-100"></div>
       </div>
 
       <div class="flex items-center gap-2">
         <button
           onclick="openModal('measures101Modal')"
-          class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-stone-300 bg-[#fbfaf7] text-xs font-semibold text-stone-800 hover:bg-stone-200/60 transition"
+          class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-black/25 bg-[#ffe5df] text-xs font-semibold text-black hover:bg-[#fbd0c6] transition"
         >
           📘 Local Measures 101
         </button>
         <button
           onclick="openModal('patronModal')"
-          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-800 text-stone-50 text-xs font-semibold hover:bg-stone-900 transition shadow-sm"
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#f7baac] text-black border border-black/30 text-xs font-semibold hover:bg-[#fbd0c6] transition shadow-sm"
         >
           🤝 Support / Patron
         </button>
@@ -61,11 +61,11 @@
 
     <!-- HOME VIEW: Map + Address Lookup + Multi-Tier Directory -->
     <section id="homeView" class="space-y-6">
-      <div class="bg-[#faf9f5] rounded-2xl border border-stone-300 shadow-sm overflow-hidden">
-        <div class="p-4 sm:p-5 border-b border-stone-200 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div class="bg-[#fff9f7] rounded-2xl border border-black/20 shadow-sm overflow-hidden">
+        <div class="p-4 sm:p-5 border-b border-black/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
-            <h1 class="text-xl sm:text-2xl font-bold text-slate-900">Explore Your Local Governments</h1>
-            <p class="text-sm text-slate-600 mt-0.5">Click anywhere on the map or enter a street address to check city, county, school board, and federal representation.</p>
+            <h1 class="text-xl sm:text-2xl font-bold text-black">Explore Your Local Governments</h1>
+            <p class="text-sm text-black/75 mt-0.5">Click anywhere on the map or enter a street address to check city, county, school board, and federal representation.</p>
           </div>
           <!-- Street Address Lookup (U.S. Census Geocoder) -->
           <form onsubmit="handleAddressLookup(event)" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full lg:w-auto">
@@ -78,7 +78,7 @@
             <button
               type="submit"
               id="addressLookupBtn"
-              class="px-4 py-2 rounded-xl bg-blue-800 text-stone-50 text-sm font-semibold hover:bg-blue-900 transition whitespace-nowrap"
+              class="px-4 py-2 rounded-xl bg-[#8fbdda] text-black border border-black/30 text-sm font-semibold hover:bg-[#b4d3e9] transition whitespace-nowrap"
             >
               Find My Districts
             </button>
@@ -88,7 +88,7 @@
         <!-- Pin-Free OpenStreetMap / Esri Light Gray Gazetteer -->
         <div class="relative">
           <div id="map"></div>
-          <div class="bg-[#f2efe9] px-4 py-2 border-t border-stone-300/80 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+          <div class="bg-[#b4d3e9]/60 px-4 py-2 border-t border-black/15 flex flex-wrap items-center justify-between gap-2 text-xs text-black/65">
             <span>Tip: Click anywhere on the map to resolve overlapping city, county, school district, and congressional boundaries.</span>
             <span id="lastUpdatedBadge">Loading index...</span>
           </div>
@@ -96,13 +96,13 @@
       </div>
 
       <!-- Overlapping Constituency Selector Banner (shown on map click / address match) -->
-      <div id="overlapBanner" class="hidden bg-[#edf2f7] border border-slate-300 rounded-2xl p-4 sm:p-5 space-y-3">
+      <div id="overlapBanner" class="hidden bg-[#b4d3e9]/55 border border-black/20 rounded-2xl p-4 sm:p-5 space-y-3">
         <div class="flex items-start justify-between gap-3">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-blue-700">Resolved Location & Overlapping Governments</div>
-            <h2 id="overlapLocationTitle" class="text-base font-bold text-slate-900 mt-0.5">Selected Location</h2>
+            <div class="text-xs font-bold uppercase tracking-wider text-black">Resolved Location & Overlapping Governments</div>
+            <h2 id="overlapLocationTitle" class="text-base font-bold text-black mt-0.5">Selected Location</h2>
           </div>
-          <button onclick="document.getElementById('overlapBanner').classList.add('hidden')" class="text-xs text-slate-500 hover:text-slate-800">Dismiss ✕</button>
+          <button onclick="document.getElementById('overlapBanner').classList.add('hidden')" class="text-xs text-black/65 hover:text-black">Dismiss ✕</button>
         </div>
         <div id="overlapCardsList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
       </div>
@@ -110,21 +110,21 @@
       <!-- Multi-Tier Filter Pills + Quick Jump -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div class="flex flex-wrap items-center gap-2" id="levelFilterPills">
-          <button onclick="setLevelFilter('all')" data-level="all" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-800 text-stone-50 shadow-sm">
+          <button onclick="setLevelFilter('all')" data-level="all" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#8fbdda] text-black border border-black/30 shadow-sm">
             All (<span id="countAll">0</span>)
           </button>
-          <button onclick="setLevelFilter('municipality')" data-level="municipality" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fbfaf7] border border-stone-300 text-stone-800 hover:bg-stone-200/60">
+          <button onclick="setLevelFilter('municipality')" data-level="municipality" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fff9f7] border border-black/20 text-black hover:bg-[#fbd0c6]/60">
             Cities & Towns (<span id="countCity">0</span>)
           </button>
-          <button onclick="setLevelFilter('county')" data-level="county" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fbfaf7] border border-stone-300 text-stone-800 hover:bg-stone-200/60">
+          <button onclick="setLevelFilter('county')" data-level="county" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fff9f7] border border-black/20 text-black hover:bg-[#fbd0c6]/60">
             Counties (<span id="countCounty">0</span>)
           </button>
-          <button onclick="setLevelFilter('school_district')" data-level="school_district" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fbfaf7] border border-stone-300 text-stone-800 hover:bg-stone-200/60">
+          <button onclick="setLevelFilter('school_district')" data-level="school_district" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fff9f7] border border-black/20 text-black hover:bg-[#fbd0c6]/60">
             School Boards (<span id="countSchool">0</span>)
           </button>
         </div>
 
-        <select id="quickJumpSelect" onchange="if(this.value) openJurisdiction(this.value)" class="rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 focus:border-blue-500 focus:outline-none">
+        <select id="quickJumpSelect" onchange="if(this.value) openJurisdiction(this.value)" class="rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-black/85 focus:border-blue-500 focus:outline-none">
           <option value="">Jump directly to jurisdiction...</option>
         </select>
       </div>
@@ -132,20 +132,20 @@
       <!-- Active Jurisdictions Grid -->
       <div class="space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-lg font-bold text-slate-900">Active Tracked Jurisdictions</h2>
-          <span class="text-xs text-slate-500">100% free public records • Zero paywalls</span>
+          <h2 class="text-lg font-bold text-black">Active Tracked Jurisdictions</h2>
+          <span class="text-xs text-black/65">100% free public records • Zero paywalls</span>
         </div>
         <div id="jurisdictionCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
 
       <!-- Unclaimed Demand-Capture Funnel -->
-      <div id="unclaimedSection" class="bg-[#faf9f5] rounded-2xl border border-stone-300 p-5 space-y-3">
+      <div id="unclaimedSection" class="bg-[#fff9f7] rounded-2xl border border-black/20 p-5 space-y-3">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <h2 class="text-base font-bold text-slate-900">Unclaimed Jurisdictions & Community Requests</h2>
-            <p class="text-xs text-slate-600">Select a city, county, or school board below to request tracking or sponsor priority onboarding.</p>
+            <h2 class="text-base font-bold text-black">Unclaimed Jurisdictions & Community Requests</h2>
+            <p class="text-xs text-black/75">Select a city, county, or school board below to request tracking or sponsor priority onboarding.</p>
           </div>
-          <span id="unclaimedCountBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 self-start">0 pending</span>
+          <span id="unclaimedCountBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-black/85 self-start">0 pending</span>
         </div>
         <div id="unclaimedCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
       </div>
@@ -154,26 +154,26 @@
     <!-- JURISDICTION HUB VIEW (#/jur/...) -->
     <section id="jurisdictionView" class="hidden space-y-6">
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <button onclick="navigateHome()" class="text-xs font-semibold text-blue-800 hover:underline">← Back to Map & Directory</button>
-        <div id="jurBreadcrumbs" class="text-xs text-slate-500"></div>
+        <button onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 hover:underline">← Back to Map & Directory</button>
+        <div id="jurBreadcrumbs" class="text-xs text-black/65"></div>
       </div>
 
       <!-- Jurisdiction Header Card -->
-      <div class="bg-[#faf9f5] rounded-2xl border border-stone-300 p-5 sm:p-6 shadow-sm space-y-4">
+      <div class="bg-[#fff9f7] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-4">
         <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
           <div class="space-y-1.5">
             <div class="flex flex-wrap items-center gap-2">
-              <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-sky-900/10 text-sky-950">City</span>
-              <span id="jurDocsSinceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700">Docs since —</span>
+              <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-[#b4d3e9] text-black border border-black/15">City</span>
+              <span id="jurDocsSinceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-black/85">Docs since —</span>
             </div>
-            <h1 id="jurTitle" class="text-2xl font-bold text-slate-900">Jurisdiction Name</h1>
-            <p id="jurSubtitle" class="text-xs text-slate-500 font-mono break-all"></p>
+            <h1 id="jurTitle" class="text-2xl font-bold text-black">Jurisdiction Name</h1>
+            <p id="jurSubtitle" class="text-xs text-black/65 font-mono break-all"></p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
-            <a id="jurPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 bg-white text-xs font-semibold text-slate-800 hover:bg-slate-50 transition">
+            <a id="jurPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-slate-300 bg-white text-xs font-semibold text-black hover:bg-slate-50 transition">
               Official Portal ↗
             </a>
-            <button onclick="scrollToEngagementGuide()" class="px-3.5 py-2 rounded-xl bg-emerald-800 text-stone-50 text-xs font-semibold hover:bg-emerald-900 transition">
+            <button onclick="scrollToEngagementGuide()" class="px-3.5 py-2 rounded-xl bg-[#8fbdda] text-black border border-black/30 text-xs font-semibold hover:bg-[#b4d3e9] transition">
               📣 How to Engage
             </button>
           </div>
@@ -181,38 +181,38 @@
       </div>
 
       <!-- AGENT 3: Civic Literacy & "How to Engage" Guide Card -->
-      <div id="engagementGuideCard" class="bg-[#eef2ed] border border-emerald-800/25 rounded-2xl p-5 sm:p-6 space-y-4">
+      <div id="engagementGuideCard" class="bg-[#b4d3e9]/45 border border-black/20 rounded-2xl p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800">Civic Literacy & Participation Guide</span>
-            <h2 class="text-lg font-bold text-slate-900">How to Engage & Upcoming / Recent Meetings</h2>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-black">Civic Literacy & Participation Guide</span>
+            <h2 class="text-lg font-bold text-black">How to Engage & Upcoming / Recent Meetings</h2>
           </div>
-          <a id="engageOfficialPortalBtn" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-800 hover:underline">
+          <a id="engageOfficialPortalBtn" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-black hover:underline">
             Verify Schedule & Public Comment Rules ↗
           </a>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <!-- Column 1: Neutral Participation Checklist -->
-          <div class="bg-[#faf9f5] rounded-xl border border-emerald-800/20 p-4 space-y-2.5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Resident Action Checklist</h3>
-            <ol id="engageChecklist" class="list-decimal list-inside space-y-2 text-xs text-slate-700 leading-relaxed"></ol>
+          <div class="bg-[#fff9f7] rounded-xl border border-black/15 p-4 space-y-2.5">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">Resident Action Checklist</h3>
+            <ol id="engageChecklist" class="list-decimal list-inside space-y-2 text-xs text-black/85 leading-relaxed"></ol>
           </div>
 
           <!-- Column 2: Upcoming Meetings & Recent Agendas -->
-          <div class="bg-[#faf9f5] rounded-xl border border-emerald-800/20 p-4 space-y-2.5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">Upcoming & Recent Agendas</h3>
+          <div class="bg-[#fff9f7] rounded-xl border border-black/15 p-4 space-y-2.5">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">Upcoming & Recent Agendas</h3>
             <div id="engageMeetingsList" class="space-y-2 text-xs"></div>
           </div>
 
           <!-- Column 3: Official Contact Channels -->
-          <div class="bg-[#faf9f5] rounded-xl border border-emerald-800/20 p-4 space-y-2.5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-700">All Representative Contact Channels</h3>
+          <div class="bg-[#fff9f7] rounded-xl border border-black/15 p-4 space-y-2.5">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-black/85">All Representative Contact Channels</h3>
             <div id="engageContactsList" class="space-y-2 text-xs"></div>
           </div>
         </div>
 
-        <p id="engageDisclaimer" class="text-[11px] text-slate-500">
+        <p id="engageDisclaimer" class="text-[11px] text-black/65">
           Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending.
         </p>
       </div>
@@ -221,11 +221,11 @@
       <div id="jurLifecyclesCard" class="hidden bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 space-y-4">
         <div class="flex items-center justify-between">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-800">Cross-Meeting Tracker</span>
-            <h2 class="text-lg font-bold text-slate-900">Multi-Meeting Bill & Measure Lifecycles</h2>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-black">Cross-Meeting Tracker</span>
+            <h2 class="text-lg font-bold text-black">Multi-Meeting Bill & Measure Lifecycles</h2>
             <p class="text-xs text-stone-600 mt-0.5">Connects related agenda items, readings, and follow-up votes across meetings so residents can see how a proposal progressed.</p>
           </div>
-          <span id="jurLifecyclesCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700">0 chains</span>
+          <span id="jurLifecyclesCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 text-black">0 chains</span>
         </div>
         <div id="jurLifecyclesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
       </div>
@@ -234,8 +234,8 @@
       <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <h2 class="text-lg font-bold text-slate-900">Elected Representatives & Voting Metrics</h2>
-            <p id="jurRosterNote" class="text-xs text-slate-500">Metrics reflect ingested public roll-call records only.</p>
+            <h2 class="text-lg font-bold text-black">Elected Representatives & Voting Metrics</h2>
+            <p id="jurRosterNote" class="text-xs text-black/65">Metrics reflect ingested public roll-call records only.</p>
           </div>
         </div>
         <div id="jurEntitiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
@@ -245,12 +245,12 @@
       <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h2 class="text-lg font-bold text-slate-900">Measures, Ordinances & Roll-Call Votes</h2>
-            <p class="text-xs text-slate-500">Includes plain-English summaries, impact scores (0–100), and official source links.</p>
+            <h2 class="text-lg font-bold text-black">Measures, Ordinances & Roll-Call Votes</h2>
+            <p class="text-xs text-black/65">Includes plain-English summaries, impact scores (0–100), and official source links.</p>
           </div>
           <div class="flex items-center gap-2">
-            <label for="eventSortSelect" class="text-xs text-slate-500">Sort:</label>
-            <select id="eventSortSelect" onchange="renderJurisdictionEvents()" class="rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700">
+            <label for="eventSortSelect" class="text-xs text-black/65">Sort:</label>
+            <select id="eventSortSelect" onchange="renderJurisdictionEvents()" class="rounded-xl border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-black/85">
               <option value="date_desc">Newest First</option>
               <option value="impact_desc">Highest Impact Score</option>
               <option value="closest_margin">Closest Vote Margin</option>
@@ -263,28 +263,28 @@
 
     <!-- REPRESENTATIVE PROFILE VIEW (#/rep/...) -->
     <section id="repView" class="hidden space-y-6">
-      <button id="repBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-blue-800 hover:underline">← Back to Jurisdiction</button>
-      <div id="repProfileContent" class="bg-[#faf9f5] rounded-2xl border border-stone-300 p-5 sm:p-6 shadow-sm space-y-5"></div>
+      <button id="repBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 hover:underline">← Back to Jurisdiction</button>
+      <div id="repProfileContent" class="bg-[#fff9f7] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
     </section>
 
     <!-- BILL / MEASURE DETAIL VIEW (#/bill/...) -->
     <section id="billView" class="hidden space-y-6">
-      <button id="billBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-blue-800 hover:underline">← Back to Jurisdiction</button>
-      <div id="billDetailContent" class="bg-[#faf9f5] rounded-2xl border border-stone-300 p-5 sm:p-6 shadow-sm space-y-5"></div>
+      <button id="billBackBtn" onclick="navigateHome()" class="text-xs font-semibold text-black underline decoration-black/40 hover:underline">← Back to Jurisdiction</button>
+      <div id="billDetailContent" class="bg-[#fff9f7] rounded-2xl border border-black/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f6f4ef] border-t border-stone-300 mt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+  <footer class="bg-[#b4d3e9] border-t border-black/20 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-black/65">
       <div>
-        <strong class="text-slate-800">CivicPulse</strong> — Free public-record navigation for residents & newcomers.
+        <strong class="text-black">CivicPulse</strong> — Free public-record navigation for residents & newcomers.
       </div>
       <div class="flex flex-wrap items-center gap-4">
-        <button onclick="openModal('measures101Modal')" class="hover:text-slate-900">Local Measures 101</button>
-        <button onclick="openModal('patronModal')" class="hover:text-slate-900">Voluntary Support & Business Patrons</button>
-        <a href="mailto:bryanateisl@gmail.com" class="hover:text-slate-900">Contact</a>
+        <button onclick="openModal('measures101Modal')" class="hover:text-black">Local Measures 101</button>
+        <button onclick="openModal('patronModal')" class="hover:text-black">Voluntary Support & Business Patrons</button>
+        <a href="mailto:bryanateisl@gmail.com" class="hover:text-black">Contact</a>
       </div>
     </div>
   </footer>
@@ -293,16 +293,16 @@
   <div id="measures101Modal" class="hidden fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
       <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-slate-900">Local Measures 101</h3>
-        <button onclick="closeModal('measures101Modal')" class="text-slate-400 hover:text-slate-700 text-sm">✕</button>
+        <h3 class="text-lg font-bold text-black">Local Measures 101</h3>
+        <button onclick="closeModal('measures101Modal')" class="text-slate-400 hover:text-black/85 text-sm">✕</button>
       </div>
-      <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
+      <div class="space-y-3 text-xs text-black/85 leading-relaxed">
         <p><strong>Ordinances:</strong> Local laws enacted by a city council or county board (for example, zoning rules, municipal codes, and tax/fee updates). Typically require multiple readings before final adoption.</p>
         <p><strong>Resolutions:</strong> Formal policy statements, contract approvals, intergovernmental agreements, or budget authorizations that usually pass in a single meeting.</p>
         <p><strong>Impact Score (0–100):</strong> A transparent, auditable score weighing fiscal/budget scope, citywide vs. localized reach, contested vote margins, and structural policy change—never partisan ideology.</p>
       </div>
       <div class="pt-2 text-right">
-        <button onclick="closeModal('measures101Modal')" class="px-4 py-2 rounded-xl bg-blue-800 text-white text-xs font-semibold">Got It</button>
+        <button onclick="closeModal('measures101Modal')" class="px-4 py-2 rounded-xl bg-[#8fbdda] text-black border border-black/30 text-xs font-semibold">Got It</button>
       </div>
     </div>
   </div>
@@ -311,23 +311,23 @@
   <div id="patronModal" class="hidden fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl">
       <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-slate-900">Support CivicPulse</h3>
-        <button onclick="closeModal('patronModal')" class="text-slate-400 hover:text-slate-700 text-sm">✕</button>
+        <h3 class="text-lg font-bold text-black">Support CivicPulse</h3>
+        <button onclick="closeModal('patronModal')" class="text-slate-400 hover:text-black/85 text-sm">✕</button>
       </div>
-      <p class="text-xs text-slate-600 leading-relaxed">
+      <p class="text-xs text-black/75 leading-relaxed">
         CivicPulse is <strong>100% free for everyday residents</strong> with zero paywalls. Voluntary contributions from individuals and local business patrons help expand ingestion to additional cities, counties, and school boards.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
         <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Supporter" class="p-3.5 rounded-xl border border-slate-200 hover:border-blue-700 transition block">
-          <div class="font-bold text-slate-900">Individual Supporter</div>
-          <div class="text-slate-500 mt-1">Voluntary contribution to keep local civic data open for everyone.</div>
+          <div class="font-bold text-black">Individual Supporter</div>
+          <div class="text-black/65 mt-1">Voluntary contribution to keep local civic data open for everyone.</div>
         </a>
         <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Business%20Patron%20Inquiry" class="p-3.5 rounded-xl border border-slate-200 hover:border-blue-700 transition block">
-          <div class="font-bold text-slate-900">Local Business Patron</div>
-          <div class="text-slate-500 mt-1">Voluntarily self-identify as a community patron or sponsor new city onboarding.</div>
+          <div class="font-bold text-black">Local Business Patron</div>
+          <div class="text-black/65 mt-1">Voluntarily self-identify as a community patron or sponsor new city onboarding.</div>
         </a>
       </div>
-      <p class="text-[11px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200/80">
+      <p class="text-[11px] text-black/65 bg-slate-50 p-3 rounded-xl border border-slate-200/80">
         Disclosure: CivicPulse is an independent civic technology project and is not a 501(c)(3) charitable organization. Voluntary contributions are not tax-deductible.
       </p>
     </div>
@@ -337,24 +337,24 @@
   <div id="unclaimedModal" class="hidden fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl">
       <div class="flex items-center justify-between">
-        <h3 id="unclaimedModalTitle" class="text-lg font-bold text-slate-900">Request Jurisdiction Tracking</h3>
-        <button onclick="closeModal('unclaimedModal')" class="text-slate-400 hover:text-slate-700 text-sm">✕</button>
+        <h3 id="unclaimedModalTitle" class="text-lg font-bold text-black">Request Jurisdiction Tracking</h3>
+        <button onclick="closeModal('unclaimedModal')" class="text-slate-400 hover:text-black/85 text-sm">✕</button>
       </div>
-      <p class="text-xs text-slate-600 leading-relaxed">
+      <p class="text-xs text-black/75 leading-relaxed">
         This jurisdiction is not yet actively ingested. Log a community request to prioritize adding its meeting agendas, roll-call votes, and engagement guide.
       </p>
       <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/80 text-xs space-y-1">
-        <div class="text-slate-500">Division ID</div>
-        <div id="unclaimedDivId" class="font-mono text-slate-800 break-all"></div>
+        <div class="text-black/65">Division ID</div>
+        <div id="unclaimedDivId" class="font-mono text-black break-all"></div>
       </div>
       <div class="space-y-2.5 pt-1">
-        <a id="unclaimedRequestMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-800 text-white text-sm font-semibold hover:bg-blue-700 transition">
+        <a id="unclaimedRequestMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#8fbdda] text-black border border-black/30 text-sm font-semibold hover:bg-blue-700 transition">
           🗳️ Request Tracking for This Jurisdiction
         </a>
-        <a id="unclaimedSponsorMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 text-sm font-semibold hover:bg-slate-50 transition">
+        <a id="unclaimedSponsorMailto" href="#" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-black text-sm font-semibold hover:bg-slate-50 transition">
           ⚡ Sponsor Priority Onboarding
         </a>
-        <a id="unclaimedPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full text-center text-xs text-blue-800 hover:underline pt-1 block">
+        <a id="unclaimedPortalLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full text-center text-xs text-black underline decoration-black/40 hover:underline pt-1 block">
           Visit Official Portal ↗
         </a>
       </div>
@@ -457,16 +457,16 @@
         }
         const hits = fuseInstance.search(q).slice(0, 10);
         if (!hits.length) {
-          resultsBox.innerHTML = `<div class="p-3 text-xs text-slate-500">No matching measures, representatives, or jurisdictions found.</div>`;
+          resultsBox.innerHTML = `<div class="p-3 text-xs text-black/65">No matching measures, representatives, or jurisdictions found.</div>`;
         } else {
           resultsBox.innerHTML = hits.map(({ item }) => `
             <button
               onclick="selectSearchHit('${item.type}', '${escapeHtml(item.id)}', '${escapeHtml(item.jurId || "")}')"
               class="w-full text-left px-3.5 py-2.5 hover:bg-slate-50 transition block"
             >
-              <div class="text-[10px] font-bold uppercase tracking-wider text-blue-800">${escapeHtml(item.type)}</div>
-              <div class="text-xs font-semibold text-slate-900 line-clamp-2">${escapeHtml(item.title)}</div>
-              <div class="text-[11px] text-slate-500 mt-0.5">${escapeHtml(item.subtitle)}</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-black underline decoration-black/40">${escapeHtml(item.type)}</div>
+              <div class="text-xs font-semibold text-black line-clamp-2">${escapeHtml(item.title)}</div>
+              <div class="text-[11px] text-black/65 mt-0.5">${escapeHtml(item.subtitle)}</div>
             </button>
           `).join("");
         }
@@ -494,8 +494,8 @@
       document.querySelectorAll(".level-pill").forEach(btn => {
         const active = btn.dataset.level === level;
         btn.className = active
-          ? "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-800 text-stone-50 shadow-sm"
-          : "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fbfaf7] border border-stone-300 text-stone-800 hover:bg-stone-200/60";
+          ? "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#8fbdda] text-black border border-black/30 shadow-sm"
+          : "level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#fff9f7] border border-black/20 text-black hover:bg-[#fbd0c6]/60";
       });
       renderMapAndDirectory();
     }
@@ -533,30 +533,30 @@
 
       const grid = document.getElementById("jurisdictionCardsGrid");
       if (!filteredActive.length) {
-        grid.innerHTML = `<div class="col-span-full bg-white rounded-xl border border-slate-200 p-6 text-center text-xs text-slate-500">No active jurisdictions in this filter tier yet. Check Unclaimed Jurisdictions below to request tracking.</div>`;
+        grid.innerHTML = `<div class="col-span-full bg-white rounded-xl border border-slate-200 p-6 text-center text-xs text-black/65">No active jurisdictions in this filter tier yet. Check Unclaimed Jurisdictions below to request tracking.</div>`;
       } else {
         grid.innerHTML = filteredActive.map(j => {
           const hasVotes = (j.event_count || 0) > 0;
           return `
             <button
               onclick="openJurisdiction('${escapeHtml(j.ocd_division_id)}')"
-              class="text-left bg-[#faf9f5] rounded-2xl border border-stone-300 p-4 hover:border-blue-700 hover:shadow-sm transition flex flex-col justify-between gap-3"
+              class="text-left bg-[#fff9f7] rounded-2xl border border-black/20 p-4 hover:border-black hover:bg-[#b4d3e9]/25 hover:shadow-sm transition flex flex-col justify-between gap-3"
             >
               <div>
                 <div class="flex items-center justify-between gap-2 mb-1.5">
                   <span class="px-2 py-0.5 rounded text-[11px] font-semibold uppercase ${
-                    j.level === "county" ? "bg-amber-900/10 text-amber-950" :
-                    j.level === "school_district" ? "bg-purple-900/10 text-purple-950" :
-                    "bg-sky-900/10 text-sky-950"
+                    j.level === "county" ? "bg-[#fbd0c6] text-black border border-black/15" :
+                    j.level === "school_district" ? "bg-[#f7baac] text-black border border-black/15" :
+                    "bg-[#b4d3e9] text-black border border-black/15"
                   }">${escapeHtml(j.level.replace("_", " "))}</span>
-                  <span class="text-[11px] text-slate-500">Docs since ${escapeHtml(j.docs_since || "2026")}</span>
+                  <span class="text-[11px] text-black/65">Docs since ${escapeHtml(j.docs_since || "2026")}</span>
                 </div>
-                <h3 class="font-bold text-slate-900 text-base">${escapeHtml(j.name)}</h3>
+                <h3 class="font-bold text-black text-base">${escapeHtml(j.name)}</h3>
               </div>
-              <div class="flex items-center justify-between text-xs text-slate-600 pt-2.5 border-t border-slate-100">
+              <div class="flex items-center justify-between text-xs text-black/75 pt-2.5 border-t border-slate-100">
                 <span><strong>${j.entity_count || 0}</strong> Reps</span>
-                <span>${hasVotes ? `<strong>${j.event_count}</strong> Vote Events` : `<span class="px-2 py-0.5 rounded bg-amber-900/10 text-amber-900 font-medium">Pending ingestion</span>`}</span>
-                <span class="text-blue-800 font-semibold">Open →</span>
+                <span>${hasVotes ? `<strong>${j.event_count}</strong> Vote Events` : `<span class="px-2 py-0.5 rounded bg-[#fbd0c6] text-black border border-black/15 font-medium">Pending ingestion</span>`}</span>
+                <span class="text-black underline decoration-black/40 font-semibold">Open →</span>
               </div>
             </button>
           `;
@@ -570,9 +570,9 @@
           onclick="openUnclaimedModal('${escapeHtml(j.ocd_division_id)}')"
           class="text-left rounded-xl border border-slate-200 bg-slate-50/70 p-3 hover:border-blue-400 hover:bg-white transition"
         >
-          <div class="text-[10px] font-bold uppercase text-slate-500">${escapeHtml(j.level.replace("_", " "))}</div>
-          <div class="text-xs font-bold text-slate-900 mt-0.5">${escapeHtml(j.name)}</div>
-          <div class="text-[11px] text-blue-800 font-semibold mt-1.5">+ Request Tracking</div>
+          <div class="text-[10px] font-bold uppercase text-black/65">${escapeHtml(j.level.replace("_", " "))}</div>
+          <div class="text-xs font-bold text-black mt-0.5">${escapeHtml(j.name)}</div>
+          <div class="text-[11px] text-black underline decoration-black/40 font-semibold mt-1.5">+ Request Tracking</div>
         </button>
       `).join("");
 
@@ -646,16 +646,16 @@
       document.getElementById("overlapLocationTitle").textContent = `${label} (${lat.toFixed(4)}, ${lng.toFixed(4)})`;
 
       if (!matchedJurs.length) {
-        cardsList.innerHTML = `<div class="col-span-full text-xs text-slate-600">No tracked polygons matched at this point yet. Choose a jurisdiction from the directory below or request coverage.</div>`;
+        cardsList.innerHTML = `<div class="col-span-full text-xs text-black/75">No tracked polygons matched at this point yet. Choose a jurisdiction from the directory below or request coverage.</div>`;
       } else {
         cardsList.innerHTML = matchedJurs.map(j => `
           <button
             onclick="openJurisdiction('${escapeHtml(j.ocd_division_id)}')"
-            class="text-left bg-[#fbfaf7] rounded-xl border border-stone-300 p-3 hover:border-blue-700 transition shadow-sm"
+            class="text-left bg-[#fff9f7] rounded-xl border border-black/20 p-3 hover:border-blue-700 transition shadow-sm"
           >
-            <div class="text-[10px] font-bold uppercase text-blue-700">${escapeHtml(j.level.replace("_", " "))} • ${escapeHtml(j.status)}</div>
-            <div class="text-xs font-bold text-slate-900 mt-0.5">${escapeHtml(j.name)}</div>
-            <div class="text-[11px] text-blue-800 font-semibold mt-1">${j.status === "active" ? "Inspect Votes & Guide →" : "Request Tracking →"}</div>
+            <div class="text-[10px] font-bold uppercase text-black">${escapeHtml(j.level.replace("_", " "))} • ${escapeHtml(j.status)}</div>
+            <div class="text-xs font-bold text-black mt-0.5">${escapeHtml(j.name)}</div>
+            <div class="text-[11px] text-black underline decoration-black/40 font-semibold mt-1">${j.status === "active" ? "Inspect Votes & Guide →" : "Request Tracking →"}</div>
           </button>
         `).join("");
       }
@@ -752,7 +752,7 @@
         meetingsBox.innerHTML = upcoming.map(m => `
           <div class="p-2.5 rounded-lg bg-emerald-50/70 border border-emerald-200/70">
             <div class="font-bold text-emerald-900">Upcoming: ${escapeHtml(m.date)}</div>
-            <a href="${escapeHtml(m.portal_url || portalHref)}" target="_blank" rel="noopener noreferrer" class="text-slate-800 hover:underline font-medium block mt-0.5">
+            <a href="${escapeHtml(m.portal_url || portalHref)}" target="_blank" rel="noopener noreferrer" class="text-black hover:underline font-medium block mt-0.5">
               ${escapeHtml(m.title)} ↗
             </a>
           </div>
@@ -769,32 +769,32 @@
             safeUrl = portalHref;
           }
           return `
-            <div class="p-2.5 rounded-lg bg-[#f2efe9] border border-stone-300/80 min-w-0 overflow-hidden">
+            <div class="p-2.5 rounded-lg bg-[#ffe5df]/70 border border-black/15 min-w-0 overflow-hidden">
               <div class="text-[11px] font-semibold text-stone-600">${escapeHtml(d.meeting_date || "")} • ${escapeHtml((d.doc_type || "agenda").toUpperCase())}</div>
-              <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" class="text-stone-900 hover:text-blue-800 font-medium truncate block mt-0.5" title="${friendlyTitle}">
+              <a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer" class="text-stone-900 hover:text-black underline decoration-black/40 font-medium truncate block mt-0.5" title="${friendlyTitle}">
                 ${friendlyTitle} ↗
               </a>
             </div>
           `;
         }).join("");
       } else {
-        meetingsBox.innerHTML = `<div class="text-slate-500">Check the <a href="${escapeHtml(portalHref)}" target="_blank" rel="noopener noreferrer" class="text-blue-800 underline">official portal</a> for upcoming meeting dates and public comment registration.</div>`;
+        meetingsBox.innerHTML = `<div class="text-black/65">Check the <a href="${escapeHtml(portalHref)}" target="_blank" rel="noopener noreferrer" class="text-black underline decoration-black/40 underline">official portal</a> for upcoming meeting dates and public comment registration.</div>`;
       }
 
       const contactsBox = document.getElementById("engageContactsList");
       const reps = (guide && guide.representatives) || currentJurData.entities || [];
       if (!reps.length) {
-        contactsBox.innerHTML = `<div class="text-slate-500">Representative directory pending ingestion.</div>`;
+        contactsBox.innerHTML = `<div class="text-black/65">Representative directory pending ingestion.</div>`;
       } else {
         contactsBox.innerHTML = reps.map(r => `
           <div class="p-2 rounded-lg bg-slate-50 border border-slate-200/70 flex items-center justify-between gap-2">
             <div>
-              <div class="font-bold text-slate-900">${escapeHtml(r.name)}</div>
-              <div class="text-[11px] text-slate-500">${escapeHtml(r.district || r.role || "")}</div>
+              <div class="font-bold text-black">${escapeHtml(r.name)}</div>
+              <div class="text-[11px] text-black/65">${escapeHtml(r.district || r.role || "")}</div>
             </div>
             <div class="flex items-center gap-2 text-[11px] font-semibold">
-              ${r.email ? `<a href="mailto:${escapeHtml(r.email)}" class="text-blue-800 hover:underline">Email</a>` : ""}
-              ${r.phone ? `<a href="tel:${escapeHtml(r.phone)}" class="text-slate-700 hover:underline">Call</a>` : ""}
+              ${r.email ? `<a href="mailto:${escapeHtml(r.email)}" class="text-black underline decoration-black/40 hover:underline">Email</a>` : ""}
+              ${r.phone ? `<a href="tel:${escapeHtml(r.phone)}" class="text-black/85 hover:underline">Call</a>` : ""}
             </div>
           </div>
         `).join("");
@@ -812,16 +812,16 @@
       card.classList.remove("hidden");
       document.getElementById("jurLifecyclesCount").textContent = `${chains.length} multi-stage item(s)`;
       document.getElementById("jurLifecyclesList").innerHTML = chains.map(ch => `
-        <div class="rounded-xl border border-indigo-200/80 bg-indigo-50/30 p-4 space-y-2.5">
+        <div class="rounded-xl border border-black/20 bg-[#fbd0c6]/35 p-4 space-y-2.5">
           <div class="flex items-center justify-between gap-2">
-            <span class="text-[11px] font-bold uppercase text-indigo-700">${escapeHtml(ch.match_basis)}</span>
-            <span class="text-[11px] text-slate-500">${escapeHtml(ch.first_date)} → ${escapeHtml(ch.latest_date)}</span>
+            <span class="text-[11px] font-bold uppercase text-black">${escapeHtml(ch.match_basis)}</span>
+            <span class="text-[11px] text-black/65">${escapeHtml(ch.first_date)} → ${escapeHtml(ch.latest_date)}</span>
           </div>
           <div class="space-y-1.5 border-l-2 border-indigo-300 pl-3">
             ${(ch.stages || []).map(st => `
               <button onclick="openBill('${escapeHtml(divId)}', '${escapeHtml(st.event_id)}')" class="w-full text-left block hover:bg-white rounded p-1.5 transition">
-                <div class="text-[11px] font-semibold text-slate-500">${escapeHtml(st.meeting_date)} • ${escapeHtml(st.outcome)} (${escapeHtml(st.tally)})</div>
-                <div class="text-xs font-bold text-slate-900 line-clamp-2">${escapeHtml(st.title)}</div>
+                <div class="text-[11px] font-semibold text-black/65">${escapeHtml(st.meeting_date)} • ${escapeHtml(st.outcome)} (${escapeHtml(st.tally)})</div>
+                <div class="text-xs font-bold text-black line-clamp-2">${escapeHtml(st.title)}</div>
               </button>
             `).join("")}
           </div>
@@ -835,7 +835,7 @@
       const grid = document.getElementById("jurEntitiesGrid");
 
       if (!entities.length) {
-        grid.innerHTML = `<div class="col-span-full text-xs text-slate-500">Roster pending ingestion.</div>`;
+        grid.innerHTML = `<div class="col-span-full text-xs text-black/65">Roster pending ingestion.</div>`;
         return;
       }
 
@@ -849,17 +849,17 @@
           >
             <div>
               <div class="flex items-center justify-between gap-2">
-                <span class="text-[11px] font-bold uppercase text-blue-700">${escapeHtml(ent.district || "At-Large")}</span>
+                <span class="text-[11px] font-bold uppercase text-black">${escapeHtml(ent.district || "At-Large")}</span>
                 <span class="text-[11px] text-slate-400">Elected ${escapeHtml(ent.elected_date || "Active")}</span>
               </div>
-              <div class="font-bold text-slate-900 text-sm mt-1">${escapeHtml(ent.name)}</div>
-              <div class="text-xs text-slate-500">${escapeHtml(ent.role || "Representative")}</div>
+              <div class="font-bold text-black text-sm mt-1">${escapeHtml(ent.name)}</div>
+              <div class="text-xs text-black/65">${escapeHtml(ent.role || "Representative")}</div>
             </div>
             <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
               ${hasVotes
                 ? `<span>Attendance: <strong>${m.attendance_rate}%</strong> (${m.present_votes}/${m.total_votes})</span>
                    <span>Impact: <strong>${m.avg_impact_score}</strong></span>`
-                : `<span class="px-2 py-0.5 rounded bg-amber-900/10 text-amber-900 font-medium">Pending ingestion</span>`}
+                : `<span class="px-2 py-0.5 rounded bg-[#fbd0c6] text-black border border-black/15 font-medium">Pending ingestion</span>`}
             </div>
           </button>
         `;
@@ -892,14 +892,14 @@
         >
           <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
             <div class="flex items-center gap-2">
-              <span class="font-semibold text-slate-600">${escapeHtml(ev.meeting_date)}</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">${escapeHtml(ev.topic || "General")}</span>
-              <span class="px-2 py-0.5 rounded font-semibold ${/^(passed|adopted)/i.test(String(ev.outcome || "")) ? "bg-emerald-900/15 text-emerald-950" : "bg-stone-200/80 text-stone-800"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
+              <span class="font-semibold text-black/75">${escapeHtml(ev.meeting_date)}</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-black/85 font-medium">${escapeHtml(ev.topic || "General")}</span>
+              <span class="px-2 py-0.5 rounded font-semibold ${/^(passed|adopted)/i.test(String(ev.outcome || "")) ? "bg-[#8fbdda] text-black border border-black/20" : "bg-stone-200/80 text-stone-800"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-sky-900/10 text-sky-950 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-[#b4d3e9] text-black border border-black/15 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
           </div>
-          <div class="font-bold text-slate-900 text-sm">${escapeHtml(ev.title)}</div>
-          ${ev.plain_summary ? `<p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(ev.plain_summary)}</p>` : ""}
+          <div class="font-bold text-black text-sm">${escapeHtml(ev.title)}</div>
+          ${ev.plain_summary ? `<p class="text-xs text-black/75 leading-relaxed">${escapeHtml(ev.plain_summary)}</p>` : ""}
         </button>
       `).join("");
     }
@@ -921,46 +921,46 @@
       document.getElementById("repProfileContent").innerHTML = `
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-slate-100 pb-4">
           <div>
-            <div class="text-xs font-bold uppercase text-blue-700">${escapeHtml(ent.district || "At-Large")} • Elected ${escapeHtml(ent.elected_date || "Active")}</div>
-            <h1 class="text-2xl font-bold text-slate-900 mt-1">${escapeHtml(ent.name)}</h1>
-            <p class="text-xs text-slate-500 mt-0.5">${escapeHtml(ent.role)} • ${escapeHtml(currentJurData.jurisdiction.name)}</p>
+            <div class="text-xs font-bold uppercase text-black">${escapeHtml(ent.district || "At-Large")} • Elected ${escapeHtml(ent.elected_date || "Active")}</div>
+            <h1 class="text-2xl font-bold text-black mt-1">${escapeHtml(ent.name)}</h1>
+            <p class="text-xs text-black/65 mt-0.5">${escapeHtml(ent.role)} • ${escapeHtml(currentJurData.jurisdiction.name)}</p>
           </div>
           <div class="flex flex-wrap gap-2 text-xs">
-            ${ent.email ? `<a href="mailto:${escapeHtml(ent.email)}" class="px-3 py-1.5 rounded-xl bg-blue-800 text-white font-semibold">Email Representative</a>` : ""}
+            ${ent.email ? `<a href="mailto:${escapeHtml(ent.email)}" class="px-3 py-1.5 rounded-xl bg-[#8fbdda] text-black border border-black/30 font-semibold">Email Representative</a>` : ""}
             ${ent.website_url ? `<a href="${escapeHtml(ent.website_url)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl border border-slate-300 font-semibold">Official Bio ↗</a>` : ""}
           </div>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-          <div class="p-3 rounded-xl bg-[#f2efe9] border border-stone-300/80">
-            <div class="text-slate-500">Attendance</div>
-            <div class="text-base font-bold text-slate-900 mt-0.5">${hasVotes ? `${m.attendance_rate}%` : "Pending ingestion"}</div>
+          <div class="p-3 rounded-xl bg-[#ffe5df]/70 border border-black/15">
+            <div class="text-black/65">Attendance</div>
+            <div class="text-base font-bold text-black mt-0.5">${hasVotes ? `${m.attendance_rate}%` : "Pending ingestion"}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#f2efe9] border border-stone-300/80">
-            <div class="text-slate-500">Recorded Votes</div>
-            <div class="text-base font-bold text-slate-900 mt-0.5">${m.total_votes || 0}</div>
+          <div class="p-3 rounded-xl bg-[#ffe5df]/70 border border-black/15">
+            <div class="text-black/65">Recorded Votes</div>
+            <div class="text-base font-bold text-black mt-0.5">${m.total_votes || 0}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#f2efe9] border border-stone-300/80">
-            <div class="text-slate-500">Avg Impact Score</div>
-            <div class="text-base font-bold text-slate-900 mt-0.5">${hasVotes ? m.avg_impact_score : "—"}</div>
+          <div class="p-3 rounded-xl bg-[#ffe5df]/70 border border-black/15">
+            <div class="text-black/65">Avg Impact Score</div>
+            <div class="text-base font-bold text-black mt-0.5">${hasVotes ? m.avg_impact_score : "—"}</div>
           </div>
-          <div class="p-3 rounded-xl bg-[#f2efe9] border border-stone-300/80">
-            <div class="text-slate-500">Pivotal Votes</div>
-            <div class="text-base font-bold text-slate-900 mt-0.5">${m.pivotal_votes || 0}</div>
+          <div class="p-3 rounded-xl bg-[#ffe5df]/70 border border-black/15">
+            <div class="text-black/65">Pivotal Votes</div>
+            <div class="text-base font-bold text-black mt-0.5">${m.pivotal_votes || 0}</div>
           </div>
         </div>
         <div class="space-y-2.5">
-          <h2 class="text-base font-bold text-slate-900">Roll-Call Voting History</h2>
+          <h2 class="text-base font-bold text-black">Roll-Call Voting History</h2>
           ${(ent.votes || []).length
             ? ent.votes.map(v => `
               <button onclick="openBill('${escapeHtml(divId)}', '${escapeHtml(v.event_id)}')" class="w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-blue-700 transition block">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="text-slate-500">${escapeHtml(v.meeting_date)}</span>
-                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-emerald-900/15 text-emerald-950" : v.vote === "No" ? "bg-rose-900/15 text-rose-950" : "bg-slate-100 text-slate-700"}">${escapeHtml(v.vote)}</span>
+                  <span class="text-black/65">${escapeHtml(v.meeting_date)}</span>
+                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#8fbdda] text-black border border-black/20" : v.vote === "No" ? "bg-[#f7baac] text-black border border-black/20" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
                 </div>
-                <div class="text-xs font-bold text-slate-900 mt-1">${escapeHtml(v.title)}</div>
+                <div class="text-xs font-bold text-black mt-1">${escapeHtml(v.title)}</div>
               </button>
             `).join("")
-            : `<div class="text-xs text-slate-500">No individual roll-call votes ingested for this representative yet.</div>`}
+            : `<div class="text-xs text-black/65">No individual roll-call votes ingested for this representative yet.</div>`}
         </div>
       `;
       showOnlySection("repView");
@@ -986,62 +986,62 @@
         <div class="space-y-3 border-b border-slate-100 pb-4">
           <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
             <div class="flex flex-wrap items-center gap-2">
-              <span class="font-semibold text-slate-600">${escapeHtml(ev.meeting_date)}</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">${escapeHtml(ev.topic || "General")}</span>
-              <span class="px-2 py-0.5 rounded font-semibold ${ev.outcome === "Passed" ? "bg-emerald-900/15 text-emerald-950" : "bg-slate-100 text-slate-800"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
-              <span class="px-2 py-0.5 rounded bg-sky-900/10 text-sky-950 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
+              <span class="font-semibold text-black/75">${escapeHtml(ev.meeting_date)}</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-black/85 font-medium">${escapeHtml(ev.topic || "General")}</span>
+              <span class="px-2 py-0.5 rounded font-semibold ${ev.outcome === "Passed" ? "bg-[#8fbdda] text-black border border-black/20" : "bg-slate-100 text-black"}">${escapeHtml(ev.outcome)} (${ev.yes_count}-${ev.no_count})</span>
+              <span class="px-2 py-0.5 rounded bg-[#b4d3e9] text-black border border-black/15 font-bold">Impact ${ev.impact_score ?? 0}/100</span>
             </div>
-            <a href="${escapeHtml(ev.source_url)}" target="_blank" rel="noopener noreferrer" class="text-blue-800 font-semibold hover:underline">Official Record ↗</a>
+            <a href="${escapeHtml(ev.source_url)}" target="_blank" rel="noopener noreferrer" class="text-black underline decoration-black/40 font-semibold hover:underline">Official Record ↗</a>
           </div>
-          <h1 class="text-xl font-bold text-slate-900">${escapeHtml(ev.title)}</h1>
+          <h1 class="text-xl font-bold text-black">${escapeHtml(ev.title)}</h1>
           ${ev.plain_summary ? `
-            <div class="p-3.5 rounded-xl bg-[#edf2f7] border border-slate-300 text-xs text-slate-800 space-y-1">
+            <div class="p-3.5 rounded-xl bg-[#b4d3e9]/45 border border-black/20 text-xs text-black space-y-1">
               <div class="font-bold text-blue-900">Plain-English Summary</div>
               <p class="leading-relaxed">${escapeHtml(ev.plain_summary)}</p>
             </div>` : ""}
           ${ev.diff_summary ? `
-            <div class="p-3.5 rounded-xl bg-[#f5efe2] border border-amber-900/20 text-xs text-slate-800 space-y-1">
+            <div class="p-3.5 rounded-xl bg-[#fbd0c6]/60 border border-black/20 text-xs text-black space-y-1">
               <div class="font-bold text-amber-900">What Changed?</div>
               <p class="leading-relaxed">${escapeHtml(ev.diff_summary)}</p>
             </div>` : ""}
         </div>
 
         ${matchingChain ? `
-          <div class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-200 space-y-2">
+          <div class="p-4 rounded-xl bg-[#fbd0c6]/45 border border-black/20 space-y-2">
             <div class="text-xs font-bold text-indigo-900">Cross-Meeting Bill Lifecycle (${escapeHtml(matchingChain.match_basis)})</div>
             <div class="space-y-1.5 border-l-2 border-indigo-300 pl-3">
               ${matchingChain.stages.map(st => `
-                <div class="text-xs ${st.event_id === eventId ? "font-bold text-indigo-950" : "text-slate-700"}">
+                <div class="text-xs ${st.event_id === eventId ? "font-bold text-indigo-950" : "text-black/85"}">
                   ${escapeHtml(st.meeting_date)} — ${escapeHtml(st.outcome)} (${escapeHtml(st.tally)}): ${escapeHtml(st.title)}
                 </div>
               `).join("")}
             </div>
           </div>` : ""}
 
-        <div class="p-3.5 rounded-xl bg-[#eef2ed] border border-emerald-800/25 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+        <div class="p-3.5 rounded-xl bg-[#b4d3e9]/45 border border-black/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
           <div>
             <strong class="text-emerald-950">Want to weigh in on related council or board items?</strong>
-            <span class="text-slate-600 block sm:inline sm:ml-1">View upcoming meetings, public comment rules, and representative contacts.</span>
+            <span class="text-black/75 block sm:inline sm:ml-1">View upcoming meetings, public comment rules, and representative contacts.</span>
           </div>
-          <button onclick="openJurisdiction('${escapeHtml(divId)}').then(() => scrollToEngagementGuide())" class="px-3 py-1.5 rounded-lg bg-emerald-800 text-stone-50 font-semibold hover:bg-emerald-700 transition self-start">
+          <button onclick="openJurisdiction('${escapeHtml(divId)}').then(() => scrollToEngagementGuide())" class="px-3 py-1.5 rounded-lg bg-[#8fbdda] text-black border border-black/30 font-semibold hover:bg-emerald-700 transition self-start">
             Open Engagement Guide →
           </button>
         </div>
 
         <div class="space-y-2.5">
-          <h2 class="text-base font-bold text-slate-900">Roll-Call Breakdown</h2>
+          <h2 class="text-base font-bold text-black">Roll-Call Breakdown</h2>
           ${(ev.votes || []).length
             ? `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">` +
               ev.votes.map(v => `
                 <button onclick="openRep('${escapeHtml(divId)}', '${escapeHtml(v.entity_id)}')" class="text-left p-3 rounded-xl border border-slate-200 hover:border-blue-700 transition flex items-center justify-between gap-2 text-xs">
                   <div>
-                    <div class="font-bold text-slate-900">${escapeHtml(v.name)}</div>
-                    <div class="text-[11px] text-slate-500">${escapeHtml(v.district || "")}</div>
+                    <div class="font-bold text-black">${escapeHtml(v.name)}</div>
+                    <div class="text-[11px] text-black/65">${escapeHtml(v.district || "")}</div>
                   </div>
-                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-emerald-900/15 text-emerald-950" : v.vote === "No" ? "bg-rose-900/15 text-rose-950" : "bg-slate-100 text-slate-700"}">${escapeHtml(v.vote)}</span>
+                  <span class="font-bold px-2 py-0.5 rounded ${v.vote === "Yes" ? "bg-[#8fbdda] text-black border border-black/20" : v.vote === "No" ? "bg-[#f7baac] text-black border border-black/20" : "bg-slate-100 text-black/85"}">${escapeHtml(v.vote)}</span>
                 </button>
               `).join("") + `</div>`
-            : `<div class="text-xs text-slate-500">Individual roll-call breakdown not recorded for this summary item.</div>`}
+            : `<div class="text-xs text-black/65">Individual roll-call breakdown not recorded for this summary item.</div>`}
         </div>
       `;
       showOnlySection("billView");
