@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 10:56:26 UTC",
+  "generated_at": "2026-11-24 16:59:32 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:fort_collins": [
       {
@@ -22,6 +22,100 @@
             "title": "Second Reading of Ordinance No. 020",
             "outcome": "Passed (7-0)",
             "tally": "7-0"
+          }
+        ]
+      }
+    ],
+    "ocd-division/country:us/state:co/place:denver": [
+      {
+        "chain_key": "id:ordinance_0819",
+        "match_basis": "Measure ID #0819",
+        "first_date": "2026-11-18",
+        "latest_date": "2026-11-18",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_546be4751f86eb",
+            "meeting_date": "2026-11-18",
+            "title": "Amendment and Rejection of Ordinance No. 0819, Series of 2017",
+            "outcome": "Passed",
+            "tally": "4-0"
+          },
+          {
+            "event_id": "legistar-13053-240459",
+            "meeting_date": "2026-11-18",
+            "title": "To amend, restate and supersede Ordinance No. 0819, Series of 2017, as previously amended, restated and superseded by Ordinance No. 0291, Series of 2022, and by Ordinance No. 0275, Series of 2024, designating the project",
+            "outcome": "Passed",
+            "tally": "4-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:ordinance_0868",
+        "match_basis": "Measure ID #0868",
+        "first_date": "2026-11-18",
+        "latest_date": "2026-11-18",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_cb1b799f1f4ec6",
+            "meeting_date": "2026-11-18",
+            "title": "Amendment and Rejection of Ordinance No. 0868, Series of 2021",
+            "outcome": "Passed",
+            "tally": "4-0"
+          },
+          {
+            "event_id": "legistar-13053-240460",
+            "meeting_date": "2026-11-18",
+            "title": "To amend, restate and supersede Ordinance No. 0868, Series of 2021, as previously amended, restated and superseded by Ordinance No. 0276, Series of 2024, designating the projects to be undertaken and funded with the proc",
+            "outcome": "Passed",
+            "tally": "4-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approves master purchase order with",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-11-17",
+        "latest_date": "2026-11-17",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_29dcfc6147cc64",
+            "meeting_date": "2026-11-17",
+            "title": "Approves Master Purchase Order with WoodRiver Energy, LLC",
+            "outcome": "Passed",
+            "tally": "9-0"
+          },
+          {
+            "event_id": "ev_9242423f96607f",
+            "meeting_date": "2026-11-17",
+            "title": "Approves Master Purchase Order with Graybar Electric Company, Inc.",
+            "outcome": "Passed",
+            "tally": "9-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:ordinance amending section denver revised",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-11-17",
+        "latest_date": "2026-11-17",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_f618ee45f2345b",
+            "meeting_date": "2026-11-17",
+            "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
+            "outcome": "Passed",
+            "tally": "5-0"
+          },
+          {
+            "event_id": "legistar-13051-240569",
+            "meeting_date": "2026-11-17",
+            "title": "For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e",
+            "outcome": "Passed",
+            "tally": "5-0"
           }
         ]
       }

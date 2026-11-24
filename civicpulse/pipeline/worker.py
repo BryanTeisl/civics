@@ -3,7 +3,9 @@ from __future__ import annotations
 import hashlib
 import io
 import json
+import os
 import re
+import time
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -16,11 +18,19 @@ from civicpulse.pipeline.metrics import compute_impact_score
 MAX_PDF_PAGES = 40
 MAX_RAW_TEXT_CHARS = 50_000
 LLM_PROMPT_CHARS = 12_000
+OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "300"))
 
 CIVICCLERK_EVENT_RE = re.compile(
     r"https?://([a-z0-9-]+)\.portal\.civicclerk\.com/event/(\d+)",
     re.IGNORECASE,
 )
+
+
+def _format_duration(seconds: float) -> str:
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    mins, rem = divmod(seconds, 60)
+    return f"{int(mins)}m {rem:.1f}s"
 
 
 def _extract_pdf_text(content: bytes, max_pages: int = MAX_PDF_PAGES) -> str:
@@ -182,8 +192,15 @@ def _call_ollama_extract(
     )
     resp = requests.post(
         SETTINGS.ollama_url,
-        json={"model": SETTINGS.ollama_model, "prompt": prompt, "stream": False, "format": "json"},
-        timeout=120,
+        json={
+            "model": SETTINGS.ollama_model,
+            "prompt": prompt,
+            "stream": False,
+            "format": "json",
+            "keep_alive": "15m",
+            "options": {"temperature": 0.1, "num_ctx": 8192},
+        },
+        timeout=OLLAMA_TIMEOUT,
     )
     resp.raise_for_status()
     payload = json.loads(resp.json().get("response", "{}"))
@@ -199,11 +216,11 @@ def run_worker(
     doc_type: Optional[str] = None,
     fetch_only: bool = False,
     requeue_skipped: bool = False,
-) -> Dict[str, int]:
+) -> Dict[str, Any]:
     """Fetches missing document text (PDF/HTML/CivicClerk) and extracts structured votes via local Ollama."""
     init_db(db_path)
     conn = get_connection(db_path)
-    stats = {
+    stats: Dict[str, Any] = {
         "fetched": 0,
         "processed": 0,
         "events_created": 0,
@@ -212,6 +229,7 @@ def run_worker(
         "skipped": 0,
     }
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    run_start = time.perf_counter()
 
     try:
         if requeue_skipped:
@@ -294,6 +312,8 @@ def run_worker(
             roster = roster_cache[div_id]
 
             # Step 3: Extract events & roll-call votes via local Ollama
+            doc_start = time.perf_counter()
+            doc_votes_added = 0
             try:
                 extracted = _call_ollama_extract(
                     raw_text=raw_text,
@@ -375,6 +395,7 @@ def run_worker(
                         )
                         if vcur.rowcount > 0:
                             stats["votes_created"] += 1
+                            doc_votes_added += 1
 
                 conn.execute(
                     "UPDATE documents SET status = 'processed', processed_at = ?, error_message = NULL WHERE doc_id = ?",
@@ -382,9 +403,10 @@ def run_worker(
                 )
                 conn.commit()
                 stats["processed"] += 1
+                doc_elapsed = _format_duration(time.perf_counter() - doc_start)
                 print(
                     f"[WORK] doc_id={doc_id} ({doc['meeting_date']}): "
-                    f"extracted {len(extracted)} event(s)"
+                    f"extracted {len(extracted)} event(s), {doc_votes_added} vote(s) in {doc_elapsed}"
                 )
             except Exception as exc:
                 retries = int(doc["retry_count"] or 0) + 1
@@ -395,8 +417,12 @@ def run_worker(
                 )
                 conn.commit()
                 stats["failed"] += 1
-                print(f"[WORK][WARN] doc_id={doc_id} LLM extraction failed: {exc}")
+                doc_elapsed = _format_duration(time.perf_counter() - doc_start)
+                print(f"[WORK][WARN] doc_id={doc_id} LLM extraction failed after {doc_elapsed}: {exc}")
 
+        total_elapsed = _format_duration(time.perf_counter() - run_start)
+        stats["elapsed"] = total_elapsed
+        print(f"[WORK] Total run time: {total_elapsed}")
         return stats
     finally:
         conn.close()
