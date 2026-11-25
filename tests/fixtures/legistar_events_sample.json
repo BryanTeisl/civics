@@ -1,0 +1,16 @@
+[
+  {
+    "EventId": 101,
+    "EventBodyName": "City Council",
+    "EventDate": "2026-11-16T00:00:00",
+    "EventAgendaFile": "https://denver.legistar.com/View.ashx?M=A&ID=101",
+    "EventMinutesFile": "https://denver.legistar.com/View.ashx?M=M&ID=101"
+  },
+  {
+    "EventId": 102,
+    "EventBodyName": "Land Use, Transportation & Infrastructure Committee",
+    "EventDate": "2026-11-17T00:00:00",
+    "EventAgendaFile": "https://denver.legistar.com/View.ashx?M=A&ID=102",
+    "EventMinutesFile": "https://denver.legistar.com/View.ashx?M=M&ID=102"
+  }
+]

@@ -92,11 +92,19 @@ class PrimeGovAdapter(BaseAdapter):
                     return 2
                 return 1
 
+            non_packet = [
+                d for d in doc_list
+                if not PACKET_HINT_RE.search((d.get("templateName") or d.get("title") or "").strip())
+            ]
+            # Fallback for portals like Westminster that only publish "HTML Packet" / "Packet"
+            candidates = non_packet or [
+                d for d in doc_list
+                if "html" in ((d.get("templateName") or d.get("title") or "").lower())
+            ] or doc_list
+
             added_for_meeting = 0
-            for d in sorted(doc_list, key=_doc_rank):
+            for d in sorted(candidates, key=_doc_rank):
                 label = (d.get("templateName") or d.get("title") or "").strip()
-                if PACKET_HINT_RE.search(label):
-                    continue
                 is_minutes = bool(MINUTES_HINT_RE.search(f"{label} {d.get('documentType') or ''}"))
                 doc_type = "minutes" if is_minutes else "agenda"
 

@@ -2,14 +2,14 @@
   "jurisdiction": {
     "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
     "name": "Poudre School District Board of Education",
-    "level": "school_board",
+    "level": "school_district",
     "lat": 40.5853,
     "lng": -105.0844,
     "portal_url": "https://poudreschools.portal.civicclerk.com/",
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "unclaimed",
-    "docs_since": "2026-11-24",
-    "last_updated": "2026-11-24 22:46:51 UTC"
+    "docs_since": "2026-11-25",
+    "last_updated": "2026-11-25 18:11:52 UTC"
   },
   "entities": [],
   "events": []

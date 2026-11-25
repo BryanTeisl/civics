@@ -1,0 +1,95 @@
+{
+  "all": "feeds/all.xml",
+  "jurisdictions": {
+    "country_us__state_co__place_colorado_springs": {
+      "name": "Colorado Springs City Council",
+      "url": "feeds/jur_country_us__state_co__place_colorado_springs.xml",
+      "item_count": 49
+    },
+    "country_us__state_co__place_denver": {
+      "name": "Denver City Council",
+      "url": "feeds/jur_country_us__state_co__place_denver.xml",
+      "item_count": 80
+    },
+    "country_us__state_co__place_erie": {
+      "name": "Erie Town Council",
+      "url": "feeds/jur_country_us__state_co__place_erie.xml",
+      "item_count": 3
+    },
+    "country_us__state_co__place_fort_collins": {
+      "name": "Fort Collins City Council",
+      "url": "feeds/jur_country_us__state_co__place_fort_collins.xml",
+      "item_count": 22
+    },
+    "country_us__state_co__place_greeley": {
+      "name": "Greeley City Council",
+      "url": "feeds/jur_country_us__state_co__place_greeley.xml",
+      "item_count": 2
+    },
+    "country_us__state_co__place_longmont": {
+      "name": "Longmont City Council",
+      "url": "feeds/jur_country_us__state_co__place_longmont.xml",
+      "item_count": 53
+    },
+    "country_us__state_co__place_thornton": {
+      "name": "Thornton City Council",
+      "url": "feeds/jur_country_us__state_co__place_thornton.xml",
+      "item_count": 42
+    },
+    "country_us__state_co__place_windsor": {
+      "name": "Windsor Town Board",
+      "url": "feeds/jur_country_us__state_co__place_windsor.xml",
+      "item_count": 7
+    }
+  },
+  "topics": {
+    "Budget & Finance": {
+      "url": "feeds/topic_budget_finance.xml",
+      "item_count": 32
+    },
+    "Contracts & Procurement": {
+      "url": "feeds/topic_contracts_procurement.xml",
+      "item_count": 38
+    },
+    "Education & Schools": {
+      "url": "feeds/topic_education_schools.xml",
+      "item_count": 1
+    },
+    "General": {
+      "url": "feeds/topic_general.xml",
+      "item_count": 56
+    },
+    "Governance & Elections": {
+      "url": "feeds/topic_governance_elections.xml",
+      "item_count": 32
+    },
+    "Housing & Development": {
+      "url": "feeds/topic_housing_development.xml",
+      "item_count": 42
+    },
+    "Infrastructure & Transit": {
+      "url": "feeds/topic_infrastructure_transit.xml",
+      "item_count": 13
+    },
+    "Parks, Water & Environment": {
+      "url": "feeds/topic_parks_water_environment.xml",
+      "item_count": 6
+    },
+    "Permits & Licensing": {
+      "url": "feeds/topic_permits_licensing.xml",
+      "item_count": 14
+    },
+    "Public Safety": {
+      "url": "feeds/topic_public_safety.xml",
+      "item_count": 6
+    },
+    "Taxes, Fees & Utilities": {
+      "url": "feeds/topic_taxes_fees_utilities.xml",
+      "item_count": 5
+    },
+    "Zoning & Land Use": {
+      "url": "feeds/topic_zoning_land_use.xml",
+      "item_count": 13
+    }
+  }
+}

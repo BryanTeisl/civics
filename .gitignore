@@ -24,3 +24,5 @@ backups/
 .DS_Store
 Thumbs.db
 .env
+
+logs/

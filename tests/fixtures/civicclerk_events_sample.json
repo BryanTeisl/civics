@@ -1,0 +1,33 @@
+{
+  "value": [
+    {
+      "id": 5501,
+      "eventName": "City Council Regular Meeting",
+      "startDateTime": "2026-11-17T18:00:00Z",
+      "publishedFiles": [
+        {
+          "fileId": 9001,
+          "type": "Agenda",
+          "name": "2026-11-17 Regular Council Agenda"
+        },
+        {
+          "fileId": 9002,
+          "type": "Minutes",
+          "name": "2026-11-17 Summary Minutes"
+        }
+      ]
+    },
+    {
+      "id": 5502,
+      "eventName": "Water & Sewer Advisory Board",
+      "startDateTime": "2026-11-18T17:00:00Z",
+      "publishedFiles": [
+        {
+          "fileId": 9003,
+          "type": "Agenda",
+          "name": "Advisory Agenda"
+        }
+      ]
+    }
+  ]
+}

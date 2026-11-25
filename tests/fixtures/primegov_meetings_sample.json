@@ -1,0 +1,19 @@
+[
+  {
+    "id": 7710,
+    "title": "City Council Regular Meeting",
+    "dateTime": "2026-11-19T18:00:00",
+    "documentList": [
+      {
+        "id": 441,
+        "templateName": "HTML Agenda",
+        "compileOutputType": 3
+      },
+      {
+        "id": 442,
+        "templateName": "Approved Minutes",
+        "compileOutputType": 1
+      }
+    ]
+  }
+]

@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-11-24 22:46:51 UTC",
+  "last_updated": "2026-11-25 18:11:52 UTC",
   "jurisdictions": [
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
       "name": "Boulder City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 40.015,
       "lng": -105.2705,
       "portal_url": "https://bouldercolorado.primegov.com/",
@@ -15,12 +15,15 @@
       "event_count": 0,
       "document_count": 149,
       "docs_since": "2026-01-08",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
       "name": "Colorado Springs City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 38.8339,
       "lng": -104.8214,
       "portal_url": "https://coloradosprings.legistar.com/",
@@ -31,12 +34,15 @@
       "event_count": 49,
       "document_count": 73,
       "docs_since": "2026-08-11",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-20",
+      "stale_days": 5,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
       "name": "Denver City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 39.7392,
       "lng": -104.9903,
       "portal_url": "https://denver.legistar.com/",
@@ -47,7 +53,10 @@
       "event_count": 80,
       "document_count": 71,
       "docs_since": "2026-09-28",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-18",
+      "stale_days": 7,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
@@ -63,12 +72,15 @@
       "event_count": 3,
       "document_count": 55,
       "docs_since": "2025-12-09",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-06-03",
+      "stale_days": 175,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
       "name": "Fort Collins City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 40.5853,
       "lng": -105.0844,
       "portal_url": "https://fortcollinsco.portal.civicclerk.com/",
@@ -76,15 +88,18 @@
       "status": "active",
       "file": "country_us__state_co__place_fort_collins.json",
       "entity_count": 7,
-      "event_count": 21,
-      "document_count": 57,
-      "docs_since": "2026-10-20",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "event_count": 22,
+      "document_count": 72,
+      "docs_since": "2026-08-18",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-24",
+      "stale_days": 1,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
       "name": "Greeley City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 40.4233,
       "lng": -104.7091,
       "portal_url": "https://greeleyco.portal.civicclerk.com/",
@@ -92,15 +107,18 @@
       "status": "active",
       "file": "country_us__state_co__place_greeley.json",
       "entity_count": 7,
-      "event_count": 0,
-      "document_count": 38,
-      "docs_since": "2026-11-17",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "event_count": 2,
+      "document_count": 54,
+      "docs_since": "2026-09-08",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-10-27",
+      "stale_days": 29,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
       "name": "Longmont City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 40.1672,
       "lng": -105.1019,
       "portal_url": "https://longmont.primegov.com/public/portal",
@@ -109,9 +127,12 @@
       "file": "country_us__state_co__place_longmont.json",
       "entity_count": 7,
       "event_count": 53,
-      "document_count": 118,
+      "document_count": 119,
       "docs_since": "2026-01-01",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-01-27",
+      "stale_days": 302,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:thornton",
@@ -127,7 +148,10 @@
       "event_count": 42,
       "document_count": 74,
       "docs_since": "2026-01-06",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-02-18",
+      "stale_days": 280,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
@@ -141,14 +165,17 @@
       "file": "country_us__state_co__place_westminster.json",
       "entity_count": 7,
       "event_count": 0,
-      "document_count": 50,
+      "document_count": 75,
       "docs_since": "2026-01-05",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
       "name": "Windsor Town Board",
-      "level": "municipal",
+      "level": "city",
       "lat": 40.4775,
       "lng": -104.9014,
       "portal_url": "https://windsorco.portal.civicclerk.com/",
@@ -156,10 +183,13 @@
       "status": "active",
       "file": "country_us__state_co__place_windsor.json",
       "entity_count": 7,
-      "event_count": 2,
-      "document_count": 31,
-      "docs_since": "2026-11-09",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "event_count": 7,
+      "document_count": 44,
+      "docs_since": "2026-09-21",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-09",
+      "stale_days": 16,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:berthoud",
@@ -174,8 +204,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
@@ -190,13 +223,16 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
       "name": "Boulder Valley School District Board of Education",
-      "level": "school_board",
+      "level": "school_district",
       "lat": 40.015,
       "lng": -105.2705,
       "portal_url": "https://bvsd.primegov.com/",
@@ -206,8 +242,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:broomfield",
@@ -222,13 +261,16 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
       "name": "Colorado Springs School District 11 Board",
-      "level": "school_board",
+      "level": "school_district",
       "lat": 38.8339,
       "lng": -104.8214,
       "portal_url": "https://www.d11.org/board-of-education",
@@ -238,8 +280,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:dacono",
@@ -254,8 +299,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:el_paso",
@@ -270,8 +318,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:firestone",
@@ -286,8 +337,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:frederick",
@@ -302,8 +356,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:johnstown",
@@ -318,8 +375,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:lafayette",
@@ -334,8 +394,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
@@ -350,8 +413,11 @@
       "entity_count": 3,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:louisville",
@@ -366,8 +432,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
@@ -382,8 +451,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:northglenn",
@@ -398,29 +470,16 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/sd:poudre",
-      "name": "Poudre School District Board",
-      "level": "municipal",
-      "lat": 40.5592,
-      "lng": -105.0781,
-      "portal_url": "https://go.boarddocs.com/co/psdschools/Board.nsf",
-      "parent_division_id": null,
-      "status": "unclaimed",
-      "file": "country_us__state_co__sd_poudre.json",
-      "entity_count": 0,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
       "name": "Poudre School District Board of Education",
-      "level": "school_board",
+      "level": "school_district",
       "lat": 40.5853,
       "lng": -105.0844,
       "portal_url": "https://poudreschools.portal.civicclerk.com/",
@@ -430,24 +489,30 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
       "name": "San Jose City Council",
-      "level": "municipal",
+      "level": "city",
       "lat": 37.3382,
       "lng": -121.8863,
       "portal_url": "https://sanjose.primegov.com",
       "parent_division_id": null,
-      "status": "unclaimed",
+      "status": "archived",
       "file": "country_us__state_ca__place_san_jose.json",
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:timnath",
@@ -462,8 +527,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:weld",
@@ -478,8 +546,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:wellington",
@@ -494,8 +565,14 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-24",
-      "last_updated": "2026-11-24 22:46:51 UTC"
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 18:11:52 UTC",
+      "as_of_date": "2026-11-25",
+      "stale_days": 0,
+      "is_stale": false
     }
-  ]
+  ],
+  "formula_version": "2.0.0",
+  "formula_hash": "292922f52a39",
+  "as_of_date": "2026-11-25"
 }

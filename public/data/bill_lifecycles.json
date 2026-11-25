@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 22:46:51 UTC",
+  "generated_at": "2026-11-25 18:11:52 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:thornton": [
       {
@@ -172,14 +172,14 @@
             "event_id": "ev_432b2347289140",
             "meeting_date": "2026-01-21",
             "title": "Discussion of 55+ Organization Updates",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           },
           {
             "event_id": "ev_66e434e892cb98",
             "meeting_date": "2026-01-21",
             "title": "Discussion of 55+ Organization Updates",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           }
         ]
@@ -195,14 +195,14 @@
             "event_id": "ev_5d576d4b2f0ab6",
             "meeting_date": "2026-01-21",
             "title": "Discussion of Board Member Transitions",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           },
           {
             "event_id": "ev_b89d33e40295c2",
             "meeting_date": "2026-01-21",
             "title": "Discussion of Board Member Transitions",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           }
         ]
@@ -218,14 +218,14 @@
             "event_id": "ev_867a40faa2fc29",
             "meeting_date": "2026-01-21",
             "title": "Discussion of ACAN Updates",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           },
           {
             "event_id": "ev_f8c75db4a12064",
             "meeting_date": "2026-01-21",
             "title": "Discussion of ACAN Updates",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           }
         ]
@@ -241,14 +241,14 @@
             "event_id": "ev_e9f4063ce186a7",
             "meeting_date": "2026-01-21",
             "title": "Discussion of DrCOG-Transportation and Planning Meeting",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           },
           {
             "event_id": "ev_f9a882b3d388a8",
             "meeting_date": "2026-01-21",
             "title": "Discussion of DrCOG-Transportation and Planning Meeting",
-            "outcome": "Recorded",
+            "outcome": "Passed",
             "tally": "8-1"
           }
         ]
@@ -494,7 +494,7 @@
             "event_id": "ev_cfa38f3babd18a",
             "meeting_date": "2026-10-13",
             "title": "Approval of Amendatory Agreement with Slalom, Inc. for On-Call Professional Services",
-            "outcome": "Failed to carry",
+            "outcome": "Failed",
             "tally": "2-10"
           }
         ]
@@ -517,7 +517,7 @@
             "event_id": "ev_668b9a409813c9",
             "meeting_date": "2026-10-13",
             "title": "Approval of Amendatory Agreement with Citibot, Inc. for AI Chatbot Use and Support",
-            "outcome": "Failed to carry",
+            "outcome": "Failed",
             "tally": "3-9"
           }
         ]
@@ -535,7 +535,7 @@
             "event_id": "doc-1-4db9d8ce",
             "meeting_date": "2026-11-24",
             "title": "Motion to go into Executive Session for Annual Evaluations",
-            "outcome": "Passed (7-0)",
+            "outcome": "Passed",
             "tally": "7-0"
           },
           {
@@ -558,14 +558,14 @@
             "event_id": "doc-13-1f39dc4d",
             "meeting_date": "2026-11-03",
             "title": "Ordinance No. 020",
-            "outcome": "Adopted 6-0 (7-0)",
+            "outcome": "Passed",
             "tally": "7-0"
           },
           {
             "event_id": "doc-5-ff36d12f",
             "meeting_date": "2026-11-17",
             "title": "Second Reading of Ordinance No. 020",
-            "outcome": "Passed (7-0)",
+            "outcome": "Passed",
             "tally": "7-0"
           }
         ]

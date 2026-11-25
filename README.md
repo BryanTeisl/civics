@@ -1,50 +1,87 @@
-# CivicPulse (v2 — Scalable Architecture)
+# CivicPulse
 
-A zero-hosting-cost ($0/month) civic data pipeline and static public-record explorer for municipal, county, and school board governments. Polls structured legislative portals, extracts roll-call votes and plain-English summaries via local Ollama (`qwen2.5:3b`), and publishes sharded Open Civic Data (OCD) JSON to **Cloudflare Pages**.
+**CivicPulse** is a free, zero-server ($0/month) local government transparency platform built for **everyday residents** and **local businesses** across Colorado (and architected to expand state-by-state). It aggregates agendas, roll-call votes, and plain-English summaries from municipal, county, and school board portals (Legistar, CivicClerk, PrimeGov) and publishes static JSON, quarterly search shards, and RSS feeds to **Cloudflare Pages**.
 
-## Safe Local Setup (Outside OneDrive)
+---
 
-Do **not** keep your active `.git` folder or `core_civic.db` inside a live-syncing OneDrive directory. Clone or extract this repo to a local folder (e.g., `C:\Projects\civics`) and point `ONEDRIVE_BACKUP_DIR` to OneDrive for safe SQLite online backups:
+## Architecture & Operating Model (v2)
 
+| Layer | Where It Runs | Role |
+| :--- | :--- | :--- |
+| **Daily Data Pipeline** | Local Windows PC (`scripts/run_daily.ps1` + Ollama `qwen2.5:3b`) | Backs up `core_civic.db`, runs `civicpulse watch`, extracts PDF/HTML minutes via local Ollama, normalizes data, exports `public/`, validates schemas, and pushes `public/` to GitHub. |
+| **GitHub Actions CI** | GitHub (`.github/workflows/ci.yml`) | **CI-only:** Runs `pytest`, verifies `core_civic.db` and `__pycache__/` are never committed, and validates `public/data/` schemas & naming hygiene on every push/PR. *(Legacy v1 cron workflows have been retired.)* |
+| **Public Hosting** | Cloudflare Pages (`public/`) | Serves the static frontend, sharded search indices, downloadable scoring formula, and RSS 2.0 feeds at $0/month. |
+
+> **Important:** Keep your active working repository outside live-syncing OneDrive folders (e.g., `C:\Projects\civics`) so OneDrive never locks `core_civic.db` or `.git/index`. `scripts/run_daily.ps1` safely copies daily SQLite snapshots to OneDrive using SQLite's online `.backup()` API.
+
+---
+
+## Daily Routine & Scheduling
+
+### One-Command Daily Run (Local PC)
 ```powershell
-setx ONEDRIVE_BACKUP_DIR "C:\Users\YOUR_NAME\OneDrive\CivicCoreBackups"
+# Run full daily sync (watch -> work -> normalize -> export -> validate)
+.\scriptsun_daily.ps1
+
+# Run full sync and automatically commit & push public/ to Cloudflare Pages
+.\scriptsun_daily.ps1 -Push
+
+# Fast poll & export without running local Ollama extraction
+.\scriptsun_daily.ps1 -SkipWork -Push
 ```
 
-## Quick Start
+### Schedule Automatically on Windows (Task Scheduler)
+1. Open **Task Scheduler** → **Create Basic Task** → Name: `CivicPulse Daily Sync`.
+2. Trigger: **Daily** (e.g., `7:00 AM`).
+3. Action: **Start a program**
+   - Program/script: `powershell.exe`
+   - Arguments: `-NoProfile -ExecutionPolicy Bypass -File "C:\Projects\civics\scriptsun_daily.ps1" -Push`
+4. Check **"Run task as soon as possible after a scheduled start is missed"** so updates run automatically whenever the PC wakes up.
+
+---
+
+## CLI Quick Reference
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
+# Install package and dev tools
 pip install -e ".[dev]"
 
-# 1. Initialize or migrate SQLite schema (idempotent)
-civicpulse init
+# Initialize / migrate SQLite schema
+python -m civicpulse.cli init
 
-# 2. Seed all 21 Front Range corridor cities & activate verified structured APIs
-civicpulse seed --file config/jurisdictions/colorado_front_range.json --activate-structured
+# Poll active jurisdictions
+python -m civicpulse.cli watch
 
-# 3. Run full pipeline: watch -> work (local Ollama) -> unified export
-civicpulse run-all
+# Extract pending minutes via local Ollama
+python -m civicpulse.cli work --doc-type minutes --limit 10
 
-# 4. Run unit & integration test suite
-pytest -v
+# Normalize levels, outcomes, topics, committee scores, and QA status
+python scripts/normalize_db.py --db core_civic.db --apply
+
+# Export static JSON + quarterly search chunks + RSS feeds + formula docs
+python -m civicpulse.cli export
+python -m civicpulse.pipeline.export_enhancements --db core_civic.db --public-dir public
+
+# Validate exported data & run full test suite
+python scripts/validate_exports.py --data-dir public/data
+python -m pytest -v
 ```
 
-## Unified CLI Commands
+---
 
-| Command | Purpose |
-| :--- | :--- |
-| `civicpulse init` | Applies versioned SQL migrations (`schema_migrations`) cleanly |
-| `civicpulse seed --file <json> [--activate-structured]` | Seeds jurisdictions from declarative config |
-| `civicpulse probe --file <json>` | Runs live HTTP health checks across all configured portals |
-| `civicpulse watch` | Polls active jurisdictions via the plugin adapter registry |
-| `civicpulse work --limit 10` | Extracts votes & summaries via local Ollama (`qwen2.5:3b`) |
-| `civicpulse export` | Exports sharded JSON, `directory.json`, lazy `search_index.json`, engagement guides & lifecycles |
-| `civicpulse onboard --name "City" --state CO --run-pipeline` | Auto-discovers platform, geocodes, and ingests a new city |
-| `civicpulse maintain recalculate-impact` | Recomputes impact scores & vote margins across all events |
-| `civicpulse run-all` | Runs `init` → `watch` → `work` → `export` end-to-end |
+## Transparent, Versioned Vote Impactfulness Formula
 
-## Deploying to Cloudflare Pages
+CivicPulse's 0–100 **Vote Impactfulness** score is 100% deterministic and nonpartisan. The single source of truth lives in `civicpulse/pipeline/scoring_spec.py` and is automatically published on every export to:
+- `public/data/scoring_methodology.json` (used by the UI to render the plain-English explanation and alert users if the formula version/checksum changes)
+- `public/docs/civicpulse_impact_formula.md` (plain-English downloadable guide with worked examples and changelog)
+- `public/docs/civicpulse_impact_formula.json` (machine-readable specification)
 
-* **Build command:** *(leave blank — zero build step, native ES modules)*
-* **Build output directory:** `public`
+---
+
+## Alerts (RSS) & Expanding Beyond Colorado
+
+- **RSS Alerts (`public/feeds/`):** Every export generates `feeds/all.xml`, per-jurisdiction feeds (`feeds/jur_<slug>.xml`), and per-topic feeds (`feeds/topic_<slug>.xml`). Residents can follow in any RSS reader, and businesses can pipe topic feeds (like *Zoning & Land Use* or *Taxes, Fees & Utilities*) directly into Slack, Microsoft Teams, or Zapier.
+- **State Expansion:** CivicPulse is currently focused on **Colorado (Front Range)**, with out-of-scope test entries archived cleanly. To expand to a new state, copy `config/jurisdictions/TEMPLATE_state.json` to `config/jurisdictions/<state>.json` and run:
+  ```powershell
+  python -m civicpulse.cli seed --file config/jurisdictions/<state>.json
+  ```

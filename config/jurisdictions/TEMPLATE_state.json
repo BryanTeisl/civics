@@ -1,0 +1,17 @@
+{
+  "_comment": "Template for expanding CivicPulse to a new state. Copy to config/jurisdictions/<state_code>.json and run: python -m civicpulse.cli seed --file config/jurisdictions/<state_code>.json",
+  "state": "XX",
+  "jurisdictions": [
+    {
+      "ocd_division_id": "ocd-division/country:us/state:xx/place:example_city",
+      "name": "Example City Council",
+      "level": "city",
+      "adapter_type": "legistar",
+      "portal_url": "https://example.legistar.com/",
+      "roster_url": "https://www.example.gov/city-council",
+      "status": "unclaimed",
+      "latitude": 0.0,
+      "longitude": 0.0
+    }
+  ]
+}

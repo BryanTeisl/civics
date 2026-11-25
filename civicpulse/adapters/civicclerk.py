@@ -14,6 +14,7 @@ MINUTES_HINT_RE = re.compile(
     re.IGNORECASE,
 )
 PACKET_HINT_RE = re.compile(r"\b(packet|full\s+agenda\s+packet)\b", re.IGNORECASE)
+CANCELLED_RE = re.compile(r"\b(cancel+ed)\b", re.IGNORECASE)
 
 
 def _extract_tenant(portal_url: str) -> str:
@@ -51,24 +52,44 @@ class CivicClerkAdapter(BaseAdapter):
     ) -> List[DocumentRecord]:
         tenant = _extract_tenant(portal_url)
         today_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT23:59:59Z")
-        fetch_top = max(limit * 4, 100)
-
         api_url = f"https://{tenant}.api.civicclerk.com/v1/Events"
-        params = {
-            "$top": fetch_top,
-            "$orderby": "startDateTime desc",
-            "$filter": f"startDateTime le {today_iso}",
-        }
-        r = requests.get(api_url, params=params, headers=self.headers, timeout=self.timeout)
-        if not r.ok:
+
+        # 1. Server-side council filter so advisory boards don't crowd out past council minutes
+        council_filter = (
+            f"startDateTime le {today_iso} and ("
+            "contains(eventName, 'Council') or "
+            "contains(eventName, 'Town Board') or "
+            "contains(eventName, 'Trustees') or "
+            "contains(eventName, 'Commissioners'))"
+        )
+        events: List[Dict[str, Any]] = []
+        r = requests.get(
+            api_url,
+            params={"$top": max(limit * 2, 50), "$orderby": "startDateTime desc", "$filter": council_filter},
+            headers=self.headers,
+            timeout=self.timeout,
+        )
+        if r.ok:
+            events = (r.json() or {}).get("value") or []
+
+        # 2. Fallback to unfiltered past events if tenant rejects contains() or returns empty
+        if not events:
+            fetch_top = max(limit * 4, 100)
             r = requests.get(
                 api_url,
-                params={"$top": fetch_top, "$orderby": "startDateTime desc"},
+                params={"$top": fetch_top, "$orderby": "startDateTime desc", "$filter": f"startDateTime le {today_iso}"},
                 headers=self.headers,
                 timeout=self.timeout,
             )
-        r.raise_for_status()
-        events: List[Dict[str, Any]] = (r.json() or {}).get("value") or []
+            if not r.ok:
+                r = requests.get(
+                    api_url,
+                    params={"$top": fetch_top, "$orderby": "startDateTime desc"},
+                    headers=self.headers,
+                    timeout=self.timeout,
+                )
+            r.raise_for_status()
+            events = (r.json() or {}).get("value") or []
 
         docs: List[DocumentRecord] = []
         matched_meetings = 0
@@ -77,15 +98,20 @@ class CivicClerkAdapter(BaseAdapter):
             if matched_meetings >= limit:
                 break
             title = (ev.get("eventName") or "").strip()
+            if CANCELLED_RE.search(title):
+                continue
             category = (ev.get("categoryName") or "").strip()
             combined_name = f"{title} {category}".strip()
             if not is_elected_council_meeting(combined_name):
                 continue
 
+            files = ev.get("publishedFiles") or []
+            if not files:
+                continue
+
             matched_meetings += 1
             eid = str(ev.get("id") or "")
             mdate = str(ev.get("startDateTime") or "")[:10]
-            files = ev.get("publishedFiles") or []
 
             has_minutes = False
             has_agenda = False

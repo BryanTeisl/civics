@@ -1,0 +1,144 @@
+{
+  "name": "CivicPulse Vote Impactfulness Formula",
+  "formula_version": "2.0.0",
+  "effective_date": "2026-11-25",
+  "formula_hash": "292922f52a39",
+  "nonpartisan_guarantee": "Scores are 100% deterministic and never use political ideology, party, or subjective AI opinions. Anyone can recompute the exact score from the tally.",
+  "plain_english_summary": "Every local measure receives a 0 to 100 score by adding three objective components: (1) Legal Weight (10-40 pts) based on whether it changes permanent law or budgets, (2) Contestedness (0-40 pts) based on how close the Yes/No vote margin was, and (3) Turnout (0-20 pts, capped at 10 pts for subcommittees) based on how many members of that body participated.",
+  "equation": "ImpactScore = min(100, LegalWeight + ((1 - |Yes - No| / (Yes + No)) * 40) + ((VotesCast / BodySize) * TurnoutCap))",
+  "parameters": {
+    "formula_version": "2.0.0",
+    "effective_date": "2026-11-25",
+    "scale_min": 0,
+    "scale_max": 100,
+    "legal_weight_map": {
+      "budget": 40,
+      "appropriation": 40,
+      "charter": 40,
+      "zoning": 38,
+      "ordinance": 35,
+      "resolution": 25,
+      "contract": 25,
+      "motion": 20,
+      "appointment": 15,
+      "consent": 12,
+      "proclamation": 10,
+      "minutes": 10
+    },
+    "default_legal_weight": 20,
+    "max_contestedness_points": 40.0,
+    "max_turnout_points": 20.0,
+    "pivotal_vote_rule": "Winning-side vote where |yes_count - no_count| <= 1 (or <= 2 on supermajority/split decisions)."
+  },
+  "examples": [
+    {
+      "label": "Unanimous Routine Consent Item (Full Council 7-0)",
+      "inputs": {
+        "event_type": "consent",
+        "yes_count": 7,
+        "no_count": 0,
+        "expected_body_size": 7
+      },
+      "result": {
+        "score": 32.0,
+        "legal_weight": 12.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 12 pts (consent) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 32/100 (Formula v2.0.0)"
+      }
+    },
+    {
+      "label": "Unanimous City Ordinance (Full Council 7-0)",
+      "inputs": {
+        "event_type": "ordinance",
+        "yes_count": 7,
+        "no_count": 0,
+        "expected_body_size": 7
+      },
+      "result": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      }
+    },
+    {
+      "label": "Razor-Thin Zoning / Budget Vote (Full Council 4-3)",
+      "inputs": {
+        "event_type": "budget",
+        "yes_count": 4,
+        "no_count": 3,
+        "expected_body_size": 7
+      },
+      "result": {
+        "score": 94.3,
+        "legal_weight": 40.0,
+        "contestedness": 34.3,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 40 pts (budget) | Split vote (4-3, +34.3 split pts) | Full-body turnout 7/7 (+20.0 pts) = 94.3/100 (Formula v2.0.0)"
+      }
+    },
+    {
+      "label": "Unanimous 4-Member Committee Recommendation (4-0)",
+      "inputs": {
+        "event_type": "ordinance",
+        "yes_count": 4,
+        "no_count": 0,
+        "expected_body_size": 4,
+        "body_type": "committee"
+      },
+      "result": {
+        "score": 45.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 10.0,
+        "votes_cast": 4,
+        "expected_body_size": 4,
+        "body_type": "committee",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (4-0, +0.0 split pts) | Committee turnout 4/4 (+10.0 pts, committee cap 10) = 45/100 (Formula v2.0.0)"
+      }
+    }
+  ],
+  "changelog": [
+    {
+      "version": "2.0.0",
+      "date": "2026-11-25",
+      "summary": "Published full plain-English & machine-readable formula specification; fixed committee attendance/turnout denominator so committee votes are scored against committee size rather than full-council size; added deterministic formula hash for change detection.",
+      "breaking": false
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-23",
+      "summary": "Standardized 3-factor deterministic model: Legal Weight (10-40 pts) + Contestedness / Vote Margin (0-40 pts) + Body Turnout (0-20 pts).",
+      "breaking": true
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-21",
+      "summary": "Initial prototype heuristic combining event type and yes/no closeness.",
+      "breaking": false
+    }
+  ],
+  "downloads": {
+    "markdown": "docs/civicpulse_impact_formula.md",
+    "json": "docs/civicpulse_impact_formula.json"
+  }
+}

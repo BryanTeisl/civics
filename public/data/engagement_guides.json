@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 22:46:51 UTC",
+  "generated_at": "2026-11-25 18:11:52 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -62,7 +62,7 @@
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
         },
         {
-          "name": "Mark Wallach",
+          "name": "Taishya Adams",
           "role": "Council Member",
           "district": "Ward 1",
           "email": null,
@@ -72,15 +72,7 @@
         {
           "name": "Matt Benjamin",
           "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
-        },
-        {
-          "name": "Nicole Speer",
-          "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 2",
           "email": null,
           "phone": null,
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
@@ -88,23 +80,7 @@
         {
           "name": "Rob Kaplan",
           "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
-        },
-        {
-          "name": "Ryan Schuchard",
-          "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
-        },
-        {
-          "name": "Taishya Adams",
-          "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 3",
           "email": null,
           "phone": null,
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
@@ -112,7 +88,31 @@
         {
           "name": "Tina Marquis",
           "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Ryan Schuchard",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Nicole Speer",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        },
+        {
+          "name": "Mark Wallach",
+          "role": "Council Member",
+          "district": "Ward 7",
           "email": null,
           "phone": null,
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
@@ -144,19 +144,27 @@
           "date": "2026-12-07",
           "title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
           "portal_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "date": "2026-11-24",
-          "title": "City Council",
-          "portal_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2809&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
-        },
-        {
-          "date": "2026-11-24",
-          "title": "2026-11-24 City Council: Meeting has been cancelled.",
-          "portal_url": "https://coloradosprings.legistar.com/"
         }
       ],
       "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-24",
+          "doc_type": "agenda",
+          "title": "City Council",
+          "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2809&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
+        },
+        {
+          "meeting_date": "2026-11-24",
+          "doc_type": "agenda",
+          "title": "2026-11-24 City Council: Meeting has been cancelled.",
+          "source_url": "https://coloradosprings.legistar.com/"
+        },
+        {
+          "meeting_date": "2026-11-24",
+          "doc_type": "agenda",
+          "title": "2026-11-24 City Council: Meeting has been cancelled.",
+          "source_url": "https://coloradosprings.legistar.com/"
+        },
         {
           "meeting_date": "2026-11-23",
           "doc_type": "agenda",
@@ -168,18 +176,6 @@
           "doc_type": "agenda",
           "title": "City Council Work Session",
           "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2810&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E"
-        },
-        {
-          "meeting_date": "2026-11-23",
-          "doc_type": "agenda",
-          "title": "2026-11-23 Executive Session: Meeting has been cancelled.",
-          "source_url": "https://coloradosprings.legistar.com/"
-        },
-        {
-          "meeting_date": "2026-11-23",
-          "doc_type": "agenda",
-          "title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
-          "source_url": "https://coloradosprings.legistar.com/"
         }
       ],
       "representatives": [
@@ -294,7 +290,14 @@
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
         }
       ],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-24",
+          "doc_type": "agenda",
+          "title": "Mayor-Council Agenda",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13071_A_Mayor-Council_26-11-24_Mayor-Council_Agenda.pdf"
+        }
+      ],
       "representatives": [
         {
           "name": "Sarah Parady",
@@ -549,15 +552,7 @@
           "district": "At-Large",
           "email": "efrancis@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
-        },
-        {
-          "name": "Julie Pignataro",
-          "role": "Mayor Pro Tem",
-          "district": "At-Large",
-          "email": "jpignataro@fcgov.com",
-          "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         },
         {
           "name": "Chris Conway",
@@ -565,7 +560,15 @@
           "district": "District 1",
           "email": "cconway@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
+        },
+        {
+          "name": "Julie Pignataro",
+          "role": "Mayor Pro Tem",
+          "district": "District 2",
+          "email": "jpignataro@fcgov.com",
+          "phone": "(970) 221-6505",
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         },
         {
           "name": "Josh Fudge",
@@ -573,7 +576,7 @@
           "district": "District 3",
           "email": "jfudge@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         },
         {
           "name": "Melanie Potyondy",
@@ -581,7 +584,7 @@
           "district": "District 4",
           "email": "mpotyondy@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         },
         {
           "name": "Amy Hoeven",
@@ -589,7 +592,7 @@
           "district": "District 5",
           "email": "ahoeven@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         },
         {
           "name": "Anne Nelsen",
@@ -597,7 +600,7 @@
           "district": "District 6",
           "email": "anelsen@fcgov.com",
           "phone": "(970) 221-6505",
-          "website_url": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)"
+          "website_url": "https://fortcollinsco.portal.civicclerk.com/event/61/files#minutes"
         }
       ]
     },
@@ -711,6 +714,12 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
+          "meeting_date": "2026-11-24",
+          "doc_type": "agenda",
+          "title": "City Council Meeting *CANCELLED** \u2014 Notice of Cancellation",
+          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19129"
+        },
+        {
           "meeting_date": "2026-11-17",
           "doc_type": "agenda",
           "title": "City Council Regular Session \u2014 Agenda",
@@ -733,12 +742,6 @@
           "doc_type": "agenda",
           "title": "Special LHA Board of Commissioners Meeting \u2014 HTML Agenda",
           "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19067"
-        },
-        {
-          "meeting_date": "2026-11-03",
-          "doc_type": "agenda",
-          "title": "City Council Regular Session \u2014 Agenda",
-          "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19023"
         }
       ],
       "representatives": [
@@ -931,34 +934,34 @@
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [
         {
-          "meeting_date": "2026-03-23",
+          "meeting_date": "2026-11-23",
           "doc_type": "agenda",
-          "title": "City Council Meeting",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10977"
+          "title": "City Council Meeting \u2014 HTML Packet",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11465"
         },
         {
-          "meeting_date": "2026-03-23",
+          "meeting_date": "2026-11-23",
           "doc_type": "agenda",
-          "title": "City Council Meeting",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10976"
+          "title": "City Council Post-Meeting Study Session \u2014 HTML Packet",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11420"
         },
         {
-          "meeting_date": "2026-03-23",
+          "meeting_date": "2026-11-16",
           "doc_type": "agenda",
-          "title": "City Council Pre/Post-Meeting Study Session",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10419"
+          "title": "City Council Study Session \u2014 HTML Packet",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11396"
         },
         {
-          "meeting_date": "2026-03-23",
+          "meeting_date": "2026-11-09",
           "doc_type": "agenda",
-          "title": "City Council Pre/Post-Meeting Study Session",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10418"
+          "title": "City Council Meeting \u2014 HTML Packet",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11390"
         },
         {
-          "meeting_date": "2026-03-16",
+          "meeting_date": "2026-11-09",
           "doc_type": "agenda",
-          "title": "Weekly Legislative Affairs Call",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=10413"
+          "title": "City Council Post-Meeting Study Session \u2014 HTML Packet",
+          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11357"
         }
       ],
       "representatives": [

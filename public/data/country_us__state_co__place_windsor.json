@@ -2,14 +2,14 @@
   "jurisdiction": {
     "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
     "name": "Windsor Town Board",
-    "level": "municipal",
+    "level": "city",
     "lat": 40.4775,
     "lng": -104.9014,
     "portal_url": "https://windsorco.portal.civicclerk.com/",
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
-    "docs_since": "2026-11-09",
-    "last_updated": "2026-11-24 22:46:51 UTC"
+    "docs_since": "2026-09-21",
+    "last_updated": "2026-11-25 18:11:52 UTC"
   },
   "entities": [
     {
@@ -28,16 +28,77 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 5,
+        "total_votes": 5,
+        "avg_impact_score": 43.2,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/co-windsor-ron-steinbach",
@@ -56,9 +117,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 7,
+        "total_votes": 7,
+        "avg_impact_score": 43.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -73,7 +134,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -85,8 +146,68 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -108,9 +229,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 7,
+        "total_votes": 7,
+        "avg_impact_score": 43.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -125,7 +246,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -137,8 +258,68 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -160,9 +341,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 5,
+        "total_votes": 5,
+        "avg_impact_score": 44.8,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -177,7 +358,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -189,8 +370,44 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -212,9 +429,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 7,
+        "total_votes": 7,
+        "avg_impact_score": 43.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -229,7 +446,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -241,8 +458,68 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -264,9 +541,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 7,
+        "total_votes": 7,
+        "avg_impact_score": 43.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -281,7 +558,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -293,8 +570,68 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -316,9 +653,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 2,
-        "total_votes": 2,
-        "avg_impact_score": 27.5,
+        "present_votes": 7,
+        "total_votes": 7,
+        "avg_impact_score": 43.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -333,7 +670,7 @@
           "event_type": "motion",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 20.0,
+          "impact_score": 37.1,
           "rationale_summary": "Voted in favor of approving the agenda.",
           "verbatim_quote": ""
         },
@@ -345,8 +682,68 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 35.0,
+          "impact_score": 52.1,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_594ace241c2478",
+          "meeting_date": "2026-10-26",
+          "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+          "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+          "event_type": "consent",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 29.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_72ef72b00f1684",
+          "meeting_date": "2026-10-26",
+          "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+          "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 52.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_8355640ed678e7",
+          "meeting_date": "2026-10-12",
+          "title": "Motion to Approve Agenda",
+          "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "Seconded the motion to approve the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_d12f33774cf2df",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1d2487e2a21569",
+          "meeting_date": "2026-09-28",
+          "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+          "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 45.0,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]
@@ -362,14 +759,14 @@
       "diff_summary": "",
       "qa_status": "verified",
       "event_type": "motion",
-      "topic": "Town Board Business",
+      "topic": "Infrastructure & Transit",
       "outcome": "Passed",
       "yes_count": 6,
       "no_count": 0,
       "abstain_count": 0,
       "absent_count": 1,
       "vote_margin": 6,
-      "impact_score": 20.0,
+      "impact_score": 37.1,
       "source_url": "https://windsorco.portal.civicclerk.com/event/3684/files#minutes",
       "roster_size": 7,
       "attendance_count": 6,
@@ -447,14 +844,14 @@
       "diff_summary": "",
       "qa_status": "verified",
       "event_type": "ordinance",
-      "topic": "Public Recognition",
+      "topic": "Governance & Elections",
       "outcome": "Passed",
       "yes_count": 6,
       "no_count": 0,
       "abstain_count": 0,
       "absent_count": 1,
       "vote_margin": 6,
-      "impact_score": 35.0,
+      "impact_score": 52.1,
       "source_url": "https://windsorco.portal.civicclerk.com/event/3684/files#minutes",
       "roster_size": 7,
       "attendance_count": 6,
@@ -519,6 +916,461 @@
           "vote": "Yes",
           "is_pivotal": false,
           "rationale_summary": "Voted in favor of the proclamation.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_72ef72b00f1684",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-10-26",
+      "title": "Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations",
+      "plain_summary": "The Town Board approved an ordinance to amend sign regulations in the town's municipal code.",
+      "diff_summary": "This update aligns with state and federal law, reflects the Comprehensive Plan, incorporates community input, clarifies outdated standards, and produces a practical, enforceable code tailored for different development types.",
+      "qa_status": "verified",
+      "event_type": "ordinance",
+      "topic": "Budget & Finance",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 52.1,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3707/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-julie-cline",
+          "name": "Julie Cline",
+          "district": "At-Large",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_594ace241c2478",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-10-26",
+      "title": "Approval of October 12, 2026 Town Board Regular Meeting Minutes",
+      "plain_summary": "The Town Board approved the minutes of their previous meeting.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "consent",
+      "topic": "Governance & Elections",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 29.1,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3707/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-julie-cline",
+          "name": "Julie Cline",
+          "district": "At-Large",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_8355640ed678e7",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-10-12",
+      "title": "Motion to Approve Agenda",
+      "plain_summary": "The Town Board approved the agenda with seven members voting in favor and one member absent.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "General",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 7,
+      "impact_score": 45.0,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3661/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 7,
+      "attendance_rate": 100,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-julie-cline",
+          "name": "Julie Cline",
+          "district": "At-Large",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Seconded the motion to approve the agenda.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-lainie-peltz",
+          "name": "Lainie Peltz",
+          "district": "District 3",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of approving the agenda as written.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_d12f33774cf2df",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-09-28",
+      "title": "Resolution No. 2026-52 - A Resolution Accepting Right of Way Dedications and a Temporary Construction Easement concerning the 7th Street Roundabout Improvements at Garden Drive and Stone Mountain Drive",
+      "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
+      "diff_summary": "",
+      "qa_status": "flagged",
+      "event_type": "resolution",
+      "topic": "Zoning & Land Use",
+      "outcome": "Passed",
+      "yes_count": 8,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 8,
+      "impact_score": 45.0,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3706/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 8,
+      "attendance_rate": 114,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-julie-cline",
+          "name": "Julie Cline",
+          "district": "At-Large",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-lainie-peltz",
+          "name": "Lainie Peltz",
+          "district": "District 3",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_1d2487e2a21569",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "meeting_date": "2026-09-28",
+      "title": "Resolution No. 2026-53 - A Resolution Accepting Right of Way Dedications and Temporary Construction Easements Concerning Certain Properties for the Development of Windsor Lake Road",
+      "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
+      "diff_summary": "",
+      "qa_status": "flagged",
+      "event_type": "resolution",
+      "topic": "Zoning & Land Use",
+      "outcome": "Passed",
+      "yes_count": 8,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 8,
+      "impact_score": 45.0,
+      "source_url": "https://windsorco.portal.civicclerk.com/event/3706/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 8,
+      "attendance_rate": 114,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-windsor-julie-cline",
+          "name": "Julie Cline",
+          "district": "At-Large",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ron-steinbach",
+          "name": "Ron Steinbach",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-brian-jones",
+          "name": "Brian Jones",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-lainie-peltz",
+          "name": "Lainie Peltz",
+          "district": "District 3",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-ken-symsack",
+          "name": "Ken Symsack",
+          "district": "District 4",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-rick-klimek",
+          "name": "Rick Klimek",
+          "district": "District 5",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-windsor-jason-hallett",
+          "name": "Jason Hallett",
+          "district": "District 6",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ]

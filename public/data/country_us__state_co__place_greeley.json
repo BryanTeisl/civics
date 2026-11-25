@@ -2,14 +2,14 @@
   "jurisdiction": {
     "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
     "name": "Greeley City Council",
-    "level": "municipal",
+    "level": "city",
     "lat": 40.4233,
     "lng": -104.7091,
     "portal_url": "https://greeleyco.portal.civicclerk.com/",
     "parent_division_id": "ocd-division/country:us/state:co/county:weld",
     "status": "active",
-    "docs_since": "2026-11-17",
-    "last_updated": "2026-11-24 22:46:51 UTC"
+    "docs_since": "2026-09-08",
+    "last_updated": "2026-11-25 18:11:52 UTC"
   },
   "entities": [
     {
@@ -28,16 +28,29 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 1,
+        "total_votes": 1,
+        "avg_impact_score": 60.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-melissa-mcdonald",
@@ -55,16 +68,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 51.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_82ebe2a8568d19",
+          "meeting_date": "2026-10-27",
+          "title": "Reauthorization of Boards",
+          "plain_summary": "The City Council reauthorized four boards for another three-year term.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 42.1,
+          "rationale_summary": "Chair of the Human Relations Commission, Judicial Review Board, and Parks and Recreation Advisory Board. Participated in discussions about Museum Advisory Board.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-dale-hall",
@@ -82,16 +120,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 50,
+        "present_votes": 1,
+        "total_votes": 2,
+        "avg_impact_score": 51.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_82ebe2a8568d19",
+          "meeting_date": "2026-10-27",
+          "title": "Reauthorization of Boards",
+          "plain_summary": "The City Council reauthorized four boards for another three-year term.",
+          "event_type": "resolution",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "impact_score": 42.1,
+          "rationale_summary": "Excused absence.",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-craig-huddleston",
@@ -109,16 +172,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 51.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_82ebe2a8568d19",
+          "meeting_date": "2026-10-27",
+          "title": "Reauthorization of Boards",
+          "plain_summary": "The City Council reauthorized four boards for another three-year term.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 42.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-deb-deboutez",
@@ -136,16 +224,41 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 2,
+        "total_votes": 2,
+        "avg_impact_score": 51.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_82ebe2a8568d19",
+          "meeting_date": "2026-10-27",
+          "title": "Reauthorization of Boards",
+          "plain_summary": "The City Council reauthorized four boards for another three-year term.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 42.1,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-johnny-olson",
@@ -163,16 +276,29 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 1,
+        "total_votes": 1,
+        "avg_impact_score": 60.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     },
     {
       "ocd_person_id": "ocd-person/greeley-brian-rudy",
@@ -190,17 +316,191 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 0,
-        "present_votes": 0,
-        "total_votes": 0,
-        "avg_impact_score": 0.0,
+        "attendance_rate": 100,
+        "present_votes": 1,
+        "total_votes": 1,
+        "avg_impact_score": 60.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [
+        {
+          "event_id": "ev_a7f2a151f8131c",
+          "meeting_date": "2026-10-20",
+          "title": "Ballot Measure 2F",
+          "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+          "event_type": "budget",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 60.0,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
     }
   ],
-  "events": []
+  "events": [
+    {
+      "event_id": "ev_82ebe2a8568d19",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "meeting_date": "2026-10-27",
+      "title": "Reauthorization of Boards",
+      "plain_summary": "The City Council reauthorized four boards for another three-year term.",
+      "diff_summary": "",
+      "qa_status": "needs_review",
+      "event_type": "resolution",
+      "topic": "Parks, Water & Environment",
+      "outcome": "Passed",
+      "yes_count": 6,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 1,
+      "vote_margin": 6,
+      "impact_score": 42.1,
+      "source_url": "https://greeleyco.portal.civicclerk.com/event/3366/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 6,
+      "attendance_rate": 86,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/greeley-melissa-mcdonald",
+          "name": "Melissa McDonald",
+          "district": "Term: 2023-2027",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Chair of the Human Relations Commission, Judicial Review Board, and Parks and Recreation Advisory Board. Participated in discussions about Museum Advisory Board.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-craig-huddleston",
+          "name": "Craig Huddleston",
+          "district": "Ward I - May 19, 2026-2027",
+          "elected_date": "May 2026",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-deb-deboutez",
+          "name": "Deb DeBoutez",
+          "district": "Ward II - Term: 2025-2029",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-dale-hall",
+          "name": "Dale Hall",
+          "district": "Term: 2025-2027",
+          "elected_date": "Nov 2025",
+          "vote": "Absent",
+          "is_pivotal": false,
+          "rationale_summary": "Excused absence.",
+          "verbatim_quote": ""
+        }
+      ]
+    },
+    {
+      "event_id": "ev_a7f2a151f8131c",
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "meeting_date": "2026-10-20",
+      "title": "Ballot Measure 2F",
+      "plain_summary": "Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.",
+      "diff_summary": "",
+      "qa_status": "flagged",
+      "event_type": "budget",
+      "topic": "Budget & Finance",
+      "outcome": "Passed",
+      "yes_count": 7,
+      "no_count": 0,
+      "abstain_count": 1,
+      "absent_count": 3,
+      "vote_margin": 7,
+      "impact_score": 60.0,
+      "source_url": "https://greeleyco.portal.civicclerk.com/event/3342/files#minutes",
+      "roster_size": 7,
+      "attendance_count": 8,
+      "attendance_rate": 114,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/greeley-dale-hall",
+          "name": "Dale Hall",
+          "district": "Term: 2025-2027",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-craig-huddleston",
+          "name": "Craig Huddleston",
+          "district": "Ward I - May 19, 2026-2027",
+          "elected_date": "May 2026",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-deb-deboutez",
+          "name": "Deb DeBoutez",
+          "district": "Ward II - Term: 2025-2029",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-melissa-mcdonald",
+          "name": "Melissa McDonald",
+          "district": "Term: 2023-2027",
+          "elected_date": "Nov 2023",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-johnny-olson",
+          "name": "Johnny Olson",
+          "district": "Ward III - Term: 2025-2029",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-brian-rudy",
+          "name": "Brian Rudy",
+          "district": "Ward IV - Term: 2025-2027",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/greeley-ryan-roth",
+          "name": "Ryan Roth",
+          "district": "At Large - Term: 2025-2029",
+          "elected_date": "Nov 2025",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "Voted in favor of Ballot Measure 2F.",
+          "verbatim_quote": ""
+        }
+      ]
+    }
+  ]
 }

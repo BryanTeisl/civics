@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.1",
+  "formula_version": "2.0.0",
+  "total_events": 258,
+  "chunks": [
+    {
+      "quarter": "2026-Q4",
+      "path": "data/search_chunks/2026-Q4.json",
+      "count": 128,
+      "bytes": 193932
+    },
+    {
+      "quarter": "2026-Q3",
+      "path": "data/search_chunks/2026-Q3.json",
+      "count": 32,
+      "bytes": 49988
+    },
+    {
+      "quarter": "2026-Q2",
+      "path": "data/search_chunks/2026-Q2.json",
+      "count": 3,
+      "bytes": 4298
+    },
+    {
+      "quarter": "2026-Q1",
+      "path": "data/search_chunks/2026-Q1.json",
+      "count": 95,
+      "bytes": 134345
+    }
+  ]
+}
