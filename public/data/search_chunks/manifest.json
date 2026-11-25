@@ -1,25 +1,25 @@
 {
   "schema_version": "2.1",
   "formula_version": "2.0.0",
-  "total_events": 279,
+  "total_events": 363,
   "chunks": [
     {
       "quarter": "2026-Q4",
       "path": "data/search_chunks/2026-Q4.json",
-      "count": 149,
-      "bytes": 226998
+      "count": 158,
+      "bytes": 240842
     },
     {
       "quarter": "2026-Q3",
       "path": "data/search_chunks/2026-Q3.json",
-      "count": 32,
-      "bytes": 49988
+      "count": 89,
+      "bytes": 140411
     },
     {
       "quarter": "2026-Q2",
       "path": "data/search_chunks/2026-Q2.json",
-      "count": 3,
-      "bytes": 4298
+      "count": 21,
+      "bytes": 31898
     },
     {
       "quarter": "2026-Q1",

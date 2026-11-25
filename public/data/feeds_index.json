@@ -39,7 +39,7 @@
     "country_us__state_co__place_westminster": {
       "name": "Westminster City Council",
       "url": "feeds/jur_country_us__state_co__place_westminster.xml",
-      "item_count": 21
+      "item_count": 105
     },
     "country_us__state_co__place_windsor": {
       "name": "Windsor Town Board",
@@ -50,27 +50,27 @@
   "topics": {
     "Budget & Finance": {
       "url": "feeds/topic_budget_finance.xml",
-      "item_count": 36
+      "item_count": 54
     },
     "Contracts & Procurement": {
       "url": "feeds/topic_contracts_procurement.xml",
-      "item_count": 40
+      "item_count": 46
     },
     "Education & Schools": {
       "url": "feeds/topic_education_schools.xml",
-      "item_count": 1
+      "item_count": 4
     },
     "General": {
       "url": "feeds/topic_general.xml",
-      "item_count": 59
+      "item_count": 69
     },
     "Governance & Elections": {
       "url": "feeds/topic_governance_elections.xml",
-      "item_count": 34
+      "item_count": 46
     },
     "Housing & Development": {
       "url": "feeds/topic_housing_development.xml",
-      "item_count": 46
+      "item_count": 65
     },
     "Infrastructure & Transit": {
       "url": "feeds/topic_infrastructure_transit.xml",
@@ -78,7 +78,7 @@
     },
     "Parks, Water & Environment": {
       "url": "feeds/topic_parks_water_environment.xml",
-      "item_count": 9
+      "item_count": 10
     },
     "Permits & Licensing": {
       "url": "feeds/topic_permits_licensing.xml",
@@ -86,15 +86,15 @@
     },
     "Public Safety": {
       "url": "feeds/topic_public_safety.xml",
-      "item_count": 6
+      "item_count": 9
     },
     "Taxes, Fees & Utilities": {
       "url": "feeds/topic_taxes_fees_utilities.xml",
-      "item_count": 6
+      "item_count": 12
     },
     "Zoning & Land Use": {
       "url": "feeds/topic_zoning_land_use.xml",
-      "item_count": 13
+      "item_count": 19
     }
   }
 }

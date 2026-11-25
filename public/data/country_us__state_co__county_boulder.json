@@ -5,11 +5,11 @@
     "level": "county",
     "lat": 40.0925,
     "lng": -105.3577,
-    "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+    "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-11-25",
-    "last_updated": "2026-11-25 19:13:41 UTC"
+    "last_updated": "2026-11-25 23:37:03 UTC"
   },
   "entities": [
     {
@@ -21,7 +21,7 @@
       "district": "District 1",
       "elected_date": "Active Term",
       "website_url": "",
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
       "party": "Nonpartisan",
       "phone": "",
       "email": "",
@@ -48,7 +48,7 @@
       "district": "District 2",
       "elected_date": "Active Term",
       "website_url": "",
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
       "party": "Nonpartisan",
       "phone": "",
       "email": "",
@@ -75,7 +75,7 @@
       "district": "District 3",
       "elected_date": "Active Term",
       "website_url": "",
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
       "party": "Nonpartisan",
       "phone": "",
       "email": "",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 19:13:41 UTC",
+  "generated_at": "2026-11-25 23:37:04 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -122,7 +122,7 @@
     "ocd-division/country:us/state:co/county:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
       "name": "Boulder County Board of Commissioners",
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
       "checklist": [
         "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
@@ -161,7 +161,7 @@
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
       "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
       "name": "Boulder Valley School District Board of Education",
-      "portal_url": "https://bvsd.primegov.com/public/portal",
+      "portal_url": "https://www.bvsd.org/about/board-of-education",
       "checklist": [
         "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
@@ -169,7 +169,38 @@
         "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Complete form to speak at Board Meeting",
+          "source_url": "https://docs.google.com/forms/d/e/1FAIpQLSe4Sa1jcJ90b0TtIaaEtXy5vNDcb4Bmb8zYmKYOiZCtkEZlpQ/viewform?usp=sf_link"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Board meeting calendar",
+          "source_url": "https://calendar.google.com/calendar/embed?src=c_b67f8992b17c820b890ac7f69fe74c7c54ceb6cedd4edf6decd02932a34769c3%40group.calendar.google.com&ctz=America%2FDenver"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "minutes",
+          "title": "Agendas & Minutes",
+          "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Deaf and Hard of Hearing",
+          "source_url": "https://www.bvsd.org/departments/special-education/deaf-and-hard-of-hearing"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "minutes",
+          "title": "Meeting Agendas & Minutes",
+          "source_url": "https://bvsd.community.diligentoneplatform.com/Portal/"
+        }
+      ],
       "representatives": [
         {
           "name": "Nicole Rajpal",
@@ -375,6 +406,11 @@
       ],
       "upcoming_meetings": [
         {
+          "date": "2026-11-30",
+          "title": "City Council Agenda",
+          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13077_A_City_Council_26-11-30_Council_Agenda.pdf"
+        },
+        {
           "date": "2026-11-25",
           "title": "Transportation and Infrastructure Agenda",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
@@ -393,21 +429,9 @@
           "date": "2026-11-25",
           "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
-        },
-        {
-          "date": "2026-11-25",
-          "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
-          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
         }
       ],
-      "recent_agendas_and_docs": [
-        {
-          "meeting_date": "2026-11-24",
-          "doc_type": "agenda",
-          "title": "Mayor-Council Agenda",
-          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13071_A_Mayor-Council_26-11-24_Mayor-Council_Agenda.pdf"
-        }
-      ],
+      "recent_agendas_and_docs": [],
       "representatives": [
         {
           "name": "Sarah Parady",
@@ -811,45 +835,6 @@
         }
       ]
     },
-    "ocd-division/country:us/state:co/county:larimer": {
-      "jurisdiction_id": "ocd-division/country:us/state:co/county:larimer",
-      "name": "Larimer County Board of Commissioners",
-      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
-      "checklist": [
-        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
-        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call and implementation timeline."
-      ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
-      "representatives": [
-        {
-          "name": "John Kefalas",
-          "role": "Commissioner",
-          "district": "District 1",
-          "email": "jkefalas@larimer.org",
-          "phone": "(970) 498-7010",
-          "website_url": "https://www.larimer.gov/bocc"
-        },
-        {
-          "name": "Kristin Stephens",
-          "role": "Commissioner",
-          "district": "District 2",
-          "email": "kstephens@larimer.org",
-          "phone": "(970) 498-7010",
-          "website_url": "https://www.larimer.gov/bocc"
-        },
-        {
-          "name": "Jody Shadduck-McNally",
-          "role": "Commissioner",
-          "district": "District 3",
-          "email": "jshadduckmcnally@larimer.org",
-          "phone": "(970) 498-7010",
-          "website_url": "https://www.larimer.gov/bocc"
-        }
-      ]
-    },
     "ocd-division/country:us/state:co/place:longmont": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
       "name": "Longmont City Council",
@@ -949,77 +934,6 @@
           "email": null,
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
-        }
-      ]
-    },
-    "ocd-division/country:us/state:co/school_district:poudre_r1": {
-      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
-      "name": "Poudre School District Board of Education",
-      "portal_url": "https://www.psdschools.org/your-district/board-of-education/board-meetings",
-      "checklist": [
-        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
-        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call and implementation timeline."
-      ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
-      "representatives": [
-        {
-          "name": "Jessica Zamora",
-          "role": "Board Director",
-          "district": "District A",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Jim Brokish",
-          "role": "Board Director",
-          "district": "District B",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Kristen Draper",
-          "role": "Board President",
-          "district": "District C",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Carolyn Reed",
-          "role": "Board Vice President",
-          "district": "District D",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Conor Duffy",
-          "role": "Board Director",
-          "district": "District E",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Kevin Havelda",
-          "role": "Board Director",
-          "district": "District F",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Scott Schoenbauer",
-          "role": "Board Director",
-          "district": "District G",
-          "email": null,
-          "phone": null,
-          "website_url": null
         }
       ]
     },

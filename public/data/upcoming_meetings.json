@@ -69,6 +69,17 @@
       "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
     },
     {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+      "jurisdiction_name": "Denver City Council",
+      "level": "city",
+      "meeting_date": "2026-11-30",
+      "title": "City Council Agenda",
+      "doc_type": "agenda",
+      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13077_A_City_Council_26-11-30_Council_Agenda.pdf",
+      "portal_url": "https://denver.legistar.com/",
+      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
+    },
+    {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
       "jurisdiction_name": "Colorado Springs City Council",
       "level": "city",
@@ -922,17 +933,6 @@
       "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)",
       "title": "2026-11-17",
       "doc_type": "2584-2384",
-      "agenda_url": "minutes",
-      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
-      "jurisdiction_name": "Fort Collins City Council",
-      "level": "city",
-      "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)",
-      "title": "2026-11-17",
-      "doc_type": "35-2389",
       "agenda_url": "minutes",
       "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
       "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
