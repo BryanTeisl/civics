@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 18:11:52 UTC",
+  "generated_at": "2026-11-25 19:13:41 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -116,6 +116,116 @@
           "email": null,
           "phone": null,
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/county:boulder": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [
+        {
+          "name": "Claire Levy",
+          "role": "County Commissioner",
+          "district": "District 1",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Marta Loachamin",
+          "role": "County Commissioner",
+          "district": "District 2",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Ashley Stoltzmann",
+          "role": "County Commissioner",
+          "district": "District 3",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "name": "Boulder Valley School District Board of Education",
+      "portal_url": "https://bvsd.primegov.com/public/portal",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [
+        {
+          "name": "Nicole Rajpal",
+          "role": "Board Director",
+          "district": "District A",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Kitty Sargent",
+          "role": "Board Director",
+          "district": "District B",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Alex Medler",
+          "role": "Board Director",
+          "district": "District C",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Lalenia Quinlan Aweida",
+          "role": "Board Director",
+          "district": "District D",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Lisa Sweeney-Miran",
+          "role": "Board President",
+          "district": "District E",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Jorge Chavez",
+          "role": "Board Director",
+          "district": "District F",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Jason Unger",
+          "role": "Board Director",
+          "district": "District G",
+          "email": null,
+          "phone": null,
+          "website_url": null
         }
       ]
     },
@@ -701,6 +811,45 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/county:larimer": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:larimer",
+      "name": "Larimer County Board of Commissioners",
+      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [
+        {
+          "name": "John Kefalas",
+          "role": "Commissioner",
+          "district": "District 1",
+          "email": "jkefalas@larimer.org",
+          "phone": "(970) 498-7010",
+          "website_url": "https://www.larimer.gov/bocc"
+        },
+        {
+          "name": "Kristin Stephens",
+          "role": "Commissioner",
+          "district": "District 2",
+          "email": "kstephens@larimer.org",
+          "phone": "(970) 498-7010",
+          "website_url": "https://www.larimer.gov/bocc"
+        },
+        {
+          "name": "Jody Shadduck-McNally",
+          "role": "Commissioner",
+          "district": "District 3",
+          "email": "jshadduckmcnally@larimer.org",
+          "phone": "(970) 498-7010",
+          "website_url": "https://www.larimer.gov/bocc"
+        }
+      ]
+    },
     "ocd-division/country:us/state:co/place:longmont": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
       "name": "Longmont City Council",
@@ -800,6 +949,77 @@
           "email": null,
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/school_district:poudre_r1": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "portal_url": "https://www.psdschools.org/your-district/board-of-education/board-meetings",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [
+        {
+          "name": "Jessica Zamora",
+          "role": "Board Director",
+          "district": "District A",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Jim Brokish",
+          "role": "Board Director",
+          "district": "District B",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Kristen Draper",
+          "role": "Board President",
+          "district": "District C",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Carolyn Reed",
+          "role": "Board Vice President",
+          "district": "District D",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Conor Duffy",
+          "role": "Board Director",
+          "district": "District E",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Kevin Havelda",
+          "role": "Board Director",
+          "district": "District F",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Scott Schoenbauer",
+          "role": "Board Director",
+          "district": "District G",
+          "email": null,
+          "phone": null,
+          "website_url": null
         }
       ]
     },
@@ -935,6 +1155,12 @@
       "recent_agendas_and_docs": [
         {
           "meeting_date": "2026-11-23",
+          "doc_type": "minutes",
+          "title": "City Council 11/23/2026 Vote Tracking (PDF)",
+          "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF"
+        },
+        {
+          "meeting_date": "2026-11-23",
           "doc_type": "agenda",
           "title": "City Council Meeting \u2014 HTML Packet",
           "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11465"
@@ -953,15 +1179,9 @@
         },
         {
           "meeting_date": "2026-11-09",
-          "doc_type": "agenda",
-          "title": "City Council Meeting \u2014 HTML Packet",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11390"
-        },
-        {
-          "meeting_date": "2026-11-09",
-          "doc_type": "agenda",
-          "title": "City Council Post-Meeting Study Session \u2014 HTML Packet",
-          "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11357"
+          "doc_type": "minutes",
+          "title": "City Council 11/09/2026 Vote Tracking (PDF)",
+          "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF"
         }
       ],
       "representatives": [

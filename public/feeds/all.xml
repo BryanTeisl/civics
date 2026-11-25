@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse — All Colorado Local Measures &amp; Votes</title><link>https://civics-d03.pages.dev</link><description>Plain-English local government votes, ordinances, and agendas tracked by CivicPulse.</description><language>en-us</language><lastBuildDate>Wed, 25 Nov 2026 18:11:53 +0000</lastBuildDate><item><title>[Fort Collins City Council] Motion to go into Executive Session for Annual Evaluations (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-1-4db9d8ce</link><guid isPermaLink="false">doc-1-4db9d8ce</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The motion to go into Executive Session for Annual Evaluations was passed unanimously, affecting all employees whose evaluations are scheduled during that time.
+<rss version="2.0"><channel><title>CivicPulse — All Colorado Local Measures &amp; Votes</title><link>https://civics-d03.pages.dev</link><description>Plain-English local government votes, ordinances, and agendas tracked by CivicPulse.</description><language>en-us</language><lastBuildDate>Wed, 25 Nov 2026 19:13:41 +0000</lastBuildDate><item><title>[Fort Collins City Council] Motion to go into Executive Session for Annual Evaluations (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-1-4db9d8ce</link><guid isPermaLink="false">doc-1-4db9d8ce</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The motion to go into Executive Session for Annual Evaluations was passed unanimously, affecting all employees whose evaluations are scheduled during that time.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -15,7 +15,27 @@ Official Document: https://fortcollinsco.portal.civicclerk.com/event/61/files#mi
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Colorado Springs City Council] Adopted 7-0 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-120-94dbb302</link><guid isPermaLink="false">doc-120-94dbb302</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Westminster City Council] Consent Item Pulled: Pass Councillor's Bill No. 54 on second reading to amend Title 5, Chapter 7; Title 8, Chapter 1; and to add Title 8, Chapter 14 of the Westminster Municipal Code concerning recycling, compost, and plastic regulations (Passed 6-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_a253cf400be7e6</link><guid isPermaLink="false">ev_a253cf400be7e6</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Parks, Water &amp; Environment</category><description>The council voted to pass the bill on recycling, compost, and plastic regulations.
+
+Topic: Parks, Water &amp; Environment | Outcome: Passed | Tally: 6-1 | Impact Score: 56.4/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Consent Item Pulled: Pass Councillor's Bill No. 56 on second reading authorizing the City Manager to execute an EDA with the Butterﬂy Pavilion to provide up to $250,000 in reimbursement support for approved pre-development activities associated with the proposed expansion and renovation of the Butterfly Pavilion campus (Passed 6-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_dc3cdb81ce3c98</link><guid isPermaLink="false">ev_dc3cdb81ce3c98</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Infrastructure &amp; Transit</category><description>The council voted to authorize the City Manager for a partnership with the Butterfly Pavilion.
+
+Topic: Infrastructure &amp; Transit | Outcome: Passed | Tally: 6-1 | Impact Score: 56.4/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of November 9, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_af311c67c8516f</link><guid isPermaLink="false">ev_af311c67c8516f</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes of the previous meeting were approved by all council members.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass CB No. 58 on first reading adding public utility regulations to WMC relating to increasing community engagement requirements for private utility companies regularly using public infrastructure to construct and operate their systems (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_9f811d777beab4</link><guid isPermaLink="false">ev_9f811d777beab4</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The council voted to add public utility regulations for private companies.
+
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass CB No. 59 on first reading to amend Title 14 of the WMC related to the Employee 401(a) Defined Contribution Plan (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_91bfabb5b5da9c</link><guid isPermaLink="false">ev_91bfabb5b5da9c</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>General</category><description>The council voted to amend the Employee 401(a) Plan.
+
+Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF</description></item><item><title>[Colorado Springs City Council] Adopted 7-0 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-120-94dbb302</link><guid isPermaLink="false">doc-120-94dbb302</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.
 
 Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 9-0 | Impact Score: 45.0/100 | Source: structured_api
 
@@ -179,24 +199,4 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13038_M_
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Amends a Caretaker Agreement with Edward Knight to add five years for a new end date of 3-1-2032 at Patrick House (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_c59788bf1373e2</link><guid isPermaLink="false">ev_c59788bf1373e2</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council approved an amendment to a caretaker agreement for Patrick House, extending the contract by five years.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approves a contract with Denver Youth Program dba Metro Denver Partners for $1,172,023.31 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0b72358ab7cd3f</link><guid isPermaLink="false">ev_0b72358ab7cd3f</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council approved a contract with Denver Youth Program for outdoor programs under the Great Outdoors Colorado Trust Fund.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Ordinance Creating a New Article XIX for the Business Impact Opportunity Program (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_cd24171d13185b</link><guid isPermaLink="false">ev_cd24171d13185b</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>A new article was created to support small businesses impacted by major city-funded construction projects.
-
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 6-0 | Impact Score: 44.2/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Ordinance Establishing a New Fund for the Business Impact Opportunity Program (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_754b1d32a61b62</link><guid isPermaLink="false">ev_754b1d32a61b62</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>A new fund was established to support small businesses impacted by major city-funded construction projects.
-
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 6-0 | Impact Score: 44.2/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Fort Collins City Council] AVIS Speed and Red Light Cameras and Designation of Speed Corridors (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_6dc662f288200b</link><guid isPermaLink="false">ev_6dc662f288200b</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Infrastructure &amp; Transit</category><description>The council approved recommendations to update the AVIS speed corridors and related city codes.
-
-Topic: Infrastructure &amp; Transit | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://fortcollinsco.portal.civicclerk.com/event/48/files#minutes</description></item></channel></rss>
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf</description></item></channel></rss>

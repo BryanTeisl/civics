@@ -5,12 +5,94 @@
     "level": "county",
     "lat": 40.0925,
     "lng": -105.3577,
-    "portal_url": "https://bouldercounty.gov/government/elected-officials/commissioners/",
+    "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
     "parent_division_id": null,
-    "status": "unclaimed",
+    "status": "active",
     "docs_since": "2026-11-25",
-    "last_updated": "2026-11-25 18:11:52 UTC"
+    "last_updated": "2026-11-25 19:13:41 UTC"
   },
-  "entities": [],
+  "entities": [
+    {
+      "ocd_person_id": "ocd-person/co-boulder-levy",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Claire Levy",
+      "entity_type": "legislator",
+      "role": "County Commissioner",
+      "district": "District 1",
+      "elected_date": "Active Term",
+      "website_url": "",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 0,
+        "present_votes": 0,
+        "total_votes": 0,
+        "avg_impact_score": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": []
+    },
+    {
+      "ocd_person_id": "ocd-person/co-boulder-loachamin",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Marta Loachamin",
+      "entity_type": "legislator",
+      "role": "County Commissioner",
+      "district": "District 2",
+      "elected_date": "Active Term",
+      "website_url": "",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 0,
+        "present_votes": 0,
+        "total_votes": 0,
+        "avg_impact_score": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": []
+    },
+    {
+      "ocd_person_id": "ocd-person/co-boulder-stoltzmann",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Ashley Stoltzmann",
+      "entity_type": "legislator",
+      "role": "County Commissioner",
+      "district": "District 3",
+      "elected_date": "Active Term",
+      "website_url": "",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "party": "Nonpartisan",
+      "phone": "",
+      "email": "",
+      "social_links": {},
+      "bio_extra": {},
+      "metrics": {
+        "attendance_rate": 0,
+        "present_votes": 0,
+        "total_votes": 0,
+        "avg_impact_score": 0.0,
+        "pivotal_votes": 0,
+        "pivotal_rate": 0,
+        "sponsored_count": 0
+      },
+      "sponsored_items": [],
+      "votes": []
+    }
+  ],
   "events": []
 }

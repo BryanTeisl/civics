@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-25 18:11:52 UTC",
+  "last_updated": "2026-11-25 19:13:41 UTC",
   "jurisdictions": [
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
@@ -15,7 +15,39 @@
       "event_count": 0,
       "document_count": 149,
       "docs_since": "2026-01-08",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "level": "county",
+      "lat": 40.0925,
+      "lng": -105.3577,
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "parent_division_id": null,
+      "status": "active",
+      "file": "country_us__state_co__county_boulder.json",
+      "entity_count": 3,
+      "event_count": 0,
+      "document_count": 0,
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 19:13:41 UTC"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "name": "Boulder Valley School District Board of Education",
+      "level": "school_district",
+      "lat": 40.015,
+      "lng": -105.2705,
+      "portal_url": "https://bvsd.primegov.com/public/portal",
+      "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "status": "active",
+      "file": "country_us__state_co__school_district_boulder_valley_re2.json",
+      "entity_count": 7,
+      "event_count": 0,
+      "document_count": 0,
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
@@ -31,7 +63,7 @@
       "event_count": 49,
       "document_count": 73,
       "docs_since": "2026-08-11",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
@@ -47,7 +79,7 @@
       "event_count": 80,
       "document_count": 71,
       "docs_since": "2026-09-28",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
@@ -63,7 +95,7 @@
       "event_count": 3,
       "document_count": 55,
       "docs_since": "2025-12-09",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
@@ -79,7 +111,7 @@
       "event_count": 22,
       "document_count": 72,
       "docs_since": "2026-08-18",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
@@ -95,7 +127,23 @@
       "event_count": 2,
       "document_count": 54,
       "docs_since": "2026-09-08",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "name": "Larimer County Board of Commissioners",
+      "level": "county",
+      "lat": 40.6662,
+      "lng": -105.4606,
+      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
+      "parent_division_id": null,
+      "status": "active",
+      "file": "country_us__state_co__county_larimer.json",
+      "entity_count": 3,
+      "event_count": 0,
+      "document_count": 0,
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
@@ -111,7 +159,23 @@
       "event_count": 53,
       "document_count": 119,
       "docs_since": "2026-01-01",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "level": "school_district",
+      "lat": 40.5853,
+      "lng": -105.0844,
+      "portal_url": "https://www.psdschools.org/your-district/board-of-education/board-meetings",
+      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "status": "active",
+      "file": "country_us__state_co__school_district_poudre_r1.json",
+      "entity_count": 7,
+      "event_count": 0,
+      "document_count": 0,
+      "docs_since": "2026-11-25",
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:thornton",
@@ -127,7 +191,7 @@
       "event_count": 42,
       "document_count": 74,
       "docs_since": "2026-01-06",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
@@ -140,10 +204,10 @@
       "status": "active",
       "file": "country_us__state_co__place_westminster.json",
       "entity_count": 7,
-      "event_count": 0,
-      "document_count": 75,
+      "event_count": 21,
+      "document_count": 97,
       "docs_since": "2026-01-05",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
@@ -159,7 +223,7 @@
       "event_count": 7,
       "document_count": 44,
       "docs_since": "2026-09-21",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:berthoud",
@@ -175,39 +239,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
-      "name": "Boulder County Board of Commissioners",
-      "level": "county",
-      "lat": 40.0925,
-      "lng": -105.3577,
-      "portal_url": "https://bouldercounty.gov/government/elected-officials/commissioners/",
-      "parent_division_id": null,
-      "status": "unclaimed",
-      "file": "country_us__state_co__county_boulder.json",
-      "entity_count": 0,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
-      "name": "Boulder Valley School District Board of Education",
-      "level": "school_district",
-      "lat": 40.015,
-      "lng": -105.2705,
-      "portal_url": "https://bvsd.primegov.com/",
-      "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
-      "status": "unclaimed",
-      "file": "country_us__state_co__school_district_boulder_valley_re2.json",
-      "entity_count": 0,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:broomfield",
@@ -223,7 +255,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
@@ -239,7 +271,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:dacono",
@@ -255,7 +287,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:el_paso",
@@ -271,7 +303,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:firestone",
@@ -287,7 +319,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:frederick",
@@ -303,7 +335,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:johnstown",
@@ -319,7 +351,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:lafayette",
@@ -335,23 +367,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
-      "name": "Larimer County Board of Commissioners",
-      "level": "county",
-      "lat": 40.6662,
-      "lng": -105.4606,
-      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
-      "parent_division_id": null,
-      "status": "unclaimed",
-      "file": "country_us__state_co__county_larimer.json",
-      "entity_count": 3,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:louisville",
@@ -367,7 +383,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
@@ -383,7 +399,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:northglenn",
@@ -399,23 +415,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
-      "name": "Poudre School District Board of Education",
-      "level": "school_district",
-      "lat": 40.5853,
-      "lng": -105.0844,
-      "portal_url": "https://poudreschools.portal.civicclerk.com/",
-      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
-      "status": "unclaimed",
-      "file": "country_us__state_co__school_district_poudre_r1.json",
-      "entity_count": 0,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
@@ -431,7 +431,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:timnath",
@@ -447,7 +447,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:weld",
@@ -463,7 +463,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:wellington",
@@ -479,7 +479,7 @@
       "event_count": 0,
       "document_count": 0,
       "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 18:11:52 UTC"
+      "last_updated": "2026-11-25 19:13:41 UTC"
     }
   ]
 }
