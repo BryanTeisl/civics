@@ -1,7 +1,15 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 18:34:54 UTC",
+  "generated_at": "2026-11-26 23:57:12 UTC",
   "by_jurisdiction": {
+    "ocd-division/country:us/state:co/place:arvada": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
+      "jurisdiction_name": "Arvada City Council",
+      "council_comment_email": "",
+      "clerk_url": "https://arvadaco.portal.civicclerk.com/",
+      "representative_emails": [],
+      "representatives": []
+    },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
       "jurisdiction_name": "Boulder City Council",
@@ -217,6 +225,14 @@
           "phone": ""
         }
       ]
+    },
+    "ocd-division/country:us/state:co/place:commerce_city": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:commerce_city",
+      "jurisdiction_name": "Commerce City Council",
+      "council_comment_email": "",
+      "clerk_url": "https://commercecity.legistar.com/",
+      "representative_emails": [],
+      "representatives": []
     },
     "ocd-division/country:us/state:co/place:denver": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
@@ -442,6 +458,14 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/place:grand_junction": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
+      "jurisdiction_name": "Grand Junction City Council",
+      "council_comment_email": "",
+      "clerk_url": "https://grandjunctionco.portal.civicclerk.com/",
+      "representative_emails": [],
+      "representatives": []
+    },
     "ocd-division/country:us/state:co/place:greeley": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
       "jurisdiction_name": "Greeley City Council",
@@ -624,6 +648,14 @@
           "phone": ""
         }
       ]
+    },
+    "ocd-division/country:us/state:co/place:pueblo": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
+      "jurisdiction_name": "Pueblo City Council",
+      "council_comment_email": "",
+      "clerk_url": "https://puebloco.portal.civicclerk.com/",
+      "representative_emails": [],
+      "representatives": []
     },
     "ocd-division/country:us/state:co/place:thornton": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",

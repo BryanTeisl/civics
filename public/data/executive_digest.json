@@ -1,45 +1,45 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 18:34:54 UTC",
+  "generated_at": "2026-11-26 23:57:12 UTC",
   "stats": {
-    "total_events": 471,
-    "total_split_votes": 93,
-    "split_vote_pct": 19.7,
-    "active_jurisdictions_with_events": 11,
-    "business_relevant_events": 213
+    "total_events": 511,
+    "total_split_votes": 94,
+    "split_vote_pct": 18.4,
+    "active_jurisdictions_with_events": 13,
+    "business_relevant_events": 234
   },
   "top_topics": [
     {
       "topic": "General",
-      "count": 131
+      "count": 139
     },
     {
       "topic": "Governance & Elections",
-      "count": 90
+      "count": 101
     },
     {
       "topic": "Housing & Development",
-      "count": 58
+      "count": 59
     },
     {
       "topic": "Budget & Finance",
-      "count": 49
+      "count": 56
     },
     {
       "topic": "Contracts & Procurement",
-      "count": 48
+      "count": 52
     },
     {
       "topic": "Zoning & Land Use",
-      "count": 25
-    },
-    {
-      "topic": "Permits & Licensing",
-      "count": 18
+      "count": 27
     },
     {
       "topic": "Taxes, Fees & Utilities",
-      "count": 15
+      "count": 20
+    },
+    {
+      "topic": "Permits & Licensing",
+      "count": 20
     },
     {
       "topic": "Education & Schools",

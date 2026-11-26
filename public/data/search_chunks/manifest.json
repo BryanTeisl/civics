@@ -1,19 +1,19 @@
 {
   "schema_version": "2.2",
   "formula_version": "2.0.0",
-  "total_events": 471,
+  "total_events": 511,
   "chunks": [
     {
       "quarter": "2026-Q4",
       "path": "data/search_chunks/2026-Q4.json",
-      "count": 179,
-      "bytes": 276584
+      "count": 217,
+      "bytes": 331528
     },
     {
       "quarter": "2026-Q3",
       "path": "data/search_chunks/2026-Q3.json",
-      "count": 92,
-      "bytes": 144568
+      "count": 94,
+      "bytes": 147501
     },
     {
       "quarter": "2026-Q2",

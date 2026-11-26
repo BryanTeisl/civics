@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-11-26 18:34:43 UTC",
+  "generated_at": "2026-11-26 23:57:09 UTC",
   "guides": {
+    "ocd-division/country:us/state:co/place:arvada": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
+      "name": "Arvada City Council",
+      "portal_url": "https://arvadaco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-17",
+          "doc_type": "agenda",
+          "title": "City Council Business Meeting (Agenda)",
+          "source_url": "https://arvadaco.portal.civicclerk.com/event/2079/files"
+        },
+        {
+          "meeting_date": "2026-11-10",
+          "doc_type": "agenda",
+          "title": "City Council Workshop (Agenda)",
+          "source_url": "https://arvadaco.portal.civicclerk.com/event/2130/files"
+        },
+        {
+          "meeting_date": "2026-10-27",
+          "doc_type": "agenda",
+          "title": "City Council Workshop (Agenda)",
+          "source_url": "https://arvadaco.portal.civicclerk.com/event/2128/files"
+        },
+        {
+          "meeting_date": "2026-10-20",
+          "doc_type": "agenda",
+          "title": "City Council Business Meeting (Agenda)",
+          "source_url": "https://arvadaco.portal.civicclerk.com/event/2075/files"
+        },
+        {
+          "meeting_date": "2026-10-06",
+          "doc_type": "agenda",
+          "title": "City Council Business Meeting (Agenda)",
+          "source_url": "https://arvadaco.portal.civicclerk.com/event/2073/files"
+        }
+      ],
+      "representatives": []
+    },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
       "name": "Boulder City Council",
@@ -371,6 +416,20 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/place:commerce_city": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:commerce_city",
+      "name": "Commerce City Council",
+      "portal_url": "https://commercecity.legistar.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": []
+    },
     "ocd-division/country:us/state:co/place:denver": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
       "name": "Denver City Council",
@@ -726,6 +785,51 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/place:grand_junction": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
+      "name": "Grand Junction City Council",
+      "portal_url": "https://grandjunctionco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-23",
+          "doc_type": "agenda",
+          "title": "Joint City Council/County Commissioners - 2026 - November 23 - Persigo Board Meeting (Agenda)",
+          "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3996/files"
+        },
+        {
+          "meeting_date": "2026-11-18",
+          "doc_type": "agenda",
+          "title": "City Council - 2026 - November 18 - Regular Meeting (Agenda)",
+          "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3827/files"
+        },
+        {
+          "meeting_date": "2026-11-16",
+          "doc_type": "agenda",
+          "title": "City Council 2026 - November 16 - Special Meeting Executive Session (Agenda)",
+          "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3995/files"
+        },
+        {
+          "meeting_date": "2026-11-16",
+          "doc_type": "agenda",
+          "title": "City Council - 2026 - November 16 - Workshop (Agenda)",
+          "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3815/files"
+        },
+        {
+          "meeting_date": "2026-11-05",
+          "doc_type": "agenda",
+          "title": "City Council 2026 - November 5 - Special Meeting Executive Session (Agenda)",
+          "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3991/files"
+        }
+      ],
+      "representatives": []
+    },
     "ocd-division/country:us/state:co/place:greeley": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
       "name": "Greeley City Council",
@@ -1018,6 +1122,51 @@
           "website_url": "https://www.psdschools.org/your-district/board-of-education"
         }
       ]
+    },
+    "ocd-division/country:us/state:co/place:pueblo": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
+      "name": "Pueblo City Council",
+      "portal_url": "https://puebloco.portal.civicclerk.com/",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-23",
+          "doc_type": "agenda",
+          "title": "City Council Meeting (Agenda)",
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1691/files"
+        },
+        {
+          "meeting_date": "2026-11-16",
+          "doc_type": "agenda",
+          "title": "City Council Work Session (Agenda)",
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1659/files"
+        },
+        {
+          "meeting_date": "2026-11-09",
+          "doc_type": "agenda",
+          "title": "City Council Meeting (Agenda)",
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1679/files"
+        },
+        {
+          "meeting_date": "2026-11-09",
+          "doc_type": "minutes",
+          "title": "City Council Meeting (Minutes)",
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "meeting_date": "2026-11-02",
+          "doc_type": "agenda",
+          "title": "City Council Work Session (Agenda)",
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1657/files"
+        }
+      ],
+      "representatives": []
     },
     "ocd-division/country:us/state:co/place:thornton": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",

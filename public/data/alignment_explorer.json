@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 18:34:54 UTC",
-  "jurisdiction_count": 11,
+  "generated_at": "2026-11-26 23:57:12 UTC",
+  "jurisdiction_count": 13,
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
       "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
@@ -342,6 +342,18 @@
       "most_divergent_pairs": [],
       "recent_split_votes": []
     },
+    "ocd-division/country:us/state:co/place:grand_junction": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
+      "jurisdiction_name": "Grand Junction City Council",
+      "total_events": 14,
+      "unanimous_events": 14,
+      "split_events": 0,
+      "split_rate_pct": 0.0,
+      "dissent_leaderboard": [],
+      "most_aligned_pairs": [],
+      "most_divergent_pairs": [],
+      "recent_split_votes": []
+    },
     "ocd-division/country:us/state:co/place:greeley": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
       "jurisdiction_name": "Greeley City Council",
@@ -425,6 +437,31 @@
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://www.psdschools.org/fs/resource-manager/view/8c7e1d34-22b7-42c6-aa2a-4c9037018b08"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:pueblo": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
+      "jurisdiction_name": "Pueblo City Council",
+      "total_events": 26,
+      "unanimous_events": 25,
+      "split_events": 1,
+      "split_rate_pct": 3.8,
+      "dissent_leaderboard": [],
+      "most_aligned_pairs": [],
+      "most_divergent_pairs": [],
+      "recent_split_votes": [
+        {
+          "event_id": "ev_bfa8246b0de713",
+          "meeting_date": "2026-11-09",
+          "title": "Amendment of Agenda",
+          "topic": "General",
+          "outcome": "Passed",
+          "tally": "5-2",
+          "impact_score": 67,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
         }
       ]
     },
