@@ -5,6 +5,8 @@ import io
 import json
 import os
 import re
+import logging
+logging.getLogger("pypdf").setLevel(logging.ERROR)
 import threading
 import time
 from datetime import datetime, timezone
