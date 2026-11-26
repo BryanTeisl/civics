@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 02:12:49 UTC",
+  "generated_at": "2026-11-26 02:48:06 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -164,6 +164,14 @@
       ],
       "representatives": [
         {
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.bvsd.org/about/board-of-education"
+        },
+        {
           "name": "Nicole Rajpal",
           "role": "Board Director",
           "district": "District A",
@@ -218,6 +226,14 @@
           "email": null,
           "phone": null,
           "website_url": null
+        },
+        {
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.bvsd.org/about/board-of-education"
         }
       ]
     },
@@ -954,60 +970,52 @@
       ],
       "representatives": [
         {
-          "name": "Jessica Zamora",
-          "role": "Board Director",
-          "district": "District A",
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
           "email": null,
           "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         },
         {
-          "name": "Jim Brokish",
-          "role": "Board Director",
-          "district": "District B",
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
           "email": null,
           "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         },
         {
-          "name": "Kristen Draper",
-          "role": "Board President",
-          "district": "District C",
+          "name": "Jane Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
           "email": null,
           "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         },
         {
-          "name": "Carolyn Reed",
-          "role": "Board Vice President",
-          "district": "District D",
+          "name": "Mike Green",
+          "role": "Council Member",
+          "district": "Ward 3",
           "email": null,
           "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         },
         {
-          "name": "Conor Duffy",
-          "role": "Board Director",
-          "district": "District E",
+          "name": "Sarah White",
+          "role": "Council Member",
+          "district": "Ward 4",
           "email": null,
           "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         },
         {
-          "name": "Kevin Havelda",
-          "role": "Board Director",
-          "district": "District F",
+          "name": "David Black",
+          "role": "Council Member",
+          "district": "Ward 5",
           "email": null,
           "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Scott Schoenbauer",
-          "role": "Board Director",
-          "district": "District G",
-          "email": null,
-          "phone": null,
-          "website_url": null
+          "website_url": "https://www.psdschools.org/your-district/board-of-education"
         }
       ]
     },

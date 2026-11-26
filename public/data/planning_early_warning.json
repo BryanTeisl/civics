@@ -1,0 +1,309 @@
+{
+  "schema_version": "3.1",
+  "as_of_date": "2026-11-26",
+  "lookback_days": 30,
+  "upcoming_count": 18,
+  "total_count": 30,
+  "hearings": [
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "City Planning Commission Work Session",
+      "meeting_date": "2026-12-03",
+      "title": "City Planning Commission Work Session \u2014 2026-12-03",
+      "agenda_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2768&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+      "platform": "legistar",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "body_name": "Historic Preservation Commission",
+      "meeting_date": "2026-12-03",
+      "title": "Historic Preservation Commission",
+      "agenda_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19145",
+      "platform": "primegov",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "Historic Preservation Board",
+      "meeting_date": "2026-12-07",
+      "title": "Historic Preservation Board \u2014 2026-12-07",
+      "agenda_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2826&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+      "platform": "legistar",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
+      "jurisdiction_name": "Thornton City Council",
+      "body_name": "Planning Commission Meeting",
+      "meeting_date": "2026-12-08",
+      "title": "Planning Commission Meeting",
+      "agenda_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21570",
+      "platform": "primegov",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "jurisdiction_name": "Greeley City Council",
+      "body_name": "Historic Preservation Commission Meeting",
+      "meeting_date": "2026-12-21",
+      "title": "Historic Preservation Commission Meeting",
+      "agenda_url": "https://greeleyco.portal.civicclerk.com/event/3480/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "jurisdiction_name": "Greeley City Council",
+      "body_name": "2026-12-22 \u2014 Planning Commission Meeting",
+      "meeting_date": "2026-12-22",
+      "title": "2026-12-22 \u2014 Planning Commission Meeting",
+      "agenda_url": "https://greeleyco.portal.civicclerk.com/",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "jurisdiction_name": "Greeley City Council",
+      "body_name": "Planning Commission Meeting",
+      "meeting_date": "2026-12-22",
+      "title": "Planning Commission Meeting",
+      "agenda_url": "https://greeleyco.portal.civicclerk.com/event/3455/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-04-22",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2595/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-05-27",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2596/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-06-24",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2597/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-07-22",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2598/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-08-26",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2599/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-09-23",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2600/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-10-28",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2601/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-11-25",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2602/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2027-12-23",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2603/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "jurisdiction_name": "Windsor Town Board",
+      "body_name": "Board of Adjustment/Appeals",
+      "meeting_date": "2027-12-23",
+      "title": "Board of Adjustment/Appeals",
+      "agenda_url": "https://windsorco.portal.civicclerk.com/event/4025/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "body_name": "Urban Renewal Authority",
+      "meeting_date": "2028-01-27",
+      "title": "Urban Renewal Authority",
+      "agenda_url": "https://fortcollinsco.portal.civicclerk.com/event/2604/files",
+      "platform": "civicclerk",
+      "is_upcoming": true
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "body_name": "Planning and Zoning Commission (livestreamed)",
+      "meeting_date": "2026-11-18",
+      "title": "Planning and Zoning Commission (livestreamed)",
+      "agenda_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19104",
+      "platform": "primegov",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
+      "jurisdiction_name": "Thornton City Council",
+      "body_name": "Planning Commission Meeting",
+      "meeting_date": "2026-11-17",
+      "title": "Planning Commission Meeting",
+      "agenda_url": "https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21514",
+      "platform": "primegov",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "2026-11-12 City Planning Commission: 2880 International Cir., 2nd Floor, Hearing Room",
+      "meeting_date": "2026-11-12",
+      "title": "2026-11-12 City Planning Commission: 2880 International Cir., 2nd Floor, Hearing Room",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2765_A_City_Planning_Commission_26-11-12_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "City Planning Commission Agenda",
+      "meeting_date": "2026-11-12",
+      "title": "City Planning Commission Agenda",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2765_A_City_Planning_Commission_26-11-12_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "City Planning Commission",
+      "meeting_date": "2026-11-12",
+      "title": "City Planning Commission \u2014 2026-11-12",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2765_A_City_Planning_Commission_26-11-12_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "body_name": "Longmont Urban Renewal Authority",
+      "meeting_date": "2026-11-10",
+      "title": "Longmont Urban Renewal Authority",
+      "agenda_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19037",
+      "platform": "primegov",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "2026-11-05 City Planning Commission Work Session: 30 S. Nevada Ave., Suite 102",
+      "meeting_date": "2026-11-05",
+      "title": "2026-11-05 City Planning Commission Work Session: 30 S. Nevada Ave., Suite 102",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2766_A_City_Planning_Commission_Work_Session_26-11-05_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "City Planning Commission Work Session Agenda",
+      "meeting_date": "2026-11-05",
+      "title": "City Planning Commission Work Session Agenda",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2766_A_City_Planning_Commission_Work_Session_26-11-05_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "City Planning Commission Work Session",
+      "meeting_date": "2026-11-05",
+      "title": "City Planning Commission Work Session \u2014 2026-11-05",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2766_A_City_Planning_Commission_Work_Session_26-11-05_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "body_name": "Historic Preservation Commission",
+      "meeting_date": "2026-11-05",
+      "title": "Historic Preservation Commission",
+      "agenda_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19010",
+      "platform": "primegov",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "Historic Preservation Board Agenda",
+      "meeting_date": "2026-11-02",
+      "title": "Historic Preservation Board Agenda",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2825_A_Historic_Preservation_Board_26-11-02_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "body_name": "Historic Preservation Board",
+      "meeting_date": "2026-11-02",
+      "title": "Historic Preservation Board \u2014 2026-11-02",
+      "agenda_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2825_A_Historic_Preservation_Board_26-11-02_Regular_Meeting_Agenda.pdf",
+      "platform": "legistar",
+      "is_upcoming": false
+    }
+  ]
+}
