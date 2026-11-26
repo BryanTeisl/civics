@@ -1,337 +1,6 @@
 {
-  "generated_at": "2026-11-26 04:34:42 UTC",
+  "generated_at": "2026-11-26 15:02:51 UTC",
   "by_jurisdiction": {
-    "ocd-division/country:us/state:co/place:thornton": [
-      {
-        "chain_key": "topic:approve agenda",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-12",
-        "latest_date": "2026-02-18",
-        "stage_count": 4,
-        "stages": [
-          {
-            "event_id": "ev_c1226345752f4f",
-            "meeting_date": "2026-01-12",
-            "title": "Motion to Approve Agenda",
-            "outcome": "Passed",
-            "tally": "2-0"
-          },
-          {
-            "event_id": "ev_11c87d9922aa59",
-            "meeting_date": "2026-01-21",
-            "title": "Motion to Approve Agenda",
-            "outcome": "Passed",
-            "tally": "5-1"
-          },
-          {
-            "event_id": "ev_4122a7fcf91c68",
-            "meeting_date": "2026-02-09",
-            "title": "Motion to Approve Agenda",
-            "outcome": "Passed",
-            "tally": "8-0"
-          },
-          {
-            "event_id": "ev_5b64226ad435ca",
-            "meeting_date": "2026-02-18",
-            "title": "Motion to Approve Agenda",
-            "outcome": "Passed",
-            "tally": "8-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:approval agenda",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-02-18",
-        "stage_count": 3,
-        "stages": [
-          {
-            "event_id": "ev_0dfa4aad0ce186",
-            "meeting_date": "2026-01-21",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "9-0"
-          },
-          {
-            "event_id": "ev_938270ee95096b",
-            "meeting_date": "2026-01-21",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "9-0"
-          },
-          {
-            "event_id": "ev_41b763474603bb",
-            "meeting_date": "2026-02-18",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "8-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:admit license applications city clerk",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-02-18",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_8161b73fcba44f",
-            "meeting_date": "2026-01-21",
-            "title": "Motion to Admit License Applications and City Clerk's Communication Documents into Evidence",
-            "outcome": "Passed",
-            "tally": "5-1"
-          },
-          {
-            "event_id": "ev_acaa85de62c8cd",
-            "meeting_date": "2026-02-18",
-            "title": "Motion to Admit License Applications and City Clerk's Communication Documents into Evidence",
-            "outcome": "Passed",
-            "tally": "8-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:approval hotel restaurant liquor license",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-02-18",
-        "latest_date": "2026-02-18",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_027f09eeac48f1",
-            "meeting_date": "2026-02-18",
-            "title": "Approval of New Hotel and Restaurant Liquor License Application for Golden Pot",
-            "outcome": "Passed",
-            "tally": "8-0"
-          },
-          {
-            "event_id": "ev_9f532bc4ea59c3",
-            "meeting_date": "2026-02-18",
-            "title": "Approval of New Hotel and Restaurant Liquor License Application for Oue Rico",
-            "outcome": "Passed",
-            "tally": "8-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:approve hotel restaurant liquor license",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-02-18",
-        "latest_date": "2026-02-18",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_535aa9836fe291",
-            "meeting_date": "2026-02-18",
-            "title": "Motion to Approve Hotel and Restaurant Liquor License Application by Golden Pot DBA Hot Pot Spot",
-            "outcome": "Passed",
-            "tally": "8-0"
-          },
-          {
-            "event_id": "ev_f490a8ff6e9618",
-            "meeting_date": "2026-02-18",
-            "title": "Motion to Approve Hotel and Restaurant Liquor License Application by Oue Rico LLC DBA CJue Rico",
-            "outcome": "Passed",
-            "tally": "8-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:approval minutes from october 2025",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_3589343722d8b4",
-            "meeting_date": "2026-01-21",
-            "title": "Approval of Minutes from October 15, 2025",
-            "outcome": "Passed",
-            "tally": "9-0"
-          },
-          {
-            "event_id": "ev_df982a3f24548c",
-            "meeting_date": "2026-01-21",
-            "title": "Approval of Minutes from October 15, 2025",
-            "outcome": "Passed",
-            "tally": "9-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:discussion organization updates",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_432b2347289140",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of 55+ Organization Updates",
-            "outcome": "Passed",
-            "tally": "8-1"
-          },
-          {
-            "event_id": "ev_66e434e892cb98",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of 55+ Organization Updates",
-            "outcome": "Passed",
-            "tally": "8-1"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:discussion board member transitions",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_5d576d4b2f0ab6",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of Board Member Transitions",
-            "outcome": "Passed",
-            "tally": "8-1"
-          },
-          {
-            "event_id": "ev_b89d33e40295c2",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of Board Member Transitions",
-            "outcome": "Passed",
-            "tally": "8-1"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:discussion acan updates",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_867a40faa2fc29",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of ACAN Updates",
-            "outcome": "Passed",
-            "tally": "8-1"
-          },
-          {
-            "event_id": "ev_f8c75db4a12064",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of ACAN Updates",
-            "outcome": "Passed",
-            "tally": "8-1"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:discussion drcog transportation planning meeting",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_e9f4063ce186a7",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of DrCOG-Transportation and Planning Meeting",
-            "outcome": "Passed",
-            "tally": "8-1"
-          },
-          {
-            "event_id": "ev_f9a882b3d388a8",
-            "meeting_date": "2026-01-21",
-            "title": "Discussion of DrCOG-Transportation and Planning Meeting",
-            "outcome": "Passed",
-            "tally": "8-1"
-          }
-        ]
-      }
-    ],
-    "ocd-division/country:us/state:co/place:longmont": [
-      {
-        "chain_key": "topic:approval agenda",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-14",
-        "latest_date": "2026-01-27",
-        "stage_count": 3,
-        "stages": [
-          {
-            "event_id": "ev_d238b69fe986f8",
-            "meeting_date": "2026-01-14",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "5-0"
-          },
-          {
-            "event_id": "ev_ba91f8809ac982",
-            "meeting_date": "2026-01-27",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "7-0"
-          },
-          {
-            "event_id": "ev_f1a4672fea3d94",
-            "meeting_date": "2026-01-27",
-            "title": "Approval of Agenda",
-            "outcome": "Passed",
-            "tally": "5-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:cancellation march 2026 museum advisory",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-21",
-        "latest_date": "2026-01-21",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_3f43f4df1b4b7c",
-            "meeting_date": "2026-01-21",
-            "title": "Cancellation of March 18, 2026 Museum Advisory Board Meeting",
-            "outcome": "Passed",
-            "tally": "3-0"
-          },
-          {
-            "event_id": "ev_6deda9a5f41285",
-            "meeting_date": "2026-01-21",
-            "title": "Cancellation of March 18, 2026 Museum Advisory Board Meeting",
-            "outcome": "Passed",
-            "tally": "3-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:allocate longmont museum public project",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-01-15",
-        "latest_date": "2026-01-15",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_36aedfb498aa6a",
-            "meeting_date": "2026-01-15",
-            "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
-            "outcome": "Passed",
-            "tally": "11-0"
-          },
-          {
-            "event_id": "ev_4963f39a87e535",
-            "meeting_date": "2026-01-15",
-            "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
-            "outcome": "Passed",
-            "tally": "11-0"
-          }
-        ]
-      }
-    ],
     "ocd-division/country:us/state:co/place:westminster": [
       {
         "chain_key": "id:bill_56",
@@ -785,12 +454,49 @@
         ]
       },
       {
+        "chain_key": "topic:allow councillor ireland participate virtually",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-12",
+        "latest_date": "2026-06-08",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_0ce9d1fd6ee561",
+            "meeting_date": "2026-01-12",
+            "title": "Motion to allow Councillor Ireland to participate virtually in the public hearing.",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_7b794e661ac0ea",
+            "meeting_date": "2026-06-08",
+            "title": "Motion to allow Councillor Ireland to participate virtually",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
         "chain_key": "topic:approve consent items",
         "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-02-23",
+        "first_date": "2026-01-12",
         "latest_date": "2026-06-08",
-        "stage_count": 4,
+        "stage_count": 6,
         "stages": [
+          {
+            "event_id": "ev_d91cecae62f4f6",
+            "meeting_date": "2026-01-12",
+            "title": "Approve Consent Items 8A-8G",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_b6c404cf9ab1f2",
+            "meeting_date": "2026-01-26",
+            "title": "Approve Consent Items 8A-8C",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
           {
             "event_id": "ev_71c9080842da40",
             "meeting_date": "2026-02-23",
@@ -1087,6 +793,282 @@
             "tally": "7-0"
           }
         ]
+      },
+      {
+        "chain_key": "id:bill_2",
+        "match_basis": "Measure ID #2",
+        "first_date": "2026-01-26",
+        "latest_date": "2026-02-09",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_76dec675ee5ae2",
+            "meeting_date": "2026-01-26",
+            "title": "First Reading of Councillor\u2019s Bill No. 2 Re: Comprehensive Plan Amendment for the Former Zerger Elementary School Site",
+            "outcome": "Failed",
+            "tally": "5-1"
+          },
+          {
+            "event_id": "ev_8209e1c7a21b6e",
+            "meeting_date": "2026-02-09",
+            "title": "Second Reading of Councillor\u2019s Bill No. 2 Re: Comprehensive Plan Amendment for the Former Zerger Elementary School Site",
+            "outcome": "Passed",
+            "tally": "4-0"
+          }
+        ]
+      }
+    ],
+    "ocd-division/country:us/state:co/place:thornton": [
+      {
+        "chain_key": "topic:approve agenda",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-12",
+        "latest_date": "2026-02-18",
+        "stage_count": 4,
+        "stages": [
+          {
+            "event_id": "ev_c1226345752f4f",
+            "meeting_date": "2026-01-12",
+            "title": "Motion to Approve Agenda",
+            "outcome": "Passed",
+            "tally": "2-0"
+          },
+          {
+            "event_id": "ev_11c87d9922aa59",
+            "meeting_date": "2026-01-21",
+            "title": "Motion to Approve Agenda",
+            "outcome": "Passed",
+            "tally": "5-1"
+          },
+          {
+            "event_id": "ev_4122a7fcf91c68",
+            "meeting_date": "2026-02-09",
+            "title": "Motion to Approve Agenda",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_5b64226ad435ca",
+            "meeting_date": "2026-02-18",
+            "title": "Motion to Approve Agenda",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval agenda",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-02-18",
+        "stage_count": 3,
+        "stages": [
+          {
+            "event_id": "ev_0dfa4aad0ce186",
+            "meeting_date": "2026-01-21",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "9-0"
+          },
+          {
+            "event_id": "ev_938270ee95096b",
+            "meeting_date": "2026-01-21",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "9-0"
+          },
+          {
+            "event_id": "ev_41b763474603bb",
+            "meeting_date": "2026-02-18",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:admit license applications city clerk",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-02-18",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_8161b73fcba44f",
+            "meeting_date": "2026-01-21",
+            "title": "Motion to Admit License Applications and City Clerk's Communication Documents into Evidence",
+            "outcome": "Passed",
+            "tally": "5-1"
+          },
+          {
+            "event_id": "ev_acaa85de62c8cd",
+            "meeting_date": "2026-02-18",
+            "title": "Motion to Admit License Applications and City Clerk's Communication Documents into Evidence",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval hotel restaurant liquor license",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-02-18",
+        "latest_date": "2026-02-18",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_027f09eeac48f1",
+            "meeting_date": "2026-02-18",
+            "title": "Approval of New Hotel and Restaurant Liquor License Application for Golden Pot",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_9f532bc4ea59c3",
+            "meeting_date": "2026-02-18",
+            "title": "Approval of New Hotel and Restaurant Liquor License Application for Oue Rico",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approve hotel restaurant liquor license",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-02-18",
+        "latest_date": "2026-02-18",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_535aa9836fe291",
+            "meeting_date": "2026-02-18",
+            "title": "Motion to Approve Hotel and Restaurant Liquor License Application by Golden Pot DBA Hot Pot Spot",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_f490a8ff6e9618",
+            "meeting_date": "2026-02-18",
+            "title": "Motion to Approve Hotel and Restaurant Liquor License Application by Oue Rico LLC DBA CJue Rico",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval minutes from october 2025",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_3589343722d8b4",
+            "meeting_date": "2026-01-21",
+            "title": "Approval of Minutes from October 15, 2025",
+            "outcome": "Passed",
+            "tally": "9-0"
+          },
+          {
+            "event_id": "ev_df982a3f24548c",
+            "meeting_date": "2026-01-21",
+            "title": "Approval of Minutes from October 15, 2025",
+            "outcome": "Passed",
+            "tally": "9-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:discussion organization updates",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_432b2347289140",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of 55+ Organization Updates",
+            "outcome": "Passed",
+            "tally": "8-1"
+          },
+          {
+            "event_id": "ev_66e434e892cb98",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of 55+ Organization Updates",
+            "outcome": "Passed",
+            "tally": "8-1"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:discussion board member transitions",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_5d576d4b2f0ab6",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of Board Member Transitions",
+            "outcome": "Passed",
+            "tally": "8-1"
+          },
+          {
+            "event_id": "ev_b89d33e40295c2",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of Board Member Transitions",
+            "outcome": "Passed",
+            "tally": "8-1"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:discussion acan updates",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_867a40faa2fc29",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of ACAN Updates",
+            "outcome": "Passed",
+            "tally": "8-1"
+          },
+          {
+            "event_id": "ev_f8c75db4a12064",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of ACAN Updates",
+            "outcome": "Passed",
+            "tally": "8-1"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:discussion drcog transportation planning meeting",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_e9f4063ce186a7",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of DrCOG-Transportation and Planning Meeting",
+            "outcome": "Passed",
+            "tally": "8-1"
+          },
+          {
+            "event_id": "ev_f9a882b3d388a8",
+            "meeting_date": "2026-01-21",
+            "title": "Discussion of DrCOG-Transportation and Planning Meeting",
+            "outcome": "Passed",
+            "tally": "8-1"
+          }
+        ]
       }
     ],
     "ocd-division/country:us/state:co/school_district:poudre_r1": [
@@ -1133,6 +1115,84 @@
             "title": "Executive Session Motion",
             "outcome": "Passed",
             "tally": "7-0"
+          }
+        ]
+      }
+    ],
+    "ocd-division/country:us/state:co/place:longmont": [
+      {
+        "chain_key": "topic:approval agenda",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-14",
+        "latest_date": "2026-01-27",
+        "stage_count": 3,
+        "stages": [
+          {
+            "event_id": "ev_d238b69fe986f8",
+            "meeting_date": "2026-01-14",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "5-0"
+          },
+          {
+            "event_id": "ev_ba91f8809ac982",
+            "meeting_date": "2026-01-27",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_f1a4672fea3d94",
+            "meeting_date": "2026-01-27",
+            "title": "Approval of Agenda",
+            "outcome": "Passed",
+            "tally": "5-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:cancellation march 2026 museum advisory",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-21",
+        "latest_date": "2026-01-21",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_3f43f4df1b4b7c",
+            "meeting_date": "2026-01-21",
+            "title": "Cancellation of March 18, 2026 Museum Advisory Board Meeting",
+            "outcome": "Passed",
+            "tally": "3-0"
+          },
+          {
+            "event_id": "ev_6deda9a5f41285",
+            "meeting_date": "2026-01-21",
+            "title": "Cancellation of March 18, 2026 Museum Advisory Board Meeting",
+            "outcome": "Passed",
+            "tally": "3-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:allocate longmont museum public project",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-01-15",
+        "latest_date": "2026-01-15",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_36aedfb498aa6a",
+            "meeting_date": "2026-01-15",
+            "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
+            "outcome": "Passed",
+            "tally": "11-0"
+          },
+          {
+            "event_id": "ev_4963f39a87e535",
+            "meeting_date": "2026-01-15",
+            "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
+            "outcome": "Passed",
+            "tally": "11-0"
           }
         ]
       }
