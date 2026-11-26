@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivicPulse Live Local Votes Widget</title>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #faf5eb; color: #142834; padding: 14px; }
+    .hdr { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; border-bottom: 1px solid rgba(27,59,78,0.15); padding-bottom: 8px; }
+    .hdr h1 { font-size: 15px; margin: 0; color: #1b3b4e; }
+    .hdr a { font-size: 11px; color: #366a8a; text-decoration: none; font-weight: 600; }
+    .card { background: #fff; border: 1px solid rgba(27,59,78,0.15); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+    .meta { font-size: 11px; color: #366a8a; font-weight: 600; display: flex; justify-content: space-between; }
+    .title { font-size: 13px; font-weight: 700; color: #1b3b4e; margin: 4px 0; }
+    .pill { display: inline-block; background: #ebe0ca; color: #1b3b4e; border-radius: 999px; padding: 2px 8px; font-size: 10px; font-weight: 600; }
+    .empty { font-size: 12px; color: #526773; }
+  </style>
+</head>
+<body>
+  <div class="hdr">
+    <h1 id="wTitle">CivicPulse Local Votes</h1>
+    <a href="./" target="_blank" rel="noopener noreferrer">Powered by CivicPulse ↗</a>
+  </div>
+  <div id="wList" class="empty">Loading recent local votes...</div>
+  <script>
+    (async () => {
+      const params = new URLSearchParams(window.location.search);
+      const jur = params.get("jur") || "country_us__state_co__place_fort_collins";
+      const limit = Math.min(10, Math.max(1, Number(params.get("limit") || 5)));
+      const list = document.getElementById("wList");
+      const titleEl = document.getElementById("wTitle");
+      try {
+        const res = await fetch(`data/${encodeURIComponent(jur)}.json`);
+        if (!res.ok) throw new Error("Not found");
+        const data = await res.json();
+        titleEl.textContent = (data.name || data.jurisdiction?.name || "Local Council") + " — Recent Votes";
+        const events = (data.events || []).slice(0, limit);
+        if (!events.length) { list.textContent = "No recorded votes yet."; return; }
+        list.innerHTML = events.map(ev => `
+          <div class="card">
+            <div class="meta"><span>${ev.meeting_date || ""}</span><span>Impact ${ev.impact_score ?? 0}/100</span></div>
+            <div class="title">${(ev.title || "").replace(/</g, "&lt;")}</div>
+            <div><span class="pill">${(ev.topic || "General").replace(/</g, "&lt;")} • ${(ev.outcome || "Recorded").replace(/</g, "&lt;")} (${ev.yes_count ?? 0}-${ev.no_count ?? 0})</span></div>
+          </div>
+        `).join("");
+      } catch (e) {
+        list.textContent = "Could not load jurisdiction feed.";
+      }
+    })();
+  </script>
+</body>
+</html>

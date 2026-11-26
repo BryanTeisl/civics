@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 15:40:11 UTC",
+  "generated_at": "2026-11-26 18:30:13 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:westminster": [
       {
@@ -1264,29 +1264,6 @@
             "title": "Approves Master Purchase Order with Graybar Electric Company, Inc.",
             "outcome": "Passed",
             "tally": "9-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:ordinance amending section denver revised",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-11-17",
-        "latest_date": "2026-11-17",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_f618ee45f2345b",
-            "meeting_date": "2026-11-17",
-            "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-            "outcome": "Passed",
-            "tally": "5-0"
-          },
-          {
-            "event_id": "legistar-13051-240569",
-            "meeting_date": "2026-11-17",
-            "title": "For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e",
-            "outcome": "Passed",
-            "tally": "5-0"
           }
         ]
       },

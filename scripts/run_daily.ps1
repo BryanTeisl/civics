@@ -86,6 +86,9 @@ try {
     if (Test-Path "civicpulse\pipeline\export_enhancements.py") {
         python -m civicpulse.pipeline.export_enhancements --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
+    if (Test-Path "civicpulse\pipeline\v3_intelligence.py") {
+        python -m civicpulse.pipeline.v3_intelligence --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
+    }
     if (Test-Path "civicpulse\pipeline\agenda_preview.py") {
         python -m civicpulse.pipeline.agenda_preview --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
     }

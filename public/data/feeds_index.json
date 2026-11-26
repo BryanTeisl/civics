@@ -9,7 +9,7 @@
     "country_us__state_co__place_denver": {
       "name": "Denver City Council",
       "url": "feeds/jur_country_us__state_co__place_denver.xml",
-      "item_count": 83
+      "item_count": 82
     },
     "country_us__state_co__place_erie": {
       "name": "Erie Town Council",
@@ -76,7 +76,7 @@
     },
     "Governance & Elections": {
       "url": "feeds/topic_governance_elections.xml",
-      "item_count": 91
+      "item_count": 90
     },
     "Housing & Development": {
       "url": "feeds/topic_housing_development.xml",

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 15:40:12 +0000</lastBuildDate><item><title>[Boulder Valley School District Board of Education] Ascent Classical Charter (20 mins) (Failed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_36c03c1a095a11</link><guid isPermaLink="false">ev_36c03c1a095a11</guid><pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The DAC did not approve the application for Ascent Classical Charter.
+<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 18:30:14 +0000</lastBuildDate><item><title>[Boulder Valley School District Board of Education] Ascent Classical Charter (20 mins) (Failed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_36c03c1a095a11</link><guid isPermaLink="false">ev_36c03c1a095a11</guid><pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The DAC did not approve the application for Ascent Classical Charter.
 
 Topic: Governance &amp; Elections | Outcome: Failed | Tally: 7-1 | Impact Score: 52.8/100 | Source: ai_minutes_pdf
 
@@ -42,10 +42,6 @@ Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score:
 Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)</description></item><item><title>[Denver City Council] For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/legistar-13051-240569</link><guid isPermaLink="false">legistar-13051-240569</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This ordinance adjusts the salaries of appointed Charter officers in Denver, setting up a routine increase every four years and allowing for a one-time adjustment based on market rates. It affects all appointed officers covered by the revised municipal code.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 42.7/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_f618ee45f2345b</link><guid isPermaLink="false">ev_f618ee45f2345b</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 42.7/100 | Source: ai_minutes_pdf
 
 Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Minutes of Monday, November 9, 2026 Approval (Passed 11-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_3c290ead9267eb</link><guid isPermaLink="false">ev_3c290ead9267eb</guid><pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council approved the minutes of a previous meeting.
 
@@ -199,4 +195,8 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/6824/060820
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 4-0 | Impact Score: 38.3/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.psdschools.org/fs/resource-manager/view/2fae8b49-3dba-46e9-8ee9-56884b039144</description></item></channel></rss>
+Official Document: https://www.psdschools.org/fs/resource-manager/view/2fae8b49-3dba-46e9-8ee9-56884b039144</description></item><item><title>[Erie Town Council] Election of Chair and Vice Chair of the Planning Commission (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8b56e7bdfaec44</link><guid isPermaLink="false">ev_8b56e7bdfaec44</guid><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planning_Commission_26-06-03_Meeting_Minutes.pdf</description></item></channel></rss>

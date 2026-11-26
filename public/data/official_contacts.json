@@ -1,0 +1,825 @@
+{
+  "schema_version": "3.0",
+  "generated_at": "2026-11-26 18:30:25 UTC",
+  "by_jurisdiction": {
+    "ocd-division/country:us/state:co/place:boulder": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
+      "jurisdiction_name": "Boulder City Council",
+      "council_comment_email": "council@bouldercolorado.gov",
+      "clerk_url": "https://bouldercolorado.gov/government/city-council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Aaron Brockett",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mark Wallach",
+          "role": "Council Member",
+          "district": "Ward 7",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Matt Benjamin",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Nicole Speer",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Rob Kaplan",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Ryan Schuchard",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Taishya Adams",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Tara Winer",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Tina Marquis",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "jurisdiction_name": "Boulder Valley School District Board of Education",
+      "council_comment_email": "bvsd.board@bvsd.org",
+      "clerk_url": "https://www.bvsd.org/about/board-of-education",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Alex Medler",
+          "role": "Board Director",
+          "district": "District C",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jason Unger",
+          "role": "Board Director",
+          "district": "District G",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jorge Chavez",
+          "role": "Board Director",
+          "district": "District F",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Kitty Sargent",
+          "role": "Board Director",
+          "district": "District B",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Lalenia Quinlan Aweida",
+          "role": "Board Director",
+          "district": "District D",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Lisa Sweeney-Miran",
+          "role": "Board President",
+          "district": "District E",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Nicole Rajpal",
+          "role": "Board Director",
+          "district": "District A",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:colorado_springs": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+      "jurisdiction_name": "Colorado Springs City Council",
+      "council_comment_email": "allcouncil@coloradosprings.gov",
+      "clerk_url": "https://coloradosprings.gov/city-council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Brandy Williams",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Brian Risley",
+          "role": "President Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Dave Donelson",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "David Leinweber",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Ken Casey",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Kimberly Gold",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Lynette Crow-Iverson",
+          "role": "President",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Nancy Henjum",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Roland Rainey Jr.",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:denver": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+      "jurisdiction_name": "Denver City Council",
+      "council_comment_email": "dencc@denvergov.org",
+      "clerk_url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Denver-City-Council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Amanda Sandoval",
+          "role": "Council member",
+          "district": "District1",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Amanda Sawyer",
+          "role": "Council member",
+          "district": "District 5",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Chris Hinds",
+          "role": "Council member",
+          "district": "District 10",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Darrell Watson",
+          "role": "Council member",
+          "district": "District 9",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Diana Romero Campbell",
+          "role": "Chair",
+          "district": "District 4",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Flor Alvidrez",
+          "role": "Council member",
+          "district": "District 7",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Jamie Torres",
+          "role": "Council member",
+          "district": "District 3",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Kevin Flynn",
+          "role": "Council member",
+          "district": "District 2",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Paul Kashmann",
+          "role": "Council member",
+          "district": "District 6",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Sarah Parady",
+          "role": "Council member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Serena Gonzales-Gutierrez",
+          "role": "Council member",
+          "district": "At-Large",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Shontel Lewis",
+          "role": "Council member",
+          "district": "District 8",
+          "email": "",
+          "phone": "(720) 337-2000"
+        },
+        {
+          "name": "Stacie Gilmore",
+          "role": "Council member",
+          "district": "District 11",
+          "email": "",
+          "phone": "(720) 337-2000"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:erie": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:erie",
+      "jurisdiction_name": "Erie Town Council",
+      "council_comment_email": "council@erieco.gov",
+      "clerk_url": "https://www.erieco.gov/176/Town-Council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Andrew Moore",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Anil Pesaramelli",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Brandon Bell",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Brian O'Connor",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Dan Hoback",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Emily Baer",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "John Mortellaro",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:fort_collins": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "council_comment_email": "cityleaders@fcgov.com",
+      "clerk_url": "https://www.fcgov.com/cityclerk/",
+      "representative_emails": [
+        "ahoeven@fcgov.com",
+        "anelsen@fcgov.com",
+        "cconway@fcgov.com",
+        "efrancis@fcgov.com",
+        "jfudge@fcgov.com",
+        "jpignataro@fcgov.com",
+        "mpotyondy@fcgov.com"
+      ],
+      "representatives": [
+        {
+          "name": "Amy Hoeven",
+          "role": "Council Member",
+          "district": "District 5",
+          "email": "ahoeven@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Anne Nelsen",
+          "role": "Council Member",
+          "district": "District 6",
+          "email": "anelsen@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Chris Conway",
+          "role": "Council Member",
+          "district": "District 1",
+          "email": "cconway@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Emily Francis",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "efrancis@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Josh Fudge",
+          "role": "Council Member",
+          "district": "District 3",
+          "email": "jfudge@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Julie Pignataro",
+          "role": "Mayor Pro Tem",
+          "district": "District 2",
+          "email": "jpignataro@fcgov.com",
+          "phone": "(970) 221-6505"
+        },
+        {
+          "name": "Melanie Potyondy",
+          "role": "Council Member",
+          "district": "District 4",
+          "email": "mpotyondy@fcgov.com",
+          "phone": "(970) 221-6505"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:greeley": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "jurisdiction_name": "Greeley City Council",
+      "council_comment_email": "citycouncil@greeleygov.com",
+      "clerk_url": "https://greeleygov.com/government/council",
+      "representative_emails": [
+        "Brian.Rudy@greeleygov.com",
+        "Craig.Huddleston@greeleygov.com",
+        "Dale.Hall@greeleygov.com",
+        "Deb.Deboutez@greeleygov.com",
+        "Johnny.Olson@greeleygov.com",
+        "Melissa.McDonald@Greeleygov.com",
+        "Ryan.Roth@greeleygov.com"
+      ],
+      "representatives": [
+        {
+          "name": "Brian Rudy",
+          "role": "Council Member",
+          "district": "Ward IV - Term: 2025-2027",
+          "email": "Brian.Rudy@greeleygov.com",
+          "phone": "970-888-1885"
+        },
+        {
+          "name": "Craig Huddleston",
+          "role": "Council Member",
+          "district": "Ward I - May 19, 2026-2027",
+          "email": "Craig.Huddleston@greeleygov.com",
+          "phone": "970-381-7918"
+        },
+        {
+          "name": "Dale Hall",
+          "role": "Mayor",
+          "district": "Term: 2025-2027",
+          "email": "Dale.Hall@greeleygov.com",
+          "phone": "970-657-0310"
+        },
+        {
+          "name": "Deb DeBoutez",
+          "role": "Council Member",
+          "district": "Ward II - Term: 2025-2029",
+          "email": "Deb.Deboutez@greeleygov.com",
+          "phone": "970-336-4296"
+        },
+        {
+          "name": "Johnny Olson",
+          "role": "Council Member",
+          "district": "Ward III - Term: 2025-2029",
+          "email": "Johnny.Olson@greeleygov.com",
+          "phone": "970-336-4293"
+        },
+        {
+          "name": "Melissa McDonald",
+          "role": "Mayor Pro Tem",
+          "district": "Term: 2023-2027",
+          "email": "Melissa.McDonald@Greeleygov.com",
+          "phone": "970-657-7821"
+        },
+        {
+          "name": "Ryan Roth",
+          "role": "Council Member",
+          "district": "At Large - Term: 2025-2029",
+          "email": "Ryan.Roth@greeleygov.com",
+          "phone": "970-888-1191"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:longmont": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+      "jurisdiction_name": "Longmont City Council",
+      "council_comment_email": "city.clerk@longmontcolorado.gov",
+      "clerk_url": "https://longmontcolorado.gov/city-council/",
+      "representative_emails": [
+        "alex.kalkhofer@longmontcolorado.gov",
+        "crystal.prieto@longmontcolorado.gov",
+        "diane.crist@longmontcolorado.gov",
+        "jake.marsing@longmontcolorado.gov",
+        "matthew.popkin@longmontcolorado.gov",
+        "sean.mccoy@longmontcolorado.gov",
+        "susie.hidalgo-fahring@longmontcolorado.gov"
+      ],
+      "representatives": [
+        {
+          "name": "Alex Kalkhofer",
+          "role": "Ward 3 Representative",
+          "district": "Ward 3",
+          "email": "alex.kalkhofer@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Crystal Prieto",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": "crystal.prieto@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Diane Crist",
+          "role": "Ward 1 Representative",
+          "district": "Ward 1",
+          "email": "diane.crist@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Jake Marsing",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": "jake.marsing@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Matthew Popkin",
+          "role": "Ward 2 Representative",
+          "district": "Ward 2",
+          "email": "matthew.popkin@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Sean McCoy",
+          "role": "At-Large Representative",
+          "district": "At-Large",
+          "email": "sean.mccoy@longmontcolorado.gov",
+          "phone": ""
+        },
+        {
+          "name": "Susie Hidalgo-Fahring",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "susie.hidalgo-fahring@longmontcolorado.gov",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/school_district:poudre_r1": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "jurisdiction_name": "Poudre School District Board of Education",
+      "council_comment_email": "board@psdschools.org",
+      "clerk_url": "https://www.psdschools.org/your-district/board-of-education",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "David Black",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jane Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mike Green",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Sarah White",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:thornton": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
+      "jurisdiction_name": "Thornton City Council",
+      "council_comment_email": "council@thorntonco.gov",
+      "clerk_url": "https://www.thorntonco.gov/government/city-council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Cherish Salazar",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Chris Russell",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "David Acu\u00f1a",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Devin Byrd",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Drew Morris",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jan Kulmann",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "John Alge",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Justin Martinez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Roberta Ayala",
+          "role": "Mayor Pro Tem",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:westminster": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:westminster",
+      "jurisdiction_name": "Westminster City Council",
+      "council_comment_email": "citycouncil@westminsterco.gov",
+      "clerk_url": "https://www.westminsterco.gov/Government/CityCouncil",
+      "representative_emails": [
+        "abarajas@westminsterco.gov",
+        "ahott@westminsterco.gov",
+        "ccarmeli@westminsterco.gov",
+        "jejohnso@westminsterco.gov",
+        "kireland@westminsterco.gov",
+        "oezeadi@westminsterco.gov",
+        "snurmela@westminsterco.gov"
+      ],
+      "representatives": [
+        {
+          "name": "Adam Barajas",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "abarajas@westminsterco.gov",
+          "phone": "(720) 336-8170"
+        },
+        {
+          "name": "Amber Hott",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "ahott@westminsterco.gov",
+          "phone": "(720) 474-3785"
+        },
+        {
+          "name": "Claire Carmelia",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "ccarmeli@westminsterco.gov",
+          "phone": "(720) 504-6019"
+        },
+        {
+          "name": "Jack Johnson",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "jejohnso@westminsterco.gov",
+          "phone": "(719) 423-9886"
+        },
+        {
+          "name": "Kristine Ireland",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "kireland@westminsterco.gov",
+          "phone": "(303) 517-1970"
+        },
+        {
+          "name": "Obi Ezeadi",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "oezeadi@westminsterco.gov",
+          "phone": "(720) 447-5606"
+        },
+        {
+          "name": "Sarah Nurmela",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": "snurmela@westminsterco.gov",
+          "phone": "(720) 460-9277"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/place:windsor": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+      "jurisdiction_name": "Windsor Town Board",
+      "council_comment_email": "townboard@windsorgov.com",
+      "clerk_url": "https://www.windsorgov.com/101/Town-Board",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Brian Jones",
+          "role": "Council Member",
+          "district": "District 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jason Hallett",
+          "role": "Council Member",
+          "district": "District 6",
+          "email": "",
+          "phone": "(970) 692-7819"
+        },
+        {
+          "name": "Julie Cline",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": "(970) 545-1864"
+        },
+        {
+          "name": "Ken Symsack",
+          "role": "Council Member",
+          "district": "District 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Lainie Peltz",
+          "role": "Council Member",
+          "district": "District 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Rick Klimek",
+          "role": "Council Member",
+          "district": "District 5",
+          "email": "",
+          "phone": "(970) 301-1783"
+        },
+        {
+          "name": "Ron Steinbach",
+          "role": "Council Member",
+          "district": "District 1",
+          "email": "",
+          "phone": "(970) 290-1980"
+        }
+      ]
+    }
+  }
+}

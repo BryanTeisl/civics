@@ -9,7 +9,7 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-09-28",
-    "last_updated": "2026-11-26 15:40:11 UTC",
+    "last_updated": "2026-11-26 18:30:12 UTC",
     "as_of_date": "2026-11-18",
     "stale_days": 8,
     "is_stale": false,
@@ -60,9 +60,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 49,
-        "total_votes": 49,
-        "avg_impact_score": 48.0,
+        "present_votes": 48,
+        "total_votes": 48,
+        "avg_impact_score": 48.2,
         "pivotal_votes": 1,
         "pivotal_rate": 2,
         "sponsored_count": 0
@@ -115,18 +115,6 @@
           "is_pivotal": false,
           "impact_score": 42.7,
           "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "event_id": "ev_f618ee45f2345b",
-          "meeting_date": "2026-11-17",
-          "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-          "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-          "event_type": "ordinance",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "impact_score": 42.7,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
           "verbatim_quote": ""
         },
         {
@@ -1836,9 +1824,9 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 59,
-        "total_votes": 59,
-        "avg_impact_score": 46.3,
+        "present_votes": 58,
+        "total_votes": 58,
+        "avg_impact_score": 46.4,
         "pivotal_votes": 2,
         "pivotal_rate": 3,
         "sponsored_count": 0
@@ -1963,18 +1951,6 @@
           "is_pivotal": false,
           "impact_score": 42.7,
           "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "event_id": "ev_f618ee45f2345b",
-          "meeting_date": "2026-11-17",
-          "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-          "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-          "event_type": "ordinance",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "impact_score": 42.7,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
           "verbatim_quote": ""
         },
         {
@@ -2572,8 +2548,8 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 50,
-        "total_votes": 50,
+        "present_votes": 49,
+        "total_votes": 49,
         "avg_impact_score": 44.6,
         "pivotal_votes": 1,
         "pivotal_rate": 2,
@@ -2627,18 +2603,6 @@
           "is_pivotal": false,
           "impact_score": 42.7,
           "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "event_id": "ev_f618ee45f2345b",
-          "meeting_date": "2026-11-17",
-          "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-          "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-          "event_type": "ordinance",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "impact_score": 42.7,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
           "verbatim_quote": ""
         },
         {
@@ -3864,8 +3828,8 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 94,
-        "present_votes": 50,
-        "total_votes": 53,
+        "present_votes": 49,
+        "total_votes": 52,
         "avg_impact_score": 43.2,
         "pivotal_votes": 1,
         "pivotal_rate": 2,
@@ -3919,18 +3883,6 @@
           "is_pivotal": false,
           "impact_score": 42.7,
           "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "event_id": "ev_f618ee45f2345b",
-          "meeting_date": "2026-11-17",
-          "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-          "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-          "event_type": "ordinance",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "impact_score": 42.7,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
           "verbatim_quote": ""
         },
         {
@@ -6340,8 +6292,8 @@
       "bio_extra": {},
       "metrics": {
         "attendance_rate": 100,
-        "present_votes": 48,
-        "total_votes": 48,
+        "present_votes": 47,
+        "total_votes": 47,
         "avg_impact_score": 44.2,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
@@ -6395,18 +6347,6 @@
           "is_pivotal": false,
           "impact_score": 42.7,
           "rationale_summary": "Recorded via structured municipal API.",
-          "verbatim_quote": ""
-        },
-        {
-          "event_id": "ev_f618ee45f2345b",
-          "meeting_date": "2026-11-17",
-          "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-          "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-          "event_type": "ordinance",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "impact_score": 42.7,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
           "verbatim_quote": ""
         },
         {
@@ -8625,100 +8565,6 @@
       },
       "formula_version": "2.0.0",
       "capture_method": "structured_api"
-    },
-    {
-      "event_id": "ev_f618ee45f2345b",
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "meeting_date": "2026-11-17",
-      "title": "Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries",
-      "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
-      "diff_summary": "This ordinance includes a mechanism for quadrennial salary adjustments and performance reviews.",
-      "qa_status": "verified",
-      "event_type": "ordinance",
-      "topic": "Governance & Elections",
-      "outcome": "Passed",
-      "yes_count": 5,
-      "no_count": 0,
-      "abstain_count": 0,
-      "absent_count": 2,
-      "vote_margin": 5,
-      "impact_score": 42.7,
-      "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf",
-      "roster_size": 13,
-      "attendance_count": 5,
-      "attendance_rate": 38,
-      "sponsors": [],
-      "votes": [
-        {
-          "entity_id": "ocd-person/denver-kevin-flynn",
-          "name": "Kevin Flynn",
-          "district": "District 2",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-serena-gonzales-gutierrez",
-          "name": "Serena Gonzales-Gutierrez",
-          "district": "At-Large",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-amanda-sawyer",
-          "name": "Amanda Sawyer",
-          "district": "District 5",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-jamie-torres",
-          "name": "Jamie Torres",
-          "district": "District 3",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
-          "verbatim_quote": ""
-        },
-        {
-          "entity_id": "ocd-person/denver-darrell-watson",
-          "name": "Darrell Watson",
-          "district": "District 9",
-          "elected_date": "Jul 2023",
-          "vote": "Yes",
-          "is_pivotal": false,
-          "rationale_summary": "Supported the salary adjustments for Charter officers.",
-          "verbatim_quote": ""
-        }
-      ],
-      "business_relevant": false,
-      "outcome_status": "Passed",
-      "passage_method": "Roll Call",
-      "tally": "5-0",
-      "body_type": "full_body",
-      "impact_breakdown": {
-        "score": 42.7,
-        "legal_weight": 35.0,
-        "contestedness": 0.0,
-        "turnout": 7.7,
-        "votes_cast": 5,
-        "expected_body_size": 13,
-        "body_type": "full_body",
-        "formula_version": "2.0.0",
-        "formula_hash": "292922f52a39",
-        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 42.7/100 (Formula v2.0.0)"
-      },
-      "formula_version": "2.0.0",
-      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_b27891094406f7",

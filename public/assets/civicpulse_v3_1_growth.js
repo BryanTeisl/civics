@@ -65,7 +65,7 @@ async function mountPlanningEarlyWarning() {
     <div id="v31PlanningGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
   `;
 
-  anchor.insertAdjacentElement("afterend", sec);
+  (document.getElementById("v32AgendaPreviewsSection") || anchor).insertAdjacentElement("afterend", sec);
 
   const sel = sec.querySelector("#v31PlanningJurFilter");
   const grid = sec.querySelector("#v31PlanningGrid");
