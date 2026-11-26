@@ -1,0 +1,12 @@
+{
+  "file": "geo/boundaries.geojson",
+  "total_features": 529,
+  "bytes": 799239,
+  "layer_counts": {
+    "district_preserved": 6,
+    "county": 64,
+    "city": 273,
+    "school_district": 178,
+    "federal": 8
+  }
+}

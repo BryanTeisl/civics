@@ -1,0 +1,97 @@
+{
+  "state": "CO",
+  "description": "Curated official portal metadata for major Colorado school districts and statewide cities",
+  "aliases_by_census_name": {
+    "denver county school district 1": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:denver_public_schools",
+      "name": "Denver Public Schools Board of Education",
+      "portal_url": "https://www.dpsk12.org/page/board-meetings",
+      "roster_url": "https://board.dpsk12.org/",
+      "adapter_type": "unclaimed"
+    },
+    "jefferson county school district no. r-1": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:jeffco_r1",
+      "name": "Jeffco Public Schools Board of Education",
+      "portal_url": "https://www.jeffcopublicschools.org/about/board-of-education/board-meetings",
+      "roster_url": "https://www.jeffcopublicschools.org/about/board-of-education",
+      "adapter_type": "unclaimed"
+    },
+    "cherry creek school district no. 5": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:cherry_creek_5",
+      "name": "Cherry Creek School District Board of Education",
+      "portal_url": "https://www.cherrycreekschools.org/about-us/board-of-education",
+      "roster_url": "https://www.cherrycreekschools.org/about-us/board-of-education",
+      "adapter_type": "unclaimed"
+    },
+    "douglas county school district no. re 1": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:douglas_county_re1",
+      "name": "Douglas County School District Board of Education",
+      "portal_url": "https://www.dcsdk12.org/about/board-of-education",
+      "roster_url": "https://www.dcsdk12.org/about/board-of-education",
+      "adapter_type": "unclaimed"
+    },
+    "adams-arapahoe school district no. 28j": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:aurora_28j",
+      "name": "Aurora Public Schools Board of Education",
+      "portal_url": "https://boe.aurorak12.org/",
+      "roster_url": "https://boe.aurorak12.org/",
+      "adapter_type": "unclaimed"
+    },
+    "poudre school district r-1": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "portal_url": "https://www.psdschools.org/board-of-education/meeting-agendas-minutes",
+      "roster_url": "https://www.psdschools.org/your-district/board-of-education",
+      "adapter_type": "gov_web"
+    },
+    "boulder valley school district no. re2": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "name": "Boulder Valley School District Board of Education",
+      "portal_url": "https://www.bvsd.org/about/board-of-education",
+      "roster_url": "https://www.bvsd.org/about/board-of-education",
+      "adapter_type": "gov_web"
+    },
+    "colorado springs school district no. 11": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
+      "name": "Colorado Springs School District 11 Board of Education",
+      "portal_url": "https://www.d11.org/board-of-education",
+      "roster_url": "https://www.d11.org/board-of-education",
+      "adapter_type": "unclaimed"
+    },
+    "mesa county valley school district no. 51": {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:mesa_county_valley_51",
+      "name": "Mesa County Valley School District 51 Board of Education",
+      "portal_url": "https://www.d51schools.org/about-us/board-of-education",
+      "roster_url": "https://www.d51schools.org/about-us/board-of-education",
+      "adapter_type": "unclaimed"
+    },
+    "grand junction": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:grand_junction",
+      "name": "Grand Junction City Council",
+      "portal_url": "https://grandjunctionco.portal.civicclerk.com/",
+      "roster_url": "https://www.gjcity.org/180/City-Council",
+      "adapter_type": "civicclerk"
+    },
+    "arvada": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:arvada",
+      "name": "Arvada City Council",
+      "portal_url": "https://arvadaco.portal.civicclerk.com/",
+      "roster_url": "https://www.arvadaco.gov/212/City-Council",
+      "adapter_type": "civicclerk"
+    },
+    "pueblo": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:pueblo",
+      "name": "Pueblo City Council",
+      "portal_url": "https://puebloco.portal.civicclerk.com/",
+      "roster_url": "https://www.pueblo.us/102/City-Council",
+      "adapter_type": "civicclerk"
+    },
+    "commerce city": {
+      "ocd_division_id": "ocd-division/country:us/state:co/place:commerce_city",
+      "name": "Commerce City Council",
+      "portal_url": "https://commerce.legistar.com/",
+      "roster_url": "https://www.c3gov.com/Government/City-Council",
+      "adapter_type": "legistar"
+    }
+  }
+}

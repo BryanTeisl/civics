@@ -86,6 +86,9 @@ try {
     if (Test-Path "civicpulse\pipeline\export_enhancements.py") {
         python -m civicpulse.pipeline.export_enhancements --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
+    if (Test-Path "civicpulse\pipeline\early_warning.py") {
+        python -m civicpulse.pipeline.early_warning --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
+    }
 
     # 7. Validate exported data before pushing
     Write-Step "[7/7] Validating public/data schema & naming hygiene..."
