@@ -1,55 +1,51 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse — Colorado Springs City Council</title><link>https://civics-d03.pages.dev/#/jur/ocd-division/country:us/state:co/place:colorado_springs</link><description>Latest votes, ordinances, and agendas for Colorado Springs City Council.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 03:03:59 +0000</lastBuildDate><item><title>[Colorado Springs City Council] Adopted 7-0 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-120-94dbb302</link><guid isPermaLink="false">doc-120-94dbb302</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.
+<rss version="2.0"><channel><title>CivicPulse — Colorado Springs City Council</title><link>https://civics-d03.pages.dev/#/jur/ocd-division/country:us/state:co/place:colorado_springs</link><description>Latest votes, ordinances, and agendas for Colorado Springs City Council.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 03:11:12 +0000</lastBuildDate><item><title>[Colorado Springs City Council] Adopted Resolution 2026-001 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-354-e39a00a0</link><guid isPermaLink="false">doc-354-e39a00a0</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><category>Public Safety</category><description>Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 9-0 | Impact Score: 45.0/100 | Source: structured_api
-
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf</description></item><item><title>[Colorado Springs City Council] Adopted Resolution 2026-001 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-354-e39a00a0</link><guid isPermaLink="false">doc-354-e39a00a0</guid><pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate><category>Public Safety</category><description>Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.
-
-Topic: Public Safety | Outcome: Passed | Tally: 9-0 | Impact Score: 45.0/100 | Source: structured_api
+Topic: Public Safety | Outcome: Passed | Tally: 9-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-57 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_702d9e2c7b2d95</link><guid isPermaLink="false">ev_702d9e2c7b2d95</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property near East Platte Avenue and Wooten Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-59 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_8648b72a1c5cb9</link><guid isPermaLink="false">ev_8648b72a1c5cb9</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property on South Murray Boulevard.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-60 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_2a2c57da16d9be</link><guid isPermaLink="false">ev_2a2c57da16d9be</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property southeast of Tamlin Road and N Marksheffel Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-62 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_896d2a9ca669d2</link><guid isPermaLink="false">ev_896d2a9ca669d2</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved the vacating of a portion of Kettle Creek Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Fixing and Certifying the 2026 Tax Levy for Taxes Payable in 2027 at 5.000 Mills for the Colorado Springs Downtown Development Authority (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_1b1bf673c684a9</link><guid isPermaLink="false">ev_1b1bf673c684a9</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Taxes, Fees &amp; Utilities</category><description>The council approved a resolution to fix and certify the tax levy for the Downtown Development Authority.
 
-Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
+Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Approving the 2027 Budget for the Colorado Springs Downtown Development Authority (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_7783f4ca43f804</link><guid isPermaLink="false">ev_7783f4ca43f804</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council approved a resolution to approve the budget for the Downtown Development Authority.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Fixing and Certifying a 4.409 Mill Levy for the Colorado Springs Briargate General Improvement District 2021 (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_cd3dee9fa6bd93</link><guid isPermaLink="false">ev_cd3dee9fa6bd93</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Taxes, Fees &amp; Utilities</category><description>The council approved a resolution to fix and certify the mill levy for the Briargate General Improvement District.
 
-Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
+Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Authorizing a Term for a Lease of CSU's Communications Network Assets (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_0c7c34c69eaccf</link><guid isPermaLink="false">ev_0c7c34c69eaccf</guid><pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a resolution allowing for a lease term of CSU's communications network assets, which was supported by all present members except one excused member.
 
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: structured_api
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2860_M_City_Council_26-10-21_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Approval of New Application Hearings for Prost Biergarten Denver LLC (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_00e86c2545cfe2</link><guid isPermaLink="false">ev_00e86c2545cfe2</guid><pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The City Council approved a new liquor license application for Prost Brewing Company, allowing them to operate as a brew pub.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Approval of New Application Hearings for Juanita's Best Mexican Food LLC (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_c6b62ecb089ae3</link><guid isPermaLink="false">ev_c6b62ecb089ae3</guid><pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The City Council approved a new liquor license application for Juanita's Best Mexican Food, allowing them to operate as a hotel and restaurant.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Approval of New Application Hearings for Acacia Partners LTD (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ac37fd0790447b</link><guid isPermaLink="false">ev_ac37fd0790447b</guid><pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>The City Council approved a new liquor license application for Acacia Partners LTD, allowing them to operate as a tavern.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Motion to Approve Minutes for September 3, 2026 Work Session (Passed 8-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_9e41be862c91e9</link><guid isPermaLink="false">ev_9e41be862c91e9</guid><pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Planning Commission approved the minutes from their September 3, 2026 work session.
 
@@ -73,83 +69,83 @@ Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0 | Impact Score: 52.8
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2763_M_City_Planning_Commission_26-10-14_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-55 Certifying Delinquent Stormwater Fees and Charges to the El Paso County Treasurer for Collection (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_064e2deb61220c</link><guid isPermaLink="false">ev_064e2deb61220c</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The council approved an ordinance certifying delinquent stormwater fees and charges to be collected by the El Paso County Treasurer.
 
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-56 Amending Multiple Sections of Article 3 (Code of Ethics) of Chapter 1 (Administration, Personnel and Finance) of the Code of the City of Colorado Springs 2001, as Amended (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_88c3e352925493</link><guid isPermaLink="false">ev_88c3e352925493</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved an ordinance amending the city's code of ethics.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-50 Of The City Of Colorado Springs, Colorado Providing For The Extension, Betterment, Other Improvement And Equipment Of The City Of Colorado Springs Utilities System (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_7c932115aed9bf</link><guid isPermaLink="false">ev_7c932115aed9bf</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>General</category><description>The council approved an ordinance extending and improving the city's utilities system.
 
-Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] A Resolution Adopting the Rules and Procedures of the Civil Service Commission of the City of Colorado Springs, effective September 8, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0e6e844e7336f1</link><guid isPermaLink="false">ev_0e6e844e7336f1</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>General</category><description>The council approved a resolution adopting new rules and procedures for the Civil Service Commission.
 
-Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Approving the 2027 Budget for Pikes Peak Regional Building Department (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_4d45d0f19c162e</link><guid isPermaLink="false">ev_4d45d0f19c162e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council approved the 2027 budget for Pikes Peak Regional Building Department by consensus.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2805_M_City_Council_Work_Session_26-10-12_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Veterans Villa Zone Change (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_edb164d789a109</link><guid isPermaLink="false">ev_edb164d789a109</guid><pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The City Planning Commission approved the zoning change for Veterans Villa to allow a multifamily development.
 
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2764_M_City_Planning_Commission_Work_Session_26-10-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Exotic Cropz - Conditional Use (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_6ab3293a649eca</link><guid isPermaLink="false">ev_6ab3293a649eca</guid><pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The City Planning Commission approved the conditional use for Exotic Cropz to expand their medical marijuana cultivation facility.
 
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0 | Impact Score: 29.8/100 | Source: structured_api
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0 | Impact Score: 29.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2764_M_City_Planning_Commission_Work_Session_26-10-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-51 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_488358e7b0cf9e</link><guid isPermaLink="false">ev_488358e7b0cf9e</guid><pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate><category>General</category><description>This ordinance amended the city's utility collection and remedies section, as well as other related provisions.
 
-Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: General | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-52 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_95cbfaf9785505</link><guid isPermaLink="false">ev_95cbfaf9785505</guid><pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>This ordinance repealed and reorganized the city's business licensing provisions, as well as providing penalties for violations.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-53 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_f8565a9a44d99f</link><guid isPermaLink="false">ev_f8565a9a44d99f</guid><pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>This ordinance amended the city's business licensing provisions, as well as providing penalties for violations.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-54 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_4b1b6e1df80698</link><guid isPermaLink="false">ev_4b1b6e1df80698</guid><pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate><category>Permits &amp; Licensing</category><description>This ordinance amended the city's business licensing provisions, as well as providing penalties for violations.
 
-Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
+Topic: Permits &amp; Licensing | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Authorizing the Mayor to Execute a Memorandum of Agreement with the U.S. Army Corps of Engineers for Site Protection (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_fbe859cad6442b</link><guid isPermaLink="false">ev_fbe859cad6442b</guid><pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>This resolution authorized the Mayor to execute a memorandum of agreement with the U.S. Army Corps of Engineers for site protection requirements.
 
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Budget Review (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_984d24b545364f</link><guid isPermaLink="false">ev_984d24b545364f</guid><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council reviewed the quarterly financial report and approved it with a unanimous vote.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 60.0/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 60.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2800_M_City_Council_Work_Session_26-09-21_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Closed Executive Session (Passed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_63221bcc415ff8</link><guid isPermaLink="false">ev_63221bcc415ff8</guid><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council approved holding a closed executive session to discuss legal advice regarding Wilson Ranch Park and sales/use tax refunds.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 39.8/100 | Source: structured_api
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 39.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2857_M_City_Council_26-09-21_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Project Taurus Planning Item Appeal Hearing (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_de191f5d562d87</link><guid isPermaLink="false">ev_de191f5d562d87</guid><pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The City Council approved the appeal of the City Planning Commission's decision regarding Project Taurus, a major modification application for Corporate Ridge Lot 4.
 
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0-1 | Impact Score: 40.0/100 | Source: structured_api
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 8-0-1 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2849_M_City_Council_26-09-17_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-39 to fill the vacancies on the Briargate Center Business Improvement District's Board of Directors (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_ba030e358869d3</link><guid isPermaLink="false">ev_ba030e358869d3</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Education &amp; Schools</category><description>This ordinance filled vacancies on the Briargate Center Business Improvement District's Board of Directors.
 
-Topic: Education &amp; Schools | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Education &amp; Schools | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-46 Amending Part 5 (Claims Management), Article 5 (Finance Management Procedures), Chapter 1 (Administration, Personnel and Finance) of the Code of the City of Colorado Springs (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_091177a5ef2067</link><guid isPermaLink="false">ev_091177a5ef2067</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance amended the finance management procedures in the city's code.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-47 Amending Part 6 (Workers’ Compensation), Article 5 (Finance Management Procedures), Chapter 1 (Administration, Personnel and Finance) of the Code of the City of Colorado Springs (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_c3609cee7cfc7b</link><guid isPermaLink="false">ev_c3609cee7cfc7b</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance amended the workers' compensation claims management procedures in the city's code.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-49 Providing For The Refunding Of Certain Outstanding Utilities System Revenue Bonds Of The City; Providing For The Issuance And Sale Of The City Of Colorado Springs, Colorado, Utilities System Refunding Revenue Bonds (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_58b9eee1c2b8a9</link><guid isPermaLink="false">ev_58b9eee1c2b8a9</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance provided for the refunding of outstanding utilities system revenue bonds and authorized issuance of new bonds.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-365 Providing For The Extension, Betterment, Other Improvement And Equipment Of The City Of Colorado Springs Utilities System; Providing For The Issuance And Sale Of The City Of Colorado Springs, Colorado, Utilities System Improvement Revenue Bonds (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_5c8db9f494cab2</link><guid isPermaLink="false">ev_5c8db9f494cab2</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance provided for the extension, improvement, and issuance of utilities system improvement revenue bonds.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Homelessness Response Action Plan Presentation (Recorded)</title><link>https://civics-d03.pages.dev/#/bill/ev_5e1ea4871bdd46</link><guid isPermaLink="false">ev_5e1ea4871bdd46</guid><pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>Council members heard a presentation on the Homelessness Response Action Plan from Aimee Cox, Chief Housing Officer.
 
@@ -157,19 +153,19 @@ Topic: Housing &amp; Development | Outcome: Recorded | Impact Score: 20.0/100 | 
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2799_M_City_Council_Work_Session_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance to Fill Vacancies on the Briargate Center Business Improvement District’s Board of Directors (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_228a1abb3d7ad6</link><guid isPermaLink="false">ev_228a1abb3d7ad6</guid><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><category>Education &amp; Schools</category><description>The council approved an ordinance to fill vacancies on the Briargate Center Business Improvement District's board of directors.
 
-Topic: Education &amp; Schools | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Education &amp; Schools | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance to amend the zoning map of the City of Colorado Springs (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_911d2bb08cc76c</link><guid isPermaLink="false">ev_911d2bb08cc76c</guid><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved an ordinance to amend the zoning map for a specific area in the city.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution of the City Council of the City of Colorado Springs, approving a Service Plan for the Kettle Creek Metropolitan District (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_5f9f0ea5ccb390</link><guid isPermaLink="false">ev_5f9f0ea5ccb390</guid><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a resolution approving the Service Plan for the Kettle Creek Metropolitan District.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Polling for Closed Executive Session (Passed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_df4372e3adf5d8</link><guid isPermaLink="false">ev_df4372e3adf5d8</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council voted to hold a Closed Executive Session regarding the sale of Meadows Park Community Center.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 47.8/100 | Source: structured_api
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 47.8/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2850_M_City_Council_26-08-24_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Presentation by Doug Price, President and CEO of VisitCOS (Recorded)</title><link>https://civics-d03.pages.dev/#/bill/ev_e02b18acd9b03a</link><guid isPermaLink="false">ev_e02b18acd9b03a</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Taxes, Fees &amp; Utilities</category><description>Council members heard an update on the Lodgers and Auto Rental Tax (LART) contract from Doug Price, President and CEO of VisitCOS.
 
@@ -181,18 +177,18 @@ Topic: Taxes, Fees &amp; Utilities | Outcome: Recorded | Impact Score: 25.0/100 
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2797_M_City_Council_Work_Session_26-08-24_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Declaring the Intent of the City of Colorado Springs to Issue Revenue Bonds for Residential Facilities (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_534890c66840ff</link><guid isPermaLink="false">ev_534890c66840ff</guid><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><category>Housing &amp; Development</category><description>The council approved a resolution allowing the city to issue bonds for residential facilities, including those for low-and middle-income families.
 
-Topic: Housing &amp; Development | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Housing &amp; Development | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Authorizing the Chief Executive Officer of Colorado Springs Utilities to Enter Into an Agreement for Regional Wastewater Treatment Service (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_7d947fce5bf1de</link><guid isPermaLink="false">ev_7d947fce5bf1de</guid><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><category>Taxes, Fees &amp; Utilities</category><description>The council approved a resolution allowing the city's utilities chief to enter into an agreement for wastewater treatment services with another district.
 
-Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Taxes, Fees &amp; Utilities | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Approving the Rules and Procedures of the Fire Board of Appeals (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_851a27b06e438e</link><guid isPermaLink="false">ev_851a27b06e438e</guid><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><category>Public Safety</category><description>The council approved the rules and procedures for the Fire Board of Appeals, effective August 11, 2026.
 
-Topic: Public Safety | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Public Safety | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Approving the Annexation of Peacock Ranch South Addition No. 1 and Seller Addition No. 1 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_a1c8ff52ab0d03</link><guid isPermaLink="false">ev_a1c8ff52ab0d03</guid><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved the annexation of two residential areas, allowing for their inclusion within city limits.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf</description></item></channel></rss>

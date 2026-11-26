@@ -274,7 +274,7 @@ def run_export_enhancements(
 
         rows = conn.execute(
             f"""
-            SELECT e.event_id, e.jurisdiction_id, e.meeting_date, e.title, e.event_type,
+            SELECT e.event_id, e.jurisdiction_id, e.doc_id, e.meeting_date, e.title, e.event_type,
                    e.topic, e.outcome, e.yes_count, e.no_count,
                    COALESCE(e.abstain_count, 0) AS abstain_count,
                    COALESCE(e.plain_summary, '') AS plain_summary,
@@ -327,9 +327,8 @@ def run_export_enhancements(
                 summary=r["plain_summary"] or "",
             )
 
-            capture = r["capture_method"] or (
-                "structured_api" if (r["adapter_type"] or "").lower() == "legistar" and ind_votes > 0 else "ai_minutes_pdf"
-            )
+            is_api_direct = (r["adapter_type"] or "").lower() == "legistar" and ind_votes > 0 and r["doc_id"] is None
+            capture = "structured_api" if is_api_direct else "ai_minutes_pdf"
             ev_obj = {
                 "event_id": r["event_id"],
                 "jurisdiction_id": jid,

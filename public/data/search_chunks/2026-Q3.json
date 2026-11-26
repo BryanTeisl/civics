@@ -253,7 +253,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members adopted a proclamation recognizing September as Suicide Prevention Month.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -290,7 +290,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members adopted a proclamation celebrating Hispanic, Latino/a/x, and Chicano/a Heritage Month.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -475,7 +475,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council postponed approving an agreement with Air Canada for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -512,7 +512,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council postponed approving an agreement with Societe Air France for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -549,7 +549,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council postponed approving an agreement with Alaska Airlines, Inc. for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -586,7 +586,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council postponed approving an agreement with Cayman Airways Limited for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
@@ -623,7 +623,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "This ordinance amended the city's utility collection and remedies section, as well as other related provisions.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf"
@@ -660,7 +660,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "This ordinance repealed and reorganized the city's business licensing provisions, as well as providing penalties for violations.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf"
@@ -697,7 +697,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "This ordinance amended the city's business licensing provisions, as well as providing penalties for violations.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf"
@@ -734,7 +734,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "This ordinance amended the city's business licensing provisions, as well as providing penalties for violations.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf"
@@ -771,7 +771,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "This resolution authorized the Mayor to execute a memorandum of agreement with the U.S. Army Corps of Engineers for site protection requirements.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf"
@@ -808,7 +808,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 60/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council reviewed the quarterly financial report and approved it with a unanimous vote.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2800_M_City_Council_Work_Session_26-09-21_Meeting_Minutes.pdf"
@@ -845,7 +845,7 @@
       "plain_english": "Legal weight: 12 pts (consent) | Split vote (7-1, +10.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 39.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council approved holding a closed executive session to discuss legal advice regarding Wilson Ranch Park and sales/use tax refunds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2857_M_City_Council_26-09-21_Meeting_Minutes.pdf"
@@ -882,7 +882,7 @@
       "plain_english": "Legal weight: 20 pts (quasi-judicial) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 40/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council approved the appeal of the City Planning Commission's decision regarding Project Taurus, a major modification application for Corporate Ridge Lot 4.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2849_M_City_Council_26-09-17_Meeting_Minutes.pdf"
@@ -1326,7 +1326,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "This ordinance filled vacancies on the Briargate Center Business Improvement District's Board of Directors.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
@@ -1363,7 +1363,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "This ordinance amended the finance management procedures in the city's code.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
@@ -1400,7 +1400,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "This ordinance amended the workers' compensation claims management procedures in the city's code.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
@@ -1437,7 +1437,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "This ordinance provided for the refunding of outstanding utilities system revenue bonds and authorized issuance of new bonds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
@@ -1474,7 +1474,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "This ordinance provided for the extension, improvement, and issuance of utilities system improvement revenue bonds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
@@ -1548,7 +1548,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved an ordinance to fill vacancies on the Briargate Center Business Improvement District's board of directors.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
@@ -1585,7 +1585,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved an ordinance to amend the zoning map for a specific area in the city.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
@@ -1622,7 +1622,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 45/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a resolution approving the Service Plan for the Kettle Creek Metropolitan District.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
@@ -1733,7 +1733,7 @@
       "plain_english": "Legal weight: 20 pts (motion) | Split vote (7-1, +10.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 47.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council voted to hold a Closed Executive Session regarding the sale of Meadows Park Community Center.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2850_M_City_Council_26-08-24_Meeting_Minutes.pdf"
@@ -1955,7 +1955,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved a resolution allowing the city to issue bonds for residential facilities, including those for low-and middle-income families.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf"
@@ -1992,7 +1992,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved a resolution allowing the city's utilities chief to enter into an agreement for wastewater treatment services with another district.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf"
@@ -2029,7 +2029,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved the rules and procedures for the Fire Board of Appeals, effective August 11, 2026.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf"
@@ -2066,7 +2066,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved the annexation of two residential areas, allowing for their inclusion within city limits.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf"

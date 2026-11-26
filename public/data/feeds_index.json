@@ -4,7 +4,7 @@
     "country_us__state_co__place_colorado_springs": {
       "name": "Colorado Springs City Council",
       "url": "feeds/jur_country_us__state_co__place_colorado_springs.xml",
-      "item_count": 49
+      "item_count": 48
     },
     "country_us__state_co__place_denver": {
       "name": "Denver City Council",
@@ -82,7 +82,7 @@
     },
     "Permits & Licensing": {
       "url": "feeds/topic_permits_licensing.xml",
-      "item_count": 17
+      "item_count": 16
     },
     "Public Safety": {
       "url": "feeds/topic_public_safety.xml",

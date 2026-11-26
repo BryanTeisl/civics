@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Zoning &amp; Land Use</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Zoning &amp; Land Use.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 03:04:00 +0000</lastBuildDate><item><title>[Denver City Council] Consent Item: Dedicates a city-owned parcel of land as public right-of-way as West Gill Place (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_633b9249d419fe</link><guid isPermaLink="false">ev_633b9249d419fe</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The committee approved dedicating a city-owned parcel of land as a public right-of-way without any objections.
+<rss version="2.0"><channel><title>CivicPulse Topic — Zoning &amp; Land Use</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Zoning &amp; Land Use.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 03:11:12 +0000</lastBuildDate><item><title>[Denver City Council] Consent Item: Dedicates a city-owned parcel of land as public right-of-way as West Gill Place (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_633b9249d419fe</link><guid isPermaLink="false">ev_633b9249d419fe</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The committee approved dedicating a city-owned parcel of land as a public right-of-way without any objections.
 
 Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0 | Impact Score: 22.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13052_M_South_Platte_River_Committee_26-11-18_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Motion to Postpone Council Bills 26-1723 and 26-1724 (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_46d8a213958848</link><guid isPermaLink="false">ev_46d8a213958848</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>Council members voted to postpone two bills related to the Comprehensive Plan 2040.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 5-0 | Impact Score: 27.7/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 5-0 | Impact Score: 27.7/100 | Source: ai_minutes_pdf
 
 Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Fort Collins City Council] Ordinance No. 020 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-13-1f39dc4d</link><guid isPermaLink="false">doc-13-1f39dc4d</guid><pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The ordinance was adopted unanimously by the city council, affecting all residents and businesses within the city limits as it establishes new zoning regulations and building codes.
 
@@ -13,19 +13,19 @@ Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 7-0 | Impact Score: 55.0
 
 Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2335,plainText=false)</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-57 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_702d9e2c7b2d95</link><guid isPermaLink="false">ev_702d9e2c7b2d95</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property near East Platte Avenue and Wooten Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-59 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_8648b72a1c5cb9</link><guid isPermaLink="false">ev_8648b72a1c5cb9</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property on South Murray Boulevard.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-60 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_2a2c57da16d9be</link><guid isPermaLink="false">ev_2a2c57da16d9be</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a zoning map amendment for property southeast of Tamlin Road and N Marksheffel Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-62 (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_896d2a9ca669d2</link><guid isPermaLink="false">ev_896d2a9ca669d2</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved the vacating of a portion of Kettle Creek Road.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Zoning Change for Veterans Villa from R-5/AP-O to MX-M/AP-O (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_9768b5473d032a</link><guid isPermaLink="false">ev_9768b5473d032a</guid><pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The City Planning Commission approved a zoning change for the Veterans Villa from R-5/AP-O to MX-M/AP-O.
 
@@ -49,15 +49,15 @@ Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1
 
 Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF</description></item><item><title>[Colorado Springs City Council] Ordinance to amend the zoning map of the City of Colorado Springs (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_911d2bb08cc76c</link><guid isPermaLink="false">ev_911d2bb08cc76c</guid><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved an ordinance to amend the zoning map for a specific area in the city.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution of the City Council of the City of Colorado Springs, approving a Service Plan for the Kettle Creek Metropolitan District (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_5f9f0ea5ccb390</link><guid isPermaLink="false">ev_5f9f0ea5ccb390</guid><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved a resolution approving the Service Plan for the Kettle Creek Metropolitan District.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Approving the Annexation of Peacock Ranch South Addition No. 1 and Seller Addition No. 1 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_a1c8ff52ab0d03</link><guid isPermaLink="false">ev_a1c8ff52ab0d03</guid><pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved the annexation of two residential areas, allowing for their inclusion within city limits.
 
-Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
+Topic: Zoning &amp; Land Use | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: ai_minutes_pdf
 
 Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2794_M_City_Council_26-08-11_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 22, with conditions, on second reading for the Comprehensive Plan Amendment for Mandalay Gardens, Tract 10, Lot 2 (Passed 4-3-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_a677d0f92e0c63</link><guid isPermaLink="false">ev_a677d0f92e0c63</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Zoning &amp; Land Use</category><description>The council approved the second reading of Bill No. 22, which will amend the Comprehensive Plan for Mandalay Gardens.
 

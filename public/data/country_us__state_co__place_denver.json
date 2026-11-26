@@ -9,7 +9,7 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-09-28",
-    "last_updated": "2026-11-26 03:03:58 UTC",
+    "last_updated": "2026-11-26 03:09:46 UTC",
     "as_of_date": "2026-11-18",
     "stale_days": 8,
     "is_stale": false,
@@ -7611,7 +7611,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cb1b799f1f4ec6",
@@ -7695,7 +7695,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_ad102e0217d2bb",
@@ -7829,7 +7829,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 47.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6dedaf08630ed8",
@@ -7913,7 +7913,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_66e1e23b96c5fa",
@@ -8047,7 +8047,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_633b9249d419fe",
@@ -8174,7 +8174,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "legistar-13051-240569",
@@ -8382,7 +8382,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 42.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_b27891094406f7",
@@ -8486,7 +8486,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9983a8cc63f035",
@@ -8570,7 +8570,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9242423f96607f",
@@ -8674,7 +8674,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_88419141a32da4",
@@ -8728,7 +8728,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_84d82638dd94f9",
@@ -8832,7 +8832,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6d26bf280924b1",
@@ -8936,7 +8936,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_66f4f35734fcc0",
@@ -9040,7 +9040,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_46d8a213958848",
@@ -9124,7 +9124,7 @@
         "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 27.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_3ad43a98c083ed",
@@ -9208,7 +9208,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_29dcfc6147cc64",
@@ -9312,7 +9312,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_13d2f5943db062",
@@ -9396,7 +9396,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_09a98a5cc1d53e",
@@ -9480,7 +9480,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c975877702bef3",
@@ -9624,7 +9624,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_7d700ab5b30386",
@@ -9768,7 +9768,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_73b0f96ae1d7b1",
@@ -9912,7 +9912,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_64c9c57e9c3bc9",
@@ -10056,7 +10056,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_4461328b1b8497",
@@ -10200,7 +10200,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2ba42aa2eb6128",
@@ -10344,7 +10344,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_152dfcb495d16e",
@@ -10488,7 +10488,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_f7aef8e4816fe6",
@@ -10592,7 +10592,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_e9dc296734fc30",
@@ -10696,7 +10696,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_e524f0d09d96aa",
@@ -10790,7 +10790,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cd24171d13185b",
@@ -10884,7 +10884,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 44.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c59788bf1373e2",
@@ -10988,7 +10988,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9c554307d6e13d",
@@ -11082,7 +11082,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_97701a81830e00",
@@ -11186,7 +11186,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8739841a802af4",
@@ -11290,7 +11290,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_754b1d32a61b62",
@@ -11384,7 +11384,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 44.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_43d645eec6a9dc",
@@ -11478,7 +11478,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2ff72fef5c85a5",
@@ -11582,7 +11582,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2980eaa3f03dbe",
@@ -11686,7 +11686,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0ca4505a7ab69b",
@@ -11780,7 +11780,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0b72358ab7cd3f",
@@ -11884,7 +11884,7 @@
         "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_031737e29d795d",
@@ -11978,7 +11978,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_7ab660d0ec9386",
@@ -12102,7 +12102,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 80.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_19144933e9331e",
@@ -12226,7 +12226,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cc948fe949acab",
@@ -12320,7 +12320,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (6-6, +40.0 split pts) | Full-body turnout 13/13 (+20.0 pts) = 100/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9b51a3aded38ef",
@@ -12434,7 +12434,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (7-5, +33.3 split pts) | Full-body turnout 13/13 (+20.0 pts) = 93.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8afbd4dbfcad0f",
@@ -12518,7 +12518,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (5-7, +33.3 split pts) | Full-body turnout 13/13 (+20.0 pts) = 93.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_5eeaf9e19ef9e4",
@@ -12622,7 +12622,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (8-5, +30.8 split pts) | Full-body turnout 14/14 (+20.0 pts) = 90.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_17d89a9a7661c7",
@@ -12716,7 +12716,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (5-8, +30.8 split pts) | Full-body turnout 13/13 (+20.0 pts) = 90.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0feab3acabdc1c",
@@ -12850,7 +12850,7 @@
         "plain_english": "Legal weight: 40 pts (budget) | Split vote (11-1, +6.7 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.2/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d7b3335de71e70",
@@ -12994,7 +12994,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_bfe16627c37f96",
@@ -13138,7 +13138,7 @@
         "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_488e90b90269cc",
@@ -13282,7 +13282,7 @@
         "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_09b78f382ce0ed",
@@ -13436,7 +13436,7 @@
         "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_02e2e8713d970d",
@@ -13580,7 +13580,7 @@
         "plain_english": "Legal weight: 12 pts (consent) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 30.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_f70e8d14a7b523",
@@ -13734,7 +13734,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_3c83bc9886feaa",
@@ -13888,7 +13888,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_300b25c06939e6",
@@ -14042,7 +14042,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_07e41ae266344a",
@@ -14196,7 +14196,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d7e0ca2e1354b6",
@@ -14360,7 +14360,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cfa38f3babd18a",
@@ -14424,7 +14424,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (2-10, +13.3 split pts) | Full-body turnout 12/13 (+18.5 pts) = 56.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_acd4999f6681fd",
@@ -14588,7 +14588,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (10-2, +13.3 split pts) | Full-body turnout 12/13 (+18.5 pts) = 56.8/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_668b9a409813c9",
@@ -14662,7 +14662,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (3-9, +20.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 63.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2a774488f93315",
@@ -14826,7 +14826,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_dbf2c8051ba664",
@@ -14990,7 +14990,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_ce50d1b1b247d0",
@@ -15144,7 +15144,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_a86c13866da0e1",
@@ -15278,7 +15278,7 @@
         "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/13 (+16.9 pts) = 26.9/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_989ccedf683513",
@@ -15432,7 +15432,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/13 (+16.9 pts) = 41.9/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_296c47926d3dae",
@@ -15586,7 +15586,7 @@
         "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_04e698866fb04f",
@@ -15740,7 +15740,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Split vote (9-3, +20.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 63.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_db141ffd2faed1",
@@ -15804,7 +15804,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cf7ab0dcde5d9f",
@@ -15868,7 +15868,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_4ece6bfdf27f9c",
@@ -16012,7 +16012,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_47992f1c639b02",
@@ -16156,7 +16156,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2fc57d48d04c28",
@@ -16220,7 +16220,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0acd61788121c1",
@@ -16284,7 +16284,7 @@
         "plain_english": "Legal weight: 25 pts (resolution) | No roll-call split recorded (+0 pts) | Full-body turnout 2/13 (+3.1 pts) = 28.1/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
-      "capture_method": "structured_api"
+      "capture_method": "ai_minutes_pdf"
     }
   ]
 }

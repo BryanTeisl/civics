@@ -333,43 +333,6 @@
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF"
   },
   {
-    "event_id": "doc-120-94dbb302",
-    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
-    "jurisdiction_slug": "country_us__state_co__place_colorado_springs",
-    "jurisdiction_name": "Colorado Springs City Council",
-    "level": "city",
-    "meeting_date": "2026-11-20",
-    "title": "Adopted 7-0",
-    "event_type": "resolution",
-    "topic": "Permits & Licensing",
-    "business_relevant": true,
-    "outcome": "Passed",
-    "outcome_status": "Passed",
-    "passage_method": "Roll Call",
-    "tally": "9-0",
-    "yes_count": 9,
-    "no_count": 0,
-    "body_type": "full_body",
-    "impact_score": 45.0,
-    "impact_breakdown": {
-      "score": 45.0,
-      "legal_weight": 25.0,
-      "contestedness": 0.0,
-      "turnout": 20.0,
-      "votes_cast": 9,
-      "expected_body_size": 9,
-      "body_type": "full_body",
-      "formula_version": "2.0.0",
-      "formula_hash": "292922f52a39",
-      "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 45/100 (Formula v2.0.0)"
-    },
-    "formula_version": "2.0.0",
-    "capture_method": "structured_api",
-    "qa_status": "verified",
-    "plain_summary": "The measure was adopted unanimously by all voting members, affecting all residents as it sets new local policies or regulations.",
-    "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf"
-  },
-  {
     "event_id": "doc-354-e39a00a0",
     "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
     "jurisdiction_slug": "country_us__state_co__place_colorado_springs",
@@ -401,7 +364,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 45/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "Resolution 2026-001 was adopted, passed unanimously with no objections. It affects all local residents by establishing new community guidelines for public spaces.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/11/2739_A_Liquor_and_Beer_License_Hearings_26-11-20_Regular_Meeting_Agenda.pdf"
@@ -438,7 +401,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a contract to fund comprehensive out-of-school-time programs for $995,700.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf"
@@ -475,7 +438,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a contract to fund Head Start slots for $2,930,850.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf"
@@ -512,7 +475,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 47.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a contract for $1,614,718 to provide community corrections case management services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf"
@@ -660,7 +623,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved the amendment and rejection of Ordinance No. 0819, Series of 2017, which was previously amended, restated, and superseded by other ordinances.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf"
@@ -697,7 +660,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved the amendment and rejection of Ordinance No. 0868, Series of 2021, which was previously amended, restated, and superseded by other ordinances.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf"
@@ -734,7 +697,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/13 (+6.2 pts) = 31.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved a contract with ATKINSREALIS USA INC. to extend the end date of the Elevate and RISE Bond Program Management contract.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf"
@@ -919,7 +882,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/13 (+12.3 pts) = 52.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a contract amendment to increase funding and extend the service contract.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf"
@@ -956,7 +919,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a lease agreement amendment that increases the lease fee and extends the lease term for a community garden.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -993,7 +956,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a micro-community shelter for those experiencing homelessness.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -1030,7 +993,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a funding agreement for a real estate project.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -1067,7 +1030,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved an ordinance for flood and drainage improvements.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -1104,7 +1067,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a purchase order for telecommunications supplies.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -1141,7 +1104,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a purchase order for natural gas supplies.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf"
@@ -1363,7 +1326,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 42.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf"
@@ -1400,7 +1363,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved amendments to contracts for property tax relief funds.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf"
@@ -1437,7 +1400,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract for HOPWA services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf"
@@ -1474,7 +1437,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved amendments to a contract for accessory dwelling units.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf"
@@ -1511,7 +1474,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 32.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract for 24/7 shelter services for women.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf"
@@ -1548,7 +1511,7 @@
       "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/13 (+7.7 pts) = 27.7/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to postpone two bills related to the Comprehensive Plan 2040.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13056_M_Community_Planning_and_Housing_26-11-17_Committee_Minutes.pdf"
@@ -1585,7 +1548,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Clayton Early Learning, Trustee, George W. Clayton Trust, adding funds for Head Start and Early Head Start slots in Denver.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1622,7 +1585,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Family Star, Inc., adding funds for Head Start and Early Head Start slots in Denver.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1659,7 +1622,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with GES Coalition, Inc., for food and food-based education funding for youth.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1696,7 +1659,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with ET Technologies, Inc., for hazardous materials response and waste management services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1733,7 +1696,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Environmental Hazmat Services, Inc., for hazardous materials response and waste management services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1770,7 +1733,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Mile High Early Learning Centers, adding funds for Head Start slots in Denver.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1807,7 +1770,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an Intergovernmental Agreement with the Colorado Department of Human Services, Office of Economic Security, for Temporary Assistance for Needy Families (TANF) funding allocation to Denver.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13038_M_Health_and_Safety_26-11-11_Committee_Minutes.pdf"
@@ -1844,7 +1807,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a caretaker agreement for Echo Lake Lodge, extending the contract by 12 months.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf"
@@ -1881,7 +1844,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a caretaker agreement for Patrick House, extending the contract by five years.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf"
@@ -1918,7 +1881,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 48.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Denver Youth Program for outdoor programs under the Great Outdoors Colorado Trust Fund.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13040_M_Parks%2C_Art_and_Culture_26-11-10_Committee_Minutes.pdf"
@@ -1955,7 +1918,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 44.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A new article was created to support small businesses impacted by major city-funded construction projects.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -1992,7 +1955,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 44.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A new fund was established to support small businesses impacted by major city-funded construction projects.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2103,7 +2066,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Urban Peak Denver, increasing funding and extending the contract term.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13039_M_Community_Planning_and_Housing_26-11-10_Committee_Minutes.pdf"
@@ -2140,7 +2103,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Jewish Family Service of Colorado, increasing funding and extending the contract term.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13039_M_Community_Planning_and_Housing_26-11-10_Committee_Minutes.pdf"
@@ -2177,7 +2140,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with US Motels North, Inc., increasing funding and extending the contract term.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13039_M_Community_Planning_and_Housing_26-11-10_Committee_Minutes.pdf"
@@ -2214,7 +2177,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved an amendment to a contract with Colorado Village Collaborative (CVC), increasing funding and extending the contract term.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13039_M_Community_Planning_and_Housing_26-11-10_Committee_Minutes.pdf"
@@ -2251,7 +2214,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (9-0, +0.0 split pts) | Full-body turnout 9/13 (+13.8 pts) = 38.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Colorado Health Network, Inc. (CHN) for HOPWA services, including Tenant Based Rental Assistance (TBRA), Short Term Rent Mortgage Utility Assistance (STRMU), Supportive Services, and Permanent Housing Placement (PHP) programs.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13039_M_Community_Planning_and_Housing_26-11-10_Committee_Minutes.pdf"
@@ -2288,7 +2251,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The budget from General Fund Contingency was rescinded and appropriated to other funds.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2325,7 +2288,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A contract for municipal financial advisory services was approved.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2362,7 +2325,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A contract for infrastructure advisory services was approved.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2399,7 +2362,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A contract for municipal financial advisory services was approved.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2436,7 +2399,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/13 (+9.2 pts) = 34.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "A contract for software to monitor short-term rental listings was amended.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf"
@@ -2473,7 +2436,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 80.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The Mayor's proposed budget was adopted by the City Council.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf"
@@ -2695,7 +2658,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The Council approved a lease agreement between the City and County of Denver and Alterra Mountain Company.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf"
@@ -3065,7 +3028,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (6-6, +40.0 split pts) | Full-body turnout 13/13 (+20.0 pts) = 100/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3102,7 +3065,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (7-5, +33.3 split pts) | Full-body turnout 13/13 (+20.0 pts) = 93.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to approve amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3139,7 +3102,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (5-7, +33.3 split pts) | Full-body turnout 13/13 (+20.0 pts) = 93.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3176,7 +3139,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (5-8, +30.8 split pts) | Full-body turnout 13/13 (+20.0 pts) = 90.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3213,7 +3176,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (8-5, +30.8 split pts) | Full-body turnout 14/14 (+20.0 pts) = 90.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "flagged",
     "plain_summary": "Council members voted to approve amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3250,7 +3213,7 @@
       "plain_english": "Legal weight: 40 pts (budget) | Split vote (11-1, +6.7 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.2/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council members voted to approve amendments to the Mayor's Proposed 2027 Budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf"
@@ -3287,7 +3250,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a zoning map amendment for property near East Platte Avenue and Wooten Road.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf"
@@ -3324,7 +3287,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a zoning map amendment for property on South Murray Boulevard.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf"
@@ -3361,7 +3324,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a zoning map amendment for property southeast of Tamlin Road and N Marksheffel Road.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf"
@@ -3398,7 +3361,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 55/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved the vacating of a portion of Kettle Creek Road.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2803_M_City_Council_26-10-27_Meeting_Minutes.pdf"
@@ -3509,7 +3472,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (8-3, +21.8 split pts) | Full-body turnout 12/13 (+18.5 pts) = 65.3/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council postponed a bill that would amend the ordinance regarding automated vehicle identification systems.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf"
@@ -3694,7 +3657,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 42.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a resolution to fix and certify the tax levy for the Downtown Development Authority.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf"
@@ -3731,7 +3694,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 42.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a resolution to approve the budget for the Downtown Development Authority.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf"
@@ -3768,7 +3731,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 42.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a resolution to fix and certify the mill levy for the Briargate General Improvement District.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf"
@@ -3916,7 +3879,7 @@
       "plain_english": "Legal weight: 12 pts (consent) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 30.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a consent agenda, which includes several routine items.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf"
@@ -3990,7 +3953,7 @@
       "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation honoring Pete Moutzouris, a local resident.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf"
@@ -4027,7 +3990,7 @@
       "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation declaring the week of October 25, 2026 as Silica Awareness Week.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf"
@@ -4064,7 +4027,7 @@
       "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation opposing Amendment 82, which grants constitutional rights to purchase and sell natural gas.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf"
@@ -4101,7 +4064,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 9/9 (+20.0 pts) = 45/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The council approved a resolution allowing for a lease term of CSU's communications network assets, which was supported by all present members except one excused member.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2860_M_City_Council_26-10-21_Meeting_Minutes.pdf"
@@ -4286,7 +4249,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved publishing a notice for the Mayor's proposed 2027 budget.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf"
@@ -4323,7 +4286,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a resolution approving the City and County of Denver's agreement with Colorado Village Collaborative to operate a micro-community shelter for those experiencing homelessness.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf"
@@ -4360,7 +4323,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a resolution approving the Mayor's appointment to the Civil Service Commission.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf"
@@ -4397,7 +4360,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a resolution approving the Mayor's reappointment to the Denver African American Commission.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf"
@@ -4434,7 +4397,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 52.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council approved a new liquor license application for Prost Brewing Company, allowing them to operate as a brew pub.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf"
@@ -4471,7 +4434,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 52.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council approved a new liquor license application for Juanita's Best Mexican Food, allowing them to operate as a hotel and restaurant.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf"
@@ -4508,7 +4471,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 52.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Council approved a new liquor license application for Acacia Partners LTD, allowing them to operate as a tavern.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2738_M_Liquor_and_Beer_License_Hearings_26-10-16_Meeting_Minutes.pdf"
@@ -4730,7 +4693,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (3-9, +20.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 63.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council failed to approve a contract extension for the AI chatbot service.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf"
@@ -4767,7 +4730,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (10-2, +13.3 split pts) | Full-body turnout 12/13 (+18.5 pts) = 56.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "Council approved an agreement to provide rapid resolution services for families experiencing housing instability and homelessness.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf"
@@ -4804,7 +4767,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (2-10, +13.3 split pts) | Full-body turnout 12/13 (+18.5 pts) = 56.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council failed to approve a contract extension for professional services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf"
@@ -4841,7 +4804,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved an ordinance certifying delinquent stormwater fees and charges to be collected by the El Paso County Treasurer.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf"
@@ -4878,7 +4841,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved an ordinance amending the city's code of ethics.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf"
@@ -4915,7 +4878,7 @@
       "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 50.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved an ordinance extending and improving the city's utilities system.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf"
@@ -4952,7 +4915,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation recognizing Indigenous Peoples' Day.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf"
@@ -4989,7 +4952,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation recognizing the Veterans Stand Down and honoring veterans.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf"
@@ -5026,7 +4989,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/9 (+15.6 pts) = 40.6/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The council approved a resolution adopting new rules and procedures for the Civil Service Commission.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf"
@@ -5100,7 +5063,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 42.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "verified",
     "plain_summary": "The City Council approved the 2027 budget for Pikes Peak Regional Building Department by consensus.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2805_M_City_Council_Work_Session_26-10-12_Meeting_Minutes.pdf"
@@ -5433,7 +5396,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 42.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Planning Commission approved the zoning change for Veterans Villa to allow a multifamily development.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2764_M_City_Planning_Commission_Work_Session_26-10-08_Meeting_Minutes.pdf"
@@ -5470,7 +5433,7 @@
       "plain_english": "Legal weight: 12 pts (consent) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/9 (+17.8 pts) = 29.8/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "The City Planning Commission approved the conditional use for Exotic Cropz to expand their medical marijuana cultivation facility.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2764_M_City_Planning_Commission_Work_Session_26-10-08_Meeting_Minutes.pdf"
@@ -5544,7 +5507,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Split vote (9-3, +20.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 63.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Sunny Side Up Solutions LLC for continued collaboration on employment brand videos.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
@@ -5581,7 +5544,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Citibot, Inc. for continued use and support of the AI Chatbot.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
@@ -5618,7 +5581,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 43.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with The Colorado Coalition for the Homeless to provide support for households.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
@@ -5655,7 +5618,7 @@
       "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/13 (+16.9 pts) = 41.9/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council approved a contract with Slalom, Inc. for continued access to On-Call Professional Services.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
@@ -5692,7 +5655,7 @@
       "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (12-0, +0.0 split pts) | Full-body turnout 12/13 (+18.5 pts) = 28.5/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation recognizing the El Grito 5k Run/Walk event.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
@@ -5729,7 +5692,7 @@
       "plain_english": "Legal weight: 10 pts (proclamation) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/13 (+16.9 pts) = 26.9/100 (Formula v2.0.0)"
     },
     "formula_version": "2.0.0",
-    "capture_method": "structured_api",
+    "capture_method": "ai_minutes_pdf",
     "qa_status": "needs_review",
     "plain_summary": "Council adopted a proclamation honoring the sacrifice of fallen Denver police officer Merle Nading.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/10/12975_M_City_Council_26-10-05_Council_Minutes.pdf"
