@@ -9,7 +9,11 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:boulder",
     "status": "active",
     "docs_since": "2026-01-08",
-    "last_updated": "2026-11-25 23:37:03 UTC"
+    "last_updated": "2026-11-26 02:01:11 UTC",
+    "as_of_date": "2026-11-26",
+    "stale_days": 0,
+    "is_stale": false,
+    "formula_version": "2.0.0"
   },
   "entities": [
     {

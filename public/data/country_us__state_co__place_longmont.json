@@ -9,7 +9,11 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-01-01",
-    "last_updated": "2026-11-25 23:37:03 UTC"
+    "last_updated": "2026-11-26 02:01:11 UTC",
+    "as_of_date": "2026-01-27",
+    "stale_days": 303,
+    "is_stale": true,
+    "formula_version": "2.0.0"
   },
   "entities": [
     {
@@ -24,7 +28,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "crystal.prieto@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -51,7 +55,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "jake.marsing@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -78,7 +82,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "sean.mccoy@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -105,7 +109,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "susie.hidalgo-fahring@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -132,7 +136,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "diane.crist@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -159,7 +163,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "matthew.popkin@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -186,7 +190,7 @@
       "portal_url": "https://longmont.primegov.com/public/portal",
       "party": "Nonpartisan",
       "phone": "",
-      "email": "",
+      "email": "alex.kalkhofer@longmontcolorado.gov",
       "social_links": {},
       "bio_extra": {},
       "metrics": {
@@ -225,7 +229,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c459e0ce53ed2e",
@@ -249,7 +272,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_bee77dbd99f3ad",
@@ -273,7 +315,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_ba91f8809ac982",
@@ -297,7 +358,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9a79cc951deb3c",
@@ -321,7 +401,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8d3849aa80922c",
@@ -345,7 +444,26 @@
       "attendance_count": 0,
       "attendance_rate": 0,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Recorded",
+      "passage_method": "Unknown",
+      "tally": "",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 10.0,
+        "legal_weight": 10.0,
+        "contestedness": 0.0,
+        "turnout": 0.0,
+        "votes_cast": 0,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 10 pts (meeting) | No roll-call split recorded (+0 pts) | Turnout unavailable (+0.0 pts) = 10/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8ce3213b385c4d",
@@ -369,7 +487,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2f712492ac0469",
@@ -393,7 +530,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0f51ca9cc7b7fb",
@@ -417,7 +573,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_085afe2e371f86",
@@ -441,7 +616,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_f40228c569f821",
@@ -465,7 +659,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_e1b5d026ae279a",
@@ -489,7 +702,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d015c91e6b8135",
@@ -513,7 +745,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_bce80e8b191d74",
@@ -537,7 +788,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_b94c8706b133a4",
@@ -561,7 +831,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_9c2bda77ba391f",
@@ -585,7 +874,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_92c3294c7fbb49",
@@ -609,7 +917,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8c4ae189d8da55",
@@ -633,7 +960,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6cd0888c3c094f",
@@ -657,7 +1003,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_68eefab4ab80d1",
@@ -681,7 +1046,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_37cfb39ca5af14",
@@ -705,7 +1089,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_289e006f87557a",
@@ -729,7 +1132,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_14d040e660e468",
@@ -753,7 +1175,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0ea20778b92056",
@@ -777,7 +1218,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_0c953c23c24034",
@@ -801,7 +1261,26 @@
       "attendance_count": 2,
       "attendance_rate": 29,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "2-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 30.7,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 5.7,
+        "votes_cast": 2,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (2-0, +0.0 split pts) | Full-body turnout 2/7 (+5.7 pts) = 30.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_f299f8565f58df",
@@ -825,7 +1304,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_cfe353eba52edd",
@@ -849,7 +1347,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Tally Only",
+      "tally": "4-1",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 50.3,
+        "legal_weight": 20.0,
+        "contestedness": 16.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Split vote (4-1, +16.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 50.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c83ac8829463a8",
@@ -873,7 +1390,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_936592ec575e7c",
@@ -897,7 +1433,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 49.3,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 49.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_910f493e6c0697",
@@ -921,7 +1476,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6deda9a5f41285",
@@ -945,7 +1519,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_3f43f4df1b4b7c",
@@ -969,7 +1562,26 @@
       "attendance_count": 3,
       "attendance_rate": 43,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "3-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.6,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.6,
+        "votes_cast": 3,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (3-0, +0.0 split pts) | Full-body turnout 3/7 (+8.6 pts) = 33.6/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_075930ac8f37dc",
@@ -993,7 +1605,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c4185f26a74f6d",
@@ -1002,7 +1633,7 @@
       "title": "Designate the StudySession Room at the Civic Center as the official location for 2026AIPP meetings",
       "plain_summary": "The commission designated the StudySession Room at the Civic Center as the official location for 2026AIPP meetings.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1017,7 +1648,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_ba4a5099d8e0f5",
@@ -1026,7 +1676,7 @@
       "title": "Cool Stop update - Artist Eric Lynnis under contract and first installment has been distributed",
       "plain_summary": "The commission provided an update on the Cool Stop project.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "Contracts & Procurement",
       "outcome": "Passed",
@@ -1041,7 +1691,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_abd00448b69392",
@@ -1050,7 +1719,7 @@
       "title": "Art onthe Move update - Motion to add direct purchase of Butterfly Within a Butterfly to the February agenda",
       "plain_summary": "The commission approved the direct purchase of Butterfly Within a Butterfly for the February agenda.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "motion",
       "topic": "General",
       "outcome": "Passed",
@@ -1065,7 +1734,26 @@
       "attendance_count": 11,
       "attendance_rate": 157,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "11-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 11,
+        "expected_body_size": 11,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/11 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_a2ae1cab988fda",
@@ -1074,7 +1762,7 @@
       "title": "Designate the City's website as the official posting location for 2026AIPP Agendas",
       "plain_summary": "The commission designated the City's website as the official posting location for 2026AIPP Agendas.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1089,7 +1777,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8b34fe68ff8fce",
@@ -1098,7 +1805,7 @@
       "title": "Motion to adjourn",
       "plain_summary": "The commission voted to adjourn the meeting.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "motion",
       "topic": "General",
       "outcome": "Passed",
@@ -1113,7 +1820,26 @@
       "attendance_count": 11,
       "attendance_rate": 157,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "11-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 11,
+        "expected_body_size": 11,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/11 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_8a5d6eefaa775d",
@@ -1122,7 +1848,7 @@
       "title": "Administration Report - Potential donation and 150/250 project",
       "plain_summary": "The commission discussed potential donations and the 150/250 project.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1137,7 +1863,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_700b15fe751f41",
@@ -1146,7 +1891,7 @@
       "title": "Hotel Longmont mural update - LDDA expects significantly more available surface for mural painting",
       "plain_summary": "The commission provided an update on the Hotel Longmont mural project.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1161,7 +1906,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_573e5f5db537f4",
@@ -1170,7 +1934,7 @@
       "title": "Ordinance Amendment - 2nd reading of Ordinance Amendment",
       "plain_summary": "The commission approved the Ordinance Amendment for a second reading.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "ordinance",
       "topic": "General",
       "outcome": "Passed",
@@ -1185,7 +1949,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_4963f39a87e535",
@@ -1194,7 +1977,7 @@
       "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
       "plain_summary": "The commission approved the allocation of up to $150,000 for the Longmont Museum public art project.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1209,7 +1992,26 @@
       "attendance_count": 11,
       "attendance_rate": 157,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "11-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 11,
+        "expected_body_size": 11,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/11 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_36aedfb498aa6a",
@@ -1218,7 +2020,7 @@
       "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
       "plain_summary": "The commission approved the allocation of up to $150,000 for the Longmont Museum public art project.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "motion",
       "topic": "General",
       "outcome": "Passed",
@@ -1233,7 +2035,26 @@
       "attendance_count": 11,
       "attendance_rate": 157,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "11-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 11,
+        "expected_body_size": 11,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/11 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_35e3ec835ae511",
@@ -1242,7 +2063,7 @@
       "title": "Maintenance update - Installation of ListeningStones/Details of Nature and Defiance",
       "plain_summary": "The commission discussed the installation of ListeningStones/Details of Nature and Defiance.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1257,7 +2078,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_343cbcb1dc9cc5",
@@ -1266,7 +2106,7 @@
       "title": "Motion to approve November 20, 2025 minutes as is",
       "plain_summary": "The commission approved the November 20, 2025 minutes without any changes.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "Governance & Elections",
       "outcome": "Passed",
@@ -1281,7 +2121,26 @@
       "attendance_count": 9,
       "attendance_rate": 129,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Tally Only",
+      "tally": "8-1",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 53.9,
+        "legal_weight": 25.0,
+        "contestedness": 8.9,
+        "turnout": 20.0,
+        "votes_cast": 9,
+        "expected_body_size": 9,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Split vote (8-1, +8.9 split pts) | Full-body turnout 9/9 (+20.0 pts) = 53.9/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2ef28e574efeba",
@@ -1290,7 +2149,7 @@
       "title": "Council Comments - Welcome Councilperson Sean McCoy",
       "plain_summary": "The commission welcomed Councilperson Sean McCoy.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1305,7 +2164,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_260a981e0b169e",
@@ -1314,7 +2192,7 @@
       "title": "Ordinance Amendment - 2nd reading of Ordinance Amendment to be held on January 27, 2026",
       "plain_summary": "The commission approved the Ordinance Amendment for second reading on January 27, 2026.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "ordinance",
       "topic": "General",
       "outcome": "Passed",
@@ -1329,7 +2207,26 @@
       "attendance_count": 10,
       "attendance_rate": 143,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "10-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 10,
+        "expected_body_size": 10,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (10-0, +0.0 split pts) | Full-body turnout 10/10 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_1948ad5d25e95c",
@@ -1338,7 +2235,7 @@
       "title": "Art onthe Moveupdate - Motion to add direct purchase of Butterfly Within a Butterfly to February agenda",
       "plain_summary": "The commission approved the purchase of Butterfly Within a Butterfly for the February Art onthe Move agenda.",
       "diff_summary": "",
-      "qa_status": "flagged",
+      "qa_status": "verified",
       "event_type": "resolution",
       "topic": "General",
       "outcome": "Passed",
@@ -1353,7 +2250,26 @@
       "attendance_count": 11,
       "attendance_rate": 157,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "11-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 11,
+        "expected_body_size": 11,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (11-0, +0.0 split pts) | Full-body turnout 11/11 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d8f244d0e8f090",
@@ -1377,7 +2293,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d3bc2588b0e88c",
@@ -1401,7 +2336,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_d238b69fe986f8",
@@ -1425,7 +2379,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c70ece0b09f10a",
@@ -1449,7 +2422,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_78b3c60c40567c",
@@ -1473,7 +2465,26 @@
       "attendance_count": 5,
       "attendance_rate": 71,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 39.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 14.3,
+        "votes_cast": 5,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/7 (+14.3 pts) = 39.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     }
   ]
 }

@@ -1,11 +1,14 @@
-"""Post-export enhancements for CivicPulse v2.
+"""Post-export enhancements & full-site normalization sync for CivicPulse v2 Clean Baseline.
 
-Runs cleanly alongside (or right after) `python -m civicpulse.cli export` to add:
-  1. Versioned scoring methodology JSON + downloadable Markdown/JSON formula files
-  2. Upcoming Meetings & Public Comment Deadlines payload (public/data/upcoming_meetings.json)
-  3. Quarterly sharded search index (public/data/search_chunks/) for fast pagination as data grows
-  4. Per-jurisdiction and per-topic RSS 2.0 feeds (public/feeds/*.xml)
-  5. Freshness metadata ("as_of_date", "stale_days", "is_stale") & normalized fields in directory.json
+Runs right after `python -m civicpulse.cli export` to guarantee every exported file
+under public/ shares the exact same clean, normalized, Colorado-scoped state:
+  1. Purges archived out-of-scope jurisdictions (e.g., San Jose, CA) from directory.json,
+     index.json, and public/data/country_us__*.json
+  2. Syncs normalized topics, outcomes, tallies, committee-aware Impact Scores,
+     capture provenance, QA status, and freshness badges into EVERY per-jurisdiction JSON
+     and search_index.json (not just search_chunks/)
+  3. Exports versioned scoring methodology JSON + downloadable .md / .json formula docs
+  4. Exports upcoming_meetings.json, quarterly search_chunks/, and per-city/topic RSS feeds
 """
 from __future__ import annotations
 
@@ -59,9 +62,11 @@ def _table_columns(conn: sqlite3.Connection, table: str) -> set:
     return {r[1] for r in conn.execute(f"PRAGMA table_info({table})").fetchall()}
 
 
+def _slugify(div_id: str) -> str:
+    return div_id.replace("ocd-division/", "").replace("/", "__").replace(":", "_").replace("-", "_")
+
+
 def build_upcoming_meetings(conn: sqlite3.Connection, today_iso: str) -> List[Dict[str, Any]]:
-    """Extracts upcoming meetings from documents with meeting_date >= today."""
-    doc_cols = _table_columns(conn, "documents")
     jur_cols = _table_columns(conn, "jurisdictions")
     if "documents" not in {
         r[0] for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
@@ -106,9 +111,12 @@ def build_upcoming_meetings(conn: sqlite3.Connection, today_iso: str) -> List[Di
 
 
 def shard_search_index(events: List[Dict[str, Any]], data_dir: Path) -> Dict[str, Any]:
-    """Splits search events into quarterly JSON shards so large indices load incrementally."""
     chunks_dir = data_dir / "search_chunks"
     chunks_dir.mkdir(parents=True, exist_ok=True)
+
+    # Clear old chunk files before regenerating
+    for old_f in chunks_dir.glob("*.json"):
+        old_f.unlink()
 
     grouped: Dict[str, List[Dict[str, Any]]] = {}
     for ev in events:
@@ -132,13 +140,85 @@ def shard_search_index(events: List[Dict[str, Any]], data_dir: Path) -> Dict[str
         })
 
     manifest = {
-        "schema_version": "2.1",
+        "schema_version": "2.2",
         "formula_version": FORMULA_VERSION,
         "total_events": len(events),
         "chunks": manifest_chunks,
     }
     (chunks_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     return manifest
+
+
+def _sync_per_jurisdiction_json_files(
+    data_dir: Path,
+    archived_ids: set,
+    events_by_id: Dict[str, Dict[str, Any]],
+    latest_date_by_jur: Dict[str, str],
+    now_utc: datetime,
+) -> Dict[str, int]:
+    """Removes archived jurisdiction JSONs and syncs normalized fields into active ones."""
+    removed = 0
+    patched = 0
+
+    for jid in archived_ids:
+        stale_file = data_dir / f"{_slugify(jid)}.json"
+        if stale_file.exists():
+            stale_file.unlink()
+            removed += 1
+
+    for jf in sorted(data_dir.glob("country_us__*.json")):
+        try:
+            payload = json.loads(jf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(payload, dict):
+            continue
+
+        jur_obj = payload.get("jurisdiction")
+        jid = ""
+        if isinstance(jur_obj, dict):
+            jid = jur_obj.get("ocd_division_id") or jur_obj.get("jurisdiction_id") or ""
+            if jid in archived_ids:
+                jf.unlink()
+                removed += 1
+                continue
+            jur_obj["level"] = normalize_level(jur_obj.get("level"), jid)
+            as_of = latest_date_by_jur.get(jid) or jur_obj.get("last_updated") or ""
+            stale_days = _days_since(as_of, now_utc)
+            jur_obj["as_of_date"] = as_of[:10] if as_of else None
+            jur_obj["stale_days"] = stale_days
+            jur_obj["is_stale"] = bool(
+                (jur_obj.get("status") or "active") == "active"
+                and stale_days is not None
+                and stale_days > STALE_THRESHOLD_DAYS
+            )
+            jur_obj["formula_version"] = FORMULA_VERSION
+
+        # Patch normalized event fields inside payload["events"]
+        ev_list = payload.get("events")
+        if isinstance(ev_list, list):
+            for ev in ev_list:
+                eid = ev.get("event_id")
+                norm = events_by_id.get(eid)
+                if not norm:
+                    continue
+                ev["topic"] = norm["topic"]
+                ev["business_relevant"] = norm["business_relevant"]
+                ev["outcome"] = norm["outcome_status"]
+                ev["outcome_status"] = norm["outcome_status"]
+                ev["passage_method"] = norm["passage_method"]
+                ev["tally"] = norm["tally"]
+                ev["body_type"] = norm["body_type"]
+                ev["impact_score"] = norm["impact_score"]
+                ev["impact_breakdown"] = norm["impact_breakdown"]
+                ev["formula_version"] = norm["formula_version"]
+                ev["capture_method"] = norm["capture_method"]
+                ev["qa_status"] = norm["qa_status"]
+
+        jf.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        patched += 1
+
+    return {"archived_files_removed": removed, "jurisdiction_files_synced": patched}
 
 
 def run_export_enhancements(
@@ -151,20 +231,24 @@ def run_export_enhancements(
     data_dir = public_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1. Always export versioned scoring methodology + downloadable formula docs
     scoring_out = write_scoring_docs(public_dir)
 
-    # 2. Load DB data for upcoming meetings, normalized events, freshness, and RSS feeds
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     try:
+        archived_ids = {
+            r[0]
+            for r in conn.execute(
+                "SELECT ocd_division_id FROM jurisdictions WHERE LOWER(COALESCE(status, '')) = 'archived'"
+            ).fetchall()
+        }
+
         upcoming = build_upcoming_meetings(conn, today_iso)
         (data_dir / "upcoming_meetings.json").write_text(
             json.dumps({"as_of": today_iso, "count": len(upcoming), "meetings": upcoming}, indent=2) + "\n",
             encoding="utf-8",
         )
 
-        # Build enriched, normalized event list for sharding + RSS + business radar
         ev_cols = _table_columns(conn, "events")
         doc_cols = _table_columns(conn, "documents")
         jur_cols = _table_columns(conn, "jurisdictions")
@@ -184,9 +268,7 @@ def run_export_enhancements(
 
         capture_select = "e.capture_method" if "capture_method" in ev_cols else "'' AS capture_method"
         qa_select = "e.qa_status" if "qa_status" in ev_cols else "'verified' AS qa_status"
-        doc_title_join = (
-            "LEFT JOIN documents d ON d.doc_id = e.doc_id" if "doc_id" in ev_cols else ""
-        )
+        doc_title_join = "LEFT JOIN documents d ON d.doc_id = e.doc_id" if "doc_id" in ev_cols else ""
         doc_title_col = "d.title AS doc_title" if "doc_id" in ev_cols and "title" in doc_cols else "'' AS doc_title"
         level_col = "j.level" if "level" in jur_cols else "'city'"
 
@@ -209,6 +291,7 @@ def run_export_enhancements(
         ).fetchall()
 
         normalized_events: List[Dict[str, Any]] = []
+        events_by_id: Dict[str, Dict[str, Any]] = {}
         latest_date_by_jur: Dict[str, str] = {}
 
         for r in rows:
@@ -247,12 +330,10 @@ def run_export_enhancements(
             capture = r["capture_method"] or (
                 "structured_api" if (r["adapter_type"] or "").lower() == "legistar" and ind_votes > 0 else "ai_minutes_pdf"
             )
-            slug = jid.replace("ocd-division/", "").replace("/", "__").replace(":", "_").replace("-", "_")
-
-            normalized_events.append({
+            ev_obj = {
                 "event_id": r["event_id"],
                 "jurisdiction_id": jid,
-                "jurisdiction_slug": slug,
+                "jurisdiction_slug": _slugify(jid),
                 "jurisdiction_name": r["jurisdiction_name"],
                 "level": normalize_level(r["level"], jid),
                 "meeting_date": mdate,
@@ -260,6 +341,7 @@ def run_export_enhancements(
                 "event_type": r["event_type"],
                 "topic": topic,
                 "business_relevant": is_business_relevant(topic),
+                "outcome": norm_out.status,
                 "outcome_status": norm_out.status,
                 "passage_method": norm_out.passage_method,
                 "tally": norm_out.tally,
@@ -273,34 +355,58 @@ def run_export_enhancements(
                 "qa_status": r["qa_status"] or "verified",
                 "plain_summary": r["plain_summary"],
                 "source_url": r["source_url"],
-            })
+            }
+            normalized_events.append(ev_obj)
+            events_by_id[r["event_id"]] = ev_obj
 
-        # 3. Write quarterly search shards + feeds
+        # 1. Write quarterly search shards + keep monolithic search_index.json normalized in sync
         shard_manifest = shard_search_index(normalized_events, data_dir)
+        (data_dir / "search_index.json").write_text(
+            json.dumps(normalized_events, indent=2) + "\n", encoding="utf-8"
+        )
+
+        # 2. Generate RSS feeds
         feed_manifest = generate_all_feeds(normalized_events, public_dir, site_base_url=site_base_url)
 
-        # 4. Patch freshness & normalized levels into directory.json if present
-        dir_path = data_dir / "directory.json"
-        if dir_path.exists():
-            dir_obj = json.loads(dir_path.read_text(encoding="utf-8"))
-            jurs = dir_obj.get("jurisdictions", dir_obj if isinstance(dir_obj, list) else [])
+        # 3. Sync directory.json & legacy index.json (strip archived rows, normalize levels, add freshness)
+        for fname in ("directory.json", "index.json"):
+            fpath = data_dir / fname
+            if not fpath.exists():
+                continue
+            obj = json.loads(fpath.read_text(encoding="utf-8"))
+            is_list = isinstance(obj, list)
+            jurs = obj if is_list else obj.get("jurisdictions", [])
+            cleaned = []
             for j in jurs:
                 jid = j.get("ocd_division_id") or j.get("jurisdiction_id") or ""
+                if jid in archived_ids or (j.get("status") or "").lower() == "archived":
+                    continue
                 j["level"] = normalize_level(j.get("level"), jid)
                 as_of = latest_date_by_jur.get(jid) or j.get("last_updated") or ""
                 stale_days = _days_since(as_of, now_utc)
                 j["as_of_date"] = as_of[:10] if as_of else None
                 j["stale_days"] = stale_days
                 j["is_stale"] = bool(
-                    j.get("status") == "active"
+                    (j.get("status") or "active") == "active"
                     and stale_days is not None
                     and stale_days > STALE_THRESHOLD_DAYS
                 )
-            if isinstance(dir_obj, dict):
-                dir_obj["formula_version"] = FORMULA_VERSION
-                dir_obj["formula_hash"] = scoring_out["formula_hash"]
-                dir_obj["as_of_date"] = today_iso
-            dir_path.write_text(json.dumps(dir_obj, indent=2) + "\n", encoding="utf-8")
+                cleaned.append(j)
+            if is_list:
+                obj = cleaned
+            else:
+                obj["jurisdictions"] = cleaned
+                obj["formula_version"] = FORMULA_VERSION
+                obj["formula_hash"] = scoring_out["formula_hash"]
+                obj["as_of_date"] = today_iso
+                if "search_index" in obj:
+                    obj["search_index"] = normalized_events
+            fpath.write_text(json.dumps(obj, indent=2) + "\n", encoding="utf-8")
+
+        # 4. Sync all per-jurisdiction JSONs & remove archived files
+        sync_stats = _sync_per_jurisdiction_json_files(
+            data_dir, archived_ids, events_by_id, latest_date_by_jur, now_utc
+        )
 
         return {
             "scoring": scoring_out,
@@ -309,20 +415,20 @@ def run_export_enhancements(
             "search_chunks": len(shard_manifest["chunks"]),
             "rss_jurisdictions": len(feed_manifest["jurisdictions"]),
             "rss_topics": len(feed_manifest["topics"]),
+            **sync_stats,
         }
     finally:
         conn.close()
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run CivicPulse v2 post-export enhancements.")
-    parser.add_argument("--db", default="core_civic.db", help="Path to SQLite database")
-    parser.add_argument("--public-dir", default="public", help="Path to public output directory")
-    parser.add_argument("--site-url", default="https://civics-d03.pages.dev", help="Base public URL")
+    parser = argparse.ArgumentParser(description="Run CivicPulse v2 Clean Baseline export enhancements.")
+    parser.add_argument("--db", default="core_civic.db")
+    parser.add_argument("--public-dir", default="public")
+    parser.add_argument("--site-url", default="https://civics-d03.pages.dev")
     args = parser.parse_args()
-
-    result = run_export_enhancements(args.db, Path(args.public_dir), site_base_url=args.site_url)
-    print("[EXPORT+] Enhancements complete:", json.dumps(result))
+    res = run_export_enhancements(args.db, Path(args.public_dir), site_base_url=args.site_url)
+    print("[EXPORT+] Complete:", json.dumps(res))
 
 
 if __name__ == "__main__":

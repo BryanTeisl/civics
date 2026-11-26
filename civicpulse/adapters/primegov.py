@@ -32,6 +32,92 @@ def _normalize_date(raw: str) -> str:
     return val
 
 
+
+VOTE_TRACKING_PAGES: Dict[str, str] = {
+    "cityofwestminster": "https://www.westminsterco.gov/129/Meeting-Agendas",
+}
+VOTE_DATE_RE = re.compile(r"(\d{1,2})/(\d{1,2})/(\d{4})")
+
+
+def _fetch_supplemental_vote_pdfs(
+    sub: str, jurisdiction_id: str, limit: int, headers: Dict[str, str], timeout: int
+) -> List[DocumentRecord]:
+    # Pulls official municipal Vote Tracking PDFs when PrimeGov only hosts Agenda/Packet templates
+    page_url = VOTE_TRACKING_PAGES.get(sub)
+    if not page_url:
+        return []
+    try:
+        from html.parser import HTMLParser
+        from urllib.parse import urljoin
+
+        class _AnchorExtractor(HTMLParser):
+            def __init__(self) -> None:
+                super().__init__()
+                self.anchors: List[tuple] = []
+                self._href = ""
+                self._buf: List[str] = []
+                self._in_a = False
+
+            def handle_starttag(self, tag: str, attrs: list) -> None:
+                if tag.lower() == "a":
+                    self._href = dict(attrs).get("href") or ""
+                    self._buf = []
+                    self._in_a = True
+
+            def handle_data(self, data: str) -> None:
+                if self._in_a:
+                    self._buf.append(data)
+
+            def handle_endtag(self, tag: str) -> None:
+                if tag.lower() == "a" and self._in_a:
+                    self.anchors.append((" ".join("".join(self._buf).split()), self._href))
+                    self._in_a = False
+
+        req_headers = dict(headers or {})
+        req_headers.setdefault(
+            "User-Agent",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        )
+        r = requests.get(page_url, headers=req_headers, timeout=timeout)
+        if not r.ok:
+            return []
+        parser = _AnchorExtractor()
+        parser.feed(r.text)
+        results: List[DocumentRecord] = []
+        seen_urls = set()
+        for label, href in parser.anchors:
+            if not href or not re.search(r"vote\s*tracking", label, re.IGNORECASE):
+                continue
+            full_url = urljoin(page_url, href)
+            if full_url in seen_urls:
+                continue
+            seen_urls.add(full_url)
+            m = VOTE_DATE_RE.search(label)
+            mdate = f"{m.group(3)}-{m.group(1).zfill(2)}-{m.group(2).zfill(2)}" if m else ""
+            doc_num_m = re.search(r"/View/(\d+)", full_url)
+            doc_key = (
+                doc_num_m.group(1)
+                if doc_num_m
+                else re.sub(r"[^a-z0-9]+", "_", label.lower()).strip("_")
+            )
+            results.append(
+                DocumentRecord(
+                    jurisdiction_id=jurisdiction_id,
+                    external_id=f"votesheet_{sub}_{doc_key}_minutes",
+                    meeting_date=mdate,
+                    doc_type="minutes",
+                    title=f"City Council {label}",
+                    source_url=full_url,
+                )
+            )
+            if len(results) >= limit:
+                break
+        return results
+    except Exception:
+        return []
+
+
 @register_adapter("primegov")
 class PrimeGovAdapter(BaseAdapter):
     is_structured = True
@@ -131,4 +217,5 @@ class PrimeGovAdapter(BaseAdapter):
                 if added_for_meeting >= 2:
                     break
 
+        docs.extend(_fetch_supplemental_vote_pdfs(sub, jurisdiction_id, limit, self.headers, self.timeout))
         return docs

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-25 23:37:03 UTC",
+  "last_updated": "2026-11-26 02:01:11 UTC",
   "jurisdictions": [
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:boulder",
@@ -15,23 +15,10 @@
       "event_count": 0,
       "document_count": 149,
       "docs_since": "2026-01-08",
-      "last_updated": "2026-11-25 23:37:03 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
-      "name": "Boulder County Board of Commissioners",
-      "level": "county",
-      "lat": 40.0925,
-      "lng": -105.3577,
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
-      "parent_division_id": null,
-      "status": "active",
-      "file": "country_us__state_co__county_boulder.json",
-      "entity_count": 3,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
@@ -45,9 +32,12 @@
       "file": "country_us__state_co__school_district_boulder_valley_re2.json",
       "entity_count": 7,
       "event_count": 0,
-      "document_count": 6,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "document_count": 25,
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:colorado_springs",
@@ -63,7 +53,10 @@
       "event_count": 49,
       "document_count": 73,
       "docs_since": "2026-08-11",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-20",
+      "stale_days": 6,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:denver",
@@ -79,7 +72,10 @@
       "event_count": 80,
       "document_count": 73,
       "docs_since": "2026-09-28",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-18",
+      "stale_days": 8,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:erie",
@@ -95,7 +91,10 @@
       "event_count": 3,
       "document_count": 55,
       "docs_since": "2025-12-09",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-06-03",
+      "stale_days": 176,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:fort_collins",
@@ -111,7 +110,10 @@
       "event_count": 22,
       "document_count": 72,
       "docs_since": "2026-08-18",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-24",
+      "stale_days": 2,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:greeley",
@@ -127,7 +129,10 @@
       "event_count": 2,
       "document_count": 54,
       "docs_since": "2026-09-08",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-10-27",
+      "stale_days": 30,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:longmont",
@@ -143,7 +148,29 @@
       "event_count": 53,
       "document_count": 119,
       "docs_since": "2026-01-01",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-01-27",
+      "stale_days": 303,
+      "is_stale": true
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "level": "school_district",
+      "lat": 40.5853,
+      "lng": -105.0844,
+      "portal_url": "https://www.psdschools.org/board-of-education/meeting-agendas-minutes",
+      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "status": "active",
+      "file": "country_us__state_co__school_district_poudre_r1.json",
+      "entity_count": 7,
+      "event_count": 0,
+      "document_count": 20,
+      "docs_since": "2026-01-13",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:thornton",
@@ -159,7 +186,10 @@
       "event_count": 42,
       "document_count": 74,
       "docs_since": "2026-01-06",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-02-18",
+      "stale_days": 281,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:westminster",
@@ -172,10 +202,13 @@
       "status": "active",
       "file": "country_us__state_co__place_westminster.json",
       "entity_count": 7,
-      "event_count": 105,
+      "event_count": 76,
       "document_count": 97,
       "docs_since": "2026-01-05",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-23",
+      "stale_days": 3,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:windsor",
@@ -191,7 +224,10 @@
       "event_count": 7,
       "document_count": 44,
       "docs_since": "2026-09-21",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-09",
+      "stale_days": 17,
+      "is_stale": true
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:berthoud",
@@ -206,8 +242,30 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "level": "county",
+      "lat": 40.0925,
+      "lng": -105.3577,
+      "portal_url": "https://bouldercounty.gov/government/public-meetings/",
+      "parent_division_id": null,
+      "status": "unclaimed",
+      "file": "country_us__state_co__county_boulder.json",
+      "entity_count": 3,
+      "event_count": 0,
+      "document_count": 0,
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:broomfield",
@@ -222,8 +280,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/school_district:colorado_springs_11",
@@ -238,8 +299,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:dacono",
@@ -254,8 +318,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:el_paso",
@@ -270,8 +337,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:firestone",
@@ -286,8 +356,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:frederick",
@@ -302,8 +375,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:johnstown",
@@ -318,8 +394,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:lafayette",
@@ -334,8 +413,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
@@ -350,8 +432,11 @@
       "entity_count": 3,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:louisville",
@@ -366,8 +451,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:loveland",
@@ -382,8 +470,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:northglenn",
@@ -398,40 +489,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
-      "name": "Poudre School District Board of Education",
-      "level": "school_district",
-      "lat": 40.5853,
-      "lng": -105.0844,
-      "portal_url": "https://www.psdschools.org/your-district/board-of-education/board-meetings",
-      "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
-      "status": "unclaimed",
-      "file": "country_us__state_co__school_district_poudre_r1.json",
-      "entity_count": 7,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
-    },
-    {
-      "ocd_division_id": "ocd-division/country:us/state:ca/place:san_jose",
-      "name": "San Jose City Council",
-      "level": "city",
-      "lat": 37.3382,
-      "lng": -121.8863,
-      "portal_url": "https://sanjose.primegov.com",
-      "parent_division_id": null,
-      "status": "archived",
-      "file": "country_us__state_ca__place_san_jose.json",
-      "entity_count": 0,
-      "event_count": 0,
-      "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:timnath",
@@ -446,8 +508,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/county:weld",
@@ -462,8 +527,11 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     },
     {
       "ocd_division_id": "ocd-division/country:us/state:co/place:wellington",
@@ -478,8 +546,14 @@
       "entity_count": 0,
       "event_count": 0,
       "document_count": 0,
-      "docs_since": "2026-11-25",
-      "last_updated": "2026-11-25 23:37:03 UTC"
+      "docs_since": "2026-11-26",
+      "last_updated": "2026-11-26 02:01:11 UTC",
+      "as_of_date": "2026-11-26",
+      "stale_days": 0,
+      "is_stale": false
     }
-  ]
+  ],
+  "formula_version": "2.0.0",
+  "formula_hash": "292922f52a39",
+  "as_of_date": "2026-11-26"
 }

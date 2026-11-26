@@ -1,0 +1,50 @@
+{
+  "state": "CO",
+  "description": "Colorado Front Range Counties & School Districts expansion batch",
+  "jurisdictions": [
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:larimer",
+      "name": "Larimer County Board of Commissioners",
+      "level": "county",
+      "adapter_type": "gov_web",
+      "portal_url": "https://www.larimer.gov/bocc/commissioners-meetings",
+      "roster_url": "https://www.larimer.gov/bocc",
+      "status": "active",
+      "latitude": 40.5853,
+      "longitude": -105.0844
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "level": "county",
+      "adapter_type": "gov_web",
+      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/hearings/",
+      "roster_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
+      "status": "active",
+      "latitude": 40.015,
+      "longitude": -105.2705
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "level": "school_district",
+      "adapter_type": "gov_web",
+      "portal_url": "https://www.psdschools.org/your-district/board-of-education/board-meetings",
+      "roster_url": "https://www.psdschools.org/your-district/board-of-education",
+      "status": "active",
+      "latitude": 40.5742,
+      "longitude": -105.1114
+    },
+    {
+      "ocd_division_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
+      "name": "Boulder Valley School District Board of Education",
+      "level": "school_district",
+      "adapter_type": "primegov",
+      "portal_url": "https://bvsd.primegov.com/public/portal",
+      "roster_url": "https://www.bvsd.org/about/board-of-education",
+      "status": "active",
+      "latitude": 40.0081,
+      "longitude": -105.2211
+    }
+  ]
+}

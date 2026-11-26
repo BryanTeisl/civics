@@ -9,7 +9,11 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
     "docs_since": "2026-08-18",
-    "last_updated": "2026-11-25 23:37:03 UTC"
+    "last_updated": "2026-11-26 02:01:11 UTC",
+    "as_of_date": "2026-11-24",
+    "stale_days": 2,
+    "is_stale": false,
+    "formula_version": "2.0.0"
   },
   "entities": [
     {
@@ -1855,7 +1859,26 @@
           "rationale_summary": "Mayor Pro Tem's support for the motion.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "8-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 8,
+        "expected_body_size": 8,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (8-0, +0.0 split pts) | Full-body turnout 8/8 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-19-7f27b029",
@@ -1950,7 +1973,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-1-4db9d8ce",
@@ -2045,7 +2087,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 40.0,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 40/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "2026-11-24-1",
@@ -2069,7 +2130,26 @@
       "attendance_count": 6,
       "attendance_rate": 86,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "6-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 37.1,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 17.1,
+        "votes_cast": 6,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/7 (+17.1 pts) = 37.1/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c76cbf03a2f7f7",
@@ -2164,7 +2244,26 @@
           "rationale_summary": "District 6 representative",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_c679a58f48dfe5",
@@ -2259,7 +2358,26 @@
           "rationale_summary": "District 6 representative",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_2c6fdfc7c1b843",
@@ -2354,7 +2472,26 @@
           "rationale_summary": "District 6 representative",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-5-ff36d12f",
@@ -2449,7 +2586,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-5-3accb3aa",
@@ -2544,7 +2700,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-2-e95c2e3b",
@@ -2639,7 +2814,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (Ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-2-416b3e38",
@@ -2734,7 +2928,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (Ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6dc662f288200b",
@@ -2829,7 +3042,26 @@
           "rationale_summary": "District 6 representative agrees with the council's updated traffic safety measures.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "6-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 42.1,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 17.1,
+        "votes_cast": 6,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/7 (+17.1 pts) = 42.1/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_21d5b9d639a50c",
@@ -2924,7 +3156,26 @@
           "rationale_summary": "District 6 representative agrees with the council's transparent and protective policy for surveillance technology.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "6-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 42.1,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 17.1,
+        "votes_cast": 6,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/7 (+17.1 pts) = 42.1/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-9-f3c94061",
@@ -3019,7 +3270,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (Ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-9-ebf6ea3d",
@@ -3114,7 +3384,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (Ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-9-ca351ff0",
@@ -3209,7 +3498,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (Ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "doc-13-1f39dc4d",
@@ -3304,7 +3612,26 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 55.0,
+        "legal_weight": 35.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 35 pts (ordinance) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 55/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_7ebbbf1c019882",
@@ -3389,7 +3716,26 @@
           "rationale_summary": "Was absent from the discussion, but supported the Housing Action Plan as a guiding document for housing strategy.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "6-0-1",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_efb181c31bb8af",
@@ -3413,7 +3759,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_e9c9f90c4a77ac",
@@ -3437,7 +3802,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_6d76e14b6937d6",
@@ -3461,7 +3845,26 @@
       "attendance_count": 7,
       "attendance_rate": 100,
       "sponsors": [],
-      "votes": []
+      "votes": [],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Unanimous",
+      "tally": "7-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 45.0,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 7,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 7/7 (+20.0 pts) = 45/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_550e14b1bf4496",
@@ -3546,7 +3949,26 @@
           "rationale_summary": "District 6 member's vote in favor of the budget.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "6-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 57.1,
+        "legal_weight": 40.0,
+        "contestedness": 0.0,
+        "turnout": 17.1,
+        "votes_cast": 6,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 40 pts (budget) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/7 (+17.1 pts) = 57.1/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     }
   ]
 }

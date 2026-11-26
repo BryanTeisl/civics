@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25 23:37:04 UTC",
+  "generated_at": "2026-11-26 02:01:11 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -119,45 +119,6 @@
         }
       ]
     },
-    "ocd-division/country:us/state:co/county:boulder": {
-      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
-      "name": "Boulder County Board of Commissioners",
-      "portal_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
-      "checklist": [
-        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
-        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
-        "Share concise, factual points with your district and at-large representatives.",
-        "Follow up after the vote to check the final roll call and implementation timeline."
-      ],
-      "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
-      "representatives": [
-        {
-          "name": "Claire Levy",
-          "role": "County Commissioner",
-          "district": "District 1",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Marta Loachamin",
-          "role": "County Commissioner",
-          "district": "District 2",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        },
-        {
-          "name": "Ashley Stoltzmann",
-          "role": "County Commissioner",
-          "district": "District 3",
-          "email": null,
-          "phone": null,
-          "website_url": null
-        }
-      ]
-    },
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
       "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
       "name": "Boulder Valley School District Board of Education",
@@ -173,32 +134,32 @@
         {
           "meeting_date": "",
           "doc_type": "agenda",
-          "title": "Complete form to speak at Board Meeting",
-          "source_url": "https://docs.google.com/forms/d/e/1FAIpQLSe4Sa1jcJ90b0TtIaaEtXy5vNDcb4Bmb8zYmKYOiZCtkEZlpQ/viewform?usp=sf_link"
+          "title": "Calendar Guiding Principles",
+          "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/files/BT422U001D57/$file/Calendar%20Guiding%20Principles-Final%20(1).pdf"
         },
         {
           "meeting_date": "",
           "doc_type": "agenda",
-          "title": "Board meeting calendar",
-          "source_url": "https://calendar.google.com/calendar/embed?src=c_b67f8992b17c820b890ac7f69fe74c7c54ceb6cedd4edf6decd02932a34769c3%40group.calendar.google.com&ctz=America%2FDenver"
-        },
-        {
-          "meeting_date": "",
-          "doc_type": "minutes",
-          "title": "Agendas & Minutes",
-          "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public"
+          "title": "2019 UIP Recommendations",
+          "source_url": "https://resources.finalsite.net/images/v1564584380/bvsdorg/ky2sytgwgveswa19v4p7/2019UIPRecommendationsMemo.pdf"
         },
         {
           "meeting_date": "",
           "doc_type": "agenda",
-          "title": "Deaf and Hard of Hearing",
-          "source_url": "https://www.bvsd.org/departments/special-education/deaf-and-hard-of-hearing"
+          "title": "Recommendations on ACAF Charter Application",
+          "source_url": "https://resources.finalsite.net/images/v1564583655/bvsdorg/cfkf9efmxykkbguhayql/DACReconAscentClassicalCharterApplicationFinal.pdf"
         },
         {
           "meeting_date": "",
-          "doc_type": "minutes",
-          "title": "Meeting Agendas & Minutes",
-          "source_url": "https://bvsd.community.diligentoneplatform.com/Portal/"
+          "doc_type": "agenda",
+          "title": "2019 Budget Priorities Memo",
+          "source_url": "https://resources.finalsite.net/images/v1564583692/bvsdorg/c6j9z3wimtjwgsju0ijd/2019-2020DACBudgetPrioritiesMemo.pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "DAC Norms (ingl\u00e9s y espa\u00f1ol)",
+          "source_url": "https://resources.finalsite.net/images/v1581363873/bvsdorg/esvakpau4zm0bjdkwkrq/DACMemberNorms201811.pdf"
         }
       ],
       "representatives": [
@@ -409,29 +370,40 @@
           "date": "2026-11-30",
           "title": "City Council Agenda",
           "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13077_A_City_Council_26-11-30_Council_Agenda.pdf"
-        },
-        {
-          "date": "2026-11-25",
-          "title": "Transportation and Infrastructure Agenda",
-          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
-        },
-        {
-          "date": "2026-11-25",
-          "title": "South Platte River Committee Agenda",
-          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
-        },
-        {
-          "date": "2026-11-25",
-          "title": "Health and Safety Agenda",
-          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf"
-        },
-        {
-          "date": "2026-11-25",
-          "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
-          "portal_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
         }
       ],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-11-25",
+          "doc_type": "agenda",
+          "title": "Transportation and Infrastructure Agenda",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-11-25",
+          "doc_type": "agenda",
+          "title": "South Platte River Committee Agenda",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-11-25",
+          "doc_type": "agenda",
+          "title": "Health and Safety Agenda",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-11-25",
+          "doc_type": "agenda",
+          "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf"
+        },
+        {
+          "meeting_date": "2026-11-25",
+          "doc_type": "agenda",
+          "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
+          "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf"
+        }
+      ],
       "representatives": [
         {
           "name": "Sarah Parady",
@@ -883,7 +855,7 @@
           "name": "Crystal Prieto",
           "role": "At-Large Representative",
           "district": "At-Large",
-          "email": null,
+          "email": "crystal.prieto@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -891,7 +863,7 @@
           "name": "Jake Marsing",
           "role": "At-Large Representative",
           "district": "At-Large",
-          "email": null,
+          "email": "jake.marsing@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -899,7 +871,7 @@
           "name": "Sean McCoy",
           "role": "At-Large Representative",
           "district": "At-Large",
-          "email": null,
+          "email": "sean.mccoy@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -907,7 +879,7 @@
           "name": "Susie Hidalgo-Fahring",
           "role": "Mayor",
           "district": "At-Large",
-          "email": null,
+          "email": "susie.hidalgo-fahring@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -915,7 +887,7 @@
           "name": "Diane Crist",
           "role": "Ward 1 Representative",
           "district": "Ward 1",
-          "email": null,
+          "email": "diane.crist@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -923,7 +895,7 @@
           "name": "Matthew Popkin",
           "role": "Ward 2 Representative",
           "district": "Ward 2",
-          "email": null,
+          "email": "matthew.popkin@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
         },
@@ -931,9 +903,111 @@
           "name": "Alex Kalkhofer",
           "role": "Ward 3 Representative",
           "district": "Ward 3",
-          "email": null,
+          "email": "alex.kalkhofer@longmontcolorado.gov",
           "phone": null,
           "website_url": "https://longmontcolorado.gov/government/mayor-city-council-members/"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/school_district:poudre_r1": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/school_district:poudre_r1",
+      "name": "Poudre School District Board of Education",
+      "portal_url": "https://www.psdschools.org/board-of-education/meeting-agendas-minutes",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-09-22",
+          "doc_type": "minutes",
+          "title": "September 22, 2026 BOE Meeting Minutes",
+          "source_url": "https://www.psdschools.org/fs/resource-manager/view/bd945850-fb66-4c6e-aca8-681f3c3918e5"
+        },
+        {
+          "meeting_date": "2026-09-08",
+          "doc_type": "minutes",
+          "title": "September 8, 2026 BOE Meeting Minutes",
+          "source_url": "https://www.psdschools.org/fs/resource-manager/view/0048158c-d651-461c-ba04-de9a0ee33fe4"
+        },
+        {
+          "meeting_date": "2026-08-25",
+          "doc_type": "minutes",
+          "title": "August 25, 2026 BOE Meeting Minutes",
+          "source_url": "https://www.psdschools.org/fs/resource-manager/view/7d06c4d8-0e34-4b73-9b6a-34189be91f96"
+        },
+        {
+          "meeting_date": "2026-08-11",
+          "doc_type": "minutes",
+          "title": "August 11, 2026 BOE Meeting Minutes",
+          "source_url": "https://www.psdschools.org/fs/resource-manager/view/956f90bd-8abc-4209-b0d8-d7edffbab25b"
+        },
+        {
+          "meeting_date": "2026-07-20",
+          "doc_type": "minutes",
+          "title": "July 20, 2026 Special Meeting 2 BOE Meeting Minutes",
+          "source_url": "https://www.psdschools.org/fs/resource-manager/view/a866a322-ebef-41a5-a6db-b654c493f352"
+        }
+      ],
+      "representatives": [
+        {
+          "name": "Jessica Zamora",
+          "role": "Board Director",
+          "district": "District A",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Jim Brokish",
+          "role": "Board Director",
+          "district": "District B",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Kristen Draper",
+          "role": "Board President",
+          "district": "District C",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Carolyn Reed",
+          "role": "Board Vice President",
+          "district": "District D",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Conor Duffy",
+          "role": "Board Director",
+          "district": "District E",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Kevin Havelda",
+          "role": "Board Director",
+          "district": "District F",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Scott Schoenbauer",
+          "role": "Board Director",
+          "district": "District G",
+          "email": null,
+          "phone": null,
+          "website_url": null
         }
       ]
     },
@@ -1100,59 +1174,59 @@
       ],
       "representatives": [
         {
+          "name": "Adam Barajas",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "abarajas@westminsterco.gov",
+          "phone": "(720) 336-8170",
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Amber Hott",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "ahott@westminsterco.gov",
+          "phone": "(720) 474-3785",
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
           "name": "Claire Carmelia",
           "role": "Mayor",
           "district": "At-Large",
-          "email": null,
-          "phone": null,
+          "email": "ccarmeli@westminsterco.gov",
+          "phone": "(720) 504-6019",
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Jack Johnson",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "jejohnso@westminsterco.gov",
+          "phone": "(719) 423-9886",
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Kristine Ireland",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "kireland@westminsterco.gov",
+          "phone": "(303) 517-1970",
+          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
+        },
+        {
+          "name": "Obi Ezeadi",
+          "role": "City Councillor",
+          "district": "At-Large",
+          "email": "oezeadi@westminsterco.gov",
+          "phone": "(720) 447-5606",
           "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
         },
         {
           "name": "Sarah Nurmela",
           "role": "Mayor Pro Tem",
           "district": "At-Large",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
-        },
-        {
-          "name": "Obi Ezeadi",
-          "role": "City Councillor",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
-        },
-        {
-          "name": "Amber Hott",
-          "role": "City Councillor",
-          "district": "Ward 2",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
-        },
-        {
-          "name": "Kristine Ireland",
-          "role": "City Councillor",
-          "district": "Ward 3",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
-        },
-        {
-          "name": "Jack Johnson",
-          "role": "City Councillor",
-          "district": "Ward 4",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
-        },
-        {
-          "name": "Adam Barajas",
-          "role": "City Councillor",
-          "district": "Ward 5",
-          "email": null,
-          "phone": null,
+          "email": "snurmela@westminsterco.gov",
+          "phone": "(720) 460-9277",
           "website_url": "https://www.westminsterco.gov/158/Our-Councillors"
         }
       ]
@@ -1201,7 +1275,7 @@
           "role": "Mayor",
           "district": "At-Large",
           "email": null,
-          "phone": null,
+          "phone": "(970) 545-1864",
           "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
         },
         {
@@ -1209,7 +1283,7 @@
           "role": "Council Member",
           "district": "District 1",
           "email": null,
-          "phone": null,
+          "phone": "(970) 290-1980",
           "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
         },
         {
@@ -1241,7 +1315,7 @@
           "role": "Council Member",
           "district": "District 5",
           "email": null,
-          "phone": null,
+          "phone": "(970) 301-1783",
           "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
         },
         {
@@ -1249,7 +1323,7 @@
           "role": "Council Member",
           "district": "District 6",
           "email": null,
-          "phone": null,
+          "phone": "(970) 692-7819",
           "website_url": "https://www.windsorco.gov/149/Town-Board-Members"
         }
       ]

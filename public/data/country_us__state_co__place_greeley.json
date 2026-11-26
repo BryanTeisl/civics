@@ -9,7 +9,11 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:weld",
     "status": "active",
     "docs_since": "2026-09-08",
-    "last_updated": "2026-11-25 23:37:03 UTC"
+    "last_updated": "2026-11-26 02:01:11 UTC",
+    "as_of_date": "2026-10-27",
+    "stale_days": 30,
+    "is_stale": true,
+    "formula_version": "2.0.0"
   },
   "entities": [
     {
@@ -405,7 +409,26 @@
           "rationale_summary": "Excused absence.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "6-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 42.1,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 17.1,
+        "votes_cast": 6,
+        "expected_body_size": 7,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (6-0, +0.0 split pts) | Full-body turnout 6/7 (+17.1 pts) = 42.1/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     },
     {
       "event_id": "ev_a7f2a151f8131c",
@@ -500,7 +523,26 @@
           "rationale_summary": "Voted in favor of Ballot Measure 2F.",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "7-0-1",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 60.0,
+        "legal_weight": 40.0,
+        "contestedness": 0.0,
+        "turnout": 20.0,
+        "votes_cast": 8,
+        "expected_body_size": 8,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 40 pts (budget) | Unanimous (7-0, +0.0 split pts) | Full-body turnout 8/8 (+20.0 pts) = 60/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
     }
   ]
 }

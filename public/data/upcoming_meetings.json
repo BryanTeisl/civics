@@ -1,73 +1,7 @@
 {
-  "as_of": "2026-11-25",
-  "count": 85,
+  "as_of": "2026-11-26",
+  "count": 83,
   "meetings": [
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "2026-11-25 Health and Safety: Committee canceled. Consent agenda included.",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "Health and Safety Agenda",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "South Platte River Committee Agenda",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
-    {
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "level": "city",
-      "meeting_date": "2026-11-25",
-      "title": "Transportation and Infrastructure Agenda",
-      "doc_type": "agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
-    },
     {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
       "jurisdiction_name": "Denver City Council",
@@ -933,6 +867,50 @@
       "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)",
       "title": "2026-11-17",
       "doc_type": "2584-2384",
+      "agenda_url": "minutes",
+      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
+      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "level": "city",
+      "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2389,plainText=false)",
+      "title": "2026-11-17",
+      "doc_type": "35-2389",
+      "agenda_url": "minutes",
+      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
+      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "level": "city",
+      "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2402,plainText=false)",
+      "title": "2026-11-17",
+      "doc_type": "2583-2402",
+      "agenda_url": "agenda",
+      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
+      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "level": "city",
+      "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2403,plainText=false)",
+      "title": "2026-11-17",
+      "doc_type": "2584-2403",
+      "agenda_url": "agenda",
+      "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
+      "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."
+    },
+    {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:fort_collins",
+      "jurisdiction_name": "Fort Collins City Council",
+      "level": "city",
+      "meeting_date": "https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2421,plainText=false)",
+      "title": "2026-11-24",
+      "doc_type": "61-2421",
       "agenda_url": "minutes",
       "portal_url": "https://fortcollinsco.api.civicclerk.com/v1",
       "public_comment_note": "Check the official agenda packet for exact sign-up cutoff (most Front Range councils close written/online public comment 2-24 hours before gavel)."

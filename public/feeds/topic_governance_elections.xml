@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Wed, 25 Nov 2026 23:37:05 +0000</lastBuildDate><item><title>[Fort Collins City Council] Consideration of a motion to go into Executive Session (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-19-7f27b029</link><guid isPermaLink="false">doc-19-7f27b029</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This local measure involves considering a motion to go into Executive Session, which means the group will temporarily stop public discussion and gather in private to discuss sensitive or confidential matters. It affects those who are part of the group or organization that voted on the motion.
+<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:01:13 +0000</lastBuildDate><item><title>[Fort Collins City Council] Consideration of a motion to go into Executive Session (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-19-7f27b029</link><guid isPermaLink="false">doc-19-7f27b029</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This local measure involves considering a motion to go into Executive Session, which means the group will temporarily stop public discussion and gather in private to discuss sensitive or confidential matters. It affects those who are part of the group or organization that voted on the motion.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -11,7 +11,7 @@ Official Document: https://fortcollinsco.portal.civicclerk.com/event/61/files#mi
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Westminster City Council] Approve the Minutes of November 9, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_af311c67c8516f</link><guid isPermaLink="false">ev_af311c67c8516f</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes of the previous meeting were approved by all council members.
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Westminster City Council] Approve the Minutes of November 9, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_af311c67c8516f</link><guid isPermaLink="false">ev_af311c67c8516f</guid><pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes from the previous meeting were approved by all council members.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
@@ -23,7 +23,11 @@ Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeeti
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 52.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://windsorco.portal.civicclerk.com/event/3684/files#minutes</description></item><item><title>[Westminster City Council] Approve the Minutes of October 12, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ddff119e5e46ff</link><guid isPermaLink="false">ev_ddff119e5e46ff</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes of the October 12, 2026 meeting were approved.
+Official Document: https://windsorco.portal.civicclerk.com/event/3684/files#minutes</description></item><item><title>[Westminster City Council] Approve the Minutes of October 26, 2026 (Passed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_cf92388a96c4e9</link><guid isPermaLink="false">ev_cf92388a96c4e9</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the October 26, 2026 minutes was approved by a majority vote.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-1 | Impact Score: 50.4/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of October 12, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ddff119e5e46ff</link><guid isPermaLink="false">ev_ddff119e5e46ff</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
 
@@ -47,11 +51,11 @@ Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 8-1 | Impact Score: 53.9/100 | Source: ai_minutes_pdf
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2763_M_City_Planning_Commission_26-10-14_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-56 Amending Multiple Sections of Article 3 (Code of Ethics) of Chapter 1 (Administration, Personnel and Finance) of the Code of the City of Colorado Springs 2001, as Amended (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_88c3e352925493</link><guid isPermaLink="false">ev_88c3e352925493</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved an ordinance amending the city's code of ethics.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2763_M_City_Planning_Commission_26-10-14_Meeting_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Ordinance No. 26-56 Amending Multiple Sections of Article 3 (Code of Ethics) of Chapter 1 (Administration, Personnel and Finance) of the Code of the City of Colorado Springs 2001, as Amended (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_88c3e352925493</link><guid isPermaLink="false">ev_88c3e352925493</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved an ordinance amending the city's code of ethics.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 9-0 | Impact Score: 55.0/100 | Source: structured_api
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of September 28, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0b5d478efb487e</link><guid isPermaLink="false">ev_0b5d478efb487e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of September 28, 2026 was approved by all present members.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of September 28, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0b5d478efb487e</link><guid isPermaLink="false">ev_0b5d478efb487e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of September 28, 2026 was approved by all present members of the council.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
@@ -75,39 +79,27 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/092820
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of August 24, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_396dab7ea08ae8</link><guid isPermaLink="false">ev_396dab7ea08ae8</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes of the previous meeting were approved.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of August 24, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_396dab7ea08ae8</link><guid isPermaLink="false">ev_396dab7ea08ae8</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes from the previous meeting were approved.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
 Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of August 10, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8cf2fb53cba943</link><guid isPermaLink="false">ev_8cf2fb53cba943</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
 Official Document: https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of July 27, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_b9d0c28ac6d895</link><guid isPermaLink="false">ev_b9d0c28ac6d895</guid><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of July 27, 2026 was approved by all present members of the City Council.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to move the executive session from post-meeting to the regular meeting following the Employee Service Awards (Passed 6-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_e6dcea82fabbf6</link><guid isPermaLink="false">ev_e6dcea82fabbf6</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council voted to move the executive session from post-meeting to the regular meeting following the Employee Service Awards.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to move the executive session from post-meeting to the regular meeting following the Employee Service Awards (Passed 6-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_e6dcea82fabbf6</link><guid isPermaLink="false">ev_e6dcea82fabbf6</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council voted to move the executive session from post-meeting to the regular meeting following the Employee Service Awards.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-1 | Impact Score: 51.4/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of July 13, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_dd748fad7a5f34</link><guid isPermaLink="false">ev_dd748fad7a5f34</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council approved the minutes of the July 13, 2026 meeting.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of July 13, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_dd748fad7a5f34</link><guid isPermaLink="false">ev_dd748fad7a5f34</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the July 13 meeting.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of June 22, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_054ee33be6edd3</link><guid isPermaLink="false">ev_054ee33be6edd3</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of June 8, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_a77bc080c8dc79</link><guid isPermaLink="false">ev_a77bc080c8dc79</guid><pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The minutes from the previous meeting were approved by all council members.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of May 18, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_831b7c8d8e1412</link><guid isPermaLink="false">ev_831b7c8d8e1412</guid><pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF</description></item><item><title>[Erie Town Council] Election of Chair and Vice Chair of the Planning Commission (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8b56e7bdfaec44</link><guid isPermaLink="false">ev_8b56e7bdfaec44</guid><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Erie Town Council] Election of Chair and Vice Chair of the Planning Commission (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8b56e7bdfaec44</link><guid isPermaLink="false">ev_8b56e7bdfaec44</guid><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -115,11 +107,7 @@ Official Document: https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planni
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 34.3/100 | Source: ai_minutes_pdf
 
-Official Document: https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planning_Commission_26-06-03_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of May 11, 2026 (Passed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_c3163804b0088a</link><guid isPermaLink="false">ev_c3163804b0088a</guid><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-1 | Impact Score: 55.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/6690/05182026-Vote-Tracking-PDF</description></item><item><title>[Thornton City Council] Motion to Approve January Minutes (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5fc4bfa9cfb362</link><guid isPermaLink="false">ev_5fc4bfa9cfb362</guid><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the January minutes without objections.
+Official Document: https://erie.legistar1.com/erie/meetings/2026/6/3077_M_Planning_Commission_26-06-03_Meeting_Minutes.pdf</description></item><item><title>[Thornton City Council] Motion to Approve January Minutes (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5fc4bfa9cfb362</link><guid isPermaLink="false">ev_5fc4bfa9cfb362</guid><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the January minutes without objections.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 8-0 | Impact Score: 37.8/100 | Source: ai_minutes_pdf
 

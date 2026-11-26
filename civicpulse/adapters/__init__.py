@@ -9,3 +9,4 @@ __all__ = [
     "list_adapters",
     "register_adapter",
 ]
+from . import gov_web  # noqa: F401
