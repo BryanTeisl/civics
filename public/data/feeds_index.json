@@ -9,7 +9,7 @@
     "country_us__state_co__place_denver": {
       "name": "Denver City Council",
       "url": "feeds/jur_country_us__state_co__place_denver.xml",
-      "item_count": 80
+      "item_count": 83
     },
     "country_us__state_co__place_erie": {
       "name": "Erie Town Council",
@@ -39,38 +39,43 @@
     "country_us__state_co__place_westminster": {
       "name": "Westminster City Council",
       "url": "feeds/jur_country_us__state_co__place_westminster.xml",
-      "item_count": 76
+      "item_count": 82
     },
     "country_us__state_co__place_windsor": {
       "name": "Windsor Town Board",
       "url": "feeds/jur_country_us__state_co__place_windsor.xml",
       "item_count": 7
+    },
+    "country_us__state_co__school_district_poudre_r1": {
+      "name": "Poudre School District Board of Education",
+      "url": "feeds/jur_country_us__state_co__school_district_poudre_r1.xml",
+      "item_count": 11
     }
   },
   "topics": {
     "Budget & Finance": {
       "url": "feeds/topic_budget_finance.xml",
-      "item_count": 31
+      "item_count": 33
     },
     "Contracts & Procurement": {
       "url": "feeds/topic_contracts_procurement.xml",
-      "item_count": 38
+      "item_count": 39
     },
     "Education & Schools": {
       "url": "feeds/topic_education_schools.xml",
-      "item_count": 6
+      "item_count": 7
     },
     "General": {
       "url": "feeds/topic_general.xml",
-      "item_count": 80
+      "item_count": 88
     },
     "Governance & Elections": {
       "url": "feeds/topic_governance_elections.xml",
-      "item_count": 66
+      "item_count": 69
     },
     "Housing & Development": {
       "url": "feeds/topic_housing_development.xml",
-      "item_count": 46
+      "item_count": 49
     },
     "Infrastructure & Transit": {
       "url": "feeds/topic_infrastructure_transit.xml",
@@ -82,7 +87,7 @@
     },
     "Permits & Licensing": {
       "url": "feeds/topic_permits_licensing.xml",
-      "item_count": 16
+      "item_count": 18
     },
     "Public Safety": {
       "url": "feeds/topic_public_safety.xml",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 03:09:46 UTC",
+  "generated_at": "2026-11-26 03:28:40 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:thornton": [
       {
@@ -703,6 +703,29 @@
             "event_id": "ev_d162b4540fcbf2",
             "meeting_date": "2026-07-27",
             "title": "Remove Councillor's Bill No. 26 from the table",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approve minutes june 2026",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-06-22",
+        "latest_date": "2026-07-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_a77bc080c8dc79",
+            "meeting_date": "2026-06-22",
+            "title": "Approve the Minutes of June 8, 2026",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_054ee33be6edd3",
+            "meeting_date": "2026-07-13",
+            "title": "Approve the Minutes of June 22, 2026",
             "outcome": "Passed",
             "tally": "7-0"
           }
