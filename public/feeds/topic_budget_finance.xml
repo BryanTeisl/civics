@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Budget &amp; Finance</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Budget &amp; Finance.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:01:12 +0000</lastBuildDate><item><title>[Denver City Council] Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI- (Passed 4-0)</title><link>https://civics-d03.pages.dev/#/bill/legistar-13053-240461</link><guid isPermaLink="false">legistar-13053-240461</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.
+<rss version="2.0"><channel><title>CivicPulse Topic — Budget &amp; Finance</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Budget &amp; Finance.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:12:50 +0000</lastBuildDate><item><title>[Denver City Council] Amends a contract with ATKINSREALIS USA INC. to add 22 months and 20 days for a new end date of 12-31-2029 for Elevate and RISE Bond Program Management. No change to the contract capacity, citywide (PWADM-201839791/DOTI- (Passed 4-0)</title><link>https://civics-d03.pages.dev/#/bill/legistar-13053-240461</link><guid isPermaLink="false">legistar-13053-240461</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The local measure extends the contract with ATKINSREALIS USA INC. managing the Elevate and RISE Bond Program by 22 months and 20 days, changing the original end date to December 31, 2029. This change affects all citywide projects managed under the program.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 4-0 | Impact Score: 31.2/100 | Source: structured_api
 
@@ -15,15 +15,7 @@ Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeeti
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)</description></item><item><title>[Denver City Council] Contract Amendment for Versaterm Public Safety Inc. (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_88419141a32da4</link><guid isPermaLink="false">ev_88419141a32da4</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council approved a contract amendment to increase funding and extend the service contract.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 52.3/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/legistar-13051-240569</link><guid isPermaLink="false">legistar-13051-240569</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance adjusts the salaries of appointed Charter officers in Denver, setting up a routine increase every four years and allowing for a one-time adjustment based on market rates. It affects all appointed officers covered by the revised municipal code.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 5-0 | Impact Score: 42.7/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Rescission of Budget from General Fund Contingency to Appropriations in Other Funds (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_e524f0d09d96aa</link><guid isPermaLink="false">ev_e524f0d09d96aa</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The budget from General Fund Contingency was rescinded and appropriated to other funds.
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)</description></item><item><title>[Denver City Council] Rescission of Budget from General Fund Contingency to Appropriations in Other Funds (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_e524f0d09d96aa</link><guid isPermaLink="false">ev_e524f0d09d96aa</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The budget from General Fund Contingency was rescinded and appropriated to other funds.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 34.2/100 | Source: structured_api
 
@@ -39,11 +31,7 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13037_M_
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-3-1 | Impact Score: 80.3/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf</description></item><item><title>[Westminster City Council] Motion to allow Mayor Pro Tem Nurmela and Councillor Hott to participate virtually (Passed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_b69c7ae649009d</link><guid isPermaLink="false">ev_b69c7ae649009d</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Mayor Pro Tem Nurmela and Councillor Hott to participate virtually was approved by a majority vote.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 5-1 | Impact Score: 50.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF</description></item><item><title>[Fort Collins City Council] Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-9-ebf6ea3d</link><guid isPermaLink="false">doc-9-ebf6ea3d</guid><pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance appropriates any unexpected philanthropic donations received by the city to a general fund, affecting all city residents by potentially improving city services or projects funded by these donations.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf</description></item><item><title>[Fort Collins City Council] Ordinance No. 138, 2026, Appropriating Unanticipated Philanthropic Revenue Received Through City Give (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-9-ebf6ea3d</link><guid isPermaLink="false">doc-9-ebf6ea3d</guid><pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>This ordinance appropriates any unexpected philanthropic donations received by the city to a general fund, affecting all city residents by potentially improving city services or projects funded by these donations.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
@@ -79,27 +67,15 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13025_M_
 
 Topic: Budget &amp; Finance | Outcome: Tabled | Tally: 1-4-2 | Impact Score: 56.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/10262026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Consent Item Pulled: Councillor’s Bill No. 49 on second reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Tabled 1-4-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_6af40582b71d51</link><guid isPermaLink="false">ev_6af40582b71d51</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council voted to table the bill for continuing public business expenses.
-
-Topic: Budget &amp; Finance | Outcome: Tabled | Tally: 1-4-2 | Impact Score: 56.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/10262026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Consent Item Pulled: Councillor’s Bill No. 50 on second reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Tabled 1-4-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_4c18a325be172d</link><guid isPermaLink="false">ev_4c18a325be172d</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council voted to table the bill for continuing public business expenses.
-
-Topic: Budget &amp; Finance | Outcome: Tabled | Tally: 1-4-2 | Impact Score: 56.0/100 | Source: ai_minutes_pdf
-
 Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/10262026-Vote-Tracking-PDF</description></item><item><title>[Windsor Town Board] Ordinance No. 2026-1753 - An Ordinance Amending Portions of Chapters 14 and 15 of the Town of Windsor Municipal Code Concerning Sign Regulations (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_72ef72b00f1684</link><guid isPermaLink="false">ev_72ef72b00f1684</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The Town Board approved an ordinance to amend sign regulations in the town's municipal code.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 52.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://windsorco.portal.civicclerk.com/event/3707/files#minutes</description></item><item><title>[Denver City Council] Adoption of Proclamation Against Amendment 82 (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_488e90b90269cc</link><guid isPermaLink="false">ev_488e90b90269cc</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>Council adopted a proclamation opposing Amendment 82, which grants constitutional rights to purchase and sell natural gas.
+Official Document: https://windsorco.portal.civicclerk.com/event/3707/files#minutes</description></item><item><title>[Colorado Springs City Council] Resolution Approving the 2027 Budget for the Colorado Springs Downtown Development Authority (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_7783f4ca43f804</link><guid isPermaLink="false">ev_7783f4ca43f804</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council approved a resolution to approve the budget for the Downtown Development Authority.
 
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 11-0-1 | Impact Score: 28.5/100 | Source: structured_api
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Greeley City Council] Ballot Measure 2F (Passed 7-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_a7f2a151f8131c</link><guid isPermaLink="false">ev_a7f2a151f8131c</guid><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0-1 | Impact Score: 60.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://greeleyco.portal.civicclerk.com/event/3342/files#minutes</description></item><item><title>[Denver City Council] Mayor's Proposed 2027 Budget Notice (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_300b25c06939e6</link><guid isPermaLink="false">ev_300b25c06939e6</guid><pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>Council approved publishing a notice for the Mayor's proposed 2027 budget.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2806_M_City_Council_Work_Session_26-10-26_Meeting_Minutes.pdf</description></item><item><title>[Denver City Council] Mayor's Proposed 2027 Budget Notice (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_300b25c06939e6</link><guid isPermaLink="false">ev_300b25c06939e6</guid><pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>Council approved publishing a notice for the Mayor's proposed 2027 budget.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 11-0-1 | Impact Score: 43.5/100 | Source: structured_api
 
@@ -107,43 +83,15 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13009_M_
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2805_M_City_Council_Work_Session_26-10-12_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Motion to allow Councillor Ezeadi to participate virtually (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_37b1784663c052</link><guid isPermaLink="false">ev_37b1784663c052</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Councillor Ezeadi to participate virtually was approved by all present members of the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 47 on first reading to set the 2027 annual base salary of Presiding Municipal Judge Jason Lantagne at $228,779.20, effective January 1, 2027 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_2169fd685ac75e</link><guid isPermaLink="false">ev_2169fd685ac75e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to set the annual base salary of Presiding Municipal Judge Jason Lantagne was approved by all present members of the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 48 on first reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_60ee33989ff78e</link><guid isPermaLink="false">ev_60ee33989ff78e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to make appropriations for the year 2027 was approved by all present members of the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 50 on first reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_1cd8c1501cf4ad</link><guid isPermaLink="false">ev_1cd8c1501cf4ad</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to make appropriations for the year 2027 was approved by all present members of the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Fort Collins City Council] Budget Vote (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_550e14b1bf4496</link><guid isPermaLink="false">ev_550e14b1bf4496</guid><pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council voted to approve the city's budget for the upcoming fiscal year.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2805_M_City_Council_Work_Session_26-10-12_Meeting_Minutes.pdf</description></item><item><title>[Fort Collins City Council] Budget Vote (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_550e14b1bf4496</link><guid isPermaLink="false">ev_550e14b1bf4496</guid><pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council voted to approve the city's budget for the upcoming fiscal year.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 57.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.portal.civicclerk.com/event/2259/files#minutes</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 41 on second reading creating Chapter 16, Title II, of the Westminster Municipal Code to establish a Utility Affordability Advisory Board (Failed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_aeb9ff75e20e68</link><guid isPermaLink="false">ev_aeb9ff75e20e68</guid><pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council failed to approve the second reading of Bill No. 41, which establishes a new advisory board for utility affordability.
-
-Topic: Budget &amp; Finance | Outcome: Failed | Tally: 5-1 | Impact Score: 50.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to allow Carmelia to participate virtually (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_25c54c3652683b</link><guid isPermaLink="false">ev_25c54c3652683b</guid><pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Claire Carmelia to participate virtually was approved by the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF</description></item><item><title>[Colorado Springs City Council] Budget Review (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_984d24b545364f</link><guid isPermaLink="false">ev_984d24b545364f</guid><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council reviewed the quarterly financial report and approved it with a unanimous vote.
+Official Document: https://fortcollinsco.portal.civicclerk.com/event/2259/files#minutes</description></item><item><title>[Colorado Springs City Council] Budget Review (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_984d24b545364f</link><guid isPermaLink="false">ev_984d24b545364f</guid><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The City Council reviewed the quarterly financial report and approved it with a unanimous vote.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 60.0/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2800_M_City_Council_Work_Session_26-09-21_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 41 on first reading to establish Chapter 16, Title II of the Westminster Municipal Code to establish a Utility Affordability Advisory Board (Passed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_9037827a05930e</link><guid isPermaLink="false">ev_9037827a05930e</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The first reading of the bill to establish a Utility Affordability Advisory Board was passed.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 5-1 | Impact Score: 50.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Public Hearing on the Proposed 2027 Budget (first reading) (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8ed8ffe8069d84</link><guid isPermaLink="false">ev_8ed8ffe8069d84</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The first reading of the proposed 2027 budget was passed.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2800_M_City_Council_Work_Session_26-09-21_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Public Hearing on the Proposed 2027 Budget (first reading) (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8ed8ffe8069d84</link><guid isPermaLink="false">ev_8ed8ffe8069d84</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The first reading of the proposed 2027 budget was passed.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
@@ -163,35 +111,7 @@ Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0-1 | Impact Score: 55.0/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 35 on first reading amending Westminster Municipal Code Chapter 6, Title XIII, providing for the declaration of ﬁre restrictions (Passed 7-1-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_f295ef11b4b353</link><guid isPermaLink="false">ev_f295ef11b4b353</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council approved the first reading of a bill to declare fire restrictions.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-1-2 | Impact Score: 50.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to allow Councillor Nurmela to participate virtually (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_24b420277e17ad</link><guid isPermaLink="false">ev_24b420277e17ad</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Councillor Nurmela to participate virtually was approved by the council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to allow Councillor Hott to participate virtually (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_e4dc6e56e556aa</link><guid isPermaLink="false">ev_e4dc6e56e556aa</guid><pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Councillor Hott to participate virtually was approved by all present members of the City Council.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 28 on second reading, adding Section 20 to Chapter 1 of Title X to the Westminster Municipal Code to provide for traffic regulation through the use of automated vehicle identification systems (Failed 2-5)</title><link>https://civics-d03.pages.dev/#/bill/ev_333c2ae1c9ee99</link><guid isPermaLink="false">ev_333c2ae1c9ee99</guid><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The council failed to approve the second reading of Bill No. 28, which would regulate traffic using automated vehicle identification systems.
-
-Topic: Budget &amp; Finance | Outcome: Failed | Tally: 2-5 | Impact Score: 67.9/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 28 on first reading, adding Section 20 to Chapter 1 of Title X to the Westminster Municipal Code to provide for traffic regulation through the use of automated vehicle identifications systems conditioned on the use of the funds going toward traffic safety. (Passed 4-3)</title><link>https://civics-d03.pages.dev/#/bill/ev_892f734faab97f</link><guid isPermaLink="false">ev_892f734faab97f</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to approve the bill for traffic regulation was passed with some conditions.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 4-3 | Impact Score: 74.3/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Motion to allow Councillors Ezeadi, Ireland, and Hott to participate virtually (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0d36f655829ce7</link><guid isPermaLink="false">ev_0d36f655829ce7</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to allow Councillors Ezeadi, Ireland, and Hott to participate virtually via video conference was approved.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] First Reading of Councillor's Bill No. 24 Amending Title VI of the Westminster Municipal Code, Specifically 6-7-12 Regarding Restrictions on Sale and Possession of Animals (Chickens). (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_da713084b971eb</link><guid isPermaLink="false">ev_da713084b971eb</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The motion to approve the bill amending animal control restrictions was passed unanimously.
-
-Topic: Budget &amp; Finance | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Thornton City Council] Motion to Approve 2025 Budget Report and 2027 Budget Schedule (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_f5adb87d25285d</link><guid isPermaLink="false">ev_f5adb87d25285d</guid><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The board approved the 2025 budget report and their request for the 2027 budget schedule.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf</description></item><item><title>[Thornton City Council] Motion to Approve 2025 Budget Report and 2027 Budget Schedule (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_f5adb87d25285d</link><guid isPermaLink="false">ev_f5adb87d25285d</guid><pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The board approved the 2025 budget report and their request for the 2027 budget schedule.
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 37.8/100 | Source: ai_minutes_pdf
 
@@ -199,4 +119,8 @@ Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplat
 
 Topic: Budget &amp; Finance | Outcome: Passed | Tally: 8-0 | Impact Score: 37.8/100 | Source: ai_minutes_pdf
 
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18338</description></item></channel></rss>
+Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18338</description></item><item><title>[Thornton City Council] Budget Updates and Upcoming Programs and Events (Passed 9-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_8695c408804f7c</link><guid isPermaLink="false">ev_8695c408804f7c</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Budget &amp; Finance</category><description>The board approved the budget updates and learned about upcoming programs and events.
+
+Topic: Budget &amp; Finance | Outcome: Passed | Tally: 9-0-1 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21342</description></item></channel></rss>

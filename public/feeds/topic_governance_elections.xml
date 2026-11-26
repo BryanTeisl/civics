@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:01:13 +0000</lastBuildDate><item><title>[Fort Collins City Council] Consideration of a motion to go into Executive Session (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-19-7f27b029</link><guid isPermaLink="false">doc-19-7f27b029</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This local measure involves considering a motion to go into Executive Session, which means the group will temporarily stop public discussion and gather in private to discuss sensitive or confidential matters. It affects those who are part of the group or organization that voted on the motion.
+<rss version="2.0"><channel><title>CivicPulse Topic — Governance &amp; Elections</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Governance &amp; Elections.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:12:50 +0000</lastBuildDate><item><title>[Fort Collins City Council] Motion to go into Executive Session for Annual Evaluations (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-1-4db9d8ce</link><guid isPermaLink="false">doc-1-4db9d8ce</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to go into Executive Session for Annual Evaluations was passed unanimously, affecting all employees whose evaluations are scheduled during that time.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Fort Collins City Council] Consideration of a motion to go into Executive Session (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-19-7f27b029</link><guid isPermaLink="false">doc-19-7f27b029</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This local measure involves considering a motion to go into Executive Session, which means the group will temporarily stop public discussion and gather in private to discuss sensitive or confidential matters. It affects those who are part of the group or organization that voted on the motion.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -19,7 +23,15 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/7919/112320
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)</description></item><item><title>[Windsor Town Board] Proclamation for Colorado Law Enforcement Records Personnel Week (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5ab64d3e5d1aca</link><guid isPermaLink="false">ev_5ab64d3e5d1aca</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2384,plainText=false)</description></item><item><title>[Denver City Council] For an ordinance amending Section 18-91 of the Denver Revised Municipal Code, concerning the salaries of appointed Charter officers, to establish an automatic quadrennial salary adjustment, a one-time market adjustment e (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/legistar-13051-240569</link><guid isPermaLink="false">legistar-13051-240569</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>This ordinance adjusts the salaries of appointed Charter officers in Denver, setting up a routine increase every four years and allowing for a one-time adjustment based on market rates. It affects all appointed officers covered by the revised municipal code.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 42.7/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Ordinance Amending Section 18-91 of the Denver Revised Municipal Code for Charter Officers Salaries (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_f618ee45f2345b</link><guid isPermaLink="false">ev_f618ee45f2345b</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved an ordinance that adjusts the salaries of Charter officers with an automatic four-year review and performance evaluations.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 42.7/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Windsor Town Board] Proclamation for Colorado Law Enforcement Records Personnel Week (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5ab64d3e5d1aca</link><guid isPermaLink="false">ev_5ab64d3e5d1aca</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Mayor Pro Tem Hallett proclaimed November 9 through November 13, 2026 as Colorado Law Enforcement Records Personnel Week.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 52.1/100 | Source: ai_minutes_pdf
 
@@ -27,7 +39,19 @@ Official Document: https://windsorco.portal.civicclerk.com/event/3684/files#minu
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-1 | Impact Score: 50.4/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of October 12, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ddff119e5e46ff</link><guid isPermaLink="false">ev_ddff119e5e46ff</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF</description></item><item><title>[Greeley City Council] Reauthorization of Boards (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_82ebe2a8568d19</link><guid isPermaLink="false">ev_82ebe2a8568d19</guid><pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council reauthorized four boards for another three-year term.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
+
+Official Document: https://greeleyco.portal.civicclerk.com/event/3366/files#minutes</description></item><item><title>[Westminster City Council] Consent Item Pulled: Councillor’s Bill No. 49 on second reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Tabled 1-4-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_6af40582b71d51</link><guid isPermaLink="false">ev_6af40582b71d51</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council voted to table the bill for continuing public business expenses.
+
+Topic: Governance &amp; Elections | Outcome: Tabled | Tally: 1-4-2 | Impact Score: 56.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/10262026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Consent Item Pulled: Councillor’s Bill No. 50 on second reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Tabled 1-4-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_4c18a325be172d</link><guid isPermaLink="false">ev_4c18a325be172d</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council voted to table the bill for continuing public business expenses.
+
+Topic: Governance &amp; Elections | Outcome: Tabled | Tally: 1-4-2 | Impact Score: 56.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/10262026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of October 12, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ddff119e5e46ff</link><guid isPermaLink="false">ev_ddff119e5e46ff</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
 
@@ -35,15 +59,23 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/7790/102620
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 29.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://windsorco.portal.civicclerk.com/event/3707/files#minutes</description></item><item><title>[Denver City Council] Adoption of Proclamation for Silica Awareness Week (Passed 10-0-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_bfe16627c37f96</link><guid isPermaLink="false">ev_bfe16627c37f96</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation declaring the week of October 25, 2026 as Silica Awareness Week.
+Official Document: https://windsorco.portal.civicclerk.com/event/3707/files#minutes</description></item><item><title>[Denver City Council] Adoption of Proclamation Honoring Pete Moutzouris (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_09b78f382ce0ed</link><guid isPermaLink="false">ev_09b78f382ce0ed</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation honoring Pete Moutzouris, a local resident.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 11-0-1 | Impact Score: 28.5/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Adoption of Proclamation for Silica Awareness Week (Passed 10-0-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_bfe16627c37f96</link><guid isPermaLink="false">ev_bfe16627c37f96</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation declaring the week of October 25, 2026 as Silica Awareness Week.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 10-0-2 | Impact Score: 28.5/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Resolution Approving Mayor's Reappointment to Denver African American Commission (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_07e41ae266344a</link><guid isPermaLink="false">ev_07e41ae266344a</guid><pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council approved a resolution approving the Mayor's reappointment to the Denver African American Commission.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Adoption of Proclamation Against Amendment 82 (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_488e90b90269cc</link><guid isPermaLink="false">ev_488e90b90269cc</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation opposing Amendment 82, which grants constitutional rights to purchase and sell natural gas.
 
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 11-0-1 | Impact Score: 43.5/100 | Source: structured_api
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 11-0-1 | Impact Score: 28.5/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Motion to Approve Minutes for September 3, 2026 Work Session (Passed 8-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_9e41be862c91e9</link><guid isPermaLink="false">ev_9e41be862c91e9</guid><pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Planning Commission approved the minutes from their September 3, 2026 work session.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Greeley City Council] Ballot Measure 2F (Passed 7-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_a7f2a151f8131c</link><guid isPermaLink="false">ev_a7f2a151f8131c</guid><pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Ballot Measure 2F was approved by the City Council, with all members voting in favor except one who abstained.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0-1 | Impact Score: 60.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://greeleyco.portal.civicclerk.com/event/3342/files#minutes</description></item><item><title>[Colorado Springs City Council] Motion to Approve Minutes for September 3, 2026 Work Session (Passed 8-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_9e41be862c91e9</link><guid isPermaLink="false">ev_9e41be862c91e9</guid><pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Planning Commission approved the minutes from their September 3, 2026 work session.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 8-1 | Impact Score: 53.9/100 | Source: ai_minutes_pdf
 
@@ -55,7 +87,23 @@ Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 50.6/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of September 28, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0b5d478efb487e</link><guid isPermaLink="false">ev_0b5d478efb487e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of September 28, 2026 was approved by all present members of the council.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/10/2802_M_City_Council_26-10-13_Meeting_Minutes.pdf</description></item><item><title>[Denver City Council] Adoption of Proclamation in Observance of Indigenous Peoples' Day (Passed 12-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_2a774488f93315</link><guid isPermaLink="false">ev_2a774488f93315</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation recognizing Indigenous Peoples' Day.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 12-0 | Impact Score: 43.5/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Adoption of Proclamation Recognizing the 2026 Veterans Stand Down and Honoring Those Who Serve Our Veterans (Passed 12-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_d7e0ca2e1354b6</link><guid isPermaLink="false">ev_d7e0ca2e1354b6</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>Council adopted a proclamation recognizing the Veterans Stand Down and honoring veterans.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 12-0 | Impact Score: 43.5/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of September 28, 2026 (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_0b5d478efb487e</link><guid isPermaLink="false">ev_0b5d478efb487e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of September 28, 2026 was approved by all present members of the council.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 48 on first reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_60ee33989ff78e</link><guid isPermaLink="false">ev_60ee33989ff78e</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to make appropriations for the year 2027 was approved by all present members of the council.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7679/10122026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Pass Councillor's Bill No. 50 on first reading making appropriations to pay the expense of continuing the public business for the year 2027 and other purposes required by the City Charter and by any other law (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_1cd8c1501cf4ad</link><guid isPermaLink="false">ev_1cd8c1501cf4ad</guid><pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to make appropriations for the year 2027 was approved by all present members of the council.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
@@ -75,7 +123,11 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/9/12963_M_C
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Proclamation for Constitution Week (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_935b3fd8e6fe8f</link><guid isPermaLink="false">ev_935b3fd8e6fe8f</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>A proclamation for Constitution Week was passed.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF</description></item><item><title>[Colorado Springs City Council] Closed Executive Session (Passed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_63221bcc415ff8</link><guid isPermaLink="false">ev_63221bcc415ff8</guid><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council approved holding a closed executive session to discuss legal advice regarding Wilson Ranch Park and sales/use tax refunds.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 39.8/100 | Source: structured_api
+
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2857_M_City_Council_26-09-21_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Proclamation for Constitution Week (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_935b3fd8e6fe8f</link><guid isPermaLink="false">ev_935b3fd8e6fe8f</guid><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>A proclamation for Constitution Week was passed.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 42.1/100 | Source: ai_minutes_pdf
 
@@ -83,7 +135,11 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/091420
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 6-0 | Impact Score: 37.1/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of August 10, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8cf2fb53cba943</link><guid isPermaLink="false">ev_8cf2fb53cba943</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF</description></item><item><title>[Colorado Springs City Council] Polling for Closed Executive Session (Passed 7-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_df4372e3adf5d8</link><guid isPermaLink="false">ev_df4372e3adf5d8</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The City Council voted to hold a Closed Executive Session regarding the sale of Meadows Park Community Center.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-1 | Impact Score: 47.8/100 | Source: structured_api
+
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2850_M_City_Council_26-08-24_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Approve the Minutes of August 10, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8cf2fb53cba943</link><guid isPermaLink="false">ev_8cf2fb53cba943</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The council approved the minutes of the previous meeting.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -99,7 +155,11 @@ Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/072720
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Erie Town Council] Election of Chair and Vice Chair of the Planning Commission (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8b56e7bdfaec44</link><guid isPermaLink="false">ev_8b56e7bdfaec44</guid><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of June 22, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_054ee33be6edd3</link><guid isPermaLink="false">ev_054ee33be6edd3</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The motion to approve the minutes of the previous meeting was passed unanimously.
+
+Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Erie Town Council] Election of Chair and Vice Chair of the Planning Commission (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8b56e7bdfaec44</link><guid isPermaLink="false">ev_8b56e7bdfaec44</guid><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Planning Commission elected Chair Sawusch and Vice Chair Dreckman for one year each.
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
 
@@ -139,36 +199,4 @@ Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateI
 
 Topic: Governance &amp; Elections | Outcome: Passed | Tally: 7-0 | Impact Score: 45.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17512</description></item><item><title>[Longmont City Council] Callahan House Advisory Board Retreat Minutes (Recorded)</title><link>https://civics-d03.pages.dev/#/bill/ev_8d3849aa80922c</link><guid isPermaLink="false">ev_8d3849aa80922c</guid><pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Callahan House Advisory Board held a retreat to discuss various projects and events for the year.
-
-Topic: Governance &amp; Elections | Outcome: Recorded | Impact Score: 10.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17512</description></item><item><title>[Longmont City Council] Approve Minutes of October 27, 2025 Meeting (Passed 3-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_8c4ae189d8da55</link><guid isPermaLink="false">ev_8c4ae189d8da55</guid><pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The Longmont Golf Course Advisory Board approved the minutes of their October 27, 2025 meeting.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 3-0 | Impact Score: 33.6/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17709</description></item><item><title>[Thornton City Council] Approval of Minutes from October 15, 2025 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_df982a3f24548c</link><guid isPermaLink="false">ev_df982a3f24548c</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the minutes of October 15, 2025.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 9-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21342</description></item><item><title>[Thornton City Council] Approval of Minutes from October 15, 2025 (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_3589343722d8b4</link><guid isPermaLink="false">ev_3589343722d8b4</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the minutes of October 15, 2025.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 9-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21342</description></item><item><title>[Longmont City Council] Motion to approve November 20, 2025 minutes as is (Passed 8-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_343cbcb1dc9cc5</link><guid isPermaLink="false">ev_343cbcb1dc9cc5</guid><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The commission approved the November 20, 2025 minutes without any changes.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 8-1 | Impact Score: 53.9/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17635</description></item><item><title>[Longmont City Council] Approval of Previous Month’s Minutes (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_d8f244d0e8f090</link><guid isPermaLink="false">ev_d8f244d0e8f090</guid><pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the minutes from December's meeting.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 39.3/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17511</description></item><item><title>[Longmont City Council] 2026 Officer Elections (Passed 5-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_d3bc2588b0e88c</link><guid isPermaLink="false">ev_d3bc2588b0e88c</guid><pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board elected Karen Kruse as Chairperson, Cindy Martini as Secretary, and Jeff Gallaher as Historian.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 5-0 | Impact Score: 39.3/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17511</description></item><item><title>[Thornton City Council] Motion to Approve December Minutes (Passed 2-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_670d9fbfc5b66e</link><guid isPermaLink="false">ev_670d9fbfc5b66e</guid><pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate><category>Governance &amp; Elections</category><description>The board approved the December minutes for record-keeping.
-
-Topic: Governance &amp; Elections | Outcome: Passed | Tally: 2-0 | Impact Score: 24.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=17778</description></item></channel></rss>
+Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17512</description></item></channel></rss>

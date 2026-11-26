@@ -9,7 +9,7 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:el_paso",
     "status": "active",
     "docs_since": "2026-08-11",
-    "last_updated": "2026-11-26 02:01:11 UTC",
+    "last_updated": "2026-11-26 02:12:48 UTC",
     "as_of_date": "2026-11-20",
     "stale_days": 6,
     "is_stale": false,
@@ -35,7 +35,7 @@
         "attendance_rate": 87,
         "present_votes": 34,
         "total_votes": 39,
-        "avg_impact_score": 49.4,
+        "avg_impact_score": 47.9,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -194,7 +194,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -206,7 +206,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -218,7 +218,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -230,7 +230,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -242,7 +242,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -278,7 +278,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -290,7 +290,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -302,7 +302,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -314,7 +314,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -326,7 +326,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -470,7 +470,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -482,7 +482,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -494,7 +494,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -506,7 +506,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -531,7 +531,7 @@
         "attendance_rate": 100,
         "present_votes": 40,
         "total_votes": 40,
-        "avg_impact_score": 49.7,
+        "avg_impact_score": 48.2,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -690,7 +690,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -702,7 +702,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -714,7 +714,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -726,7 +726,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -738,7 +738,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -774,7 +774,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -786,7 +786,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -798,7 +798,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -810,7 +810,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -822,7 +822,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -978,7 +978,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -990,7 +990,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1002,7 +1002,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1014,7 +1014,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -1039,7 +1039,7 @@
         "attendance_rate": 90,
         "present_votes": 37,
         "total_votes": 41,
-        "avg_impact_score": 49.6,
+        "avg_impact_score": 48.1,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -1210,7 +1210,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1222,7 +1222,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1234,7 +1234,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1246,7 +1246,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1258,7 +1258,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "Asked about the increase in total construction valuation and stated it is due to large commercial projects being built such as Swire Coca-Cola and Memorial Hospital.",
           "verbatim_quote": "Mr. Lovell stated the increase is due to some very large commercial projects being built such as Swire Coca-Cola and Memorial Hospital."
         },
@@ -1294,7 +1294,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1306,7 +1306,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1318,7 +1318,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1330,7 +1330,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1342,7 +1342,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1498,7 +1498,7 @@
           "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1510,7 +1510,7 @@
           "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1522,7 +1522,7 @@
           "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1534,7 +1534,7 @@
           "event_type": "resolution",
           "vote": "Absent",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -1559,7 +1559,7 @@
         "attendance_rate": 81,
         "present_votes": 13,
         "total_votes": 16,
-        "avg_impact_score": 48.8,
+        "avg_impact_score": 48.7,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -1682,7 +1682,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1779,7 +1779,7 @@
         "attendance_rate": 100,
         "present_votes": 16,
         "total_votes": 16,
-        "avg_impact_score": 47.6,
+        "avg_impact_score": 46.5,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -1938,7 +1938,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1950,7 +1950,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1962,7 +1962,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -1974,7 +1974,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -1999,7 +1999,7 @@
         "attendance_rate": 95,
         "present_votes": 38,
         "total_votes": 40,
-        "avg_impact_score": 49.8,
+        "avg_impact_score": 48.3,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -2170,7 +2170,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2182,7 +2182,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2194,7 +2194,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2206,7 +2206,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2218,7 +2218,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2254,7 +2254,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2266,7 +2266,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2278,7 +2278,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2290,7 +2290,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2302,7 +2302,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2446,7 +2446,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2458,7 +2458,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2470,7 +2470,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2482,7 +2482,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -2507,7 +2507,7 @@
         "attendance_rate": 100,
         "present_votes": 37,
         "total_votes": 37,
-        "avg_impact_score": 50.2,
+        "avg_impact_score": 48.6,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -2630,7 +2630,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2642,7 +2642,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2654,7 +2654,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2666,7 +2666,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2678,7 +2678,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2714,7 +2714,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2726,7 +2726,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2738,7 +2738,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2750,7 +2750,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2762,7 +2762,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2918,7 +2918,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2930,7 +2930,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2942,7 +2942,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -2954,7 +2954,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -2979,7 +2979,7 @@
         "attendance_rate": 97,
         "present_votes": 38,
         "total_votes": 39,
-        "avg_impact_score": 49.4,
+        "avg_impact_score": 47.9,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -3138,7 +3138,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3150,7 +3150,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3162,7 +3162,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3174,7 +3174,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3186,7 +3186,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3222,7 +3222,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3234,7 +3234,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3246,7 +3246,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3258,7 +3258,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3270,7 +3270,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3414,7 +3414,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3426,7 +3426,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3438,7 +3438,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3450,7 +3450,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -3475,7 +3475,7 @@
         "attendance_rate": 100,
         "present_votes": 38,
         "total_votes": 38,
-        "avg_impact_score": 49.5,
+        "avg_impact_score": 47.9,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -3634,7 +3634,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3646,7 +3646,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3658,7 +3658,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3670,7 +3670,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3682,7 +3682,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 42.8,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3718,7 +3718,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3730,7 +3730,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3742,7 +3742,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3754,7 +3754,7 @@
           "event_type": "ordinance",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 55.0,
+          "impact_score": 50.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3766,7 +3766,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3898,7 +3898,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3910,7 +3910,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3922,7 +3922,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         },
@@ -3934,7 +3934,7 @@
           "event_type": "resolution",
           "vote": "Yes",
           "is_pivotal": false,
-          "impact_score": 45.0,
+          "impact_score": 40.6,
           "rationale_summary": "",
           "verbatim_quote": ""
         }
@@ -4859,7 +4859,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "resolution",
-      "topic": "Housing & Development",
+      "topic": "Budget & Finance",
       "outcome": "Passed",
       "yes_count": 8,
       "no_count": 0,
@@ -4934,7 +4934,7 @@
           "verbatim_quote": ""
         }
       ],
-      "business_relevant": true,
+      "business_relevant": false,
       "outcome_status": "Passed",
       "passage_method": "Roll Call",
       "tally": "8-0",
@@ -4963,7 +4963,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "resolution",
-      "topic": "Housing & Development",
+      "topic": "Taxes, Fees & Utilities",
       "outcome": "Passed",
       "yes_count": 8,
       "no_count": 0,
@@ -7250,7 +7250,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "consent",
-      "topic": "Taxes, Fees & Utilities",
+      "topic": "Governance & Elections",
       "outcome": "Passed",
       "yes_count": 7,
       "no_count": 1,
@@ -7335,7 +7335,7 @@
           "verbatim_quote": ""
         }
       ],
-      "business_relevant": true,
+      "business_relevant": false,
       "outcome_status": "Passed",
       "passage_method": "Roll Call",
       "tally": "7-1",
@@ -7602,7 +7602,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "ordinance",
-      "topic": "Housing & Development",
+      "topic": "Education & Schools",
       "outcome": "Passed",
       "yes_count": 8,
       "no_count": 0,
@@ -7687,7 +7687,7 @@
           "verbatim_quote": ""
         }
       ],
-      "business_relevant": true,
+      "business_relevant": false,
       "outcome_status": "Passed",
       "passage_method": "Roll Call",
       "tally": "8-0-1",
@@ -8349,7 +8349,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "ordinance",
-      "topic": "Infrastructure & Transit",
+      "topic": "Education & Schools",
       "outcome": "Passed",
       "yes_count": 8,
       "no_count": 0,
@@ -8444,7 +8444,7 @@
           "verbatim_quote": ""
         }
       ],
-      "business_relevant": true,
+      "business_relevant": false,
       "outcome_status": "Passed",
       "passage_method": "Roll Call",
       "tally": "8-0-1",
@@ -8516,7 +8516,7 @@
       "diff_summary": "",
       "qa_status": "needs_review",
       "event_type": "motion",
-      "topic": "Parks, Water & Environment",
+      "topic": "Governance & Elections",
       "outcome": "Passed",
       "yes_count": 7,
       "no_count": 1,

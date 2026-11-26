@@ -1,17 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"><channel><title>CivicPulse Topic — Contracts &amp; Procurement</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Contracts &amp; Procurement.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:01:12 +0000</lastBuildDate><item><title>[Fort Collins City Council] Motion to go into Executive Session for Annual Evaluations (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/doc-1-4db9d8ce</link><guid isPermaLink="false">doc-1-4db9d8ce</guid><pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The motion to go into Executive Session for Annual Evaluations was passed unanimously, affecting all employees whose evaluations are scheduled during that time.
+<rss version="2.0"><channel><title>CivicPulse Topic — Contracts &amp; Procurement</title><link>https://civics-d03.pages.dev</link><description>All tracked local government measures related to Contracts &amp; Procurement.</description><language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 02:12:50 +0000</lastBuildDate><item><title>[Denver City Council] Approval of Contract with Summer Scholars (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_66e1e23b96c5fa</link><guid isPermaLink="false">ev_66e1e23b96c5fa</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a contract to fund comprehensive out-of-school-time programs for $995,700.
 
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 52.3/100 | Source: structured_api
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2411,plainText=false)</description></item><item><title>[Denver City Council] Approval of Contract with The Empowerment Program, Inc. (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ad102e0217d2bb</link><guid isPermaLink="false">ev_ad102e0217d2bb</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a contract for $1,614,718 to provide community corrections case management services.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approval of Contract with The Empowerment Program, Inc. (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ad102e0217d2bb</link><guid isPermaLink="false">ev_ad102e0217d2bb</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a contract for $1,614,718 to provide community corrections case management services.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 47.3/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Amends a lease agreement with Denver Urban Gardens (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_b27891094406f7</link><guid isPermaLink="false">ev_b27891094406f7</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a lease agreement amendment that increases the lease fee and extends the lease term for a community garden.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approval of Contract with ATKINSREALIS USA INC. (Passed 4-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_6dedaf08630ed8</link><guid isPermaLink="false">ev_6dedaf08630ed8</guid><pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a contract with ATKINSREALIS USA INC. to extend the end date of the Elevate and RISE Bond Program Management contract.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 4-0 | Impact Score: 31.2/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13053_M_Transportation_and_Infrastructure_26-11-18_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Contract Amendment for Versaterm Public Safety Inc. (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_88419141a32da4</link><guid isPermaLink="false">ev_88419141a32da4</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a contract amendment to increase funding and extend the service contract.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 52.3/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13051_M_Governance_and_Intergovernmental_Relations_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Amends a lease agreement with Denver Urban Gardens (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_b27891094406f7</link><guid isPermaLink="false">ev_b27891094406f7</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a lease agreement amendment that increases the lease fee and extends the lease term for a community garden.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approves Escrow Funding Agreement with HC Peck &amp; Associates Inc (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_6d26bf280924b1</link><guid isPermaLink="false">ev_6d26bf280924b1</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a funding agreement for a real estate project.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
 
 Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approves Master Purchase Order with Graybar Electric Company, Inc. (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_9242423f96607f</link><guid isPermaLink="false">ev_9242423f96607f</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a purchase order for telecommunications supplies.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13055_M_Finance_and_Business_26-11-17_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Approves Master Purchase Order with WoodRiver Energy, LLC (Passed 9-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_29dcfc6147cc64</link><guid isPermaLink="false">ev_29dcfc6147cc64</guid><pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a purchase order for natural gas supplies.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0 | Impact Score: 48.8/100 | Source: structured_api
 
@@ -39,7 +55,11 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13040_M_
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 6-0 | Impact Score: 34.2/100 | Source: structured_api
 
-Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Denver City Council] Council Resolution 26-1337 Approving Lease Agreement (Passed 8-3-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_19144933e9331e</link><guid isPermaLink="false">ev_19144933e9331e</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Council approved a lease agreement between the City and County of Denver and Alterra Mountain Company.
+Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13037_M_Finance_and_Business_26-11-10_Committee_Minutes.pdf</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 53 on first reading to execute three separate one-year leases, renewable automatically on an annual basis for four additional one-year terms, for one single-family home, one trailer pad/mobile home site, and one agricultural lease at the City's Strasburg Natural Resources Farm (Passed 4-3)</title><link>https://civics-d03.pages.dev/#/bill/ev_c55ab770f023a7</link><guid isPermaLink="false">ev_c55ab770f023a7</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The motion to execute the leases for housing and development was approved by a majority vote.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 4-3 | Impact Score: 74.3/100 | Source: ai_minutes_pdf
+
+Official Document: https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF</description></item><item><title>[Denver City Council] Council Resolution 26-1337 Approving Lease Agreement (Passed 8-3-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_19144933e9331e</link><guid isPermaLink="false">ev_19144933e9331e</guid><pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Council approved a lease agreement between the City and County of Denver and Alterra Mountain Company.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-3-1 | Impact Score: 65.3/100 | Source: structured_api
 
@@ -47,11 +67,7 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/11/13041_M_
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 55.0/100 | Source: ai_minutes_pdf
 
-Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2342,plainText=false)</description></item><item><title>[Denver City Council] Adoption of Proclamation Honoring Pete Moutzouris (Passed 11-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_09b78f382ce0ed</link><guid isPermaLink="false">ev_09b78f382ce0ed</guid><pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council adopted a proclamation honoring Pete Moutzouris, a local resident.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 11-0-1 | Impact Score: 28.5/100 | Source: structured_api
-
-Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13014_M_City_Council_26-10-26_Council_Minutes.pdf</description></item><item><title>[Colorado Springs City Council] Resolution Authorizing a Term for a Lease of CSU's Communications Network Assets (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_0c7c34c69eaccf</link><guid isPermaLink="false">ev_0c7c34c69eaccf</guid><pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a resolution allowing for a lease term of CSU's communications network assets, which was supported by all present members except one excused member.
+Official Document: https://fortcollinsco.api.civicclerk.com/v1/Meetings/GetMeetingFileStream(fileId=2342,plainText=false)</description></item><item><title>[Colorado Springs City Council] Resolution Authorizing a Term for a Lease of CSU's Communications Network Assets (Passed 8-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_0c7c34c69eaccf</link><guid isPermaLink="false">ev_0c7c34c69eaccf</guid><pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved a resolution allowing for a lease term of CSU's communications network assets, which was supported by all present members except one excused member.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0-1 | Impact Score: 45.0/100 | Source: structured_api
 
@@ -62,6 +78,10 @@ Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 11-0-1 | Impact Sc
 Official Document: https://denver.legistar1.com/denver/meetings/2026/10/13009_M_City_Council_26-10-19_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Approval of Amendatory Agreement with Citibot, Inc. for AI Chatbot Use and Support (Failed 3-9)</title><link>https://civics-d03.pages.dev/#/bill/ev_668b9a409813c9</link><guid isPermaLink="false">ev_668b9a409813c9</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council failed to approve a contract extension for the AI chatbot service.
 
 Topic: Contracts &amp; Procurement | Outcome: Failed | Tally: 3-9 | Impact Score: 63.5/100 | Source: structured_api
+
+Official Document: https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Approval of Fifth Amendatory Agreement with The Salvation Army for Rapid Resolution Services (Passed 10-2)</title><link>https://civics-d03.pages.dev/#/bill/ev_acd4999f6681fd</link><guid isPermaLink="false">ev_acd4999f6681fd</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council approved an agreement to provide rapid resolution services for families experiencing housing instability and homelessness.
+
+Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 10-2 | Impact Score: 56.8/100 | Source: structured_api
 
 Official Document: https://denver.legistar1.com/denver/meetings/2026/10/12987_M_City_Council_26-10-13_Council_Minutes.pdf</description></item><item><title>[Denver City Council] Approval of Amendatory Agreement with Slalom, Inc. for On-Call Professional Services (Failed 2-10)</title><link>https://civics-d03.pages.dev/#/bill/ev_cfa38f3babd18a</link><guid isPermaLink="false">ev_cfa38f3babd18a</guid><pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Council failed to approve a contract extension for professional services.
 
@@ -99,15 +119,7 @@ Official Document: https://denver.legistar1.com/denver/meetings/2026/9/12963_M_C
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.6/100 | Source: structured_api
 
-Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Westminster City Council] Pass Councillor’s Bill No. 33 on second reading to execute an IGA with the Adams 12 Five Star School District to provide rebates in fees and use taxes not to exceed $317,438 contingent upon City Council approval of an ODP and ongoing compliance by the Adams 12 Five Star School District with the approved ODP (Passed 6-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_853b17788d0219</link><guid isPermaLink="false">ev_853b17788d0219</guid><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The council approved the second reading of a bill to execute an agreement with the school district.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 6-1 | Impact Score: 51.4/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF</description></item><item><title>[Westminster City Council] Approve the Minutes of June 22, 2026 (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_054ee33be6edd3</link><guid isPermaLink="false">ev_054ee33be6edd3</guid><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The motion to approve the minutes of the previous meeting was passed unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF</description></item><item><title>[Thornton City Council] Motion to Approve Agenda (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5b64226ad435ca</link><guid isPermaLink="false">ev_5b64226ad435ca</guid><pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Local Licensing Authority approved the agenda as submitted by a unanimous voice vote.
+Official Document: https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2801_M_City_Council_26-09-22_Meeting_Minutes.pdf</description></item><item><title>[Thornton City Council] Motion to Approve Agenda (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_5b64226ad435ca</link><guid isPermaLink="false">ev_5b64226ad435ca</guid><pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Local Licensing Authority approved the agenda as submitted by a unanimous voice vote.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
@@ -123,10 +135,6 @@ Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplat
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
 
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18327</description></item><item><title>[Thornton City Council] Admission of License Applications and City Clerk's Communication Documents into Evidence (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_57c134aaad78b5</link><guid isPermaLink="false">ev_57c134aaad78b5</guid><pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The License Applications and City Clerk's Communication Documents were admitted into evidence unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
-
 Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18327</description></item><item><title>[Thornton City Council] Approval of Consent Agenda (Passed 8-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_822e3c34e0485b</link><guid isPermaLink="false">ev_822e3c34e0485b</guid><pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Consent Agenda was approved unanimously by the Local Licensing Authority.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 8-0 | Impact Score: 42.8/100 | Source: ai_minutes_pdf
@@ -135,25 +143,9 @@ Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplat
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 5-1 | Impact Score: 46.6/100 | Source: ai_minutes_pdf
 
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18179</description></item><item><title>[Thornton City Council] Motion to Admit License Applications and City Clerk's Communication Documents into Evidence (Passed 5-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_8161b73fcba44f</link><guid isPermaLink="false">ev_8161b73fcba44f</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The License Applications and City Clerk's Communication Documents were admitted into evidence unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 5-1 | Impact Score: 46.6/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18179</description></item><item><title>[Thornton City Council] Approval of Minutes (Passed 9-0-1)</title><link>https://civics-d03.pages.dev/#/bill/ev_2eb6076d886dfa</link><guid isPermaLink="false">ev_2eb6076d886dfa</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The board approved the October 15, 2025 minutes unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 9-0-1 | Impact Score: 40.0/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=21342</description></item><item><title>[Longmont City Council] Approval of November 19, 2025 Minutes (Passed 3-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_910f493e6c0697</link><guid isPermaLink="false">ev_910f493e6c0697</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The board approved the November 19, 2025 minutes unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 3-0 | Impact Score: 33.6/100 | Source: ai_minutes_pdf
-
-Official Document: https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=17867</description></item><item><title>[Thornton City Council] Consent Agenda Approval (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_76a50f03023b2c</link><guid isPermaLink="false">ev_76a50f03023b2c</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Consent Agenda items were approved unanimously.
+Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18179</description></item><item><title>[Thornton City Council] Consent Agenda Approval (Passed 7-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_76a50f03023b2c</link><guid isPermaLink="false">ev_76a50f03023b2c</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The Consent Agenda items were approved unanimously.
 
 Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 7-0 | Impact Score: 27.6/100 | Source: ai_minutes_pdf
-
-Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18179</description></item><item><title>[Thornton City Council] Consent Agenda - Approval of Minutes (Passed 6-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_232d3dd9e1633a</link><guid isPermaLink="false">ev_232d3dd9e1633a</guid><pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>Minutes from the December 17, 2025 Regular and December 19, 2025 Special Meetings were approved unanimously.
-
-Topic: Contracts &amp; Procurement | Outcome: Passed | Tally: 6-0 | Impact Score: 25.3/100 | Source: ai_minutes_pdf
 
 Official Document: https://thorntonco.primegov.com/Portal/Meeting?meetingTemplateId=18179</description></item><item><title>[Longmont City Council] Cool Stop update - Artist Eric Lynnis under contract and first installment has been distributed (Passed 10-0)</title><link>https://civics-d03.pages.dev/#/bill/ev_ba4a5099d8e0f5</link><guid isPermaLink="false">ev_ba4a5099d8e0f5</guid><pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate><category>Contracts &amp; Procurement</category><description>The commission provided an update on the Cool Stop project.
 

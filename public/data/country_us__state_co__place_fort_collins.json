@@ -9,7 +9,7 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
     "docs_since": "2026-08-18",
-    "last_updated": "2026-11-26 02:01:11 UTC",
+    "last_updated": "2026-11-26 02:12:48 UTC",
     "as_of_date": "2026-11-24",
     "stale_days": 2,
     "is_stale": false,
@@ -2003,7 +2003,7 @@
       "diff_summary": "",
       "qa_status": "verified",
       "event_type": "motion",
-      "topic": "Contracts & Procurement",
+      "topic": "Governance & Elections",
       "outcome": "Passed",
       "yes_count": 7,
       "no_count": 0,
@@ -2088,7 +2088,7 @@
           "verbatim_quote": ""
         }
       ],
-      "business_relevant": true,
+      "business_relevant": false,
       "outcome_status": "Passed",
       "passage_method": "Roll Call",
       "tally": "7-0",

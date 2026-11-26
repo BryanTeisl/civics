@@ -174,7 +174,7 @@ TOPIC_RULES: List[Tuple[str, Tuple[str, ...]]] = [
         (
             "contract", "agreement", "rfp", "procurement", "bid", "vendor",
             "amendment to agreement", "intergovernmental agreement", "iga",
-            "memorandum of understanding", "mou", "lease", "purchase order",
+            "memorandum of understanding", "mou", "lease", "leases", "purchase order", "master purchase order",
             "professional services", "on-call services", "contractor",
         ),
     ),
@@ -207,7 +207,7 @@ TOPIC_RULES: List[Tuple[str, Tuple[str, ...]]] = [
         (
             "park", "open space", "trail", "recreation", "water rights",
             "reservoir", "river", "climate", "solar", "renewable", "energy",
-            "sustainability", "recycling", "compost", "tree", "wildlife", "oil and gas",
+            "sustainability", "recycling", "compost", "plastic", "wildlife", "oil and gas",
         ),
     ),
     (
@@ -220,7 +220,7 @@ TOPIC_RULES: List[Tuple[str, Tuple[str, ...]]] = [
     (
         "Governance & Elections",
         (
-            "election", "ballot", "charter", "appointment", "board member",
+            "election", "ballot", "charter", "appointment", "board member", "reauthorization of boards", "boards and commissions",
             "commissioner", "council rules", "ethics", "campaign finance",
             "redistricting", "minutes", "proclamation", "executive session",
             "city manager", "city attorney",
@@ -240,26 +240,35 @@ COMMERCIAL_TOPICS = frozenset({
 VAGUE_TOPICS = frozenset({"", "general", "other", "misc", "miscellaneous", "bill", "resolution", "ordinance"})
 
 
+COMPILED_TOPIC_RULES: List[Tuple[str, List[re.Pattern]]] = [
+    (
+        topic_name,
+        [re.compile(r"\b" + re.escape(kw.strip()) + r"\b", re.IGNORECASE) for kw in keywords if kw.strip()],
+    )
+    for topic_name, keywords in TOPIC_RULES
+]
+
+
 def classify_topic(
     title: str,
     summary: str = "",
     existing_topic: Optional[str] = None,
 ) -> str:
-    """Assigns a specific, browsable topic label (replaces vague 'General' & redundant bill types)."""
+    """Assigns a specific, browsable topic label using whole-word boundaries & 2x title weighting."""
     existing = (existing_topic or "").strip()
-    if existing and existing.lower() not in VAGUE_TOPICS:
-        # Check if existing already matches one of our canonical labels
-        for canonical, _ in TOPIC_RULES:
-            if existing.lower() == canonical.lower():
-                return canonical
-
-    blob = f" {title or ''} {summary or ''} {existing} ".lower()
+    t_str = title or ""
+    s_str = f"{summary or ''} {existing if existing.lower() not in VAGUE_TOPICS else ''}"
     best_topic = "General"
-    best_hits = 0
-    for topic_name, keywords in TOPIC_RULES:
-        hits = sum(1 for kw in keywords if kw in blob)
-        if hits > best_hits:
-            best_hits = hits
+    best_score = 0
+    for topic_name, patterns in COMPILED_TOPIC_RULES:
+        score = 0
+        for pat in patterns:
+            if pat.search(t_str):
+                score += 2
+            elif pat.search(s_str):
+                score += 1
+        if score > best_score:
+            best_score = score
             best_topic = topic_name
     return best_topic
 

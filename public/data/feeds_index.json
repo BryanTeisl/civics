@@ -50,47 +50,47 @@
   "topics": {
     "Budget & Finance": {
       "url": "feeds/topic_budget_finance.xml",
-      "item_count": 51
+      "item_count": 31
     },
     "Contracts & Procurement": {
       "url": "feeds/topic_contracts_procurement.xml",
-      "item_count": 40
+      "item_count": 38
     },
     "Education & Schools": {
       "url": "feeds/topic_education_schools.xml",
-      "item_count": 1
+      "item_count": 6
     },
     "General": {
       "url": "feeds/topic_general.xml",
-      "item_count": 65
+      "item_count": 80
     },
     "Governance & Elections": {
       "url": "feeds/topic_governance_elections.xml",
-      "item_count": 43
+      "item_count": 66
     },
     "Housing & Development": {
       "url": "feeds/topic_housing_development.xml",
-      "item_count": 57
+      "item_count": 46
     },
     "Infrastructure & Transit": {
       "url": "feeds/topic_infrastructure_transit.xml",
-      "item_count": 15
+      "item_count": 10
     },
     "Parks, Water & Environment": {
       "url": "feeds/topic_parks_water_environment.xml",
-      "item_count": 11
+      "item_count": 5
     },
     "Permits & Licensing": {
       "url": "feeds/topic_permits_licensing.xml",
-      "item_count": 14
+      "item_count": 17
     },
     "Public Safety": {
       "url": "feeds/topic_public_safety.xml",
-      "item_count": 6
+      "item_count": 7
     },
     "Taxes, Fees & Utilities": {
       "url": "feeds/topic_taxes_fees_utilities.xml",
-      "item_count": 12
+      "item_count": 9
     },
     "Zoning & Land Use": {
       "url": "feeds/topic_zoning_land_use.xml",
