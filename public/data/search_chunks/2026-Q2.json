@@ -32,7 +32,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved a development agreement with Greystar Corporation for Block D-5 in Downtown Westminster.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -69,7 +69,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council voted to postpone a bill that would have imposed indefinite noise restrictions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -106,7 +106,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved a development agreement with Greystar Corporation.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -143,7 +143,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of their previous meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -180,7 +180,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved a purchase and sale agreement for the Holly Park Property.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -217,7 +217,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council agreed to hold a study session on noise abatement options.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6993/06222026-Vote-Tracking-PDF"
   },
@@ -328,7 +328,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board passed a resolution supporting educational support for students with special needs.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/c979ff63-ad9f-41c0-84b1-139a4e1c7a3d"
   },
@@ -365,7 +365,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Board voted to enter an executive session to discuss personnel matters related to the Superintendent's and General Counsel's job performance.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/5af5d9c2-9e25-46f8-b3be-e110ac1d2542"
   },
@@ -402,7 +402,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Board approved a resolution supporting Juneteenth, a historical celebration of the end of slavery in the United States.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/4e57597a-9754-4182-a121-ef5930a239c0"
   },
@@ -439,7 +439,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Board approved a resolution supporting Pride Month, an annual celebration of LGBTQ+ culture and community.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/4e57597a-9754-4182-a121-ef5930a239c0"
   },
@@ -476,7 +476,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The minutes from the previous meeting were approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -513,7 +513,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The authorization to release two deeds of trust was approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -550,7 +550,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The ordinance regarding event centers and live entertainment venues was deferred for further consideration.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -587,7 +587,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillor Ireland to participate virtually in the meeting was approved by a unanimous vote.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -624,7 +624,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The indefinite postponement of the ordinance regarding event centers was approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -698,7 +698,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The consent items related to the Reclaimed Water Delivery Structure project were approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -735,7 +735,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The reallocation of funds for the Legacy Ridge Golf Course Project was approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -772,7 +772,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The contract amendment for the Legacy Ridge Golf Course Project was approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -809,7 +809,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The contract for the construction of the Legacy Ridge Golf Course Project was approved unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6824/06082026-Vote-Tracking-PDF"
   },
@@ -994,7 +994,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved adding a Recognition section to the agenda.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/f201bcf4-0228-4135-9f1f-a2c6cd6d899f"
   },
@@ -1031,7 +1031,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved the Superintendent's report on graduates and budget issues.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/f201bcf4-0228-4135-9f1f-a2c6cd6d899f"
   },
@@ -1068,7 +1068,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of the previous meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6690/05182026-Vote-Tracking-PDF"
   },
@@ -1105,7 +1105,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to excuse Mayor Carmelia was approved by the council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6690/05182026-Vote-Tracking-PDF"
   },
@@ -1142,7 +1142,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council appointed Curt Aldstadt to the Metro Water Recovery District Board of Directors.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6690/05182026-Vote-Tracking-PDF"
   },
@@ -1179,7 +1179,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved a resolution supporting Asian American, Native Hawaiian, and Pacific Islander Heritage Month.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/9c2b2e16-e600-46bc-8d0c-4a97af2952d9"
   },
@@ -1216,7 +1216,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved a resolution supporting National Teacher Appreciation Week.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/9c2b2e16-e600-46bc-8d0c-4a97af2952d9"
   },
@@ -1253,7 +1253,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved the minutes of their previous meeting held on April 27, 2026.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6661/05112026-Vote-Tracking-PDF"
   },
@@ -1290,7 +1290,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved the Mayor's authorization to support the city's application for a grant from the Edward Byrne Memorial Justice Assistance Program.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6661/05112026-Vote-Tracking-PDF"
   },
@@ -1327,7 +1327,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved the authorization for the City Manager to execute a contract with Ulliman Schutte Construction, LLC for the Northwest Treatment Facility project.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6661/05112026-Vote-Tracking-PDF"
   },
@@ -1364,7 +1364,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved the authorization for the City Manager to amend a contract with J&T Consulting, Inc. for construction management services of the Northwest Treatment Facility project.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6661/05112026-Vote-Tracking-PDF"
   },
@@ -1549,7 +1549,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the bill to repeal a section of the municipal code.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6559/04272026-Vote-Tracking-PDF"
   },
@@ -1586,7 +1586,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the bill allowing the City Manager to execute a new agreement with the hotel.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6559/04272026-Vote-Tracking-PDF"
   },
@@ -1623,7 +1623,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of the previous meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6559/04272026-Vote-Tracking-PDF"
   },
@@ -1660,7 +1660,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the consent agenda items.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6559/04272026-Vote-Tracking-PDF"
   },
@@ -1697,7 +1697,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillor Ezeadi to participate virtually was approved by the council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6559/04272026-Vote-Tracking-PDF"
   },
@@ -1845,7 +1845,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The amendment to the economic development agreement was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -1882,7 +1882,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The repeal of the municipal code section was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -1919,7 +1919,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The repeal of the previous resolution was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -1956,7 +1956,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The directive to display the Pride Flag was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -1993,7 +1993,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The directive to design a new Pride Flag was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2030,7 +2030,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The consent item for Bill No. 9 was passed with additional language.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2067,7 +2067,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The authorization for the homeless program was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2104,7 +2104,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The lease agreement for solar and energy storage was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2141,7 +2141,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The minutes of the previous meeting were approved by all members.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2178,7 +2178,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The bill to update massage parlor regulations was postponed indefinitely.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   },
@@ -2215,7 +2215,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillor Ezeadi to participate virtually in the meeting was approved by all members.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/6500/04132026-Vote-Tracking-PDF"
   }

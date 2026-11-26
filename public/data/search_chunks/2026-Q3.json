@@ -32,7 +32,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the second reading of Bill No. 39, which deals with affordable housing and income thresholds.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -69,7 +69,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the second reading of Bill No. 36, which deals with affordable housing and parking reductions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -106,7 +106,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the second reading of Bill No. 40, which deals with water and sewer rates.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -143,7 +143,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the second reading of Bill No. 41, which establishes a new advisory board for utility affordability.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -180,7 +180,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and a temporary construction easement for the 7th Street roundabout improvements.",
     "source_url": "https://windsorco.portal.civicclerk.com/event/3706/files#minutes"
   },
@@ -217,7 +217,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Town Board approved a resolution accepting right-of-way dedications and temporary construction easements for the development of Windsor Lake Road.",
     "source_url": "https://windsorco.portal.civicclerk.com/event/3706/files#minutes"
   },
@@ -254,7 +254,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council members adopted a proclamation recognizing September as Suicide Prevention Month.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -291,7 +291,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council members adopted a proclamation celebrating Hispanic, Latino/a/x, and Chicano/a Heritage Month.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -328,7 +328,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of the previous meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -365,7 +365,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Claire Carmelia to participate virtually was approved by the council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -402,7 +402,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of Bill No. 42, which deals with changes to the Kaiser North Redevelopment Proposal.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -439,7 +439,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of Bill No. 43, which deals with stormwater fees for the next two years.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7636/09282026-Vote-Tracking-PDF"
   },
@@ -476,7 +476,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council postponed approving an agreement with Air Canada for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -513,7 +513,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council postponed approving an agreement with Societe Air France for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -550,7 +550,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council postponed approving an agreement with Alaska Airlines, Inc. for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -587,7 +587,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Council postponed approving an agreement with Cayman Airways Limited for Denver International Airport.",
     "source_url": "https://denver.legistar1.com/denver/meetings/2026/9/12963_M_City_Council_26-09-28_Council_Minutes.pdf"
   },
@@ -624,7 +624,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The Board voted to oppose Proposition 134, with six directors and the superintendent supporting it.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/bd945850-fb66-4c6e-aca8-681f3c3918e5"
   },
@@ -846,7 +846,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council reviewed the quarterly financial report and approved it with a unanimous vote.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2800_M_City_Council_Work_Session_26-09-21_Meeting_Minutes.pdf"
   },
@@ -883,7 +883,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved holding a closed executive session to discuss legal advice regarding Wilson Ranch Park and sales/use tax refunds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2857_M_City_Council_26-09-21_Meeting_Minutes.pdf"
   },
@@ -920,7 +920,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council approved the appeal of the City Planning Commission's decision regarding Project Taurus, a major modification application for Corporate Ridge Lot 4.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2849_M_City_Council_26-09-17_Meeting_Minutes.pdf"
   },
@@ -957,7 +957,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the bill to establish a density bonus and revised definition for affordable housing was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -994,7 +994,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The second reading of the bill to establish a density bonus and revised definition for affordable housing was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1031,7 +1031,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the bill to implement water, sewer, and reclaimed water rates and fees for 2027 and 2028 was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1068,7 +1068,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the bill to establish a Utility Affordability Advisory Board was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1105,7 +1105,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "A proclamation for Constitution Week was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1142,7 +1142,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "Councillor Hott was excused from the meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1179,7 +1179,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The minutes from the previous meeting were approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1216,7 +1216,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the proposed 2027 budget was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1253,7 +1253,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the proposed stormwater fee changes for 2027 and 2028 was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1290,7 +1290,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the bill to modernize business tax administration and authorize the Finance Director was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1327,7 +1327,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The first reading of the bill to adopt the International Property Maintenance Code and Residential Rental Code was passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7538/09142026-Vote-Tracking-PDF"
   },
@@ -1364,7 +1364,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "This ordinance filled vacancies on the Briargate Center Business Improvement District's Board of Directors.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
   },
@@ -1401,7 +1401,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "This ordinance amended the finance management procedures in the city's code.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
   },
@@ -1438,7 +1438,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "This ordinance amended the workers' compensation claims management procedures in the city's code.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
   },
@@ -1475,7 +1475,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "This ordinance provided for the refunding of outstanding utilities system revenue bonds and authorized issuance of new bonds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
   },
@@ -1512,7 +1512,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "This ordinance provided for the extension, improvement, and issuance of utilities system improvement revenue bonds.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/9/2798_M_City_Council_26-09-08_Meeting_Minutes.pdf"
   },
@@ -1549,7 +1549,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved a resolution supporting Hispanic/LatinX Heritage Month for the months of September and October.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/0048158c-d651-461c-ba04-de9a0ee33fe4"
   },
@@ -1586,7 +1586,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved a resolution supporting Suicide Prevention Awareness Month.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/0048158c-d651-461c-ba04-de9a0ee33fe4"
   },
@@ -1623,7 +1623,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved a resolution supporting Attendance Awareness Month.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/0048158c-d651-461c-ba04-de9a0ee33fe4"
   },
@@ -1697,7 +1697,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved an ordinance to fill vacancies on the Briargate Center Business Improvement District's board of directors.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
   },
@@ -1734,7 +1734,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved an ordinance to amend the zoning map for a specific area in the city.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
   },
@@ -1771,7 +1771,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved a resolution approving the Service Plan for the Kettle Creek Metropolitan District.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2795_M_City_Council_26-08-25_Meeting_Minutes.pdf"
   },
@@ -1808,7 +1808,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board added an item on a letter of support for a local Tobacco Retail Licensing ordinance to the agenda.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/7d06c4d8-0e34-4b73-9b6a-34189be91f96"
   },
@@ -1845,7 +1845,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board approved and adopted the recommended actions for the remaining items on the Consent Agenda.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/7d06c4d8-0e34-4b73-9b6a-34189be91f96"
   },
@@ -1882,7 +1882,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The board supported the letters to Fort Collins City Council and Larimer County Board of County Commissioners supporting a local Tobacco Retail Licensing ordinance.",
     "source_url": "https://www.psdschools.org/fs/resource-manager/view/7d06c4d8-0e34-4b73-9b6a-34189be91f96"
   },
@@ -1919,7 +1919,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the second reading of a bill to execute an agreement with the school district.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF"
   },
@@ -1956,7 +1956,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of a bill to declare fire restrictions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF"
   },
@@ -1993,7 +1993,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The City Council voted to hold a Closed Executive Session regarding the sale of Meadows Park Community Center.",
     "source_url": "https://legistar2.granicus.com/coloradosprings/meetings/2026/8/2850_M_City_Council_26-08-24_Meeting_Minutes.pdf"
   },
@@ -2030,7 +2030,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillor Nurmela to participate virtually was approved by the council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF"
   },
@@ -2067,7 +2067,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of the previous meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF"
   },
@@ -2104,7 +2104,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of a bill to exempt certain products from sales tax.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7446/8242026-Vote-Tracking-PDF"
   },
@@ -2437,7 +2437,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the second reading of Bill No. 30 was tabled due to one member's abstention.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2474,7 +2474,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the second reading of Bill No. 31 was approved by all present members of the City Council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2511,7 +2511,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to excuse Councillor Ezeadi was approved by all present members of the City Council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2548,7 +2548,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillor Hott to participate virtually was approved by all present members of the City Council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2585,7 +2585,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the minutes of July 27, 2026 was approved by all present members of the City Council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2622,7 +2622,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the authorization was approved by all present members of the City Council.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7382/08102026-Vote-Tracking-PDF"
   },
@@ -2659,7 +2659,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the second reading of Bill No. 22, which will amend the Comprehensive Plan for Mandalay Gardens.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2696,7 +2696,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the first reading of Bill No. 31, which would modify road usage fees.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2733,7 +2733,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council failed to approve the second reading of Bill No. 28, which would regulate traffic using automated vehicle identification systems.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2770,7 +2770,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of Bill No. 30, which will facilitate a grocery store project at Mi Pueblo Market.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2807,7 +2807,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council voted to remove Resolution No. 20 regarding the prohibition of data center land use.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2844,7 +2844,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council voted to move the executive session from post-meeting to the regular meeting following the Employee Service Awards.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2881,7 +2881,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council voted to remove Bill No. 26 from the agenda, effectively ending its consideration.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2918,7 +2918,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council voted to re-table Bill No. 26, allowing it to be reconsidered at the August 10 meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2955,7 +2955,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the minutes of the July 13 meeting.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -2992,7 +2992,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "flagged",
+    "qa_status": "verified",
     "plain_summary": "The council approved the first reading of Bill No. 29, which will amend the Comprehensive Plan for Northridge at Park Centre.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -3029,7 +3029,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The council approved the naming of McNally Plaza at Sheridan Green Park.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF"
   },
@@ -3140,7 +3140,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the land use designation change for Mandalay Gardens was passed with some conditions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3177,7 +3177,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the bill for traffic regulation was passed with some conditions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3214,7 +3214,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the Official Development Plan for Prose Uplands Filing 3 \u2013 Block 1 \u2013 Tract A, and Block 3 was conditionally approved with some conditions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3251,7 +3251,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the preliminary development plan amendment for Mandalay Gardens was passed with some conditions.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3288,7 +3288,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to allow Councillors Ezeadi, Ireland, and Hott to participate virtually via video conference was approved.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3325,7 +3325,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the minutes of the previous meeting was passed unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3362,7 +3362,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to approve the bill amending animal control restrictions was passed unanimously.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   },
@@ -3399,7 +3399,7 @@
     },
     "formula_version": "2.0.0",
     "capture_method": "ai_minutes_pdf",
-    "qa_status": "needs_review",
+    "qa_status": "verified",
     "plain_summary": "The motion to table the bill until July 27 was not passed.",
     "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF"
   }

@@ -7,25 +7,25 @@
       "quarter": "2026-Q4",
       "path": "data/search_chunks/2026-Q4.json",
       "count": 179,
-      "bytes": 277062
+      "bytes": 276584
     },
     {
       "quarter": "2026-Q3",
       "path": "data/search_chunks/2026-Q3.json",
       "count": 92,
-      "bytes": 144792
+      "bytes": 144568
     },
     {
       "quarter": "2026-Q2",
       "path": "data/search_chunks/2026-Q2.json",
       "count": 60,
-      "bytes": 93046
+      "bytes": 92982
     },
     {
       "quarter": "2026-Q1",
       "path": "data/search_chunks/2026-Q1.json",
       "count": 140,
-      "bytes": 206797
+      "bytes": 206701
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 18:30:25 UTC",
+  "generated_at": "2026-11-26 18:34:54 UTC",
   "stats": {
     "total_events": 471,
     "total_split_votes": 93,
@@ -65,7 +65,7 @@
       "impact_score": 100,
       "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_9b51a3aded38ef",
@@ -81,7 +81,7 @@
       "impact_score": 93,
       "plain_summary": "Council members voted to approve amendments to the Mayor's Proposed 2027 Budget.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_8afbd4dbfcad0f",
@@ -97,7 +97,7 @@
       "impact_score": 93,
       "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_17d89a9a7661c7",
@@ -113,7 +113,7 @@
       "impact_score": 90,
       "plain_summary": "Council members voted to reject amendments to the Mayor's Proposed 2027 Budget.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_5eeaf9e19ef9e4",
@@ -129,7 +129,7 @@
       "impact_score": 90,
       "plain_summary": "Council members voted to approve amendments to the Mayor's Proposed 2027 Budget.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13025_M_City_Council_26-11-02_Council_Minutes.pdf",
-      "qa_status": "flagged"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_7ab660d0ec9386",
@@ -145,7 +145,7 @@
       "impact_score": 80,
       "plain_summary": "The Mayor's proposed budget was adopted by the City Council.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_a677d0f92e0c63",
@@ -161,7 +161,7 @@
       "impact_score": 79,
       "plain_summary": "The council approved the second reading of Bill No. 22, which will amend the Comprehensive Plan for Mandalay Gardens.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7208/07272026-Vote-Tracking-PDF",
-      "qa_status": "flagged"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_a93254bb0430c9",
@@ -177,7 +177,7 @@
       "impact_score": 74,
       "plain_summary": "The motion to approve the Petitions for Inclusion in the Foster Farm Business Improvement District was approved by a majority vote.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_c55ab770f023a7",
@@ -193,7 +193,7 @@
       "impact_score": 74,
       "plain_summary": "The motion to execute the leases for housing and development was approved by a majority vote.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_5b6617a1fbc2e8",
@@ -209,7 +209,7 @@
       "impact_score": 74,
       "plain_summary": "The motion to approve the land use designation change for Mandalay Gardens was passed with some conditions.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_892f734faab97f",
@@ -225,7 +225,7 @@
       "impact_score": 74,
       "plain_summary": "The motion to approve the bill for traffic regulation was passed with some conditions.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7180/07132026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_e8517dc415aa24",
@@ -241,7 +241,7 @@
       "impact_score": 70,
       "plain_summary": "The motion to amend the recycling, compost, and plastic regulations was approved by a majority vote.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7899/11092026-Vote-Tracking-PDF",
-      "qa_status": "flagged"
+      "qa_status": "verified"
     }
   ],
   "notable_split_votes": [
@@ -259,7 +259,7 @@
       "impact_score": 67,
       "plain_summary": "The board approved a budget increase for public transportation to improve service and reliability.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_49a2e6a2c36bcd",
@@ -275,7 +275,7 @@
       "impact_score": 67,
       "plain_summary": "The BVSD Board of Education approved the Fiscal Year 2024 budget, with six board members voting in favor and one against.",
       "source_url": "https://bvsd.community.diligentoneplatform.com/Portal/",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_5597ad55f700bf",
@@ -291,7 +291,7 @@
       "impact_score": 63,
       "plain_summary": "The Board of Education passed a resolution supporting Proposition 73, a local ballot measure.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/cpr0mz4rvekqqjwty641/2018-09-04Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_e1aa92958f096b",
@@ -307,7 +307,7 @@
       "impact_score": 62,
       "plain_summary": "The board approved an ordinance to update zoning regulations for mixed-use developments.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_2d2f648bd04d51",
@@ -323,7 +323,7 @@
       "impact_score": 57,
       "plain_summary": "The board decided to table a motion for further review regarding employee benefits.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_1dd08c4863c3f4",
@@ -355,7 +355,7 @@
       "impact_score": 52,
       "plain_summary": "The DAC did not approve the application for Ascent Classical Charter.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/j5cqnixwtwgl3olgtq02/2019-01Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_9132f7de080a73",
@@ -387,7 +387,7 @@
       "impact_score": 56,
       "plain_summary": "The council voted to table the bill, which would have amended and added new sections of the municipal code related to recycling, composting, and plastic regulations.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_dc3cdb81ce3c98",
@@ -403,7 +403,7 @@
       "impact_score": 56,
       "plain_summary": "The council voted to table the bill, which would have authorized the city manager to execute an Economic Development Authority (EDA) with the Butterfly Pavilion for funding.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_3c290ead9267eb",
@@ -419,7 +419,7 @@
       "impact_score": 57,
       "plain_summary": "Council approved the minutes of a previous meeting.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13049_M_City_Council_26-11-16_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_7ab660d0ec9386",
@@ -435,7 +435,7 @@
       "impact_score": 80,
       "plain_summary": "The Mayor's proposed budget was adopted by the City Council.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13041_M_City_Council_26-11-09_Council_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     }
   ],
   "business_regulatory_alerts": [
@@ -453,7 +453,7 @@
       "impact_score": 67,
       "plain_summary": "The board approved a budget increase for public transportation to improve service and reliability.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_49a2e6a2c36bcd",
@@ -469,7 +469,7 @@
       "impact_score": 67,
       "plain_summary": "The BVSD Board of Education approved the Fiscal Year 2024 budget, with six board members voting in favor and one against.",
       "source_url": "https://bvsd.community.diligentoneplatform.com/Portal/",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_5597ad55f700bf",
@@ -485,7 +485,7 @@
       "impact_score": 63,
       "plain_summary": "The Board of Education passed a resolution supporting Proposition 73, a local ballot measure.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/cpr0mz4rvekqqjwty641/2018-09-04Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_e1aa92958f096b",
@@ -501,7 +501,7 @@
       "impact_score": 62,
       "plain_summary": "The board approved an ordinance to update zoning regulations for mixed-use developments.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_a7664d880fd029",
@@ -517,7 +517,7 @@
       "impact_score": 57,
       "plain_summary": "The district's budget presentation was approved by the DAC with all members voting in favor.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/cemnv3fieyefgy5izqqx/2018-11-06Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_4346d50169889e",
@@ -533,7 +533,7 @@
       "impact_score": 55,
       "plain_summary": "The DAC approved changes to the current budget survey, which will be sent out prior to their September meeting.",
       "source_url": "https://resources.finalsite.net/images/v1564584020/bvsdorg/r1uqihiokc5klzagw4y7/2019-05Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_1dd08c4863c3f4",
@@ -565,7 +565,7 @@
       "impact_score": 42,
       "plain_summary": "The board approved a resolution to support community gardens in the city.",
       "source_url": "https://go.boarddocs.com/co/bvsd/Board.nsf/Public",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_f750d6f9d0f4a9",
@@ -581,7 +581,7 @@
       "impact_score": 42,
       "plain_summary": "The DAC approved the budget update presented by Rob Anderson, including details about full-day kindergarten and other initiatives.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/eagxoqzcsn9wrqiy7hjk/2019-04Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_9d13f939536da1",
@@ -597,7 +597,7 @@
       "impact_score": 42,
       "plain_summary": "The DAC approved the full-day kindergarten initiative, which has been approved by the state and will be implemented in May.",
       "source_url": "https://resources.finalsite.net/images/v1564584019/bvsdorg/eagxoqzcsn9wrqiy7hjk/2019-04Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_9c1f8f33f2ec09",
@@ -629,7 +629,7 @@
       "impact_score": 45,
       "plain_summary": "The council approved the bill, which would add new regulations for private utility companies using public infrastructure.",
       "source_url": "https://www.westminsterco.gov/DocumentCenter/View/7919/11232026-Vote-Tracking-PDF",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_66e1e23b96c5fa",
@@ -645,7 +645,7 @@
       "impact_score": 52,
       "plain_summary": "The council approved a contract to fund comprehensive out-of-school-time programs for $995,700.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "ev_ad102e0217d2bb",
@@ -661,7 +661,7 @@
       "impact_score": 47,
       "plain_summary": "The council approved a contract for $1,614,718 to provide community corrections case management services.",
       "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13054_M_Health_and_Safety_26-11-18_Committee_Minutes.pdf",
-      "qa_status": "needs_review"
+      "qa_status": "verified"
     },
     {
       "event_id": "legistar-13053-240461",

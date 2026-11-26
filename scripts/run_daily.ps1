@@ -77,7 +77,10 @@ try {
     # 5. Normalize levels, outcomes, topics, committee denominators & versioned scores
     Write-Step "[5/7] Normalizing data & recalculating versioned impact scores..."
     if (Test-Path "scripts\normalize_db.py") {
-        python scripts\normalize_db.py --db core_civic.db --apply 2>&1 | Tee-Object -FilePath $LogFile -Append
+        python scripts\normalize_db.py --db core_civic.db --apply
+    if (Test-Path "scripts\calibrate_qa_trust.py") {
+        python scripts\calibrate_qa_trust.py --db core_civic.db --apply 2>&1 | Tee-Object -FilePath $LogFile -Append
+    } 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
 
     # 6. Export static JSON + chunked indices + RSS feeds + scoring methodology docs
