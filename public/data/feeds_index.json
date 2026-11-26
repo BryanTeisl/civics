@@ -39,7 +39,7 @@
     "country_us__state_co__place_westminster": {
       "name": "Westminster City Council",
       "url": "feeds/jur_country_us__state_co__place_westminster.xml",
-      "item_count": 98
+      "item_count": 140
     },
     "country_us__state_co__place_windsor": {
       "name": "Windsor Town Board",
@@ -49,33 +49,33 @@
     "country_us__state_co__school_district_poudre_r1": {
       "name": "Poudre School District Board of Education",
       "url": "feeds/jur_country_us__state_co__school_district_poudre_r1.xml",
-      "item_count": 23
+      "item_count": 33
     }
   },
   "topics": {
     "Budget & Finance": {
       "url": "feeds/topic_budget_finance.xml",
-      "item_count": 36
+      "item_count": 40
     },
     "Contracts & Procurement": {
       "url": "feeds/topic_contracts_procurement.xml",
-      "item_count": 44
+      "item_count": 47
     },
     "Education & Schools": {
       "url": "feeds/topic_education_schools.xml",
-      "item_count": 9
+      "item_count": 10
     },
     "General": {
       "url": "feeds/topic_general.xml",
-      "item_count": 99
+      "item_count": 119
     },
     "Governance & Elections": {
       "url": "feeds/topic_governance_elections.xml",
-      "item_count": 75
+      "item_count": 85
     },
     "Housing & Development": {
       "url": "feeds/topic_housing_development.xml",
-      "item_count": 50
+      "item_count": 55
     },
     "Infrastructure & Transit": {
       "url": "feeds/topic_infrastructure_transit.xml",
@@ -91,15 +91,15 @@
     },
     "Public Safety": {
       "url": "feeds/topic_public_safety.xml",
-      "item_count": 7
+      "item_count": 8
     },
     "Taxes, Fees & Utilities": {
       "url": "feeds/topic_taxes_fees_utilities.xml",
-      "item_count": 9
+      "item_count": 15
     },
     "Zoning & Land Use": {
       "url": "feeds/topic_zoning_land_use.xml",
-      "item_count": 19
+      "item_count": 21
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 03:50:25 UTC",
+  "generated_at": "2026-11-26 04:34:42 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:thornton": [
       {
@@ -449,6 +449,36 @@
         ]
       },
       {
+        "chain_key": "topic:allow councillor ezeadi participate virtually",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-13",
+        "latest_date": "2026-10-12",
+        "stage_count": 3,
+        "stages": [
+          {
+            "event_id": "ev_821e20ce00cdcd",
+            "meeting_date": "2026-04-13",
+            "title": "Motion to allow Councillor Ezeadi to participate virtually",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_f82eb832251d1d",
+            "meeting_date": "2026-04-27",
+            "title": "Motion to allow Councillor Ezeadi to participate virtually",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_37b1784663c052",
+            "meeting_date": "2026-10-12",
+            "title": "Motion to allow Councillor Ezeadi to participate virtually",
+            "outcome": "Passed",
+            "tally": "6-0"
+          }
+        ]
+      },
+      {
         "chain_key": "topic:approve minutes september 2026",
         "match_basis": "Related Agenda Topic Match",
         "first_date": "2026-09-28",
@@ -560,6 +590,29 @@
             "title": "Public Hearing - 2040 Comprehensive Plan to Establish a Density Bonus and Revised Definition for Affordable Housing (second reading)",
             "outcome": "Passed",
             "tally": "5-1"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:consent item pulled authorization execute",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-13",
+        "latest_date": "2026-08-10",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_ba9e615bb0affc",
+            "meeting_date": "2026-04-13",
+            "title": "Consent Item Pulled: Authorization to Execute an Agreement with The Community Firm d/b/a Community Economic Defense Project to Prevent Homelessness Through Establishment of the Westminster Community Housing Assistance Program",
+            "outcome": "Passed",
+            "tally": "7-1"
+          },
+          {
+            "event_id": "ev_75c44845ba41a5",
+            "meeting_date": "2026-08-10",
+            "title": "Consent Item Pulled - Authorization to Execute an Amendment to the Agreement with SustainAbility Recycling for Recycling Services at the Westminster Sustainability Center",
+            "outcome": "Passed",
+            "tally": "6-0"
           }
         ]
       },
@@ -732,6 +785,43 @@
         ]
       },
       {
+        "chain_key": "topic:approve consent items",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-02-23",
+        "latest_date": "2026-06-08",
+        "stage_count": 4,
+        "stages": [
+          {
+            "event_id": "ev_71c9080842da40",
+            "meeting_date": "2026-02-23",
+            "title": "Approve Consent Items 8A-8G",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_fab9f35c068dda",
+            "meeting_date": "2026-03-09",
+            "title": "Approve Consent Items 8A-8I",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_f949faac252e97",
+            "meeting_date": "2026-03-23",
+            "title": "Approve Consent Items 8A-8C",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_409400bc121983",
+            "meeting_date": "2026-06-08",
+            "title": "Approve Consent Items 9.A-9.B and 9.D",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
         "chain_key": "topic:approve minutes 2026",
         "match_basis": "Related Agenda Topic Match",
         "first_date": "2026-05-18",
@@ -801,6 +891,29 @@
         ]
       },
       {
+        "chain_key": "topic:approve minutes april 2026",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-27",
+        "latest_date": "2026-05-11",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_3e8a07192e9a55",
+            "meeting_date": "2026-04-27",
+            "title": "Approve the Minutes of April 13, 2026",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_076c450c2d24ec",
+            "meeting_date": "2026-05-11",
+            "title": "Approve the Minutes of April 27, 2026",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
         "chain_key": "topic:consent item authorize city manager",
         "match_basis": "Related Agenda Topic Match",
         "first_date": "2026-05-11",
@@ -822,9 +935,184 @@
             "tally": "7-0"
           }
         ]
+      },
+      {
+        "chain_key": "id:bill_17",
+        "match_basis": "Measure ID #17",
+        "first_date": "2026-04-13",
+        "latest_date": "2026-04-27",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_7d72356f0e4365",
+            "meeting_date": "2026-04-13",
+            "title": "Pass Councillor\u2019s Bill No. 17 on first reading to repeal Section 11-5-6.5 of the Westminster Municipal Code which establishes the Concept Plan Review procedure for projects requiring City Council approval",
+            "outcome": "Passed",
+            "tally": "6-1"
+          },
+          {
+            "event_id": "ev_1d67cb7afe0fc1",
+            "meeting_date": "2026-04-27",
+            "title": "Second Reading of Councillor\u2019s Bill No. 17 Re: Repeal of Section 11-5-6.5 of the Westminster Municipal Code Titled Concept Plan Review",
+            "outcome": "Passed",
+            "tally": "4-2"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:bill_16",
+        "match_basis": "Measure ID #16",
+        "first_date": "2026-04-13",
+        "latest_date": "2026-04-27",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_95f5bb9f01ca36",
+            "meeting_date": "2026-04-13",
+            "title": "Pass Councillor\u2019s Bill No. 16 on first reading authorizing the City Manager to execute a First Amendment to the Second Amended and Restated Economic Development Agreement with Westminster Hotel, LLC concerning the Origin Hotel",
+            "outcome": "Passed",
+            "tally": "6-1"
+          },
+          {
+            "event_id": "ev_090507adc527d5",
+            "meeting_date": "2026-04-27",
+            "title": "Pass Councillor\u2019s Bill No. 16 on second reading authorizing the City Manager to execute a First Amendment to the Second Amended and Restated Economic Development Agreement with Westminster Hotel, LLC concerning the Origin Hotel located at 8875 Westminster Boulevard in Downtown Westminster",
+            "outcome": "Passed",
+            "tally": "6-1"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approve minutes march 2026",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-03-23",
+        "latest_date": "2026-04-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_5bfdba1bba0d26",
+            "meeting_date": "2026-03-23",
+            "title": "Approve the Minutes of March 9, 2026",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_079bdbf2a3f68f",
+            "meeting_date": "2026-04-13",
+            "title": "Approve the Minutes of March 23, 2026",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:bill_13",
+        "match_basis": "Measure ID #13",
+        "first_date": "2026-03-23",
+        "latest_date": "2026-04-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_afea6b83fbc5e2",
+            "meeting_date": "2026-03-23",
+            "title": "Pass Councillor\u2019s Bill No. 13 amending Chapter 15 of Title V of the Westminster Municipal Code to update the regulation of massage parlors.",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_4cd44b24c5879f",
+            "meeting_date": "2026-04-13",
+            "title": "Postpone indefinitely Councillor\u2019s Bill No. 13 which would have amended Chapter 15 of Title V of the Westminster Municipal Code to update the regulation of massage parlors",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:bill_9",
+        "match_basis": "Measure ID #9",
+        "first_date": "2026-03-23",
+        "latest_date": "2026-04-13",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_e02b31cb5a088e",
+            "meeting_date": "2026-03-23",
+            "title": "First Reading of Councillor\u2019s Bill No. 9 Enacting a Six-Month Moratorium on the Issuance of Land Use Approvals, Building Permits, or Business Licenses for New Event Centers Meeting Certain Locational Criteria to Operate in the City of Westminster",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_268979b128d2b6",
+            "meeting_date": "2026-04-13",
+            "title": "Consent Item Pulled: Pass Councillor\u2019s Bill 9, with language added",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:authorize city manager execute agreement",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-03-23",
+        "latest_date": "2026-03-23",
+        "stage_count": 4,
+        "stages": [
+          {
+            "event_id": "ev_27e4f0d5cefd65",
+            "meeting_date": "2026-03-23",
+            "title": "Authorize the City Manager to execute an agreement for bond counsel services with Butler Snow, LLP for a fee not to exceed $60,000 in connection with the anticipated issuance of tax exempt COPs.",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_66bb6f6d7833b9",
+            "meeting_date": "2026-03-23",
+            "title": "Authorize the City Manager to execute an agreement for bond counsel services with Butler Snow, LLP for a fee not to exceed $60,000 in connection with the anticipated issuance of tax exempt Utility Enterprise Revenue Refunding Bonds.",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_7ebb6bb966e8cb",
+            "meeting_date": "2026-03-23",
+            "title": "Authorize the City Manager to execute an agreement for continuing disclosure with Kutak Rock, LLP for a fee not to exceed $52,500 in connection with the anticipated issuance of tax exempt COPs.",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_d0461877ff67e7",
+            "meeting_date": "2026-03-23",
+            "title": "Authorize the City Manager to execute an agreement for continuing disclosure with Kutak Rock, LLP for a fee not to exceed $48,500 in connection with the anticipated issuance of tax-exempt Utility Enterprise Revenue Refunding Bonds.",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
       }
     ],
     "ocd-division/country:us/state:co/school_district:poudre_r1": [
+      {
+        "chain_key": "topic:consent agenda",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-28",
+        "latest_date": "2026-08-11",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_0aef48b084a145",
+            "meeting_date": "2026-04-28",
+            "title": "Consent Agenda Motion",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_9a40bd977f41fe",
+            "meeting_date": "2026-08-11",
+            "title": "Consent Agenda",
+            "outcome": "Passed",
+            "tally": "4-0"
+          }
+        ]
+      },
       {
         "chain_key": "topic:executive session",
         "match_basis": "Related Agenda Topic Match",
