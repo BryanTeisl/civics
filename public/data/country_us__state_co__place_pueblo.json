@@ -1,0 +1,20 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/place:pueblo",
+    "name": "Pueblo City Council",
+    "level": "county",
+    "lat": 38.17323,
+    "lng": -104.51278,
+    "portal_url": "https://puebloco.portal.civicclerk.com/",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-26",
+    "last_updated": "2026-11-26 03:03:58 UTC",
+    "as_of_date": "2026-11-26",
+    "stale_days": 0,
+    "is_stale": false,
+    "formula_version": "2.0.0"
+  },
+  "entities": [],
+  "events": []
+}

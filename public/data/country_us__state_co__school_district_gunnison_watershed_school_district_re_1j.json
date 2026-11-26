@@ -1,0 +1,20 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/school_district:gunnison_watershed_school_district_re_1j",
+    "name": "Gunnison Watershed School District RE-1J Board of Education",
+    "level": "school_district",
+    "lat": 38.55442,
+    "lng": -106.93706,
+    "portal_url": "",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-26",
+    "last_updated": "2026-11-26 03:03:58 UTC",
+    "as_of_date": "2026-11-26",
+    "stale_days": 0,
+    "is_stale": false,
+    "formula_version": "2.0.0"
+  },
+  "entities": [],
+  "events": []
+}

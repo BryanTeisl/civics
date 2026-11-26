@@ -1,0 +1,20 @@
+{
+  "jurisdiction": {
+    "ocd_division_id": "ocd-division/country:us/state:co/school_district:custer_county_school_district_c_1",
+    "name": "Custer County School District C-1 Board of Education",
+    "level": "school_district",
+    "lat": 38.10231,
+    "lng": -105.39169,
+    "portal_url": "",
+    "parent_division_id": null,
+    "status": "unclaimed",
+    "docs_since": "2026-11-26",
+    "last_updated": "2026-11-26 03:03:58 UTC",
+    "as_of_date": "2026-11-26",
+    "stale_days": 0,
+    "is_stale": false,
+    "formula_version": "2.0.0"
+  },
+  "entities": [],
+  "events": []
+}
