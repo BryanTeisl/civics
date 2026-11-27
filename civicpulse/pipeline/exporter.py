@@ -289,7 +289,8 @@ def export_all(
                 "entities": entities_out,
                 "events": events_out,
             }
-            (target_dir / file_name).write_text(json.dumps(jur_payload, indent=2), encoding="utf-8")
+            if status == "active":  # [ACTIVE-ONLY-SHARDS]
+                (target_dir / file_name).write_text(json.dumps(jur_payload, indent=2), encoding="utf-8")
 
             jurisdiction_entries.append(
                 {

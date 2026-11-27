@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-27 01:02:08 UTC",
+  "requests": [
+    {
+      "jurisdiction_name": "Durango City Council",
+      "ocd_division_id": "ocd-division/country:us/state:co/place:durango",
+      "status": "unverified",
+      "adapter_type": "unclaimed",
+      "portal_url": "",
+      "notes": "No open structured API or meeting archive auto-detected yet.",
+      "processed_at": "2026-11-27 01:02:08 UTC"
+    }
+  ]
+}

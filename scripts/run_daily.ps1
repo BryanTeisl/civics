@@ -61,7 +61,10 @@ try {
     # 3. Poll active portals
     Write-Step "[3/7] Polling active municipal/county/school portals..."
     if ($ForceWatch) {
-        python -m civicpulse.cli watch --force 2>&1 | Tee-Object -FilePath $LogFile -Append
+        if (Test-Path "civicpulse\pipeline\autonomous_onboarder.py") {
+        python -m civicpulse.pipeline.autonomous_onboarder --db core_civic.db --public-dir public --max-per-run 2 --no-watch 2>&1 | Tee-Object -FilePath $LogFile -Append
+    }
+    python -m civicpulse.cli watch --force 2>&1 | Tee-Object -FilePath $LogFile -Append
     } else {
         python -m civicpulse.cli watch 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
@@ -77,10 +80,10 @@ try {
     # 5. Normalize levels, outcomes, topics, committee denominators & versioned scores
     Write-Step "[5/7] Normalizing data & recalculating versioned impact scores..."
     if (Test-Path "scripts\normalize_db.py") {
-        python scripts\normalize_db.py --db core_civic.db --apply
+        python scripts\normalize_db.py --db core_civic.db --apply 2>&1 | Tee-Object -FilePath $LogFile -Append
     if (Test-Path "scripts\calibrate_qa_trust.py") {
         python scripts\calibrate_qa_trust.py --db core_civic.db --apply 2>&1 | Tee-Object -FilePath $LogFile -Append
-    } 2>&1 | Tee-Object -FilePath $LogFile -Append
+    }
     }
 
     # 6. Export static JSON + chunked indices + RSS feeds + scoring methodology docs
