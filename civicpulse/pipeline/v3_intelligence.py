@@ -66,6 +66,22 @@ OFFICIAL_COUNCIL_COMMENT_EMAILS: Dict[str, Dict[str, str]] = {
         "council_email": "board@psdschools.org",
         "clerk_url": "https://www.psdschools.org/your-district/board-of-education",
     },
+    "ocd-division/country:us/state:co/place:arvada": {
+        "council_email": "citycouncil@arvada.org",
+        "clerk_url": "https://www.arvadaco.gov/249/City-Council",
+    },
+    "ocd-division/country:us/state:co/place:pueblo": {
+        "council_email": "cityclerk@pueblo.us",
+        "clerk_url": "https://www.pueblo.us/104/City-Council",
+    },
+    "ocd-division/country:us/state:co/place:commerce_city": {
+        "council_email": "cityclerk@c3gov.com",
+        "clerk_url": "https://www.c3gov.com/government/city-council",
+    },
+    "ocd-division/country:us/state:co/place:grand_junction": {
+        "council_email": "citycouncil@gjcity.org",
+        "clerk_url": "https://www.gjcity.org/166/City-Council",
+    },
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
         "council_email": "bvsd.board@bvsd.org",
         "clerk_url": "https://www.bvsd.org/about/board-of-education",
