@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-27 01:43:24 UTC",
+  "generated_at": "2026-11-27 03:25:10 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -12,14 +12,14 @@
         {
           "name": "Cathy Moore",
           "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 2",
           "email": "",
           "phone": ""
         },
         {
           "name": "Emily Murgia",
           "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 2",
           "email": "",
           "phone": ""
         },
@@ -54,7 +54,7 @@
         {
           "name": "Mark Nelson",
           "role": "Council Member",
-          "district": "Ward 1",
+          "district": "Ward 2",
           "email": "",
           "phone": ""
         },
@@ -296,7 +296,71 @@
       "council_comment_email": "cityclerk@c3gov.com",
       "clerk_url": "https://www.c3gov.com/government/city-council",
       "representative_emails": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Council Member David Green",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Emily Black",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Jane Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member John Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Karen Johnson",
+          "role": "Council Member",
+          "district": "Ward 7",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Michael Lee",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Robert Davis",
+          "role": "Council Member",
+          "district": "Ward 8",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Sarah White",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mayor John Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:denver": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
@@ -530,6 +594,27 @@
       "representative_emails": [],
       "representatives": [
         {
+          "name": "Anna Stout",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Ben Van Dyke",
+          "role": "Council President Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Cody Kennedy",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
           "name": "Council Member David Lee",
           "role": "Council Member",
           "district": "Ward 6",
@@ -593,8 +678,43 @@
           "phone": ""
         },
         {
+          "name": "Jason Nguyen",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Laurel Lutz",
+          "role": "Council President Pro Tem (virtual)",
+          "district": "At-Large (virtual)",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Laurel Lutz (virtual)",
+          "role": "Council President Pro Tem (virtual)",
+          "district": "At-Large (virtual)",
+          "email": "",
+          "phone": ""
+        },
+        {
           "name": "Mayor John Doe",
           "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Robert Ballard",
+          "role": "Councilmember (virtual)",
+          "district": "At-Large (virtual)",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Scott Beilfuss",
+          "role": "Councilmember",
           "district": "At-Large",
           "email": "",
           "phone": ""
@@ -795,6 +915,62 @@
           "name": "Benjamin Valdez",
           "role": "Mayor",
           "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Brett Boston",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Dianne Danti",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Heather Graham",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Joe Latino",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mark Aliff",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Roger Gomez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Selena Ruiz-Gomez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Ted Hernandez",
+          "role": "Council Member",
+          "district": "Ward 1",
           "email": "",
           "phone": ""
         }

@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-27 01:43:24 UTC",
+  "generated_at": "2026-11-27 03:25:10 UTC",
   "jurisdiction_count": 13,
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
@@ -458,7 +458,7 @@
           "topic": "General",
           "outcome": "Passed",
           "tally": "5-2",
-          "impact_score": 67,
+          "impact_score": 63,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
@@ -470,7 +470,7 @@
           "topic": "General",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 51,
+          "impact_score": 47,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -482,7 +482,7 @@
           "topic": "Contracts & Procurement",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -494,7 +494,7 @@
           "topic": "Parks, Water & Environment",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -506,7 +506,7 @@
           "topic": "General",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -518,7 +518,7 @@
           "topic": "Permits & Licensing",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -530,7 +530,7 @@
           "topic": "Contracts & Procurement",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -542,7 +542,7 @@
           "topic": "Infrastructure & Transit",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
@@ -554,7 +554,7 @@
           "topic": "General",
           "outcome": "Passed",
           "tally": "6-1",
-          "impact_score": 56,
+          "impact_score": 52,
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"

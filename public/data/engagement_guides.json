@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 01:43:21 UTC",
+  "generated_at": "2026-11-27 03:25:06 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -62,22 +62,6 @@
           "website_url": "https://www.arvadaco.gov/249/City-Council"
         },
         {
-          "name": "Cathy Moore",
-          "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.arvadaco.gov/249/City-Council"
-        },
-        {
-          "name": "Emily Murgia",
-          "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.arvadaco.gov/249/City-Council"
-        },
-        {
           "name": "Jeff Colebank",
           "role": "Council Member",
           "district": "Ward 1",
@@ -87,14 +71,6 @@
         },
         {
           "name": "Judy Gardner",
-          "role": "Council Member",
-          "district": "Ward 1",
-          "email": null,
-          "phone": null,
-          "website_url": "https://www.arvadaco.gov/249/City-Council"
-        },
-        {
-          "name": "Mark Nelson",
           "role": "Council Member",
           "district": "Ward 1",
           "email": null,
@@ -113,6 +89,30 @@
           "name": "Tory Fink",
           "role": "Council Member",
           "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Cathy Moore",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Emily Murgia",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Mark Nelson",
+          "role": "Council Member",
+          "district": "Ward 2",
           "email": null,
           "phone": null,
           "website_url": "https://www.arvadaco.gov/249/City-Council"
@@ -501,7 +501,80 @@
       ],
       "upcoming_meetings": [],
       "recent_agendas_and_docs": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Mayor John Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Jane Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member John Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Sarah White",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member David Green",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Emily Black",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Michael Lee",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Karen Johnson",
+          "role": "Council Member",
+          "district": "Ward 7",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        },
+        {
+          "name": "Council Member Robert Davis",
+          "role": "Council Member",
+          "district": "Ward 8",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.c3gov.com/government/city-council"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:denver": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
@@ -903,12 +976,76 @@
       ],
       "representatives": [
         {
+          "name": "Anna Stout",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Ben Van Dyke",
+          "role": "Council President Pro Tem",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Cody Kennedy",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Jason Nguyen",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
           "name": "Mayor John Doe",
           "role": "Mayor",
           "district": "At-Large",
           "email": null,
           "phone": null,
           "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Scott Beilfuss",
+          "role": "Councilmember",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Laurel Lutz",
+          "role": "Council President Pro Tem (virtual)",
+          "district": "At-Large (virtual)",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Laurel Lutz (virtual)",
+          "role": "Council President Pro Tem (virtual)",
+          "district": "At-Large (virtual)",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
+        },
+        {
+          "name": "Robert Ballard",
+          "role": "Councilmember (virtual)",
+          "district": "At-Large (virtual)",
+          "email": null,
+          "phone": null,
+          "website_url": "https://grandjunctionco.portal.civicclerk.com/event/3826/files#minutes"
         },
         {
           "name": "Council Member Jane Smith",
@@ -1328,6 +1465,70 @@
           "email": null,
           "phone": null,
           "website_url": "https://www.pueblo.us/104/City-Council"
+        },
+        {
+          "name": "Heather Graham",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Brett Boston",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Dianne Danti",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Joe Latino",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Mark Aliff",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Roger Gomez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Selena Ruiz-Gomez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "name": "Ted Hernandez",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
         }
       ]
     },
