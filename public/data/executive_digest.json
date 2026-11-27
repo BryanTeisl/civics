@@ -1,21 +1,21 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 23:57:12 UTC",
+  "generated_at": "2026-11-27 01:43:24 UTC",
   "stats": {
-    "total_events": 511,
-    "total_split_votes": 94,
-    "split_vote_pct": 18.4,
+    "total_events": 532,
+    "total_split_votes": 102,
+    "split_vote_pct": 19.2,
     "active_jurisdictions_with_events": 13,
-    "business_relevant_events": 234
+    "business_relevant_events": 242
   },
   "top_topics": [
     {
       "topic": "General",
-      "count": 139
+      "count": 145
     },
     {
       "topic": "Governance & Elections",
-      "count": 101
+      "count": 106
     },
     {
       "topic": "Housing & Development",
@@ -27,18 +27,18 @@
     },
     {
       "topic": "Contracts & Procurement",
-      "count": 52
+      "count": 55
     },
     {
       "topic": "Zoning & Land Use",
-      "count": 27
-    },
-    {
-      "topic": "Taxes, Fees & Utilities",
-      "count": 20
+      "count": 29
     },
     {
       "topic": "Permits & Licensing",
+      "count": 23
+    },
+    {
+      "topic": "Taxes, Fees & Utilities",
       "count": 20
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "topic": "Infrastructure & Transit",
-      "count": 10
+      "count": 11
     }
   ],
   "top_impact_decisions": [

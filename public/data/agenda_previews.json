@@ -1,9 +1,9 @@
 {
   "schema_version": "3.2",
-  "as_of_date": "2026-11-26",
+  "as_of_date": "2026-11-27",
   "horizon_days": 14,
   "disclaimer": "Draft Agenda Previews summarize scheduled items before a vote occurs. Items may be amended, continued, or pulled at the meeting. Verify official packets.",
-  "count": 2,
+  "count": 3,
   "previews": [
     {
       "doc_id": 2258,
@@ -26,6 +26,19 @@
       "meeting_title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
       "agenda_url": "https://coloradosprings.legistar.com/",
       "portal_url": "https://coloradosprings.legistar.com/",
+      "capture_method": "agenda_preview",
+      "preview_mode": "agenda_metadata",
+      "status_label": "Draft Agenda Preview \u2014 Not Yet Voted On",
+      "items": []
+    },
+    {
+      "doc_id": 768,
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+      "jurisdiction_name": "Greeley City Council",
+      "meeting_date": "2026-12-11",
+      "meeting_title": "Liquor License Authority Hearing",
+      "agenda_url": "https://greeleyco.portal.civicclerk.com/event/3265/files",
+      "portal_url": "https://greeleyco.portal.civicclerk.com/",
       "capture_method": "agenda_preview",
       "preview_mode": "agenda_metadata",
       "status_label": "Draft Agenda Preview \u2014 Not Yet Voted On",

@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 23:57:12 UTC",
+  "generated_at": "2026-11-27 01:43:24 UTC",
   "jurisdiction_count": 13,
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
@@ -345,8 +345,8 @@
     "ocd-division/country:us/state:co/place:grand_junction": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
       "jurisdiction_name": "Grand Junction City Council",
-      "total_events": 14,
-      "unanimous_events": 14,
+      "total_events": 16,
+      "unanimous_events": 16,
       "split_events": 0,
       "split_rate_pct": 0.0,
       "dissent_leaderboard": [],
@@ -443,10 +443,10 @@
     "ocd-division/country:us/state:co/place:pueblo": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
       "jurisdiction_name": "Pueblo City Council",
-      "total_events": 26,
-      "unanimous_events": 25,
-      "split_events": 1,
-      "split_rate_pct": 3.8,
+      "total_events": 45,
+      "unanimous_events": 36,
+      "split_events": 9,
+      "split_rate_pct": 20.0,
       "dissent_leaderboard": [],
       "most_aligned_pairs": [],
       "most_divergent_pairs": [],
@@ -462,6 +462,102 @@
           "yes_voters": [],
           "no_voters": [],
           "source_url": "https://puebloco.portal.civicclerk.com/event/1679/files#minutes"
+        },
+        {
+          "event_id": "ev_998f56fa219eee",
+          "meeting_date": "2026-08-24",
+          "title": "Approval of Agenda",
+          "topic": "General",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 51,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_b3f2ab38a20696",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Approving Emergency Construction Contract and Change Order",
+          "topic": "Contracts & Procurement",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_a7a833bbeaa339",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Appointing Board Members for El Centro del Quinto Sol Recreation Center",
+          "topic": "Parks, Water & Environment",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_3f25bbbecf0015",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Appointing Members for Pueblo Human Relations Commission",
+          "topic": "General",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_b48403bfef3f6e",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Authorizing the Issuance of a Revocable Permit for YMCA Event",
+          "topic": "Permits & Licensing",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_e39a9839d2e1f7",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Approving Compensation for Legal Services Agreement with Fairfield & Woods, P.C.",
+          "topic": "Contracts & Procurement",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_4958ec7a753d70",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Accepting Letter of Agreement for Airport Traffic Control Tower Procedures",
+          "topic": "Infrastructure & Transit",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
+        },
+        {
+          "event_id": "ev_62b9fcd9bcb77a",
+          "meeting_date": "2026-08-24",
+          "title": "Resolution Concerning Costs for Demolition and Abatement of Dangerous Structures",
+          "topic": "General",
+          "outcome": "Passed",
+          "tally": "6-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://puebloco.portal.civicclerk.com/event/1688/files#minutes"
         }
       ]
     },

@@ -9,9 +9,9 @@
     "parent_division_id": "ocd-division/country:us/state:co/county:larimer",
     "status": "active",
     "docs_since": "2026-08-18",
-    "last_updated": "2026-11-26 23:57:09 UTC",
+    "last_updated": "2026-11-27 01:43:21 UTC",
     "as_of_date": "2026-11-24",
-    "stale_days": 2,
+    "stale_days": 3,
     "is_stale": false,
     "formula_version": "2.0.0"
   },

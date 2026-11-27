@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 23:57:09 UTC",
+  "generated_at": "2026-11-27 01:43:21 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:westminster": [
       {
@@ -1197,6 +1197,100 @@
         ]
       }
     ],
+    "ocd-division/country:us/state:co/place:pueblo": [
+      {
+        "chain_key": "topic:amendment agenda",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-09-14",
+        "latest_date": "2026-11-09",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_a678bbb8c3a15d",
+            "meeting_date": "2026-09-14",
+            "title": "Amendment of the Agenda",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_bfa8246b0de713",
+            "meeting_date": "2026-11-09",
+            "title": "Amendment of Agenda",
+            "outcome": "Passed",
+            "tally": "5-2"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:resolution ratifying emergency construction contract",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-10-13",
+        "latest_date": "2026-11-09",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_f5ff6a1ef17cf6",
+            "meeting_date": "2026-10-13",
+            "title": "Resolution ratifying an emergency construction contract for sanitary sewer point repairs",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_c64eb6265fddd2",
+            "meeting_date": "2026-11-09",
+            "title": "Resolution Ratifying Emergency Construction Contract",
+            "outcome": "Passed",
+            "tally": "6-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:ordinance levying certifying special improvement",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-11-09",
+        "latest_date": "2026-11-09",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_05688144c18e0a",
+            "meeting_date": "2026-11-09",
+            "title": "Ordinance Levying and Certifying Special Improvement District Property Tax Mill Levy",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_32f833c471d49f",
+            "meeting_date": "2026-11-09",
+            "title": "Ordinance Levying and Certifying Special Improvement District Property Tax Mill Levy",
+            "outcome": "Passed",
+            "tally": "6-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:resolution authorizing permit issuance",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-09-14",
+        "latest_date": "2026-09-14",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_48bb4265a30494",
+            "meeting_date": "2026-09-14",
+            "title": "Resolution Authorizing Permit Issuance",
+            "outcome": "Passed",
+            "tally": "7-0"
+          },
+          {
+            "event_id": "ev_eb6bd0338629bc",
+            "meeting_date": "2026-09-14",
+            "title": "Resolution Authorizing Permit Issuance",
+            "outcome": "Passed",
+            "tally": "7-0"
+          }
+        ]
+      }
+    ],
     "ocd-division/country:us/state:co/place:grand_junction": [
       {
         "chain_key": "topic:2027 city manager recommended budget",
@@ -1457,54 +1551,6 @@
             "title": "Resolution Declaring the Month of October 2026 as Domestic Violence Awareness Month",
             "outcome": "Passed",
             "tally": "7-0"
-          }
-        ]
-      }
-    ],
-    "ocd-division/country:us/state:co/place:pueblo": [
-      {
-        "chain_key": "topic:resolution ratifying emergency construction contract",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-10-13",
-        "latest_date": "2026-11-09",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_f5ff6a1ef17cf6",
-            "meeting_date": "2026-10-13",
-            "title": "Resolution ratifying an emergency construction contract for sanitary sewer point repairs",
-            "outcome": "Passed",
-            "tally": "6-0"
-          },
-          {
-            "event_id": "ev_c64eb6265fddd2",
-            "meeting_date": "2026-11-09",
-            "title": "Resolution Ratifying Emergency Construction Contract",
-            "outcome": "Passed",
-            "tally": "6-0"
-          }
-        ]
-      },
-      {
-        "chain_key": "topic:ordinance levying certifying special improvement",
-        "match_basis": "Related Agenda Topic Match",
-        "first_date": "2026-11-09",
-        "latest_date": "2026-11-09",
-        "stage_count": 2,
-        "stages": [
-          {
-            "event_id": "ev_05688144c18e0a",
-            "meeting_date": "2026-11-09",
-            "title": "Ordinance Levying and Certifying Special Improvement District Property Tax Mill Levy",
-            "outcome": "Passed",
-            "tally": "6-0"
-          },
-          {
-            "event_id": "ev_32f833c471d49f",
-            "meeting_date": "2026-11-09",
-            "title": "Ordinance Levying and Certifying Special Improvement District Property Tax Mill Levy",
-            "outcome": "Passed",
-            "tally": "6-0"
           }
         ]
       }

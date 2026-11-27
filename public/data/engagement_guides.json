@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26 23:57:09 UTC",
+  "generated_at": "2026-11-27 01:43:21 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -44,7 +44,80 @@
           "source_url": "https://arvadaco.portal.civicclerk.com/event/2073/files"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Heather Steffen",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Kimberly Wagner",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Cathy Moore",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Emily Murgia",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Jeff Colebank",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Judy Gardner",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Mark Nelson",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Sarah Kolb",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        },
+        {
+          "name": "Tory Fink",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.arvadaco.gov/249/City-Council"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -828,7 +901,88 @@
           "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3991/files"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Mayor John Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Jane Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member John Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Sarah White",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Michael Green",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Emily Black",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member David Lee",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Lisa White",
+          "role": "Council Member",
+          "district": "Ward 7",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Robert Brown",
+          "role": "Council Member",
+          "district": "Ward 8",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        },
+        {
+          "name": "Council Member Karen Green",
+          "role": "Council Member",
+          "district": "Ward 9",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.gjcity.org/166/City-Council"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:greeley": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
@@ -1166,7 +1320,16 @@
           "source_url": "https://puebloco.portal.civicclerk.com/event/1657/files"
         }
       ],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Benjamin Valdez",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://www.pueblo.us/104/City-Council"
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:thornton": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",

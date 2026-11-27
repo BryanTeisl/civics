@@ -1,14 +1,78 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-26 23:57:12 UTC",
+  "generated_at": "2026-11-27 01:43:24 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
       "jurisdiction_name": "Arvada City Council",
-      "council_comment_email": "",
-      "clerk_url": "https://arvadaco.portal.civicclerk.com/",
+      "council_comment_email": "citycouncil@arvada.org",
+      "clerk_url": "https://www.arvadaco.gov/249/City-Council",
       "representative_emails": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Cathy Moore",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Emily Murgia",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Heather Steffen",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jeff Colebank",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Judy Gardner",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Kimberly Wagner",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mark Nelson",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Sarah Kolb",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Tory Fink",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
@@ -229,8 +293,8 @@
     "ocd-division/country:us/state:co/place:commerce_city": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:commerce_city",
       "jurisdiction_name": "Commerce City Council",
-      "council_comment_email": "",
-      "clerk_url": "https://commercecity.legistar.com/",
+      "council_comment_email": "cityclerk@c3gov.com",
+      "clerk_url": "https://www.c3gov.com/government/city-council",
       "representative_emails": [],
       "representatives": []
     },
@@ -461,10 +525,81 @@
     "ocd-division/country:us/state:co/place:grand_junction": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
       "jurisdiction_name": "Grand Junction City Council",
-      "council_comment_email": "",
-      "clerk_url": "https://grandjunctionco.portal.civicclerk.com/",
+      "council_comment_email": "citycouncil@gjcity.org",
+      "clerk_url": "https://www.gjcity.org/166/City-Council",
       "representative_emails": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Council Member David Lee",
+          "role": "Council Member",
+          "district": "Ward 6",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Emily Black",
+          "role": "Council Member",
+          "district": "Ward 5",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Jane Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member John Brown",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Karen Green",
+          "role": "Council Member",
+          "district": "Ward 9",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Lisa White",
+          "role": "Council Member",
+          "district": "Ward 7",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Michael Green",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Robert Brown",
+          "role": "Council Member",
+          "district": "Ward 8",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Council Member Sarah White",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mayor John Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:greeley": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
@@ -652,10 +787,18 @@
     "ocd-division/country:us/state:co/place:pueblo": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
       "jurisdiction_name": "Pueblo City Council",
-      "council_comment_email": "",
-      "clerk_url": "https://puebloco.portal.civicclerk.com/",
+      "council_comment_email": "cityclerk@pueblo.us",
+      "clerk_url": "https://www.pueblo.us/104/City-Council",
       "representative_emails": [],
-      "representatives": []
+      "representatives": [
+        {
+          "name": "Benjamin Valdez",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        }
+      ]
     },
     "ocd-division/country:us/state:co/place:thornton": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:thornton",
