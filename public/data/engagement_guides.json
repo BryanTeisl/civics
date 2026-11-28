@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28 15:27:59 UTC",
+  "generated_at": "2026-11-28 16:24:15 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -122,7 +122,7 @@
     "ocd-division/country:us/state:co/place:aurora": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:aurora",
       "name": "Aurora City Council",
-      "portal_url": "https://pub-auroraco.escribemeetings.com",
+      "portal_url": "https://www.auroragov.org/city_hall/mayor___city_council/council_meetings",
       "checklist": [
         "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
@@ -130,7 +130,20 @@
         "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "2026 Council Meeting Calendar",
+          "source_url": "https://www.auroragov.org/UserFiles/Servers/Server_1881137/File/City%20Hall/Mayor%20&%20City%20Council/Council%20Meetings/Council%20Calendars/2026%20Council%20Meeting%20Calendar_APPROVED%20(1).pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "View the Latest Council Meeting Agenda",
+          "source_url": "https://www.auroragov.org/UserFiles/Servers/Server_1881137/File/City%20Hall/Mayor%20&%20City%20Council/Council%20Meetings/Agendas/AuroraCouncilAgenda.pdf"
+        }
+      ],
       "representatives": [
         {
           "name": "Alison Coombs",

@@ -1,15 +1,15 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-28 15:28:03 UTC",
+  "generated_at": "2026-11-28 16:24:18 UTC",
   "jurisdiction_count": 14,
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/county:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
       "jurisdiction_name": "Boulder County Board of Commissioners",
-      "total_events": 34,
-      "unanimous_events": 31,
+      "total_events": 47,
+      "unanimous_events": 44,
       "split_events": 3,
-      "split_rate_pct": 8.8,
+      "split_rate_pct": 6.4,
       "dissent_leaderboard": [],
       "most_aligned_pairs": [],
       "most_divergent_pairs": [],

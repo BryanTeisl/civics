@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28 15:27:59 UTC",
+  "generated_at": "2026-11-28 16:24:15 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:westminster": [
       {
@@ -1203,7 +1203,7 @@
         "match_basis": "Related Agenda Topic Match",
         "first_date": "2026-08-18",
         "latest_date": "2026-10-27",
-        "stage_count": 2,
+        "stage_count": 3,
         "stages": [
           {
             "event_id": "ev_cae2728c3f69c0",
@@ -1216,6 +1216,36 @@
             "event_id": "ev_285cb09b01b453",
             "meeting_date": "2026-10-27",
             "title": "Commissioners' Consent Items",
+            "outcome": "Passed",
+            "tally": "4-0"
+          },
+          {
+            "event_id": "ev_cf02ecc19e4726",
+            "meeting_date": "2026-10-27",
+            "title": "Commissioners' Consent Items",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "id:resolution_2026-071",
+        "match_basis": "Measure ID #2026-071",
+        "first_date": "2026-10-27",
+        "latest_date": "2026-10-27",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_0a832e4af84ee9",
+            "meeting_date": "2026-10-27",
+            "title": "Resolution 2026-071 - In Support of HR 10115 to Expand and Improve the Radiation Exposure Compensation Act",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_44c99245b74712",
+            "meeting_date": "2026-10-27",
+            "title": "Resolution 2026-071 - In Support of HR 10115 to Expand and Improve the Radiation Exposure Compensation Act",
             "outcome": "Passed",
             "tally": "4-0"
           }
@@ -1252,14 +1282,58 @@
         ]
       },
       {
+        "chain_key": "topic:boulder county housing authority moving",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-09-17",
+        "latest_date": "2026-09-17",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_8b33e9c011453f",
+            "meeting_date": "2026-09-17",
+            "title": "Boulder County Housing Authority Moving to Work Supplement",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_b5236c956ea320",
+            "meeting_date": "2026-09-17",
+            "title": "Boulder County Housing Authority Moving to Work Supplement to Annual Plan",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
         "chain_key": "topic:county attorney office boulder county",
         "match_basis": "Related Agenda Topic Match",
         "first_date": "2026-08-04",
         "latest_date": "2026-08-04",
-        "stage_count": 3,
+        "stage_count": 6,
         "stages": [
           {
+            "event_id": "ev_01cc028e810631",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket ZON-25-0038: 856 Klondyke Avenue",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_0b7dd020f14c1e",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket ZON-25-0037: 878 Klondyke Avenue",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
             "event_id": "ev_8e413eb5780ae2",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket LU-26-0006: Apple Valley Stream Restoration",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_91416772f56bf7",
             "meeting_date": "2026-08-04",
             "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket LU-26-0006: Apple Valley Stream Restoration",
             "outcome": "Passed",
@@ -1278,6 +1352,75 @@
             "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket ZON-25-0037: 878 Klondyke Avenue",
             "outcome": "Passed",
             "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:commissioners consent items sitting boulder",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-08-04",
+        "latest_date": "2026-08-04",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_c6d3611484b735",
+            "meeting_date": "2026-08-04",
+            "title": "Commissioners' Consent Items (Sitting as the Boulder County Housing Authority Board of Directors)",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_cbb6df9ba98f47",
+            "meeting_date": "2026-08-04",
+            "title": "Commissioners' Consent Items (Sitting as the Boulder County Housing Authority Board of Directors)",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:conditionally approve coyote trailhead earthwork",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-15",
+        "latest_date": "2026-04-15",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_7ef7114f716675",
+            "meeting_date": "2026-04-15",
+            "title": "Conditionally approve Coyote Trailhead Earthwork",
+            "outcome": "Passed",
+            "tally": "6-0"
+          },
+          {
+            "event_id": "ev_b9c081c45ee0c6",
+            "meeting_date": "2026-04-15",
+            "title": "Conditionally Approve Coyote Trailhead Earthwork",
+            "outcome": "Passed",
+            "tally": "6-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:approval meeting minutes from march",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-15",
+        "latest_date": "2026-04-15",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_81755e16b0a016",
+            "meeting_date": "2026-04-15",
+            "title": "Approval of meeting minutes from March 18, 2026",
+            "outcome": "Passed",
+            "tally": "5-0"
+          },
+          {
+            "event_id": "ev_d1bd85e9d5ba6a",
+            "meeting_date": "2026-04-15",
+            "title": "Approval of Meeting Minutes from March 18, 2026",
+            "outcome": "Passed",
+            "tally": "5-0"
           }
         ]
       }
