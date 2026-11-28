@@ -359,9 +359,23 @@ function resolvePoint(lat, lng, label) {
         const fType = String(p.layer || p.level || p.type || "").toLowerCase();
 
         // Capture council district / ward hints so we can highlight "Your Rep"
-        if (fType.includes("council_district") || fType.includes("ward") || p.district_number || p.council_district) {
-          const parentId = p.parent_division_id || p.jurisdiction_id || "";
-          const distLabel = p.district_name || p.name || (p.district_number ? `District ${p.district_number}` : "");
+        const divStr = String(divId || "");
+        const isSubDistrict =
+          fType === "district" ||
+          fType.includes("council_district") ||
+          fType.includes("ward") ||
+          /\/(council_district|ward):/i.test(divStr) ||
+          Boolean(p.district_number || p.council_district);
+
+        if (isSubDistrict) {
+          const derivedParent = divStr.replace(/\/(council_district|ward):[^/]+$/i, "");
+          const parentId = p.parent_division_id || p.parent_id || p.jurisdiction_id || derivedParent;
+          let distLabel = p.district || p.district_name || p.name || "";
+          const numMatch = distLabel.match(/(?:district|ward)\s*([0-9a-z-]+)/i) || divStr.match(/(?:council_district|ward):([^/]+)/i);
+          if (numMatch) {
+            const prefix = /ward/i.test(distLabel + divStr) ? "Ward" : "District";
+            distLabel = `${prefix} ${numMatch[1].toUpperCase()}`;
+          }
           if (parentId && distLabel) districtHints.set(parentId, distLabel);
           if (parentId) matchedIds.add(parentId);
           continue;
@@ -508,6 +522,32 @@ function renderResolvedPanel() {
         .join("")
     : `<div class="col-span-full text-xs text-slate-600">No tracked Colorado boundaries matched this exact point. Select an active jurisdiction below or request coverage.</div>`;
 
+  const myRepBadges = [];
+  loc.districtHints.forEach((distLabel, parentJid) => {
+    const cachedP = AppState.jurPayloads.get(parentJid);
+    const parentName = getJurisdictionById(parentJid)?.name || "";
+    if (cachedP) {
+      getEntitiesFromPayload(cachedP).forEach((rep) => {
+        const rDist = String(rep.district || "").toLowerCase();
+        if (rDist === distLabel.toLowerCase() || rDist.includes("at-large")) {
+          myRepBadges.push(
+            `<button type="button" data-resolved-rep="${esc(rep.ocd_person_id || rep.id)}" data-jur-id="${esc(parentJid)}" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-[#c67749]/40 hover:border-[#c67749] text-xs font-semibold text-[#142834] cursor-pointer">
+              <span class="text-[#c67749]">&#9733;</span><span>${esc(rep.name)}</span><span class="text-slate-500 font-normal">(${esc(rep.district || rep.role)})</span>
+            </button>`
+          );
+        }
+      });
+    } else if (parentName) {
+      loadJurPayload(parentJid).then(() => renderResolvedPanel());
+    }
+  });
+  const myRepsStrip = myRepBadges.length
+    ? `<div class="pt-2 border-t border-[#1b3b4e]/10 flex flex-wrap items-center gap-2">
+         <span class="text-[11px] font-bold uppercase tracking-wider text-[#9c5128]">Your Local Reps:</span>
+         ${myRepBadges.join("")}
+       </div>`
+    : "";
+
   const fedHtml = loc.federalDistricts.length
     ? `<div class="text-xs text-[#142834]/75 pt-1">
          Federal overlay: <strong>${esc(loc.federalDistricts.map((f) => f.name).join(", "))}</strong>
@@ -540,6 +580,7 @@ function renderResolvedPanel() {
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">${cardsHtml}</div>
+    ${myRepsStrip}
     ${fedHtml}
   `;
 
@@ -560,6 +601,9 @@ function renderResolvedPanel() {
     document.getElementById("workspaceSection")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
+  panel.querySelectorAll("[data-resolved-rep]").forEach((btn) => {
+    btn.addEventListener("click", () => openRepModal(btn.dataset.jurId, btn.dataset.resolvedRep));
+  });
   panel.querySelectorAll("[data-toggle-jur]").forEach((btn) => {
     btn.addEventListener("click", () => toggleJurisdiction(btn.dataset.toggleJur, false));
   });
