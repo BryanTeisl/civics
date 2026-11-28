@@ -1697,59 +1697,187 @@ function wireGlobalSearch() {
       box.classList.add("hidden");
       return;
     }
+
     const evs = await ensureSearchRecordsLoaded();
 
-    const jurHits = AppState.jurisdictions
-      .filter((j) => j.status === "active" && String(j.name || "").toLowerCase().includes(q))
-      .slice(0, 4)
-      .map((j) => ({
-        kind: "Jurisdiction",
-        title: j.name,
-        sub: `${formatLevelLabel(j.level)} • Add to workspace`,
-        jurId: jurIdOf(j),
-      }));
+    // 1. Active Jurisdictions
+    const matchedActiveJurs = AppState.jurisdictions.filter(
+      (j) =>
+        j.status === "active" &&
+        `${j.name || ""} ${formatLevelLabel(j.level)}`.toLowerCase().includes(q)
+    );
+    const jurHits = matchedActiveJurs.slice(0, 3).map((j) => ({
+      group: "Jurisdictions",
+      title: j.name,
+      sub: `${formatLevelLabel(j.level)} ? ${j.entity_count ?? 0} Reps ? Click to add to workspace`,
+      badge: "+ Filter",
+      jurId: jurIdOf(j),
+    }));
 
-    const billHits = evs
-      .filter((e) =>
-        `${e.title || ""} ${e.plain_summary || ""} ${e.topic || ""} ${e.jurisdiction_name || ""}`
-          .toLowerCase()
-          .includes(q)
-      )
-      .slice(0, 6)
-      .map((e) => ({
-        kind: "Measure",
+    // 2. Representatives (from matched active jurisdictions + cached payloads)
+    const jursToInspect = new Set(matchedActiveJurs.slice(0, 3).map(jurIdOf));
+    AppState.selectedJurIds.forEach((id) => jursToInspect.add(id));
+    await Promise.all(Array.from(jursToInspect).map((id) => loadJurPayload(id)));
+
+    const repHits = [];
+    const seenRepIds = new Set();
+    AppState.jurPayloads.forEach((payload, jid) => {
+      const jName = payload?.jurisdiction?.name || getJurisdictionById(jid)?.name || "";
+      getEntitiesFromPayload(payload).forEach((rep) => {
+        const pid = rep.ocd_person_id || rep.id;
+        if (!pid || seenRepIds.has(pid)) return;
+        const hay = `${rep.name || ""} ${rep.role || ""} ${rep.district || ""} ${jName}`.toLowerCase();
+        if (hay.includes(q)) {
+          seenRepIds.add(pid);
+          repHits.push({
+            group: "Representatives",
+            title: rep.name,
+            sub: `${rep.role || "Member"}${rep.district ? ` (${rep.district})` : ""} ? ${jName}`,
+            badge: "Profile ?",
+            jurId: jid,
+            personId: pid,
+          });
+        }
+      });
+    });
+
+    // 3. Upcoming Meetings & Agenda Previews
+    const upHits = [];
+    const seenUp = new Set();
+    [...AppState.upcomingMeetings, ...AppState.agendaPreviews].forEach((m) => {
+      const jid = m.jurisdiction_id || m.ocd_division_id || "";
+      const jName = m.jurisdiction_name || getJurisdictionById(jid)?.name || "";
+      const title = cleanMeetingTitle(m.title || m.meeting_title, m.doc_type);
+      const dt = String(m.meeting_date || m.date || "").slice(0, 10);
+      const hay = `${title} ${jName} ${dt}`.toLowerCase();
+      const key = `${jid}_${dt}_${title.toLowerCase()}`;
+      if (hay.includes(q) && !seenUp.has(key)) {
+        seenUp.add(key);
+        upHits.push({
+          group: "Upcoming Meetings",
+          title,
+          sub: `${jName} ? ${formatDateHeading(dt)}`,
+          badge: "Agenda",
+          jurId: jid,
+          openBeforeTab: true,
+        });
+      }
+    });
+
+    // 4. Measures & Votes (deduplicated & ranked by impact so repetitive items don't crowd results)
+    const rawMeasures = evs.filter((e) =>
+      `${e.title || ""} ${e.plain_summary || ""} ${e.topic || ""} ${e.jurisdiction_name || ""}`
+        .toLowerCase()
+        .includes(q)
+    );
+    rawMeasures.sort(
+      (a, b) =>
+        Number(b.impact_score ?? 0) - Number(a.impact_score ?? 0) ||
+        String(b.meeting_date || "").localeCompare(String(a.meeting_date || ""))
+    );
+
+    const billHits = [];
+    const seenTitles = new Set();
+    for (const e of rawMeasures) {
+      const normTitle = String(e.title || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim()
+        .slice(0, 48);
+      const dedupKey = `${e.jurisdiction_id}_${e.meeting_date}_${normTitle}`;
+      if (seenTitles.has(dedupKey)) continue;
+      seenTitles.add(dedupKey);
+      billHits.push({
+        group: "Measures & Votes",
         title: e.title,
-        sub: `${e.jurisdiction_name || ""} • ${e.meeting_date || ""}`,
+        sub: `${e.jurisdiction_name || ""} ? ${e.meeting_date || ""} ? ${e.topic || "General"}`,
+        badge: `Impact ${Math.round(Number(e.impact_score ?? 0))}`,
         jurId: e.jurisdiction_id,
         eventId: e.event_id,
+      });
+      if (billHits.length >= 4) break;
+    }
+
+    // 5. Unclaimed Colorado Jurisdictions (Demand Capture)
+    const unclaimedHits = AppState.jurisdictions
+      .filter((j) => j.status !== "active" && String(j.name || "").toLowerCase().includes(q))
+      .slice(0, 2)
+      .map((j) => ({
+        group: "Request Coverage",
+        title: j.name,
+        sub: `${formatLevelLabel(j.level)} ? Not yet tracked ? Click to request`,
+        badge: "+ Request ?",
+        requestUrl: buildGithubRequestUrl({
+          name: j.name,
+          ocdId: jurIdOf(j),
+          level: normalizeLevel(j.level),
+          portalUrl: j.portal_url || "",
+        }),
       }));
 
-    const all = [...jurHits, ...billHits];
-    box.innerHTML = all.length
-      ? all
-          .map(
-            (h, i) => `
-            <button type="button" data-search-idx="${i}" class="w-full text-left px-3.5 py-2.5 hover:bg-[#faf5eb] transition block cursor-pointer">
-              <div class="text-[10px] font-bold uppercase tracking-wider text-[#c67749]">${esc(h.kind)}</div>
-              <div class="text-xs font-bold text-[#142834]">${esc(h.title)}</div>
-              <div class="text-[11px] text-slate-500">${esc(h.sub)}</div>
-            </button>
-          `
-          )
-          .join("")
-      : `<div class="p-3 text-xs text-slate-500">No matching active jurisdictions or measures found.</div>`;
+    const sections = [
+      { label: "Jurisdictions", items: jurHits },
+      { label: "Representatives", items: repHits.slice(0, 4) },
+      { label: "Upcoming Meetings", items: upHits.slice(0, 3) },
+      { label: "Measures & Votes", items: billHits },
+      { label: "Request Coverage", items: unclaimedHits },
+    ].filter((sec) => sec.items.length > 0);
+
+    if (!sections.length) {
+      box.innerHTML = `<div class="p-4 text-xs text-slate-500">No matching jurisdictions, representatives, meetings, or measures found for ?${esc(inp.value.trim())}?.</div>`;
+      box.classList.remove("hidden");
+      return;
+    }
+
+    const flatHits = [];
+    box.innerHTML = sections
+      .map((sec) => {
+        const rows = sec.items
+          .map((h) => {
+            const idx = flatHits.length;
+            flatHits.push(h);
+            return `
+              <button type="button" data-search-idx="${idx}" class="w-full text-left px-3.5 py-2.5 hover:bg-[#faf5eb] transition flex items-start justify-between gap-2.5 border-t border-slate-100 cursor-pointer">
+                <div class="min-w-0 flex-1">
+                  <div class="text-xs font-bold text-[#142834] leading-snug break-words">${esc(h.title)}</div>
+                  <div class="text-[11px] text-slate-500 mt-0.5 truncate">${esc(h.sub)}</div>
+                </div>
+                <span class="shrink-0 px-2 py-0.5 rounded-md bg-[#f4ecdc] text-[#1b3b4e] text-[10px] font-bold">${esc(h.badge)}</span>
+              </button>
+            `;
+          })
+          .join("");
+
+        return `
+          <div>
+            <div class="sticky top-0 z-10 bg-slate-100/95 backdrop-blur-xs px-3.5 py-1.5 flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-[#1b3b4e]">
+              <span>${esc(sec.label)}</span>
+              <span class="text-slate-500">${sec.items.length}</span>
+            </div>
+            ${rows}
+          </div>
+        `;
+      })
+      .join("");
 
     box.querySelectorAll("[data-search-idx]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const hit = all[Number(btn.dataset.searchIdx)];
+        const hit = flatHits[Number(btn.dataset.searchIdx)];
         box.classList.add("hidden");
         inp.value = "";
+        if (hit.requestUrl) {
+          window.open(hit.requestUrl, "_blank", "noopener,noreferrer");
+          return;
+        }
         if (hit.jurId) {
           AppState.selectedJurIds.add(hit.jurId);
+          if (hit.openBeforeTab) AppState.activeTab = "before";
+          else if (hit.personId) AppState.activeTab = "reps";
           persistState();
-          onSelectionChanged(!hit.eventId);
+          onSelectionChanged(!hit.eventId && !hit.personId);
         }
-        if (hit.eventId) openBillModal(hit.jurId, hit.eventId);
+        if (hit.personId) openRepModal(hit.jurId, hit.personId);
+        else if (hit.eventId) openBillModal(hit.jurId, hit.eventId);
       });
     });
 
