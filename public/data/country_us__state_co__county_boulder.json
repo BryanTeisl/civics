@@ -41,7 +41,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Jane Doe serves as Mayor (At-Large) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-levy",
@@ -381,7 +382,8 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "bio_summary": "Claire Levy serves as County Commissioner (District 1) for Boulder County Board of Commissioners, with 26 recorded roll-call votes (25 Yes, 0 No). Their recorded legislative activity has focused most frequently on Housing & Development, Zoning & Land Use, and Parks, Water & Environment."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-david-lee",
@@ -408,7 +410,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "David Lee serves as Trustee (District 1) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-loachamin",
@@ -820,7 +823,8 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "bio_summary": "Marta Loachamin serves as County Commissioner (District 2) for Boulder County Board of Commissioners, with 32 recorded roll-call votes (28 Yes, 0 No). Their recorded legislative activity has focused most frequently on Zoning & Land Use, Housing & Development, and Parks, Water & Environment."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-sarah-davis",
@@ -847,7 +851,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Sarah Davis serves as Trustee (District 2) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-stoltzmann",
@@ -874,7 +879,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Ashley Stoltzmann serves as County Commissioner (District 3) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-robert-green",
@@ -901,7 +907,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Robert Green serves as Trustee (District 3) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-linda-clark",
@@ -928,7 +935,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Linda Clark serves as Trustee (District 4) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-john-smith",
@@ -955,7 +963,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "John Smith serves as Council Member (Ward 1) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-emily-johnson",
@@ -995,7 +1004,8 @@
           "rationale_summary": "",
           "verbatim_quote": ""
         }
-      ]
+      ],
+      "bio_summary": "Emily Johnson serves as Council Member (Ward 2) for Boulder County Board of Commissioners, with 1 recorded roll-call vote (0 Yes, 0 No). Their recorded legislative activity has focused most frequently on Zoning & Land Use."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-michael-brown",
@@ -1022,7 +1032,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Michael Brown serves as Council Member (Ward 3) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-karen-white",
@@ -1049,7 +1060,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Karen White serves as Council Member (Ward 4) for Boulder County Board of Commissioners. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     }
   ],
   "events": [

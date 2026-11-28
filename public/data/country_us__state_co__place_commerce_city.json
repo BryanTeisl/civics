@@ -41,7 +41,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Mayor John Doe serves as Mayor (At-Large) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-jane-smith",
@@ -68,7 +69,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Jane Smith serves as Council Member (Ward 1) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-john-brown",
@@ -95,7 +97,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member John Brown serves as Council Member (Ward 2) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-sarah-white",
@@ -122,7 +125,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Sarah White serves as Council Member (Ward 3) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-david-green",
@@ -149,7 +153,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member David Green serves as Council Member (Ward 4) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-emily-black",
@@ -176,7 +181,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Emily Black serves as Council Member (Ward 5) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-michael-lee",
@@ -203,7 +209,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Michael Lee serves as Council Member (Ward 6) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-karen-johnson",
@@ -230,7 +237,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Karen Johnson serves as Council Member (Ward 7) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     },
     {
       "ocd_person_id": "ocd-person/co-commerce-city-council-member-robert-davis",
@@ -257,7 +265,8 @@
         "sponsored_count": 0
       },
       "sponsored_items": [],
-      "votes": []
+      "votes": [],
+      "bio_summary": "Council Member Robert Davis serves as Council Member (Ward 8) for Commerce City Council. Roll-call vote breakdowns and meeting comments for this term are currently pending ingestion."
     }
   ],
   "events": []
