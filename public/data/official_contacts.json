@@ -1,6 +1,6 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-27 03:25:10 UTC",
+  "generated_at": "2026-11-28 15:28:03 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -74,6 +74,92 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/place:aurora": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:aurora",
+      "jurisdiction_name": "Aurora City Council",
+      "council_comment_email": "citycouncil@auroragov.org",
+      "clerk_url": "https://www.auroragov.org/city_hall/mayor___city_council",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Alison Coombs",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Amsalu Kassaw",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Angela Lawson",
+          "role": "Council Member",
+          "district": "Ward V",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Crystal Murillo",
+          "role": "Council Member",
+          "district": "Ward I",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Curtis Gardner",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Danielle Jurinsky",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Fran\u00e7oise Bergan",
+          "role": "Council Member",
+          "district": "Ward VI",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Mike Coffman",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Ruben Medina",
+          "role": "Council Member",
+          "district": "Ward III",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Stephanie Hancock",
+          "role": "Council Member",
+          "district": "Ward IV",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Steve Sundberg",
+          "role": "Council Member",
+          "district": "Ward II",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
       "jurisdiction_name": "Boulder City Council",
@@ -141,6 +227,99 @@
           "name": "Tina Marquis",
           "role": "Council Member",
           "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/county:boulder": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "jurisdiction_name": "Boulder County Board of Commissioners",
+      "council_comment_email": "commissioners@bouldercounty.gov",
+      "clerk_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
+      "representative_emails": [],
+      "representatives": [
+        {
+          "name": "Ashley Stoltzmann",
+          "role": "County Commissioner",
+          "district": "District 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Claire Levy",
+          "role": "County Commissioner",
+          "district": "District 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "David Lee",
+          "role": "Trustee",
+          "district": "District 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Emily Johnson",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Karen White",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Linda Clark",
+          "role": "Trustee",
+          "district": "District 4",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Marta Loachamin",
+          "role": "County Commissioner",
+          "district": "District 2",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Michael Brown",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Robert Green",
+          "role": "Trustee",
+          "district": "District 3",
+          "email": "",
+          "phone": ""
+        },
+        {
+          "name": "Sarah Davis",
+          "role": "Trustee",
+          "district": "District 2",
           "email": "",
           "phone": ""
         }

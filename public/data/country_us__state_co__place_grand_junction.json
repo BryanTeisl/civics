@@ -9,9 +9,9 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-09-16",
-    "last_updated": "2026-11-27 03:25:06 UTC",
+    "last_updated": "2026-11-28 15:27:59 UTC",
     "as_of_date": "2026-11-04",
-    "stale_days": 23,
+    "stale_days": 24,
     "is_stale": true,
     "formula_version": "2.0.0"
   },

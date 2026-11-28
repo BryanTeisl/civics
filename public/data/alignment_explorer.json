@@ -1,8 +1,57 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-27 03:25:10 UTC",
-  "jurisdiction_count": 13,
+  "generated_at": "2026-11-28 15:28:03 UTC",
+  "jurisdiction_count": 14,
   "by_jurisdiction": {
+    "ocd-division/country:us/state:co/county:boulder": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "jurisdiction_name": "Boulder County Board of Commissioners",
+      "total_events": 34,
+      "unanimous_events": 31,
+      "split_events": 3,
+      "split_rate_pct": 8.8,
+      "dissent_leaderboard": [],
+      "most_aligned_pairs": [],
+      "most_divergent_pairs": [],
+      "recent_split_votes": [
+        {
+          "event_id": "ev_cae2728c3f69c0",
+          "meeting_date": "2026-08-18",
+          "title": "Commissioners' Consent Items",
+          "topic": "General",
+          "outcome": "Passed",
+          "tally": "2-1",
+          "impact_score": 43,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=dad4b6e2-2827-4e5e-9d59-1510780c28cf&Agenda=PostMinutes&lang=English"
+        },
+        {
+          "event_id": "ev_d897a6e346a321",
+          "meeting_date": "2026-05-21",
+          "title": "Authorization to proceed with drone spray treatment of cheatgrass",
+          "topic": "Parks, Water & Environment",
+          "outcome": "Passed",
+          "tally": "2-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=e227e2dc-a7c9-46ea-b509-20cc75c5630d&Agenda=PostMinutes&lang=English"
+        },
+        {
+          "event_id": "ev_a623ec80943197",
+          "meeting_date": "2026-05-14",
+          "title": "Conditional Approval of Docket DC-24-0004",
+          "topic": "Zoning & Land Use",
+          "outcome": "Passed",
+          "tally": "2-1",
+          "impact_score": 56,
+          "yes_voters": [],
+          "no_voters": [],
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=70b42720-3441-4b65-bad6-0d287b5d89f3&Agenda=PostMinutes&lang=English"
+        }
+      ]
+    },
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
       "jurisdiction_id": "ocd-division/country:us/state:co/school_district:boulder_valley_re2",
       "jurisdiction_name": "Boulder Valley School District Board of Education",

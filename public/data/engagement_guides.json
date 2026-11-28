@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 03:25:06 UTC",
+  "generated_at": "2026-11-28 15:27:59 UTC",
   "guides": {
     "ocd-division/country:us/state:co/place:arvada": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:arvada",
@@ -119,6 +119,109 @@
         }
       ]
     },
+    "ocd-division/country:us/state:co/place:aurora": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/place:aurora",
+      "name": "Aurora City Council",
+      "portal_url": "https://pub-auroraco.escribemeetings.com",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [],
+      "representatives": [
+        {
+          "name": "Alison Coombs",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Amsalu Kassaw",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Curtis Gardner",
+          "role": "Mayor Pro Tem",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Danielle Jurinsky",
+          "role": "Council Member",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Mike Coffman",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Crystal Murillo",
+          "role": "Council Member",
+          "district": "Ward I",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Steve Sundberg",
+          "role": "Council Member",
+          "district": "Ward II",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Ruben Medina",
+          "role": "Council Member",
+          "district": "Ward III",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Stephanie Hancock",
+          "role": "Council Member",
+          "district": "Ward IV",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Angela Lawson",
+          "role": "Council Member",
+          "district": "Ward V",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Fran\u00e7oise Bergan",
+          "role": "Council Member",
+          "district": "Ward VI",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        }
+      ]
+    },
     "ocd-division/country:us/state:co/place:boulder": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:boulder",
       "name": "Boulder City Council",
@@ -234,6 +337,148 @@
           "email": null,
           "phone": null,
           "website_url": "https://bouldercolorado.primegov.com/Portal/Meeting?meetingTemplateId=936&meetingId=163"
+        }
+      ]
+    },
+    "ocd-division/country:us/state:co/county:boulder": {
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "name": "Boulder County Board of Commissioners",
+      "portal_url": "https://pub-bouldercounty.escribemeetings.com",
+      "checklist": [
+        "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
+        "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
+        "Share concise, factual points with your district and at-large representatives.",
+        "Follow up after the vote to check the final roll call and implementation timeline."
+      ],
+      "upcoming_meetings": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "2026-10-27",
+          "doc_type": "agenda",
+          "title": "Board of County Commissioners - Regular Meeting",
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=3115ba87-f755-46ca-bd0f-03194144d5f8&Agenda=Agenda&lang=English"
+        },
+        {
+          "meeting_date": "2026-10-27",
+          "doc_type": "minutes",
+          "title": "Board of County Commissioners - Regular Meeting",
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=3115ba87-f755-46ca-bd0f-03194144d5f8&Agenda=PostMinutes&lang=English"
+        },
+        {
+          "meeting_date": "2026-10-27",
+          "doc_type": "agenda",
+          "title": "Board of County Commissioners - Regular Meeting",
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=3115ba87-f755-46ca-bd0f-03194144d5f8&Agenda=Agenda&lang=English"
+        },
+        {
+          "meeting_date": "2026-10-27",
+          "doc_type": "minutes",
+          "title": "Board of County Commissioners - Regular Meeting",
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=3115ba87-f755-46ca-bd0f-03194144d5f8&Agenda=PostMinutes&lang=English"
+        },
+        {
+          "meeting_date": "2026-10-22",
+          "doc_type": "agenda",
+          "title": "Board of County Commissioners - Regular Meeting",
+          "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=af74d90d-3e89-42c4-93b7-0bfb8613150f&Agenda=Agenda&lang=English"
+        }
+      ],
+      "representatives": [
+        {
+          "name": "Jane Doe",
+          "role": "Mayor",
+          "district": "At-Large",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Claire Levy",
+          "role": "County Commissioner",
+          "district": "District 1",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "David Lee",
+          "role": "Trustee",
+          "district": "District 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Marta Loachamin",
+          "role": "County Commissioner",
+          "district": "District 2",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Sarah Davis",
+          "role": "Trustee",
+          "district": "District 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Ashley Stoltzmann",
+          "role": "County Commissioner",
+          "district": "District 3",
+          "email": null,
+          "phone": null,
+          "website_url": null
+        },
+        {
+          "name": "Robert Green",
+          "role": "Trustee",
+          "district": "District 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Linda Clark",
+          "role": "Trustee",
+          "district": "District 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "John Smith",
+          "role": "Council Member",
+          "district": "Ward 1",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Emily Johnson",
+          "role": "Council Member",
+          "district": "Ward 2",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Michael Brown",
+          "role": "Council Member",
+          "district": "Ward 3",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
+        },
+        {
+          "name": "Karen White",
+          "role": "Council Member",
+          "district": "Ward 4",
+          "email": null,
+          "phone": null,
+          "website_url": "https://bouldercounty.gov/government/board-of-county-commissioners/"
         }
       ]
     },
@@ -492,7 +737,7 @@
     "ocd-division/country:us/state:co/place:commerce_city": {
       "jurisdiction_id": "ocd-division/country:us/state:co/place:commerce_city",
       "name": "Commerce City Council",
-      "portal_url": "https://commercecity.legistar.com/",
+      "portal_url": "https://www.c3gov.com/government/city-council",
       "checklist": [
         "Review the posted meeting agenda before the session to identify ordinances, budgets, or zoning items affecting your neighborhood.",
         "Check the official portal for public comment sign-up rules, speaker time limits, or written correspondence deadlines.",
@@ -500,7 +745,38 @@
         "Follow up after the vote to check the final roll call and implementation timeline."
       ],
       "upcoming_meetings": [],
-      "recent_agendas_and_docs": [],
+      "recent_agendas_and_docs": [
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Community Sponsorship Protocol (PDF, 149KB)",
+          "source_url": "https://www.c3gov.com/files/assets/city/v/1/clerks/documents/draft-sponsorship-protocol_01.01.25_final.pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Citywide Ward Map (PDF, 573KB)",
+          "source_url": "https://www.c3gov.com/files/assets/city/v/1/clerks/documents/doc_wards_map_230404.pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Ward 4 (PDF, 482KB)",
+          "source_url": "https://www.c3gov.com/files/assets/city/v/1/cd-community-development/documents/doc_ward_4_map_230404.pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Ward 3 (PDF, 557KB)",
+          "source_url": "https://www.c3gov.com/files/assets/city/v/1/cd-community-development/documents/doc_ward_3_map_230404.pdf"
+        },
+        {
+          "meeting_date": "",
+          "doc_type": "agenda",
+          "title": "Ward 2 (PDF, 525KB)",
+          "source_url": "https://www.c3gov.com/files/assets/city/v/1/cd-community-development/documents/doc_ward_2_map_230404.pdf"
+        }
+      ],
       "representatives": [
         {
           "name": "Mayor John Doe",

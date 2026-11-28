@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 03:25:06 UTC",
+  "generated_at": "2026-11-28 15:27:59 UTC",
   "by_jurisdiction": {
     "ocd-division/country:us/state:co/place:westminster": [
       {
@@ -1193,6 +1193,91 @@
             "title": "Motion to allocate up to $150,000 for the Longmont Museum public art project",
             "outcome": "Passed",
             "tally": "11-0"
+          }
+        ]
+      }
+    ],
+    "ocd-division/country:us/state:co/county:boulder": [
+      {
+        "chain_key": "topic:commissioners consent items",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-08-18",
+        "latest_date": "2026-10-27",
+        "stage_count": 2,
+        "stages": [
+          {
+            "event_id": "ev_cae2728c3f69c0",
+            "meeting_date": "2026-08-18",
+            "title": "Commissioners' Consent Items",
+            "outcome": "Passed",
+            "tally": "2-1"
+          },
+          {
+            "event_id": "ev_285cb09b01b453",
+            "meeting_date": "2026-10-27",
+            "title": "Commissioners' Consent Items",
+            "outcome": "Passed",
+            "tally": "4-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:call order",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-04-02",
+        "latest_date": "2026-10-22",
+        "stage_count": 3,
+        "stages": [
+          {
+            "event_id": "ev_2b094bcea2cfbb",
+            "meeting_date": "2026-04-02",
+            "title": "Call to Order",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_f5a87c2aa30b7b",
+            "meeting_date": "2026-09-17",
+            "title": "Call to Order",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_3a7a3a62bee984",
+            "meeting_date": "2026-10-22",
+            "title": "Call to Order",
+            "outcome": "Passed",
+            "tally": "8-0"
+          }
+        ]
+      },
+      {
+        "chain_key": "topic:county attorney office boulder county",
+        "match_basis": "Related Agenda Topic Match",
+        "first_date": "2026-08-04",
+        "latest_date": "2026-08-04",
+        "stage_count": 3,
+        "stages": [
+          {
+            "event_id": "ev_8e413eb5780ae2",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket LU-26-0006: Apple Valley Stream Restoration",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_d3ed3e9f70e719",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket ZON-25-0038: 856 Klondyke Avenue",
+            "outcome": "Passed",
+            "tally": "8-0"
+          },
+          {
+            "event_id": "ev_f4fcad472f169e",
+            "meeting_date": "2026-08-04",
+            "title": "County Attorney's Office - Boulder County Community Planning & Permitting Docket ZON-25-0037: 878 Klondyke Avenue",
+            "outcome": "Passed",
+            "tally": "8-0"
           }
         ]
       }
