@@ -3,489 +3,365 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CivicPulse — Local Government Votes, Measures &amp; Civic Engagement</title>
-  <link rel="alternate" type="application/rss+xml" title="CivicPulse — All Colorado Local Measures" href="feeds/all.xml" />
+  <title>CivicPulse — Colorado Local Government Votes, Agendas &amp; Representatives</title>
+  <meta name="description" content="Explore Colorado city councils, county boards, and school districts. Find your overlapping local governments, upcoming agendas, roll-call votes, and representative profiles — 100% free." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    #map { height: 340px; width: 100%; z-index: 1; }
-    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    :root {
+      --cp-bg: #faf5eb;
+      --cp-card: #ffffff;
+      --cp-sand: #f4ecdc;
+      --cp-navy: #1b3b4e;
+      --cp-navy-dark: #142834;
+      --cp-steel: #366a8a;
+      --cp-terra: #c67749;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--cp-bg);
+      color: var(--cp-navy-dark);
+    }
+    #map {
+      height: 360px;
+      width: 100%;
+      z-index: 1;
+    }
+    .cp-card {
+      background: var(--cp-card);
+      border: 1px solid rgba(27, 59, 78, 0.14);
+      border-radius: 1rem;
+    }
+    .cp-sand-panel {
+      background: var(--cp-sand);
+      border: 1px solid rgba(27, 59, 78, 0.16);
+      border-radius: 1rem;
+    }
+    @media print {
+      header, footer, #mapSection, #directorySection, #unclaimedSection, .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+      }
+    }
   </style>
 </head>
-<body class="bg-[#f3e6cf] text-[#142834] min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col">
 
-  <!-- Top Navigation -->
-  <header class="bg-[#1b3b4e] text-[#faf5eb] border-b-2 border-[#c67749] sticky top-0 z-30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
-      <button id="brandHomeBtn" class="flex items-center gap-2.5 text-left group shrink-0">
-        <span class="w-8 h-8 rounded-lg bg-[#366a8a] text-[#faf5eb] border border-[#c67749] font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
+  <!-- Top Header -->
+  <header class="bg-[#1b3b4e] text-[#faf5eb] sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+      <a href="#" id="brandHomeLink" class="flex items-center gap-2.5 group shrink-0">
+        <span class="w-9 h-9 rounded-xl bg-[#c67749] text-[#faf5eb] font-bold flex items-center justify-center text-sm shadow-sm">CP</span>
         <div>
-          <span class="font-bold text-[#faf5eb] tracking-tight text-lg group-hover:text-[#f3e6cf] transition">CivicPulse</span>
-          <span class="hidden xl:inline-block ml-2 text-[11px] font-medium px-2 py-0.5 rounded-full bg-[#366a8a]/50 text-[#faf5eb] border border-[#faf5eb]/20">Colorado Public Record Explorer</span>
+          <div class="font-bold tracking-tight text-lg leading-tight group-hover:text-[#f5d7c4] transition">CivicPulse</div>
+          <div class="text-[11px] text-[#faf5eb]/75 leading-tight">Colorado Local Public Record Explorer</div>
         </div>
-      </button>
+      </a>
 
-      <!-- Global Lazy-Loaded Fuzzy Search -->
-      <div class="relative flex-1 max-w-md">
+      <!-- Global Lazy Search -->
+      <div class="relative flex-1 min-w-[220px] max-w-md">
         <input
           id="globalSearchInput"
           type="search"
-          aria-label="Search measures, ordinances, councilmembers, and quotes"
-          placeholder="Search measures, ordinances, councilmembers, quotes..."
-          class="w-full rounded-xl border border-[#faf5eb]/30 bg-[#faf5eb] px-3.5 py-1.5 text-sm text-[#142834] placeholder:text-[#1b3b4e]/60 focus:bg-white focus:border-[#c67749] focus:outline-none"
+          aria-label="Search cities, measures, topics, or representatives"
+          placeholder="Search cities, ordinances, reps, or quotes..."
+          class="w-full rounded-xl bg-[#142834] border border-white/15 px-3.5 py-2 text-xs sm:text-sm text-[#faf5eb] placeholder:text-[#faf5eb]/55 focus:bg-[#0f1f29] focus:border-[#c67749] focus:outline-none"
         />
-        <div id="globalSearchResults" class="hidden absolute left-0 right-0 mt-1.5 bg-[#faf5eb] rounded-xl border border-[#1b3b4e]/25 shadow-xl text-[#142834] max-h-96 overflow-y-auto z-40 divide-y divide-[#1b3b4e]/10"></div>
+        <div
+          id="globalSearchResults"
+          class="hidden absolute left-0 right-0 mt-1.5 bg-white text-[#142834] rounded-xl border border-slate-200 shadow-2xl max-h-96 overflow-y-auto z-50 divide-y divide-slate-100"
+        ></div>
       </div>
 
-      <nav aria-label="Primary actions" class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-        <button id="navUpcomingBtn" type="button" class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#faf5eb]/25 bg-[#366a8a]/70 text-xs font-semibold text-[#faf5eb] hover:bg-[#2b5670] transition">
-          📅 Upcoming
+      <!-- Compact Utility Actions -->
+      <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+        <button type="button" data-open-modal="formulaModal" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition cursor-pointer">
+          Formula
         </button>
-        <button id="navRadarBtn" type="button" class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#faf5eb]/25 bg-[#366a8a]/70 text-xs font-semibold text-[#faf5eb] hover:bg-[#2b5670] transition">
-          🏢 Topic Radar
+        <button type="button" data-open-modal="alertsModal" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition cursor-pointer">
+          RSS Alerts
         </button>
-        <button data-open-modal="formulaModal" type="button" class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#faf5eb]/25 bg-[#366a8a] text-xs font-semibold text-[#faf5eb] hover:bg-[#2b5670] transition">
-          🧮 Formula
+        <button type="button" data-open-modal="embedModal" class="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition cursor-pointer">
+          &lt;/&gt; Embed
         </button>
-        <button data-open-modal="rssModal" type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#faf5eb]/25 bg-[#366a8a] text-xs font-semibold text-[#faf5eb] hover:bg-[#2b5670] transition">
-          📡 Alerts
+        <button type="button" data-open-modal="measures101Modal" class="hidden md:inline-flex px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold transition cursor-pointer">
+          101 Guide
         </button>
-        <button data-open-modal="measures101Modal" type="button" class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#faf5eb]/25 bg-[#366a8a] text-xs font-semibold text-[#faf5eb] hover:bg-[#2b5670] transition">
-          📘 101 Guide
+        <button type="button" data-open-modal="patronModal" class="px-3 py-1.5 rounded-lg bg-[#c67749] hover:bg-[#b56638] text-[#faf5eb] text-xs font-semibold transition cursor-pointer">
+          Support
         </button>
-        <button data-open-modal="patronModal" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#c67749] text-white border border-white/15 text-xs font-semibold hover:bg-[#b2663a] transition shadow-sm">
-          🤝 Support
-        </button>
-      </nav>
+      </div>
     </div>
   </header>
 
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-    <!-- No-JS Fallback (Replaces broken empty shell when JavaScript is disabled) -->
+
+    <!-- No-JS Accessible Fallback -->
     <noscript>
-      <div class="bg-[#faf5eb] border-2 border-[#c67749] rounded-2xl p-5 space-y-3 text-sm text-[#142834]">
-        <h2 class="text-lg font-bold text-[#1b3b4e]">JavaScript is disabled in your browser</h2>
-        <p>CivicPulse uses client-side JavaScript to render the interactive boundary map, district lookup, and search filters. You can still access our public data, scoring rules, and RSS feeds directly:</p>
-        <div class="flex flex-wrap gap-3 pt-1 text-xs font-semibold">
-          <a href="docs/civicpulse_impact_formula.md" class="px-3 py-2 rounded-xl bg-[#1b3b4e] text-[#faf5eb]">Download Impact Formula (.md)</a>
-          <a href="feeds/all.xml" class="px-3 py-2 rounded-xl bg-[#366a8a] text-[#faf5eb]">Subscribe via RSS (all.xml)</a>
-          <a href="data/directory.json" class="px-3 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-[#1b3b4e]">View Jurisdictions JSON</a>
-          <a href="data/upcoming_meetings.json" class="px-3 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-[#1b3b4e]">View Upcoming Meetings JSON</a>
+      <div class="p-4 rounded-xl bg-amber-50 border border-amber-300 text-sm text-amber-950 space-y-2">
+        <p class="font-bold">JavaScript is disabled. You can still access CivicPulse's open public-record files directly:</p>
+        <div class="flex flex-wrap gap-3 text-xs font-semibold underline">
+          <a href="data/directory.json">Directory (JSON)</a>
+          <a href="data/upcoming_meetings.json">Upcoming Meetings (JSON)</a>
+          <a href="feeds/all.xml">All Colorado Votes (RSS)</a>
+          <a href="docs/civicpulse_impact_formula.md">Impact Formula (Markdown)</a>
         </div>
       </div>
     </noscript>
 
-    <!-- HOME VIEW -->
-    <section id="homeView" class="space-y-6">
-      <div class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 shadow-sm overflow-hidden">
-        <div class="p-4 sm:p-5 border-b border-[#1b3b4e]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          <div>
-            <h1 class="text-xl sm:text-2xl font-bold text-[#1b3b4e]">Explore Your Local Governments</h1>
-            <p class="text-sm text-[#142834]/80 mt-0.5">Enter a street address or click the map to check city, county, school board, and federal representation.</p>
-          </div>
-          <form id="addressLookupForm" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full lg:w-auto">
-            <input id="addressInput" type="text" aria-label="Street address" placeholder="e.g. 300 Laporte Ave, Fort Collins, CO" class="w-full sm:w-72 rounded-xl border border-[#1b3b4e]/25 bg-white px-3.5 py-2 text-sm focus:border-[#c67749] focus:outline-none" />
-            <button type="submit" id="addressLookupBtn" class="px-4 py-2 rounded-xl bg-[#c67749] text-white text-sm font-semibold hover:bg-[#b2663a] transition whitespace-nowrap shadow-sm">
-              Find My Districts
-            </button>
-          </form>
+    <!-- =================================================================== -->
+    <!-- STAGE 1: MAP-FIRST LOCATION & OVERLAPPING GOVERNMENTS PICKER        -->
+    <!-- =================================================================== -->
+    <section id="mapSection" class="cp-card shadow-sm overflow-hidden">
+      <div class="p-4 sm:p-5 border-b border-[#1b3b4e]/10 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-[#142834]">Explore Your Local Governments</h1>
+          <p class="text-xs sm:text-sm text-[#142834]/75 mt-0.5">
+            Click anywhere on the map, enter a street address, or use your location to see overlapping city, county, school board, and federal boundaries.
+          </p>
         </div>
-        <div class="relative">
-          <div id="map"></div>
-          <div class="bg-[#ebe0ca] px-4 py-2 border-t border-[#1b3b4e]/15 text-[#1b3b4e] flex flex-wrap items-center justify-between gap-2 text-xs">
-            <span>Tip: Click anywhere on the map to resolve overlapping city, county, school district, and congressional boundaries.</span>
-            <span id="lastUpdatedBadge" aria-live="polite">Loading directory...</span>
-          </div>
-        </div>
-      </div>
 
-      <div id="overlapBanner" class="hidden bg-[#ebe0ca] border border-[#366a8a]/35 rounded-2xl p-4 sm:p-5 space-y-3">
-        <div class="flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-[#1b3b4e]">Resolved Location &amp; Overlapping Governments</div>
-            <h2 id="overlapLocationTitle" class="text-base font-bold text-[#1b3b4e] mt-0.5">Resolving location...</h2>
-          </div>
-          <button id="dismissOverlapBtn" type="button" class="text-xs text-[#142834]/70 hover:text-[#142834]">Dismiss ✕</button>
-        </div>
-        <div id="overlapCardsList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
-      </div>
-
-      <!-- Quick Action Strip for Residents & Local Businesses -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <button id="jumpUpcomingCardBtn" type="button" class="text-left bg-[#faf5eb] hover:bg-white border border-[#1b3b4e]/20 hover:border-[#c67749] rounded-2xl p-4 transition shadow-sm flex items-start gap-3">
-          <span class="text-xl" aria-hidden="true">📅</span>
-          <div>
-            <div class="text-sm font-bold text-[#1b3b4e]">Upcoming Meetings &amp; Comment Deadlines</div>
-            <p class="text-xs text-[#142834]/75 mt-0.5">See scheduled agendas across Colorado, public comment rules, and export dates to your calendar (.ics).</p>
-          </div>
-        </button>
-        <button id="jumpRadarCardBtn" type="button" class="text-left bg-[#faf5eb] hover:bg-white border border-[#1b3b4e]/20 hover:border-[#c67749] rounded-2xl p-4 transition shadow-sm flex items-start gap-3">
-          <span class="text-xl" aria-hidden="true">🏢</span>
-          <div>
-            <div class="text-sm font-bold text-[#1b3b4e]">Regional Topic Radar &amp; CSV Export</div>
-            <p class="text-xs text-[#142834]/75 mt-0.5">Filter zoning, taxes, utilities, contracts &amp; housing across all cities at once and download spreadsheets.</p>
-          </div>
-        </button>
-        <button data-open-modal="formulaModal" type="button" class="text-left bg-[#faf5eb] hover:bg-white border border-[#1b3b4e]/20 hover:border-[#c67749] rounded-2xl p-4 transition shadow-sm flex items-start gap-3">
-          <span class="text-xl" aria-hidden="true">🧮</span>
-          <div>
-            <div class="text-sm font-bold text-[#1b3b4e]">Auditable Impact Formula &amp; RSS Alerts</div>
-            <p class="text-xs text-[#142834]/75 mt-0.5">Inspect and download our deterministic 0–100 scoring math, revision log, and topic RSS feeds.</p>
-          </div>
-        </button>
-      </div>
-
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div class="flex flex-wrap items-center gap-2" id="levelFilterPills">
-          <button data-level="all" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#1b3b4e] text-[#faf5eb] shadow-sm">All (<span id="countAll">0</span>)</button>
-          <button data-level="city" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf5eb] border border-[#1b3b4e]/25 text-[#1b3b4e] hover:bg-[#ebe0ca]">Cities &amp; Towns (<span id="countCity">0</span>)</button>
-          <button data-level="county" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf5eb] border border-[#1b3b4e]/25 text-[#1b3b4e] hover:bg-[#ebe0ca]">Counties (<span id="countCounty">0</span>)</button>
-          <button data-level="school_district" class="level-pill px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#faf5eb] border border-[#1b3b4e]/25 text-[#1b3b4e] hover:bg-[#ebe0ca]">School Boards (<span id="countSchool">0</span>)</button>
-        </div>
-        <select id="quickJumpSelect" aria-label="Jump directly to jurisdiction" class="rounded-xl border border-[#1b3b4e]/25 bg-[#faf5eb] px-3 py-1.5 text-xs font-medium text-[#1b3b4e] focus:border-[#c67749] focus:outline-none">
-          <option value="">Jump directly to jurisdiction...</option>
-        </select>
-      </div>
-
-      <div class="space-y-3">
-        <div class="flex items-center justify-between">
-          <h2 class="text-lg font-bold text-[#1b3b4e]">Active Tracked Jurisdictions</h2>
-          <span class="text-xs text-[#142834]/70">100% free public records • Zero paywalls</span>
-        </div>
-        <div id="jurisdictionCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="col-span-full rounded-2xl border border-[#1b3b4e]/15 bg-[#faf5eb] p-6 text-center text-xs text-[#142834]/70">
-            Loading tracked Colorado cities, counties, and school districts...
-          </div>
-        </div>
-      </div>
-
-      <!-- UPCOMING MEETINGS & PUBLIC COMMENT DEADLINES SECTION -->
-      <section id="upcomingMeetingsSection" aria-labelledby="upcomingMeetingsHeading" class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 space-y-4 shadow-sm">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-[#366a8a]">Before-the-Vote Resident &amp; Business Calendar</span>
-            <h2 id="upcomingMeetingsHeading" class="text-lg font-bold text-[#1b3b4e]">Upcoming Meetings &amp; Public Comment Deadlines</h2>
-            <p class="text-xs text-[#142834]/75 mt-0.5">Scheduled council, county, and school board sessions. Sign up for written or spoken public comment before each portal's cutoff.</p>
-          </div>
-          <div class="flex flex-wrap items-center gap-2">
-            <select id="upcomingJurFilter" aria-label="Filter upcoming meetings by jurisdiction" class="rounded-xl border border-[#1b3b4e]/25 bg-white px-3 py-1.5 text-xs font-medium text-[#1b3b4e]">
-              <option value="all">All Active Jurisdictions</option>
-            </select>
-            <span id="upcomingCountBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#ebe0ca] text-[#1b3b4e]">Loading schedule...</span>
-          </div>
-        </div>
-        <div id="upcomingMeetingsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div class="col-span-full text-xs text-[#142834]/70 py-4 text-center">Loading upcoming agendas and public comment schedules...</div>
-        </div>
-        <div id="upcomingLoadMoreWrap" class="hidden text-center pt-1">
-          <button id="upcomingLoadMoreBtn" type="button" class="px-4 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-xs font-semibold text-[#1b3b4e] hover:bg-[#ebe0ca] transition">
-            Show More Upcoming Meetings
+        <form id="addressLookupForm" class="flex flex-wrap sm:flex-nowrap items-center gap-2 w-full lg:w-auto">
+          <input
+            id="addressInput"
+            type="text"
+            aria-label="Colorado street address or city"
+            placeholder="e.g. 300 Laporte Ave, Fort Collins, CO"
+            class="flex-1 sm:w-64 rounded-xl border border-[#1b3b4e]/25 bg-[#faf5eb]/60 px-3.5 py-2 text-xs sm:text-sm text-[#142834] focus:bg-white focus:border-[#c67749] focus:outline-none"
+          />
+          <button
+            type="submit"
+            id="addressLookupBtn"
+            class="px-4 py-2 rounded-xl bg-[#c67749] hover:bg-[#b56638] text-[#faf5eb] text-xs sm:text-sm font-semibold transition whitespace-nowrap cursor-pointer"
+          >
+            Find My Districts
           </button>
-        </div>
-      </section>
-
-      <!-- REGIONAL TOPIC RADAR & BUSINESS INTELLIGENCE SECTION -->
-      <section id="regionalRadarSection" aria-labelledby="regionalRadarHeading" class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 space-y-4 shadow-sm">
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-[#c67749]">Cross-Jurisdiction Intelligence &amp; Exports</span>
-            <h2 id="regionalRadarHeading" class="text-lg font-bold text-[#1b3b4e]">Regional Topic Radar (Residents &amp; Local Businesses)</h2>
-            <p class="text-xs text-[#142834]/75 mt-0.5">Compare ordinances, zoning changes, utility/tax rates, and contracts across Front Range governments—with provenance badges and 1-click CSV export.</p>
-          </div>
-          <div class="flex flex-wrap items-center gap-2">
-            <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-[#1b3b4e]/20 bg-white text-xs font-medium text-[#1b3b4e] cursor-pointer">
-              <input id="radarBusinessOnlyToggle" type="checkbox" class="rounded text-[#c67749] focus:ring-[#c67749]" />
-              <span>Commercial / Regulatory Topics Only</span>
-            </label>
-            <button id="radarExportCsvBtn" type="button" class="px-3.5 py-1.5 rounded-xl bg-[#1b3b4e] text-[#faf5eb] text-xs font-semibold hover:bg-[#366a8a] transition shadow-sm">
-              ⬇ Export Filtered CSV
-            </button>
-          </div>
-        </div>
-
-        <!-- Topic Filter Pills -->
-        <div id="radarTopicPills" class="flex flex-wrap items-center gap-1.5">
-          <button data-topic="all" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-[#1b3b4e] text-[#faf5eb]">All Topics</button>
-          <button data-topic="Zoning &amp; Land Use" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Zoning &amp; Land Use</button>
-          <button data-topic="Housing &amp; Development" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Housing &amp; Development</button>
-          <button data-topic="Taxes, Fees &amp; Utilities" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Taxes, Fees &amp; Utilities</button>
-          <button data-topic="Budget &amp; Finance" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Budget &amp; Finance</button>
-          <button data-topic="Contracts &amp; Procurement" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Contracts &amp; Procurement</button>
-          <button data-topic="Permits &amp; Licensing" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Permits &amp; Licensing</button>
-          <button data-topic="Infrastructure &amp; Transit" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Infrastructure &amp; Transit</button>
-          <button data-topic="Public Safety" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Public Safety</button>
-          <button data-topic="Parks, Water &amp; Environment" class="radar-topic-pill px-3 py-1 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#ebe0ca]">Parks, Water &amp; Environment</button>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-[#142834]/75">
-          <div class="flex flex-wrap items-center gap-2">
-            <select id="radarJurFilter" aria-label="Filter radar by jurisdiction" class="rounded-xl border border-[#1b3b4e]/25 bg-white px-3 py-1.5 text-xs font-medium text-[#1b3b4e]">
-              <option value="all">All Jurisdictions</option>
-            </select>
-            <select id="radarOutcomeFilter" aria-label="Filter radar by outcome" class="rounded-xl border border-[#1b3b4e]/25 bg-white px-3 py-1.5 text-xs font-medium text-[#1b3b4e]">
-              <option value="all">All Outcomes</option>
-              <option value="Passed">Passed</option>
-              <option value="Failed">Failed</option>
-              <option value="Tabled">Tabled</option>
-              <option value="Pending">Pending</option>
-            </select>
-          </div>
-          <span id="radarStatusLabel">Loading recent quarters...</span>
-        </div>
-
-        <div id="regionalRadarList" class="space-y-3">
-          <div class="text-xs text-[#142834]/70 py-4 text-center">Loading cross-jurisdiction measures...</div>
-        </div>
-
-        <div id="radarPaginationWrap" class="hidden flex flex-wrap items-center justify-center gap-3 pt-2">
-          <button id="radarLoadOlderQuarterBtn" type="button" class="px-4 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-xs font-semibold text-[#1b3b4e] hover:bg-[#ebe0ca] transition">
-            Load Older Quarter Chunk
+          <button
+            type="button"
+            id="useMyLocationBtn"
+            class="px-3.5 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white hover:bg-[#f4ecdc] text-[#1b3b4e] text-xs sm:text-sm font-semibold transition whitespace-nowrap inline-flex items-center gap-1.5 cursor-pointer"
+            title="Use your device location to resolve overlapping governments"
+          >
+            <span>📍</span><span>Use My Location</span>
           </button>
-        </div>
-      </section>
+        </form>
+      </div>
 
-      <div id="unclaimedSection" class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 space-y-3">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <h2 class="text-base font-bold text-[#1b3b4e]">Unclaimed Jurisdictions &amp; Community Requests</h2>
-            <p class="text-xs text-[#142834]/80">Select a city, county, or school board below to request tracking or sponsor priority onboarding.</p>
-          </div>
-          <span id="unclaimedCountBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#ebe0ca] text-[#1b3b4e] self-start">Loading...</span>
+      <div class="relative">
+        <div id="map" aria-label="Interactive map of Colorado local governments"></div>
+        <div class="bg-[#faf5eb] px-4 py-2 border-t border-[#1b3b4e]/10 flex flex-wrap items-center justify-between gap-2 text-xs text-[#142834]/70">
+          <span>Tip: Click anywhere on the map or use your location, then click <strong>+</strong> on any active government to add it to your workspace filter.</span>
+          <span id="lastUpdatedBadge">Loading data...</span>
         </div>
-        <div id="unclaimedCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
       </div>
     </section>
 
-    <!-- JURISDICTION HUB VIEW -->
-    <section id="jurisdictionView" class="hidden space-y-6">
-      <div class="flex flex-wrap items-center justify-between gap-2">
-        <button id="jurBackHomeBtn" type="button" class="text-xs font-semibold text-[#366a8a] hover:underline">← Back to Map &amp; Directory</button>
-        <div id="jurBreadcrumbs" class="text-xs text-[#142834]/70"></div>
-      </div>
+    <!-- RESOLVED LOCATION & OVERLAPPING GOVERNMENTS PANEL -->
+    <section id="resolvedPanel" class="hidden cp-sand-panel p-4 sm:p-5 space-y-3.5 shadow-sm"></section>
 
-      <div class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 shadow-sm space-y-4">
-        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
-          <div class="space-y-1.5">
-            <div class="flex flex-wrap items-center gap-2">
-              <span id="jurLevelBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase bg-[#366a8a] text-[#faf5eb]">Jurisdiction</span>
-              <span id="jurDocsSinceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#ebe0ca] text-[#142834]">Checking document history...</span>
-              <span id="jurFreshnessSlot"></span>
-            </div>
-            <h1 id="jurTitle" class="text-2xl font-bold text-[#1b3b4e]">Loading jurisdiction...</h1>
-            <p id="jurSubtitle" class="text-xs text-[#142834]/70 font-mono break-all"></p>
-          </div>
-          <div class="flex flex-wrap items-center gap-2">
-            <a id="jurPortalLink" href="https://civics-d03.pages.dev/" target="_blank" rel="noopener noreferrer" class="hidden px-3.5 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-xs font-semibold text-[#142834] hover:bg-[#ebe0ca] transition">Official Portal ↗</a>
-            <button id="jurExportCsvBtn" type="button" class="px-3.5 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-xs font-semibold text-[#1b3b4e] hover:bg-[#ebe0ca] transition">⬇ Export CSV</button>
-            <a id="jurRssLink" href="feeds/all.xml" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white text-xs font-semibold text-[#1b3b4e] hover:bg-[#ebe0ca] transition">📡 RSS Feed</a>
-            <button id="scrollEngageBtn" type="button" class="px-3.5 py-2 rounded-xl bg-[#366a8a] text-[#faf5eb] text-xs font-semibold hover:bg-[#1b3b4e] transition">📣 How to Engage</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="engagementGuideCard" class="bg-[#ebe0ca] border border-[#366a8a]/30 rounded-2xl p-5 sm:p-6 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+    <!-- =================================================================== -->
+    <!-- STAGE 2: UNIFIED SCOPED WORKSPACE (SHOWN AFTER 1+ JURS SELECTED)    -->
+    <!-- =================================================================== -->
+    <section id="workspaceSection" class="hidden space-y-5 scroll-mt-20">
+      <!-- Single Active Filter Bar Controlling ALL Workspace Tabs -->
+      <div class="cp-card p-4 sm:p-5 shadow-sm space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-[#1b3b4e]">Civic Literacy &amp; Participation Guide</span>
-            <h2 class="text-lg font-bold text-[#1b3b4e]">How to Engage &amp; Upcoming / Recent Meetings</h2>
-          </div>
-          <a id="engageOfficialPortalBtn" href="https://civics-d03.pages.dev/" target="_blank" rel="noopener noreferrer" class="hidden text-xs font-semibold text-[#1b3b4e] hover:underline">Verify Schedule &amp; Public Comment Rules ↗</a>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div class="bg-[#faf5eb] rounded-xl border border-[#1b3b4e]/15 p-4 space-y-2.5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-[#142834]/90">Resident Action Checklist</h3>
-            <ol id="engageChecklist" class="list-decimal list-inside space-y-2 text-xs text-[#142834]/90 leading-relaxed"></ol>
-          </div>
-          <div class="bg-[#faf5eb] rounded-xl border border-[#1b3b4e]/15 p-4 space-y-2.5 min-w-0">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-[#142834]/90">Upcoming &amp; Recent Agendas</h3>
-            <div id="engageMeetingsList" class="space-y-2 text-xs"></div>
-          </div>
-          <div class="bg-[#faf5eb] rounded-xl border border-[#1b3b4e]/15 p-4 space-y-2.5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-[#142834]/90">All Representative Contact Channels</h3>
-            <div id="engageContactsList" class="space-y-2 text-xs"></div>
-          </div>
-        </div>
-        <p class="text-[11px] text-[#142834]/70">Verify exact hearing dates, comment registration deadlines, and contact details on the official government portal before attending.</p>
-      </div>
-
-      <div id="jurLifecyclesCard" class="hidden bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 space-y-4">
-        <div class="flex items-center justify-between gap-2">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-[#366a8a]">Cross-Meeting Tracker</span>
-            <h2 class="text-lg font-bold text-[#1b3b4e]">Multi-Meeting Bill &amp; Measure Lifecycles</h2>
-            <p class="text-xs text-[#142834]/75 mt-0.5">Connects related agenda items, readings, and follow-up votes across meetings so residents can see how a proposal progressed.</p>
-          </div>
-          <span id="jurLifecyclesCount" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#366a8a] text-[#faf5eb]">0 chains</span>
-        </div>
-        <div id="jurLifecyclesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-      </div>
-
-      <div class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 space-y-4">
-        <div>
-          <h2 class="text-lg font-bold text-[#1b3b4e]">Elected Representatives &amp; Voting Metrics</h2>
-          <p class="text-xs text-[#142834]/70">Metrics reflect ingested public roll-call records only. Committee votes use committee size as denominator.</p>
-        </div>
-        <div id="jurEntitiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-      </div>
-
-      <div class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <h2 class="text-lg font-bold text-[#1b3b4e]">Measures, Ordinances &amp; Roll-Call Votes</h2>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-[#366a8a]">Active Workspace Filter</div>
             <p class="text-xs text-[#142834]/70">
-              Includes plain-English summaries, capture provenance, QA status, and
-              <button data-open-modal="formulaModal" type="button" class="underline text-[#366a8a] hover:text-[#1b3b4e]">auditable impact scores (0–100)</button>.
+              All tabs below—Representatives, Before the Vote, Votes &amp; Radar, and Alignment—are filtered to these selections.
             </p>
           </div>
-          <div class="flex items-center gap-2">
-            <label for="eventSortSelect" class="text-xs text-[#142834]/70">Sort:</label>
-            <select id="eventSortSelect" class="rounded-xl border border-[#1b3b4e]/25 bg-[#faf5eb] px-3 py-1.5 text-xs font-medium text-[#1b3b4e]">
-              <option value="date_desc">Newest First</option>
-              <option value="impact_desc">Highest Impact Score</option>
-              <option value="closest_margin">Closest Vote Margin</option>
-            </select>
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" data-open-modal="engageModal" class="px-3 py-1.5 rounded-lg border border-[#1b3b4e]/20 bg-[#faf5eb] hover:bg-[#f4ecdc] text-xs font-semibold text-[#1b3b4e] cursor-pointer">
+              📣 How Public Comment Works
+            </button>
+            <button type="button" id="printBriefingBtn" class="px-3 py-1.5 rounded-lg border border-[#1b3b4e]/20 bg-white hover:bg-slate-50 text-xs font-semibold text-[#1b3b4e] cursor-pointer">
+              🖨️ Print Briefing
+            </button>
+            <button type="button" id="clearAllFiltersBtn" class="px-3 py-1.5 rounded-lg border border-rose-200 bg-rose-50 hover:bg-rose-100 text-xs font-semibold text-rose-800 cursor-pointer">
+              Clear Filter
+            </button>
           </div>
         </div>
-        <div id="jurEventsList" class="space-y-3"></div>
+        <div id="activeFilterChips" class="flex flex-wrap items-center gap-2"></div>
+      </div>
+
+      <!-- Scoped 4-Tab Workspace Navigation (Only Visible When 1+ Jurs Selected) -->
+      <div class="border-b border-[#1b3b4e]/15 flex flex-wrap gap-2 sm:gap-5 text-xs sm:text-sm font-semibold" id="workspaceTabBar" role="tablist">
+        <button type="button" role="tab" data-ws-tab="reps" class="ws-tab pb-3 px-1 border-b-2 transition cursor-pointer">
+          👥 Representatives <span id="tabCountReps" class="ml-1 px-1.5 py-0.5 rounded-full text-[11px] bg-[#1b3b4e]/10 text-[#1b3b4e]">0</span>
+        </button>
+        <button type="button" role="tab" data-ws-tab="before" class="ws-tab pb-3 px-1 border-b-2 transition cursor-pointer">
+          📅 Before the Vote <span id="tabCountBefore" class="ml-1 px-1.5 py-0.5 rounded-full text-[11px] bg-[#1b3b4e]/10 text-[#1b3b4e]">0</span>
+        </button>
+        <button type="button" role="tab" data-ws-tab="votes" class="ws-tab pb-3 px-1 border-b-2 transition cursor-pointer">
+          🗳️ Votes &amp; Topic Radar <span id="tabCountVotes" class="ml-1 px-1.5 py-0.5 rounded-full text-[11px] bg-[#1b3b4e]/10 text-[#1b3b4e]">0</span>
+        </button>
+        <button type="button" role="tab" data-ws-tab="alignment" class="ws-tab pb-3 px-1 border-b-2 transition cursor-pointer">
+          📊 Alignment &amp; Metrics
+        </button>
+      </div>
+
+      <!-- Active Tab Panel Content -->
+      <div id="workspaceTabContent" class="space-y-4"></div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- BROWSE DIRECTORY (ACTIVE + SEARCHABLE UNCLAIMED REQUEST QUEUE)      -->
+    <!-- =================================================================== -->
+    <section id="directorySection" class="space-y-4 pt-2">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-lg font-bold text-[#142834]">Active Tracked Jurisdictions</h2>
+          <p class="text-xs text-[#142834]/70">Click any jurisdiction card (or its <strong>+</strong> button) to add it to your workspace filter above.</p>
+        </div>
+        <div id="activeLevelPills" class="flex flex-wrap items-center gap-1.5">
+          <button type="button" data-level="all" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#1b3b4e] text-[#faf5eb] cursor-pointer">All (<span id="actCountAll">0</span>)</button>
+          <button type="button" data-level="city" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">Cities (<span id="actCountCity">0</span>)</button>
+          <button type="button" data-level="county" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">Counties (<span id="actCountCounty">0</span>)</button>
+          <button type="button" data-level="school_district" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">School Boards (<span id="actCountSchool">0</span>)</button>
+        </div>
+      </div>
+
+      <div id="activeJurisdictionsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- SEARCHABLE & PAGINATED UNCLAIMED TERRITORIES (AUTONOMOUS GITHUB REQUEST INTAKE) -->
+    <section id="unclaimedSection" class="cp-card p-5 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h2 class="text-base font-bold text-[#142834]">Request Coverage for Other Colorado Communities</h2>
+          <p class="text-xs text-[#142834]/70">Requests open a pre-filled intake issue picked up automatically by CivicPulse's daily autonomous onboarding agent.</p>
+        </div>
+        <span id="unclaimedTotalBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#f4ecdc] text-[#1b3b4e] self-start">0 available</span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-2.5">
+        <input
+          id="unclaimedSearchInput"
+          type="search"
+          aria-label="Search unclaimed Colorado cities, counties, and school districts"
+          placeholder="Search Colorado cities, counties &amp; school districts (e.g. Loveland, Durango, Mesa County)..."
+          class="flex-1 rounded-xl border border-[#1b3b4e]/25 bg-[#faf5eb]/60 px-3.5 py-2 text-xs sm:text-sm text-[#142834] focus:bg-white focus:border-[#c67749] focus:outline-none"
+        />
+        <div id="unclaimedTierPills" class="flex flex-wrap items-center gap-1.5 shrink-0">
+          <button type="button" data-tier="all" class="unc-tier-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#1b3b4e] text-[#faf5eb] cursor-pointer">All</button>
+          <button type="button" data-tier="city" class="unc-tier-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] cursor-pointer">Cities</button>
+          <button type="button" data-tier="county" class="unc-tier-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] cursor-pointer">Counties</button>
+          <button type="button" data-tier="school_district" class="unc-tier-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] cursor-pointer">Schools</button>
+        </div>
+      </div>
+
+      <div id="unclaimedCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+
+      <div id="unclaimedPaginationBar" class="hidden flex items-center justify-center gap-2 pt-1">
+        <button type="button" id="unclaimedShowMoreBtn" class="px-4 py-2 rounded-xl border border-[#1b3b4e]/25 bg-white hover:bg-[#f4ecdc] text-xs font-semibold text-[#1b3b4e] cursor-pointer">Show More</button>
+        <button type="button" id="unclaimedCollapseBtn" class="hidden px-3.5 py-2 rounded-xl bg-[#f4ecdc] text-xs font-semibold text-[#1b3b4e] cursor-pointer">Collapse</button>
+      </div>
+
+      <div class="rounded-xl bg-[#f4ecdc]/80 border border-[#1b3b4e]/15 px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+        <div class="text-[#142834]/85">
+          <strong class="text-[#1b3b4e]">Looking for a Fire, Water, Library, or Metro Special District?</strong>
+          <span class="block sm:inline sm:ml-1">Submit the district name and meeting URL to queue it for automated scouting.</span>
+        </div>
+        <a id="requestSpecialDistrictLink" href="#" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center justify-center px-3.5 py-1.5 rounded-xl bg-[#1b3b4e] text-[#faf5eb] font-semibold hover:bg-[#366a8a] transition">
+          + Request Special District ↗
+        </a>
       </div>
     </section>
 
-    <!-- REPRESENTATIVE PROFILE VIEW -->
-    <section id="repView" class="hidden space-y-6">
-      <button id="repBackBtn" type="button" class="text-xs font-semibold text-[#366a8a] hover:underline">← Back to Jurisdiction</button>
-      <div id="repProfileContent" class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
-    </section>
-
-    <!-- BILL DETAIL VIEW -->
-    <section id="billView" class="hidden space-y-6">
-      <button id="billBackBtn" type="button" class="text-xs font-semibold text-[#366a8a] hover:underline">← Back to Jurisdiction</button>
-      <div id="billDetailContent" class="bg-[#faf5eb] rounded-2xl border border-[#1b3b4e]/20 p-5 sm:p-6 shadow-sm space-y-5"></div>
-    </section>
   </main>
 
-  <footer class="bg-[#1b3b4e] text-[#faf5eb] border-t-2 border-[#c67749] mt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#faf5eb]/85">
-      <div><strong class="text-[#faf5eb]">CivicPulse</strong> — Free public-record navigation for residents, newcomers &amp; local businesses.</div>
-      <div class="flex flex-wrap items-center gap-4">
-        <button data-open-modal="formulaModal" type="button" class="hover:text-[#f3e6cf]">Impact Score Formula</button>
-        <button data-open-modal="rssModal" type="button" class="hover:text-[#f3e6cf]">RSS &amp; Slack Alerts</button>
-        <button data-open-modal="measures101Modal" type="button" class="hover:text-[#f3e6cf]">Local Measures 101</button>
-        <button data-open-modal="patronModal" type="button" class="hover:text-[#f3e6cf]">Voluntary Support &amp; Business Patrons</button>
-        <a href="mailto:bryanateisl@gmail.com" class="hover:text-[#f3e6cf]">Contact</a>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-[#1b3b4e]/15 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#142834]/70">
+      <div>
+        <strong class="text-[#1b3b4e]">CivicPulse</strong> — Free, nonpartisan public-record intelligence for Colorado residents, businesses &amp; journalists.
+      </div>
+      <div class="flex flex-wrap items-center gap-4 font-medium">
+        <button type="button" data-open-modal="engageModal" class="hover:text-[#1b3b4e] cursor-pointer">How Public Comment Works</button>
+        <button type="button" data-open-modal="formulaModal" class="hover:text-[#1b3b4e] cursor-pointer">Impact Formula</button>
+        <button type="button" data-open-modal="alertsModal" class="hover:text-[#1b3b4e] cursor-pointer">RSS Feeds</button>
+        <button type="button" data-open-modal="patronModal" class="hover:text-[#1b3b4e] cursor-pointer">Voluntary Support</button>
+        <a href="mailto:bryanateisl@gmail.com" class="hover:text-[#1b3b4e]">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Modals -->
-  <div id="measures101Modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-    <div class="bg-[#faf5eb] rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-[#1b3b4e]/20">
+  <!-- ===================================================================== -->
+  <!-- MODALS (Rep Profile, Bill Detail, Comment Composer, Engage, Formula)  -->
+  <!-- ===================================================================== -->
+  <div id="repModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="repModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-3xl w-full max-h-[90vh] overflow-y-auto p-5 sm:p-6 space-y-5"></div>
+  </div>
+
+  <div id="billModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div id="billModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-3xl w-full max-h-[90vh] overflow-y-auto p-5 sm:p-6 space-y-5"></div>
+  </div>
+
+  <div id="commentComposerModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div id="commentComposerBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-xl w-full p-5 sm:p-6 space-y-4"></div>
+  </div>
+
+  <!-- Consolidated "How Public Comment Works" Modal -->
+  <div id="engageModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-xl w-full p-6 space-y-4">
       <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-[#1b3b4e]">Local Measures 101</h3>
-        <button data-close-modal="measures101Modal" type="button" class="text-sm text-[#142834]/70 hover:text-[#1b3b4e]">✕</button>
+        <h3 class="text-lg font-bold text-[#142834]">How Local Public Comment Works</h3>
+        <button type="button" data-close-modal="engageModal" class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer">✕ Close</button>
       </div>
-      <div class="space-y-3 text-xs text-[#142834]/90 leading-relaxed">
-        <p><strong>Ordinances:</strong> Local laws enacted by a city council or county board (zoning rules, municipal codes, and tax/fee updates). Typically require multiple readings before final adoption.</p>
-        <p><strong>Resolutions:</strong> Formal policy statements, contract approvals, or budget authorizations that usually pass in a single meeting.</p>
-        <p><strong>Consent Agenda:</strong> Routine items grouped together and approved in a single unanimous vote unless a councilmember pulls an item for separate discussion.</p>
-        <p><strong>Impact Score (0–100):</strong> A deterministic, nonpartisan score weighing Legal Binding Weight (10–40 pts), Contestedness / Vote Margin (0–40 pts), and Body Turnout (0–20 pts). <button data-close-modal="measures101Modal" data-open-modal="formulaModal" type="button" class="underline font-semibold text-[#366a8a]">Inspect &amp; download the exact formula →</button></p>
+      <p class="text-xs text-slate-600">Colorado city councils, county commissioner boards, and school boards share the same core public participation workflow:</p>
+      <ol class="list-decimal pl-5 space-y-2.5 text-sm text-slate-800 leading-relaxed">
+        <li><strong>Check Agendas 48–72 Hours Early:</strong> Ordinances usually require two readings—weighing in before the second reading carries the most weight.</li>
+        <li><strong>Contact Your Representative Directly:</strong> Click any representative bubble in your workspace to email or call them directly, referencing the specific agenda item and your ward/district.</li>
+        <li><strong>Submit Written Comment Before Cutoff:</strong> Most Front Range boards close written comment 2–24 hours before the meeting so emails enter the official packet.</li>
+        <li><strong>Sign Up to Speak (2–3 Minutes):</strong> Use the <em>Open Agenda ↗</em> link on any upcoming meeting to verify in-person or Zoom speaker sign-up rules. Lead with your name, neighborhood, and whether you support, oppose, or request a specific amendment.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Local Measures 101 Modal -->
+  <div id="measures101Modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-lg w-full p-6 space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-bold text-[#142834]">Local Measures 101</h3>
+        <button type="button" data-close-modal="measures101Modal" class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 cursor-pointer">✕ Close</button>
       </div>
-      <div class="pt-2 text-right">
-        <button data-close-modal="measures101Modal" type="button" class="px-4 py-2 rounded-xl bg-[#366a8a] text-[#faf5eb] text-xs font-semibold">Got It</button>
+      <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
+        <p><strong>Ordinances:</strong> Binding local laws (zoning codes, utility rates, municipal regulations) that normally require two public readings before taking effect.</p>
+        <p><strong>Resolutions:</strong> Policy directives, contract awards, intergovernmental agreements, and budget transfers typically decided in one session.</p>
+        <p><strong>Pivotal Votes:</strong> Roll-call votes decided by a 1-vote margin (e.g., 4–3 or 5–4) where any single majority vote flipping would have changed the outcome.</p>
+        <p><strong>Impact Score (0–100):</strong> An open, nonpartisan formula weighting budget/fiscal scope, community reach, contested margin, and structural policy change.</p>
       </div>
     </div>
   </div>
 
-  <!-- Published, Versioned & Downloadable Impact Formula Modal -->
-  <div id="formulaModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-    <div class="bg-[#faf5eb] rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 space-y-4 shadow-2xl border border-[#1b3b4e]/20">
-      <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-[#1b3b4e]">Vote Impactfulness Formula &amp; Revision Log</h3>
-        <button data-close-modal="formulaModal" type="button" class="text-sm text-[#142834]/70 hover:text-[#1b3b4e]">✕</button>
-      </div>
-      <div id="scoringMethodologyPanel" class="text-xs text-[#142834]">
-        <p class="py-4 text-center text-[#142834]/70">Loading published formula specification...</p>
-      </div>
-      <div class="pt-1 text-right">
-        <button data-close-modal="formulaModal" type="button" class="px-4 py-2 rounded-xl bg-[#366a8a] text-[#faf5eb] text-xs font-semibold">Close</button>
-      </div>
-    </div>
+  <!-- Formula Modal -->
+  <div id="formulaModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div id="formulaModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 space-y-4"></div>
   </div>
 
-  <!-- RSS & Topic Alerts Modal -->
-  <div id="rssModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-    <div class="bg-[#faf5eb] rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 space-y-4 shadow-2xl border border-[#1b3b4e]/20">
-      <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-[#1b3b4e]">Topic &amp; City Alerts (RSS / Slack / Teams)</h3>
-        <button data-close-modal="rssModal" type="button" class="text-sm text-[#142834]/70 hover:text-[#1b3b4e]">✕</button>
-      </div>
-      <p class="text-xs text-[#142834]/85 leading-relaxed">
-        Follow specific topics or cities with zero accounts or spam. Copy any feed URL below into Feedly, NetNewsWire, an RSS-to-email service, or Slack/Teams (<code class="font-mono bg-[#ebe0ca] px-1 rounded">/feed subscribe &lt;url&gt;</code>).
-      </p>
-      <div id="rssFeedsDirectoryPanel" class="space-y-4 text-xs">
-        <p class="py-4 text-center text-[#142834]/70">Loading RSS feeds directory...</p>
-      </div>
-      <div class="pt-1 text-right">
-        <button data-close-modal="rssModal" type="button" class="px-4 py-2 rounded-xl bg-[#366a8a] text-[#faf5eb] text-xs font-semibold">Close</button>
-      </div>
-    </div>
+  <!-- RSS Alerts Modal -->
+  <div id="alertsModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div id="alertsModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 space-y-4"></div>
   </div>
 
-  <div id="patronModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-    <div class="bg-[#faf5eb] rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl border border-[#1b3b4e]/20">
-      <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-[#1b3b4e]">Support CivicPulse</h3>
-        <button data-close-modal="patronModal" type="button" class="text-sm text-[#142834]/70 hover:text-[#1b3b4e]">✕</button>
-      </div>
-      <p class="text-xs text-[#142834]/85 leading-relaxed">CivicPulse is <strong>100% free for everyday residents</strong> with zero paywalls. Voluntary contributions help expand ingestion to additional cities, counties, and school boards.</p>
-      <div class="space-y-2">
-        <div class="text-xs font-bold text-[#1b3b4e]">Individual Supporter (One-Time Pitch-In)</div>
-        <div class="grid grid-cols-3 gap-2 text-xs">
-          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%245)&amp;body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%245%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-2.5 rounded-xl border border-[#1b3b4e]/20 bg-white hover:border-[#c67749] text-center font-bold text-[#1b3b4e] transition">$5 Coffee</a>
-          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%2415)&amp;body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%2415%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-2.5 rounded-xl border border-[#1b3b4e]/20 bg-white hover:border-[#c67749] text-center font-bold text-[#1b3b4e] transition">$15 Supporter</a>
-          <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Individual%20Support%20(%245000)&amp;body=Hi%20Bryan%2C%0A%0AI'd%20like%20to%20make%20a%20voluntary%20%2450%20contribution%20to%20support%20CivicPulse.%20Please%20send%20me%20the%20payment%20link!" class="p-2.5 rounded-xl border border-[#1b3b4e]/20 bg-white hover:border-[#c67749] text-center font-bold text-[#1b3b4e] transition">$50 Champion</a>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 gap-3 text-xs">
-        <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Business%20Patron%20Inquiry&amp;body=Hi%20Bryan%2C%0A%0AOur%20organization%20is%20interested%20in%20supporting%20CivicPulse%20or%20sponsoring%20a%20jurisdiction.%0A%0AOrganization%3A%20%0ACity%2FCounty%20of%20Interest%3A%20" class="p-3.5 rounded-xl border border-[#1b3b4e]/20 bg-white hover:border-[#c67749] transition block">
-          <div class="font-bold text-[#1b3b4e]">Local Business, Newsroom or Civic Group Patron</div>
-          <div class="text-[#142834]/75 mt-1">Voluntarily sponsor new city/county onboarding or support open regional civic data.</div>
-        </a>
-      </div>
-      <p class="text-[11px] text-[#142834]/70 bg-[#ebe0ca] p-3 rounded-xl">Disclosure: CivicPulse is an independent civic technology project and is not a 501(c)(3) charitable organization. Voluntary contributions are not tax-deductible.</p>
-    </div>
+  <!-- Embed Widget Builder Modal -->
+  <div id="embedModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div id="embedModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[88vh] overflow-y-auto p-6 space-y-4"></div>
   </div>
 
-  <div id="unclaimedModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-    <div class="bg-[#faf5eb] rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl border border-[#1b3b4e]/20">
-      <div class="flex items-center justify-between">
-        <h3 id="unclaimedModalTitle" class="text-lg font-bold text-[#1b3b4e]">Request Jurisdiction Tracking</h3>
-        <button data-close-modal="unclaimedModal" type="button" class="text-sm text-[#142834]/70 hover:text-[#1b3b4e]">✕</button>
-      </div>
-      <p class="text-xs text-[#142834]/85 leading-relaxed">This jurisdiction is not yet actively ingested. Log a community request to prioritize adding its meeting agendas, roll-call votes, and engagement guide.</p>
-      <div class="bg-[#ebe0ca] rounded-xl p-3.5 text-xs space-y-1">
-        <div class="text-[#142834]/70">Division ID</div>
-        <div id="unclaimedDivId" class="font-mono text-[#142834] break-all">Select a jurisdiction to populate ID</div>
-      </div>
-      <div class="space-y-2.5 pt-1">
-        <a id="unclaimedRequestMailto" href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Tracking%20Request" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#c67749] text-white text-sm font-semibold hover:bg-[#b2663a] transition">🗳️ Request Tracking for This Jurisdiction</a>
-        <a id="unclaimedSponsorMailto" href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Priority%20Onboarding%20Sponsorship" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#1b3b4e]/25 bg-white text-[#142834] text-sm font-semibold hover:bg-[#ebe0ca] transition">⚡ Sponsor Priority Onboarding</a>
-        <a id="unclaimedPortalLink" href="https://civics-d03.pages.dev/" target="_blank" rel="noopener noreferrer" class="hidden w-full text-center text-xs text-[#366a8a] font-semibold hover:underline pt-1 block">Visit Official Portal ↗</a>
-      </div>
-    </div>
+  <!-- Voluntary Support / Patron Modal -->
+  <div id="patronModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-center justify-center p-4">
+    <div id="patronModalBody" class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-xl w-full p-6 space-y-4"></div>
   </div>
 
-  <script type="module" src="js/app.js"></script>
-  <script type="module" src="assets/civicpulse_ui_bridge.js"></script>
-  <script type="module" src="assets/civicpulse_v3_1_growth.js"></script>
-  <script type="module" src="assets/civicpulse_unclaimed_ux.js"></script>
-  <script type="module" src="assets/civicpulse_v3_2_agenda_preview.js"></script>
-  <script type="module" src="assets/civicpulse_v3_suite.js"></script>
-  <script type="module" src="assets/civicpulse_v3_5_home_tabs.js"></script>
-  <script type="module" src="assets/civicpulse_request_intake.js"></script>
-  <script type="module" src="assets/civicpulse_v4_workspace.js"></script>
+  <!-- Single Consolidated Application Script -->
+  <script type="module" src="js/civicpulse_app.js"></script>
 </body>
 </html>
