@@ -1,48 +1,467 @@
-{
-  "schema_version": "3.2",
-  "as_of_date": "2026-11-28",
-  "horizon_days": 14,
-  "disclaimer": "Draft Agenda Previews summarize scheduled items before a vote occurs. Items may be amended, continued, or pulled at the meeting. Verify official packets.",
-  "count": 3,
-  "previews": [
-    {
-      "doc_id": 2258,
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
-      "jurisdiction_name": "Denver City Council",
-      "meeting_date": "2026-11-30",
-      "meeting_title": "City Council Agenda",
-      "agenda_url": "https://denver.legistar1.com/denver/meetings/2026/11/13077_A_City_Council_26-11-30_Council_Agenda.pdf",
-      "portal_url": "https://denver.legistar.com/",
-      "capture_method": "agenda_preview",
-      "preview_mode": "agenda_metadata",
-      "status_label": "Draft Agenda Preview \u2014 Not Yet Voted On",
-      "items": []
-    },
-    {
-      "doc_id": 116,
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
-      "jurisdiction_name": "Colorado Springs City Council",
-      "meeting_date": "2026-12-07",
-      "meeting_title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
-      "agenda_url": "https://coloradosprings.legistar.com/",
-      "portal_url": "https://coloradosprings.legistar.com/",
-      "capture_method": "agenda_preview",
-      "preview_mode": "agenda_metadata",
-      "status_label": "Draft Agenda Preview \u2014 Not Yet Voted On",
-      "items": []
-    },
-    {
-      "doc_id": 768,
-      "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
-      "jurisdiction_name": "Greeley City Council",
-      "meeting_date": "2026-12-11",
-      "meeting_title": "Liquor License Authority Hearing",
-      "agenda_url": "https://greeleyco.portal.civicclerk.com/event/3265/files",
-      "portal_url": "https://greeleyco.portal.civicclerk.com/",
-      "capture_method": "agenda_preview",
-      "preview_mode": "agenda_metadata",
-      "status_label": "Draft Agenda Preview \u2014 Not Yet Voted On",
-      "items": []
-    }
-  ]
-}
+[
+  {
+    "doc_id": 6324,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:pueblo",
+    "jurisdiction_name": "Pueblo City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "City Council Meeting (Agenda)",
+    "source_url": "https://puebloco.portal.civicclerk.com/event/1691/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 6229,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:grand_junction",
+    "jurisdiction_name": "Grand Junction City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "Joint City Council/County Commissioners - 2026 - November 23 - Persigo Board Meeting (Agenda)",
+    "source_url": "https://grandjunctionco.portal.civicclerk.com/event/3996/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1195,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:westminster",
+    "jurisdiction_name": "Westminster City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "City Council Meeting \u2014 HTML Packet",
+    "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11465",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1194,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:westminster",
+    "jurisdiction_name": "Westminster City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "City Council Post-Meeting Study Session \u2014 HTML Packet",
+    "source_url": "https://cityofwestminster.primegov.com/Portal/Meeting?meetingTemplateId=11420",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1189,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+    "jurisdiction_name": "Windsor Town Board",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "Town Board Work Session (Agenda)",
+    "source_url": "https://windsorco.portal.civicclerk.com/event/3667/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1188,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:windsor",
+    "jurisdiction_name": "Windsor Town Board",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "Town Board Regular Meeting (Agenda)",
+    "source_url": "https://windsorco.portal.civicclerk.com/event/3708/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 953,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "City Council Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13060_A_City_Council_26-11-23_Council_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 680,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "Executive Session",
+    "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2916&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 679,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "City Council Work Session",
+    "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2810&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 368,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "2026-11-23 City Council: Cathy Reynolds City Council Chamber\r\n1437 Bannock Street, Room 450",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13060_A_City_Council_26-11-23_Council_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 353,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "2026-11-23 Executive Session: Meeting has been cancelled.",
+    "source_url": "https://coloradosprings.legistar.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 352,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-23",
+    "meeting_title": "2026-11-23 City Council Work Session: Meeting has been cancelled.",
+    "source_url": "https://coloradosprings.legistar.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1390,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:longmont",
+    "jurisdiction_name": "Longmont City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "City Council Meeting *CANCELLED** \u2014 Notice of Cancellation",
+    "source_url": "https://longmont.primegov.com/Portal/Meeting?meetingTemplateId=19129",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 1121,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "City Council Work Session - Cancelled (Agenda)",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3759/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 952,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "Mayor-Council Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13071_A_Mayor-Council_26-11-24_Mayor-Council_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 951,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "Parks, Art and Culture Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13069_A_Parks%2C_Art_and_Culture_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 950,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "Community Planning and Housing Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13068_A_Community_Planning_and_Housing_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 949,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "Governance and Intergovernmental Relations Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13065_A_Governance_and_Intergovernmental_Relations_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 948,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "Finance and Business Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13064_A_Finance_and_Business_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 678,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "City Council",
+    "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2809&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 367,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 Mayor-Council: Meeting cancelled. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13071_A_Mayor-Council_26-11-24_Mayor-Council_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 366,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 Parks, Art and Culture: Committee not meeting. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13069_A_Parks%2C_Art_and_Culture_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 365,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 Community Planning and Housing: Committee canceled. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13068_A_Community_Planning_and_Housing_26-11-24_Committee_Agenda.pdf",
+    "items": [
+      {
+        "title": "Body: Community Planning and Housing",
+        "plain_summary": ""
+      }
+    ],
+    "has_extracted_items": true
+  },
+  {
+    "doc_id": 364,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 Governance and Intergovernmental Relations: Committee not meeting. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13065_A_Governance_and_Intergovernmental_Relations_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 363,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 Finance and Business: Committee canceled. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13064_A_Finance_and_Business_26-11-24_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 351,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-11-24",
+    "meeting_title": "2026-11-24 City Council: Meeting has been cancelled.",
+    "source_url": "https://coloradosprings.legistar.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 947,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "Transportation and Infrastructure Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 946,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "South Platte River Committee Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 945,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "Health and Safety Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 362,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "2026-11-25 Transportation and Infrastructure: Committee not meeting. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13067_A_Transportation_and_Infrastructure_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 361,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "2026-11-25 South Platte River Committee: Committee canceled. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13066_A_South_Platte_River_Committee_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 360,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-25",
+    "meeting_title": "2026-11-25 Health and Safety: Committee canceled. Consent agenda included.",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13062_A_Health_and_Safety_26-11-25_Committee_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 2258,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:denver",
+    "jurisdiction_name": "Denver City Council",
+    "meeting_date": "2026-11-30",
+    "meeting_title": "City Council Agenda",
+    "source_url": "https://denver.legistar1.com/denver/meetings/2026/11/13077_A_City_Council_26-11-30_Council_Agenda.pdf",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 677,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-12-07",
+    "meeting_title": "City Council",
+    "source_url": "https://coloradosprings.legistar.com/MeetingDetail.aspx?LEGID=2918&GID=442&G=0C831C09-83B3-41C4-A204-FF6090168F3E",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 350,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:colorado_springs",
+    "jurisdiction_name": "Colorado Springs City Council",
+    "meeting_date": "2026-12-07",
+    "meeting_title": "2026-12-07 City Council: Special Meeting for an Open Executive Session",
+    "source_url": "https://coloradosprings.legistar.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 768,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-11",
+    "meeting_title": "Liquor License Authority Hearing",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3265/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 767,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-14",
+    "meeting_title": "Museum Advisory Board Facilitated Work Session",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3750/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 766,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-15",
+    "meeting_title": "City Council Meeting",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3344/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 765,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-16",
+    "meeting_title": "Water & Sewer Board",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3642/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 764,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-21",
+    "meeting_title": "Historic Preservation Commission Meeting",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3480/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 763,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-22",
+    "meeting_title": "Planning Commission Meeting",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3455/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 762,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-22",
+    "meeting_title": "City Council Work Session - Cancelled",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3368/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 403,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-22",
+    "meeting_title": "2026-12-22 \u2014 Planning Commission Meeting",
+    "source_url": "https://greeleyco.portal.civicclerk.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 402,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2026-12-22",
+    "meeting_title": "2026-12-22 \u2014 City Council Work Session - Cancelled",
+    "source_url": "https://greeleyco.portal.civicclerk.com/",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 761,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2027-01-12",
+    "meeting_title": "City Council Work Session",
+    "source_url": "https://greeleyco.portal.civicclerk.com/event/3687/files",
+    "items": [],
+    "has_extracted_items": false
+  },
+  {
+    "doc_id": 401,
+    "jurisdiction_id": "ocd-division/country:us/state:co/place:greeley",
+    "jurisdiction_name": "Greeley City Council",
+    "meeting_date": "2027-01-12",
+    "meeting_title": "2027-01-12 \u2014 City Council Work Session",
+    "source_url": "https://greeleyco.portal.civicclerk.com/",
+    "items": [],
+    "has_extracted_items": false
+  }
+]

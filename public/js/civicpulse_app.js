@@ -24,6 +24,7 @@ const AppState = {
   feedsIndex: null,
   patrons: null,
   officialContacts: {},
+  siteConfig: null,
   searchRecords: null,
 
   // Cached per-jurisdiction JSON payloads keyed by ocd_division_id
@@ -541,6 +542,24 @@ function renderResolvedPanel() {
       loadJurPayload(parentJid).then(() => renderResolvedPanel());
     }
   });
+  // Highlight At-Large / countywide reps for matched active jurisdictions without sub-district polygons (cpV51AtLargeReps)
+  activeMatches.forEach((j) => {
+    const jid = jurIdOf(j);
+    if (loc.districtHints.has(jid)) return;
+    if (!j?.parity?.is_at_large && normalizeLevel(j.level) === "city") return;
+    const cachedP = AppState.jurPayloads.get(jid);
+    if (cachedP) {
+      getEntitiesFromPayload(cachedP).slice(0, 4).forEach((rep) => {
+        myRepBadges.push(
+          `<button type="button" data-resolved-rep="${esc(rep.ocd_person_id || rep.id)}" data-jur-id="${esc(jid)}" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white border border-[#c67749]/40 hover:border-[#c67749] text-xs font-semibold text-[#142834] cursor-pointer">
+            <span class="text-[#c67749]">&#9733;</span><span>${esc(rep.name)}</span><span class="text-slate-500 font-normal">(${esc(j.name.split(" ")[0])} At-Large)</span>
+          </button>`
+        );
+      });
+    } else {
+      loadJurPayload(jid).then(() => renderResolvedPanel());
+    }
+  });
   const myRepsStrip = myRepBadges.length
     ? `<div class="pt-2 border-t border-[#1b3b4e]/10 flex flex-wrap items-center gap-2">
          <span class="text-[11px] font-bold uppercase tracking-wider text-[#9c5128]">Your Local Reps:</span>
@@ -966,13 +985,31 @@ function renderTabReps(container, scopedReps) {
     })
     .join("");
 
+  const parityNotes = [];
+  Array.from(AppState.selectedJurIds).forEach((jid) => {
+    const jm = getJurisdictionById(jid);
+    (jm?.parity?.notes || []).forEach((n) => parityNotes.push(`<strong>${esc(jm.name)}:</strong> ${esc(n)}`));
+  });
+  const parityBanner = parityNotes.length
+    ? `<div id="cpV51ParityBanner" class="p-3 rounded-xl bg-[#f4ecdc]/80 border border-[#1b3b4e]/15 text-xs text-[#142834]/85 space-y-1">${parityNotes.map((n) => `<div>&#8505;&#65039; ${n}</div>`).join("")}</div>`
+    : "";
+  const digestUrl = AppState.siteConfig?.weekly_digest_url || "";
+  const digestBtn = digestUrl
+    ? `<a href="${esc(digestUrl)}" target="_blank" rel="noopener noreferrer" class="shrink-0 px-3 py-1.5 rounded-lg bg-[#c67749] text-[#faf5eb] hover:bg-[#b56638] text-xs font-semibold">Get Weekly Email Alerts &#8599;</a>`
+    : `<button type="button" data-open-modal="alertsModal" class="shrink-0 px-3 py-1.5 rounded-lg bg-[#1b3b4e] text-[#faf5eb] hover:bg-[#366a8a] text-xs font-semibold cursor-pointer">Subscribe to RSS Alerts</button>`;
+
   container.innerHTML = `
-    <div class="text-xs text-[#142834]/75">
-      Click any representative to open their full profile: direct email/phone, voting-record summary, floor comments, metrics, and roll-call log.
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <div class="text-xs text-[#142834]/75">
+        Click any representative to open their full profile: direct email/phone, voting-record summary, floor comments, metrics, and roll-call log.
+      </div>
+      ${digestBtn}
     </div>
+    ${parityBanner}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">${cards}</div>
   `;
 
+  container.querySelectorAll("[data-open-modal]").forEach((btn) => { btn.addEventListener("click", () => openModal(btn.dataset.openModal)); });
   container.querySelectorAll("[data-open-rep]").forEach((btn) => {
     btn.addEventListener("click", () => openRepModal(btn.dataset.jurId, btn.dataset.openRep));
   });
@@ -1053,6 +1090,9 @@ function renderTabBeforeTheVote(container, upcomingByDate) {
                   <h4 class="text-sm sm:text-base font-bold text-[#142834] leading-snug break-words">${esc(m.title)}</h4>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 shrink-0">
+                  <button type="button" data-email-meeting-idx="${idx}" class="px-2.5 py-1.5 rounded-lg border border-[#c67749]/40 bg-white hover:bg-[#faf5eb] text-xs font-semibold text-[#9c5128] cursor-pointer">
+                    &#9993;&#65039; Email Council
+                  </button>
                   <button type="button" data-ics-idx="${idx}" class="px-2.5 py-1.5 rounded-lg border border-[#1b3b4e]/20 bg-white hover:bg-[#f4ecdc] text-xs font-semibold text-[#1b3b4e] cursor-pointer">
                     + Calendar (.ics)
                   </button>
@@ -1082,6 +1122,22 @@ function renderTabBeforeTheVote(container, upcomingByDate) {
     .join("");
 
   container.innerHTML = groupsHtml;
+  container.querySelectorAll("[data-email-meeting-idx]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const m = allEntries[Number(btn.dataset.emailMeetingIdx)];
+      const p = await loadJurPayload(m.jurId);
+      const reps = getEntitiesFromPayload(p);
+      const repEmails = reps.map((r) => r.email).filter(Boolean);
+      const fallback = AppState.officialContacts?.[m.jurId]?.council_email || getJurisdictionById(m.jurId)?.council_email || "";
+      const toEmail = repEmails.length ? repEmails.join(",") : fallback;
+      openCommentComposer({
+        toEmail: toEmail || "council@city.gov",
+        recipientName: `${m.jurName} Members`,
+        jurName: m.jurName,
+        measureTitle: `${m.title} (${m.date})`,
+      });
+    });
+  });
   container.querySelectorAll("[data-ics-idx]").forEach((btn) => {
     btn.addEventListener("click", () => downloadIcsEvent(allEntries[Number(btn.dataset.icsIdx)]));
   });
@@ -1171,7 +1227,7 @@ function renderTabVotesRadar(container, scopedEvents) {
               ${ev.plain_summary ? `<p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${esc(ev.plain_summary)}</p>` : ""}
               <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-100 text-xs">
                 <div class="flex flex-wrap items-center gap-3 text-slate-500">
-                  <span>QA: <strong class="text-emerald-700">${esc(ev.qa_status || "verified")}</strong></span>
+                  <span>QA: <strong class="text-emerald-700">${esc(ev.qa_status || "verified")}</strong></span>${ev._votes.length === 0 ? '<span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-medium">Voice / Consent Vote</span>' : ""}
                   ${ev.source_url ? `<a href="${esc(ev.source_url)}" target="_blank" rel="noopener noreferrer" class="text-[#366a8a] font-semibold hover:underline">Official Record ↗</a>` : ""}
                 </div>
                 <button type="button" data-open-bill="${esc(ev.event_id)}" data-jur-id="${esc(ev._jurId)}" class="text-[#c67749] font-semibold hover:underline cursor-pointer">
@@ -2019,9 +2075,9 @@ function populateUtilityModals() {
         CivicPulse is <strong>100% free with zero paywalls</strong>. Voluntary support helps expand automated coverage to more Colorado municipalities, counties, and school districts.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
-        <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Support%20(%245%20Coffee)" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#1b3b4e]">$5 Coffee</div><div class="text-slate-500 mt-0.5">One-time pitch-in</div></a>
-        <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Support%20(%2415%20Supporter)" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#1b3b4e]">$15 Supporter</div><div class="text-slate-500 mt-0.5">Community backer</div></a>
-        <a href="mailto:bryanateisl@gmail.com?subject=CivicPulse%20Business%20Patron" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#c67749]">Business Patron</div><div class="text-slate-500 mt-0.5">Sponsor city coverage</div></a>
+        <a href="${esc(AppState.siteConfig?.support_links?.coffee_5 || "mailto:bryanateisl@gmail.com?subject=CivicPulse%20Support%20(%245%20Coffee)")}" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#1b3b4e]">$5 Coffee</div><div class="text-slate-500 mt-0.5">One-time pitch-in</div></a>
+        <a href="${esc(AppState.siteConfig?.support_links?.supporter_15 || "mailto:bryanateisl@gmail.com?subject=CivicPulse%20Support%20(%2415%20Supporter)")}" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#1b3b4e]">$15 Supporter</div><div class="text-slate-500 mt-0.5">Community backer</div></a>
+        <a href="${esc(AppState.siteConfig?.support_links?.patron || "mailto:bryanateisl@gmail.com?subject=CivicPulse%20Business%20Patron")}" class="p-3 rounded-xl border border-slate-200 hover:border-[#c67749] text-center block"><div class="font-bold text-[#c67749]">Business Patron</div><div class="text-slate-500 mt-0.5">Sponsor city coverage</div></a>
       </div>
       <p class="text-[11px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200/80">
         Transparency Notice: CivicPulse is an independent civic technology project, not a registered 501(c)(3) nonprofit. Voluntary contributions are not tax-deductible as charitable donations.
@@ -2087,7 +2143,7 @@ async function boot() {
   }
 
   // Parallel static JSON fetch ($0/mo Cloudflare Pages)
-  const [dirRaw, geo, upRaw, prevRaw, warnRaw, alignRaw, lifeRaw, scoreRaw, feedRaw, contactsRaw] =
+  const [dirRaw, geo, upRaw, prevRaw, warnRaw, alignRaw, lifeRaw, scoreRaw, feedRaw, contactsRaw, siteCfg] =
     await Promise.all([
       fetchJsonSafe("data/directory.json", null),
       fetchJsonSafe("geo/boundaries.geojson", null),
@@ -2099,6 +2155,7 @@ async function boot() {
       fetchJsonSafe("data/scoring_methodology.json", null),
       fetchJsonSafe("data/feeds_index.json", null),
       fetchJsonSafe("data/official_contacts.json", {}),
+      fetchJsonSafe("data/site_config.json", null),
     ]);
 
   const dir = dirRaw || (await fetchJsonSafe("data/index.json", { jurisdictions: [] }));
@@ -2113,6 +2170,15 @@ async function boot() {
   AppState.scoringMethodology = scoreRaw;
   AppState.feedsIndex = feedRaw;
   AppState.officialContacts = contactsRaw?.jurisdictions || contactsRaw || {};
+  AppState.siteConfig = siteCfg || {};
+  if (AppState.siteConfig?.cloudflare_analytics_token && !document.getElementById("cpCfBeacon")) {
+    const s = document.createElement("script");
+    s.id = "cpCfBeacon";
+    s.defer = true;
+    s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    s.setAttribute("data-cf-beacon", JSON.stringify({ token: AppState.siteConfig.cloudflare_analytics_token }));
+    document.head.appendChild(s);
+  }
 
   // Drop any stale saved IDs that aren't active jurisdictions anymore
   const activeIdSet = new Set(AppState.jurisdictions.filter((j) => j.status === "active").map(jurIdOf));

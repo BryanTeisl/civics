@@ -93,7 +93,13 @@ try {
         if (Test-Path "civicpulse\pipeline\rep_bios.py") {
         python -m civicpulse.pipeline.rep_bios --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
-    python -m civicpulse.pipeline.export_enhancements --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
+    python -m civicpulse.pipeline.export_enhancements
+    if (Test-Path "civicpulse\pipeline\scale_agenda_previews.py") {
+        python -m civicpulse.pipeline.scale_agenda_previews --db core_civic.db --out public\data\agenda_previews.json 2>&1 | Tee-Object -FilePath $LogFile -Append
+    }
+    if (Test-Path "civicpulse\pipeline\parity_audit.py") {
+        python -m civicpulse.pipeline.parity_audit --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
+    } --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
     }
     if (Test-Path "civicpulse\pipeline\v3_intelligence.py") {
         python -m civicpulse.pipeline.v3_intelligence --db core_civic.db --public-dir public 2>&1 | Tee-Object -FilePath $LogFile -Append
