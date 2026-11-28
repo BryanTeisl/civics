@@ -211,26 +211,6 @@
       <div id="workspaceTabContent" class="space-y-4"></div>
     </section>
 
-    <!-- =================================================================== -->
-    <!-- BROWSE DIRECTORY (ACTIVE + SEARCHABLE UNCLAIMED REQUEST QUEUE)      -->
-    <!-- =================================================================== -->
-    <section id="directorySection" class="space-y-4 pt-2">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div>
-          <h2 class="text-lg font-bold text-[#142834]">Active Tracked Jurisdictions</h2>
-          <p class="text-xs text-[#142834]/70">Click any jurisdiction card (or its <strong>+</strong> button) to add it to your workspace filter above.</p>
-        </div>
-        <div id="activeLevelPills" class="flex flex-wrap items-center gap-1.5">
-          <button type="button" data-level="all" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#1b3b4e] text-[#faf5eb] cursor-pointer">All (<span id="actCountAll">0</span>)</button>
-          <button type="button" data-level="city" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">Cities (<span id="actCountCity">0</span>)</button>
-          <button type="button" data-level="county" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">Counties (<span id="actCountCounty">0</span>)</button>
-          <button type="button" data-level="school_district" class="active-level-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#1b3b4e]/20 text-[#1b3b4e] hover:bg-[#f4ecdc] cursor-pointer">School Boards (<span id="actCountSchool">0</span>)</button>
-        </div>
-      </div>
-
-      <div id="activeJurisdictionsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-    </section>
-
     <!-- SEARCHABLE & PAGINATED UNCLAIMED TERRITORIES (AUTONOMOUS GITHUB REQUEST INTAKE) -->
     <section id="unclaimedSection" class="cp-card p-5 space-y-4">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">

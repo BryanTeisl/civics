@@ -1623,73 +1623,7 @@ function openCommentComposer({ toEmail, recipientName, jurName, measureTitle }) 
 // ---------------------------------------------------------------------------
 // Directory Views (Active + Searchable/Paginated Unclaimed)
 // ---------------------------------------------------------------------------
-function renderActiveDirectory() {
-  const activeAll = AppState.jurisdictions.filter((j) => j.status === "active");
-  document.getElementById("actCountAll").textContent = String(activeAll.length);
-  document.getElementById("actCountCity").textContent = String(activeAll.filter((j) => normalizeLevel(j.level) === "city").length);
-  document.getElementById("actCountCounty").textContent = String(activeAll.filter((j) => normalizeLevel(j.level) === "county").length);
-  document.getElementById("actCountSchool").textContent = String(activeAll.filter((j) => normalizeLevel(j.level) === "school_district").length);
-
-  const filtered =
-    AppState.activeLevelFilter === "all"
-      ? activeAll
-      : activeAll.filter((j) => normalizeLevel(j.level) === AppState.activeLevelFilter);
-
-  const grid = document.getElementById("activeJurisdictionsGrid");
-  grid.innerHTML = filtered
-    .map((j) => {
-      const jid = jurIdOf(j);
-      const isSel = AppState.selectedJurIds.has(jid);
-      const evCount = Number(j.event_count ?? 0);
-      return `
-        <div class="cp-card p-4 transition flex flex-col justify-between gap-3 ${
-          isSel ? "border-emerald-500 ring-2 ring-emerald-500/20 bg-emerald-50/20" : "hover:border-[#c67749]"
-        }">
-          <div class="flex items-start justify-between gap-2">
-            <button type="button" data-select-open="${esc(jid)}" class="text-left min-w-0 flex-1 cursor-pointer group">
-              <div class="flex items-center gap-2 mb-1">
-                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-[#f4ecdc] text-[#1b3b4e]">${esc(formatLevelLabel(j.level))}</span>
-                <span class="text-[11px] text-slate-500">Docs since ${esc(j.docs_since || "2026")}</span>
-              </div>
-              <h3 class="font-bold text-[#142834] group-hover:text-[#366a8a] text-base break-words">${esc(j.name)}</h3>
-            </button>
-            <button
-              type="button"
-              data-toggle-jur="${esc(jid)}"
-              title="${isSel ? "Remove from workspace filter" : "Add to workspace filter"}"
-              class="w-8 h-8 rounded-full inline-flex items-center justify-center text-base font-bold border transition shrink-0 cursor-pointer ${
-                isSel
-                  ? "bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700"
-                  : "bg-white text-[#1b3b4e] border-[#1b3b4e]/30 hover:bg-[#1b3b4e] hover:text-white"
-              }"
-            >${isSel ? "✓" : "+"}</button>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-600 pt-2.5 border-t border-slate-100">
-            <span><strong>${j.entity_count ?? 0}</strong> Reps</span>
-            <span>${evCount > 0 ? `<strong>${evCount}</strong> Measures` : `<span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-medium">Pending ingestion</span>`}</span>
-            <button type="button" data-select-open="${esc(jid)}" class="text-[#366a8a] font-semibold hover:underline cursor-pointer">
-              ${isSel ? "In Filter ✓" : "Explore →"}
-            </button>
-          </div>
-        </div>
-      `;
-    })
-    .join("");
-
-  grid.querySelectorAll("[data-toggle-jur]").forEach((btn) => {
-    btn.addEventListener("click", () => toggleJurisdiction(btn.dataset.toggleJur, false));
-  });
-  grid.querySelectorAll("[data-select-open]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const jid = btn.dataset.selectOpen;
-      if (!AppState.selectedJurIds.has(jid)) {
-        AppState.selectedJurIds.add(jid);
-        persistState();
-      }
-      onSelectionChanged(true);
-    });
-  });
-}
+function renderActiveDirectory() {}
 
 function renderUnclaimedDirectory() {
   const unclaimed = AppState.jurisdictions.filter((j) => j.status !== "active");
