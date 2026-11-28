@@ -1,18 +1,26 @@
 /**
- * CivicPulse v4.1 Map-First Geolocation, "+" Multi-Jurisdiction Filter & Rep Profiles
+ * CivicPulse v4.2 Map-First UX, Reworked Date-First Agendas & Clickable Rep Profiles
  * (public/assets/civicpulse_v4_workspace.js)
  *
- * Design rules:
- *  - Map comes FIRST (zero extra banners or jurisdiction pill walls above the map).
- *  - Adds a "📍 Use My Location" button directly into the existing map search bar.
- *  - Enhances every active card inside "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS"
- *    with a "+" toggle button that adds/removes that jurisdiction to the user's filter
- *    (supporting many jurisdictions at once).
- *  - Only after 1+ jurisdictions are added to the filter does the scoped workspace
- *    appear below the map with:
- *      1. Active filter chips + consolidated "How Public Comment Works" button
- *      2. Clickable Representative bubbles (contact info lives at the Rep level)
- *      3. Scoped tabs: Before the Vote (date-first grouped agendas), Votes & Radar, Alignment
+ * Key behaviors:
+ *  1. Map-First: Zero extra banners above the map. Adds "📍 Use My Location" directly
+ *     to the existing map address search bar.
+ *  2. Multi-Jurisdiction "+" Filter: Injects a "+" / "✓" toggle button on every active
+ *     card inside "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS" so users can stack
+ *     multiple jurisdictions into their scoped workspace below the map.
+ *  3. Reworks the legacy "CIVIC LITERACY & PARTICIPATION GUIDE" section in Jurisdiction
+ *     views:
+ *       - Removes the repeated 4-step Resident Action Checklist column -> consolidates
+ *         into a single "📣 How Public Comment Works" button.
+ *       - Removes the "ALL REPRESENTATIVE CONTACT CHANNELS" column -> contact info
+ *         lives exclusively inside each clickable Representative profile.
+ *       - Replaces the cut-off "Upcoming: https://fo" agenda list with a full-width,
+ *         date-first grouped Upcoming & Recent Agendas view (grouping multiple meetings
+ *         on the same date cleanly with no text truncation/clipping).
+ *  4. Clickable Representative Profiles: Clicking any representative bubble/card (e.g.,
+ *     Emily Francis) opens her full profile modal (photo/initials, contact links,
+ *     2-3 sentence voting-record & comment bio summary, metrics, floor comments, and
+ *     roll-call history).
  */
 
 const LS_SELECTED_JURS_KEY = "cp_v4_selected_jurisdictions";
@@ -20,6 +28,7 @@ const LS_SELECTED_JURS_KEY = "cp_v4_selected_jurisdictions";
 let dirData = { jurisdictions: [] };
 let upcomingMeetings = [];
 let agendaPreviews = [];
+let engagementGuides = {};
 let boundariesGeo = null;
 let cachedJurPayloads = {};
 let selectedJurIds = new Set();
@@ -48,7 +57,7 @@ function initialsFor(name) {
 
 function formatDateHeading(isoDate) {
   if (!isoDate || isoDate === "undated") return "Date To Be Announced";
-  const parts = isoDate.slice(0, 10).split("-");
+  const parts = String(isoDate).slice(0, 10).split("-");
   if (parts.length !== 3) return isoDate;
   const d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
   if (Number.isNaN(d.getTime())) return isoDate;
@@ -58,6 +67,27 @@ function formatDateHeading(isoDate) {
     day: "numeric",
     year: "numeric",
   });
+}
+
+function cleanMeetingLabel(rawTitle, docType = "") {
+  const t = String(rawTitle || "").trim();
+  if (!t || /^upcoming:\s*https?:\/\//i.test(t) || /^https?:\/\//i.test(t)) {
+    const low = t.toLowerCase();
+    if (low.includes("minute")) return "Official Meeting Minutes";
+    if (low.includes("packet")) return "Meeting Agenda Packet";
+    return docType && docType.toLowerCase() === "minutes"
+      ? "Council / Board Minutes"
+      : "Scheduled Council / Board Meeting";
+  }
+  return t.replace(/^upcoming:\s*/i, "").trim();
+}
+
+function normalizeHumanPortalUrl(url) {
+  const u = String(url || "").trim();
+  if (!u) return "";
+  const ccMatch = u.match(/^https?:\/\/([a-z0-9-]+)\.api\.civicclerk\.com/i);
+  if (ccMatch) return `https://${ccMatch[1]}.portal.civicclerk.com/`;
+  return u;
 }
 
 function haversineKm(lat1, lon1, lat2, lon2) {
@@ -94,17 +124,14 @@ function persistSelectedJurs() {
   try {
     localStorage.setItem(LS_SELECTED_JURS_KEY, JSON.stringify(Array.from(selectedJurIds)));
   } catch {
-    // ignore storage errors
+    // ignore
   }
 }
 
 function toggleJurisdictionInFilter(jurId) {
   if (!jurId) return;
-  if (selectedJurIds.has(jurId)) {
-    selectedJurIds.delete(jurId);
-  } else {
-    selectedJurIds.add(jurId);
-  }
+  if (selectedJurIds.has(jurId)) selectedJurIds.delete(jurId);
+  else selectedJurIds.add(jurId);
   persistSelectedJurs();
   syncPlusButtonsState();
   renderScopedWorkspace();
@@ -128,7 +155,7 @@ function resolveOverlappingAtCoords(lat, lng) {
           if (j && !matched.has(divId)) matched.set(divId, j);
         }
       } catch {
-        // skip invalid geometry
+        // skip
       }
     }
   }
@@ -243,8 +270,6 @@ function handleUseMyLocationClick(btn) {
       btn.disabled = false;
       btn.textContent = origText;
 
-      // Prefer the existing map app's native coordinate handler so the native
-      // "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS" panel opens seamlessly
       if (typeof window.handleCoordinateLookup === "function") {
         window.handleCoordinateLookup(lat, lng, "My Current Location");
         setTimeout(injectPlusButtonsIntoResolvedPanel, 120);
@@ -252,11 +277,9 @@ function handleUseMyLocationClick(btn) {
         window.handleMapCoordinateClick(lat, lng);
         setTimeout(injectPlusButtonsIntoResolvedPanel, 120);
       } else {
-        // Fallback: resolve locally via Turf.js / coordinates and render overlapping panel
         renderFallbackResolvedPanel(lat, lng, "My Current Location");
       }
 
-      // Also fly existing Leaflet map if exposed
       if (window.mapInstance && typeof window.mapInstance.setView === "function") {
         window.mapInstance.setView([lat, lng], 12);
       }
@@ -286,7 +309,6 @@ function mountUseMyLocationButton() {
   btn.title = "Use your device location to resolve overlapping city, county, and school governments";
   btn.addEventListener("click", () => handleUseMyLocationClick(btn));
 
-  // Place cleanly right inside the existing map address search bar (next to Find button)
   const existingAddrBtn =
     document.getElementById("addressLookupBtn") ||
     document.getElementById("addrLookupBtn") ||
@@ -305,7 +327,6 @@ function mountUseMyLocationButton() {
     return;
   }
 
-  // Fallback: place cleanly in a slim bar directly above #map
   const mapEl = document.getElementById("map");
   if (mapEl && mapEl.parentElement) {
     const bar = document.createElement("div");
@@ -316,12 +337,11 @@ function mountUseMyLocationButton() {
 }
 
 // ---------------------------------------------------------------------------
-// 2. Inject "+" Filter Buttons into "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS"
+// 2. "+" Multi-Jurisdiction Filter Buttons on Resolved Location Cards
 // ---------------------------------------------------------------------------
 function matchActiveJurisdictionFromText(cardText) {
   const low = (cardText || "").toLowerCase();
   const activeJurs = (dirData.jurisdictions || []).filter((j) => j.status === "active");
-  // Longest-name match first so "Boulder County Board of Commissioners" beats "Boulder"
   const sorted = [...activeJurs].sort((a, b) => (b.name || "").length - (a.name || "").length);
   return sorted.find((j) => j.name && low.includes(j.name.toLowerCase())) || null;
 }
@@ -337,7 +357,6 @@ function findResolvedLocationPanels() {
       el.querySelectorAll("div, button, a").length >= 2 &&
       el.textContent.length < 4000
     ) {
-      // Only take the tightest container (skip ancestors that contain other matching panels)
       const hasMatchingChild = Array.from(el.children).some((ch) => {
         const ct = (ch.textContent || "").toUpperCase();
         return ct.includes("RESOLVED LOCATION") && ct.includes("OVERLAPPING GOVERNMENT");
@@ -353,28 +372,19 @@ function injectPlusButtonsIntoResolvedPanel() {
   if (!panels.length) return;
 
   panels.forEach((panel) => {
-    // Find individual government cards inside the resolved panel
-    const candidates = panel.querySelectorAll("button, a, div");
-    candidates.forEach((card) => {
+    panel.querySelectorAll("button, a, div").forEach((card) => {
       if (card.dataset.v4PlusWired) return;
       const txt = (card.textContent || "").trim();
       if (!txt || txt.length > 260) return;
-      if (!txt.toUpperCase().includes("ACTIVE")) return;
-      if (txt.toUpperCase().includes("UNCLAIMED")) return;
-      // Ensure this is a leaf card (doesn't contain multiple cards)
+      if (!txt.toUpperCase().includes("ACTIVE") || txt.toUpperCase().includes("UNCLAIMED")) return;
       if ((txt.match(/ACTIVE/gi) || []).length > 1) return;
 
       const jur = matchActiveJurisdictionFromText(txt);
       if (!jur) return;
-
-      // Avoid double-wiring nested elements inside the same card
-      if (card.querySelector("[data-v4-plus-jur]") || card.closest("[data-v4-plus-wired='1']")) {
-        return;
-      }
+      if (card.querySelector("[data-v4-plus-jur]") || card.closest("[data-v4-plus-wired='1']")) return;
 
       card.dataset.v4PlusWired = "1";
-      const prevPos = window.getComputedStyle(card).position;
-      if (prevPos === "static") {
+      if (window.getComputedStyle(card).position === "static") {
         card.style.position = "relative";
       }
 
@@ -422,7 +432,205 @@ function syncPlusButtonsState() {
 }
 
 // ---------------------------------------------------------------------------
-// 3. Clickable Representative Bubbles & Full Representative Detail Modal
+// 3. Rework Legacy "CIVIC LITERACY & PARTICIPATION GUIDE" in Jurisdiction View
+//    - Removes repeated Resident Action Checklist column -> 1 modal button
+//    - Removes ALL REPRESENTATIVE CONTACT CHANNELS column -> contact lives on Reps
+//    - Replaces cut-off "Upcoming: https://fo" bubbles -> Date-First Grouped Agendas
+// ---------------------------------------------------------------------------
+function getCurrentJurisdictionIdFromView() {
+  const hash = decodeURIComponent(window.location.hash || "");
+  const m = hash.match(/#\/jur\/([^?]+)/i);
+  if (m && m[1]) return m[1];
+  const heading = document.querySelector("#jurName, #jurTitle, h1, h2");
+  if (heading) {
+    const match = matchActiveJurisdictionFromText(heading.textContent || "");
+    if (match) return match.ocd_division_id;
+  }
+  return "";
+}
+
+function reworkLegacyCivicLiteracyCard() {
+  // Locate the legacy "CIVIC LITERACY & PARTICIPATION GUIDE" container by ID or text
+  let guideSection =
+    document.getElementById("engageGuideSection") ||
+    document.getElementById("engagementGuideCard") ||
+    document.getElementById("jurEngageSection");
+
+  if (!guideSection) {
+    const candidates = Array.from(document.querySelectorAll("section, div")).filter((el) => {
+      if (el.id === "cpV4ReworkedGuide" || el.closest("#cpV4ReworkedGuide")) return false;
+      const txt = (el.textContent || "").toUpperCase();
+      return (
+        txt.includes("CIVIC LITERACY & PARTICIPATION GUIDE") &&
+        txt.includes("RESIDENT ACTION CHECKLIST") &&
+        el.textContent.length < 6000
+      );
+    });
+    // Pick the innermost matching container
+    guideSection = candidates.find(
+      (el) => !candidates.some((other) => other !== el && el.contains(other))
+    );
+  }
+
+  if (!guideSection) return;
+
+  const jurId = getCurrentJurisdictionIdFromView();
+  const renderKey = `${jurId || "none"}_${upcomingMeetings.length}_${agendaPreviews.length}`;
+  if (guideSection.dataset.v4ReworkedKey === renderKey) return;
+  guideSection.dataset.v4ReworkedKey = renderKey;
+
+  // Hide the legacy 3-column guide card cleanly (instead of removing DOM nodes app.js may write to)
+  guideSection.style.display = "none";
+
+  // Extract official portal link from the legacy card or directory
+  const jurMeta = (dirData.jurisdictions || []).find((j) => j.ocd_division_id === jurId);
+  const legacyPortalAnchor = guideSection.querySelector('a[href^="http"]');
+  const portalUrl = normalizeHumanPortalUrl(
+    jurMeta?.portal_url || legacyPortalAnchor?.href || ""
+  );
+
+  // Build date-first grouped meetings combining upcoming_meetings.json, agenda_previews.json, and engagement_guides.json
+  const byDate = new Map();
+  function pushMeeting(dateStr, item) {
+    const key = (dateStr || "undated").slice(0, 10);
+    if (!byDate.has(key)) byDate.set(key, []);
+    const existing = byDate.get(key);
+    const dup = existing.some(
+      (x) => x.title.toLowerCase() === item.title.toLowerCase() && x.url === item.url
+    );
+    if (!dup) existing.push(item);
+  }
+
+  upcomingMeetings.forEach((m) => {
+    const jid = m.jurisdiction_id || m.ocd_division_id;
+    if (jurId && jid !== jurId) return;
+    pushMeeting(m.meeting_date || m.date, {
+      title: cleanMeetingLabel(m.title, m.doc_type),
+      kind: "Upcoming Meeting",
+      url: normalizeHumanPortalUrl(m.source_url || m.portal_url || portalUrl),
+      items: [],
+    });
+  });
+
+  agendaPreviews.forEach((p) => {
+    const jid = p.jurisdiction_id || p.ocd_division_id;
+    if (jurId && jid !== jurId) return;
+    pushMeeting(p.meeting_date, {
+      title: cleanMeetingLabel(p.meeting_title, "agenda"),
+      kind: "Agenda Preview",
+      url: normalizeHumanPortalUrl(p.source_url || portalUrl),
+      items: p.items || [],
+    });
+  });
+
+  // Also include recent meetings from engagement_guides.json if present (cleaning raw https:// URLs)
+  const guideObj =
+    engagementGuides?.[jurId] ||
+    (Array.isArray(engagementGuides?.guides)
+      ? engagementGuides.guides.find((g) => g.jurisdiction_id === jurId)
+      : null);
+  const guideMeetings = [
+    ...(guideObj?.upcoming_meetings || []),
+    ...(guideObj?.recent_meetings || []),
+    ...(guideObj?.meetings || []),
+  ];
+  guideMeetings.forEach((m) => {
+    pushMeeting(m.meeting_date || m.date, {
+      title: cleanMeetingLabel(m.title || m.label, m.doc_type),
+      kind: m.doc_type ? String(m.doc_type).toUpperCase() : "Posted Agenda",
+      url: normalizeHumanPortalUrl(m.source_url || m.url || portalUrl),
+      items: [],
+    });
+  });
+
+  const sortedDates = Array.from(byDate.keys()).sort((a, b) => b.localeCompare(a));
+
+  const dateGroupsHtml = sortedDates.length
+    ? sortedDates
+        .slice(0, 8)
+        .map((dt) => {
+          const list = byDate.get(dt);
+          const rows = list
+            .map(
+              (m) => `
+              <div class="p-3.5 rounded-xl bg-[#faf5eb] border border-[#dfd3bc] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                <div class="min-w-0 space-y-1">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-[#1b3b4e]/10 text-[#1b3b4e]">${esc(m.kind)}</span>
+                    <span class="text-sm font-bold text-[#142834] break-words">${esc(m.title)}</span>
+                  </div>
+                  ${
+                    m.items?.length
+                      ? `<ul class="list-disc pl-5 text-xs text-slate-700 space-y-0.5 pt-1">${m.items
+                          .slice(0, 3)
+                          .map((it) => `<li>${esc(it.title || it)}</li>`)
+                          .join("")}</ul>`
+                      : ""
+                  }
+                </div>
+                ${
+                  m.url
+                    ? `<a href="${esc(m.url)}" target="_blank" rel="noopener noreferrer" class="shrink-0 px-3 py-1.5 rounded-lg bg-white border border-[#cbbfa8] text-xs font-semibold text-[#1b3b4e] hover:bg-[#f3e6cf]">Open Agenda ↗</a>`
+                    : ""
+                }
+              </div>
+            `
+            )
+            .join("");
+
+          return `
+            <div class="rounded-xl bg-white/95 border border-[#dfd3bc] p-4 space-y-2.5">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[#efe6d5]">
+                <h4 class="text-sm font-bold text-[#142834]">📅 ${esc(formatDateHeading(dt))}</h4>
+                <span class="text-xs font-medium text-slate-500">${list.length} meeting${list.length !== 1 ? "s" : ""} on this date</span>
+              </div>
+              <div class="space-y-2">${rows}</div>
+            </div>
+          `;
+        })
+        .join("")
+    : `<div class="p-4 rounded-xl bg-white/90 border border-[#dfd3bc] text-sm text-slate-600">No upcoming or recent agendas indexed yet. Check the official portal link above for the latest calendar.</div>`;
+
+  let reworked = document.getElementById("cpV4ReworkedGuide");
+  if (!reworked) {
+    reworked = document.createElement("section");
+    reworked.id = "cpV4ReworkedGuide";
+    reworked.className = "rounded-2xl border border-[#d6c7ac] bg-[#f7efe0] p-5 sm:p-6 my-5 space-y-4";
+    guideSection.insertAdjacentElement("afterend", reworked);
+  }
+
+  reworked.innerHTML = `
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div>
+        <div class="text-[11px] font-bold uppercase tracking-wider text-[#366a8a]">
+          UPCOMING &amp; RECENT AGENDAS (DATE-GROUPED)
+        </div>
+        <h3 class="text-lg font-bold text-[#142834] mt-0.5">
+          Meetings &amp; Agendas by Date
+        </h3>
+        <p class="text-xs text-slate-600 mt-0.5">
+          Click any representative below to view their direct contact info, voting record, and floor comments.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 shrink-0">
+        <button type="button" id="cpV4ReworkedEngageBtn" class="px-3 py-1.5 rounded-lg bg-white border border-[#cbbfa8] text-xs font-semibold text-[#1b3b4e] hover:bg-[#faf5eb] cursor-pointer">
+          📣 How Public Comment Works
+        </button>
+        ${
+          portalUrl
+            ? `<a href="${esc(portalUrl)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#1b3b4e] text-white text-xs font-semibold hover:opacity-90">Verify Schedule &amp; Rules ↗</a>`
+            : ""
+        }
+      </div>
+    </div>
+    <div class="space-y-3">${dateGroupsHtml}</div>
+  `;
+
+  reworked.querySelector("#cpV4ReworkedEngageBtn")?.addEventListener("click", openConsolidatedEngageModal);
+}
+
+// ---------------------------------------------------------------------------
+// 4. Clickable Representative Bubbles & Full Representative Detail Modal
 // ---------------------------------------------------------------------------
 function renderRepBubble(rep, jurId, jurName) {
   const pid = rep.id || rep.ocd_person_id;
@@ -513,7 +721,7 @@ async function openRepDetailModal(jurId, personId) {
       `<a href="tel:${esc(rep.phone)}" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs font-semibold hover:bg-slate-50">📞 ${esc(rep.phone)}</a>`
     );
   }
-  const webUrl = rep.website_url || rep.website || jur.roster_url || jur.portal_url;
+  const webUrl = normalizeHumanPortalUrl(rep.website_url || rep.website || jur.roster_url || jur.portal_url);
   if (webUrl) {
     contactLinks.push(
       `<a href="${esc(webUrl)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs font-semibold hover:bg-slate-50">Official Page ↗</a>`
@@ -649,7 +857,7 @@ async function openRepDetailModal(jurId, personId) {
 }
 
 // ---------------------------------------------------------------------------
-// 4. Consolidated "How to Engage" Reference Drawer
+// 5. Consolidated "How to Engage" Reference Drawer
 // ---------------------------------------------------------------------------
 function openConsolidatedEngageModal() {
   let modal = document.getElementById("cpV4EngageModal");
@@ -678,7 +886,7 @@ function openConsolidatedEngageModal() {
 }
 
 // ---------------------------------------------------------------------------
-// 5. Date-First Grouped Upcoming & Recent Agendas (Unclipped)
+// 6. Date-First Grouped Agendas for Multi-Jurisdiction Workspace
 // ---------------------------------------------------------------------------
 function renderDateGroupedAgendas(jurIdsSet) {
   const byDate = new Map();
@@ -696,8 +904,8 @@ function renderDateGroupedAgendas(jurIdsSet) {
       kind: "Upcoming Meeting",
       jurId: jid,
       jurName: m.jurisdiction_name || jid,
-      title: m.title || "Regular Meeting",
-      url: m.source_url || m.portal_url || "",
+      title: cleanMeetingLabel(m.title, m.doc_type),
+      url: normalizeHumanPortalUrl(m.source_url || m.portal_url || ""),
       items: [],
     });
   });
@@ -709,8 +917,8 @@ function renderDateGroupedAgendas(jurIdsSet) {
       kind: "Agenda Preview",
       jurId: jid,
       jurName: p.jurisdiction_name || jid,
-      title: p.meeting_title || "Scheduled Agenda",
-      url: p.source_url || "",
+      title: cleanMeetingLabel(p.meeting_title, "agenda"),
+      url: normalizeHumanPortalUrl(p.source_url || ""),
       items: p.items || [],
     });
   });
@@ -778,7 +986,7 @@ function renderDateGroupedAgendas(jurIdsSet) {
 }
 
 // ---------------------------------------------------------------------------
-// 6. Scoped Workspace Mounted BELOW the Map (Hidden Until 1+ Jurs Added via "+")
+// 7. Scoped Multi-Jurisdiction Workspace Below the Map
 // ---------------------------------------------------------------------------
 function ensureWorkspaceMountedBelowMap() {
   let wsRoot = document.getElementById("cpV4WorkspaceRoot");
@@ -809,7 +1017,6 @@ async function renderScopedWorkspace() {
   const activeJurs = (dirData.jurisdictions || []).filter((j) => j.status === "active");
   const selectedList = activeJurs.filter((j) => selectedJurIds.has(j.ocd_division_id));
 
-  // Stay completely hidden when 0 jurisdictions are in the filter (Map-First!)
   if (selectedList.length === 0) {
     root.innerHTML = "";
     root.classList.add("hidden");
@@ -918,7 +1125,6 @@ async function renderScopedWorkspace() {
 
   root.innerHTML = `
     <section class="space-y-5">
-      <!-- Active Jurisdiction Filter Chips -->
       <div class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div class="text-xs font-bold uppercase tracking-wide text-slate-500">
@@ -936,7 +1142,6 @@ async function renderScopedWorkspace() {
         <div class="flex flex-wrap gap-2">${filterChips}</div>
       </div>
 
-      <!-- Clickable Representative Bubbles (Contact Info Lives at Rep Level) -->
       <div class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 space-y-3">
         <h2 class="text-sm font-bold text-slate-900">
           Representatives (${repBubbles.length}) — Click any representative for vote record, comments &amp; contact info
@@ -944,7 +1149,6 @@ async function renderScopedWorkspace() {
         <div class="flex flex-wrap gap-2.5">${repBubbles.join("")}</div>
       </div>
 
-      <!-- Scoped Workflow Tabs (Shown Only After Selecting Jurisdictions) -->
       <div class="border-b border-slate-200 flex flex-wrap gap-4 sm:gap-6 text-sm font-semibold">
         <button type="button" data-ws-tab="before" class="pb-3 border-b-2 cursor-pointer ${activeWorkspaceTab === "before" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
           📅 Before the Vote (Date-Grouped Agendas)
@@ -983,17 +1187,16 @@ async function renderScopedWorkspace() {
 }
 
 // ---------------------------------------------------------------------------
-// Bootstrap (Map-First, Zero Extra Banners Above the Map)
+// Bootstrap
 // ---------------------------------------------------------------------------
 async function initCivicPulseV4() {
-  // Remove any legacy v4.0 top banners if present from earlier version
   document.getElementById("cpV4LocationBar")?.remove();
-  document.querySelectorAll("[data-jur-contact-bubbles], #allRepContactChannels").forEach((el) => el.remove());
 
-  [dirData, upcomingMeetings, agendaPreviews, boundariesGeo] = await Promise.all([
+  [dirData, upcomingMeetings, agendaPreviews, engagementGuides, boundariesGeo] = await Promise.all([
     fetchJsonSafe("data/directory.json", { jurisdictions: [] }),
     fetchJsonSafe("data/upcoming_meetings.json", []),
     fetchJsonSafe("data/agenda_previews.json", []),
+    fetchJsonSafe("data/engagement_guides.json", {}),
     fetchJsonSafe("geo/boundaries.geojson", null),
   ]);
 
@@ -1001,19 +1204,24 @@ async function initCivicPulseV4() {
     const rawJurs = localStorage.getItem(LS_SELECTED_JURS_KEY);
     if (rawJurs) selectedJurIds = new Set(JSON.parse(rawJurs));
   } catch {
-    // ignore storage errors
+    // ignore
   }
 
   mountUseMyLocationButton();
   injectPlusButtonsIntoResolvedPanel();
+  reworkLegacyCivicLiteracyCard();
   await renderScopedWorkspace();
 
-  // Watch for dynamic updates to "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS" when user clicks the map
   const observer = new MutationObserver(() => {
     mountUseMyLocationButton();
     injectPlusButtonsIntoResolvedPanel();
+    reworkLegacyCivicLiteracyCard();
   });
   observer.observe(document.body, { childList: true, subtree: true });
+
+  window.addEventListener("hashchange", () => {
+    setTimeout(reworkLegacyCivicLiteracyCard, 120);
+  });
 }
 
 if (document.readyState === "loading") {
