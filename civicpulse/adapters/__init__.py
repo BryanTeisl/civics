@@ -10,3 +10,4 @@ __all__ = [
     "register_adapter",
 ]
 from . import gov_web  # noqa: F401
+from . import escribe  # noqa: F401

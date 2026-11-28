@@ -74,6 +74,13 @@ def fetch_legistar_roster(portal_url: str) -> List[Dict[str, str]]:
         headers=SETTINGS.headers,
         timeout=max(20, SETTINGS.request_timeout),
     )
+    if resp.status_code == 500:
+        resp = requests.get(
+            url,
+            params={"$top": 300},
+            headers=SETTINGS.headers,
+            timeout=max(20, SETTINGS.request_timeout),
+        )
     resp.raise_for_status()
     records = resp.json()
     if not isinstance(records, list):
@@ -124,7 +131,7 @@ def _extract_roster_via_ollama(text_chunk: str, jurisdiction_name: str, source_u
             "stream": False,
             "format": "json",
             "keep_alive": "10m",
-            "options": {"temperature": 0.1, "num_ctx": 4096, "num_predict": 1024},
+            "options": {"temperature": 0.1, "num_ctx": 4096, "num_predict": 4096},
         },
         timeout=OLLAMA_TIMEOUT,
     )
@@ -299,11 +306,24 @@ def sync_rosters(
 
             try:
                 if roster_url:
-                    members = fetch_web_roster(effective_roster_url, jname)
-                    source_used = "roster_url (LLM)"
+                    try:
+                        members = fetch_web_roster(effective_roster_url, jname)
+                        source_used = "roster_url (LLM)"
+                    except Exception:
+                        members = fetch_doc_header_roster(conn, jid, jname)
+                        source_used = "council doc header fallback (LLM)"
                 elif adapter == "legistar":
-                    members = fetch_legistar_roster(portal_url)
-                    source_used = "legistar API"
+                    try:
+                        members = fetch_legistar_roster(portal_url)
+                        source_used = "legistar API"
+                    except Exception:
+                        members = []
+                    if not members and saved_roster_url:
+                        members = fetch_web_roster(saved_roster_url, jname)
+                        source_used = "saved roster_url (LLM)"
+                    if not members:
+                        members = fetch_doc_header_roster(conn, jid, jname)
+                        source_used = "council doc header (LLM)"
                 elif saved_roster_url:
                     members = fetch_web_roster(saved_roster_url, jname)
                     source_used = "saved roster_url (LLM)"

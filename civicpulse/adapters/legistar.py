@@ -52,6 +52,9 @@ class LegistarAdapter(BaseAdapter):
         fetch_top = max(limit * 4, 100)
         api_url = f"https://webapi.legistar.com/v1/{client}/events?$top={fetch_top}&$orderby=EventDate%20desc"
         r = requests.get(api_url, headers=self.headers, timeout=self.timeout)
+        if r.status_code == 500:
+            api_url = f"https://webapi.legistar.com/v1/{client}/events?$top={fetch_top}"
+            r = requests.get(api_url, headers=self.headers, timeout=self.timeout)
         r.raise_for_status()
         events = r.json() if isinstance(r.json(), list) else []
 

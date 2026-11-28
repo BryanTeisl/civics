@@ -367,6 +367,27 @@ def probe_portal_candidates(
                     return {"status": "supported", "adapter_type": "civicclerk", "portal_url": f"https://{slug}.portal.civicclerk.com/", "sample_count": len(r.json()["value"])}
             except Exception:
                 pass
+        if "escribemeetings.com" in low:
+            parsed_u = urlparse(u)
+            base_u = f"{parsed_u.scheme or 'https'}://{parsed_u.netloc}"
+            try:
+                r = requests.post(
+                    f"{base_u}/MeetingsCalendarView.aspx/GetCalendarMeetings",
+                    json={"calendarStartDate": f"{yr}-01-01", "calendarEndDate": f"{yr}-12-31"},
+                    headers={**HEADERS, "Content-Type": "application/json; charset=utf-8"},
+                    timeout=10,
+                )
+                if r.status_code == 200 and isinstance(r.json().get("d"), list):
+                    return {"status": "supported", "adapter_type": "escribe", "portal_url": base_u, "sample_count": len(r.json()["d"])}
+            except Exception:
+                pass
+            try:
+                r = requests.get(base_u, headers=HEADERS, timeout=10)
+                if r.status_code == 200:
+                    return {"status": "supported", "adapter_type": "escribe", "portal_url": base_u, "sample_count": 1}
+            except Exception:
+                pass
+
         if "boarddocs.com" in low:
             return {"status": "supported", "adapter_type": "boarddocs", "portal_url": u, "sample_count": 1}
 
@@ -380,7 +401,7 @@ def probe_portal_candidates(
                 for raw_href, _ in links:
                     href = urljoin(u, raw_href)
                     hlow = href.lower()
-                    if any(k in hlow for k in (".legistar.com", ".primegov.com", "civicclerk.com", "boarddocs.com")):
+                    if any(k in hlow for k in (".legistar.com", ".primegov.com", "civicclerk.com", "boarddocs.com", "escribemeetings.com")):
                         sub_hit = _inspect_url(href)
                         if sub_hit:
                             return sub_hit
@@ -405,6 +426,7 @@ def probe_portal_candidates(
             f"https://{slug}.legistar.com/",
             f"https://{slug}.primegov.com/public/portal",
             f"https://{slug}.portal.civicclerk.com/",
+            f"https://pub-{slug}.escribemeetings.com/",
         ):
             hit = _inspect_url(url)
             if hit:

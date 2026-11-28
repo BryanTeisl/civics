@@ -82,6 +82,14 @@ OFFICIAL_COUNCIL_COMMENT_EMAILS: Dict[str, Dict[str, str]] = {
         "council_email": "citycouncil@gjcity.org",
         "clerk_url": "https://www.gjcity.org/166/City-Council",
     },
+    "ocd-division/country:us/state:co/place:aurora": {
+        "council_email": "citycouncil@auroragov.org",
+        "clerk_url": "https://www.auroragov.org/city_hall/mayor___city_council",
+    },
+    "ocd-division/country:us/state:co/county:boulder": {
+        "council_email": "commissioners@bouldercounty.gov",
+        "clerk_url": "https://bouldercounty.gov/government/board-of-county-commissioners/",
+    },
     "ocd-division/country:us/state:co/school_district:boulder_valley_re2": {
         "council_email": "bvsd.board@bvsd.org",
         "clerk_url": "https://www.bvsd.org/about/board-of-education",
