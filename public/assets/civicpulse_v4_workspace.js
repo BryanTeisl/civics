@@ -1,20 +1,29 @@
 /**
- * CivicPulse v4.0 Unified Workspace & Constituency UX
+ * CivicPulse v4.1 Map-First Geolocation, "+" Multi-Jurisdiction Filter & Rep Profiles
  * (public/assets/civicpulse_v4_workspace.js)
+ *
+ * Design rules:
+ *  - Map comes FIRST (zero extra banners or jurisdiction pill walls above the map).
+ *  - Adds a "📍 Use My Location" button directly into the existing map search bar.
+ *  - Enhances every active card inside "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS"
+ *    with a "+" toggle button that adds/removes that jurisdiction to the user's filter
+ *    (supporting many jurisdictions at once).
+ *  - Only after 1+ jurisdictions are added to the filter does the scoped workspace
+ *    appear below the map with:
+ *      1. Active filter chips + consolidated "How Public Comment Works" button
+ *      2. Clickable Representative bubbles (contact info lives at the Rep level)
+ *      3. Scoped tabs: Before the Vote (date-first grouped agendas), Votes & Radar, Alignment
  */
 
-const LS_SAVED_LOC_KEY = "cp_v4_saved_location";
 const LS_SELECTED_JURS_KEY = "cp_v4_selected_jurisdictions";
 
 let dirData = { jurisdictions: [] };
 let upcomingMeetings = [];
 let agendaPreviews = [];
-let earlyWarnings = [];
+let boundariesGeo = null;
 let cachedJurPayloads = {};
 let selectedJurIds = new Set();
-let savedLocation = null; // { label, lat, lng, matchedJurIds: [], matchedDistricts: {} }
 let activeWorkspaceTab = "before";
-let activeRepProfile = null; // { jurId, personId }
 
 function esc(str) {
   return String(str ?? "")
@@ -31,6 +40,12 @@ function jurSlugFromId(ocdId) {
     .toLowerCase();
 }
 
+function initialsFor(name) {
+  const parts = String(name || "?").trim().split(/\s+/);
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
 function formatDateHeading(isoDate) {
   if (!isoDate || isoDate === "undated") return "Date To Be Announced";
   const parts = isoDate.slice(0, 10).split("-");
@@ -45,15 +60,18 @@ function formatDateHeading(isoDate) {
   });
 }
 
-function initialsFor(name) {
-  const parts = String(name || "?").trim().split(/\s+/);
-  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// ---------------------------------------------------------------------------
-// Data Loading
-// ---------------------------------------------------------------------------
 async function fetchJsonSafe(url, fallback) {
   try {
     const r = await fetch(url);
@@ -72,110 +90,358 @@ async function loadJurisdictionPayload(jurId) {
   return data;
 }
 
-// ---------------------------------------------------------------------------
-// 1. Optional Location -> Exact Constituencies & "My Reps"
-// ---------------------------------------------------------------------------
-function distanceKm(lat1, lon1, lat2, lon2) {
-  const R = 6371;
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+function persistSelectedJurs() {
+  try {
+    localStorage.setItem(LS_SELECTED_JURS_KEY, JSON.stringify(Array.from(selectedJurIds)));
+  } catch {
+    // ignore storage errors
+  }
 }
 
-async function resolveLocationFromQuery(queryText) {
-  const q = (queryText || "").trim();
-  if (!q) return null;
+function toggleJurisdictionInFilter(jurId) {
+  if (!jurId) return;
+  if (selectedJurIds.has(jurId)) {
+    selectedJurIds.delete(jurId);
+  } else {
+    selectedJurIds.add(jurId);
+  }
+  persistSelectedJurs();
+  syncPlusButtonsState();
+  renderScopedWorkspace();
+}
 
-  // Match city/county name directly against active jurisdictions first
-  const activeJurs = (dirData.jurisdictions || []).filter((j) => j.status === "active");
-  const nameMatches = activeJurs.filter((j) =>
-    (j.name || "").toLowerCase().includes(q.toLowerCase())
-  );
+// ---------------------------------------------------------------------------
+// 1. "Use My Location" Button Inside the Existing Map Bar (Map-First)
+// ---------------------------------------------------------------------------
+function resolveOverlappingAtCoords(lat, lng) {
+  const allJurs = dirData.jurisdictions || [];
+  const matched = new Map();
 
-  // Also query free U.S. Census Geocoder for street addresses / ZIPs
-  let lat = null;
-  let lng = null;
-  let resolvedLabel = q;
-
-  try {
-    const censusUrl =
-      "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=" +
-      encodeURIComponent(q.includes("CO") ? q : `${q}, CO`) +
-      "&benchmark=Public_AR_Current&format=json";
-    const resp = await fetch(censusUrl);
-    if (resp.ok) {
-      const json = await resp.json();
-      const match = json?.result?.addressMatches?.[0];
-      if (match?.coordinates) {
-        lat = Number(match.coordinates.y);
-        lng = Number(match.coordinates.x);
-        resolvedLabel = match.matchedAddress || q;
+  if (window.turf && boundariesGeo && Array.isArray(boundariesGeo.features)) {
+    const pt = window.turf.point([lng, lat]);
+    for (const feat of boundariesGeo.features) {
+      try {
+        if (window.turf.booleanPointInPolygon(pt, feat)) {
+          const divId = feat?.properties?.ocd_division_id;
+          if (!divId) continue;
+          const j = allJurs.find((x) => x.ocd_division_id === divId);
+          if (j && !matched.has(divId)) matched.set(divId, j);
+        }
+      } catch {
+        // skip invalid geometry
       }
     }
-  } catch {
-    // Fallback to name/coordinate matching
   }
 
-  if (lat === null && nameMatches.length > 0) {
-    lat = Number(nameMatches[0].latitude || nameMatches[0].lat || 0);
-    lng = Number(nameMatches[0].longitude || nameMatches[0].lng || 0);
-    resolvedLabel = nameMatches[0].name;
+  for (const j of allJurs) {
+    if (matched.has(j.ocd_division_id)) continue;
+    const jLat = Number(j.latitude ?? j.lat ?? 0);
+    const jLng = Number(j.longitude ?? j.lng ?? 0);
+    if (!jLat || !jLng) continue;
+    const radius = j.level === "county" || j.level === "school_district" ? 36 : 14;
+    if (haversineKm(lat, lng, jLat, jLng) <= radius) {
+      matched.set(j.ocd_division_id, j);
+    }
   }
 
-  const matchedJurIds = new Set(nameMatches.map((j) => j.ocd_division_id));
-  if (lat && lng) {
-    activeJurs.forEach((j) => {
-      const jLat = Number(j.latitude || j.lat || 0);
-      const jLng = Number(j.longitude || j.lng || 0);
-      if (!jLat || !jLng) return;
-      const radius = j.level === "county" || j.level === "school_district" ? 38 : 16;
-      if (distanceKm(lat, lng, jLat, jLng) <= radius) {
-        matchedJurIds.add(j.ocd_division_id);
-      }
+  return Array.from(matched.values()).sort((a, b) => {
+    const aAct = a.status === "active" ? 0 : 1;
+    const bAct = b.status === "active" ? 0 : 1;
+    if (aAct !== bAct) return aAct - bAct;
+    return String(a.name || "").localeCompare(String(b.name || ""));
+  });
+}
+
+function renderFallbackResolvedPanel(lat, lng, labelText) {
+  const matches = resolveOverlappingAtCoords(lat, lng);
+  const mapEl = document.getElementById("map");
+  const mapCard = mapEl?.closest("div.rounded-2xl, section, .map-card") || mapEl?.parentElement;
+  if (!mapCard) return;
+
+  let panel = document.getElementById("cpV4GeoResolvedPanel");
+  if (!panel) {
+    panel = document.createElement("div");
+    panel.id = "cpV4GeoResolvedPanel";
+    panel.className = "mt-4 rounded-2xl border border-amber-200/80 bg-[#f6efe2] p-4 sm:p-5 space-y-3";
+    mapCard.insertAdjacentElement("afterend", panel);
+  }
+
+  const cards = matches
+    .slice(0, 8)
+    .map((j) => {
+      const isAct = j.status === "active";
+      const isAdded = selectedJurIds.has(j.ocd_division_id);
+      const plusBtn = isAct
+        ? `<button
+            type="button"
+            data-v4-plus-jur="${esc(j.ocd_division_id)}"
+            title="${isAdded ? "Remove from workspace filter" : "Add to workspace filter"}"
+            class="w-7 h-7 rounded-full inline-flex items-center justify-center text-sm font-bold border transition shrink-0 cursor-pointer ${
+              isAdded
+                ? "bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700"
+                : "bg-white text-slate-800 border-slate-300 hover:bg-blue-600 hover:text-white hover:border-blue-600"
+            }"
+          >${isAdded ? "✓" : "+"}</button>`
+        : "";
+
+      return `
+        <div class="rounded-xl border border-slate-200 bg-white/95 p-3.5 flex items-start justify-between gap-2">
+          <div class="min-w-0">
+            <div class="text-[11px] font-bold uppercase tracking-wide ${isAct ? "text-emerald-700" : "text-slate-500"}">
+              ${esc((j.level || "local").replace(/_/g, " "))} • ${isAct ? "ACTIVE" : "UNCLAIMED"}
+            </div>
+            <div class="text-sm font-bold text-slate-900 mt-0.5 break-words">${esc(j.name)}</div>
+            <div class="text-xs text-slate-500 mt-1">
+              ${isAct ? "Click + to add to your filter" : "Not yet tracked"}
+            </div>
+          </div>
+          ${plusBtn}
+        </div>
+      `;
+    })
+    .join("");
+
+  panel.innerHTML = `
+    <div class="flex items-center justify-between gap-2">
+      <div>
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          RESOLVED LOCATION &amp; OVERLAPPING GOVERNMENTS
+        </div>
+        <div class="text-base font-bold text-slate-900">${esc(labelText)} (${lat.toFixed(4)}, ${lng.toFixed(4)})</div>
+      </div>
+      <button type="button" id="cpV4DismissGeoPanel" class="text-xs text-slate-500 hover:text-slate-800 cursor-pointer">
+        Dismiss ×
+      </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">${cards || '<div class="text-xs text-slate-600">No overlapping jurisdictions found at these coordinates.</div>'}</div>
+  `;
+
+  panel.querySelector("#cpV4DismissGeoPanel")?.addEventListener("click", () => panel.remove());
+  panel.querySelectorAll("[data-v4-plus-jur]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleJurisdictionInFilter(btn.dataset.v4PlusJur);
     });
+  });
+}
+
+function handleUseMyLocationClick(btn) {
+  if (!navigator.geolocation) {
+    alert("Geolocation is not supported by your browser. Please click your location on the map instead.");
+    return;
   }
 
-  return {
-    label: resolvedLabel,
-    lat,
-    lng,
-    matchedJurIds: Array.from(matchedJurIds),
-    matchedDistricts: {},
-  };
+  const origText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Locating...";
+
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const lat = pos.coords.latitude;
+      const lng = pos.coords.longitude;
+      btn.disabled = false;
+      btn.textContent = origText;
+
+      // Prefer the existing map app's native coordinate handler so the native
+      // "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS" panel opens seamlessly
+      if (typeof window.handleCoordinateLookup === "function") {
+        window.handleCoordinateLookup(lat, lng, "My Current Location");
+        setTimeout(injectPlusButtonsIntoResolvedPanel, 120);
+      } else if (typeof window.handleMapCoordinateClick === "function") {
+        window.handleMapCoordinateClick(lat, lng);
+        setTimeout(injectPlusButtonsIntoResolvedPanel, 120);
+      } else {
+        // Fallback: resolve locally via Turf.js / coordinates and render overlapping panel
+        renderFallbackResolvedPanel(lat, lng, "My Current Location");
+      }
+
+      // Also fly existing Leaflet map if exposed
+      if (window.mapInstance && typeof window.mapInstance.setView === "function") {
+        window.mapInstance.setView([lat, lng], 12);
+      }
+    },
+    (err) => {
+      btn.disabled = false;
+      btn.textContent = origText;
+      const msg =
+        err.code === 1
+          ? "Location access was denied. You can click anywhere on the map or enter an address instead."
+          : "Could not determine your current location. Please click on the map instead.";
+      alert(msg);
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  );
+}
+
+function mountUseMyLocationButton() {
+  if (document.getElementById("cpV4UseMyLocationBtn")) return;
+
+  const btn = document.createElement("button");
+  btn.id = "cpV4UseMyLocationBtn";
+  btn.type = "button";
+  btn.className =
+    "px-3.5 py-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5 shrink-0 cursor-pointer";
+  btn.textContent = "📍 Use My Location";
+  btn.title = "Use your device location to resolve overlapping city, county, and school governments";
+  btn.addEventListener("click", () => handleUseMyLocationClick(btn));
+
+  // Place cleanly right inside the existing map address search bar (next to Find button)
+  const existingAddrBtn =
+    document.getElementById("addressLookupBtn") ||
+    document.getElementById("addrLookupBtn") ||
+    document.getElementById("mapAddressBtn");
+  if (existingAddrBtn && existingAddrBtn.parentElement) {
+    existingAddrBtn.insertAdjacentElement("afterend", btn);
+    return;
+  }
+
+  const existingAddrInput =
+    document.getElementById("addressLookupInput") ||
+    document.getElementById("addrSearchInput") ||
+    document.querySelector('input[placeholder*="address" i]');
+  if (existingAddrInput && existingAddrInput.parentElement) {
+    existingAddrInput.parentElement.insertAdjacentElement("afterend", btn);
+    return;
+  }
+
+  // Fallback: place cleanly in a slim bar directly above #map
+  const mapEl = document.getElementById("map");
+  if (mapEl && mapEl.parentElement) {
+    const bar = document.createElement("div");
+    bar.className = "px-4 py-2 bg-slate-50 border-b border-slate-200 flex items-center justify-end";
+    bar.appendChild(btn);
+    mapEl.insertAdjacentElement("beforebegin", bar);
+  }
 }
 
 // ---------------------------------------------------------------------------
-// 2 & 3. Clickable Representative Bubbles & Full Representative Detail View
+// 2. Inject "+" Filter Buttons into "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS"
 // ---------------------------------------------------------------------------
-function renderRepBubble(rep, jurId, jurName, isMyRep = false) {
+function matchActiveJurisdictionFromText(cardText) {
+  const low = (cardText || "").toLowerCase();
+  const activeJurs = (dirData.jurisdictions || []).filter((j) => j.status === "active");
+  // Longest-name match first so "Boulder County Board of Commissioners" beats "Boulder"
+  const sorted = [...activeJurs].sort((a, b) => (b.name || "").length - (a.name || "").length);
+  return sorted.find((j) => j.name && low.includes(j.name.toLowerCase())) || null;
+}
+
+function findResolvedLocationPanels() {
+  const panels = [];
+  document.querySelectorAll("section, div, aside").forEach((el) => {
+    if (el.id === "cpV4WorkspaceRoot" || el.id === "cpV4GeoResolvedPanel") return;
+    const txt = (el.textContent || "").toUpperCase();
+    if (
+      txt.includes("RESOLVED LOCATION") &&
+      txt.includes("OVERLAPPING GOVERNMENT") &&
+      el.querySelectorAll("div, button, a").length >= 2 &&
+      el.textContent.length < 4000
+    ) {
+      // Only take the tightest container (skip ancestors that contain other matching panels)
+      const hasMatchingChild = Array.from(el.children).some((ch) => {
+        const ct = (ch.textContent || "").toUpperCase();
+        return ct.includes("RESOLVED LOCATION") && ct.includes("OVERLAPPING GOVERNMENT");
+      });
+      if (!hasMatchingChild) panels.push(el);
+    }
+  });
+  return panels;
+}
+
+function injectPlusButtonsIntoResolvedPanel() {
+  const panels = findResolvedLocationPanels();
+  if (!panels.length) return;
+
+  panels.forEach((panel) => {
+    // Find individual government cards inside the resolved panel
+    const candidates = panel.querySelectorAll("button, a, div");
+    candidates.forEach((card) => {
+      if (card.dataset.v4PlusWired) return;
+      const txt = (card.textContent || "").trim();
+      if (!txt || txt.length > 260) return;
+      if (!txt.toUpperCase().includes("ACTIVE")) return;
+      if (txt.toUpperCase().includes("UNCLAIMED")) return;
+      // Ensure this is a leaf card (doesn't contain multiple cards)
+      if ((txt.match(/ACTIVE/gi) || []).length > 1) return;
+
+      const jur = matchActiveJurisdictionFromText(txt);
+      if (!jur) return;
+
+      // Avoid double-wiring nested elements inside the same card
+      if (card.querySelector("[data-v4-plus-jur]") || card.closest("[data-v4-plus-wired='1']")) {
+        return;
+      }
+
+      card.dataset.v4PlusWired = "1";
+      const prevPos = window.getComputedStyle(card).position;
+      if (prevPos === "static") {
+        card.style.position = "relative";
+      }
+
+      const isAdded = selectedJurIds.has(jur.ocd_division_id);
+      const plusBtn = document.createElement("button");
+      plusBtn.type = "button";
+      plusBtn.dataset.v4PlusJur = jur.ocd_division_id;
+      plusBtn.title = isAdded ? "Remove from my filter" : "Add to my filter";
+      plusBtn.textContent = isAdded ? "✓" : "+";
+      plusBtn.style.position = "absolute";
+      plusBtn.style.top = "10px";
+      plusBtn.style.right = "10px";
+      plusBtn.style.zIndex = "10";
+      plusBtn.className = `w-7 h-7 rounded-full inline-flex items-center justify-center text-base font-bold border shadow-xs transition cursor-pointer ${
+        isAdded
+          ? "bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700"
+          : "bg-white text-slate-800 border-slate-300 hover:bg-blue-600 hover:text-white hover:border-blue-600"
+      }`;
+
+      plusBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleJurisdictionInFilter(jur.ocd_division_id);
+      });
+
+      card.appendChild(plusBtn);
+    });
+  });
+
+  ensureWorkspaceMountedBelowMap();
+}
+
+function syncPlusButtonsState() {
+  document.querySelectorAll("[data-v4-plus-jur]").forEach((btn) => {
+    const jid = btn.dataset.v4PlusJur;
+    const isAdded = selectedJurIds.has(jid);
+    btn.textContent = isAdded ? "✓" : "+";
+    btn.title = isAdded ? "Remove from my filter" : "Add to my filter";
+    btn.className = `w-7 h-7 rounded-full inline-flex items-center justify-center text-base font-bold border shadow-xs transition cursor-pointer ${
+      isAdded
+        ? "bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700"
+        : "bg-white text-slate-800 border-slate-300 hover:bg-blue-600 hover:text-white hover:border-blue-600"
+    }`;
+  });
+}
+
+// ---------------------------------------------------------------------------
+// 3. Clickable Representative Bubbles & Full Representative Detail Modal
+// ---------------------------------------------------------------------------
+function renderRepBubble(rep, jurId, jurName) {
   const pid = rep.id || rep.ocd_person_id;
   const photo = rep.photo_url
     ? `<img src="${esc(rep.photo_url)}" alt="${esc(rep.name)}" class="w-9 h-9 rounded-full object-cover border border-slate-200 shrink-0" />`
     : `<span class="w-9 h-9 rounded-full bg-slate-800 text-white text-xs font-bold inline-flex items-center justify-center shrink-0">${esc(initialsFor(rep.name))}</span>`;
-
-  const myBadge = isMyRep
-    ? `<span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-100 text-indigo-800">Your Rep</span>`
-    : "";
 
   return `
     <button
       type="button"
       data-open-rep="${esc(pid)}"
       data-jur-id="${esc(jurId)}"
-      class="group text-left inline-flex items-center gap-2.5 px-3 py-2 rounded-xl border ${
-        isMyRep ? "border-indigo-300 bg-indigo-50/50" : "border-slate-200 bg-white"
-      } hover:border-blue-400 hover:shadow-sm transition cursor-pointer"
+      class="group text-left inline-flex items-center gap-2.5 px-3 py-2 rounded-xl border border-slate-200 bg-white hover:border-blue-400 hover:shadow-sm transition cursor-pointer"
       title="View ${esc(rep.name)}'s voting record, comments, metrics & contact details"
     >
       ${photo}
       <span class="min-w-0">
         <span class="block text-sm font-semibold text-slate-900 group-hover:text-blue-700 truncate">
-          ${esc(rep.name)} ${myBadge}
+          ${esc(rep.name)}
         </span>
         <span class="block text-xs text-slate-500 truncate">
           ${esc(rep.role || "Member")}${rep.district ? " • " + esc(rep.district) : ""} • ${esc(jurName)}
@@ -194,14 +460,29 @@ async function openRepDetailModal(jurId, personId) {
   const rep = reps.find((r) => (r.id || r.ocd_person_id) === personId);
   if (!rep) return;
 
-  activeRepProfile = { jurId, personId };
   window.location.hash = `#/rep/${encodeURIComponent(personId)}`;
 
   const items = payload.agenda_items || payload.events || [];
   const repVotes = [];
   items.forEach((item) => {
     const vmap = item.votes || {};
-    if (vmap[personId]) {
+    if (Array.isArray(vmap)) {
+      const hit = vmap.find((v) => v.entity_id === personId || v.ocd_person_id === personId);
+      if (hit) {
+        repVotes.push({
+          title: item.title,
+          date: item.date || item.meeting_date || "",
+          topic: item.topic || item.event_type || "General",
+          outcome: item.outcome || "",
+          impact_score: Math.round(item.impact_score ?? 0),
+          source_url: item.source_url || "",
+          vote: hit.vote || hit.value || "Recorded",
+          is_pivotal: hit.is_pivotal,
+          quote: hit.verbatim_quote || hit.quote || "",
+          summary: hit.rationale_summary || "",
+        });
+      }
+    } else if (vmap[personId]) {
       repVotes.push({
         title: item.title,
         date: item.date || item.meeting_date || "",
@@ -220,7 +501,6 @@ async function openRepDetailModal(jurId, personId) {
   const avgImpact = totalVotes > 0 ? `${Math.round(stats.avg_impact_score ?? 0)}/100` : "—";
   const pivotal = stats.pivotal_votes ?? repVotes.filter((v) => v.is_pivotal).length;
 
-  // Contact info lives at the Representative level (never as misleading jurisdiction-wide bubbles)
   const contactLinks = [];
   if (rep.email) {
     const subject = encodeURIComponent(`Constituent Feedback — ${jur.name || "Local Government"}`);
@@ -239,14 +519,6 @@ async function openRepDetailModal(jurId, personId) {
       `<a href="${esc(webUrl)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white text-slate-800 text-xs font-semibold hover:bg-slate-50">Official Page ↗</a>`
     );
   }
-  const socials = rep.social_links || {};
-  Object.entries(socials).forEach(([plat, u]) => {
-    if (u && plat !== "website") {
-      contactLinks.push(
-        `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 text-xs font-medium hover:bg-slate-100">${esc(plat)} ↗</a>`
-      );
-    }
-  });
 
   const avatar = rep.photo_url
     ? `<img src="${esc(rep.photo_url)}" alt="${esc(rep.name)}" class="w-16 h-16 rounded-2xl object-cover border border-slate-200 shrink-0" />`
@@ -324,26 +596,21 @@ async function openRepDetailModal(jurId, personId) {
             </div>
           </div>
         </div>
-        <button type="button" id="cpV4CloseRepModal" class="px-3 py-1.5 rounded-lg border border-slate-200 text-sm font-semibold text-slate-600 hover:bg-slate-100">
+        <button type="button" id="cpV4CloseRepModal" class="px-3 py-1.5 rounded-lg border border-slate-200 text-sm font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer">
           ✕ Close
         </button>
       </div>
 
-      <!-- Representative-Level Contact Channels -->
-      <div class="flex flex-wrap gap-2 pt-1">
-        ${contactLinks.join("")}
-      </div>
+      <div class="flex flex-wrap gap-2 pt-1">${contactLinks.join("")}</div>
 
-      <!-- AI-Generated Profile Summary from Voting Record & Comments -->
       <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200/80 space-y-1.5">
         <div class="flex items-center justify-between gap-2">
-          <span class="text-xs font-bold uppercase tracking-wide text-blue-900">Legislative Profile & Voting Summary</span>
-          <span class="text-[11px] text-blue-700">Grounded in official votes & minutes</span>
+          <span class="text-xs font-bold uppercase tracking-wide text-blue-900">Legislative Profile &amp; Voting Summary</span>
+          <span class="text-[11px] text-blue-700">Grounded in official votes &amp; minutes</span>
         </div>
         <p class="text-sm text-slate-800 leading-relaxed">${esc(bioText)}</p>
       </div>
 
-      <!-- Metrics Strip -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
           <div class="text-xs text-slate-500">Recorded Votes</div>
@@ -363,13 +630,11 @@ async function openRepDetailModal(jurId, personId) {
         </div>
       </div>
 
-      <!-- Comments & Remarks on Measures -->
       <div class="space-y-2">
-        <h3 class="text-sm font-bold text-slate-900">Comments & Remarks on Measures</h3>
+        <h3 class="text-sm font-bold text-slate-900">Comments &amp; Remarks on Measures</h3>
         ${commentsHtml}
       </div>
 
-      <!-- Complete Roll-Call Record -->
       <div class="space-y-2">
         <h3 class="text-sm font-bold text-slate-900">Recorded Roll-Call Votes (${repVotes.length})</h3>
         <div class="space-y-2.5">${votesHtml}</div>
@@ -384,7 +649,7 @@ async function openRepDetailModal(jurId, personId) {
 }
 
 // ---------------------------------------------------------------------------
-// 5. Consolidated "How to Engage" Reference Drawer (Replaces Repeated Boxes)
+// 4. Consolidated "How to Engage" Reference Drawer
 // ---------------------------------------------------------------------------
 function openConsolidatedEngageModal() {
   let modal = document.getElementById("cpV4EngageModal");
@@ -396,16 +661,13 @@ function openConsolidatedEngageModal() {
       <div class="bg-white rounded-2xl shadow-xl border border-slate-200 max-w-xl w-full p-6 space-y-4">
         <div class="flex items-center justify-between">
           <h2 class="text-lg font-bold text-slate-900">How Local Public Comment Works</h2>
-          <button type="button" id="cpV4CloseEngage" class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-100">✕ Close</button>
+          <button type="button" id="cpV4CloseEngage" class="px-2.5 py-1 rounded-lg border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-100 cursor-pointer">✕ Close</button>
         </div>
-        <p class="text-xs text-slate-600">
-          Colorado city councils, county boards, and school boards follow the same core public participation rhythm:
-        </p>
         <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-800">
           <li><strong>Check the Agenda 48–72 Hours Early:</strong> Ordinances require two readings; weighing in before the second reading has the highest impact.</li>
-          <li><strong>Email Your Representative Directly:</strong> Click your representative's profile bubble to email them with the item title and your neighborhood/ward before noon on meeting day so it enters the public record.</li>
-          <li><strong>Sign Up for Public Comment (2–3 Minutes):</strong> Use the jurisdiction's <em>Official Portal ↗</em> link to register for in-person or Zoom/virtual comment.</li>
-          <li><strong>State Your Name, City/District & Specific Ask:</strong> Lead with whether you support, oppose, or request an amendment on the specific agenda item.</li>
+          <li><strong>Email Your Representative Directly:</strong> Click any representative bubble to email them with the item title and your neighborhood/ward before noon on meeting day.</li>
+          <li><strong>Sign Up for Public Comment (2–3 Minutes):</strong> Use the official agenda link to register for in-person or virtual comment.</li>
+          <li><strong>State Your Name, City/District &amp; Specific Ask:</strong> Lead with whether you support, oppose, or request an amendment on the specific item.</li>
         </ol>
       </div>
     `;
@@ -416,7 +678,7 @@ function openConsolidatedEngageModal() {
 }
 
 // ---------------------------------------------------------------------------
-// 6. Date-First Grouped Upcoming & Recent Agendas (No Cut-Off Cards)
+// 5. Date-First Grouped Upcoming & Recent Agendas (Unclipped)
 // ---------------------------------------------------------------------------
 function renderDateGroupedAgendas(jurIdsSet) {
   const byDate = new Map();
@@ -455,15 +717,15 @@ function renderDateGroupedAgendas(jurIdsSet) {
 
   if (byDate.size === 0) {
     return `
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 text-sm text-slate-600">
-        No upcoming meetings scheduled in the next 14 days for the selected jurisdiction(s).
-        Check the <strong>Votes &amp; Radar</strong> tab for recently completed minutes.
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 text-sm text-slate-600">
+        No upcoming meetings scheduled in the next 14 days for your filtered jurisdiction(s).
+        Check <strong>Votes &amp; Radar</strong> for recently completed minutes.
       </div>
     `;
   }
 
-  const sortedDates = Array.from(byDate.keys()).sort();
-  return sortedDates
+  return Array.from(byDate.keys())
+    .sort()
     .map((dt) => {
       const meetings = byDate.get(dt);
       const cards = meetings
@@ -516,100 +778,68 @@ function renderDateGroupedAgendas(jurIdsSet) {
 }
 
 // ---------------------------------------------------------------------------
-// 7. Scoped Workspace (Rendered ONLY after 1+ Jurisdictions are Selected)
+// 6. Scoped Workspace Mounted BELOW the Map (Hidden Until 1+ Jurs Added via "+")
 // ---------------------------------------------------------------------------
+function ensureWorkspaceMountedBelowMap() {
+  let wsRoot = document.getElementById("cpV4WorkspaceRoot");
+  const resolvedPanels = findResolvedLocationPanels();
+  const geoPanel = document.getElementById("cpV4GeoResolvedPanel");
+  const mapEl = document.getElementById("map");
+  const mapCard = mapEl?.closest("div.rounded-2xl, section") || mapEl?.parentElement;
+  const anchor = resolvedPanels[0] || geoPanel || mapCard;
+
+  if (!wsRoot) {
+    wsRoot = document.createElement("div");
+    wsRoot.id = "cpV4WorkspaceRoot";
+    wsRoot.className = "mt-6 mb-8";
+  }
+
+  if (anchor && anchor.nextElementSibling !== wsRoot) {
+    anchor.insertAdjacentElement("afterend", wsRoot);
+  } else if (!wsRoot.parentElement) {
+    (document.querySelector("main") || document.body).appendChild(wsRoot);
+  }
+  return wsRoot;
+}
+
 async function renderScopedWorkspace() {
-  const root = document.getElementById("cpV4WorkspaceRoot");
+  const root = ensureWorkspaceMountedBelowMap();
   if (!root) return;
 
   const activeJurs = (dirData.jurisdictions || []).filter((j) => j.status === "active");
   const selectedList = activeJurs.filter((j) => selectedJurIds.has(j.ocd_division_id));
 
-  // Location / My Constituencies Card
-  const locHtml = savedLocation
-    ? `
-      <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-200 space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-wide text-indigo-800">📍 Your Constituencies</span>
-            <h3 class="text-sm font-bold text-slate-900">${esc(savedLocation.label)}</h3>
-          </div>
-          <div class="flex items-center gap-2">
-            <button type="button" id="cpV4SelectAllMyJurs" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700">
-              Select All My Constituencies (${savedLocation.matchedJurIds.length})
-            </button>
-            <button type="button" id="cpV4ClearLocation" class="px-2.5 py-1.5 rounded-lg border border-indigo-200 bg-white text-xs text-slate-600 hover:bg-slate-50">
-              Clear
-            </button>
-          </div>
-        </div>
-        <div id="cpV4MyRepsRow" class="flex flex-wrap gap-2"></div>
-      </div>
-    `
-    : "";
-
-  // Multi-select jurisdiction pills
-  const jurPills = activeJurs
-    .map((j) => {
-      const isSel = selectedJurIds.has(j.ocd_division_id);
-      return `
-        <button
-          type="button"
-          data-toggle-jur="${esc(j.ocd_division_id)}"
-          class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition cursor-pointer ${
-            isSel
-              ? "bg-slate-900 text-white border-slate-900 shadow-xs"
-              : "bg-white text-slate-700 border-slate-300 hover:border-slate-500"
-          }"
-        >
-          ${isSel ? "✓ " : "+ "}${esc(j.name)}
-        </button>
-      `;
-    })
-    .join("");
-
-  // Prompt state when 0 jurisdictions are selected
+  // Stay completely hidden when 0 jurisdictions are in the filter (Map-First!)
   if (selectedList.length === 0) {
-    root.innerHTML = `
-      <section class="space-y-4">
-        ${locHtml}
-        <div class="bg-white rounded-2xl border border-slate-200 p-5 space-y-4">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-              <h2 class="text-lg font-bold text-slate-900">1. Select One or More Jurisdictions to Explore</h2>
-              <p class="text-xs text-slate-600">
-                Pick a city, county, or school board below (or enter your address above) to open its Representatives, Agendas, Votes, and Alignment tabs.
-              </p>
-            </div>
-            <button type="button" id="cpV4OpenEngageTop" class="self-start px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">
-              📣 How Public Comment Works
-            </button>
-          </div>
-          <div class="flex flex-wrap gap-2">${jurPills}</div>
-        </div>
-      </section>
-    `;
-    wireWorkspaceEvents();
-    await populateMyRepsRow();
+    root.innerHTML = "";
+    root.classList.add("hidden");
     return;
   }
 
-  // Load payloads for all selected jurisdictions
+  root.classList.remove("hidden");
+
+  const filterChips = selectedList
+    .map(
+      (j) => `
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-semibold">
+        ${esc(j.name)}
+        <button type="button" data-remove-jur="${esc(j.ocd_division_id)}" class="text-slate-300 hover:text-white font-bold cursor-pointer" title="Remove from filter">×</button>
+      </span>
+    `
+    )
+    .join("");
+
   const payloads = await Promise.all(selectedList.map((j) => loadJurisdictionPayload(j.ocd_division_id)));
 
-  // Collect clickable representative bubbles across selected jurisdictions
   const repBubbles = [];
   const allEvents = [];
   payloads.forEach((p, idx) => {
     if (!p) return;
     const jMeta = selectedList[idx];
-    const reps = p.entities || p.representatives || p.roster || [];
-    reps.forEach((r) => {
-      const isMy = savedLocation?.matchedJurIds?.includes(jMeta.ocd_division_id);
-      repBubbles.push(renderRepBubble(r, jMeta.ocd_division_id, jMeta.name, Boolean(isMy)));
+    (p.entities || p.representatives || p.roster || []).forEach((r) => {
+      repBubbles.push(renderRepBubble(r, jMeta.ocd_division_id, jMeta.name));
     });
-    const evs = p.agenda_items || p.events || [];
-    evs.forEach((e) => {
+    (p.agenda_items || p.events || []).forEach((e) => {
       allEvents.push({ ...e, _jurName: jMeta.name, _jurId: jMeta.ocd_division_id });
     });
   });
@@ -642,9 +872,8 @@ async function renderScopedWorkspace() {
     });
     tabBodyHtml = cards.length
       ? `<div class="space-y-3">${cards.join("")}</div>`
-      : `<div class="p-6 rounded-2xl bg-white border border-slate-200 text-sm text-slate-600">No extracted roll-call votes yet for the selected jurisdiction(s).</div>`;
+      : `<div class="p-5 rounded-2xl bg-white border border-slate-200 text-sm text-slate-600">No extracted roll-call votes yet for your filtered jurisdiction(s).</div>`;
   } else {
-    // Alignment & Roster Metrics tab
     const rows = [];
     payloads.forEach((p, idx) => {
       if (!p) return;
@@ -656,7 +885,7 @@ async function renderScopedWorkspace() {
         rows.push(`
           <tr class="hover:bg-slate-50">
             <td class="py-3 px-4">
-              <button type="button" data-open-rep="${esc(pid)}" data-jur-id="${esc(jMeta.ocd_division_id)}" class="font-semibold text-blue-700 hover:underline text-left">
+              <button type="button" data-open-rep="${esc(pid)}" data-jur-id="${esc(jMeta.ocd_division_id)}" class="font-semibold text-blue-700 hover:underline text-left cursor-pointer">
                 ${esc(r.name)}
               </button>
               <div class="text-xs text-slate-500">${esc(jMeta.name)}</div>
@@ -689,45 +918,41 @@ async function renderScopedWorkspace() {
 
   root.innerHTML = `
     <section class="space-y-5">
-      ${locHtml}
-
-      <!-- Selected Jurisdictions Filter Bar -->
-      <div class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 space-y-3">
+      <!-- Active Jurisdiction Filter Chips -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div class="text-xs font-bold uppercase tracking-wide text-slate-500">
-            Selected Jurisdictions (${selectedList.length}) — Click to Toggle
+            Active Filter (${selectedList.length} Jurisdiction${selectedList.length !== 1 ? "s" : ""})
           </div>
           <div class="flex items-center gap-2">
-            <button type="button" id="cpV4OpenEngageTop" class="px-3 py-1 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">
+            <button type="button" id="cpV4OpenEngageTop" class="px-3 py-1 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer">
               📣 How Public Comment Works
             </button>
-            <button type="button" id="cpV4ClearJurs" class="px-3 py-1 rounded-lg border border-slate-200 text-xs text-slate-600 hover:bg-slate-100">
-              Clear Selection
+            <button type="button" id="cpV4ClearJurs" class="px-3 py-1 rounded-lg border border-slate-200 text-xs text-slate-600 hover:bg-slate-100 cursor-pointer">
+              Clear All
             </button>
           </div>
         </div>
-        <div class="flex flex-wrap gap-2">${jurPills}</div>
+        <div class="flex flex-wrap gap-2">${filterChips}</div>
       </div>
 
-      <!-- Clickable Representative Bubbles (Contact Info Lives Inside Each Rep Profile) -->
+      <!-- Clickable Representative Bubbles (Contact Info Lives at Rep Level) -->
       <div class="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <h2 class="text-sm font-bold text-slate-900">
-            Representatives (${repBubbles.length}) — Click any representative for vote record, comments &amp; contact info
-          </h2>
-        </div>
+        <h2 class="text-sm font-bold text-slate-900">
+          Representatives (${repBubbles.length}) — Click any representative for vote record, comments &amp; contact info
+        </h2>
         <div class="flex flex-wrap gap-2.5">${repBubbles.join("")}</div>
       </div>
 
-      <!-- Scoped Workflow Tabs (Placed AFTER Jurisdiction Selection) -->
+      <!-- Scoped Workflow Tabs (Shown Only After Selecting Jurisdictions) -->
       <div class="border-b border-slate-200 flex flex-wrap gap-4 sm:gap-6 text-sm font-semibold">
-        <button type="button" data-ws-tab="before" class="pb-3 border-b-2 ${activeWorkspaceTab === "before" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
+        <button type="button" data-ws-tab="before" class="pb-3 border-b-2 cursor-pointer ${activeWorkspaceTab === "before" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
           📅 Before the Vote (Date-Grouped Agendas)
         </button>
-        <button type="button" data-ws-tab="votes" class="pb-3 border-b-2 ${activeWorkspaceTab === "votes" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
+        <button type="button" data-ws-tab="votes" class="pb-3 border-b-2 cursor-pointer ${activeWorkspaceTab === "votes" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
           🗳️ Votes &amp; Radar (${allEvents.length})
         </button>
-        <button type="button" data-ws-tab="alignment" class="pb-3 border-b-2 ${activeWorkspaceTab === "alignment" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
+        <button type="button" data-ws-tab="alignment" class="pb-3 border-b-2 cursor-pointer ${activeWorkspaceTab === "alignment" ? "border-blue-600 text-blue-600" : "border-transparent text-slate-500 hover:text-slate-800"}">
           📊 Alignment &amp; Metrics
         </button>
       </div>
@@ -736,150 +961,59 @@ async function renderScopedWorkspace() {
     </section>
   `;
 
-  wireWorkspaceEvents();
-  await populateMyRepsRow();
-}
-
-async function populateMyRepsRow() {
-  const row = document.getElementById("cpV4MyRepsRow");
-  if (!row || !savedLocation) return;
-  const activeJurs = (dirData.jurisdictions || []).filter((j) =>
-    savedLocation.matchedJurIds.includes(j.ocd_division_id)
-  );
-  const payloads = await Promise.all(activeJurs.map((j) => loadJurisdictionPayload(j.ocd_division_id)));
-  const bubbles = [];
-  payloads.forEach((p, i) => {
-    if (!p) return;
-    const j = activeJurs[i];
-    (p.entities || p.representatives || p.roster || []).slice(0, 4).forEach((r) => {
-      bubbles.push(renderRepBubble(r, j.ocd_division_id, j.name, true));
-    });
+  root.querySelectorAll("[data-remove-jur]").forEach((btn) => {
+    btn.addEventListener("click", () => toggleJurisdictionInFilter(btn.dataset.removeJur));
   });
-  row.innerHTML = bubbles.length
-    ? bubbles.join("")
-    : `<span class="text-xs text-slate-600">Click "Select All My Constituencies" to inspect local boards at this location.</span>`;
-  row.querySelectorAll("[data-open-rep]").forEach((btn) => {
-    btn.addEventListener("click", () => openRepDetailModal(btn.dataset.jurId, btn.dataset.openRep));
-  });
-}
-
-function wireWorkspaceEvents() {
-  document.querySelectorAll("[data-toggle-jur]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const jid = btn.dataset.toggleJur;
-      if (selectedJurIds.has(jid)) selectedJurIds.delete(jid);
-      else selectedJurIds.add(jid);
-      localStorage.setItem(LS_SELECTED_JURS_KEY, JSON.stringify(Array.from(selectedJurIds)));
-      renderScopedWorkspace();
-    });
-  });
-
-  document.querySelectorAll("[data-ws-tab]").forEach((btn) => {
+  root.querySelectorAll("[data-ws-tab]").forEach((btn) => {
     btn.addEventListener("click", () => {
       activeWorkspaceTab = btn.dataset.wsTab;
       renderScopedWorkspace();
     });
   });
-
-  document.querySelectorAll("[data-open-rep]").forEach((btn) => {
+  root.querySelectorAll("[data-open-rep]").forEach((btn) => {
     btn.addEventListener("click", () => openRepDetailModal(btn.dataset.jurId, btn.dataset.openRep));
   });
-
   document.getElementById("cpV4OpenEngageTop")?.addEventListener("click", openConsolidatedEngageModal);
   document.getElementById("cpV4ClearJurs")?.addEventListener("click", () => {
     selectedJurIds.clear();
-    localStorage.setItem(LS_SELECTED_JURS_KEY, "[]");
-    renderScopedWorkspace();
-  });
-  document.getElementById("cpV4SelectAllMyJurs")?.addEventListener("click", () => {
-    if (!savedLocation) return;
-    savedLocation.matchedJurIds.forEach((id) => selectedJurIds.add(id));
-    localStorage.setItem(LS_SELECTED_JURS_KEY, JSON.stringify(Array.from(selectedJurIds)));
-    renderScopedWorkspace();
-  });
-  document.getElementById("cpV4ClearLocation")?.addEventListener("click", () => {
-    savedLocation = null;
-    localStorage.removeItem(LS_SAVED_LOC_KEY);
+    persistSelectedJurs();
+    syncPlusButtonsState();
     renderScopedWorkspace();
   });
 }
 
 // ---------------------------------------------------------------------------
-// Bootstrap Location Bar + Scoped Workspace
+// Bootstrap (Map-First, Zero Extra Banners Above the Map)
 // ---------------------------------------------------------------------------
 async function initCivicPulseV4() {
-  [dirData, upcomingMeetings, agendaPreviews, earlyWarnings] = await Promise.all([
+  // Remove any legacy v4.0 top banners if present from earlier version
+  document.getElementById("cpV4LocationBar")?.remove();
+  document.querySelectorAll("[data-jur-contact-bubbles], #allRepContactChannels").forEach((el) => el.remove());
+
+  [dirData, upcomingMeetings, agendaPreviews, boundariesGeo] = await Promise.all([
     fetchJsonSafe("data/directory.json", { jurisdictions: [] }),
     fetchJsonSafe("data/upcoming_meetings.json", []),
     fetchJsonSafe("data/agenda_previews.json", []),
-    fetchJsonSafe("data/planning_early_warning.json", []),
+    fetchJsonSafe("geo/boundaries.geojson", null),
   ]);
 
   try {
-    const rawLoc = localStorage.getItem(LS_SAVED_LOC_KEY);
-    if (rawLoc) savedLocation = JSON.parse(rawLoc);
     const rawJurs = localStorage.getItem(LS_SELECTED_JURS_KEY);
     if (rawJurs) selectedJurIds = new Set(JSON.parse(rawJurs));
   } catch {
     // ignore storage errors
   }
 
-  // Inject optional Location Bar + Scoped Workspace container into <main>
-  const mainEl = document.querySelector("main") || document.body;
-  let locBar = document.getElementById("cpV4LocationBar");
-  if (!locBar) {
-    locBar = document.createElement("section");
-    locBar.id = "cpV4LocationBar";
-    locBar.className = "bg-white rounded-2xl border border-slate-200 shadow-xs p-4 sm:p-5 mb-6 space-y-3";
-    locBar.innerHTML = `
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-        <div>
-          <h2 class="text-base font-bold text-slate-900">Find Your Constituencies &amp; Representatives (Optional)</h2>
-          <p class="text-xs text-slate-600">
-            Enter a street address or city in Colorado to see overlapping city, county, and school districts plus who represents you—or pick jurisdictions directly below.
-          </p>
-        </div>
-        <form id="cpV4LocationForm" class="flex flex-1 max-w-lg gap-2">
-          <input
-            id="cpV4LocationInput"
-            type="text"
-            placeholder="e.g., 300 Laporte Ave, Fort Collins or Aurora, CO"
-            class="flex-1 rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:outline-none focus:border-blue-500"
-          />
-          <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 shrink-0">
-            Find My Reps
-          </button>
-        </form>
-      </div>
-    `;
-    mainEl.prepend(locBar);
-  }
-
-  let wsRoot = document.getElementById("cpV4WorkspaceRoot");
-  if (!wsRoot) {
-    wsRoot = document.createElement("div");
-    wsRoot.id = "cpV4WorkspaceRoot";
-    wsRoot.className = "mb-8";
-    locBar.insertAdjacentElement("afterend", wsRoot);
-  }
-
-  // Remove legacy floating/jurisdiction-level contact bubbles if present
-  document.querySelectorAll("[data-jur-contact-bubbles], #allRepContactChannels").forEach((el) => el.remove());
-
-  document.getElementById("cpV4LocationForm")?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const inp = document.getElementById("cpV4LocationInput");
-    const loc = await resolveLocationFromQuery(inp?.value || "");
-    if (loc) {
-      savedLocation = loc;
-      localStorage.setItem(LS_SAVED_LOC_KEY, JSON.stringify(loc));
-      loc.matchedJurIds.forEach((id) => selectedJurIds.add(id));
-      localStorage.setItem(LS_SELECTED_JURS_KEY, JSON.stringify(Array.from(selectedJurIds)));
-      renderScopedWorkspace();
-    }
-  });
-
+  mountUseMyLocationButton();
+  injectPlusButtonsIntoResolvedPanel();
   await renderScopedWorkspace();
+
+  // Watch for dynamic updates to "RESOLVED LOCATION & OVERLAPPING GOVERNMENTS" when user clicks the map
+  const observer = new MutationObserver(() => {
+    mountUseMyLocationButton();
+    injectPlusButtonsIntoResolvedPanel();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
 }
 
 if (document.readyState === "loading") {
