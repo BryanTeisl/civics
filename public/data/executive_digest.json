@@ -1,17 +1,17 @@
 {
   "schema_version": "3.0",
-  "generated_at": "2026-11-28 16:24:18 UTC",
+  "generated_at": "2026-11-28 19:01:37 UTC",
   "stats": {
-    "total_events": 579,
+    "total_events": 584,
     "total_split_votes": 105,
-    "split_vote_pct": 18.1,
+    "split_vote_pct": 18.0,
     "active_jurisdictions_with_events": 14,
-    "business_relevant_events": 265
+    "business_relevant_events": 268
   },
   "top_topics": [
     {
       "topic": "General",
-      "count": 160
+      "count": 162
     },
     {
       "topic": "Governance & Elections",
@@ -19,15 +19,15 @@
     },
     {
       "topic": "Housing & Development",
-      "count": 67
+      "count": 68
     },
     {
       "topic": "Budget & Finance",
-      "count": 61
+      "count": 62
     },
     {
       "topic": "Contracts & Procurement",
-      "count": 56
+      "count": 57
     },
     {
       "topic": "Zoning & Land Use",

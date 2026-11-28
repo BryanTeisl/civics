@@ -9,7 +9,7 @@
     "parent_division_id": null,
     "status": "active",
     "docs_since": "2026-03-10",
-    "last_updated": "2026-11-28 16:24:15 UTC",
+    "last_updated": "2026-11-28 19:01:31 UTC",
     "as_of_date": "2026-10-27",
     "stale_days": 32,
     "is_stale": true,
@@ -60,10 +60,10 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 96,
-        "present_votes": 25,
-        "total_votes": 26,
-        "avg_impact_score": 38.9,
+        "attendance_rate": 97,
+        "present_votes": 28,
+        "total_votes": 29,
+        "avg_impact_score": 39.9,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -381,9 +381,45 @@
           "impact_score": 53.3,
           "rationale_summary": "",
           "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_fa99baf8ec6aef",
+          "meeting_date": "2026-04-02",
+          "title": "Public Hearing on Shelly\u2019s Cottages",
+          "plain_summary": "The commissioners approved the Boulder County historic landmark designation for Shelly\u2019s Cottages.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 48.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_a007baa579dc76",
+          "meeting_date": "2026-04-02",
+          "title": "Public Hearing on Amendment to Shannon Farm",
+          "plain_summary": "The commissioners approved the amendment to the Shannon Farm zoning district.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 48.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_06d104b1ef3fd5",
+          "meeting_date": "2026-04-02",
+          "title": "Public Hearing on Montgomery Water Tank Replacement",
+          "plain_summary": "The commissioners approved the replacement of the Montgomery Water Tank.",
+          "event_type": "ordinance",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 48.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
         }
       ],
-      "bio_summary": "Claire Levy serves as County Commissioner (District 1) for Boulder County Board of Commissioners, with 26 recorded roll-call votes (25 Yes, 0 No). Their recorded legislative activity has focused most frequently on Housing & Development, Zoning & Land Use, and Parks, Water & Environment."
+      "bio_summary": "Claire Levy serves as County Commissioner (District 1) for Boulder County Board of Commissioners, with 29 recorded roll-call votes (28 Yes, 0 No). Their recorded legislative activity has focused most frequently on Zoning & Land Use, Housing & Development, and Parks, Water & Environment."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-david-lee",
@@ -429,10 +465,10 @@
       "social_links": {},
       "bio_extra": {},
       "metrics": {
-        "attendance_rate": 88,
-        "present_votes": 28,
-        "total_votes": 32,
-        "avg_impact_score": 38.2,
+        "attendance_rate": 89,
+        "present_votes": 33,
+        "total_votes": 37,
+        "avg_impact_score": 37.0,
         "pivotal_votes": 0,
         "pivotal_rate": 0,
         "sponsored_count": 0
@@ -822,9 +858,69 @@
           "impact_score": 31.7,
           "rationale_summary": "",
           "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_93fb816dc2270f",
+          "meeting_date": "2026-03-10",
+          "title": "Housing - 2026-04 BCHA Resolution 146-148 E. St. Claire Disposition",
+          "plain_summary": "The Board of County Commissioners approved a resolution authorizing and delegating authority to sell property at 146-148 E. Saint Claire Ave.",
+          "event_type": "resolution",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 33.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_1829f268a1057d",
+          "meeting_date": "2026-03-10",
+          "title": "Public Works - Grant Application for Colorado Circular Communities Enterprise",
+          "plain_summary": "The Board of County Commissioners approved a grant application for Colorado Circular Communities Enterprise.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 28.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_5aa3c03c6fd757",
+          "meeting_date": "2026-03-10",
+          "title": "Commissioners' Office - Appointments to the Adult Protection Review Team",
+          "plain_summary": "The Board of County Commissioners appointed new members to the Adult Protection Review Team.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 28.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_0a3ae33e28c449",
+          "meeting_date": "2026-03-10",
+          "title": "Commissioners' Office - Appointments to the Aging Advisory Council",
+          "plain_summary": "The Board of County Commissioners re-appointed members to the Aging Advisory Council.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 28.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        },
+        {
+          "event_id": "ev_2ea2778a26a4ae",
+          "meeting_date": "2026-03-10",
+          "title": "Public Works - Bid Waiver for Sheriff\u2019s Jail Local Controls Upgrade",
+          "plain_summary": "The Board of County Commissioners approved a bid waiver for the Sheriff's Jail Local Controls Upgrade project.",
+          "event_type": "motion",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "impact_score": 28.3,
+          "rationale_summary": "",
+          "verbatim_quote": ""
         }
       ],
-      "bio_summary": "Marta Loachamin serves as County Commissioner (District 2) for Boulder County Board of Commissioners, with 32 recorded roll-call votes (28 Yes, 0 No). Their recorded legislative activity has focused most frequently on Zoning & Land Use, Housing & Development, and Parks, Water & Environment."
+      "bio_summary": "Marta Loachamin serves as County Commissioner (District 2) for Boulder County Board of Commissioners, with 37 recorded roll-call votes (33 Yes, 0 No). Their recorded legislative activity has focused most frequently on Zoning & Land Use, Housing & Development, and Budget & Finance."
     },
     {
       "ocd_person_id": "ocd-person/co-boulder-sarah-davis",
@@ -3227,6 +3323,16 @@
           "is_pivotal": false,
           "rationale_summary": "Excused from Items No. 2.b and 2.c.",
           "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-boulder-levy",
+          "name": "Claire Levy",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
         }
       ],
       "business_relevant": false,
@@ -3324,6 +3430,16 @@
           "is_pivotal": false,
           "rationale_summary": "Excused from Items No. 2.b and 2.c.",
           "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-boulder-levy",
+          "name": "Claire Levy",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
         }
       ],
       "business_relevant": true,
@@ -3420,6 +3536,16 @@
           "vote": "Absent",
           "is_pivotal": false,
           "rationale_summary": "Excused from Items No. 2.b and 2.c.",
+          "verbatim_quote": ""
+        },
+        {
+          "entity_id": "ocd-person/co-boulder-levy",
+          "name": "Claire Levy",
+          "district": "District 1",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
           "verbatim_quote": ""
         }
       ],
@@ -3552,6 +3678,60 @@
       "capture_method": "ai_minutes_pdf"
     },
     {
+      "event_id": "ev_93fb816dc2270f",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "meeting_date": "2026-03-10",
+      "title": "Housing - 2026-04 BCHA Resolution 146-148 E. St. Claire Disposition",
+      "plain_summary": "The Board of County Commissioners approved a resolution authorizing and delegating authority to sell property at 146-148 E. Saint Claire Ave.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "resolution",
+      "topic": "Housing & Development",
+      "outcome": "Passed",
+      "yes_count": 5,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 5,
+      "impact_score": 33.3,
+      "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=be49b693-fab0-4f2d-98bb-1b8fc69bbde0&Agenda=PostMinutes&lang=English",
+      "roster_size": 12,
+      "attendance_count": 5,
+      "attendance_rate": 42,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-boulder-loachamin",
+          "name": "Marta Loachamin",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 33.3,
+        "legal_weight": 25.0,
+        "contestedness": 0.0,
+        "turnout": 8.3,
+        "votes_cast": 5,
+        "expected_body_size": 12,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/12 (+8.3 pts) = 33.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
+    },
+    {
       "event_id": "ev_8065af5454bcf7",
       "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
       "meeting_date": "2026-03-10",
@@ -3606,6 +3786,114 @@
       "capture_method": "ai_minutes_pdf"
     },
     {
+      "event_id": "ev_5aa3c03c6fd757",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "meeting_date": "2026-03-10",
+      "title": "Commissioners' Office - Appointments to the Adult Protection Review Team",
+      "plain_summary": "The Board of County Commissioners appointed new members to the Adult Protection Review Team.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "General",
+      "outcome": "Passed",
+      "yes_count": 5,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 5,
+      "impact_score": 28.3,
+      "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=be49b693-fab0-4f2d-98bb-1b8fc69bbde0&Agenda=PostMinutes&lang=English",
+      "roster_size": 12,
+      "attendance_count": 5,
+      "attendance_rate": 42,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-boulder-loachamin",
+          "name": "Marta Loachamin",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 28.3,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 8.3,
+        "votes_cast": 5,
+        "expected_body_size": 12,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/12 (+8.3 pts) = 28.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
+    },
+    {
+      "event_id": "ev_2ea2778a26a4ae",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "meeting_date": "2026-03-10",
+      "title": "Public Works - Bid Waiver for Sheriff\u2019s Jail Local Controls Upgrade",
+      "plain_summary": "The Board of County Commissioners approved a bid waiver for the Sheriff's Jail Local Controls Upgrade project.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Contracts & Procurement",
+      "outcome": "Passed",
+      "yes_count": 5,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 5,
+      "impact_score": 28.3,
+      "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=be49b693-fab0-4f2d-98bb-1b8fc69bbde0&Agenda=PostMinutes&lang=English",
+      "roster_size": 12,
+      "attendance_count": 5,
+      "attendance_rate": 42,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-boulder-loachamin",
+          "name": "Marta Loachamin",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ],
+      "business_relevant": true,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 28.3,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 8.3,
+        "votes_cast": 5,
+        "expected_body_size": 12,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/12 (+8.3 pts) = 28.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
+    },
+    {
       "event_id": "ev_2047a2a4a6f424",
       "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
       "meeting_date": "2026-03-10",
@@ -3655,6 +3943,114 @@
         "formula_version": "2.0.0",
         "formula_hash": "292922f52a39",
         "plain_english": "Legal weight: 25 pts (resolution) | Unanimous (4-0, +0.0 split pts) | Full-body turnout 4/12 (+6.7 pts) = 31.7/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
+    },
+    {
+      "event_id": "ev_1829f268a1057d",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "meeting_date": "2026-03-10",
+      "title": "Public Works - Grant Application for Colorado Circular Communities Enterprise",
+      "plain_summary": "The Board of County Commissioners approved a grant application for Colorado Circular Communities Enterprise.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "Budget & Finance",
+      "outcome": "Passed",
+      "yes_count": 5,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 5,
+      "impact_score": 28.3,
+      "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=be49b693-fab0-4f2d-98bb-1b8fc69bbde0&Agenda=PostMinutes&lang=English",
+      "roster_size": 12,
+      "attendance_count": 5,
+      "attendance_rate": 42,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-boulder-loachamin",
+          "name": "Marta Loachamin",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 28.3,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 8.3,
+        "votes_cast": 5,
+        "expected_body_size": 12,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/12 (+8.3 pts) = 28.3/100 (Formula v2.0.0)"
+      },
+      "formula_version": "2.0.0",
+      "capture_method": "ai_minutes_pdf"
+    },
+    {
+      "event_id": "ev_0a3ae33e28c449",
+      "jurisdiction_id": "ocd-division/country:us/state:co/county:boulder",
+      "meeting_date": "2026-03-10",
+      "title": "Commissioners' Office - Appointments to the Aging Advisory Council",
+      "plain_summary": "The Board of County Commissioners re-appointed members to the Aging Advisory Council.",
+      "diff_summary": "",
+      "qa_status": "verified",
+      "event_type": "motion",
+      "topic": "General",
+      "outcome": "Passed",
+      "yes_count": 5,
+      "no_count": 0,
+      "abstain_count": 0,
+      "absent_count": 0,
+      "vote_margin": 5,
+      "impact_score": 28.3,
+      "source_url": "https://pub-bouldercounty.escribemeetings.com/Meeting.aspx?Id=be49b693-fab0-4f2d-98bb-1b8fc69bbde0&Agenda=PostMinutes&lang=English",
+      "roster_size": 12,
+      "attendance_count": 5,
+      "attendance_rate": 42,
+      "sponsors": [],
+      "votes": [
+        {
+          "entity_id": "ocd-person/co-boulder-loachamin",
+          "name": "Marta Loachamin",
+          "district": "District 2",
+          "elected_date": "Active Term",
+          "vote": "Yes",
+          "is_pivotal": false,
+          "rationale_summary": "",
+          "verbatim_quote": ""
+        }
+      ],
+      "business_relevant": false,
+      "outcome_status": "Passed",
+      "passage_method": "Roll Call",
+      "tally": "5-0",
+      "body_type": "full_body",
+      "impact_breakdown": {
+        "score": 28.3,
+        "legal_weight": 20.0,
+        "contestedness": 0.0,
+        "turnout": 8.3,
+        "votes_cast": 5,
+        "expected_body_size": 12,
+        "body_type": "full_body",
+        "formula_version": "2.0.0",
+        "formula_hash": "292922f52a39",
+        "plain_english": "Legal weight: 20 pts (motion) | Unanimous (5-0, +0.0 split pts) | Full-body turnout 5/12 (+8.3 pts) = 28.3/100 (Formula v2.0.0)"
       },
       "formula_version": "2.0.0",
       "capture_method": "ai_minutes_pdf"
